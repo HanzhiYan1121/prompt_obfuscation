@@ -1,0 +1,57 @@
+Here are some functions you can use to command the drone.
+
+aw.takeoff() - takes off the drone.
+aw.land() - lands the drone.
+aw.go_home() - return drone to home.
+aw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.
+aw.get_yaw() - returns the current yaw of the drone in degrees.
+aw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.
+aw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.
+aw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.
+
+Important drone coordinate directional information and rules:
+1. The horizontal axises are Y and X, vertical axis is Z. When rotating drone, right or clockwise means positive.
+2. aw.fly_to([x, y, z]) function uses NED coordinate system (world coordinates), positive X axis is North/forward, positive Y axis is East/right, positive Z axis is Down. When flying up, the Z value should decrease. When flying down, the Z value should increase.
+3. The drone is initialized facing north, Yaw = 0.
+4. In terms of drone's body frame axis conventions: forward means positive X axis, right means positive Y axis, up means positive Z axis.
+5. When asked to move in drones body frame, you should transform drone body frame movements to world coordinates. Because aw.fly_to([x, y, z]) function flies the drone in world coordinates.
+6. Below is the coordinates transforming equation: x, y, z are the world coordinate movements, x', y', z' are the drone body frame coordinate movements. Please note that we are employing a negative value for "theta".
+x = x'*cos(-theta) + y'*sin(-theta)
+y = -x'*sin(-theta) + y'*cos(-theta)
+z = -z'
+
+Here are some examples:
+
+Query: "Fly 10 meters up."
+Answer: 
+"
+## Action 1: fly 10 meters up. 
+current_position = aw.get_drone_position() # Get the current position of the drone
+# fly up corresponds to negative Z direction in world coordinates, so -10 for z.
+aw.fly_to([current_position[0], current_position[1], current_position[2] - 10])
+"
+
+Query: "Turn 90 degrees left, then fly 5 meters drone's left in the drone's body frame."
+Answer: 
+"
+## Action 1: turn 90 degrees left.
+current_yaw = aw.get_yaw()  # Get the current yaw of the drone
+new_yaw = current_yaw - 90  # Calculate the new yaw for a 90 degrees left turn
+aw.set_yaw(new_yaw)  # Set the drone's yaw to turn 90 degrees left
+
+## Action 2: fly 5 meters drone's left in the drone's body frame.
+current_position = aw.get_drone_position() # Retrieve the current XYZ position of the drone
+# Calculate movement in the drone's body frame
+body_x = 0  # move 0 in drone's x axis
+body_y = -5 # move left means -5 in drone's y axis
+body_z = 0 # move 0 in drone's z axis
+# Use transform equation to transform the drone's body frame movements to the world frame movements
+# x = x'*cos(-theta) + y'*sin(-theta), y = -x'*sin(-theta) + y'*cos(-theta), z = -z'
+current_yaw = aw.get_yaw() # get current yaw angle
+radian_yaw = math.radians(-current_yaw)
+world_x = current_position[0] + body_x * math.cos(radian_yaw) + body_y * math.sin(radian_yaw) # x = x'*cos(-theta) + y'*sin(-theta)
+world_y = current_position[1] - body_x * math.sin(radian_yaw) + body_y * math.cos(radian_yaw) # y = -x'*sin(-theta) + y'*cos(-theta)
+world_z = current_position[2] - body_z # z = -z'
+# Command the drone to the new position
+aw.fly_to([world_x, world_y, world_z])
+"

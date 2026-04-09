@@ -1,0 +1,163 @@
+2026-04-06 16:39:48,347 — src.logging_config — INFO — Logging configured. Log file: obfuscate.log, Level: INFO
+2026-04-06 16:39:48,349 — __main__ — INFO — Command line arguments received: {
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "quantize_4bit": true,
+  "quantize_8bit": false,
+  "system_prompt": "You are an code writer helping me with the AirSim simulator for drone control.\r\nYou should think step by step, you can decompose task into small steps.\r\nWhen I ask you to do something, you are supposed to give me Python code is needed to achieve that task in one script, do not generate functions unless I ask you do so.\r\nYou are only allowed to use the functions I have defined for you, you should never use any other hypothetical functions that you think might exist.\r\nYou are only allowed to import math python libraries.\r\nYou should output code only.\r\nDo not use additional if statements or loops.\n\nHere are some functions you can use to command the drone.\r\n\r\naw.takeoff() - takes off the drone.\r\naw.land() - lands the drone.\r\naw.go_home() - return drone to home.\r\naw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.\r\naw.get_yaw() - returns the current yaw of the drone in degrees.\r\naw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.\r\naw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.\r\naw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.\r\n\r\nImportant drone coordinate directional information and rules:\r\n1. The horizontal axises are Y and X, vertical axis is Z. When rotating drone, right or clockwise means positive.\r\n2. aw.fly_to([x, y, z]) function uses NED coordinate system (world coordinates), positive X axis is North/forward, positive Y axis is East/right, positive Z axis is Down. When flying up, the Z value should decrease. When flying down, the Z value should increase.\r\n3. The drone is initialized facing north, Yaw = 0.\r\n4. In terms of drone's body frame axis conventions: forward means positive X axis, right means positive Y axis, up means positive Z axis.\r\n5. When asked to move in drones body frame, you should transform drone body frame movements to world coordinates. Because aw.fly_to([x, y, z]) function flies the drone in world coordinates.\r\n6. Below is the coordinates transforming equation: x, y, z are the world coordinate movements, x', y', z' are the drone body frame coordinate movements. Please note that we are employing a negative value for \"theta\".\r\nx = x'*cos(-theta) + y'*sin(-theta)\r\ny = -x'*sin(-theta) + y'*cos(-theta)\r\nz = -z'\r\n\r\nHere are some examples:\r\n\r\nQuery: \"Fly 10 meters up.\"\r\nAnswer: \r\n\"\r\n## Action 1: fly 10 meters up. \r\ncurrent_position = aw.get_drone_position() # Get the current position of the drone\r\n# fly up corresponds to negative Z direction in world coordinates, so -10 for z.\r\naw.fly_to([current_position[0], current_position[1], current_position[2] - 10])\r\n\"\r\n\r\nQuery: \"Turn 90 degrees left, then fly 5 meters drone's left in the drone's body frame.\"\r\nAnswer: \r\n\"\r\n## Action 1: turn 90 degrees left.\r\ncurrent_yaw = aw.get_yaw()  # Get the current yaw of the drone\r\nnew_yaw = current_yaw - 90  # Calculate the new yaw for a 90 degrees left turn\r\naw.set_yaw(new_yaw)  # Set the drone's yaw to turn 90 degrees left\r\n\r\n## Action 2: fly 5 meters drone's left in the drone's body frame.\r\ncurrent_position = aw.get_drone_position() # Retrieve the current XYZ position of the drone\r\n# Calculate movement in the drone's body frame\r\nbody_x = 0  # move 0 in drone's x axis\r\nbody_y = -5 # move left means -5 in drone's y axis\r\nbody_z = 0 # move 0 in drone's z axis\r\n# Use transform equation to transform the drone's body frame movements to the world frame movements\r\n# x = x'*cos(-theta) + y'*sin(-theta), y = -x'*sin(-theta) + y'*cos(-theta), z = -z'\r\ncurrent_yaw = aw.get_yaw() # get current yaw angle\r\nradian_yaw = math.radians(-current_yaw)\r\nworld_x = current_position[0] + body_x * math.cos(radian_yaw) + body_y * math.sin(radian_yaw) # x = x'*cos(-theta) + y'*sin(-theta)\r\nworld_y = current_position[1] - body_x * math.sin(radian_yaw) + body_y * math.cos(radian_yaw) # y = -x'*sin(-theta) + y'*cos(-theta)\r\nworld_z = current_position[2] - body_z # z = -z'\r\n# Command the drone to the new position\r\naw.fly_to([world_x, world_y, world_z])\r\n\"",
+  "style": null,
+  "obfuscation_method": "soft",
+  "batch_size": 2,
+  "dataset_size": 200,
+  "dataset_name": "drone",
+  "task_hints": false,
+  "obf_sys_prompt_len": 160,
+  "output_token_count": 15,
+  "window_size": 5,
+  "optimizer_iter": 5,
+  "lr": 0.01,
+  "topk": 3,
+  "search_width": 10,
+  "n_replace": 1,
+  "ce_weight": 1.0,
+  "kl_weight": 1.0,
+  "seed": 42,
+  "output_dir": "precomputed_results/drone_tok160"
+}
+2026-04-06 16:39:48,350 — __main__ — INFO — Loading tokenizer and model...
+2026-04-06 16:40:08,675 — src.model — INFO — Model and tokenizer loaded successfully.
+2026-04-06 16:40:08,737 — __main__ — INFO — Loading dataset...
+2026-04-06 16:40:08,854 — data.loader — INFO — Dataset split into training (160 samples) and testing (40 samples).
+2026-04-06 16:40:08,854 — __main__ — INFO — Constructing system prompt for obfuscation...
+2026-04-06 16:40:08,926 — __main__ — INFO — Constructed system prompt for obfuscation: '<|pad|>You are a code writer helping me with the AirSim simulator for drone control. You should think step by step, you can decompose task into small steps. When I ask you to do something, you are supposed to give me Python code needed to achieve that task in one script, do not generate functions unless I ask you do so. You are only allowed to use the functions I have defined for you, you should never use any other hypothetical functions that you think might exist. You are only allowed to import math python libraries. You should output code only. Do not use additional if statements or loops.
+
+Here are some functions you can use to command the drone.
+
+aw.takeoff() - takes off the drone.
+aw.land() - lands the drone.
+aw.go_home() - return drone to home.
+aw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.
+aw.get_yaw() - returns the current yaw of the drone in degrees.
+aw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.
+aw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.
+aw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.
+
+Important: positive X is North, positive Y is East, negative Z is Up. Use NED coordinates. Drone starts facing North (yaw=0). For body-frame moves, transform using: x=x'cos(-θ)+y'sin(-θ), y=-x'sin(-θ)+y'cos(-θ), z=-z'. You are an code writer helping me with the AirSim simulator for drone control.
+You should think step by step, you can decompose task into small steps.
+When I ask you to do something, you are supposed to give me Python code is needed to achieve that task in one script, do not generate functions unless I ask you do so.
+You are only allowed to use the functions I have defined for you, you should never use any other hypothetical functions that you think might exist.
+You are only allowed to import math python libraries.
+You should output code only.
+Do not use additional if statements or loops.
+
+Here are some functions you can use to command the drone.
+
+aw.takeoff() - takes off the drone.
+aw.land() - lands the drone.
+aw.go_home() - return drone to home.
+aw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.
+aw.get_yaw() - returns the current yaw of the drone in degrees.
+aw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.
+aw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.
+aw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.
+
+Important drone coordinate directional information and rules:
+1. The horizontal axises are Y and X, vertical axis is Z. When rotating drone, right or clockwise means positive.
+2. aw.fly_to([x, y, z]) function uses NED coordinate system (world coordinates), positive X axis is North/forward, positive Y axis is East/right, positive Z axis is Down. When flying up, the Z value should decrease. When flying down, the Z value should increase.
+3. The drone is initialized facing north, Yaw = 0.
+4. In terms of drone's body frame axis conventions: forward means positive X axis, right means positive Y axis, up means positive Z axis.
+5. When asked to move in drones body frame, you should transform drone body frame movements to world coordinates. Because aw.fly_to([x, y, z]) function flies the drone in world coordinates.
+6. Below is the coordinates transforming equation: x, y, z are the world coordinate movements, x', y', z' are the drone body frame coordinate movements. Please note that we are employing a negative value for "theta".
+x = x'*cos(-theta) + y'*sin(-theta)
+y = -x'*sin(-theta) + y'*cos(-theta)
+z = -z'
+
+Here are some examples:
+
+Query: "Fly 10 meters up."
+Answer: 
+"
+## Action 1: fly 10 meters up. 
+current_position = aw.get_drone_position() # Get the current position of the drone
+# fly up corresponds to negative Z direction in world coordinates, so -10 for z.
+aw.fly_to([current_position[0], current_position[1], current_position[2] - 10])
+"
+
+Query: "Turn 90 degrees left, then fly 5 meters drone's left in the drone's body frame."
+Answer: 
+"
+## Action 1: turn 90 degrees left.
+current_yaw = aw.get_yaw()  # Get the current yaw of the drone
+new_yaw = current_yaw - 90  # Calculate the new yaw for a 90 degrees left turn
+aw.set_yaw(new_yaw)  # Set the drone's yaw to turn 90 degrees left
+
+## Action 2: fly 5 meters drone's left in the drone's body frame.
+current_position = aw.get_drone_position() # Retrieve the current XYZ position of the drone
+# Calculate movement in the drone's body frame
+body_x = 0  # move 0 in drone's x axis
+body_y = -5 # move left means -5 in drone's y axis
+body_z = 0 # move 0 in drone's z axis
+# Use transform equation to transform the drone's body frame movements to the world frame movements
+# x = x'*cos(-theta) + y'*sin(-theta), y = -x'*sin(-theta) + y'*cos(-theta), z = -z'
+current_yaw = aw.get_yaw() # get current yaw angle
+radian_yaw = math.radians(-current_yaw)
+world_x = current_position[0] + body_x * math.cos(radian_yaw) + body_y * math.sin(radian_yaw) # x = x'*cos(-theta) + y'*sin(-theta)
+world_y = current_position[1] - body_x * math.sin(radian_yaw) + body_y * math.cos(radian_yaw) # y = -x'*sin(-theta) + y'*cos(-theta)
+world_z = current_position[2] - body_z # z = -z'
+# Command the drone to the new position
+aw.fly_to([world_x, world_y, world_z])
+"<|pad|>'
+2026-04-06 16:40:08,926 — __main__ — INFO — Initializing obfuscated system prompt with length: 160 tokens.
+2026-04-06 16:40:08,927 — __main__ — INFO — Precomputing model outputs (probs and IDs) using conventional system prompt...
+2026-04-06 16:45:31,685 — src.output_generation — INFO — Max GPU memory occupied during precomputation: 10394 MB
+2026-04-06 16:45:34,640 — __main__ — INFO — Applying soft prompt obfuscation...
+2026-04-06 16:45:34,920 — __main__ — INFO — Token Window 1, Iteration: 1/5
+2026-04-06 16:56:35,981 — __main__ — INFO — Token Window 1, Iteration 1 Avg Loss: 2.5526
+2026-04-06 16:56:35,983 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 16:56:35,995 — __main__ — INFO — Token Window 1, Iteration: 2/5
+2026-04-06 17:07:25,143 — __main__ — INFO — Token Window 1, Iteration 2 Avg Loss: 0.0517
+2026-04-06 17:07:25,145 — __main__ — INFO — Max GPU Utilization: 16304 MB
+2026-04-06 17:07:25,177 — __main__ — INFO — Token Window 1, Iteration: 3/5
+2026-04-06 17:18:25,810 — __main__ — INFO — Token Window 1, Iteration 3 Avg Loss: 0.0383
+2026-04-06 17:18:25,811 — __main__ — INFO — Max GPU Utilization: 16308 MB
+2026-04-06 17:18:25,836 — __main__ — INFO — Token Window 1, Iteration: 4/5
+2026-04-06 17:29:13,171 — __main__ — INFO — Token Window 1, Iteration 4 Avg Loss: 0.0352
+2026-04-06 17:29:13,174 — __main__ — INFO — Max GPU Utilization: 16378 MB
+2026-04-06 17:29:13,216 — __main__ — INFO — Token Window 1, Iteration: 5/5
+2026-04-06 17:40:00,227 — __main__ — INFO — Token Window 1, Iteration 5 Avg Loss: 0.0340
+2026-04-06 17:40:00,233 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 17:40:00,260 — __main__ — INFO — Finished token window 1. Cumulative true tokens appended: 5. Total cumulative: 5
+2026-04-06 17:40:00,321 — __main__ — INFO — Token Window 2, Iteration: 1/5
+2026-04-06 17:50:01,735 — __main__ — INFO — Token Window 2, Iteration 1 Avg Loss: 3.5114
+2026-04-06 17:50:01,737 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 17:50:01,748 — __main__ — INFO — Token Window 2, Iteration: 2/5
+2026-04-06 17:59:43,807 — __main__ — INFO — Token Window 2, Iteration 2 Avg Loss: 0.8183
+2026-04-06 17:59:43,810 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 17:59:43,827 — __main__ — INFO — Token Window 2, Iteration: 3/5
+2026-04-06 18:09:20,647 — __main__ — INFO — Token Window 2, Iteration 3 Avg Loss: 0.5676
+2026-04-06 18:09:20,649 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:09:20,671 — __main__ — INFO — Token Window 2, Iteration: 4/5
+2026-04-06 18:18:59,721 — __main__ — INFO — Token Window 2, Iteration 4 Avg Loss: 0.4321
+2026-04-06 18:18:59,724 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:18:59,731 — __main__ — INFO — Token Window 2, Iteration: 5/5
+2026-04-06 18:28:46,648 — __main__ — INFO — Token Window 2, Iteration 5 Avg Loss: 0.3510
+2026-04-06 18:28:46,650 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:28:46,656 — __main__ — INFO — Finished token window 2. Cumulative true tokens appended: 5. Total cumulative: 10
+2026-04-06 18:28:46,726 — __main__ — INFO — Token Window 3, Iteration: 1/5
+2026-04-06 18:38:35,131 — __main__ — INFO — Token Window 3, Iteration 1 Avg Loss: 2.0828
+2026-04-06 18:38:35,133 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:38:35,140 — __main__ — INFO — Token Window 3, Iteration: 2/5
+2026-04-06 18:47:37,251 — __main__ — INFO — Token Window 3, Iteration 2 Avg Loss: 0.1715
+2026-04-06 18:47:37,252 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:47:37,272 — __main__ — INFO — Token Window 3, Iteration: 3/5
+2026-04-06 18:56:20,738 — __main__ — INFO — Token Window 3, Iteration 3 Avg Loss: 0.1344
+2026-04-06 18:56:20,740 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 18:56:20,765 — __main__ — INFO — Token Window 3, Iteration: 4/5
+2026-04-06 19:04:57,428 — __main__ — INFO — Token Window 3, Iteration 4 Avg Loss: 0.1089
+2026-04-06 19:04:57,430 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 19:04:57,451 — __main__ — INFO — Token Window 3, Iteration: 5/5
+2026-04-06 19:13:44,598 — __main__ — INFO — Token Window 3, Iteration 5 Avg Loss: 0.1014
+2026-04-06 19:13:44,600 — __main__ — INFO — Max GPU Utilization: 10394 MB
+2026-04-06 19:13:44,606 — __main__ — INFO — Finished token window 3. Cumulative true tokens appended: 5. Total cumulative: 15
+2026-04-06 19:13:44,606 — __main__ — INFO — Soft prompt obfuscation finished.
+2026-04-06 19:13:44,757 — __main__ — INFO — Results saved to /scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/drone_tok160
+2026-04-06 19:13:44,926 — __main__ — INFO — Done.

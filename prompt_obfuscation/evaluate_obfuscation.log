@@ -1,0 +1,102 @@
+2026-04-06 19:14:18,492 — src.logging_config — INFO — Logging configured. Log file: evaluate_obfuscation.log, Level: INFO
+2026-04-06 19:14:18,493 — __main__ — INFO — Command line arguments received: {
+  "results_dir": "precomputed_results/drone_tok160",
+  "metrics": [
+    "sacrebleu",
+    "rouge1",
+    "rouge2",
+    "rougeL",
+    "rougeLsum",
+    "meteor",
+    "bertscore",
+    "cer",
+    "nist_mt",
+    "chrf",
+    "cosine_similarity"
+  ],
+  "eval_batch_size": 32,
+  "max_new_tokens": 125,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "top_k": 100,
+  "num_return_sequences": 5
+}
+2026-04-06 19:14:18,493 — __main__ — INFO — Starting evaluation for results in: precomputed_results/drone_tok160
+2026-04-06 19:14:18,493 — __main__ — INFO — Loaded obfuscation parameters: {
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "quantize_4bit": true,
+  "quantize_8bit": false,
+  "system_prompt": "<|pad|>You are a code writer helping me with the AirSim simulator for drone control. You should think step by step, you can decompose task into small steps. When I ask you to do something, you are supposed to give me Python code needed to achieve that task in one script, do not generate functions unless I ask you do so. You are only allowed to use the functions I have defined for you, you should never use any other hypothetical functions that you think might exist. You are only allowed to import math python libraries. You should output code only. Do not use additional if statements or loops.\n\nHere are some functions you can use to command the drone.\n\naw.takeoff() - takes off the drone.\naw.land() - lands the drone.\naw.go_home() - return drone to home.\naw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.\naw.get_yaw() - returns the current yaw of the drone in degrees.\naw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.\naw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.\naw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.\n\nImportant: positive X is North, positive Y is East, negative Z is Up. Use NED coordinates. Drone starts facing North (yaw=0). For body-frame moves, transform using: x=x'cos(-\u03b8)+y'sin(-\u03b8), y=-x'sin(-\u03b8)+y'cos(-\u03b8), z=-z'. You are an code writer helping me with the AirSim simulator for drone control.\r\nYou should think step by step, you can decompose task into small steps.\r\nWhen I ask you to do something, you are supposed to give me Python code is needed to achieve that task in one script, do not generate functions unless I ask you do so.\r\nYou are only allowed to use the functions I have defined for you, you should never use any other hypothetical functions that you think might exist.\r\nYou are only allowed to import math python libraries.\r\nYou should output code only.\r\nDo not use additional if statements or loops.\n\nHere are some functions you can use to command the drone.\r\n\r\naw.takeoff() - takes off the drone.\r\naw.land() - lands the drone.\r\naw.go_home() - return drone to home.\r\naw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.\r\naw.get_yaw() - returns the current yaw of the drone in degrees.\r\naw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.\r\naw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.\r\naw.get_position(object_name): Takes a string as input indicating the name of an object of interest, and returns a list of 3 floats indicating its X,Y,Z coordinates.\r\n\r\nImportant drone coordinate directional information and rules:\r\n1. The horizontal axises are Y and X, vertical axis is Z. When rotating drone, right or clockwise means positive.\r\n2. aw.fly_to([x, y, z]) function uses NED coordinate system (world coordinates), positive X axis is North/forward, positive Y axis is East/right, positive Z axis is Down. When flying up, the Z value should decrease. When flying down, the Z value should increase.\r\n3. The drone is initialized facing north, Yaw = 0.\r\n4. In terms of drone's body frame axis conventions: forward means positive X axis, right means positive Y axis, up means positive Z axis.\r\n5. When asked to move in drones body frame, you should transform drone body frame movements to world coordinates. Because aw.fly_to([x, y, z]) function flies the drone in world coordinates.\r\n6. Below is the coordinates transforming equation: x, y, z are the world coordinate movements, x', y', z' are the drone body frame coordinate movements. Please note that we are employing a negative value for \"theta\".\r\nx = x'*cos(-theta) + y'*sin(-theta)\r\ny = -x'*sin(-theta) + y'*cos(-theta)\r\nz = -z'\r\n\r\nHere are some examples:\r\n\r\nQuery: \"Fly 10 meters up.\"\r\nAnswer: \r\n\"\r\n## Action 1: fly 10 meters up. \r\ncurrent_position = aw.get_drone_position() # Get the current position of the drone\r\n# fly up corresponds to negative Z direction in world coordinates, so -10 for z.\r\naw.fly_to([current_position[0], current_position[1], current_position[2] - 10])\r\n\"\r\n\r\nQuery: \"Turn 90 degrees left, then fly 5 meters drone's left in the drone's body frame.\"\r\nAnswer: \r\n\"\r\n## Action 1: turn 90 degrees left.\r\ncurrent_yaw = aw.get_yaw()  # Get the current yaw of the drone\r\nnew_yaw = current_yaw - 90  # Calculate the new yaw for a 90 degrees left turn\r\naw.set_yaw(new_yaw)  # Set the drone's yaw to turn 90 degrees left\r\n\r\n## Action 2: fly 5 meters drone's left in the drone's body frame.\r\ncurrent_position = aw.get_drone_position() # Retrieve the current XYZ position of the drone\r\n# Calculate movement in the drone's body frame\r\nbody_x = 0  # move 0 in drone's x axis\r\nbody_y = -5 # move left means -5 in drone's y axis\r\nbody_z = 0 # move 0 in drone's z axis\r\n# Use transform equation to transform the drone's body frame movements to the world frame movements\r\n# x = x'*cos(-theta) + y'*sin(-theta), y = -x'*sin(-theta) + y'*cos(-theta), z = -z'\r\ncurrent_yaw = aw.get_yaw() # get current yaw angle\r\nradian_yaw = math.radians(-current_yaw)\r\nworld_x = current_position[0] + body_x * math.cos(radian_yaw) + body_y * math.sin(radian_yaw) # x = x'*cos(-theta) + y'*sin(-theta)\r\nworld_y = current_position[1] - body_x * math.sin(radian_yaw) + body_y * math.cos(radian_yaw) # y = -x'*sin(-theta) + y'*cos(-theta)\r\nworld_z = current_position[2] - body_z # z = -z'\r\n# Command the drone to the new position\r\naw.fly_to([world_x, world_y, world_z])\r\n\"<|pad|>",
+  "style": null,
+  "obfuscation_method": "soft",
+  "batch_size": 2,
+  "dataset_name": "drone",
+  "dataset_size": 200,
+  "task_hints": false,
+  "obf_sys_prompt_len": 160,
+  "output_token_count": 15,
+  "window_size": 5,
+  "lr": 0.01,
+  "optimizer_iter": 5,
+  "topk": 3,
+  "search_width": 10,
+  "n_replace": 1,
+  "ce_weight": 1.0,
+  "kl_weight": 1.0,
+  "seed": 42
+}
+2026-04-06 19:14:37,376 — src.model — INFO — Model and tokenizer loaded successfully.
+2026-04-06 19:14:37,428 — __main__ — INFO — Loaded model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2026-04-06 19:14:37,442 — __main__ — INFO — Loaded 15 obfuscated system prompts.
+2026-04-06 19:14:37,443 — __main__ — INFO — Loaded test data with 40 prompts.
+2026-04-06 19:14:37,502 — __main__ — INFO — Generating reference outputs on test data using the conventional system prompt...
+2026-04-06 19:17:15,183 — src.output_generation — INFO — Max GPU memory occupied during output generation: 81312 MB
+2026-04-06 19:18:17,798 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81312 MB
+2026-04-06 19:18:56,864 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81350 MB
+2026-04-06 19:18:56,865 — __main__ — INFO — Similarity scores: {'nist_mt': 0.4239490898878614, 'meteor': 0.11714664882656439, 'bertscore': 0.7573239207267761, 'cer': 0.9299538065435494, 'cosine_similarity': 0.27784167863428594, 'chrf': 11.086504660402783, 'sacrebleu': 3.2141961172726794, 'rouge1': 0.09167617509544904, 'rouge2': 0.025638576451155644, 'rougeL': 0.09177545493217656, 'rougeLsum': 0.0917545941604586}
+2026-04-06 19:19:59,028 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81350 MB
+2026-04-06 19:20:16,820 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81350 MB
+2026-04-06 19:20:16,820 — __main__ — INFO — Similarity scores: {'nist_mt': 0.5174686859428974, 'meteor': 0.12728994459181553, 'bertscore': 0.7652148604393005, 'cer': 0.9186769539000456, 'cosine_similarity': 0.2712760914117098, 'chrf': 11.398140610080379, 'sacrebleu': 3.934531812968859, 'rouge1': 0.08765153627870065, 'rouge2': 0.02433990728911297, 'rougeL': 0.08756051209880758, 'rougeLsum': 0.08770795764232409}
+2026-04-06 19:21:20,162 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81350 MB
+2026-04-06 19:21:44,273 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81350 MB
+2026-04-06 19:21:44,274 — __main__ — INFO — Similarity scores: {'nist_mt': 0.5129631404197934, 'meteor': 0.12917354820037175, 'bertscore': 0.7630689740180969, 'cer': 0.9156941599693178, 'cosine_similarity': 0.28463750071823596, 'chrf': 11.421200260737958, 'sacrebleu': 3.9044075184305385, 'rouge1': 0.08627203317024788, 'rouge2': 0.02397876256679467, 'rougeL': 0.08626606410103557, 'rougeLsum': 0.08637759325829451}
+2026-04-06 19:22:47,949 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81350 MB
+2026-04-06 19:23:06,869 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81350 MB
+2026-04-06 19:23:06,869 — __main__ — INFO — Similarity scores: {'nist_mt': 0.5203234236277964, 'meteor': 0.12818240974829687, 'bertscore': 0.7668046355247498, 'cer': 0.9174495718098398, 'cosine_similarity': 0.2759361930191517, 'chrf': 11.405130057911116, 'sacrebleu': 3.9614327668076856, 'rouge1': 0.08802402787747012, 'rouge2': 0.02442175079850208, 'rougeL': 0.08776886692942013, 'rougeLsum': 0.08779341845355412}
+2026-04-06 19:24:09,855 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81350 MB
+2026-04-06 19:24:27,316 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81350 MB
+2026-04-06 19:24:27,317 — __main__ — INFO — Similarity scores: {'nist_mt': 0.5173393707880726, 'meteor': 0.12887616515236938, 'bertscore': 0.768633246421814, 'cer': 0.9219711390763173, 'cosine_similarity': 0.27271855548024176, 'chrf': 11.275301205507873, 'sacrebleu': 3.9238852105484003, 'rouge1': 0.08888002949250502, 'rouge2': 0.024676565689477334, 'rougeL': 0.08890084413613758, 'rougeLsum': 0.08871647785951758}
+2026-04-06 19:25:29,375 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81350 MB
+2026-04-06 19:25:57,828 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81352 MB
+2026-04-06 19:25:57,829 — __main__ — INFO — Similarity scores: {'nist_mt': 1.2140959084854903, 'meteor': 0.11640579809749205, 'bertscore': 0.7828837633132935, 'cer': 0.7387312393978184, 'cosine_similarity': 0.579758758097887, 'chrf': 22.502742084034104, 'sacrebleu': 6.534177799604111, 'rouge1': 0.22969645004726863, 'rouge2': 0.09955179830864502, 'rougeL': 0.21296369561006262, 'rougeLsum': 0.2284480422908427}
+2026-04-06 19:27:01,818 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81352 MB
+2026-04-06 19:27:22,356 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81352 MB
+2026-04-06 19:27:22,357 — __main__ — INFO — Similarity scores: {'nist_mt': 0.8382140912081836, 'meteor': 0.09314552343769535, 'bertscore': 0.7793471813201904, 'cer': 0.7978795828484649, 'cosine_similarity': 0.5943423748016358, 'chrf': 20.088192100049334, 'sacrebleu': 5.75265818192024, 'rouge1': 0.17993636684109188, 'rouge2': 0.07808798079117149, 'rougeL': 0.16465296418073255, 'rougeLsum': 0.1790645082992345}
+2026-04-06 19:28:24,011 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81352 MB
+2026-04-06 19:28:47,149 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81352 MB
+2026-04-06 19:28:47,149 — __main__ — INFO — Similarity scores: {'nist_mt': 1.1510786788290197, 'meteor': 0.10907234397779558, 'bertscore': 0.7842081189155579, 'cer': 0.7566404870092418, 'cosine_similarity': 0.54932149797678, 'chrf': 21.250523882028517, 'sacrebleu': 6.699733114123305, 'rouge1': 0.21299883907208508, 'rouge2': 0.09277135328309508, 'rougeL': 0.18690861876765336, 'rougeLsum': 0.2097164089342533}
+2026-04-06 19:29:49,334 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81352 MB
+2026-04-06 19:30:12,670 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81352 MB
+2026-04-06 19:30:12,671 — __main__ — INFO — Similarity scores: {'nist_mt': 1.153553227525315, 'meteor': 0.1090797672943662, 'bertscore': 0.7896296977996826, 'cer': 0.7849401339239457, 'cosine_similarity': 0.6080431312322616, 'chrf': 22.13808917884928, 'sacrebleu': 8.407716467074927, 'rouge1': 0.2313693704215582, 'rouge2': 0.10310365107422309, 'rougeL': 0.19891788924106896, 'rougeLsum': 0.22775960094399805}
+2026-04-06 19:31:14,021 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81352 MB
+2026-04-06 19:31:42,854 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81352 MB
+2026-04-06 19:31:42,855 — __main__ — INFO — Similarity scores: {'nist_mt': 1.1632193323914823, 'meteor': 0.10616671553615858, 'bertscore': 0.7876996397972107, 'cer': 0.7587729232049696, 'cosine_similarity': 0.5838080964982509, 'chrf': 22.574858192685117, 'sacrebleu': 7.752444241327619, 'rouge1': 0.22333915458404088, 'rouge2': 0.10004295259259924, 'rougeL': 0.19885114953457758, 'rougeLsum': 0.22066273261850222}
+2026-04-06 19:32:46,081 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81352 MB
+2026-04-06 19:33:13,751 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81358 MB
+2026-04-06 19:33:13,751 — __main__ — INFO — Similarity scores: {'nist_mt': 1.2043205492174682, 'meteor': 0.21882434661927866, 'bertscore': 0.785980224609375, 'cer': 0.8598413180288612, 'cosine_similarity': 0.5309959255158901, 'chrf': 19.2000544003727, 'sacrebleu': 10.09423069800055, 'rouge1': 0.18575646217401173, 'rouge2': 0.06398917753468444, 'rougeL': 0.15776911093446022, 'rougeLsum': 0.18330878014164192}
+2026-04-06 19:34:16,653 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81358 MB
+2026-04-06 19:34:39,408 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81364 MB
+2026-04-06 19:34:39,408 — __main__ — INFO — Similarity scores: {'nist_mt': 1.3900934414649186, 'meteor': 0.2477734770697121, 'bertscore': 0.7943993210792542, 'cer': 0.7927408216867465, 'cosine_similarity': 0.5397474609315396, 'chrf': 23.752943213962677, 'sacrebleu': 12.263168317983729, 'rouge1': 0.21570959631253234, 'rouge2': 0.072169122162349, 'rougeL': 0.19015165283724708, 'rougeLsum': 0.21129140321194423}
+2026-04-06 19:35:41,014 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81364 MB
+2026-04-06 19:36:04,313 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81366 MB
+2026-04-06 19:36:04,313 — __main__ — INFO — Similarity scores: {'nist_mt': 1.441137185133551, 'meteor': 0.24623734007231535, 'bertscore': 0.7941156029701233, 'cer': 0.8174790464885652, 'cosine_similarity': 0.5390984758734703, 'chrf': 22.345306714191178, 'sacrebleu': 12.775541141767384, 'rouge1': 0.2099681334613987, 'rouge2': 0.07103582745003467, 'rougeL': 0.18658646569291182, 'rougeLsum': 0.2072164325805499}
+2026-04-06 19:37:06,939 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81366 MB
+2026-04-06 19:37:24,120 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81366 MB
+2026-04-06 19:37:24,120 — __main__ — INFO — Similarity scores: {'nist_mt': 1.4397621084493633, 'meteor': 0.24721584119817205, 'bertscore': 0.795687735080719, 'cer': 0.8150538551686943, 'cosine_similarity': 0.5438456043601037, 'chrf': 22.466589533826802, 'sacrebleu': 13.344644882652156, 'rouge1': 0.20951877422959791, 'rouge2': 0.07161031038620569, 'rougeL': 0.1846976680316978, 'rougeLsum': 0.20567495147470322}
+2026-04-06 19:38:24,265 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81366 MB
+2026-04-06 19:38:40,424 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 81366 MB
+2026-04-06 19:38:40,424 — __main__ — INFO — Similarity scores: {'nist_mt': 1.486775670418925, 'meteor': 0.25207136108247014, 'bertscore': 0.8008405566215515, 'cer': 0.8164567229924873, 'cosine_similarity': 0.5485253214836121, 'chrf': 23.84269742573165, 'sacrebleu': 14.35962594820841, 'rouge1': 0.22294892829024196, 'rouge2': 0.07961337202675531, 'rougeL': 0.19779321381345724, 'rougeLsum': 0.218774280878471}
+2026-04-06 19:38:40,432 — __main__ — INFO — Best candidate is at index 14 with scores: {'sacrebleu': 14.35962594820841, 'rouge1': 0.22294892829024196, 'rouge2': 0.07961337202675531, 'rougeL': 0.19779321381345724, 'rougeLsum': 0.218774280878471, 'meteor': 0.25207136108247014, 'bertscore': 0.8008405566215515, 'cer': 0.8164567229924873, 'nist_mt': 1.486775670418925, 'chrf': 23.84269742573165, 'cosine_similarity': 0.5485253214836121}
+2026-04-06 19:38:40,432 — __main__ — INFO — Regenerating output for best obfuscated system prompt...
+2026-04-06 19:39:41,469 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 81366 MB
+2026-04-06 19:39:41,504 — __main__ — INFO — Done.

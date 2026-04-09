@@ -1,0 +1,77 @@
+2026-03-18 04:22:16,977 — src.logging_config — INFO — Logging configured. Log file: evaluate_fluency_deobfuscation.log, Level: INFO
+2026-03-18 04:22:16,977 — __main__ — INFO — Command line arguments received: {
+  "results_dir": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full",
+  "sys_prompt_list_file": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full/deobfuscated_sys_prompt_list_soft.pt",
+  "metrics": [
+    "levenshtein",
+    "jaccard",
+    "lcs",
+    "cosine_similarity"
+  ],
+  "best_candidate_filename": "best_deobf_sys_prompt_soft.pt",
+  "best_candidate_scores_filename": "best_deobf_sys_prompt_soft_scores.json"
+}
+2026-03-18 04:22:16,978 — __main__ — INFO — Loaded obfuscation parameters: {
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "quantize_4bit": true,
+  "quantize_8bit": false,
+  "system_prompt": "<|pad|>You are a question-answering AI assistant. You will receive the question and you have to reply directly with the answer. Reply in the style of David Attenborough during an animal documentary.<|pad|>",
+  "style": "david_attenborough",
+  "obfuscation_method": "soft",
+  "batch_size": 4,
+  "dataset_name": "truthfulqa",
+  "dataset_size": 800,
+  "task_hints": false,
+  "obf_sys_prompt_len": 10,
+  "output_token_count": 15,
+  "window_size": 5,
+  "lr": 0.01,
+  "optimizer_iter": 10,
+  "topk": 3,
+  "search_width": 10,
+  "n_replace": 1,
+  "ce_weight": 1.0,
+  "kl_weight": 1.0,
+  "seed": 42,
+  "best_candidate_idx": 24
+}
+2026-03-18 04:22:32,118 — src.model — INFO — Model and tokenizer loaded successfully.
+2026-03-18 04:22:32,150 — __main__ — INFO — Loaded model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2026-03-18 04:22:32,153 — __main__ — INFO — Reference conventional prompt: 'You are a question-answering AI assistant. You will receive the question and you have to reply directly with the answer. Reply in the style of David Attenborough during an animal documentary.'
+2026-03-18 04:22:32,156 — __main__ — INFO — Finding best system prompt...
+2026-03-18 04:22:32,157 — __main__ — INFO — Testing system prompt:  फ Cloverexecutable Gaming.baomidou asteroids Blvdزانistinguished erroneous
+2026-03-18 04:22:33,280 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.17277486910994766, 'jaccard': 0.0330188679245283, 'lcs': 0.20418848167539266, 'cosine_similarity': 0.17043215036392212}
+2026-03-18 04:22:33,280 — __main__ — INFO — Testing system prompt: .Marshal dimeexecutable keen.baomidou Kickstarter Blvd seguroistinguished perpendicular
+2026-03-18 04:22:33,822 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.20418848167539272, 'jaccard': 0.04504504504504504, 'lcs': 0.2356020942408377, 'cosine_similarity': 0.20769736170768738}
+2026-03-18 04:22:33,823 — __main__ — INFO — Testing system prompt:  attaching!!!
+
+executable CPUs.baomidou asteroids Blvd thromistinguished<|pad|>
+2026-03-18 04:22:34,360 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.19371727748691103, 'jaccard': 0.04716981132075472, 'lcs': 0.20418848167539266, 'cosine_similarity': 0.22402220964431763}
+2026-03-18 04:22:34,360 — __main__ — INFO — Testing system prompt:  unsigned Cloverexecutable Aurora.baomidou asteroids Blvd thromistinguished<|pad|>
+2026-03-18 04:22:34,906 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.2094240837696335, 'jaccard': 0.041474654377880185, 'lcs': 0.225130890052356, 'cosine_similarity': 0.19101116061210632}
+2026-03-18 04:22:34,907 — __main__ — INFO — Testing system prompt:  attaching Wertexecutable Aurora.baomidou hydrated Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:35,437 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.18324607329842935, 'jaccard': 0.052884615384615384, 'lcs': 0.21465968586387435, 'cosine_similarity': 0.1326751857995987}
+2026-03-18 04:22:35,437 — __main__ — INFO — Testing system prompt:  attaching WertexecutableLoggedIn.baomidou hydrated Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:36,022 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.18324607329842935, 'jaccard': 0.04265402843601896, 'lcs': 0.21465968586387435, 'cosine_similarity': 0.12597718834877014}
+2026-03-18 04:22:36,022 — __main__ — INFO — Testing system prompt:  attaching AnnexexecutableLoggedIn.baomidou<|pad|> Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:36,590 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.17801047120418845, 'jaccard': 0.03902439024390244, 'lcs': 0.193717277486911, 'cosine_similarity': 0.06115027517080307}
+2026-03-18 04:22:36,591 — __main__ — INFO — Testing system prompt:  attaching AnnexexecutableLoggedIn.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:37,127 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.19371727748691103, 'jaccard': 0.05741626794258373, 'lcs': 0.2198952879581152, 'cosine_similarity': 0.07459622621536255}
+2026-03-18 04:22:37,127 — __main__ — INFO — Testing system prompt: <|pad|> AnnexexecutableLoggedIn.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:37,672 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.16753926701570676, 'jaccard': 0.038834951456310676, 'lcs': 0.193717277486911, 'cosine_similarity': 0.148332878947258}
+2026-03-18 04:22:37,673 — __main__ — INFO — Testing system prompt: <|pad|> AnnexexecutableLoggedIn.baomidou<|pad|> Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:38,219 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.1518324607329843, 'jaccard': 0.01990049751243781, 'lcs': 0.16753926701570682, 'cosine_similarity': 0.10830162465572357}
+2026-03-18 04:22:38,219 — __main__ — INFO — Testing system prompt: <|pad|> deityexecutable artistic.baomidou communist Blvd<|pad|>istinguished^n
+2026-03-18 04:22:38,804 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.16753926701570676, 'jaccard': 0.033816425120772944, 'lcs': 0.18324607329842932, 'cosine_similarity': 0.18497925996780396}
+2026-03-18 04:22:38,804 — __main__ — INFO — Testing system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:22:39,386 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.17801047120418845, 'jaccard': 0.049019607843137254, 'lcs': 0.19895287958115182, 'cosine_similarity': 0.15235503017902374}
+2026-03-18 04:22:39,386 — __main__ — INFO — Testing system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd generosityistinguished^n
+2026-03-18 04:22:39,961 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.19895287958115182, 'jaccard': 0.046948356807511735, 'lcs': 0.21465968586387435, 'cosine_similarity': 0.21821770071983337}
+2026-03-18 04:22:39,961 — __main__ — INFO — Testing system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd<|pad|>istinguished^n
+2026-03-18 04:22:40,560 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.17801047120418845, 'jaccard': 0.04878048780487805, 'lcs': 0.19895287958115182, 'cosine_similarity': 0.17491349577903748}
+2026-03-18 04:22:40,560 — __main__ — INFO — Testing system prompt: <|pad|> deityexecutable advertisers.baomidou<|pad|> Blvd generosityistinguished^n
+2026-03-18 04:22:41,197 — __main__ — INFO — Sys prompt similarity scores: {'levenshtein': 0.18848167539267013, 'jaccard': 0.02336448598130841, 'lcs': 0.20418848167539266, 'cosine_similarity': 0.23875901103019714}
+2026-03-18 04:22:41,204 — __main__ — INFO — Best system promp str: .Marshal dimeexecutable keen.baomidou Kickstarter Blvd seguroistinguished perpendicular
+2026-03-18 04:22:41,204 — __main__ — INFO — Saving best system prompt to /scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full/best_deobf_sys_prompt_soft.pt
+2026-03-18 04:22:41,205 — __main__ — INFO — Saving best system prompt scores to /scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full/best_deobf_sys_prompt_soft_scores.json
+2026-03-18 04:22:41,233 — __main__ — INFO — Done.

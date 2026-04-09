@@ -1,0 +1,33 @@
+You will reason about the difference between task description and drone actions. 
+
+To find the differences, you need to reason the drone's actions and interpret the flight path of the drone. Then, you need to verify step-by-step to check whether the flight path and the drone's actions are aligned with the objectives in the task description. Additionally, you need to reason about the flying patterns formed from actions and verify whether the flight pattern aligns with the task description.
+
+Some points you must pay attention to when reasoning the drone's actions and flight paths:
+1. For tasks requiring to perpendicularly examine a square area, you must check whether the drone is oriented perpendicularly inwards the square interior; facing toward the exterior is not allowed.
+2. Reason about the shapes of the square patterns and make sure the flight path forms square patterns.
+3. You should reason about spatial locations of square patterns from actions and ensure the drone flies the square pattern in the correct spatial position as outlined in the task description.
+4. Rules for reverse path you must follow: you must first reverse the movement sequence of the original flight path. Second, mirror each movement direction of the reversed movement sequence. 
+5. Some actions are expressed in two coordinate systems to help users understand the motion from both reference frames. You must not interpret them as separate movements.
+6. When comparing actions with task, small offset of movements is allowed, but offset should no greater than 1.
+
+Important drone coordinate directional information and rules:
+1. The drone uses the NED coordinate system (world coordinates) represented as [x, y, z], the positive X axis is North/forward, positive Y axis is East/right, negative Z is up/climb.
+2. The drone is initialized facing north.
+
+If the task description and drone actions are aligned, you should output "YES" only. Otherwise, you should output "NO"; please output where all the drone actions mismatch the task description if your answer is "NO".
+No explanation is needed.
+
+Here is a correct path of a 4-meter square pattern (forward/right/backward/left) for reference:
+1. Fly 4 meters North in the world axis while facing north. The drone moves to [4, 0]. 2. Fly 4 meters East in the world axis while facing north. The drone moves to [4, 4]. 3. Fly 4 meters South in the world axis while facing north. The drone moves to [0, 4]. 4. Fly 4 meters West in the world axis while facing north. The drone moves to [0, 0].
+
+Here is a correct path of examine a 4-meter square pattern (forward/right/backward/left) that flies perpendicular on each side of the square and its reverse square movement for reference:
+1. Turn 90 degrees clockwise. 2. Fly 4 meters North in the world axis while facing east. The drone moves to [4, 0]. 3. Turn 90 degrees clockwise. 4. Fly 4 meters East in the world axis while facing south. The drone moves to [4, 4]. 5. Turn 90 degrees clockwise. 6. Fly 4 meters South in the world axis while facing west. The drone moves to [0, 4]. 7. Turn 90 degrees clockwise. 8. Fly 4 meters West in the world axis while facing north. The drone moves to [0, 0]. 9. Fly 4 meters East in the world axis while facing north. The drone moves to [0, 4]. 10. Turn 90 degrees counterclockwise. 11. Fly 4 meters North in the world axis while facing west. The drone moves to [4, 4]. 12. Turn 90 degrees counterclockwise. 13. Fly 4 meters West in the world axis while facing south. The drone moves to [4, 0]. 14. Turn 90 degrees counterclockwise. 15. Fly 4 meters South in the world axis while facing east. The drone moves to [0, 0].
+
+Here is a correct path of examine a 4-meter square pattern (forward/right/backward/left) that flies perpendicular on each side of the square and its X-axis symmetric square movement for reference:
+1. Turn 90 degrees clockwise. 2. Fly 4 meters North in the world axis while facing east. The drone moves to [4, 0]. 3. Turn 90 degrees clockwise. 4. Fly 4 meters East in the world axis while facing south. The drone moves to [4, 4]. 5. Turn 90 degrees clockwise. 6. Fly 4 meters South in the world axis while facing west. The drone moves to [0, 4]. 7. Turn 90 degrees clockwise. 8. Fly 4 meters West in the world axis while facing north. The drone moves to [0, 0]. 9. Turn 90 degrees counterclockwise. 10. Fly 4 meters North in the world axis while facing west. The drone moves to [4, 0]. 11. Turn 90 degrees counterclockwise. 12. Fly 4 meters West in the world axis while facing south. The drone moves to [4, -4]. 13. Turn 90 degrees counterclockwise. 14. Fly 4 meters South in the world axis while facing east. The drone moves to [0, -4]. 15. Turn 90 degrees counterclockwise. 16. Fly 4 meters East in the world axis while facing north. The drone moves to [0, 0].
+
+Here is a correct path of examine a 4-meter square pattern (forward/right/backward/left) that flies perpendicular on each side of the square for reference:
+1. Turn 90 degrees clockwise. 2. Fly 4 meters North in the world axis while facing east. The drone moves to [4, 0]. 3. Turn 90 degrees clockwise. 4. Fly 4 meters East in the world axis while facing south. The drone moves to [4, 4]. 5. Turn 90 degrees clockwise. 6. Fly 4 meters South in the world axis while facing west. The drone moves to [0, 4]. 7. Turn 90 degrees clockwise. 8. Fly 4 meters West in the world axis while facing north. The drone moves to [0, 0].
+
+Here is a correct path of examine a 4-meter square pattern (forward/left/backward/right) that flies perpendicular on each side of the square for reference:
+1. Turn 90 degrees counterclockwise. 2. Fly 4 meters North in the world axis while facing west. The drone moves to [4, 0]. 3. Turn 90 degrees counterclockwise. 4. Fly 4 meters West in the world axis while facing south. The drone moves to [4, -4]. 5. Turn 90 degrees counterclockwise. 6. Fly 4 meters South in the world axis while facing east. The drone moves to [0, -4]. 7. Turn 90 degrees counterclockwise. 8. Fly 4 meters East in the world axis while facing north. The drone moves to [0, 0].

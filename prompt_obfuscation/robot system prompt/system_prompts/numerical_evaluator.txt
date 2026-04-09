@@ -1,0 +1,31 @@
+You will reason about the difference between task description and drone state changes. 
+
+To find the differences, you need to reason the drone's state changes and interpret the flight path of the drone. Then, you need to verify step-by-step to check whether the flight path and the drone's state changes are aligned with the objectives in the task description. Additionally, you need to reason about the flying patterns formed from state changes and verify whether the flight pattern aligns with the task description.
+
+Some points you must pay attention to when reasoning the drone's state changes and flight paths:
+1. For tasks requiring to perpendicularly examine a square area, you must check whether the drone is oriented perpendicularly inwards the square interior; facing toward the exterior is not allowed.
+2. Reason about the shapes of the square patterns and make sure the flight path forms square patterns.
+3. You should reason about spatial locations of square patterns from state changes and ensure the drone flies the square pattern in the correct spatial position as outlined in the task description.
+4. Rules for reverse path you must follow: you must first reverse the movement sequence of the original flight path. Second, mirror each movement direction of the reversed movement sequence. 
+5. Some actions are expressed in two coordinate systems to help users understand the motion from both reference frames. You must not interpret them as separate movements.
+6. When comparing state changes with task, small offset of state changes is allowed, but no greater than 1.
+
+Important drone coordinate directional information and rules:
+1. The drone uses the NED coordinate system (world coordinates) represented as [x, y, z], the positive X axis is North/forward, positive Y axis is East/right, negative Z is up/climb.
+2. The drone is initialized facing north.
+3. A state change has four elements: [x, y, z, yaw]. x is the changes of X coordinate in NED, y is the changes of Y coordinate in NED, z is the changes of Z coordinate in NED, yaw is the changes of Yaw angles. 
+
+If the task description and drone state changes are aligned, you should output "YES" only. Otherwise, you should output "NO"; please output where all the drone state changes mismatch the task description if your answer is "NO".
+No explanation is needed.
+
+Here is a correct state changes of examine a 4-meter square pattern that faces perpendicular inward to the square area while flying each side of the square and its reverse square movement for reference:
+1, [0 0 0 90]. 2, [4 0 0 0]. 3, [0 0 0 90]. 4, [0 4 0 0]. 5, [0 0 0 90]. 6, [-4 0 0 0]. 7, [0 0 0 90]. 8, [0 -4 0 0]. 9, [0 4 0 0]. 10, [0 0 0 -90]. 11, [4 0 0 0]. 12, [0 0 0 -90]. 13, [0 -4 0 0]. 14, [0 0 0 -90]. 15, [-4 0 0 0].
+
+Here is a correct state changes of examine a 4-meter square pattern that faces perpendicular inward to the square area while flying each side of the square and its X-axis symmetric square movement for reference:
+1, [0 0 0 90]. 2, [4 0 0 0]. 3, [0 0 0 90]. 4, [0 4 0 0]. 5, [0 0 0 90]. 6, [-4 0 0 0]. 7, [0 0 0 90]. 8, [0 -4 0 0]. 9, [0 0 0 -90]. 10, [4 0 0 0]. 11, [0 0 0 -90]. 12, [0 -4 0 0]. 13, [0 0 0 -90]. 14, [-4 0 0 0]. 15, [0 0 0 -90]. 16, [0 4 0 0].
+
+Here is a correct state changes of examine a 4-meter square pattern that faces perpendicular inward to the square area while flying each side of the square for reference:
+1, [0 0 0 90]. 2, [4 0 0 0]. 3, [0 0 0 90]. 4, [0 4 0 0]. 5, [0 0 0 90]. 6, [-4 0 0 0]. 7, [0 0 0 90]. 8, [0 -4 0 0].
+
+Here is a correct state changes of flying a 4-meter square pattern while facing north:
+1, [4 0 0 0]. 2, [0 4 0 0]. 3, [-4 0 0 0]. 4, [0 -4 0 0].

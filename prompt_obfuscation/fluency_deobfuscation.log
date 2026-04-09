@@ -1,0 +1,119 @@
+2026-03-18 02:33:08,193 — src.logging_config — INFO — Logging configured. Log file: fluency_deobfuscation.log, Level: INFO
+2026-03-18 02:33:08,194 — __main__ — INFO — Command line arguments received: {
+  "results_dir": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full",
+  "embedding_file": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full/best_candidate.pt",
+  "deobfuscation_method": "soft",
+  "batch_size": 16,
+  "dataset_size": 800,
+  "output_token_count": 15,
+  "window_size": 5,
+  "optimizer_iter": 5,
+  "lr": 0.01,
+  "topk": 3,
+  "search_width": 10,
+  "n_replace": 1,
+  "ce_weight": 1.0,
+  "kl_weight": 1.0,
+  "consistency_loss_weight": 1.0,
+  "fluency_loss_weight": 1.0,
+  "deobfuscated_sys_prompts_filename": "deobfuscated_sys_prompt_list_soft.pt"
+}
+2026-03-18 02:33:08,194 — __main__ — INFO — Loaded obfuscation parameters: {
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "quantize_4bit": true,
+  "quantize_8bit": false,
+  "system_prompt": "<|pad|>You are a question-answering AI assistant. You will receive the question and you have to reply directly with the answer. Reply in the style of David Attenborough during an animal documentary.<|pad|>",
+  "style": "david_attenborough",
+  "obfuscation_method": "soft",
+  "batch_size": 4,
+  "dataset_name": "truthfulqa",
+  "dataset_size": 800,
+  "task_hints": false,
+  "obf_sys_prompt_len": 10,
+  "output_token_count": 15,
+  "window_size": 5,
+  "lr": 0.01,
+  "optimizer_iter": 10,
+  "topk": 3,
+  "search_width": 10,
+  "n_replace": 1,
+  "ce_weight": 1.0,
+  "kl_weight": 1.0,
+  "seed": 42,
+  "best_candidate_idx": 24
+}
+2026-03-18 02:33:24,476 — src.model — INFO — Model and tokenizer loaded successfully.
+2026-03-18 02:33:24,508 — __main__ — INFO — Loaded model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2026-03-18 02:33:24,509 — __main__ — INFO — Loading dataset...
+2026-03-18 02:33:25,773 — data.loader — INFO — Dataset split into training (640 samples) and testing (160 samples).
+2026-03-18 02:33:25,784 — __main__ — INFO — Precomputing model outputs (probs and IDs) using obfuscated system prompt...
+2026-03-18 02:34:31,591 — src.output_generation — INFO — Max GPU memory occupied during precomputation: 69305 MB
+2026-03-18 02:34:32,538 — __main__ — INFO — Deobfuscating using soft prompt fluency optimization...
+2026-03-18 02:34:34,709 — __main__ — INFO — Token Window 1, Iteration: 1/5
+2026-03-18 02:41:15,974 — __main__ — INFO — Token Window 1, Iteration 1 Avg Loss: 13.7563
+2026-03-18 02:41:15,977 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 02:41:18,016 — __main__ — INFO — Current deobfuscated system prompt:  फ Cloverexecutable Gaming.baomidou asteroids Blvdزانistinguished erroneous
+2026-03-18 02:41:18,016 — __main__ — INFO — Token Window 1, Iteration: 2/5
+2026-03-18 02:48:05,300 — __main__ — INFO — Token Window 1, Iteration 2 Avg Loss: 13.8684
+2026-03-18 02:48:05,302 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 02:48:07,356 — __main__ — INFO — Current deobfuscated system prompt: .Marshal dimeexecutable keen.baomidou Kickstarter Blvd seguroistinguished perpendicular
+2026-03-18 02:48:07,356 — __main__ — INFO — Token Window 1, Iteration: 3/5
+2026-03-18 02:54:56,336 — __main__ — INFO — Token Window 1, Iteration 3 Avg Loss: 13.8314
+2026-03-18 02:54:56,337 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 02:54:58,444 — __main__ — INFO — Current deobfuscated system prompt:  attaching!!!
+
+executable CPUs.baomidou asteroids Blvd thromistinguished<|pad|>
+2026-03-18 02:54:58,444 — __main__ — INFO — Token Window 1, Iteration: 4/5
+2026-03-18 03:01:49,734 — __main__ — INFO — Token Window 1, Iteration 4 Avg Loss: 13.4210
+2026-03-18 03:01:49,736 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 03:01:51,728 — __main__ — INFO — Current deobfuscated system prompt:  unsigned Cloverexecutable Aurora.baomidou asteroids Blvd thromistinguished<|pad|>
+2026-03-18 03:01:51,728 — __main__ — INFO — Token Window 1, Iteration: 5/5
+2026-03-18 03:08:43,450 — __main__ — INFO — Token Window 1, Iteration 5 Avg Loss: 13.2866
+2026-03-18 03:08:43,452 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 03:08:45,555 — __main__ — INFO — Current deobfuscated system prompt:  attaching Wertexecutable Aurora.baomidou hydrated Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:08:45,555 — __main__ — INFO — Finished token window 1. Cumulative true tokens appended: 5. Total cumulative: 5
+2026-03-18 03:08:45,744 — __main__ — INFO — Token Window 2, Iteration: 1/5
+2026-03-18 03:15:59,056 — __main__ — INFO — Token Window 2, Iteration 1 Avg Loss: 12.6878
+2026-03-18 03:15:59,059 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 03:16:01,232 — __main__ — INFO — Current deobfuscated system prompt:  attaching WertexecutableLoggedIn.baomidou hydrated Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:16:01,232 — __main__ — INFO — Token Window 2, Iteration: 2/5
+2026-03-18 03:23:19,983 — __main__ — INFO — Token Window 2, Iteration 2 Avg Loss: 12.7328
+2026-03-18 03:23:19,984 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 03:23:22,152 — __main__ — INFO — Current deobfuscated system prompt:  attaching AnnexexecutableLoggedIn.baomidou<|pad|> Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:23:22,152 — __main__ — INFO — Token Window 2, Iteration: 3/5
+2026-03-18 03:30:37,217 — __main__ — INFO — Token Window 2, Iteration 3 Avg Loss: 13.9330
+2026-03-18 03:30:37,219 — __main__ — INFO — Max GPU Utilization: 69305 MB
+2026-03-18 03:30:39,422 — __main__ — INFO — Current deobfuscated system prompt:  attaching AnnexexecutableLoggedIn.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:30:39,422 — __main__ — INFO — Token Window 2, Iteration: 4/5
+2026-03-18 03:38:02,086 — __main__ — INFO — Token Window 2, Iteration 4 Avg Loss: 13.8157
+2026-03-18 03:38:02,088 — __main__ — INFO — Max GPU Utilization: 3743 MB
+2026-03-18 03:38:04,319 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> AnnexexecutableLoggedIn.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:38:04,320 — __main__ — INFO — Token Window 2, Iteration: 5/5
+2026-03-18 03:45:23,977 — __main__ — INFO — Token Window 2, Iteration 5 Avg Loss: 13.5679
+2026-03-18 03:45:23,980 — __main__ — INFO — Max GPU Utilization: 3743 MB
+2026-03-18 03:45:26,159 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> AnnexexecutableLoggedIn.baomidou<|pad|> Blvd<|pad|>istinguished<|pad|>
+2026-03-18 03:45:26,159 — __main__ — INFO — Finished token window 2. Cumulative true tokens appended: 5. Total cumulative: 10
+2026-03-18 03:45:26,343 — __main__ — INFO — Token Window 3, Iteration: 1/5
+2026-03-18 03:52:57,774 — __main__ — INFO — Token Window 3, Iteration 1 Avg Loss: 15.3385
+2026-03-18 03:52:57,776 — __main__ — INFO — Max GPU Utilization: 3743 MB
+2026-03-18 03:52:59,953 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> deityexecutable artistic.baomidou communist Blvd<|pad|>istinguished^n
+2026-03-18 03:52:59,954 — __main__ — INFO — Token Window 3, Iteration: 2/5
+2026-03-18 04:00:31,962 — __main__ — INFO — Token Window 3, Iteration 2 Avg Loss: 14.6157
+2026-03-18 04:00:31,963 — __main__ — INFO — Max GPU Utilization: 3743 MB
+2026-03-18 04:00:34,155 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd<|pad|>istinguished<|pad|>
+2026-03-18 04:00:34,156 — __main__ — INFO — Token Window 3, Iteration: 3/5
+2026-03-18 04:07:52,535 — __main__ — INFO — Token Window 3, Iteration 3 Avg Loss: 14.5223
+2026-03-18 04:07:52,537 — __main__ — INFO — Max GPU Utilization: 60579 MB
+2026-03-18 04:07:54,556 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd generosityistinguished^n
+2026-03-18 04:07:54,557 — __main__ — INFO — Token Window 3, Iteration: 4/5
+2026-03-18 04:14:58,233 — __main__ — INFO — Token Window 3, Iteration 4 Avg Loss: 14.1800
+2026-03-18 04:14:58,235 — __main__ — INFO — Max GPU Utilization: 60579 MB
+2026-03-18 04:15:00,360 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> deityexecutable artistic.baomidou sectarian Blvd<|pad|>istinguished^n
+2026-03-18 04:15:00,360 — __main__ — INFO — Token Window 3, Iteration: 5/5
+2026-03-18 04:22:08,940 — __main__ — INFO — Token Window 3, Iteration 5 Avg Loss: 14.6749
+2026-03-18 04:22:08,943 — __main__ — INFO — Max GPU Utilization: 60579 MB
+2026-03-18 04:22:10,991 — __main__ — INFO — Current deobfuscated system prompt: <|pad|> deityexecutable advertisers.baomidou<|pad|> Blvd generosityistinguished^n
+2026-03-18 04:22:10,992 — __main__ — INFO — Finished token window 3. Cumulative true tokens appended: 5. Total cumulative: 15
+2026-03-18 04:22:10,992 — __main__ — INFO — Soft prompt deobfuscation finished.
+2026-03-18 04:22:11,600 — __main__ — INFO — Deobfuscated system prompts saved to /scratch/Hanzhi/paper reproduce/prompt_obfuscation/prompt_obfuscation/precomputed_results/soft_david_attenborough_truthfulqa_full/deobfuscated_sys_prompt_list_soft.pt
+2026-03-18 04:22:11,842 — __main__ — INFO — Done.

@@ -1,0 +1,67 @@
+2026-03-23 15:08:05,484 — src.logging_config — INFO — Logging configured. Log file: eval_long_context.log, Level: INFO
+2026-03-23 15:08:05,491 — __main__ — INFO — Using 40 test questions from precomputed_results/soft_pirate_truthfulqa_full/prepared_data/test_data.json
+2026-03-23 15:08:22,396 — src.model — INFO — Model and tokenizer loaded successfully.
+2026-03-23 15:08:22,431 — __main__ — INFO — Loaded model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2026-03-23 15:08:22,441 — __main__ — INFO — Loaded soft obfuscated prompt: shape torch.Size([10, 4096])
+2026-03-23 15:08:22,441 — __main__ — INFO — 
+============================================================
+2026-03-23 15:08:22,441 — __main__ — INFO — Context length: 0 extra tokens
+2026-03-23 15:08:22,441 — __main__ — INFO — ============================================================
+2026-03-23 15:08:22,441 — __main__ — INFO — Generating with conventional prompt...
+2026-03-23 15:10:29,153 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 20500 MB
+2026-03-23 15:10:29,153 — __main__ — INFO — Generating with obfuscated prompt...
+2026-03-23 15:12:33,274 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 20500 MB
+2026-03-23 15:12:33,274 — __main__ — INFO — Computing similarity metrics...
+2026-03-23 15:12:40,732 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 20500 MB
+2026-03-23 15:12:40,732 — __main__ — INFO — Scores at ctx_len=0: {'cosine_similarity': 0.8549611002206803, 'sacrebleu': 50.58284660942317, 'bertscore': 0.9142031669616699, 'rouge1': 0.5932229785344189}
+2026-03-23 15:12:40,732 — __main__ — INFO — 
+============================================================
+2026-03-23 15:12:40,732 — __main__ — INFO — Context length: 128 extra tokens
+2026-03-23 15:12:40,732 — __main__ — INFO — ============================================================
+2026-03-23 15:12:40,733 — __main__ — INFO — Filler length: 128 tokens (target: 128)
+2026-03-23 15:12:40,733 — __main__ — INFO — Generating with conventional prompt...
+2026-03-23 15:14:54,163 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 20500 MB
+2026-03-23 15:14:54,164 — __main__ — INFO — Generating with obfuscated prompt...
+2026-03-23 15:17:06,108 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:17:06,109 — __main__ — INFO — Computing similarity metrics...
+2026-03-23 15:17:13,412 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 1718 MB
+2026-03-23 15:17:13,412 — __main__ — INFO — Scores at ctx_len=128: {'cosine_similarity': 0.8684662565588951, 'sacrebleu': 51.823126723892806, 'bertscore': 0.9159718155860901, 'rouge1': 0.5978102215424026}
+2026-03-23 15:17:13,412 — __main__ — INFO — 
+============================================================
+2026-03-23 15:17:13,412 — __main__ — INFO — Context length: 256 extra tokens
+2026-03-23 15:17:13,412 — __main__ — INFO — ============================================================
+2026-03-23 15:17:13,415 — __main__ — INFO — Filler length: 256 tokens (target: 256)
+2026-03-23 15:17:13,415 — __main__ — INFO — Generating with conventional prompt...
+2026-03-23 15:19:34,447 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:19:34,448 — __main__ — INFO — Generating with obfuscated prompt...
+2026-03-23 15:21:53,879 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:21:53,879 — __main__ — INFO — Computing similarity metrics...
+2026-03-23 15:22:01,227 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 1718 MB
+2026-03-23 15:22:01,227 — __main__ — INFO — Scores at ctx_len=256: {'cosine_similarity': 0.8674813196063041, 'sacrebleu': 50.91990251740571, 'bertscore': 0.9146257042884827, 'rouge1': 0.5955330890779162}
+2026-03-23 15:22:01,227 — __main__ — INFO — 
+============================================================
+2026-03-23 15:22:01,227 — __main__ — INFO — Context length: 512 extra tokens
+2026-03-23 15:22:01,227 — __main__ — INFO — ============================================================
+2026-03-23 15:22:01,233 — __main__ — INFO — Filler length: 512 tokens (target: 512)
+2026-03-23 15:22:01,233 — __main__ — INFO — Generating with conventional prompt...
+2026-03-23 15:24:37,386 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:24:37,387 — __main__ — INFO — Generating with obfuscated prompt...
+2026-03-23 15:27:12,242 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:27:12,242 — __main__ — INFO — Computing similarity metrics...
+2026-03-23 15:27:19,599 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 1718 MB
+2026-03-23 15:27:19,599 — __main__ — INFO — Scores at ctx_len=512: {'cosine_similarity': 0.874279648065567, 'sacrebleu': 52.892495285754066, 'bertscore': 0.9181616306304932, 'rouge1': 0.6047590060517609}
+2026-03-23 15:27:19,599 — __main__ — INFO — 
+============================================================
+2026-03-23 15:27:19,599 — __main__ — INFO — Context length: 1024 extra tokens
+2026-03-23 15:27:19,599 — __main__ — INFO — ============================================================
+2026-03-23 15:27:19,616 — __main__ — INFO — Filler length: 1024 tokens (target: 1024)
+2026-03-23 15:27:19,616 — __main__ — INFO — Generating with conventional prompt...
+2026-03-23 15:30:26,724 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:30:26,725 — __main__ — INFO — Generating with obfuscated prompt...
+2026-03-23 15:33:32,830 — src.output_generation — INFO — Max GPU memory occupied during obfuscated output generation: 1718 MB
+2026-03-23 15:33:32,833 — __main__ — INFO — Computing similarity metrics...
+2026-03-23 15:33:40,311 — src.output_similarity — INFO — Max GPU memory occupied during similarity computation: 1718 MB
+2026-03-23 15:33:40,312 — __main__ — INFO — Scores at ctx_len=1024: {'cosine_similarity': 0.8776819765567779, 'sacrebleu': 52.75360107143731, 'bertscore': 0.9164483547210693, 'rouge1': 0.5980656794806861}
+2026-03-23 15:33:40,312 — __main__ — INFO — 
+Saved results to results/long_context_degradation.json
+2026-03-23 15:33:40,338 — __main__ — INFO — Done.
