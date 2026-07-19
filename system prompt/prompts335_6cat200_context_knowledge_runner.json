@@ -1,0 +1,86 @@
+[
+  {
+    "id": "Prompt335-329",
+    "prompt_label": "Domain-specific Metaphor Prompt",
+    "paper_title": "When People are Floods: Analyzing Dehumanizing Metaphors in Immigration Discourse with Large Language Models",
+    "prompt_text": "Identify whether the text evokes the source-domain concept {source_domain} in relation to immigration. Consider both word-level cues and document-level associations.\n\nText:\n{text}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "329",
+      "paper_file": "2025.acl-long.398.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "4",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "metaphor_detection_prompt",
+      "text_sha256_16": "40c6d150852c11d8",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-308",
+    "prompt_label": "Spatial VQA Prompt",
+    "paper_title": "SpaRE: Enhancing Spatial Reasoning in Vision-Language Models with Synthetic Data",
+    "prompt_text": "Answer the spatial reasoning question based on the image.\n\nImage:\n{image}\n\nQuestion:\n{question}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "308",
+      "paper_file": "2025.acl-long.387.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "spatial_vqa_prompt",
+      "text_sha256_16": "23232f24d768a88d",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-114",
+    "prompt_label": "Mental-health Stigma Classification Prompt",
+    "paper_title": "What is Stigma Attributed to? A Theory-Grounded, Expert-Annotated Interview Corpus for Demystifying Mental-Health Stigma",
+    "prompt_text": "Given an interview snippet, classify whether the participant's response expresses mental-health stigma. If stigmatizing, identify the stigma attribution category such as responsibility, social distance, dangerousness, or other theory-grounded categories.\n\nInterview snippet:\n{snippet}\n\nOutput JSON:\n{\"stigmatizing\": true/false, \"category\": \"\", \"evidence\": \"\", \"rationale\": \"\"}",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "114",
+      "paper_file": "2025.acl-long.272.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "305d320ceaa4ae70",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

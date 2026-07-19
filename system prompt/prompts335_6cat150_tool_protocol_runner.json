@@ -1,0 +1,198 @@
+[
+  {
+    "id": "Prompt335-201",
+    "prompt_label": "Code Instruction Difficulty Score Rubric",
+    "paper_title": "Evaluating Language Models as Synthetic Data Generators",
+    "prompt_text": "How complex and challenging is the coding problem to solve?\n\nScore 1 Description: The problem involves implementing simple functionality or a direct operation. It requires minimal logic, with a straightforward approach and no complex decision-making.\nScore 2 Description: The problem requires basic control flow, such as using loops or conditional statements. The logic is clear and sequential, with minimal interaction between different parts of the code.\nScore 3 Description: The problem involves intermediate logic, combining multiple programming constructs and requiring a coherent structure. Solving it requires handling a sequence of steps with basic data manipulation, but follows a familiar, manageable approach.\nScore 4 Description: The problem demands advanced reasoning and use of complex data structures or algorithms. It involves non-trivial interactions, such as managing multiple components and optimizing for efficiency. The solution requires significant algorithmic thinking and structured problem decomposition.\nScore 5 Description: The problem is extremely complex, requiring sophisticated algorithm design, efficient data handling, and advanced techniques. It demands innovative approaches, with intricate component interactions and constraints that need careful optimization. Solving it typically requires deep problem-solving skills and adaptability across programming paradigms.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "201",
+      "paper_file": "2025.acl-long.320.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "rubric_prompt",
+      "text_sha256_16": "3ff38e87ace77cfd",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-131",
+    "prompt_label": "Function-aware Task Goal Generation Prompt",
+    "paper_title": "GUI-explorer: Autonomous Exploration and Mining of Transition-aware Knowledge for GUI Agent",
+    "prompt_text": "Given a GUI screenshot and its structured hierarchy, identify possible app functions and generate exploration task goals that would exercise those functions.\n\nScreenshot:\n{screenshot}\n\nActivity / accessibility hierarchy:\n{hierarchy}\n\nOutput JSON:\n{\"functions\": [], \"task_goals\": []}",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "131",
+      "paper_file": "2025.acl-long.282.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "gui_agent_prompt",
+      "text_sha256_16": "36d72bac41b5fc4f",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-008",
+    "prompt_label": "Code Rule for Rule Application",
+    "paper_title": "Read it in Two Steps: Translating Extremely Low-Resource Languages with Code-Augmented Grammar Books",
+    "prompt_text": "def apply_rule(source_sentence, dictionary):\n    \"\"\"\n    # 语法规则：在壮语中，单词“dwg”是系动词。在表示肯定判断的简单句中，“dwg”一般省略。然而，在表示否定时，“dwg”不可省略，且否定词“mbouj”需置于系动词“dwg”之前。\n    # Grammar rule: In Zhuang, the word \"dwg\" is a copula. In affirmative simple sentences, \"dwg\" is usually omitted. However, in negative sentences, \"dwg\" cannot be omitted, and the negation word \"mbouj\" must be placed before the copula \"dwg\".\n    ## 应用此规则将汉语翻译为壮语的步骤如下：\n    1. 判断句子是否为否定句\n    2. 提取主语、谓语和宾语\n    3. 翻译主语、谓语和宾语\n    4. 根据句子类型（肯定或否定）调整系动词“dwg”和否定词“mbouj”的使用\n    5. 拼接成完整的句子\n    \"\"\"\n    is_negative = \"不是\" in source_sentence\n    subject, predicate, object_ = extract_subject_predicate_object(source_sentence)\n    subject_in_zhuang = translate(subject, dictionary)\n    predicate_in_zhuang = translate(predicate, dictionary)\n    object_in_zhuang = translate(object_, dictionary)\n    if is_negative:\n        translated_sentence = f\"subject_in_zhuang mbouj dwg predicate_in_zhuang object_in_zhuang\"\n    else:\n        translated_sentence = f\"subject_in_zhuang predicate_in_zhuang object_in_zhuang\"\n    return translated_sentence",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "8",
+      "paper_file": "2025.acl-long.202.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "code_rule_prompt",
+      "text_sha256_16": "55952ccfb529418b",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-304",
+    "prompt_label": "Complex Video QA Synthesis Prompt",
+    "paper_title": "VQAGuider: Guiding Multimodal Large Language Models to Answer Complex Video Questions",
+    "prompt_text": "Given the outputs of atomic visual recognition tools, answer the complex video question.\n\nQuestion:\n{question}\n\nTool outputs:\n{tool_outputs}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "304",
+      "paper_file": "2025.acl-long.385.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "video_qa_prompt",
+      "text_sha256_16": "7d737c416107d965",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-240",
+    "prompt_label": "Prompt Injection Normal Node - GSM8K",
+    "paper_title": "G-Safeguard: A Topology-Guided Security Lens and Treatment on LLM-based Multi-agent Systems",
+    "prompt_text": "Your are agent_{}, your task is to work collaboratively with other agents to solve a mathematical problems. Always keep the problems in mind.",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "240",
+      "paper_file": "2025.acl-long.359.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "multi_agent_system_prompt",
+      "text_sha256_16": "bcc3523a2b7104e6",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-207",
+    "prompt_label": "Dynamic Unit Test Scaling Prompt",
+    "paper_title": "Dynamic Scaling of Unit Tests for Code Reward Modeling",
+    "prompt_text": "Estimate the difficulty of the programming problem and decide how many unit tests are needed to reliably evaluate candidate solutions.\n\nProblem:\n{problem}\n\nOutput:\nDifficulty:\nNumber of unit tests:\nRationale:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "207",
+      "paper_file": "2025.acl-long.343.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "code_test_generation_prompt",
+      "text_sha256_16": "f6405b7d5f8b8c45",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-197",
+    "prompt_label": "Instruction-following Response Quality Score Rubric",
+    "paper_title": "Evaluating Language Models as Synthetic Data Generators",
+    "prompt_text": "Does the response consider a wide range of factors such as the helpfulness, relevance, accuracy, depth, creativity, and level of detail?\n\nScore 1 Description: The response is not helpful at all or seems helpful on the surface but is actually incorrect such as including incorrect information, naive miscalculations, or unexecutable code.\nScore 2 Description: The response contains some relevant or helpful information, but also has major flaws interms of factuality, accuracy, and relevance.\nScore 3 Description: The response is mostly correct but minor flaws regarding factuality, accuracy, and relevance still exists, while it is overall an okay response.\nScore 4 Description: The response is accurate, relevant, and helpful, although there are some slight improvements that could be made when an expert evaluates the response.\nScore 5 Description: The response is excellent. It is completely factual, accurate, relevant, and helpful, demonstrating a high degree of depth and creativity.",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "197",
+      "paper_file": "2025.acl-long.320.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "16",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "rubric_prompt",
+      "text_sha256_16": "9fbfa8fddde3808d",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

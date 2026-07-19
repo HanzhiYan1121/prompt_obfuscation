@@ -1,0 +1,254 @@
+[
+  {
+    "id": "Prompt417-023",
+    "prompt_label": "CoVE verification-question template",
+    "paper_title": "Correcting Hallucinations in News Summaries: Exploration of Self-Correcting LLM Methods with External Knowledge",
+    "prompt_text": "Your task is to create a verification question based on the below question provided.\nExample Question: Who are some movie actors who were born in Boston?\nExample Verification Question: Was [movie actor] born in [Boston]\nExplanation: In the above example the verification question focused only on the ANSWER_ENTITY (name of the movie actor) and QUESTION_ENTITY (birth place). Similarly you need to focus on the ANSWER_ENTITY and QUESTION_ENTITY from the actual question and generate verification question.\n\nActual Question: original_question\n\nFinal Verification Question:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 3.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.9.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "verification_question_prompt",
+      "text_sha256_16": "f28713b319047042",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-370",
+    "prompt_label": "Prompt C.2: Generator Answer Prompt for Long-form Dataset",
+    "paper_title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+    "prompt_text": "Find the useful content from the provided documents, then answer the question. Answer the question directly. Your response should be very detailed.\n\nOutput format:\n{demonstrations}\n\nThe following are given documents.\n{reference}\n\nAnswer the question directly. Your response should be very detailed.\n**Question**: {question}\n**Response**:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.176.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "rag_generation_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-369",
+    "prompt_label": "Prompt C.1: Generator Answer Prompt for Short-form Dataset",
+    "paper_title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+    "prompt_text": "Find the useful content from the provided documents, then answer the question. Answer the question directly. Your response should be very concise. Please provide use 'So the final answer is:' as a prefix for the final answer.\n\nOutput format:\n{demonstrations}\n\nThe following are given documents.\n{reference}\n\nAnswer the question directly. Your response should be very concise. Please provide use 'So the final answer is:' as a prefix for the final answer.\n**Question**: {question}\n**Response**:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.176.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "rag_generation_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-306",
+    "prompt_label": "Noising Answer Generation Prompt",
+    "paper_title": "Analyzing Temporal Complex Events with Large Language Models? A Benchmark towards Temporal, Long Context Understanding",
+    "prompt_text": "[Rules:]\nBackground 1: {Article 1}.\nBackground 2: {Article 2}\n\nGiven above two backgrounds, please generate three noising answers to the question \"{Question}\", whose correct answer is \"{Answer}\". Name the three noising answers as (b), (c) and (d) respectively. You should follow the instructions below:\n1. The noising answers should be plausible but incorrect.\n2. The noising answers should be related to the same temporal complex event.\n3. The noising answers should not be equivalent to the correct answer.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.87.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_71_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-284",
+    "prompt_label": "Human Annotation Instruction for Analogous Relations",
+    "paper_title": "ANALOGYKB: Unlocking Analogical Reasoning of Language Models with A Million-scale Knowledge Base",
+    "prompt_text": "Thanks for participating in this HIT! Please spend some time reading this instruction and the example section to better understand our HIT! In this hit, you need to first read the schema in our ANALOGYKB and then check whether the given relation pair is analogous. We focuses on the analogy formed as A:B::C:D, where concepts as A, B, C and D can be entities or events. The concept pair A:B is analogous to C:D based on an underlying relational structure. Since ANALOGYKB is built on existing KGs, please judge whether the two relations can form analogies under the provided schema.",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.68.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "annotation_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-179",
+    "prompt_label": "Triple Classification (TG-CLS)",
+    "paper_title": "Have We Designed Generalizable Structural Knowledge Promptings? Systematic Evaluation and Rethinking",
+    "prompt_text": "<Structural Knowledge Prompting Sh, Sr, St>\n### Instruction: Given the embeddings of an knowledge triple in the front. Please answer the following question.\n### Question: Is this a positive triple?\n### Output: No",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.110(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_91_to_110",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-119",
+    "prompt_label": "GPT-4o CoT Prompt - Document QA",
+    "paper_title": "Improve Vision Language Model Chain-of-thought Reasoning",
+    "prompt_text": "# Objective #\nYou are provided with an image, a question. Your job is to generate a rationale first and then derive an answer.\n###########\n# Question #\n{question}\n###########\n# Rationale Requirement #\n1. Do not state an answer at the beginning. Explain descriptions of visual clue that help to derive the answer.\n2. Conclude with ### Answer: <your answer>\n3. Your final answer should be a single word or phrase.\n4. If possible, copy the answer from document. Don’t add or remove symbols, units, or titles.\n###########\n# Output Style #\n<rationale>\n### Answer: <your answer>\n###########",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.82(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_78_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-039",
+    "prompt_label": "document summarization instruction prompt",
+    "paper_title": "Team HUMANE at AVeriTeC 2025: HerO 2 for Efficient Fact Verification",
+    "prompt_text": "Your task is to read the following document carefully and summarize it into a single, coherent paragraph. Focus on capturing the main ideas and essential details without adding new information or personal opinions.\n\nDocument: {document}\n\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.16.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "summarization_prompt",
+      "text_sha256_16": "e7bf0d461754add2",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-025",
+    "prompt_label": "CoVE answer verification prompt",
+    "paper_title": "Correcting Hallucinations in News Summaries: Exploration of Self-Correcting LLM Methods with External Knowledge",
+    "prompt_text": "Answer the following question correctly based on the provided context. The question could be tricky as well, so think step by step and answer it correctly.\n\nContext: search_result\nQuestion: verification_question\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.9.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "answer_generation_prompt",
+      "text_sha256_16": "d1173cdc09074a29",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

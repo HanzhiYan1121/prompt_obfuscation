@@ -1,0 +1,282 @@
+[
+  {
+    "id": "Prompt417-413",
+    "prompt_label": "R1 Rewarding Prompt: Usefulness of Sub-question",
+    "paper_title": "VReST: Enhancing Reasoning in Large Vision-Language Models through Tree Search and Self-Reward Mechanism",
+    "prompt_text": "Instruction Given a question and some sub-questions, determine whether the last sub-question is useful to answer the question. Output 'Yes' or 'No', and a reason.\n\n**Question:** [question]\nSub-questions and answers:\n[sub_questions_and_answers]\n\nIs the last sub-question useful?\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.199.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "reward_prompt",
+      "text_sha256_16": "804f889f70ceeded",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-349",
+    "prompt_label": "Lazy Thinking Classification Prompt",
+    "paper_title": "LAZYREVIEW: A Dataset for Uncovering Lazy Thinking in NLP Peer Reviews",
+    "prompt_text": "Given a peer review sentence, classify whether it contains lazy thinking according to the ARR-style lazy thinking categories. If it does, identify the best matching category; otherwise classify it as not lazy thinking.\n\nReview sentence:\n{sentence}\n\nOutput JSON:\n{\"label\": \"lazy thinking\" or \"not lazy thinking\", \"category\": \"{category_or_none}\", \"rationale\": \"{brief_reason}\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.165(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-153",
+    "prompt_label": "GPT-4o Image Caption Engineering Prompt",
+    "paper_title": "In-the-wild Audio Spatialization with Flexible Text-guided Localization",
+    "prompt_text": "Task instruction:\nBased on a frame of video, return a caption about sound source's attributes.\nIdentify sound sources description based on frame, you can ...\n\nSound Sources:\nCello, Piano\n\nEnriched captions:\nThe sound of cello is located left behind.\nThe sound of piano is located right front.\nThe sound of cello is located 3 m away.\nThe sound of piano is located 2 m away.\n\nOutput captions",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.98.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_91_to_110",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-126",
+    "prompt_label": "Prompt for Generation of Text Attributes",
+    "paper_title": "Open-World Attribute Mining for E-Commerce Products with Multimodal Self-Correction Instruction Tuning",
+    "prompt_text": "Task Description:\nYou are a world-class algorithm for extracting information in structured formats.\nThere are some product descriptions, and your task is to extract the attribute values from the text information of the product in a JSON format.\nPlease provide me with the corresponding attribute value of the attribute. If there is no corresponding attribute value in the information I provide you, please do not provide me with this attribute.\n\nIn-context learning:\n...\nText information of the product:\nBelow is the text information of the product whose attributes I want you to extract\nTitle: ...\nBullet point: ...",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.85.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_78_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-120",
+    "prompt_label": "GPT-4o CoT Prompt - TextVQA",
+    "paper_title": "Improve Vision Language Model Chain-of-thought Reasoning",
+    "prompt_text": "# Objective #\nYou are provided with an image, a question. Your job is to generate a rationale first and then derive an answer.\n###########\n# Question #\n{question}\n###########\n# Rationale Requirement #\n1. Do not state an answer at the beginning. Explain descriptions of visual clue that help to derive the answer.\n2. Conclude with ### Answer: <your answer>\n3. Your final answer should be a single word or phrase.\n4. Output your answer in lower case.\n###########\n# Output Style #\n<rationale>\n### Answer: <your answer>\n###########",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.82(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_78_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-118",
+    "prompt_label": "GPT-4o CoT Prompt - ChartQA",
+    "paper_title": "Improve Vision Language Model Chain-of-thought Reasoning",
+    "prompt_text": "Answer the question with following instruction:\n1. Generate a rationale first and then derive an answer.\n2. Don’t include any unit, i.e. 56 instead of 56 meters\n3. Don’t include ’%’ sign, i.e. 56 instead of 56%\nQuestion:\n{question}\n# Output Format #\n<rationale>\n### Answer: <your answer>",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.82(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_78_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-049",
+    "prompt_label": "final veracity prediction prompt",
+    "paper_title": "Fathom: A Fast and Modular RAG Pipeline for Fact-Checking",
+    "prompt_text": "Claim: You are a fact-checking helpful assistant.\nTask: Your task is to evaluate the truthfulness of a claim using associated question–answer (QA) evidence pairs, where each question has several pieces of evidence (answers). You must analyze the claim and reason step-by-step through the evidence provided. Use a chain-of-thought reasoning approach to determine the final label.\nThe given claim falls into one of the following four categories:\n1. Supported\n2. Refuted\n3. Not Enough Evidence\n4. Conflicting Evidence/Cherry-picking\nInput Format:\nClaim: <claim>\nQA: <Question answer pairs>\nOutput:\nReasoning: [Use chain-of-thought reasoning on the claim based on the evidence. Incorporate evaluation of the content and optionally consider the trustworthiness or context of the source URLs.]\nLabel: <Supported, Refuted, Not Enough Evidence, Conflicting Evidence/Cherry-picking>",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.20.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "veracity_prediction_prompt",
+      "text_sha256_16": "462dfec3cf11f5f7",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-021",
+    "prompt_label": "open-ended fallacy detection DSPy signature",
+    "paper_title": "FACT5: A Novel Benchmark and Pipeline for Nuanced Fact-Checking of Complex Statements",
+    "prompt_text": "Classify logical fallacies given the statement.\nInput field statement = \"Statement to analyze\"\nOutput field:\n1. fallacy (str) = \"A fallacy or a fallacious argument is one that seems valid but is not. Identify the fallacy in the statement. If no fallacy is present, return ’none’.\"\n2. confidence (float) = \"0-1 confidence score\"\n3. rationale (str) = \"Step-by-step reasoning",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.8.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "fce472799f86e4b3",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-020",
+    "prompt_label": "answer synthesis DSPy signature",
+    "paper_title": "FACT5: A Novel Benchmark and Pipeline for Nuanced Fact-Checking of Complex Statements",
+    "prompt_text": "Synthesize an answer based on retrieved documents with inline citations.\n\nOutput field:\nJSON object containing:\n{\n  \"text\": string,\n  \"citations\": [\n    {\n      \"snippet\": string,\n      \"source_url\": string,\n      \"source_title\": string,\n      \"relevance_score\": float\n    }\n  ]\n}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.8.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "answer_generation_prompt",
+      "text_sha256_16": "a0f4001edd293899",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-019",
+    "prompt_label": "question generation DSPy signature",
+    "paper_title": "FACT5: A Novel Benchmark and Pipeline for Nuanced Fact-Checking of Complex Statements",
+    "prompt_text": "Break down the given claim derived from the original statement to generate independent questions and search queries to answer it. Be as specific and concise as possible, try to minimize the number of questions and search queries while still being comprehensive to verify the claim.\n\nOutput field:\nJSON object containing: {\n  \"questions\": [\n    {\n      \"question\": string,\n      \"search_queries\": [string]\n    }\n  ]\n}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.5
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.8.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "question_generation_prompt",
+      "text_sha256_16": "b5928f3d20bd13fc",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

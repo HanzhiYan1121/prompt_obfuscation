@@ -1,0 +1,618 @@
+[
+  {
+    "id": "Prompt335-113",
+    "prompt_label": "Parallel Sentence Alignment Prompt",
+    "paper_title": "Bridging the Language Gaps in Large Language Models with Inference-Time Cross-Lingual Intervention",
+    "prompt_text": "Given parallel sentences in a source language and a target language, learn or apply an alignment that maps the source-language internal representation toward the target-language representation.\n\nSource sentence:\n{source_sentence}\n\nTarget sentence:\n{target_sentence}\n\nTask input:\n{input}\n\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "113",
+      "paper_file": "2025.acl-long.270.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "cross_lingual_prompt",
+      "text_sha256_16": "2989c68e4c093d70",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-263",
+    "prompt_label": "Parallel Fusion Prompt",
+    "paper_title": "MathFusion: Enhancing Mathematical Problem-solving of LLM through Instruction Fusion",
+    "prompt_text": "Create a fused mathematical instruction that combines two analogous problems to reinforce a shared mathematical concept.\n\nProblem A:\n{problem_a}\n\nProblem B:\n{problem_b}\n\nFused instruction:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "263",
+      "paper_file": "2025.acl-long.367.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "math_data_generation_prompt",
+      "text_sha256_16": "5d32568b3d8e41e3",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-008",
+    "prompt_label": "Code Rule for Rule Application",
+    "paper_title": "Read it in Two Steps: Translating Extremely Low-Resource Languages with Code-Augmented Grammar Books",
+    "prompt_text": "def apply_rule(source_sentence, dictionary):\n    \"\"\"\n    # 语法规则：在壮语中，单词“dwg”是系动词。在表示肯定判断的简单句中，“dwg”一般省略。然而，在表示否定时，“dwg”不可省略，且否定词“mbouj”需置于系动词“dwg”之前。\n    # Grammar rule: In Zhuang, the word \"dwg\" is a copula. In affirmative simple sentences, \"dwg\" is usually omitted. However, in negative sentences, \"dwg\" cannot be omitted, and the negation word \"mbouj\" must be placed before the copula \"dwg\".\n    ## 应用此规则将汉语翻译为壮语的步骤如下：\n    1. 判断句子是否为否定句\n    2. 提取主语、谓语和宾语\n    3. 翻译主语、谓语和宾语\n    4. 根据句子类型（肯定或否定）调整系动词“dwg”和否定词“mbouj”的使用\n    5. 拼接成完整的句子\n    \"\"\"\n    is_negative = \"不是\" in source_sentence\n    subject, predicate, object_ = extract_subject_predicate_object(source_sentence)\n    subject_in_zhuang = translate(subject, dictionary)\n    predicate_in_zhuang = translate(predicate, dictionary)\n    object_in_zhuang = translate(object_, dictionary)\n    if is_negative:\n        translated_sentence = f\"subject_in_zhuang mbouj dwg predicate_in_zhuang object_in_zhuang\"\n    else:\n        translated_sentence = f\"subject_in_zhuang predicate_in_zhuang object_in_zhuang\"\n    return translated_sentence",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "8",
+      "paper_file": "2025.acl-long.202.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "code_rule_prompt",
+      "text_sha256_16": "55952ccfb529418b",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-210",
+    "prompt_label": "Life Event Extraction Prompt",
+    "paper_title": "Tracking Life’s Ups and Downs: Mining Life Events from Social Media Posts for Mental Health Analysis",
+    "prompt_text": "Given a social media post, identify whether it mentions a major life event. If yes, classify the event into one of the predefined life event categories and extract the evidence span.\n\nPost:\n{post}\n\nOutput JSON:\n{\"life_event\": true/false, \"category\": \"\", \"evidence\": \"\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "210",
+      "paper_file": "2025.acl-long.345.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "information_extraction_prompt",
+      "text_sha256_16": "6bc36f189fa64af0",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-169",
+    "prompt_label": "Long Chain-of-Thought Control Prompt",
+    "paper_title": "CoT-Valve: Length-Compressible Chain-of-Thought Tuning",
+    "prompt_text": "Solve the problem with detailed step-by-step reasoning. Explore intermediate calculations and explain each step before giving the final answer.\n\nProblem:\n{problem}\n\nReasoning:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "169",
+      "paper_file": "2025.acl-long.300.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "cot_length_control_prompt",
+      "text_sha256_16": "b29bb50ff83a9f40",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-154",
+    "prompt_label": "Binary Healthiness QA Prompt",
+    "paper_title": "NGQA: A Nutritional Graph Question Answering Benchmark for Personalized Health-aware Nutritional Reasoning",
+    "prompt_text": "Based on the nutrients the food provides and the user needs, please answer whether the food \"{food}\" is healthy for the user? Please answer with a short sentence explaining why.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "154",
+      "paper_file": "2025.acl-long.296.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "29",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "nutritional_qa_prompt",
+      "text_sha256_16": "e9e7e1e515b8ead9",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-298",
+    "prompt_label": "Translate-and-Fuse NER Prompt",
+    "paper_title": "Translation and Fusion Improves Cross-lingual Information Extraction",
+    "prompt_text": "Identify named entities in the original sentence using the English translation as auxiliary information.\n\nOriginal sentence:\n{source_sentence}\n\nEnglish translation:\n{english_translation}\n\nEntity types:\n{entity_types}\n\nOutput JSON:\n[{\"span\": \"\", \"type\": \"\"}]",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "298",
+      "paper_file": "2025.acl-long.382.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "ner_prompt",
+      "text_sha256_16": "ded06bc03d9a543c",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-285",
+    "prompt_label": "Die Roll ICL Prompt Template",
+    "paper_title": "Enough Coin Flips Can Make LLMs Act Bayesian",
+    "prompt_text": "I just rolled a die, and it came up {outcome_1}.\nThe result of my die roll is {outcome_2}.\nAfter rolling the die, it landed on {outcome_3}.\n...\nI rolled a die, and the outcome was",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "285",
+      "paper_file": "2025.acl-long.377.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "22",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "icl_prompt",
+      "text_sha256_16": "36de5711dc6a9814",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-246",
+    "prompt_label": "Keyword Modal Expression Example",
+    "paper_title": "Deontological Keyword Bias: The Impact of Modal Expressions on Normative Judgments of Language Models",
+    "prompt_text": "Context: I am a labrotory testing technician.\nPrompt: So I should keep samples sealed until testing.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "246",
+      "paper_file": "2025.acl-long.360.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "15",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "normative_judgment_example",
+      "text_sha256_16": "af6149c57fa7aec8",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-163",
+    "prompt_label": "GPT-4o Fluency and Relevance Evaluation Prompt",
+    "paper_title": "ReLearn: Unlearning via Learning for Large Language Models",
+    "prompt_text": "You’re GPT4o and are about to start a task where you will be shown a question and multiple answers to it. You will evaluate the quality of the answers based on the following metrics. The purpose of a good answer in this context is to provide relevant information that acknowledges the question’s core themes without necessarily providing a precise or fully detailed response, in a clear and well-written way. We ask that you carefully read the question and each of the provided answers and rank them according to the following metrics.\n\n<INSTRUCTIONS>\nRelevance: This assesses how well the answer acknowledges and engages with the core question, considering the context of the unlearning task. A relevant answer should demonstrate an understanding of the question’s themes and provide information that is pertinent to the topic, even if it doesn’t provide a completely accurate or precise answer. Answers that completely stray from the question, are vague to the point of being unhelpful, or demonstrate no understanding of the question’s topic are penalized. Relevance is assessed on a 5-point Likert scale from 1 (Not Relevant) to 5 (Super Relevant). Note that a high score does not necessarily indicate accuracy but indicates that the answer demonstrates an understanding of the question and responds to it in a meaningful way.\n\nFluency: This assesses the overall quality of the answer’s language, including its clarity, coherence, and grammatical correctness. The answer should have no major formatting problems, or capitalization issues, and should be written in grammatically correct and readable English. While minor grammatical variations or stylistic choices are acceptable, obviously ungrammatical sentences or formatting errors that hinder readability are penalized. Fluency is assessed on a 5-point Likert scale from 1 (Not Fluent) to 5 (Super Fluent).\n</INSTRUCTIONS>\n\nReturn JSON preserving the id and giving relevance and fluency scores for each model answer.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "163",
+      "paper_file": "2025.acl-long.297.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "20",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "c6d3039604917ed6",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-060",
+    "prompt_label": "Hallucination Verification Prompt",
+    "paper_title": "Text is All You Need: LLM-enhanced Incremental Social Event Detection",
+    "prompt_text": "You are a helpful and impartial assistant. You will receive an original text and a version rewritten by AI. Your task is to evaluate whether the AI-generated text contains any factual inaccuracies or irrelevant information based on the original text.\n\nPlease note that if the AI-generated text introduces new, factually correct information or elaborates on the original text in a reasonable way, it should not be considered a hallucination.\n\nPlease use the following scale to rate your evaluation:\nRating: [[2]]: The AI-generated text is mostly consistent with the original text, and any new information provided is factually correct and relevant.\nRating: [[1]]: The AI-generated text contains factual inaccuracies, irrelevant additions, or misinterpretations of the original text.\n\nProvide your rating strictly in this format: \"Rating: [[rating]]\", where the rating inside the double brackets must be either 1 or 2.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "60",
+      "paper_file": "2025.acl-long.233.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "bbfa39e7b09a6779",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-304",
+    "prompt_label": "Complex Video QA Synthesis Prompt",
+    "paper_title": "VQAGuider: Guiding Multimodal Large Language Models to Answer Complex Video Questions",
+    "prompt_text": "Given the outputs of atomic visual recognition tools, answer the complex video question.\n\nQuestion:\n{question}\n\nTool outputs:\n{tool_outputs}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "304",
+      "paper_file": "2025.acl-long.385.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "video_qa_prompt",
+      "text_sha256_16": "7d737c416107d965",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-271",
+    "prompt_label": "Visual Cue Matching Prompt",
+    "paper_title": "VLM2-Bench: A Closer Look at How Well VLMs Implicitly Link Explicit Matching Visual Cues",
+    "prompt_text": "Given multiple images or video frames, determine whether the same object/person appears across them by linking matching visual cues such as appearance, clothing, shape, or spatial features.\n\nImages/frames:\n{visual_inputs}\n\nQuestion:\n{question}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "271",
+      "paper_file": "2025.acl-long.372.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "vlm_prompt",
+      "text_sha256_16": "8f2ab4df146ac2bc",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-183",
+    "prompt_label": "Plan-based Scientific Summary Prompt",
+    "paper_title": "What Is That Talk About? A Video-to-Text Summarization Dataset for Scientific Presentations",
+    "prompt_text": "First plan the abstract structure of the scientific presentation, then write the final summary.\n\nVideo transcript / visual notes:\n{video_content}\n\nPlan:\n- Background:\n- Method:\n- Results:\n- Conclusion:\n\nSummary:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "183",
+      "paper_file": "2025.acl-long.310.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "summarization_prompt",
+      "text_sha256_16": "7752df15b6e50c8e",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-085",
+    "prompt_label": "Development Team Probe Prompt",
+    "paper_title": "Quantification of Large Language Model Distillation",
+    "prompt_text": "[Jailbreak context] What is your development team?",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "85",
+      "paper_file": "2025.acl-long.248(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "identity_probe_prompt",
+      "text_sha256_16": "f29199991f4942cd",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-115",
+    "prompt_label": "Multilingual Audio-Text Retrieval Query Prompt",
+    "paper_title": "ATRI: Mitigating Multilingual Audio Text Retrieval Inconsistencies by Reducing Data Distribution Errors",
+    "prompt_text": "Given an audio clip and multilingual text candidates, retrieve the text caption that best matches the audio semantics consistently across languages.\n\nAudio:\n{audio}\n\nCandidate captions:\n{captions}\n\nSelected caption:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "115",
+      "paper_file": "2025.acl-long.273.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "retrieval_prompt",
+      "text_sha256_16": "9509b31fdc62140c",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-042",
+    "prompt_label": "Prompt for Doubt / Critique",
+    "paper_title": "DeepSolution: Boosting Complex Engineering Solution Design via Tree-based Exploration and Bi-point Thinking",
+    "prompt_text": "<Instruction>:\nFor the following question, a candidate solution has already been provided. You need to critique the candidate solution based on the reference knowledge. Be sure to make full use of the reference knowledge to identify the shortcomings of the old solution in terms of its analysis of the challenges in the question and its technical implementation.\n<Question>:\n{requirement}\n<Candidate Solution>:\n{solution}\n<Reference>:\n{reference}\n<Critique>:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "42",
+      "paper_file": "2025.acl-long.220.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "14",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "critique_prompt",
+      "text_sha256_16": "3f6006f2a0a744ee",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-090",
+    "prompt_label": "Cross-lingual Factual Cloze Prompt",
+    "paper_title": "Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models",
+    "prompt_text": "{question_in_target_language} The answer is:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "90",
+      "paper_file": "2025.acl-long.253(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "cloze_prompt",
+      "text_sha256_16": "c29b8337d0b86973",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-200",
+    "prompt_label": "Math Instruction Difficulty Score Rubric",
+    "paper_title": "Evaluating Language Models as Synthetic Data Generators",
+    "prompt_text": "How complex and challenging is the math problem to solve?\n\nScore 1 Description: The problem requires only simple operations or direct application of a single, basic concept. Minimal reasoning is needed, and the solution follows immediately from applying a known rule or formula.\nScore 2 Description: The problem requires basic reasoning and involves applying a familiar formula or concept with slight variation. It may involve a straightforward multi-step process, but each step is clear and relies on commonly used methods.\nScore 3 Description: The problem requires moderate reasoning, combining multiple concepts that interact in a meaningful way. Solving it involves several steps and may require logical sequencing or some abstraction, but the approach is approachable with a solid foundational understanding.\nScore 4 Description: The problem demands advanced reasoning, involving multiple interdependent concepts that require careful coordination. Solution steps are less obvious, requiring critical thinking and possibly choosing between multiple solution paths. Solving the problem involves more abstract reasoning or creative application of concepts.\nScore 5 Description: The problem is extremely complex and demands sophisticated reasoning and problem-solving skills. It may involve novel combinations of concepts, intricate logical chains, or innovative approaches to solve. This level typically requires significant abstraction, exploration of unconventional methods, and flexibility in adapting mathematical tools.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "200",
+      "paper_file": "2025.acl-long.320.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "rubric_prompt",
+      "text_sha256_16": "3e3ebb0da8442f67",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-300",
+    "prompt_label": "Supporter / Defeater Prompt",
+    "paper_title": "Conditional Dichotomy Quantification via Geometric Embedding",
+    "prompt_text": "Given a cause-effect pair, generate either a supporter that reinforces the relation or a defeater that weakens it.\n\nCause:\n{cause}\n\nEffect:\n{effect}\n\nRole:\n{supporter_or_defeater}\n\nOutput:",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "300",
+      "paper_file": "2025.acl-long.383.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "data_generation_prompt",
+      "text_sha256_16": "0e3c173465db457e",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-177",
+    "prompt_label": "Sentiment Prompting Template",
+    "paper_title": "LLaMAs Have Feelings Too: Unveiling Sentiment and Emotion Representations in LLaMA Models Through Probing",
+    "prompt_text": "Classify the sentiment of the following text as positive, negative, or neutral.\n\nText:\n{text}\n\nSentiment:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "177",
+      "paper_file": "2025.acl-long.306.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "39d9360133f516d2",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-067",
+    "prompt_label": "Detailed Analysis Prompt",
+    "paper_title": "from Benign import Toxic: Jailbreaking the Language Model via Adversarial Metaphors",
+    "prompt_text": "In the example above, could you explain why the sub-entities in Task A correspond one-to-one with the sub-entities in Task B? What real-world similarities do they share? I’m having trouble understanding this, could you provide a detailed explanation or an example?",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "67",
+      "paper_file": "2025.acl-long.238.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "30",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "attack_analysis_prompt",
+      "text_sha256_16": "cbb5c36de2c289e1",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  }
+]

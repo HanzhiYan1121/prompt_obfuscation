@@ -1,0 +1,2066 @@
+
+
+--- PAGE 1 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 1
+InferDPT: Privacy-preserving Inference for
+Closed-box Large Language Models
+Meng Tong, Kejiang Chen, Jie Zhang, Yuang Qi,
+Weiming Zhang, Nenghai Yu, Tianwei Zhang, Zhikun Zhang
+Abstract—Large language models(LLMs), represented by
+ChatGPT, have greatly simplified text generation tasks. However,
+they have also raised concerns about privacy risks such as
+data leakage and unauthorized information collection. Exist-
+ing solutions for privacy-preserving inference face practical
+challenges related to computational time and communication
+costs. In this paper, we propose InferDPT, the first practical
+framework for privacy-preserving Inference of black-box LLMs,
+implementing Differential Privacy in Text generation. InferDPT
+comprises two key modules: the “perturbation module” utilizes
+the differentially private mechanism to generate a perturbed
+prompt, facilitating privacy-preserving inference with black-
+box LLMs; the “extraction module”, inspired by knowledge
+distillation and phenomenon we observed, extracts coherent and
+consistent text from the perturbed generation result, ensuring
+successful text generation completion. To achieve a better balance
+between utility and privacy protection, we introduce RANTEXT,
+a novel differentially private mechanism integrated into the
+perturbation module of InferDPT, which introduces the concept
+of “ RANdom adjacency list” for TEXT perturbation within the
+prompt. Experimental results across three datasets demonstrate
+that the text generation quality of InferDPT is comparable to
+that of non-private GPT-4, and RANTEXT surpasses existing
+state-of-the-art mechanisms, namely, SANTEXT+ and CUSTEXT+
+in the trade-off between privacy and utility. Even with a privacy
+parameter ε value of 6.0, RANTEXT achieves an average privacy
+protection level of exceeding 0.90 against the embedding inversion
+attacks, which is 0.58 × higher than that of SANTEXT+ and
+3.35× higher than that of CUSTEXT+. Our code is available at:
+https://github.com/mengtong0110/InferDPT.
+Index Terms—Differential privacy, black box, inference, large
+language model.
+I. INTRODUCTION
+I
+N recent years, the rapid advancement oflarge language
+models(LLMs) has garnered widespread attention from
+both the academic and industrial communities worldwide [1].
+ChatGPT [2], a prominent example, has reached a remarkable
+This work was supported in part by the National Natural Science Foundation
+of China under Grant U2436601, 62472398, U2336206, and 62121002 , and
+by the Open Foundation of Key Laboratory of Cyberspace Security, Ministry
+of Education (No.KLCS20240207), as well as by the National Research
+Foundation, Singapore and Infocomm Media Development Authority under
+its Trust Tech Funding Initiative (No. DTCRGC-04). Any opinions, findings
+and conclusions or recommendations expressed in this material are those of
+the author(s) and do not reflect the views of National Research Foundation,
+Singapore and Infocomm Media Development Authority.
+M. Tong and K. Chen are with the University of Science and Technology of
+China and the Key Laboratory of Cyberspace Security, Ministry of Education,
+China. Y . Qi, W. Zhang, and N. Yu are with the University of Science and
+Technology of China. J. Zhang is with CFAR, A*STAR. T. Zhang is with
+Nanyang Technological University. Z. Zhang is with Zhejiang University.
+Corresponding authors: Kejiang Chen (Email:chenkj@ustc.edu.cn) and
+Weiming Zhang (Email: zhangwm@ustc.edu.cn)
+TABLE I
+COMPARISONS OF DIFFERENT METHODS. ACHECK MARK(✓)INDICATES
+THAT METHODS MEET THE SCENARIO REQUIREMENTS.
+Method Text Generation Black Box Inference Low Cost
+CipherGPT [9] ✓ ✓
+TextObfuscator [10] ✓ ✓
+DP-Forward [11] ✓ ✓
+SANTEXT+ [12] ✓ ✓
+CUSTEXT+ [13] ✓ ✓
+InferDPT+ RANTEXT ✓ ✓ ✓ ✓
+milestone with 100 million weekly active users, as announced
+by OpenAI CEO Sam Altman on November 6, 2023, during
+the company’s inaugural developer conference held in San
+Francisco [3]. The widespread popularity of ChatGPT has
+significantly facilitated people’s daily work and lives. Users
+interact with ChatGPT via APIs or web interfaces to generate
+text for various applications, including but not limited to
+drafting articles, documenting daily work activities, and crafting
+advertisements for new products [4].
+However, technology is a double-edged sword. While LLMs
+offer unparalleled convenience and utility in text generation,
+they may also raise potential privacy concerns. There are
+instances where the misuse of LLMs has led to serious privacy
+infringements. One such example involves Samsung employ-
+ees leaking the company’s confidential meeting records and
+sensitive data about unreleased products [5]. Furthermore, in a
+recent incident, GPT-3.5 unexpectedly disclosed an individual’s
+selfies [6]. These incidents reignited concerns among the public
+regarding the potential privacy risks associated with uploading
+personal data to LLMs [7], [8]. Therefore, it is crucial to address
+privacy concerns of uploading query contents, which is called
+prompt. We provide an example in Figure 1 to demonstrate
+privacy leakage in thepromptwhen a user interacts with LLMs.
+Existing Solutions.Apromptin text generation tasks consists
+of a writing instruction and a document 1. Previous studies [9]–
+[11] failed to protect the privacy within the document during
+the inference process in practical text generation tasks. As
+shown in Table I, CipherGPT [9] utilized homomorphic
+encryption techniques in transformer-architecture models to
+enable inference on encrypted data. While these techniques
+can be used theoretically for privacy-preserving text generation
+tasks, they have limitations in practical applications due
+to the significant computational time and communication
+costs. TextObfuscator [10] and DP-Forward [11] added noise
+1The writing instruction provides directions on what the model should do;
+the document provides context that the model needs to generate a response.
+arXiv:2310.12214v8  [cs.CR]  18 Mar 2026
+
+
+--- PAGE 2 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 2
+User
+Black-box LLMs
+Illegally collect 
+information
+LLMs
+We (LLMs) secretly collect the 
+private information about Bob,
+who is an immigrant in Boston.
+Request for 
+text generation
+Return 
+generated text
+User Side Action
+LLM Side Action Privacy Leakage
+Private Document
+Bob, an immigrant in Boston, has 
+one dream ...
+Please help me to extend the 
+following text:
+Writing Instruction
+User
+Black-box LLMs
+Illegally collect 
+information
+LLMs
+Request for 
+text generation
+Return perturbed 
+generation result
+Perturbation Module
+Perturbed Prompt
+Please help me to extend the 
+following text:
+Perturb
+LDP
+Lin, a freshman at Broadway, had 
+one imagination ...
+Perturbed
+Generation
+User
+ User
+Extraction Module
+Extract and
+reconstructLin, a freshman at Broadway, had one imagination
+Local Model
+Privacy is leaked
+We (LLMs) secretly collect the 
+private information about Lin, 
+who is a freshman at Broadway.
+Privacy is not leaked
+that a fairy could take her to a magical world 
+filled with adventure and mystery.
+Perturbed Document
+Perturbed Generation
+Bob, an immigrant in Boston, has one dream ...
+that someone could take him to a peaceful world 
+filled with hope and love.
+Private Document
+Aligned Generation
+Obtain 
+from 
+LLMs
+Fig. 1. The illustration of potential privacy leakage and a solution viaInferDPTwhen a user employs black-box LLMs for text generation tasks.
+during data transmission insplit learning. However, they
+are mainly designed for classification tasks. Furthermore,
+they are unsuitable for black-box scenarios where the model
+owners, such as OpenAI [14], do not disclose details about
+the architectures of LLMs considering the intellectual property
+and commercial value of the models.
+On the other hand, SANTEXT+ [12] and CUSTEXT+ [13]
+leveragedlocal differential privacy(LDP) techniques [15] to
+verbatim replace sensitive tokens in the text with semantically
+close tokens from a fixed token set, which is termed asstatic
+adjacency listin the LDP context. These methods are also
+designed for privacy-preserving classification tasks, which can
+tolerate considerable information distortion introduced by LDP
+noise. For the privacy-preserving text generation tasks [16]
+investigated in this paper, even a slight information distortion
+in thepromptcan lead to incoherence and inconsistency in
+generated text, rendering SANTEXT+ and CUSTEXT+ not
+directly effective for such tasks. Additionally, the size ofstatic
+adjacency listequals the entire vocabulary in SANTEXT+,
+which is excessively large and increases the probability that
+perturbed tokens are semantically irrelevant to raw ones.
+Moreover, our experimental results in Figure 7 demonstrate that
+CUSTEXT+ is vulnerable to embedding inversion attacks [17]:
+even in the extreme case where privacy parameter ε is set
+to 0.01, an adversary can still recover 40% of raw tokens in
+CUSTEXT+. The rationale behind this phenomenon is that
+each token has a smallstatic adjacency list(which includes
+the raw token itself) in CUSTEXT+, thereby increasing the
+probability that the raw token will not be replaced.
+Our Proposal.To protect the privacy of the entire document
+during the inference process with black-box LLMs and address
+TABLE II
+AN ILLUSTRATION OF PERTURBED PROMPTS AND PERTURBED GENERATION
+FROMGPT-4BYRANTEXT. THE GREEN TEXT APPEARS IN BOTH
+PERTURBED AND ORIGINAL GENERATIONS.
+Method Perturbed Prompt Generated Text
+Original Sam lives in downtown Bostonand he enjoys walking through the historic streets.
+ε= 2.0 Lin living at city Barcelonaand she loves exploring local cafes and beaches.
+ε= 6.0 Mary lived in town Broadwayand sheenjoys watching shows atthe theater.
+ε= 10.0 Ben lives at urban Boston andheenjoys exploringthehistoric landmarks.
+the information bias caused by LDP, we introduce a framework,
+InferDPT, for text generation tasks. The general concept of
+InferDPT is inspired by knowledge distillation [18] and our
+observation. As illustrated in Table II, our observation is as
+follows: (1) The generation of the perturbedpromptby LDP
+shares the same tokens across multiple parts of the generated
+text from the rawprompt. (2) Furthermore, the number of shared
+tokens between them positively correlates with the privacy
+parameter ε. This suggests that the perturbed generation result
+could potentially serve as a reference for a smaller language
+model to complete the generation task, distilling LLMs’
+generative capability. Based on the observation, InferDPT
+comprises a perturbation module and an extraction module. In
+the perturbation module, InferDPT employs a token-level
+LDP mechanism, such as SANTEXT+ and CUSTEXT+, to
+replace each token in the document with a new token, producing
+a perturbedpromptshown in Figure 1. It uploads the perturbed
+promptto remote LLMs and obtains the perturbed generation
+result. In the extraction module, InferDPT deploys a local
+model that is lightweight and less capable than remote LLMs.
+This model extracts tokens from the perturbed generation result
+and reconstructs them into a generated text aligned with raw
+
+
+--- PAGE 3 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 3
+prompt. Ultimately, InferDPT not only preserves the privacy
+of thepromptbut also leverages the capabilities of remote
+LLMs to enhance the local model’s output quality and complete
+the generation task.
+To achieve a better balance between utility and privacy
+protection, we develop RANTEXT. It is a novel differentially
+private mechanism integrated into the text perturbation of
+InferDPT. RANTEXT introduces the concept ofrandom
+adjacency listfor token-level perturbation. For each token, it
+employs the Laplace distribution [19] to dynamically determine
+the size of therandom adjacency list, and then samples a new
+token from this list to replace raw tokens in the document.
+This approach enables RANTEXT to achieve a better trade-off
+between utility and privacy protection than existing methods do:
+(1) therandom adjacency listin RANTEXT is typically smaller
+than SANTEXT+’sstatic adjacency list, which enhances the
+semantic utility of the perturbed text; (2) Compared with that
+in CUSTEXT+, the size of theadjacency listin RANTEXT is
+generally larger, making it more difficult for an adversary to
+reconstruct the raw tokens.
+We conduct experiments on GPT-4 [14] for the evaluation of
+practical open-ended text generation tasks across three datasets.
+We found that existing attack strategies for differential privacy
+were not effective enough against RANTEXT. We propose an
+adaptive attack, the GPT inference attack, which leverages the
+capabilities of GPT-4 to reconstruct raw tokens.
+Our Contributions.We summarize our main contributions:
+• We propose InferDPT, the first practical framework for
+privacy-preserving inference of black-box large language
+models, implementing differential privacy in text generation.
+• We develop RANTEXT, a novel exponential mechanism of
+local differential privacy integrated into document pertur-
+bation of InferDPT. It achieves a better balance between
+utility and privacy protection compared to existing baselines.
+• We conduct experiments on three datasets tailored to practical
+open-ended text generation tasks in Section VI-F. Experi-
+mental results demonstrate that with ε set to 3.0 and a
+3.89GB local model, InferDPT achieves generation quality
+comparable to GPT-4 in terms of three metrics.
+• We evaluate four classes of privacy threats in Section VI-B.
+In particular, when we set the privacy parameter ε to 6.0
+and select the top 10 candidates for embedding inversion
+attack, RANTEXT offers an average privacy protection level
+exceeding 0.90, which is 3.35×higher that of CUSTEXT+
+and 0.58×higher than that of SANTEXT+.
+II. PRELIMINARIES
+A. Large Language Models
+Large language models(LLMs) are advanced artificial
+intelligence systems trained on extensive datasets. They are
+designed to understand, generate, and interpret human language,
+demonstrating incredible versatility for various language-related
+tasks. Generally, LLMs generate text Gen based on the prompt
+P ro uploaded by the users. They come in different types,
+including closed-source commercial services like ChatGPT [2]
+and Claude [8], as well as open-source models like Llama [20]
+and Vicuna [21]. In this paper, we focus on the closed-source
+TABLE III
+NOTATIONS AND DEFINITIONS. WE INDICATE WHICH ELEMENTS ARE
+KNOWN TO THE ADVERSARY DURING THE INFERENCE.
+Usr User of LLMs
+Adv LLMs as an adversary
+Ins Instruction for text writing
+Doc Raw document of the user
+Doc p Perturbed document of the user
+P ro Raw prompt of the user
+P ro p Perturbed prompt of the user
+Gen Generation result of the raw prompt
+Gen p Generation result of the perturbed prompt
+V Token vocabulary
+Cr Random adjacency list of token
+Ce Random adjacent embeddings of token
+Cs Static adjacency list of token
+u Scoring function of the exponential mechanism
+M Random mechanism of differential privacy
+Infer Inference function for text generation of LLMs
+LLMs and aim to address their privacy issues during the black-
+box inference in the open-ended text generation tasks.
+Specifically, in the open-ended text generation task [22],
+the role of these black-box LLMs is to continue generating
+text Gen in accordance with the prompt P ro for higher text
+generation quality based on multi-dimensional metrics. In
+detail, given a prompt P ro=Ins∥Doc consisting of Ins
+( fundamental writing instructions ) and Doc=⟨x i⟩L
+i=1 ( raw
+document composed of a sequence of L tokens xi, belonging to
+token vocabulary V ), the LLMs commit to providing inference
+function Infer(·):P ro→Gento generate text.
+B. (Local) Differential Privacy& Exponential Mechanism
+Differential privacy [15] is a privacy protection concept. As
+one of its most popular models, ε-local differential privacy
+(ε-LDP) allows data owners to locally perturb their data [23]
+using the randomized mechanism M(·) before uploading it to
+any untrusted aggregator.
+Definition 1( ε-Local Differential Privacy [24]).In ε-LDP ,
+given a privacy parameter ε≥0 , a randomized mechanism
+M is ε-LDP compliant if it satisfies the following condition
+for any two inputsx, x ′ ∈Xand any possible outputy∈Y:
+Pr[M(x) =y]
+Pr[M(x ′) =y] ≤e ε.(1)
+Typically, a smaller value of ε provides higher privacy
+protection at the cost of reduced data utility. Moreover, a
+critical definition here is the input set X. In previous NLP
+research [12], [13], most researchers have posited that any pair
+of tokens in the vocabulary share the same input set X and
+output set Y . We observe that such a definition leads to a
+challenge in the trade-off between utility and privacy. In this
+paper, we userandom adjacency listto redefine the input set
+ofε-LDP in Section V-B.
+Definition 2(Exponential Mechanism [25]).For a given
+scoring function u:X×Y→R , a randomized mechanism
+
+
+--- PAGE 4 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 4
+Perturbed Generation: She hopes for a new life in the U.S. which remains out of reach …
+Input
+Raw Private Document
+Perturbation Module
+Perturbed Document
+Extraction Module
+Output
+Extracted generation
+Add Perturbation Noise
+User of LLMsRaw Document
+Local User Remote Black-box LLMs
+Like ChatGPT
+Step 1. Employ local differential privacy to raw document , resulting in a perturbed document 𝐷𝑜𝑐𝑝 .
+Step 2. Add writing instruction to 𝐷𝑜𝑐𝑝 consisting perturbed prompt 𝑃r𝑜𝑝 , submitting 𝑃r𝑜𝑝 to LLMs.
+Overview of  InferDPT
+She hopes for a new life in U.S. 
+which remains out of reach …
+ChatGPT
+Your task is to extend Prefix Text.
+- Prefix Text:
+She being staying 28 day with an 
+status in caught in a despite …
+You
+Add Ins𝑤
+Black-box Inference
+Perturbed Generation
+Return 𝐺𝑒𝑛𝑝
+LDP samples new tokens to replace raw ones.
+Raw Private Document: He 's been waiting 19 years for a visa still stuck in a backlog,
+Perturbed Document:  She being staying 28 day with an status in caught in a despite
+…
+He 's been waiting 19 years for a visa still stuck in a backlog,
+She been waiting 19 years for a visa still stuck in a backlog,
+She being waiting 19 years for a visa still stuck in a backlog,
+She being staying 19 years for a visa still stuck in a backlog,
+Step 3. Obtain perturbed generation 𝐺𝑒𝑛𝑝 and align it with raw prompt in       Extraction Module.
+Extracted Generation: his dreams of a new life in the U.S. lingering just out of reach …
+…
+Perturbation Module
+Step 1.3 Sample staying to replace waiting
+Step 1.2 Sample being to replace been
+U Step 1.1 Sample She to replace He 's
+Fig. 2. The overview of InferDPT. It consists of (1) a perturbation module that samples new tokens to replace the raw ones in Doc via LDP and (2) an
+extraction module that locally aligns the perturbed generation with the raw document.
+M(·) is ε-LDP compliant if it satisfies the following condition
+for any inputx∈Xand any possible outputy∈Y:
+Pr[y|x]∝exp
+ ε·u(x, y)
+2∆u
+
+,(2)
+where the sensitivity∆uis defined as:
+∆u= max
+x,x′∈X,y∈Y
+|u(x, y)−u(x ′, y)|.(3)
+The scoring function u is various in different scenarios.
+Typically, we can adjust the upper bound of u to set ∆u to a
+specific real number, where ∆u represents the sensitivity of
+the scoring function u. Similarly, the smaller the value of ε,
+the higher the security of privacy protection capability, but the
+lower the utility of the data. When a smallerεis chosen, the
+scoring function u(x, y) no longer plays a decisive role in the
+output probability of any perturbation result.
+III. PROBLEMSTATEMENT
+A. Threat Model
+We consider the scenario where the LLM platform, such as
+ChatGPT, is an honest but curious adversary, referred to as
+Adv. A user, denoted as Usr, intends to upload a prompt and
+invoke the inference service Infer(·):P ro→Gen of Adv to
+complete the text generation tasks, which are poorly executed
+by open-source models. Here, Gen denotes the text generated
+by Adv. The uploaded prompt, P ro=Ins∥Doc represents
+the raw prompt of Usr consisting of Ins ( fundamental writing
+instructions ) and Doc=⟨x i⟩L
+i=1 ( raw document composed of
+a sequence of L tokens xi, belonging to token vocabulary V ).
+Following previous works [10], [17], the privacy infor-
+mation probably pertains to each token. To protect each
+piece of the token in the raw document Doc, Usr employs
+differential privacy [15] to Doc, resulting in a perturbed
+document Docp. Consequently, Usr uploads the perturbed
+prompt P rop =Ins∥Doc p. Furthermore, Usr can deploy
+a less capable language model than LLMs. To preserve the
+model’s commercial value, Adv does not reveal the internal
+- Prefix Text: He 's been waiting 19 years for a visa still stuck in a backlog , 
+Y ouU
+Vicuna
+Extraction Module of  InferDPT
+Your task is to extend the“Prefix Text”. Use the“Perturbed Generation” as your 
+primary writing material for your extension. Extract coherent and consistent text from 
+the“Perturbed Generation”and integrate them into your continuation. Ensure a 
+seamless alignment with the context established by the “Prefix Text”. 
+Sure, here is your extended text :
+- Perturbed  Generation: She hopes for a new life in the U.S. which remains out of reach. 
+Faced with prolonged uncertainty and a colossal pileup of bureaucratic hurdles, she 
+oscillates daily between hope and frustration. 
+his dreams of a new life in the U.S. lingering just out of reach. Faced with prolonged 
+uncertainty, he spends his days fluctuating between hope and frustration … 
+Fig. 3. The extraction module employs a smaller language model locally to
+extract text from the perturbed generation. It then reconstructs this text into
+an output that aligns with the raw document. We mark the text in green to
+indicate that it is identical in both the perturbed and extracted generations.
+architecture or parameters of the LLMs, but only exposes its
+token vocabulary V to Usr for the purpose of billing verification
+during the inference process.
+The goal of Adv is to reconstruct every piece of the token in
+the raw document Doc from Docp. Adv is expected to launch
+attacks using vulnerabilities in LDP, aiming to recover each
+token in the document Doc, based on the perturbed version
+Docp. Additionally, we assume that Adv is fully informed
+about the details of the differential privacy algorithm.
+Table III summarizes notations frequently used in this paper.
+B. Existing Solutions and Limitations
+Existing solutions, such as SANTEXT+ [12] and CUS-
+TEXT+ [13], focus on privacy-preserving model training in
+classification tasks:
+• SANTEXT+ implements local differential privacy (LDP) [26]
+during the training in classification tasks. It substitutes the
+raw tokens with newly sampled ones from astatic adjacency
+
+
+--- PAGE 5 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 5
+list. However, thisstatic adjacency listin SANTEXT+ equals
+the entire token vocabulary and is excessively large. Con-
+sequently, there exists a high probability that the perturbed
+token may be semantically irrelevant to the raw one, leading
+to diminished utility of the perturbed text.
+• CUSTEXT+ perturbs each token, excluding stopwords [27],
+during training in classification tasks. Compared to SAN-
+TEXT+, it reduces the size ofstatic adjacency listto a small
+number (default 20) for better utility of LDP. However, this
+smallstatic adjacency listincreases the probability that raw
+tokens will not be replaced, resulting in privacy leakage.
+To protect the privacy of documents during inference in text
+generation tasks and address the information distortion intro-
+duced by LDP noise, we introduce a framework, InferDPT,
+(Section IV). We also propose an exponential mechanism,
+RANTEXT (see Section V), which offers a better trade-off
+between utility and privacy protection compared to existing
+SANTEXT+ and CUSTEXT+.
+IV. THEIN F E RDPTFRAMEWORK
+A. Overview
+We introduce InferDPT, a framework designed for privacy-
+preserving LLMs inference in text generation tasks. As shown
+in Figure 2,InferDPTis consisting of two modules:
+• Perturbation Module: protecting privacy. It generates a
+perturbed document by replacing each token in Doc with
+one close to embedding distance and sampled by LDP.
+• Extraction Module: maintaining utility. It extracts coherent
+and consistent text from perturbed generation and recon-
+structs them into an output aligned with the raw prompt by
+a local language model, less capable than black-box LLMs.
+The design of InferDPT faces two main challenges in
+black-box inference. (1)Providing strong privacy protec-
+tion for the raw document Doc. To solve this privacy
+challenge, the perturbation module of InferDPT utilizes a
+differentially private mechanism to sequentially replace each
+token in the raw document Doc with alternatives close in
+embedding distance. (2)Maintaining the utility of the text
+under semantic perturbation. This is more tough than the
+first one. To solve this challenge, we conducted abundant
+experiments about the generation of the perturbed document
+using LDP on LLMs. Specifically, we perturb each token
+in the document with a newly sampled one close in the
+embedding distance by LDP, resulting in a perturbed document.
+We discovered that the generation of this perturbed document
+includes numerous tokens found in the generation of the raw
+document. For example, we collect the tokens appearing in the
+generation of the raw document Doc in Figure 2, termed a set
+{hopes, new, dreams,· · · } . We find that the generation of
+the perturbed document Docp (depicted in Figure 2) contains
+tokens within the set {hopes, new, dreams,· · · } . Moreover,
+this overlap increases gradually as the perturbation decreases.
+To formally describe this phenomenon, we propose the
+following Observation about the perturbed output by LDP.
+B. Key Observations
+Observation.Let V be a token vocabulary. We define d(·) as
+a function that quantifies the semantic similarity between two
+tokens, where smaller output values indicate greater similarity.
+Let M(·) denote a randomized function of LDP that satisfies:
+d(x, y)≥d(x, z)⇒Pr[M(x) =y]≤Pr[M(x) =z],(4)
+where tokensx, y, z∈V.
+Let tokens xi, yi ∈V . Docp =⟨y i⟩L
+i=1 denotes the perturbed
+document of the raw document Doc=⟨x i⟩L
+i=1 by yi =M(x i).
+The expression Infer(Ins∥Doc) =⟨h (j)
+i ⟩K
+i=1 represents the
+generation result of the j-th inference on Doc, consisting
+of tokens h(j)
+i ∈V . Given Docp, the perturbed generation
+Genp =⟨g i⟩K
+i=1 =Infer(Ins∥Doc p) consists of tokens
+gi ∈Vand satisfies the following condtion:
+Expected set=
+N[
+j=1
+{h(j)
+i |h (j)
+i ∈Infer(Ins∥Doc)},(5)
+Intersection={g i|gi ∈Expected setandg i /∈stopwords2},(6)
+Corr(Count(Intersection), ε)>0,(7)
+where N is a positive integer; the function Count(·) counts
+the size of a set; the function Corr(·) measures correlation
+coefficient between two variables, with values ranging from -1
+(negative correlation) to 1 (positive correlation).
+Implication.This Observation states that if theExpected set
+is constructed from tokens in the results of N iterations of
+raw prompt, then the presence of tokens from the perturbed
+generation within theExpected setwill positively correlate
+with ε. This implies that smaller perturbations to Doc lead to
+higher consistency between the perturbed generation and the
+raw generation. To verify this Observation, we carried out the
+following experiments with GPT-4 [14].
+Empirical Validation.We got the Expected set by collecting
+100 tokens from the output of the raw prompt with GPT-4
+generated 100 times on the CNN/Daily Mail dataset [28].
+The raw prompt consists of a fundamental writing instruction
+and a raw document of 50 tokens shown in Figure 2. We
+utilized SANTEXT+ [12], CUSTEXT+ [13], and RANTEXT
+introduced in Section V to generate perturbed outputs of 100
+tokens from GPT-4 under various values of ε. We counted the
+number of tokens from the perturbed and non-private generation
+of GPT-4 that belong to theExpected set.
+Figure 4 shows the experimental results. We can see that
+with the increase of ε and reduction of perturbation, the
+number of tokens in the Expected set of the three mechanisms
+has increased. This validates observation, confirming that the
+number of tokens from the Expected set appearing in the
+perturbed generation positively correlates withε.
+In conclusion, our observation suggests that the perturbed
+generation result shares the same tokens in multiple parts of
+the non-perturbed generation result. However, the perturbed
+generation result lacks some information in the raw document,
+2Stopwords [27] are common words usually ignored in text analysis due to
+their limited informational values.
+
+
+--- PAGE 6 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 6
+Number of  Words in 
+Expected  Set 
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+Privacy Parameter 𝜺=2.0
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+Privacy Parameter 𝜺=6.0
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+Privacy Parameter 𝜺=10.0
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+Privacy Parameter 𝜺=14.0
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+Privacy Parameter 𝜺=18.0
+SANTEXT+ CUSTEXT+ RANTEXT
+Fig. 4. The number of tokens from the non-private and private generation of GPT4 using three mechanisms that belong to theExpected set.
+Algorithm 1Perturbation Module
+Input: Document Doc=⟨x i⟩L
+i=1, random mechanism M(·), static
+adjacency listC s(·),random adjacency listC r(·);
+Output:Perturbed documentDoc p;
+1:InitializeDoc p ← ∅;
+2:fori= 1to Ldo
+3:ComputeC s(xi)orC r(xi);
+4:Sampley i ∼M(x i, Cs(xi))ory i ∼M(x i, Cr(xi));
+5:Appendy i toDoc p;
+6:end for
+7:OutputDoc p;
+which LDP replaces. To address this, InferDPT employs an
+extraction module to extract related text from the perturbed
+generation result as an output reference, distilling the gener-
+ation capabilities of LLMs. It then reconstructs them into a
+generated text aligned with the raw document. In the following
+subsections, we will delve into the perturbation module and
+the extraction module ofInferDPT.
+C. Perturbation Module
+After perturbation, Usr uploads a perturbed prompt P rop =
+Ins∥Doc p (consisting of a writing instruction Ins and
+a perturbed document Docp) to remote LLMs. The LLMs
+then return perturbed generation Genp =Infer(P ro p) to Usr.
+The perturbation module of InferDPT generates a perturbed
+document Docp from an input document Doc. Specifically,
+it replaces each token in Doc with new tokens sampled by
+the randomized mechanism M(·) of LDP from atoken set. In
+previous works [12], [13], thistoken setis static (termed the
+static adjacency list Cs), whereas in our proposed RANTEXT, it
+is random (termed therandom adjacency list Cr). Typically, Cs
+(or Cr) consists of tokens that are close to the embedding of the
+token xi ∈V to be replaced. Given a document Doc=⟨x i⟩L
+i=1
+composed of L tokens xi ∈V , the perturbation module
+replaces each xi with a random output yi =M(x i, Cs(xi))
+or yi =M(x i, Cr(xi)), resulting in a perturbed document
+Docp =⟨y i⟩L
+i=1 (as shown in Figure 2). The detailed process
+of the perturbation module is outlined in Algorithm 1. In the
+implementations, InferDPT adopts three mechanisms of LDP:
+SANTEXT+ [12], CUSTEXT+ [13], and RANTEXT (detailed
+in the following Section V).
+While LDP perturbs sensitive text, it is important to note
+that an excessively large ε in LDP increases the risk of privacy
+leakage from the perturbed text. This is because LDP perturbs
+raw tokens to more semantically close tokens as ε increases.
+We experimentally demonstrate this risk by calculating the
+synonymous token proportion and the embedding distance (be-
+tween the raw tokens and their perturbed tokens) with various
+TABLE IV
+PROPORTION OF SYNONYMS BETWEEN THE RAW TOKENS AND THEIR
+PERTURBED VERSIONS[27].
+Method Synonym Proportion↓
+ε= 2.0ε= 6.0ε= 10.0ε= 14.0
+SANTEXT+ 0.371 0.373 0.3740.375
+CUSTEXT+ 0.441 0.697 0.907 0.985
+RANTEXT 0.013 0.049 0.1470.378
+TABLE V
+EUCLIDEAN DISTANCE BETWEEN THE EMBEDDINGS OF TOKENS AND THEIR
+PERTURBED VERSIONS.
+Method Euclidean Distance↑
+ε= 2.0ε= 6.0ε= 10.0ε= 14.0
+SANTEXT+ 3.081 2.775 2.756 2.750
+CUSTEXT+ 2.862 1.732 0.553 0.118
+RANTEXT 4.317 4.133 3.667 2.807
+ε values. As shown in Table IV and Table V, as ε increases,
+the synonym proportion grows and the Euclidean distance
+decreases, indicating greater semantic similarity between the
+raw tokens and the perturbed tokens.
+D. Extraction Module
+As previously mentioned, the perturbation module disturbs
+each token and key information in the raw document Doc,
+making it difficult for an adversary to reconstruct the raw
+tokens from Docp or Genp. However, this perturbation also
+leads to inconsistency and partial incoherence of semantics
+betweenGen p andDoc, as illustrated in Figure 2.
+To obtain the aligned generation of the raw document
+Doc, the extraction module of InferDPT deploys a local
+language model that is considered trustworthy and does not
+pose any privacy leakage issues. This local model is smaller
+and less powerful than remote black-box LLMs, facilitating
+easier implementation under limited resources. As shown in
+Figure 3, Usr inputs the raw document Doc and the perturbed
+generation Genp into this local model. This model is tasked
+with extracting coherent and consistent text from Genp and
+integrating it into the continuation of Doc, ensuring an aligned
+output. Although the local model can generate aligned content
+independently, the generation quality is not satisfactory due to
+its limited capabilities. However, with the perturbed generation
+Genp, the local model distills the capacity of the remote black-
+box LLMs. The details of the prompt utilized in the extraction
+module can be found in Appendix A.
+Based on the above description, we have a panoramic
+view of InferDPT. It is noted that the perturbation module
+
+
+--- PAGE 7 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 7
+Aartsof the 25 immigrate of be insist five that made a T positions and for exercise 
+law She being staying 28 day with an status in caught in a despite that large court
+Sergio Garcia , a 36-year-old undocumented immigrant in California , has held 
+two lifelong dreams : to become a U.S. citizen and to practice law . He 's been 
+waiting 19 years for a visa still stuck in a backlog , but the Supreme Court
+Step 1. Compute random embedding Step 2. Compute Euclidean distance
+Embedding Function
+Random Embedding
+He 's been waiting 19 years for a visa
+Vector Space
+1
+3 2 1
+2 3
+2
+1
+3𝜙(𝑦𝑒𝑎𝑟𝑠)
+Compute Distance
+Random Adjacency List
+1
+3 2 1
+2 3
+2
+1
+3
+Vector Space
+de(      ,     )1 de(      ,     )2 de(      ,     )3
+de(      ,     )1 de(      ,     )2 de(      ,     )3
+de(      ,     )1 de(      ,     )2 de(      ,     )3
+de(      ,     )r<?
+Cr(years)={ tokens of     ,     ,     }1 23
+Raw Private 
+Document  
+Step 1. Compute random embedding Step 2. Compute Euclidean distance
+Sample perturbed tokens from Cr(∙) via ε-local differential privacy
+Compute Random Adjacency Lists
+Workflow of  RANTEXT
+Perturbed  
+Document
+Does the token in raw document belong to the token vocabulary?
+1
+3 2 1
+2 3
+2
+1
+3
+Vector Space 1
+3
+2 1
+2 3
+2
+1
+3
+Vector Space
+1
+3
+2 1
+2 3
+2
+1
+3
+Vector Space
+On the left: the process of computing a random adjacency list for the token "years". On the right: a toy example of perturbing a raw document to obtain a perturbed version.
+Fig. 5. The workflow of RANTEXT. It comprises two steps: (1) computing random adjacency lists and (2) sampling perturbed tokens viaε-LDP.
+can adopt existing differentially private mechanisms such as
+SANTEXT+ [12] and CUSTEXT+ [13]. However, these two
+have drawbacks either in terms of utility or security, as analyzed
+in Section III-B. To address these problems, we introduce
+RANTEXT in the following section.
+V. THERANTEXT MECHANISM
+A. Overview
+We design RANTEXT to address the utility and vulnerability
+problems of previous differentially private mechanisms [12],
+[13]. As shown in Figure 5, RANTEXT comprises two steps:
+• Compute Random Adjacency Lists.This step computes a
+random adjacency listfor each raw token via two operations:
+computing random embedding and Euclidean distance. Any
+tokens inrandom adjacency listshare the same input set.
+• Sample Perturbed Tokens via ε-LDP.This step samples
+a perturbed token for each raw token and replaces the raw
+token in the document from itsrandom adjacency listvia
+ε-LDP, obtaining the perturbed document.
+As mentioned in Section III-A, LLMs expose their token
+vocabulary V for billing verification of inference service.
+Utilizing the token vocabulary V and Byte Pair Encode (BPE)
+algorithm [29], users can obtain thetokenizer(·)of LLMs.
+Given a raw document Doc, RANTEXT first uses the
+tokenizer(·) algorithm of LLMs to turn the text of Doc into
+tokens⟨x i⟩L
+i=1, wherex i ∈V:
+Tokenset=⟨x i⟩L
+i=1 =tokenizer(Doc).(8)
+To preserve the privacy of Doc, RANTEXT discards the
+tokens of Doc that do not belong to V and employs an
+exponential mechanism to subsequently replace each remaining
+token with one close in embedding distance from its exclusive
+random adjacency list:
+ri =M(x i, Cr(xi)),(9)
+Tokensetp =⟨r i⟩l
+i=1 =⟨M(x i, Cr(xi))⟩l
+i=1,(10)
+where token ri ∈V , Tokensetp represents the perturbed
+token set, and Cr(xi) represents therandom adjacency list
+of xi. RANTEXT concatenates the tokens in a perturbed token
+set Tokensetp to obtain a perturbed document Docp, thereby
+providing privacy protection.
+B. Compute Random Adjacency Lists
+To formally define therandom adjacency list, we first give
+a definition ofrandom adjacent embeddings:
+Definition 3(Random Adjacent Embeddings).Given token
+t∈V , its random adjacent embeddings are defined as follows:
+Ce(t) ={eb|d e (eb, ϕ(t))< d e(ˆϕ(t), ϕ(t)),eb∈R N },(11)
+where eb∈R N represents any N-dimensional vector within the
+real number domain. The function de(·) is utilized to compute
+the distance between two vectors and is defined as de(a, b) =pPn
+i=1(ai −b i)2. The function ϕ:V→R N maps any given
+token to a vector in the N-dimensional real number vector
+space. The function ˆϕ(t) =ϕ(t) +Y , where the random vector
+Ysatisfies the probability density:
+Y∼f(x) = Z
+2∆ϕ ·exp
+
+− Z· |x|
+∆ϕ
+
+,(12)
+Z=
+(
+εifε <2,
+alog(b·ε+c) +dotherwise, (13)
+where∆ϕ is the sensitivity of f unction ϕ(·), a≈
+0.0165, b≈19.0648, c≈ −38.1294, d≈9.3111.
+Given a token t∈V to compute its random adjacent
+embeddings, we need to complete the two-step computation:
+Step 1. Compute the random embedding.We construct the
+random vector Y utilizing the Laplace distribution [19]. We
+add Y independently to each dimension of ϕ(t), obtaining the
+random embedding ˆϕ(t) =ϕ(t) +Yof raw private tokent.
+Step 2. Compute the Euclidean distance.We compute the
+Euclidean distance between ϕ(t) and ˆϕ(t), referred to
+
+
+--- PAGE 8 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 8
+Algorithm 2RANTEXT Mechanism
+Input: Token set Tokenset=⟨x i⟩L
+i=1, token vocabulary V ,
+privacy parameter ε, embedding function ϕ(·), distance
+functiond e(·), random vectorY;
+Output:Perturbed documentDoc p;
+1:InitializeTokenset p ← ∅;
+2:fori= 1toLdo
+3:ifx i /∈Vthen
+4:Discard the tokenx i ;
+5:Continue;
+6:end if
+7:Sample a random vectorY;
+8:Compute embeddingeb t ←ϕ(x i);
+9:Compute random embeddingeb n ←eb t +Y;
+10: Compute Euclidean distance dthreshold ←d e(ebn, ebt);
+11:C e(xi) ={eb|d e (eb, ebt)< d threshold , eb∈R N };
+12:C r(xi) ={x i′|ϕ(xi′)∈C e(xi), xi′ ∈V};
+13:foreachx i′ ∈C r(xi)do
+14:d xi ′ ←d e(ϕ(xi), ϕ(xi′));
+15:Scoring functionu(x i, xi′)←1−d xi ′/dthreshold;
+16:p total ←p total + exp (ε/2·u(x i, xi′));
+17:end for
+18:foreachx i′′ ∈C r(xi)do
+19:p(x i′′|xi)←exp (ε/2·u(x i, xi′′))/p total;
+20:end for
+21:Sample fromrandom adjacency listr i ∼p(x i′′|xi);
+22: Append new token ri to perturbed token set Tokensetp;
+23:end for
+24:ConcatenateTokenset p =⟨r i⟩L
+i=1 obtainingDoc p
+25:Output perturbed documentDoc p;
+de(ˆϕ(t), ϕ(t)). The random adjacent embeddings consist of
+those embeddings whose Euclidean distance to ϕ(t) is shorter
+thand e(ˆϕ(t), ϕ(t)).
+We use Y to dynamically determine the size of therandom
+adjacency list. The detailed construction process of the random
+vectorYcan be found in Appendix B.
+With the definition of random adjacent embeddings, we give
+the definition of therandom adjacency list:
+Definition 4(Random Adjacency List).Given a token t∈V ,
+its random adjacency list is defined as follows:
+Cr(t) ={t ′|ϕ(t′)∈C e(t), t′ ∈V}.(14)
+Given a token t∈V , itsrandom adjacency listis composed
+of any token t′ in the token vocabulary V , whose embedding
+ϕ(t′) has a Euclidean distance to ϕ(t) shorter than the
+Euclidean distance between t’s random embedding and t’s
+embeddingϕ(t).
+The design of therandom adjacency listin RANTEXT obeys
+the following theorem:
+Theorem 1.Given a token t∈V and any token t′ ∈V , there
+exists a random adjacency list Cr(t) of RANTEXT satisfying
+t′ ∈C r(t).
+Theorem 1 is proven in Appendix C. It demonstrates that
+a token t can be substituted with any token t′ ∈V in
+RANTEXT, thereby increasing the difficulty for adversaries to
+reconstruct the raw tokens. Moreover, therandom adjacency
+listaddresses the utility problem of the perturbed text in
+SANTEXT+. Although the theoretically maximum size of
+therandom adjacency listis equivalent to the size of V , it
+is typically smaller than that in terms of probability. This
+reduces the likelihood that the perturbed token is semantically
+irrelevant.
+Furthermore, experimental results in the following Sec-
+tion VI-F demonstrate that therandom adjacency listin
+RANTEXT is generally larger than thestatic adjacency
+listin CUSTEXT+, which solves the vulnerability of CUS-
+TEXT+ [13] to the embedding inversion attack.
+C. Sampling Perturbed Tokens viaε-LDP
+In SANTEXT+ [12], a proportion of tokens is not per-
+turbed by LDP. To solve the privacy leakage issue in the
+raw text, RANTEXT perturbs every piece of the token in
+Tokenset=⟨x i⟩L
+i=1. To perturb token xi, RANTEXT employs
+the exponential mechanism [25], which satisfies ε-LDP, to
+select a new token from Cr(xi) to replace the original one. For
+any special token ts /∈V, RANTEXT discards it, to ensure
+there is no special token leakage inDoc p.
+To guarantee the utility of the perturbed document, the
+random mechanism M(·) of the exponential mechanism in
+RANTEXT is required to satisfy:
+d(x, y)≥d(x, z)⇒P r[M(x) =y]≤P r[M(x) =z],(15)
+where x∈V , and y and z belong to the random adjacency
+list of x. d(·) measures the semantic similarity between two
+inputs, with a smaller output indicating greater similarity.
+To fulfill that, the scoring function u(·) of the random
+mechanismM(·)in RANTEXT is described as follows:
+Given a token t, RANTEXT considers that any two tokens
+in Cr(t) share the same input set and output set during the
+perturbation of token t. Given any two tokens x, y∈C r(t),
+the scoring function is
+u(x, y) = 1− |de(ϕ(x), ϕ(t))−d e(ϕ(y), ϕ(t))|
+de(ϕ(t), ˆϕ(t))
+.(16)
+With Equation 11 and Equation 14, it holds that:
+0≤ |de(ϕ(x), ϕ(t))−d e(ϕ(y), ϕ(t))|
+de(ϕ(t), ˆϕ(t))
+<1.(17)
+With Equation 16 and Equation 17, it can be deduced that:
+0< u(x, y)≤1and∆u= 1.(18)
+Given a privacy parameter ε≥0 , the probability of obtaining
+an output of the perturbed token y∈C r(t) for any input token
+x∈C r(t)is as follows:
+P r[y|x] =
+exp
+
+ε·u(x,y)
+2∆u
+
+P
+y′∈Cr(t) exp
+
+ε·u(x,y′)
+2∆u
+ (19)
+=
+exp
+
+ε
+2 ·
+
+1− |de(ϕ(x),ϕ(t))−de(ϕ(y),ϕ(t))|
+de(ϕ(t),ˆϕ(t))
+
+P
+y′∈Cr(t) exp
+
+ε
+2 ·
+
+1− |de(ϕ(x),ϕ(t))−de(ϕ(y′),ϕ(t))|
+de(ϕ(t),ˆϕ(t))
+ .
+(20)
+
+
+--- PAGE 9 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 9
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀
+(a)CNN/Daily Mail
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀 (b)Wikitext-103-v1
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀 (c)ArXiv Dataset
+Fig. 6. Results of BERT inference attack and GPT inference attack on CNN/Daily Mail, Wikitext-103-v1, and ArXiv Dataset.
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀
+(a)CNN/Daily Mail
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀 (b)Wikitext-103-v1
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0.01 2 6 10 14 18
+Privacy
+𝜀 (c)ArXiv Dataset
+Fig. 7. Results of embedding inversion attack on CNN/Daily Mail, Wikitext-103-v1 and ArXiv Dataset.
+Specifically for the input token t∈C r(t) and output token
+y∈C r(t), it can be deduced that:
+u(t, y) = 1− de(ϕ(y), ϕ(t))
+de(ϕ(t), ˆϕ(t))
+,(21)
+P r[y|t] =
+exp
+
+ε
+2 ·
+
+1− de(ϕ(t),ϕ(y))
+de(ϕ(t),ˆϕ(t))
+
+P
+y′∈Cr(t) exp
+
+ε
+2 ·
+
+1− de(ϕ(t),ϕ(y′))
+de(ϕ(t),ˆϕ(t))
+ .(22)
+The detailed process of RANTEXT is shown in Algorithm 2.
+Furthermore, the token sampling for each raw token in
+RANTEXT satisfies the definition ofε-LDP:
+Theorem 2.Given a privacy parameter ε≥0 and a random
+adjacency list Cr(t) of token t, for any input tokens x, x′ ∈
+Cr(t) and output token y∈C r(t), the randomized mechanism
+Mof RANTEXT holds that:
+Pr[M(x) =y]
+Pr[M(x ′) =y] ≤e ε.(23)
+Theorem 2 demonstrates that given a Cr(t) of token t, the
+token sampling for each raw token in RANTEXT satisfies
+ε-LDP. Theorem 2 is proven in Appendix C.
+VI. EXPERIMENTS
+In this section, we evaluate the privacy protection levels and
+utility of theInferDPTwith various LDP mechanisms.
+A. Experiment Setup
+Datasets.For traditional open-ended text generation tasks,
+we use two classic NLP datasets: CNN/Daily Mail [28] and
+Wikitext-103-v1 [30]. For practical applications, we use the
+ArXiv Dataset [31], FinRED [23], and MedQA [32]. These
+datasets encompass a wide range of events and entities.
+Baselines. InferDPT is the first practical framework for
+privacy-preserving inference that implements differential pri-
+vacy in text generation tasks [33]. As there are no other
+frameworks of the same type, we did not compare InferDPT
+with any others. For the differentially private mechanisms
+of the perturbation module, we compared RANTEXT with
+existing state-of-the-art mechanisms, SANTEXT+ [12] and
+CUSTEXT+ [13] in the default settings of them.
+Implementation.We conduct experiments on a cluster
+equipped with NVIDIA RTX A6000 GPUs and Intel Xeon
+Gold 6130 2.10 GHz CPUs. We use GPT-4 [14] as the remote
+large language model. Its token vocabulary is cl100k base [34],
+from which we select the first 11,000 English tokens as V . The
+embedding function ϕ(·) is text-embedding-ada-002 [35]. For
+the local extraction module, we employ Vicuna-7b-4bit [36],
+Llama2-7b-4bit [20], and Llama3.1-8b-4bit [20].
+B. BERT Inference Attack
+In theBERT inference attack[12], an adversary employs a
+pre-trained BERT model to recover raw document Doc from
+
+
+--- PAGE 10 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 10
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+1.0 2.0 3.0
+Cosine Similarity
+𝜀
+(a)CNN/Daily Mail
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+1.0 2.0 3.0
+Cosine Similarity
+𝜀 (b)Wikitext-103-v1
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+1.0 2.0 3.0
+Cosine Similarity
+𝜀 (c)ArXiv Dataset
+Fig. 8. Cosine similarity↓between the perturbed generation and the raw document.
+TABLE VI
+PRIVACY LEAKAGE VIA THE PERTURBED GENERATION.
+ε Method Privacy Leakage Rate↓
+1-gram 2-gram 3-gram
+∞ Non-private 0.110 0.058 0.027
+2.0
+SANTEXT+ 0.090 0.030 0.016
+CUSTEXT+ 0.098 0.030 0.007
+RANTEXT 0.078 0.024 0.004
+6.0
+SANTEXT+ 0.103 0.053 0.022
+CUSTEXT+ 0.099 0.034 0.008
+RANTEXT 0.081 0.027 0.005
+10.0
+SANTEXT+ 0.104 0.055 0.022
+CUSTEXT+ 0.103 0.04 0.013
+RANTEXT 0.095 0.029 0.006
+14.0
+SANTEXT+ 0.105 0.057 0.023
+CUSTEXT+ 0.105 0.052 0.017
+RANTEXT 0.101 0.032 0.008
+their perturbed version Docp. The BERT model, developed
+through masked language modeling [37], predicts the raw
+tokens by sequentially replacing each token in the perturbed
+text with a special token "[MASK]". This approach leverages
+BERT’s capability to understand context, allowing it to infer
+the masked tokens. An attack is successful if the output token
+matches the input token. Subsequently, we calculate attack
+success rate 3 across all attacks, denoted as rats. The privacy
+protection level of the differentially private mechanism is
+defined as1−r ats.
+As shown in Figure 6, RANTEXT offers better privacy
+protection againstBERT inference attackcompared to SAN-
+TEXT+ and CUSTEXT+. The experimental results indicate
+that RANTEXT provides over 80% privacy protection within
+an ε value range of 0.01 to 18.0. In particular, with an ε value
+of 18.0 on the CNN/Daily Mail dataset, the privacy protection
+level of RANTEXT is 1.11 × that of SANTEXT+ and 1.41 ×
+that of CUSTEXT+. We analyzed the results of the experiment
+and found that BERT did not recognize the tokens of GPT-
+4. To more comprehensively evaluate RANTEXT’s security,
+we proposed an adaptive attack leveraging the capabilities of
+GPT-4 in Section VI-D, GPT inference attack.
+3We exclude "[UNK]" token, as it does not yield meaningful information.
+C. Embedding Inversion Attack
+Embedding inversion attack[17] computes the distance
+between the embedding of each token in the perturbed
+document and the embeddings of other tokens in the vocabulary,
+returning top K tokens with the closest Euclidean distance.
+The privacy protection level is defined as1−r ats.
+Experiments were conducted under the conditions of top
+K= 1 and 10. Figure 7 illustrates that, under both conditions,
+SANTEXT+ and CUSTEXT+ are susceptible to embedding
+inversion attacks, indicating a relatively lower level of privacy
+protection. Even at ε= 0.01 , these methods could only provide
+privacy protection for over 40% of the original documents. As
+the top K changes from 1 to 10, the privacy protection level
+of SANTEXT+ and CUSTEXT+ remains largely unchanged.
+On the other hand, RANTEXT benefits from its design of
+therandom adjacency list(generally larger than that in
+CUSTEXT+) and the perturbation on each token, preventing
+attackers from successfully reconstructing raw tokens.
+D. Adaptive Attack: GPT Inference Attack
+RANTEXT applies perturbations to the GPT-4 token vocab-
+ulary. Since GPT-4 recognizes all tokens, it is hypothesized
+that GPT-4 can better reconstruct raw tokens perturbed by
+RANTEXT. Therefore, we propose an adaptive attack, theGPT
+inference attack. In this method, the attacker inputs perturbed
+text into GPT-4 and instructs it to recover each token. The
+attack is successful if the recovered token coincides with the
+raw one. The privacy protection level is defined as 1−r ats.
+The prompt of this attack can be found in Appendix D.
+Figure 6 displays the results of the GPT inference attack.
+GPT-4 has a higher attack success rate than BERT in all
+tests. This may be due to GPT-4’s larger size and better
+understanding abilities, making it more effective in inference
+attacks. Confronted with the GPT inference attack, SANTEXT+
+and CUSTEXT+ showed lower privacy protection levels than
+RANTEXT, which maintained the best privacy protection.
+E. Privacy Leakage in Perturbed Generation
+We further discussed the possibility of the raw documentDoc
+being leaked by the perturbed generation result Genp. Figure 8
+shows the cosine similarity between Doc and Genp. The
+
+
+--- PAGE 11 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 11
+TABLE VII
+PERFORMANCE COMPARISON ON OPEN-ENDED TEXT GENERATION TASKS ACROSS DIFFERENT METHODS,DATASETS,AND PRIVACY PARAMETERS
+(ε= 1,2,3),EVALUATED BASED ON DIVERSITY, MAUVE,AND COHERENCE.
+Dataset Method diversity↑ MAUVE↑ coherence↑
+ε= 1.0ε= 2.0ε= 3.0 ε= 1.0ε= 2.0ε= 3.0 ε= 1.0ε= 2.0ε= 3.0
+CNN/Daily Mail
+GPT-4 0.983 0.671 0.632
+Vicuna-7b-4bit (3.89GB) 0.943 0.197 0.627
+InferDPT+ SANTEXT+ 0.966 0.967 0.966 0.351 0.374 0.407 0.590 0.632 0.642
+InferDPT+ CUSTEXT+ 0.966 0.967 0.965 0.5400.5710.581 0.7260.7330.752
+InferDPT+ RANTEXT 0.970 0.970 0.971 0.5420.5630.587 0.7230.7350.736
+Wikitext-103-v1
+GPT-4 0.987 0.453 0.672
+Vicuna-7b-4bit (3.89GB) 0.916 0.158 0.663
+InferDPT+ SANTEXT+ 0.958 0.958 0.959 0.213 0.220 0.255 0.650 0.658 0.678
+InferDPT+ CUSTEXT+ 0.960 0.961 0.959 0.301 0.315 0.321 0.727 0.736 0.741
+InferDPT+ RANTEXT 0.961 0.962 0.961 0.245 0.254 0.274 0.729 0.744 0.745
+ArXiv Dataset
+GPT-4 0.935 0.736 0.726
+Vicuna-7b-4bit (3.89GB) 0.873 0.366 0.703
+InferDPT+ SANTEXT+ 0.945 0.946 0.946 0.196 0.207 0.230 0.651 0.670 0.690
+InferDPT+ CUSTEXT+ 0.946 0.945 0.944 0.410 0.443 0.455 0.7480.767 0.784
+InferDPT+ RANTEXT 0.947 0.948 0.947 0.359 0.375 0.395 0.7520.761 0.762
+TABLE VIII
+PERFORMANCECOMPARISON OF THETIMECOSTPERINFERENCE ON100
+TOKENS ININ F E RDPT.
+Method Time Cost (seconds)
+SANTEXT+ CUSTEXT+ RANTEXT
+Perturbation Module 0.0015±0.0001 0.0005±0.0001 0.0543±0.0023
+Black-box Inference -2.8324±0.2111-
+Extraction Module -3.5673±0.2781-
+orange straight line indicates the cosine similarity between Doc
+and the generation of GPT-4 without any privacy protection.
+Experimental results reveal that RANTEXT maintains low
+semantic similarity between the raw document Doc and the
+perturbed generation result Genp, indicating the low risk of
+privacy leakage through perturbed results.
+Moreover, we measured privacy leakage in perturbed outputs
+by checking if n-gram tokens from the original document were
+repeated. A n-gram token found in both raw text and perturbed
+output counts as a leak. As Table VI shows, even with non-
+private prompts, under 11% privacy of raw document is leaked.
+F . Evaluation of Utility
+We evaluated the quality of outputs generated by InferDPT
+with various differentially private mechanisms in the pertur-
+bation module, using the Vicuna-7b-4bit (3.89GB) in the
+extraction module on various datasets. Following previous
+works of open-ended text generation [22], [33], we use the
+first 50 tokens of the articles referred to raw document Doc,
+which we must protect. We use the continuation writing of
+Doc referred to as Gen, which consists of 100 tokens. Tokens
+are counted by the tokenizer function of GPT-2 [38]. Aligning
+with [39], three metrics were employed to evaluate the quality
+of the generated text in the open-ended generation task:
+1)Diversity.This metric suggests the text’s diversity by
+computing the unique n-gram repetition rates as follows:
+diversity=
+4X
+n=2
+|unique n−grams(Gen)|
+|total n−grams(Gen)| .
+A lower score indicates that the model is prone to repetition,
+while a higher score shows broader vocabulary usage.
+2)MAUVE[40].It is employed to assess the similarity between
+text generated by a language model and human-authored target
+continuation text. A higher score is desirable in this metric.
+3)Coherence.Coherence computes the cosine similarity
+between embeddings of document Doc and continuation Gen:
+COH(Doc, Gen)= SimCSE(Doc)·SimCSE(Gen)
+∥SimCSE(Doc)∥·∥SimCSE(Gen)∥ ,
+where SimCSE(x) represents the pretrained model [41].
+Table VII shows InferDPT’s generation quality compared
+to non-private GPT-4:
+(1) Although the uploaded prompt is perturbed by differential
+privacy, the quality of text generated by InferDPT is
+comparable to that directly produced by non-private GPT-4 and
+better than the local model’s output. It proves that InferDPT
+works effectively. (2) In terms of diversity, the quality of text
+generated by RANTEXT is superior to that of CUSTEXT+ and
+SANTEXT+. This phenomenon can be attributed to the design
+of therandom adjacency list Cr in RANTEXT, which perturbs
+tokens to the more probable new ones without retaining them.
+However, in some specific topics, the variety of tokens is
+not particularly rich. Additionally, RANTEXT discards proper
+nouns (those not belonging to V ) for privacy protection. As a
+result, RANTEXT’s performance is slightly inferior to that of
+CUSTEXT+ with respect to MAUVE. (3) From the perspective
+of coherence, experimental results indicate that RANTEXT and
+CUSTEXT+ outperform SANTEXT+. This is likely because
+SANTEXT+ uses the entire vocabulary as itsstatic adjacency
+list, which is too large for the utility of the perturbed text.
+For practical deployment, we measured the time cost
+per inference in InferDPT. As illustrated in Table VIII,
+experimental results indicate that InferDPT does not require
+a significant amount of time. Most of the additional time is
+spent in the extraction module, which is less than 4 seconds.
+We also investigated whether InferDPT works in different
+local models. Table IX demonstrate that InferDPT works
+well with different models and various privacy parameter ε.
+
+
+--- PAGE 12 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 12
+Probability
+Size of Cr  /  Size of V Size of Cr  /  Size of V Size of Cr  /  Size of V Size of Cr  /  Size of V
+Privacy Parameter 𝜺=2.0 Privacy Parameter 𝜺=6.0 Privacy Parameter 𝜺=10.0 Privacy Parameter 𝜺=14.0
+Fig. 9. Probability distribution of the size ofrandom adjacency listunder variousε.
+TABLE IX
+COMPARISON OF THE FINAL GENERATED TEXT QUALITY UNDER DIFFERENT LOCAL MODELS WITHIN THE EXTRACTION MODULE.
+Dataset Method diversity↑ MAUVE↑ coherence↑
+ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0
+CNN/Daily Mail
+GPT-4 0.983 0.671 0.632
+Llama2-7b-4bit (3.79GB) 0.896 0.258 0.485
+Vicuna-7b-4bit (3.89GB) 0.943 0.197 0.627
+SANTEXT+(Llama2-7b-4bit) 0.964 0.963 0.962 0.282 0.374 0.406 0.226 0.327 0.342
+CUSTEXT+(Llama2-7b-4bit) 0.963 0.962 0.963 0.4930.519 0.548 0.460 0.4830.514
+RANTEXT (Llama2-7b-4bit) 0.968 0.969 0.967 0.4730.526 0.566 0.411 0.4530.525
+SANTEXT+(Vicuna-7b-4bit) 0.967 0.969 0.968 0.374 0.413 0.448 0.632 0.679 0.727
+CUSTEXT+(Vicuna-7b-4bit) 0.966 0.967 0.968 0.571 0.632 0.670 0.733 0.7490.789
+RANTEXT (Vicuna-7b-4bit) 0.970 0.969 0.970 0.563 0.586 0.635 0.735 0.7530.773
+TABLE X
+COSINE SIMILARITY↑BETWEEN THE FINAL GENERATION OFIN F E RDPT
+AND THE NON-PRIVATE GENERATION FROMGPT-4.
+Dataset Method ε
+1.0 2.0 3.0
+CNN/Daily Mail
+SANTEXT+ 0.489 0.499 0.519
+CUSTEXT+ 0.5710.579 0.585
+RANTEXT 0.574 0.5790.584
+Wikitext-103-v1
+SANTEXT+ 0.544 0.546 0.572
+CUSTEXT+ 0.5970.613 0.627
+RANTEXT 0.5980.609 0.617
+ArXiv Dataset
+SANTEXT+ 0.584 0.591 0.595
+CUSTEXT+ 0.682 0.693 0.694
+RANTEXT 0.655 0.658 0.663
+We further compared the cosine similarity between the final
+generation of InferDPT and the output generated by GPT-4
+without any privacy protection. The result of the comparison
+is depicted in Table X. Under the same privacy parameter ε
+across three datasets, the perturbed generation of RANTEXT
+generally exhibits cosine similarity values close to that of the
+best-performing CUSTEXT+. This is likely because RANTEXT
+discards proper nouns (those not belonging to V ) in Doc,
+whereas CUSTEXT+ retains all of this key information without
+perturbation. This phenomenon is particularly evident in the
+Wikitext-103-v1 and ArXiv datasets, which contain more proper
+nouns. We emphasize that this is also one of the reasons why
+CUSTEXT+ is vulnerable to the embedding inversion attack.
+Furthermore, we investigated the impact of the privacy
+parameter ε on the probability distribution of the size of the
+random adjacency list Cr in RANTEXT. We use Cr/V to
+represent the proportion of Cr in the entire vocabulary V . As
+shown in Figure 9, therandom adjacency listof RANTEXT
+is generally larger than thestatic adjacency listin CUSTEXT+
+and smaller than that in SANTEXT+, which provides a better
+balance between utility and privacy protection of perturbation.
+G. Trade-off between Privacy and Utility
+In this subsection, we compare RANTEXT with CUSTEXT+
+and SANTEXT+ in terms of privacy-utility trade-offs. we
+conduct experiments on the CNN/Daily Mail dataset using
+Vicuna-7b-4bit(3.89GB) as the extraction module. As shown
+in Figure 10, each point represents the privacy protection level
+(under top-1 embedding inversion attack) and generation quality
+of a specific perturbation mechanism and a ε value. The yellow
+straight line indicates the generation quality of directly using
+GPT-4 without any privacy protection, referred to as ‘non-
+private’. The experimental results demonstrate that RANTEXT
+tends to offer the best generation quality under the same privacy
+protection level compared to baseline methods. Due to the
+effectiveness of extraction, the coherence of InferDPT is
+higher than that of non-private GPT-4 in most cases.
+Furthermore, our proposed method works effectively in
+commercial [23] and medical [32] domains. More detailed
+experiments can be found in Appendix E and Appendix F.
+In summary, RANTEXT demonstrates superior privacy
+protection against various attacks on differentially private
+mechanisms compared to baselines, confirming its robust
+privacy safeguarding alongside high-quality text generation.
+VII. DISCUSSION ANDLIMITATIONS
+A. Performance Gap in MAUVE
+Although experimental results demonstrate the effectiveness
+of InferDPT in privacy-preserving text generation, a notable
+gap in MAUVE scores persists when compared to GPT-4, as
+shown in Table IX. One probable reason for this discrepancy is
+the semantic perturbations introduced by LDP, which disturb the
+original information in the raw prompt. Future work focusing
+on developing a differentially private mechanism with a better
+trade-off between utility and privacy protection could improve
+the MAUVE score.
+
+
+--- PAGE 13 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 13
+0.90
+0.92
+0.94
+0.96
+0.98
+1.00
+0 0.2 0.4 0.6 0.8 1
+Diversity
+Privacy
+0.00
+0.20
+0.40
+0.60
+0.80
+1.00
+0 0.2 0.4 0.6 0.8 1
+MAUVE
+Privacy
+0.50
+0.60
+0.70
+0.80
+0.90
+1.00
+0 0.2 0.4 0.6 0.8 1
+Coherence
+Privacy
+Fig. 10. Results of the trade-off between utility and privacy protection with various privacy parametersεranging from 0.01 to 18.0.
+Furthermore, it is important to note that the local model
+within the extraction module of InferDPT is pre-trained
+and not specifically fine-tuned for this task. Future work that
+enhances the extraction and reconstruction capabilities of this
+local model could also result in improved MAUVE scores.
+B. Comparing to Prompt Engineering Methods
+The prompt engineering method, represented by HaS [42],
+trains a language model to identify private entities and randomly
+replace them with new words sampled by another language
+model. Experimental results demonstrate its effectiveness for
+privacy-preserving classification and translation tasks. However,
+the perturbed text in HaS is not required to be semantically
+relevant to the raw text. The unconstrained perturbation makes
+it unsuitable for open-ended text generation tasks, as its
+significant semantic bias could lead to semantically irrelevant
+generations. Furthermore, it only protects specific words of
+private entities, leaving others (that are not detected by HaS)
+exposed to adversaries.
+DP-Prompt [43] leverages the power of pre-trained LLMs
+and zero-shot prompting to counter author de-anonymization
+attacks [44] while minimizing the impact on downstream utility.
+It provides LDP-based privacy protection for classification
+tasks specifically against de-anonymization attacks. However,
+the demo 4 of DP-Prompt reveals the privacy leakage of
+personally identifiable information (PII) from its sentence-
+level perturbations. More importantly, it does not address the
+information bias introduced by the LDP, thus rendering it
+unsuitable for text generation tasks.
+Compared to existing HaS, our proposed InferDPT utilizes
+LDP to replace the raw token with a randomly selected one
+that is close in embedding distance, thereby maintaining the
+utility of the perturbed text. To address the semantic bias that
+DP-Prompt does not solve, InferDPT locally deploys a small
+language model to generate an aligned output with the input
+of the perturbed generation and the raw document.
+C. Limitations of InferDPT
+The framework for privacy-preserving text generation pre-
+sented in this paper has two main limitations.
+4https://github.com/SaitejaUtpala/dp prompt/blob/main/data/chatgpt data/
+chatgpt zero shot paraphrase imdb.zip
+First, InferDPT requires the deployment of a small
+language model in its extraction module. In scenarios with
+extremely limited computational resources (e.g., smartwatch
+[45]), this requirement might not be feasible.
+Second, there exists a gap in MAUVE scores between
+InferDPT and direct usage of GPT-4. Future research
+could focus on enhancing the extraction and reconstruction
+capabilities of the local model, for example, by optimizing the
+system prompt [46] of this extraction model. Additionally,
+the token perturbation in InferDPT is not optimal [47].
+Developing an optimal perturbation mechanism [47] for text
+could further improve the MAUVE score.
+D. Privacy Budget of InferDPT
+As previously mentioned, the perturbation module of
+InferDPT generates a perturbed document by replacing each
+token in the raw document with a new one sampled using
+local differential privacy (LDP). It is important to note that
+each token in the raw document undergoes the LDP process
+only once. Therefore, the token-level perturbation [12], [13]
+in InferDPT introduces no accumulated privacy risks. For
+instance, when using RANTEXT (which satisfies ε-LDP for
+its sampling process) as the perturbation module, the privacy
+budget for each raw token inInferDPTremainsε.
+VIII. RELATEDWORK
+Secure two-party inference.Iron [48] and CipherGPT [9]
+have applied homomorphic encryption [49] to language models
+that are based on Transformer [50]. They perform inference on
+encrypted data. However, it results in a problem that cannot
+be completely solved today: the significant computation time
+and communication costs. Taking CipherGPT as an example,
+it infers a token costing 24 minutes and 93 GB of bandwidth,
+making the deployment of encrypted inference impractical.
+Privacy-preserving prompt learning (tuning).Prompt-
+PATE [51] and DP-OPT [52] have utilized differential privacy
+(DP) to reconstruct the datasets used for classification tasks,
+thereby protecting the privacy of training data during the prompt
+learning (tuning) process [53]. However, these methods do
+not protect the private data of users in the prompt during
+the inference process with LLMs. Also, they focus on the
+classification tasks and do not solve the information distortion
+introduced by the noise of differentially private mechanisms.
+
+
+--- PAGE 14 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 14
+Privacy-preserving in-context learning.Tang et al. [54]
+introduced a differentially private approach to generate privacy-
+preserving examples for in-context learning [55]. They deploy
+a large language model to reconstruct the private examples
+via the few-shot generation of differential privacy. They also
+focus on the classification task and do not protect the input
+document during the inference process of generation tasks.
+Privacy-preserving model training.SANTEXT+ [12] and
+CUSTEXT+ [13] have utilized differential privacy to enhance
+text privacy. They sequentially substitute words in texts with
+semantically similar words to preserve privacy during training
+in classification tasks. These two mechanisms are resistant to
+the input inference attack [12]. However, they are vulnerable
+to the embedding inversion attacks [17]. They do not solve
+semantic distortion caused by DP noise. They are unsuitable
+for direct use in text generation tasks.
+IX. CONCLUSION
+This paper explores the challenge of privacy leakage in text
+generation tasks executed by black-box large language models
+and introduces InferDPT as a potential solution. Additionally,
+we propose RANTEXT, a novel differential privacy algorithm
+designed for large language models following the exponential
+mechanism to enhance user privacy protection. We expect that
+our solution and findings can provide technical insights into the
+current privacy challenges and shed light on potential future
+explorations in privacy protection within emerging LLMs.
+REFERENCES
+[1] D. Li, A. S. Rawat, M. Zaheer, X. Wang, M. Lukasik, A. Veit, F. Yu, and
+S. Kumar, “Large language models with controllable working memory,”
+inFindings of the Association for Computational Linguistics: ACL 2023
+(A. Rogers, J. Boyd-Graber, and N. Okazaki, eds.), (Toronto, Canada),
+pp. 1774–1793, Association for Computational Linguistics, July 2023.
+[2] “Chatgpt, a model which interacts in a conversational way.”
+https://chat.openai.com/?model=gpt-4-browsing, 2023.
+[3] “Openai’s chatgpt now has 100 million weekly active users.”
+https://techcrunch.com/2023/11/06/openais-chatgpt-now-has-100-
+million-weekly-active-users/, 2023.
+[4] W. X. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y . Hou, Y . Min, B. Zhang,
+J. Zhang, Z. Dong,et al., “A survey of large language models,”arXiv
+preprint arXiv:2303.18223, 2023.
+[5] “Samsung employees leak proprietary information via chatgpt.”
+https://www.cshub.com/data/news/iotw-samsung-employees-allegedly-
+leak-proprietary-information-via-chatgpt, 2023.
+[6] “Gpt-3.5 models can understand and generate natural language or code.”
+https://chat.openai.com/?model=text-davinci-002-render-sha, 2023.
+[7] “Gpt-3.5 leaked a random individual’s photo in the output.”
+https://twitter.com/thealexker/status/1719896871009694057, 2023.
+[8] “Claude 3.5 haiku: Our fastest model, delivering advanced
+coding, tool use, and reasoning at an accessible price.”
+https://www.anthropic.com/claude/haiku, 2024.
+[9] X. Hou, J. Liu, J. Li, Y . Li, W.-j. Lu, C. Hong, and K. Ren, “Ciphergpt:
+Secure two-party gpt inference,”Cryptology ePrint Archive, 2023.
+[10] X. Zhou, Y . Lu, R. Ma, T. Gui, Y . Wang, Y . Ding, Y . Zhang, Q. Zhang,
+and X.-J. Huang, “Textobfuscator: Making pre-trained language model a
+privacy protector via obfuscating word representations,” inFindings of
+the Association for Computational Linguistics: ACL 2023, pp. 5459–5473,
+2023.
+[11] M. Du, X. Yue, S. S. Chow, T. Wang, C. Huang, and H. Sun, “Dp-
+forward: Fine-tuning and inference on language models with differential
+privacy in forward pass,”arXiv preprint arXiv:2309.06746, 2023.
+[12] X. Yue, M. Du, T. Wang, Y . Li, H. Sun, and S. S. M. Chow, “Differential
+privacy for text analytics via natural text sanitization,” inFindings of the
+Association for Computational Linguistics: ACL-IJCNLP 2021, (Online),
+pp. 3853–3866, Association for Computational Linguistics, Aug. 2021.
+[13] S. Chen, F. Mo, Y . Wang, C. Chen, J.-Y . Nie, C. Wang, and J. Cui,
+“A customized text sanitization mechanism with differential privacy,” in
+Findings of the Association for Computational Linguistics: ACL 2023,
+pp. 5747–5758, 2023.
+[14] “Gpt-4 is openai’s most advanced system, producing safer and more
+useful responses.” https://openai.com/gpt-4, 2023.
+[15] C. Dwork, “Differential privacy,” inInternational colloquium on automata,
+languages, and programming, pp. 1–12, Springer, 2006.
+[16] Y . Zhu, S. Lu, L. Zheng, J. Guo, W. Zhang, J. Wang, and Y . Yu,
+“Texygen: A benchmarking platform for text generation models,” inThe
+41st international ACM SIGIR conference on research & development
+in information retrieval, pp. 1097–1100, 2018.
+[17] C. Song and A. Raghunathan, “Information leakage in embedding models,”
+inProceedings of the 2020 ACM SIGSAC conference on computer and
+communications security, pp. 377–390, 2020.
+[18] J. Gou, B. Yu, S. J. Maybank, and D. Tao, “Knowledge distillation: A
+survey,”International Journal of Computer Vision, vol. 129, pp. 1789–
+1819, 2021.
+[19] S. Kotz, T. Kozubowski, and K. Podg ´orski,The Laplace distribution and
+generalizations: a revisit with applications to communications, economics,
+engineering, and finance. No. 183, Springer Science & Business Media,
+2001.
+[20] H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix,
+B. Rozi `ere, N. Goyal, E. Hambro, F. Azhar,et al., “Llama: Open and
+efficient foundation language models,”arXiv preprint arXiv:2302.13971,
+2023.
+[21] W.-L. Chiang, Z. Li, Z. Lin, Y . Sheng, Z. Wu, H. Zhang, L. Zheng,
+S. Zhuang, Y . Zhuang, J. E. Gonzalez,et al., “Vicuna: An open-source
+chatbot impressing gpt-4 with 90%* chatgpt quality,”See https://vicuna.
+lmsys. org (accessed 14 April 2023), 2023.
+[22] S. Welleck, I. Kulikov, S. Roller, E. Dinan, K. Cho, and J. Weston,
+“Neural text generation with unlikelihood training,”arXiv preprint
+arXiv:1908.04319, 2019.
+[23] S. Sharma, T. Nayak, A. Bose, A. K. Meena, K. Dasgupta, N. Ganguly,
+and P. Goyal, “Finred: A dataset for relation extraction in financial
+domain,” inCompanion Proceedings of the Web Conference 2022,
+pp. 595–597, 2022.
+[24] S. P. Kasiviswanathan, H. K. Lee, K. Nissim, S. Raskhodnikova, and
+A. Smith, “What can we learn privately?,”SIAM Journal on Computing,
+vol. 40, no. 3, pp. 793–826, 2011.
+[25] F. McSherry and K. Talwar, “Mechanism design via differential privacy,”
+in48th Annual IEEE Symposium on Foundations of Computer Science
+(FOCS’07), pp. 94–103, 2007.
+[26] M. Alvim, K. Chatzikokolakis, C. Palamidessi, and A. Pazii, “Local
+differential privacy on metric spaces: optimizing the trade-off with utility,”
+in2018 IEEE 31st Computer Security Foundations Symposium (CSF),
+pp. 262–267, IEEE, 2018.
+[27] N. L. Toolkit. https://www.nltk.org, 2023.
+[28] K. M. Hermann, T. Kocisky, E. Grefenstette, L. Espeholt, W. Kay,
+M. Suleyman, and P. Blunsom, “Teaching machines to read and
+comprehend,”Advances in neural information processing systems, vol. 28,
+2015.
+[29] R. Sennrich, B. Haddow, and A. Birch, “Neural machine translation of
+rare words with subword units,”arXiv preprint arXiv:1508.07909, 2015.
+[30] S. Merity, C. Xiong, J. Bradbury, and R. Socher, “Pointer sentinel mixture
+models,”arXiv preprint arXiv:1609.07843, 2016.
+[31] C. B. Clement, M. Bierbaum, K. P. O’Keeffe, and A. A. Alemi, “On
+the use of arxiv as a dataset,” 2019.
+[32] D. Jin, E. Pan, N. Oufattole, W.-H. Weng, H. Fang, and P. Szolovits,
+“What disease does this patient have? a large-scale open domain question
+answering dataset from medical exams,”Applied Sciences, vol. 11, no. 14,
+p. 6421, 2021.
+[33] J. Xu, X. Liu, J. Yan, D. Cai, H. Li, and J. Li, “Learning to break the loop:
+Analyzing and mitigating repetitions for neural text generation,”Advances
+in Neural Information Processing Systems, vol. 35, pp. 3082–3095, 2022.
+[34] “Fast bpe tokeniser for use with openai’s models.”
+https://github.com/openai/tiktoken, 2023.
+[35] “New and improved embedding model.” https://openai.com/blog/new-
+and-improved-embedding-model, 2023.
+[36] E. Frantar, S. Ashkboos, T. Hoefler, and D. Alistarh, “Gptq: Accurate
+post-training quantization for generative pre-trained transformers,”arXiv
+preprint arXiv:2210.17323, 2022.
+[37] H. Bao, L. Dong, F. Wei, W. Wang, N. Yang, X. Liu, Y . Wang, J. Gao,
+S. Piao, M. Zhou,et al., “Unilmv2: Pseudo-masked language models
+for unified language model pre-training,” inInternational conference on
+machine learning, pp. 642–652, PMLR, 2020.
+
+
+--- PAGE 15 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 15
+[38] K. Lagler, M. Schindelegger, J. B ¨ohm, H. Kr ´asn´a, and T. Nilsson,
+“Gpt2: Empirical slant delay model for radio space geodetic techniques,”
+Geophysical research letters, vol. 40, no. 6, pp. 1069–1073, 2013.
+[39] X. Lin, S. Han, and S. Joty, “Straight to the gradient: Learning to use
+novel tokens for neural text generation,” inInternational Conference on
+Machine Learning, pp. 6642–6653, PMLR, 2021.
+[40] K. Pillutla, S. Swayamdipta, R. Zellers, J. Thickstun, S. Welleck, Y . Choi,
+and Z. Harchaoui, “Mauve: Measuring the gap between neural text and
+human text using divergence frontiers,”Advances in Neural Information
+Processing Systems, vol. 34, pp. 4816–4828, 2021.
+[41] T. Gao, X. Yao, and D. Chen, “Simcse: Simple contrastive learning of
+sentence embeddings,”arXiv preprint arXiv:2104.08821, 2021.
+[42] Y . Chen, T. Li, H. Liu, and Y . Yu, “Hide and seek (has): A
+lightweight framework for prompt privacy protection,”arXiv preprint
+arXiv:2309.03057, 2023.
+[43] S. Utpala, S. Hooker, and P. Chen, “Locally differentially private
+document generation using zero shot prompting,” inFindings of the
+Association for Computational Linguistics: EMNLP 2023, Singapore,
+December 6-10, 2023(H. Bouamor, J. Pino, and K. Bali, eds.), pp. 8442–
+8457, Association for Computational Linguistics, 2023.
+[44] J. Bevendorff, M. Potthast, M. Hagen, and B. Stein, “Heuristic author-
+ship obfuscation,” inProceedings of the 57th Annual Meeting of the
+Association for Computational Linguistics, pp. 1098–1108, 2019.
+[45] X. Chen, T. Grossman, D. J. Wigdor, and G. Fitzmaurice, “Duet: exploring
+joint interactions on a smart phone and a smart watch,” inProceedings
+of the SIGCHI Conference on human factors in computing systems,
+pp. 159–168, 2014.
+[46] Y . Wen, N. Jain, J. Kirchenbauer, M. Goldblum, J. Geiping, and T. Gold-
+stein, “Hard prompts made easy: Gradient-based discrete optimization for
+prompt tuning and discovery,”Advances in Neural Information Processing
+Systems, vol. 36, 2024.
+[47] Q. Geng and P. Viswanath, “The optimal noise-adding mechanism in
+differential privacy,”IEEE Transactions on Information Theory, vol. 62,
+no. 2, pp. 925–951, 2015.
+[48] M. Hao, H. Li, H. Chen, P. Xing, G. Xu, and T. Zhang, “Iron: Private
+inference on transformers,”Advances in Neural Information Processing
+Systems, vol. 35, pp. 15718–15731, 2022.
+[49] C. Gentry, “Fully homomorphic encryption using ideal lattices,” in
+Proceedings of the forty-first annual ACM symposium on Theory of
+computing, pp. 169–178, 2009.
+[50] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez,
+Ł. Kaiser, and I. Polosukhin, “Attention is all you need,”Advances in
+neural information processing systems, vol. 30, 2017.
+[51] H. Duan, A. Dziedzic, N. Papernot, and F. Boenisch, “Flocks of stochastic
+parrots: Differentially private prompt learning for large language models,”
+arXiv preprint arXiv:2305.15594, 2023.
+[52] J. Hong, J. T. Wang, C. Zhang, Z. Li, B. Li, and Z. Wang, “Dp-opt:
+Make large language model your privacy-preserving prompt engineer,”
+arXiv preprint arXiv:2312.03724, 2023.
+[53] N. Ding, S. Hu, W. Zhao, Y . Chen, Z. Liu, H.-T. Zheng, and M. Sun,
+“Openprompt: An open-source framework for prompt-learning,”arXiv
+preprint arXiv:2111.01998, 2021.
+[54] X. Tang, R. Shin, H. A. Inan, A. Manoel, F. Mireshghallah, Z. Lin,
+S. Gopi, J. Kulkarni, and R. Sim, “Privacy-preserving in-context
+learning with differentially private few-shot generation,”arXiv preprint
+arXiv:2309.11765, 2023.
+[55] T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal,
+A. Neelakantan, P. Shyam, G. Sastry, A. Askell,et al., “Language models
+are few-shot learners,”Advances in neural information processing systems,
+vol. 33, pp. 1877–1901, 2020.
+APPENDIX
+A. EXTRACTIONMODULEPROMPT
+The prompt for the extraction module is as follows:
+Your task is to extend the“Prefix Text”. Use the“Perturbed
+Generation”as your primary writing material for your exten-
+sion. Extract coherent and consistent text from the“Perturbed
+Generation”and integrate them into your continuation. Ensure
+a seamless alignment with the context established by the“Prefix
+Text”. Provide only your “Extended Text”
+——“Prefix Text”:
+——“Perturbed Generation”:
+——“Extended Text”: .
+B. RANDOMFUNCTION
+In our study, we noted that generating adjacency lists
+directly with Laplace distribution led to excessively large
+sizes. To tackle this, we created an adjusted random vector by
+cure f it(·)5, aiming to achieve specific probability targets for
+the ratio, Size ofC r
+Size ofV of the tokenhappy, equaling 5% at different
+εvalues:
+TABLE XI
+DESIRED PROBABILITIES UNDER DIFFERENTε.
+ε Probability When Size ofC r
+Size ofV = 0.05
+2.0 1.5%
+6.0 9.0%
+10.0 10.0%
+14.0 10.5%
+Y∼f(x) = Z
+2∆ϕ ·exp
+
+− Z· |x|
+∆ϕ
+
+,
+Z=
+(
+εifε <2,
+alog(b·ε+c) +dotherwise,
+where∆ϕis the sensitivity of functionϕ(·).
+C. PROOFS OFTHEOREMS
+Proof of Theorem 1. Given that the output of Laplace distri-
+bution spans the range(−∞,∞), it can be deduced that:
+Y∈(−∞,∞).(24)
+With Equation 24, it can be further deduced that:
+de(ˆϕ(t), ϕ(t))∈(0,∞)(25)
+There exists a random embedding ˆϕ(t), satisfying the condition:
+de(ˆϕ(t), ϕ(t))> d e(ϕ(t′), ϕ(t))(26)
+Consequently, a random adjacency list Cr(t) of RANTEXT
+can be constructed, fulfilling the conditiont ′ ∈C r(t).
+It completes the proof.
+Proof of Theorem 2. Given a privacy parameter ε≥0 and
+a random adjacency list Cr(t) of token t, for any two input
+tokens x, x′ ∈C r(t) and output token y∈C r(t), it holds that:
+P r[y|x]
+P r[y|x′] =
+exp
+
+ε·u(x,y)
+2∆u
+
+P
+y′∈Cr(t) exp
+
+ε·u(x,y′)
+2∆u
+ /
+exp
+
+ε·u(x′,y)
+2∆u
+
+P
+y′∈Cr(t) exp
+
+ε·u(x′,y′)
+2∆u
+
+(27)
+With∆u= 1, it can be further deduced that:
+P r[y|x]
+P r[y|x′] =
+exp
+
+ε·u(x,y)
+2
+
+exp
+
+ε·u(x′,y)
+2
+ ·
+P
+y′∈Cr(t) exp
+
+ε·u(x′,y′)
+2
+
+P
+y′∈Cr(t) exp
+
+ε·u(x,y′)
+2
+
+(28)
+5SciPy Homepage: https://scipy.org
+
+
+--- PAGE 16 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 16
+TABLE XII
+PRIVACY PROTECTION LEVELS↑OFSANTEXT+, CUSTEXT+,ANDRANTEXTON THEFINRED DATASET.
+Dataset Method BERT Inference Attack Embedding Inversion Attack GPT Inference Attack
+ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0
+FinRED
+SANTEXT + 0.831 0.775 0.767 0.631 0.601 0.597 0.619 0.594 0.589
+CUSTEXT + 0.865 0.780 0.678 0.490 0.301 0.093 0.598 0.431 0.250
+RANTEXT 0.991 0.987 0.973 0.944 0.911 0.804 0.964 0.901 0.784
+TABLE XIII
+PERFORMANCE COMPARISON OF DIFFERENT METHODS ABOUT OPEN-ENDED TEXT GENERATION TASKS ON THEFINRED DATASET.
+Dataset Method diversity↑ MAUVE↑ coherence↑
+ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0
+FinRED
+GPT-4 0.989 0.284 0.676
+Vicuna-7b-4bit (3.89GB) 0.953 0.106 0.526
+InferDPT+ SANTEXT+ 0.979 0.980 0.977 0.118 0.141 0.156 0.687 0.690 0.713
+InferDPT+ CUSTEXT+ 0.976 0.975 0.977 0.204 0.244 0.257 0.677 0.683 0.703
+InferDPT+ RANTEXT 0.983 0.983 0.984 0.132 0.152 0.184 0.691 0.703 0.725
+With0< u(x, y)≤1, it can be further deduced that:
+exp
+
+ε·u(x,y)
+2
+
+exp
+
+ε·u(x′,y)
+2
+ ≤exp
+ ε
+2
+
+(29)
+exp
+ ε·u(x ′, y′)
+2
+
+≤exp
+ ε
+2
+
+·exp
+ ε·u(x, y ′)
+2
+
+(30)
+With Equation 30, it can be further deduced that:
+P
+y′∈Cr(t) exp
+
+ε·u(x′,y′)
+2
+
+P
+y′∈Cr(t) exp
+
+ε·u(x,y′)
+2
+ ≤exp
+ ε
+2
+
+(31)
+With Equation 29 and Equation 31, it can be deduced that:
+P r[y|x]
+P r[y|x′] ≤exp
+ ε
+2
+
+·exp
+ ε
+2
+
+=e ε (32)
+It completes the proof.
+D. PROMPT FORGPTINFERENCE ATTACK
+The prompt of GPT inference attack is as follows:
+Given a list of tokens, denoted as “INPUTS, ” which have
+been subjected to text perturbation through differential privacy
+techniques, your task is to recover each token in the list to its
+most likely original one.
+As an example, consider the list “INPUTS”:
+[”Privacy”, ”LLM”, ”Text”].
+The expected output format should be:
+[
+[”Prediction”], # Corresponding to ”Privacy”
+[”Prediction”], # Corresponding to ”LLM”
+[”Prediction”] # Corresponding to ”Text”
+]
+”Prediction” represents the most plausible original tokens before
+perturbation.
+For the given list of “INPUTS”:
+[INPUT HERE]
+Generate predictions for each token in the list.
+E. EXPERIMENTS ON THE COMMERCIAL DATASET
+We also study privacy-preserving inference in the financial
+domain. We implement InferDPT on the FinRED [23]
+dataset, which consists of earnings call transcripts and financial
+news articles. We evaluate its utility and privacy protection
+levels in open-ended text generation tasks.
+Table XII shows the privacy protection levels of various dif-
+ferentially private mechanisms against several attacks, including
+the BERT Inference Attack, the (top-1) Embedding Inversion
+Attack, and the GPT Inference Attack. Experimental results in-
+dicate that RANTEXT provides better privacy protection when
+compared to SANTEXT+ and CUSTEXT+ at the same privacy
+budget. Specifically, the privacy protection level of RANTEXT
+achieves a 7.65× improvement over CUSTEXT+ at a privacy
+parameter of ε= 10.0 against the Embedding Inversion Attack.
+The robust privacy safeguarding of RANTEXT benefits from
+its special designs of therandom adjacency list(generally
+larger than that in CUSTEXT+).
+Table XIII shows the quality of text generated by InferDPT
+with various differentially private mechanisms on the FinRED
+dataset. It is observed that the quality of text generated by
+InferDPT is comparable to that directly produced by non-
+private GPT-4 and better than that directly produced by the
+local model. It proves that InferDPT works effectively in
+the financial domain. In terms of diversity and coherence,
+the quality of text generated by RANTEXT is superior to
+that of CUSTEXT+ and SANTEXT+. However, the MAUVE
+score of RANTEXT is inferior to that of CUSTEXT+. This
+is probably due to that RANTEXT discards financial nouns
+(those not belonging to V ) for privacy protection during its
+perturbation. CUSTEXT+ keeps all of these sensitive tokens
+without perturbation, which results in privacy leakage. We
+emphasize that this is also one of the reasons why the
+CUSTEXT+ is vulnerable to the embedding inversion attack.
+F. EXPERIMENTS ON THE MEDICAL DATASET
+We further study the privacy-preserving inference with
+Claude-3.5-haiku [8] in the medical domain. We implement
+
+
+--- PAGE 17 ---
+IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING 17
+TABLE XIV
+PRIVACY PROTECTION LEVELS↑OFSANTEXT+, CUSTEXT+,ANDRANTEXTON THEMEDQADATASET.
+Dataset Method BERT Inference Attack Embedding Inversion Attack GPT Inference Attack
+ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0
+MedQA
+SANTEXT + 0.831 0.793 0.785 0.634 0.612 0.610 0.628 0.608 0.598
+CUSTEXT + 0.831 0.733 0.583 0.453 0.276 0.091 0.548 0.397 0.246
+RANTEXT 0.960 0.933 0.911 0.932 0.901 0.823 0.959 0.917 0.878
+TABLE XV
+PERFORMANCE COMPARISON OF DIFFERENT METHODS ABOUT OPEN-ENDED TEXT GENERATION TASKS ON THEMEDQADATASET.
+Dataset Method diversity↑ MAUVE↑ coherence↑
+ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0 ε= 2.0ε= 6.0ε= 10.0
+MedQA
+Claude-3.5-haiku 0.942 0.733 0.753
+Llama3.1-8b-4bit (4.9GB) 0.678 0.562 0.550
+InferDPT+ SANTEXT+ 0.937 0.936 0.933 0.562 0.576 0.582 0.525 0.552 0.576
+InferDPT+ CUSTEXT+ 0.923 0.925 0.920 0.6310.6490.656 0.641 0.6680.690
+InferDPT+ RANTEXT 0.938 0.939 0.944 0.6330.6430.664 0.661 0.6760.680
+InferDPT on the MedQA [32] dataset, which comprises
+medical text questions and corresponding answers. We utilize
+Llama3.1-8b [20] as the local model in the extraction module.
+We evaluate its utility and privacy protection levels in the
+open-ended text generation tasks.
+Table XIV shows the privacy protection levels of various dif-
+ferentially private mechanisms against several attacks, including
+the BERT Inference Attack, the (top-1) Embedding Inversion
+Attack, and the GPT Inference Attack. Experimental results in-
+dicate that RANTEXT provides better privacy protection when
+compared to SANTEXT+ and CUSTEXT+ at the same privacy
+budget. Specifically, the privacy protection level of RANTEXT
+achieves a 8.03× improvement over CUSTEXT+ at a privacy
+parameter of ε= 10.0 against the Embedding Inversion Attack.
+The robust privacy safeguarding of RANTEXT benefits from its
+special designs of therandom adjacency list(generally larger
+than that in CUSTEXT+), which perturbs more raw tokens to
+the new ones without retaining them.
+Table XV shows the quality of text generated by InferDPT
+with various differentially private mechanisms on the MedQA
+dataset. It is observed that the quality of text generated by
+InferDPT is comparable to that directly produced by non-
+private Claude-3.5-haiku and better than that directly produced
+by the Llama3.1-8b-4bit. It proves that InferDPT works
+effectively in the medical domain. And the quality of text
+generated by RANTEXT and CUSTEXT+ outperforms that
+of SANTEXT+. This is likely because SANTEXT+ uses the
+entire vocabulary as itsstatic adjacency list, which is too large
+for the utility of the perturbed text.
+In summary, experimental results demonstrate that our
+method is effective on commercial models for open-ended
+text generation tasks using the medical dataset.

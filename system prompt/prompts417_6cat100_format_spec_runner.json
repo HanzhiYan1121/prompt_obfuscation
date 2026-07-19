@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Prompt417-245",
+    "prompt_label": "Code Generation Prompt",
+    "paper_title": "ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use",
+    "prompt_text": "Create a function implementation based on a provided tool document, question, and answer. The function should strictly adhere to the tool's specifications, including the function name, parameter names, and types. Ensure the function is fully realized and capable of returning different feedback based on the input parameters.\n\n# Steps\n1. **Understand the Tool Document**: Review the tool document to identify the function name, parameter names, and types.\n2. **Analyze the Question and Answer**: Determine how the function should be used to answer the question.\n3. **Implement the Function**:\n- Use the tool name as the function name.\n- Define parameters exactly as specified in the tool document.\n- Implement the function logic to produce the correct answer for the given question.\n- Simulate additional return values as specified in the tool document.\n4. **Error Handling**: Develop a robust error handling mechanism to return valid error messages for incorrect inputs or other issues.\n\n# Notes\n- Ensure parameter types and names match exactly with the tool document.\n- Simulate additional return values as needed based on the tool's documentation.\n- Implement comprehensive error handling to cover potential issues.\n\n# Output format\nOutput the result in JSON format with the following structure **without any other contents**:\n{ \"analysis\": \"Detailed analysis of how the function was designed, including reasoning for parameter choices and exception handling.\",\n\"function\": \"The specific function design, including code and comments explaining each part.\"\n}\n\n**Tool Document**:\n{document}\n**Question**: {question}\n**Answer**: {answer}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 5.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.150.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-244",
+    "prompt_label": "Document Refinement Prompt",
+    "paper_title": "ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use",
+    "prompt_text": "Refine the design of a tool by enhancing its description and increasing the complexity of parameters (e.g., numbers and types) while maintaining compatibility with the original functionality.\n\n# Steps\n1. **Analyze the Current Tool**: Examine the existing tool's description and parameters to understand its functionality and limitations.\n2. **Identify Areas for Refinement**: Determine which aspects of the tool can be improved or expanded to better meet real-world requirements.\n3. **Refine the Description**: Enhance the tool's description to clearly articulate its refined functionality.\n4. **Add and Refine Parameters**: Introduce new parameters or refine existing ones to increase complexity and utility, ensuring they align with the original functionality.\n5. **Ensure Compatibility**: Verify that the refined version remains compatible with the original tool's purpose and structure.\n\n# Output Format\nThe output should be in JSON format with the following structure **without any other contents**:\n{\n\"analysis\": \"Analysis of ideas about refining the tool.\",\n\"refined_version\": the version after refinement, should be follow JSON SCHEMA format as the original tool\n}\n\n# Notes\n- Ensure that any new parameters added are relevant and enhance the tool's functionality.\n- Maintain backward compatibility with the original tool's design and purpose.\n\n**Tool**:\n{Tool}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.150.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-243",
+    "prompt_label": "Tool Creation Prompt",
+    "paper_title": "ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use",
+    "prompt_text": "Identify the appropriate tool to solve the given problem and provide an analysis of the tool design. The output should be in JSON format, following the specified structure.\n\n# Steps\n1. **Analyze the Problem**: Understand the question and determine the type of information required to answer it.\n2. **Tool Design**: Design a tool that can solve the problem, considering the complexity and additional functionalities it might need.\n3. **Parameter Specification**: Define the parameters for the tool, ensuring they are comprehensive and flexible for various use cases.\n4. **Output Construction**: Format the output in JSON, including both the analysis and the tool schema.\n\n# Notes\n- Ensure the tool is versatile enough to handle similar queries for different sports figures.\n- Consider edge cases.\n\n# Output Format\nThe output should be a JSON object with the following structure **without any other contents**:\n- \"analysis\": A detailed analysis of the ideas behind the tool design.\n- \"tool\": A JSON schema characterizing the tool, including its name, description, and parameters.\n\n# Example\n{Example}\n**Question**: {Question}\n**Output**:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.150.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-224",
+    "prompt_label": "Prompt for Text2SQL",
+    "paper_title": "TARGA: Targeted Synthetic Data Generation for Practical Reasoning over Structured Data",
+    "prompt_text": "You are a powerful model for generating SQL queries to answer natural language questions.\nHere are some related exemplars you can learn from:\nSELECT MIN(Magnitude (M bol )) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Mass (M ⊙)) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Spectral type) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Star (Pismis24-#)) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Radius (R ⊙)) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Mass (M ⊙)) FROM TABLE WHERE Star (Pismis24-#) = '10'\nSELECT MIN(Temperature (K)) FROM TABLE WHERE Radius (R ⊙) = '10'\nSELECT MIN(Radius (R ⊙)) FROM TABLE WHERE Star (Pismis24-#) = '10'\nSELECT MIN(Magnitude (M bol )) FROM TABLE WHERE Star (Pismis24-#) = '10'\nSELECT MIN(Spectral type) FROM TABLE WHERE Star (Pismis24-#) = '10'\nPlease output SQL query for the following question. No explanation or questioning allowed. Note that there is no need to use the LIKE keyword. And table name is TABLE for all questions.\n###Question\nIf a radius is 10, what is the lowest possible mass?\n###Header\n['Star (Pismis24-#)', 'Spectral type', 'Magnitude (M bol )', 'Temperature (K)', 'Radius (R ⊙)', 'Mass (M ⊙)']\n###SQL",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 5.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.137.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-194",
+    "prompt_label": "ReAct Prompt",
+    "paper_title": "LegalAgentBench: Evaluating LLM Agents in Legal Domain",
+    "prompt_text": "Solve a Question-Answering Task. The process involves alternating steps of \"Thought\", \"Action\", and \"Observation\".\n- \"Thought\" is used to reason about the next step based on the current situation. Note that you only need to consider the immediate next step.\n- \"Action\" refers to specifying the tool to use through a JSON block containing an ‘action’ key (tool name) and an ‘action_input’ key (tool input).\n- Valid values for the ‘action’ key include: ‘\"Final Answer\" or {tool_names}.\n- You may use the following tools:\n{tools}\n- Relevant data tables and their available fields (any field in the table can be used as a value in the ‘columns’ parameter) include:\n{table_used_prompt}\n- Each \"Action\" can call only one tool. If multiple tools need to be called, break them into separate steps.\n- The output of an \"Action\" strictly follow the JSON format below and be parsable by Python’s ‘json.loads’ function:\n```json\n{{\n\"action\": TOOL_NAME,\n\"action_input\": INPUT\n}}\n```\n\nExamples:\n{examples}\n(Examples End)\n\nImportant Notes:\n- When outputting \"Action,\" the result must strictly follow the JSON format specified above.\n- When outputting \"Thought,\" only reason about the immediate next step, and avoid thinking about multiple steps ahead.\n\nQuestion: {question}\n{scratchpad}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 3.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.116.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_111_to_130",
+      "source_batch_file": "",
+      "original_prompt_category": "agent_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

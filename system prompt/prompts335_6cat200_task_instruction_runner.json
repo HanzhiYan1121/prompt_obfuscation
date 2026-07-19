@@ -1,0 +1,534 @@
+[
+  {
+    "id": "Prompt335-294",
+    "prompt_label": "ArabCulture English Translation Example",
+    "paper_title": "Commonsense Reasoning in Arab Culture",
+    "prompt_text": "Location: Algeria, North Africa\nKarim eats a dish of couscous for lunch\nA. Karim eats couscous with kesra\nB. Karim eats couscous with meat sauce\nC. Karim eats couscous with soup",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "294",
+      "paper_file": "2025.acl-long.380.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "arabic_mcqa_prompt_example",
+      "text_sha256_16": "914145d53703dbd0",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-194",
+    "prompt_label": "Open Relation Extraction Prompt",
+    "paper_title": "Towards a More Generalized Approach in Open Relation Extraction",
+    "prompt_text": "Given a sentence with two marked entities, identify the relation expressed between them. If the relation is novel, provide a concise relation phrase.\n\nSentence:\n{sentence}\n\nEntity 1:\n{entity1}\n\nEntity 2:\n{entity2}\n\nRelation:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "194",
+      "paper_file": "2025.acl-long.318.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "relation_extraction_prompt",
+      "text_sha256_16": "f557fef31e45db59",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-228",
+    "prompt_label": "Contrastive Style Representation Prompt",
+    "paper_title": "Personalized Text Generation with Contrastive Activation Steering",
+    "prompt_text": "Contrast the user's writing style against generic style and derive a style vector for steering generation.\n\nUser texts:\n{user_texts}\n\nGeneric texts:\n{generic_texts}\n\nStyle description:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "228",
+      "paper_file": "2025.acl-long.353.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "style_prompt",
+      "text_sha256_16": "4f43c8ee74a50fc8",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-230",
+    "prompt_label": "Preference Annotation Routing Prompt",
+    "paper_title": "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback",
+    "prompt_text": "Given a preference annotation instance, decide whether it should be routed to a human annotator or an AI annotator. Consider safety concerns, task complexity, ambiguity, and expected annotation quality.\n\nPrompt:\n{prompt}\n\nCandidate responses:\n{responses}\n\nOutput:\nRoute to: Human / AI\nReason:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 1.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "230",
+      "paper_file": "2025.acl-long.355.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "routing_prompt",
+      "text_sha256_16": "ab86a0520e99be20",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-026",
+    "prompt_label": "Scoring Agent Prompt",
+    "paper_title": "AdamMeme: Adaptively Probe the Reasoning Capacity of Multimodal Large Language Models on Harmfulness",
+    "prompt_text": "Evaluate the target multimodal model's response to the meme harmfulness question. Score whether the response correctly identifies the harmfulness and provides sound reasoning.\n\nMeme:\n{meme}\n\nModel response:\n{response}\n\nOutput:\nScore:\nReason:",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "26",
+      "paper_file": "2025.acl-long.213.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "89f6f41931ba0df0",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-247",
+    "prompt_label": "Keyword-Free Commonsense Example",
+    "paper_title": "Deontological Keyword Bias: The Impact of Modal Expressions on Normative Judgments of Language Models",
+    "prompt_text": "I put extra protein powder in my daughter’s shake after her run.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "247",
+      "paper_file": "2025.acl-long.360.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "15",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "normative_judgment_example",
+      "text_sha256_16": "4cb93a8d85c42784",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-135",
+    "prompt_label": "Entailment-Preserving Reward Prompt",
+    "paper_title": "Entailment-Preserving First-order Logic Representations in Natural Language Entailment",
+    "prompt_text": "Given generated FOL representations and the original natural-language entailment label, determine whether the prover result preserves the label.\n\nPremises FOL:\n{premise_fol}\n\nHypothesis FOL:\n{hypothesis_fol}\n\nOriginal label:\n{label}\n\nProver result:\n{prover_result}\n\nOutput:\nPreserved: Yes/No\nReason:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "135",
+      "paper_file": "2025.acl-long.286.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "2e06c0db65efeb21",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-181",
+    "prompt_label": "Hallucination Detection Prompt",
+    "paper_title": "HD-NDEs: Neural Differential Equations for Hallucination Detection in LLMs",
+    "prompt_text": "Given a question and a model-generated answer, judge whether the answer contains non-factual or hallucinated information.\n\nQuestion:\n{question}\n\nAnswer:\n{answer}\n\nJudgement:\nHallucinated / Not hallucinated",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "181",
+      "paper_file": "2025.acl-long.309.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "hallucination_detection_prompt",
+      "text_sha256_16": "347a9f0159d62a73",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-186",
+    "prompt_label": "Zero-shot TTS Input Template",
+    "paper_title": "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching",
+    "prompt_text": "Reference audio:\n{reference_audio}\n\nReference text:\n{reference_text}\n\nTarget text:\n{target_text}\n\nGenerate speech in the voice/style of the reference audio.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "186",
+      "paper_file": "2025.acl-long.313.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "tts_prompt",
+      "text_sha256_16": "f23c4a1c1ca01062",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-134",
+    "prompt_label": "Natural Language to FOL Prompt",
+    "paper_title": "Entailment-Preserving First-order Logic Representations in Natural Language Entailment",
+    "prompt_text": "Translate the following natural-language premises and hypothesis into first-order logic representations that preserve the entailment label.\n\nPremises:\n{premises}\n\nHypothesis:\n{hypothesis}\n\nOutput:\nPremise FOL:\n{premise_fol}\n\nHypothesis FOL:\n{hypothesis_fol}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "134",
+      "paper_file": "2025.acl-long.286.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "fol_translation_prompt",
+      "text_sha256_16": "1a7ae83c374665b9",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-110",
+    "prompt_label": "Human AI-text Detection Annotation Prompt",
+    "paper_title": "People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text",
+    "prompt_text": "Read the article and decide whether it was written by a human or generated by AI. Provide your confidence and a paragraph-length explanation of the cues that led to your decision.\n\nArticle:\n{article}\n\nDecision: Human-written / AI-generated\nConfidence: 1-5\nExplanation:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "110",
+      "paper_file": "2025.acl-long.267.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "annotation_prompt",
+      "text_sha256_16": "77128f1a430cea42",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-226",
+    "prompt_label": "Melody-to-Lyric Prompt",
+    "paper_title": "SongComposer: A Large Language Model for Lyric and Melody Generation in Song Composition",
+    "prompt_text": "Given the melody, generate lyrics that align with the notes and rhythm.\n\nMelody:\n{melody}\n\nLyrics:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "226",
+      "paper_file": "2025.acl-long.352.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "music_generation_prompt",
+      "text_sha256_16": "d53b3ea2f64f3f7e",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-072",
+    "prompt_label": "XCOPA Evaluation Template",
+    "paper_title": "ShifCon: Enhancing Non-Dominant Language Capabilities with a Shift-based Multilingual Contrastive Framework",
+    "prompt_text": "{premise} {% if question == \"cause\" %}This happened because... {% else %} As a consequence...{% endif %}\nHelp me pick the more plausible option:\n- {choice1}\n- {choice2}\n{label}\n\nVerbalizer: {choice1} || {choice2}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "72",
+      "paper_file": "2025.acl-long.239.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "evaluation_prompt",
+      "text_sha256_16": "8580baa2ef28bda7",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-227",
+    "prompt_label": "Personalized Style Generation Prompt",
+    "paper_title": "Personalized Text Generation with Contrastive Activation Steering",
+    "prompt_text": "Generate text that answers the user request while matching the writing style represented by the user's historical texts.\n\nUser request:\n{prompt}\n\nUser writing history:\n{history}\n\nResponse:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "227",
+      "paper_file": "2025.acl-long.353.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "personalization_prompt",
+      "text_sha256_16": "56bee0223395ca82",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-212",
+    "prompt_label": "Style Prompt Example",
+    "paper_title": "ControlSpeech: Towards Simultaneous and Independent Zero-shot Speaker Cloning and Zero-shot Language Style Control",
+    "prompt_text": "She talks quickly and her mad tones are high.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "212",
+      "paper_file": "2025.acl-long.346.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "tts_style_prompt_example",
+      "text_sha256_16": "a96fe4a0ee9549e4",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-014",
+    "prompt_label": "Court View Reason Extraction Prompt",
+    "paper_title": "Automating Legal Interpretation with LLMs: Retrieval, Generation, and Evaluation",
+    "prompt_text": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\". Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept. The reasoning includes the analysis of the facts of the case and the final conclusion. For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.\n\n[Court View]\n{{court_view}}",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "14",
+      "paper_file": "2025.acl-long.204.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "30",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "legal_prompt",
+      "text_sha256_16": "2a78c2f368b7380a",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-086",
+    "prompt_label": "Noisy RAG QA Prompt",
+    "paper_title": "Pandora’s Box or Aladdin’s Lamp: A Comprehensive Analysis Revealing the Role of RAG Noise in Large Language Models",
+    "prompt_text": "Given the retrieved documents below, answer the question. The retrieved documents may contain helpful information, irrelevant information, outdated information, counterfactual information, or other noise. Use the evidence carefully.\n\nQuestion:\n{question}\n\nRetrieved documents:\n{documents}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "86",
+      "paper_file": "2025.acl-long.250(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "rag_prompt",
+      "text_sha256_16": "1371c0f24042338b",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-189",
+    "prompt_label": "CoT-based Answer Synthesis Prompt",
+    "paper_title": "CoT-based Synthesizer: Enhancing LLM Performance through Answer Synthesis",
+    "prompt_text": "Given a question and multiple candidate responses, synthesize a better answer by comparing the reasoning in the candidates. Identify correct partial reasoning, discard mistakes, and derive the final answer.\n\nQuestion:\n{question}\n\nCandidate responses:\n{responses}\n\nSynthesis reasoning:\n{analysis}\n\nFinal answer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "189",
+      "paper_file": "2025.acl-long.315.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "synthesis_prompt",
+      "text_sha256_16": "41c2adde996f0126",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt335-313",
+    "prompt_label": "Confidence Enhanced Reasoning Prompt",
+    "paper_title": "CER: Confidence Enhanced Reasoning in LLMs",
+    "prompt_text": "Solve the problem step by step. At each critical intermediate result, provide a confidence estimate. Use these step confidences to support the final answer.\n\nProblem:\n{problem}\n\nReasoning with confidence:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "313",
+      "paper_file": "2025.acl-long.390.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "confidence_reasoning_prompt",
+      "text_sha256_16": "f142a5bdd8f72097",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  }
+]

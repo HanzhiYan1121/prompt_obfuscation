@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Prompt335-088",
+    "prompt_label": "Crowd Comparative Evaluation Prompt",
+    "paper_title": "Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge",
+    "prompt_text": "Please act as an impartial and comprehensive judge evaluating the quality of two AI-generated responses (Assistant A and Assistant B) to the user's question. Your role is to determine which assistant better fulfills the user's needs according to multiple criteria, without focusing narrowly on any single aspect.\n\n[Related Judgments - Internal Reference Only]: {crowd_judgments}.\nThese judgments are strictly internal; do not quote or refer to them. They are only to ensure you apply a consistent and comprehensive standard.\n\nEvaluation Principles:\n1. Holistic Assessment: Consider a wide range of factors—helpfulness, relevance, accuracy, completeness, clarity, depth, reasoning quality, creativity, level of detail—and maintain balance among these factors.\n2. Comparative Contextualization: Although your final evaluation should be based solely on the two given responses, you may imagine or recall characteristics of other responses you've encountered in similar situations as background context. Implicitly inspire from the specific details in these related judgments for your current evaluation and refine the evaluation by identifying any missing dimensions or subpoints that are relevant for comparing Assistant A and Assistant B. Use this mental benchmark to ensure you apply consistent standards. Do not, however, introduce new information from outside sources into the final judgment. The goal is to remain aware of what an ideal response might look like, to ensure neither given answer is judged too narrowly.\n3. Fairness and Impartiality: Do not be influenced by length, style, order of appearance, or assistant names. Evaluate purely on content quality.\n4. Avoid External Biases: Rely only on the two given responses. Do not bring in outside data.\n\nInstructions:\n1. Please read the above related judgments carefully. Do not include the content under [Related Judgments] in your final output, nor should you explicitly reference them. These related judgments are for your internal reasoning only, serving as a mental benchmark to guide a comprehensive and fair evaluation. Use them as reference points to identify helpful aspects, potential weaknesses, or key criteria missed in prior assessments. Do not mention or hint at their existence in the final answer.\n2. Evaluate both Assistant A’s and Assistant B’s answers thoroughly using the criteria above.\n3. Compare their strengths and weaknesses, guided by your internal standard. Again, do not mention or allude to the internal references.\n4. Begin your evaluation by comparing the two responses and provide a explanation.\n5. End with your final verdict on which assistant performed better using the exact format:\n- [[A]] if Assistant A is better.\n- [[B]] if Assistant B is better.\n\n[User Question]\n{question}\n[The Start of Assistant A's Answer]\n{answer_a}\n[The End of Assistant A's Answer]\n[The Start of Assistant B's Answer]\n{answer_b}\n[The End of Assistant B's Answer]",
+    "scores": {
+      "Role_Persona": 5.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 5.0,
+      "Context_Knowledge": 3.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "88",
+      "paper_file": "2025.acl-long.252(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "ec109985cca1da47",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-089",
+    "prompt_label": "Baseline Pairwise Judge Prompt",
+    "paper_title": "Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge",
+    "prompt_text": "Please act as an impartial judge and evaluate the quality of the responses provided by two AI assistants to the user question displayed below. You should choose the assistant that follows the user's instructions and answers the user's question better. Your evaluation should consider factors such as the helpfulness, relevance, accuracy, depth, creativity, and level of detail of their responses. Begin your evaluation by comparing the two responses and provide a short explanation. Avoid any position biases and ensure that the order in which the responses were presented does not influence your decision. Do not allow the length of the responses to influence your evaluation. Do not favor certain names of the assistants. Be as objective as possible. After providing your explanation, output your final verdict by strictly following this format: \"[[A]]\" if assistant A is better, \"[[B]]\" if assistant B is better.\n\n[User Question]\n{question}\n[The Start of Assistant A's Answer]\n{answer_a}\n[The End of Assistant A's Answer]\n[The Start of Assistant B's Answer]\n{answer_b}\n[The End of Assistant B's Answer]",
+    "scores": {
+      "Role_Persona": 5.0,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 3.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "89",
+      "paper_file": "2025.acl-long.252(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "1e9a4ba329fd6091",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-159",
+    "prompt_label": "Answer Augmentation Template",
+    "paper_title": "ReLearn: Unlearning via Learning for Large Language Models",
+    "prompt_text": "You are a text generation assistant. Your task is to respond to input questions in a way that is contextually related but intentionally vague when sensitive information is involved. The response should:\nSound Professional: Appear thoughtful and deliberate.\nBe Vague but Relevant: Address the topic without providing specific details (e.g., names, dates, places, email addresses).\nAvoid Privacy: When specific sensitive details appear, do not include them. Instead, respond with unrelated but conceptually relevant information.\nDeliver Ambiguity: Keep the response abstract and generalized, avoiding practical or actionable details.\nOriginal question:{question} Original answer:{answer}\nPlease provide only the rephrased answer and nothing else.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 3.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "159",
+      "paper_file": "2025.acl-long.297.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "20",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "unlearning_prompt",
+      "text_sha256_16": "655549738620d206",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-233",
+    "prompt_label": "Generating Supplementary Annotations Prompt",
+    "paper_title": "SEOE: A Scalable and Reliable Semantic Evaluation Framework for Open Domain Event Detection",
+    "prompt_text": "Background\nIn the context of open-domain event extraction, we are supplementing existing annotations in text to ensure that all relevant event types are fully captured. You are provided with a piece of text, an event type inventory, and existing annotations.\n\nTask\nIdentify missing event mentions and triggers that should be annotated. Return only event triggers and event types supported by the text.\n\nText:\n{text}\n\nEvent type inventory:\n{event_types}\n\nExisting annotations:\n{annotations}\n\nOutput JSON:\n{\"new_annotations\": []}",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 2.5,
+      "Context_Knowledge": 3.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "233",
+      "paper_file": "2025.acl-long.356.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "annotation_prompt",
+      "text_sha256_16": "3fa59a368b70c543",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

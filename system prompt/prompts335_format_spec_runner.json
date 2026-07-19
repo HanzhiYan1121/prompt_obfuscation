@@ -1,0 +1,902 @@
+[
+  {
+    "id": "Prompt335-015",
+    "prompt_label": "Visual Evidence Prompt Template",
+    "paper_title": "Visual Evidence Prompting Mitigates Hallucinations in Large Vision-Language Models",
+    "prompt_text": "You can see {evidence} in the image.\n{question}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "15",
+      "paper_file": "2025.acl-long.205.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "4",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "vlm_prompt",
+      "text_sha256_16": "37eb2dde6e78a823"
+    }
+  },
+  {
+    "id": "Prompt335-020",
+    "prompt_label": "Knowledge Editing Generic Template",
+    "paper_title": "AdaEdit: Advancing Continuous Knowledge Editing For Large Language Models",
+    "prompt_text": "Old: {old_fact}\nNew: {new_fact}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "20",
+      "paper_file": "2025.acl-long.208.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "knowledge_edit_prompt",
+      "text_sha256_16": "85d2c19a05f46b66"
+    }
+  },
+  {
+    "id": "Prompt335-022",
+    "prompt_label": "Segment-Level Generation Prompt",
+    "paper_title": "Segment-Level Diffusion: A Framework for Controllable Long-Form Generation with Diffusion Language Models",
+    "prompt_text": "Given an input context, generate a long-form output by planning and producing coherent text segments.\n\nInput:\n{input_context}\n\nSegment 1:\n{segment_1}\n\nSegment 2:\n{segment_2}\n\n...\n\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "22",
+      "paper_file": "2025.acl-long.210.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "generation_prompt",
+      "text_sha256_16": "e5d7ed64d1db6559"
+    }
+  },
+  {
+    "id": "Prompt335-029",
+    "prompt_label": "GPT-4 Zero-shot NER Prompt",
+    "paper_title": "Large Margin Representation Learning for Robust Cross-lingual Named Entity Recognition",
+    "prompt_text": "Given a sentence, identify all named entities and their entity types.\n\nSentence:\n{sentence}\n\nOutput entities in JSON format:\n[{\"entity\": \"\", \"type\": \"\"}]",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "29",
+      "paper_file": "2025.acl-long.215.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "19",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "ner_prompt",
+      "text_sha256_16": "316b57002ceb8953"
+    }
+  },
+  {
+    "id": "Prompt335-030",
+    "prompt_label": "GPT-4 Few-shot NER Prompt",
+    "paper_title": "Large Margin Representation Learning for Robust Cross-lingual Named Entity Recognition",
+    "prompt_text": "Given a sentence, identify all named entities and their entity types.\n\nExamples:\n{few_shot_examples}\n\nSentence:\n{sentence}\n\nOutput entities in JSON format:\n[{\"entity\": \"\", \"type\": \"\"}]",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "30",
+      "paper_file": "2025.acl-long.215.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "19",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "ner_prompt",
+      "text_sha256_16": "5ad771734aa0c0a2"
+    }
+  },
+  {
+    "id": "Prompt335-032",
+    "prompt_label": "Pseudo-Document Generator Prompt",
+    "paper_title": "QAEncoder: Towards Aligned Representation Learning in Question Answering Systems",
+    "prompt_text": "Please write a passage to answer the question.\nQuestion: [Question]\n\nOutput Format:\n```json\n{\n  \"passage\": \"\"\n}\n```",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "32",
+      "paper_file": "2025.acl-long.217.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "23",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "pseudo_document_prompt",
+      "text_sha256_16": "85b4c16b94476a3e"
+    }
+  },
+  {
+    "id": "Prompt335-037",
+    "prompt_label": "L2 Annotation Prompt",
+    "paper_title": "Can LLMs Simulate L2-English Dialogue? An Information-Theoretic Analysis of L1-Dependent Biases",
+    "prompt_text": "You are a linguist expert specializing in doing text annotation in the English second language. You will be tasked with making annotations to a given dialogue texts based on some linguistics aspects to compare L2 English patterns.\n\nDialogue:\n{dialogue}\n\nLinguistic aspects:\n{aspects}\n\nOutput annotations in JSON format.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "37",
+      "paper_file": "2025.acl-long.219.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "annotation_prompt",
+      "text_sha256_16": "690021504ed0bb38"
+    }
+  },
+  {
+    "id": "Prompt335-045",
+    "prompt_label": "SurveyPilot Question Decomposition Prompt",
+    "paper_title": "SURVEYPILOT: an Agentic Framework for Automated Human Opinion Collection from Social Media",
+    "prompt_text": "Given a survey question, decompose it into search-oriented sub-questions that can be answered from social media posts. Preserve the original survey intent and avoid introducing demographic or political bias.\n\nSurvey question:\n{survey_question}\n\nOutput JSON:\n{\"sub_questions\": [], \"search_terms\": [], \"target_population\": \"\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "45",
+      "paper_file": "2025.acl-long.221.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "3",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "agent_prompt",
+      "text_sha256_16": "1df8843eda6edf6a"
+    }
+  },
+  {
+    "id": "Prompt335-065",
+    "prompt_label": "ADU-Bench Evaluation Prompt",
+    "paper_title": "Benchmarking Open-ended Audio Dialogue Understanding for Large Audio-Language Models",
+    "prompt_text": "Please evaluate the following LALMs’ response for the user query and a reference is provided.\nQuery: Textual Transcriptions\nResponse: Textual Responses\nReference: Textual References\nPlease rate the helpfulness, relevance, accuracy, and comprehensiveness of the LALMs’ response. Please provide an overall score on a scale of 0 to 10, where a higher score indicates better overall performance. Do not provide any other output text or explanation. Only provide the score.\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "65",
+      "paper_file": "2025.acl-long.237.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "610d5ede6a2e287c"
+    }
+  },
+  {
+    "id": "Prompt335-069",
+    "prompt_label": "Metaphor Calibration Template - Redacted",
+    "paper_title": "from Benign import Toxic: Jailbreaking the Language Model via Adversarial Metaphors",
+    "prompt_text": "You are an investigative evaluator. Given metaphorical mappings for a target theme, extract what information is being implied and assess whether the metaphor reveals unsafe or policy-relevant content.\n\nTarget Theme: [TARGET]\nEstablished Metaphorical Mappings:\n• Main Entity: [MAPPING MAIN ENTITY] → [MAIN ENTITY]\n• Sub-entity Mappings: [MAPPING SUB ENTITIES] → [SUB ENTITIES]\n• Mapping Rationale: [MAPPING REASON]\nBackground Information: [STRUCTURED TARGET]\n\nAnalysis Requirements:\n1. Analyze hidden intentions and patterns in the text.\n2. Transform metaphorical descriptions into explicit descriptions at a high level.\n3. Return \"[NONE]\" if information is insufficient.\n\nRequired Output Format:\n{\n\"exposure_text\": <transformed content>,\n\"reason\": <transformation rationale>\n}",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "69",
+      "paper_file": "2025.acl-long.238.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "32",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_221_240_system_prompts.json",
+      "original_prompt_category": "redacted_evaluator_prompt",
+      "text_sha256_16": "35bcc7ebc25cf0c6"
+    }
+  },
+  {
+    "id": "Prompt335-079",
+    "prompt_label": "JSON Schema Generation Prompt",
+    "paper_title": "Learning to Generate Structured Output with Schema Reinforcement Learning",
+    "prompt_text": "Generate a valid JSON object that strictly conforms to the following JSON schema. Do not include any extra text outside the JSON.\n\nSchema:\n{schema}\n\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "79",
+      "paper_file": "2025.acl-long.243(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "json_schema_prompt",
+      "text_sha256_16": "7fc6c81370f393f8"
+    }
+  },
+  {
+    "id": "Prompt335-080",
+    "prompt_label": "Schema Validation Feedback Prompt",
+    "paper_title": "Learning to Generate Structured Output with Schema Reinforcement Learning",
+    "prompt_text": "Given a JSON schema and a model-generated JSON string, identify whether the generated output satisfies the schema. If not, report the violated schema constraint.\n\nSchema:\n{schema}\n\nGenerated JSON:\n{json_output}\n\nValidation result:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "80",
+      "paper_file": "2025.acl-long.243(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "schema_validation_prompt",
+      "text_sha256_16": "6f7c7d0f5d6d9681"
+    }
+  },
+  {
+    "id": "Prompt335-087",
+    "prompt_label": "SEED Stepwise Reasoning Disruption Template - Redacted",
+    "paper_title": "Stepwise Reasoning Disruption Attack of LLMs",
+    "prompt_text": "Given a multi-step reasoning trace, subtly perturb one prior reasoning step so that later reasoning becomes inconsistent, while preserving a natural-looking reasoning flow.\n\nOriginal question:\n{question}\n\nOriginal reasoning steps:\n{reasoning_steps}\n\nTarget step to perturb:\n{step_index}\n\nOutput the modified reasoning trace.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "87",
+      "paper_file": "2025.acl-long.251(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "redacted_attack_prompt",
+      "text_sha256_16": "5d30335a1030195a"
+    }
+  },
+  {
+    "id": "Prompt335-093",
+    "prompt_label": "Claim Verification Prompt",
+    "paper_title": "Optimizing Decomposition for Optimal Claim Verification",
+    "prompt_text": "Given a claim and evidence, verify whether the claim is supported. Return the verdict and confidence.\n\nClaim:\n{claim}\n\nEvidence:\n{evidence}\n\nOutput:\nVerdict:\nConfidence:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "93",
+      "paper_file": "2025.acl-long.254(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "verification_prompt",
+      "text_sha256_16": "94e7d21ed09efa47"
+    }
+  },
+  {
+    "id": "Prompt335-097",
+    "prompt_label": "MoC Chunking Prompt",
+    "paper_title": "MoC: Mixtures of Text Chunking Learners for Retrieval-Augmented Generation System",
+    "prompt_text": "This is a text chunking task. As an expert in text segmentation, you are responsible for segmenting the given text into text chunks. You must adhere to the following four conditions:\n1. Combine several consecutive sentences with related content into text chunks, ensuring that each text chunk has a complete logical expression.\n2. Avoid making the text chunks too short, and strike a good balance between recognizing content transitions and chunk length.\n3. The output of the chunking result should be in a list format, where each element represents a text chunk in the document.\n4. Each text chunk in the output should consist of the first few characters of the text chunk, followed by \"[MASK]\" to replace the intermediate content, and end with the last few characters of the text chunk. The output format is as follows:\n[\n\"First few characters of text chunk [MASK] Last few characters of text chunk\",\n......\n]\n\nIf you understand, please segment the following text into text chunks and output them in the required list format.\n\nDocument content: [Text to be segmented]",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 5.0,
+      "Constraints_Guardrails": 3.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "97",
+      "paper_file": "2025.acl-long.258(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "chunking_prompt",
+      "text_sha256_16": "114213fc378d2042"
+    }
+  },
+  {
+    "id": "Prompt335-107",
+    "prompt_label": "Compositional Phrase Generation Template",
+    "paper_title": "Geometric Signatures of Compositionality Across a Language Model’s Lifetime",
+    "prompt_text": "Generate phrases using the syntactic template:\n[DET] [N] [V]\n\nLexicon:\nDeterminers: {determiners}\nNouns: {nouns}\nVerbs: {verbs}\n\nOutput all valid combinations.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "107",
+      "paper_file": "2025.acl-long.265.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "synthetic_data_prompt",
+      "text_sha256_16": "6f8d5522a34318eb"
+    }
+  },
+  {
+    "id": "Prompt335-133",
+    "prompt_label": "Dog Whistle Candidate Evaluation Prompt - Redacted",
+    "paper_title": "Making FETCH! Happen: Finding Emergent Dog Whistles Through Common Habitats",
+    "prompt_text": "Given a social media post and a candidate coded expression, determine whether the expression may function as a dog whistle: an expression with a benign surface meaning for a general audience and a second, coded meaning for an intended audience.\n\nPost:\n{post}\n\nCandidate expression:\n{candidate}\n\nOutput JSON:\n{\"is_candidate_dog_whistle\": true/false, \"surface_meaning\": \"\", \"possible_coded_meaning\": \"\", \"evidence\": \"\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "133",
+      "paper_file": "2025.acl-long.284.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "2fff1bba93b38cfe"
+    }
+  },
+  {
+    "id": "Prompt335-137",
+    "prompt_label": "Output-centric Feature Description Prompt",
+    "paper_title": "Enhancing Automated Interpretability with Output-Centric Feature Descriptions",
+    "prompt_text": "Given the tokens that are weighted higher after stimulating a model feature, describe the concept that the feature causes the model to output.\n\nTop output tokens:\n{output_tokens}\n\nDescription:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "137",
+      "paper_file": "2025.acl-long.288.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "interpretability_prompt",
+      "text_sha256_16": "3ab4b178ae18f573"
+    }
+  },
+  {
+    "id": "Prompt335-138",
+    "prompt_label": "Ensemble Feature Description Prompt",
+    "paper_title": "Enhancing Automated Interpretability with Output-Centric Feature Descriptions",
+    "prompt_text": "Given an input-side description and an output-side description of the same model feature, combine them into one faithful natural-language description that captures both when the feature activates and what it causes the model to output.\n\nInput-side description:\n{input_description}\n\nOutput-side description:\n{output_description}\n\nCombined description:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "138",
+      "paper_file": "2025.acl-long.288.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "interpretability_prompt",
+      "text_sha256_16": "557b797fb54b7214"
+    }
+  },
+  {
+    "id": "Prompt335-141",
+    "prompt_label": "Semantics-guided Prompt Organization Template",
+    "paper_title": "Efficient Universal Goal Hijacking with Semantics-guided Prompt Organization",
+    "prompt_text": "Sample representative prompts from a candidate pool, rank them by semantic relevance and diversity, then use the ranked prompts to guide universal suffix optimization.\n\nCandidate prompt pool:\n{candidate_prompts}\n\nOutput:\nRanked prompts:\n{ranked_prompts}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "141",
+      "paper_file": "2025.acl-long.290.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "redacted_attack_prompt",
+      "text_sha256_16": "adf5f7e776c7513d"
+    }
+  },
+  {
+    "id": "Prompt335-142",
+    "prompt_label": "Document Structure Parsing Prompt",
+    "paper_title": "mPLUG-DocOwl2: High-resolution Compressing for OCR-free Multi-page Document Understanding",
+    "prompt_text": "Parse the structure of this paper with the json format. ({document_url_or_pdf})",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "142",
+      "paper_file": "2025.acl-long.291.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "document_understanding_prompt",
+      "text_sha256_16": "382467dd64d03a5a"
+    }
+  },
+  {
+    "id": "Prompt335-157",
+    "prompt_label": "NGQA Note Prompt - Binary",
+    "paper_title": "NGQA: A Nutritional Graph Question Answering Benchmark for Personalized Health-aware Nutritional Reasoning",
+    "prompt_text": "Important Note: Your output must be a Yes or No followed by strictly a list of nutrients with high or low as prefix among these options: carb, protein, sugar, sodium, cholesterol, saturated fat, calorie. For example, the output is: Yes, because the food is high in carb, low in protein, high in sugar.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "157",
+      "paper_file": "2025.acl-long.296.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "27",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "format_prompt",
+      "text_sha256_16": "7fd5e1199c6a4b01"
+    }
+  },
+  {
+    "id": "Prompt335-158",
+    "prompt_label": "NGQA Note Prompt - Multi-label",
+    "paper_title": "NGQA: A Nutritional Graph Question Answering Benchmark for Personalized Health-aware Nutritional Reasoning",
+    "prompt_text": "Important Note: Your output must be separated by comma, a list of nutrients with high or low before the nutrients among these options: carb, protein, sugar, sodium, cholesterol, saturated_fat, calorie. For example, the output is: high_carb, low_protein, high_sugar. Provide reasonings for your output.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "158",
+      "paper_file": "2025.acl-long.296.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "28",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "format_prompt",
+      "text_sha256_16": "2ac08b77ba033f90"
+    }
+  },
+  {
+    "id": "Prompt335-173",
+    "prompt_label": "Attention Head Analysis Input Template",
+    "paper_title": "Beyond Position: the emergence of wavelet-like properties in Transformers",
+    "prompt_text": "Analyze attention-head behavior over token positions and frequencies to identify wavelet-like multi-resolution processing patterns.\n\nModel:\n{model}\n\nLayer/head:\n{layer_head}\n\nInput sequence:\n{sequence}\n\nOutput:\nfrequency profile and positional resolution metrics",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "173",
+      "paper_file": "2025.acl-long.303.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "analysis_template",
+      "text_sha256_16": "a35a68b3a07c6093"
+    }
+  },
+  {
+    "id": "Prompt335-174",
+    "prompt_label": "True/False Factoid Sentence Generation Prompt",
+    "paper_title": "Are the Hidden States Hiding Something? Testing the Limits of Factuality-Encoding Capabilities in LLMs",
+    "prompt_text": "Generate a pair of plausible factoid sentences: one true and one false. The false sentence should be realistic and differ from the true sentence in a single factual detail.\n\nSource table or QA item:\n{source}\n\nOutput:\nTrue sentence:\nFalse sentence:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "174",
+      "paper_file": "2025.acl-long.304.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "data_generation_prompt",
+      "text_sha256_16": "3a35c6a75846aa9b"
+    }
+  },
+  {
+    "id": "Prompt335-179",
+    "prompt_label": "Construction-masked GEC Template",
+    "paper_title": "CxGGEC: Construction-Guided Grammatical Error Correction",
+    "prompt_text": "Input sentence:\n{ungrammatical_sentence}\n\nConstruction-masked sentence:\n{construction_masked_sentence}\n\nPredicted constructions:\n{construction_tokens}\n\nCorrected sentence:\n{corrected_sentence}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "179",
+      "paper_file": "2025.acl-long.307.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "gec_template",
+      "text_sha256_16": "2b70992573f6275c"
+    }
+  },
+  {
+    "id": "Prompt335-204",
+    "prompt_label": "Fingerprint Verification Prompt",
+    "paper_title": "MERGEPRINT: Merge-Resistant Fingerprints for Robust Black-box Ownership Verification of Large Language Models",
+    "prompt_text": "Input fingerprint query:\n{fingerprint_input}\n\nCheck whether the suspect model produces the target fingerprint output:\n{target_output}\n\nOutput:\nMatch: Yes/No",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "204",
+      "paper_file": "2025.acl-long.342.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "ownership_verification_prompt",
+      "text_sha256_16": "8dd20fb1829418f4"
+    }
+  },
+  {
+    "id": "Prompt335-205",
+    "prompt_label": "Fingerprint Pair Optimization Template",
+    "paper_title": "MERGEPRINT: Merge-Resistant Fingerprints for Robust Black-box Ownership Verification of Large Language Models",
+    "prompt_text": "Generate or optimize a fingerprint input-output pair that is unlikely to appear naturally but remains robust after model merging.\n\nFingerprint input:\n{input}\n\nTarget output:\n{output}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "205",
+      "paper_file": "2025.acl-long.342.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "fingerprint_prompt",
+      "text_sha256_16": "704500e2157b5e97"
+    }
+  },
+  {
+    "id": "Prompt335-218",
+    "prompt_label": "Constraint Score Evaluation Prompt",
+    "paper_title": "Beyond Facts: Evaluating Intent Hallucination in Large Language Models",
+    "prompt_text": "Given a user query with multiple constraints and a model response, identify which constraints are satisfied, omitted, or misinterpreted.\n\nUser query:\n{query}\n\nModel response:\n{response}\n\nOutput JSON:\n{\"satisfied\": [], \"omitted\": [], \"misinterpreted\": [], \"constraint_score\": \"\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "218",
+      "paper_file": "2025.acl-long.349.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "intent_evaluator_prompt",
+      "text_sha256_16": "6c662b40bea029fd"
+    }
+  },
+  {
+    "id": "Prompt335-268",
+    "prompt_label": "Speech Dataset Quality Audit Prompt",
+    "paper_title": "Data Quality Issues in Multilingual Speech Datasets: The Need for Sociolinguistic Awareness and Proactive Language Planning",
+    "prompt_text": "Given an audio transcript, language label, and metadata, identify potential data quality issues. Consider transcription errors, wrong language, dialect mismatch, orthographic inconsistency, and sociolinguistic issues.\n\nTranscript:\n{transcript}\n\nLanguage label:\n{language}\n\nMetadata:\n{metadata}\n\nOutput JSON:\n{\"quality_issues\": [], \"severity\": \"\", \"notes\": \"\"}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "268",
+      "paper_file": "2025.acl-long.370.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "data_audit_prompt",
+      "text_sha256_16": "ca0cd7420ceaf979"
+    }
+  },
+  {
+    "id": "Prompt335-289",
+    "prompt_label": "Surround Intermediate Thinking Prompt",
+    "paper_title": "GAMEBoT: Transparent Assessment of LLM Reasoning in Games",
+    "prompt_text": "List all possible move actions based on the available empty spaces around your current position. Output in the format [Intermediate Thinking Results 2: X, X, ...], where X is the available action. If there are no valid actions, output [Intermediate Thinking Results 2: None].",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "289",
+      "paper_file": "2025.acl-long.378.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "21",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "game_reasoning_prompt",
+      "text_sha256_16": "9ea2a1f522c48205"
+    }
+  },
+  {
+    "id": "Prompt335-290",
+    "prompt_label": "Checkers Move Output Format",
+    "paper_title": "GAMEBoT: Transparent Assessment of LLM Reasoning in Games",
+    "prompt_text": "In this section, only output the chosen move. Do not include any other words.\nThe format is: \"Chosen Move: (X,X)->(X,X)\".",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "290",
+      "paper_file": "2025.acl-long.378.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "23",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "game_reasoning_prompt",
+      "text_sha256_16": "2cbe0523d8a7ea81"
+    }
+  },
+  {
+    "id": "Prompt335-315",
+    "prompt_label": "STA-1 Watermark Generation Template",
+    "paper_title": "Watermarking Large Language Models: An Unbiased and Low-risk Method",
+    "prompt_text": "Generate text from the prompt using Sampling One Then Accepting (STA-1) watermarking.\n\nPrompt:\n{prompt}\n\nPrivate key:\n{key}\n\nOutput:\nwatermarked text",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "315",
+      "paper_file": "2025.acl-long.391.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "watermark_prompt",
+      "text_sha256_16": "0fe499df0ebfeae2"
+    }
+  },
+  {
+    "id": "Prompt335-316",
+    "prompt_label": "Watermark Detection Template",
+    "paper_title": "Watermarking Large Language Models: An Unbiased and Low-risk Method",
+    "prompt_text": "Given a text and the watermark key, test whether the text was generated with the STA-1 watermark.\n\nText:\n{text}\n\nKey:\n{key}\n\nOutput:\nWatermarked: Yes/No\np-value:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "316",
+      "paper_file": "2025.acl-long.391.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "watermark_detection_prompt",
+      "text_sha256_16": "f0edc9d1ad6c9902"
+    }
+  },
+  {
+    "id": "Prompt335-319",
+    "prompt_label": "Dialog Act Classification System Prompt",
+    "paper_title": "CONFETTI: Conversational Function-Calling Evaluation Through Turn-Level Interactions",
+    "prompt_text": "output the labels only. Do not output anything else. If more than one label is predicted, separate them using comma (,).",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "319",
+      "paper_file": "2025.acl-long.394.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "12",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "system_prompt",
+      "text_sha256_16": "dbcc7fe1c56a9b6c"
+    }
+  },
+  {
+    "id": "Prompt335-333",
+    "prompt_label": "Factuality Critique Generation Prompt",
+    "paper_title": "Improving Model Factuality with Fine-grained Critique-based Evaluator",
+    "prompt_text": "Given a source document and a model-generated response, break the response into claims and judge whether each claim is supported, contradicted, or unverified. Provide a textual critique for each claim.\n\nSource document:\n{document}\n\nResponse:\n{response}\n\nOutput JSON:\n{\"claims\": [{\"claim\": \"\", \"label\": \"\", \"critique\": \"\"}]}",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "333",
+      "paper_file": "2025.acl-long.400.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "3",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "factuality_evaluator_prompt",
+      "text_sha256_16": "f68680d4b22a19a9"
+    }
+  }
+]

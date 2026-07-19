@@ -1,0 +1,282 @@
+[
+  {
+    "id": "Prompt417-283",
+    "prompt_label": "Google Search Snippet Reasoning Prompt",
+    "paper_title": "BeamAggR: Beam Aggregation Reasoning over Multi-source Knowledge for Multi-hop Question Answering",
+    "prompt_text": "Please answer the question based on the snippet from Google search and provide an explanation. If you are unsure, answer Unknown.",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.5
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.67.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-145",
+    "prompt_label": "Prompt for Evaluating UnSeenTimeQA",
+    "paper_title": "UnSeenTimeQA: Time-Sensitive Question-Answering Beyond LLMs’ Memorization",
+    "prompt_text": "[domain_description] + [object_description] + [initial_states_description] + [events] + [question] + [reasoning_prompt]\n\n[reasoning_prompt]:\nLet's think step-by-step to answer the question. Please use the below format:\nReasoning steps: [generate step-by-step reasoning]\nAnswer: [final answer]",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.5
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.94.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_91_to_110",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-100",
+    "prompt_label": "Metaphysical Inference Generation Prompt",
+    "paper_title": "MARS: Benchmarking the Metaphysical Reasoning Abilities of Language Models with a Multi-task Evaluation Dataset",
+    "prompt_text": "Given an action event, generate a short metaphysical if-then inferential statement that describes an inferential state that only occurs in metaphysical space. A state is a condition or situation in which someone or something exists in the past or present that will last for a certain time if no changes occur. An action is a thing that can be done in a time interval that is usually not long. Metaphysical inference is a type of inference that is not based on empirical evidence but rather on the nature of things. It can be a counterfactual inference that is contrary to the facts or reality, meaning that it is usually not true in reality world. Below are some examples:\n...\nEvent <i>: In 2003, he played a recurring role on two episodes of The Bill.\nMetaphysical Inference: Everyone criticizes his performance in the show.\n...\nEvent <N>: Sam drives down the road with fast speed.",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.5
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.79.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_78_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-019",
+    "prompt_label": "question generation DSPy signature",
+    "paper_title": "FACT5: A Novel Benchmark and Pipeline for Nuanced Fact-Checking of Complex Statements",
+    "prompt_text": "Break down the given claim derived from the original statement to generate independent questions and search queries to answer it. Be as specific and concise as possible, try to minimize the number of questions and search queries while still being comprehensive to verify the claim.\n\nOutput field:\nJSON object containing: {\n  \"questions\": [\n    {\n      \"question\": string,\n      \"search_queries\": [string]\n    }\n  ]\n}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.5
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.8.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "question_generation_prompt",
+      "text_sha256_16": "b5928f3d20bd13fc",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-413",
+    "prompt_label": "R1 Rewarding Prompt: Usefulness of Sub-question",
+    "paper_title": "VReST: Enhancing Reasoning in Large Vision-Language Models through Tree Search and Self-Reward Mechanism",
+    "prompt_text": "Instruction Given a question and some sub-questions, determine whether the last sub-question is useful to answer the question. Output 'Yes' or 'No', and a reason.\n\n**Question:** [question]\nSub-questions and answers:\n[sub_questions_and_answers]\n\nIs the last sub-question useful?\nOutput:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.199.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "reward_prompt",
+      "text_sha256_16": "804f889f70ceeded",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-412",
+    "prompt_label": "Reasoning Step Generation Prompt",
+    "paper_title": "VReST: Enhancing Reasoning in Large Vision-Language Models through Tree Search and Self-Reward Mechanism",
+    "prompt_text": "Instruction Given a question, please decompose it into sub-questions. For each sub-question, please answer it in a complete sentence, ending with \"The answer is\". When the original question is answerable, please start the sub-question with \"Final question\" and provide the final answer.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.199.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "reasoning_prompt",
+      "text_sha256_16": "09d1d634b9bb841f",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-411",
+    "prompt_label": "Set-Encoding Needle-in-a-Haystack Prompt",
+    "paper_title": "Positional Overload: Positional Debiasing and Context Window Extension for Large Language Models using Set Encoding",
+    "prompt_text": "Given a set of unordered text elements, locate the relevant information needed to answer the question.\n\nSet elements:\n{set_encoded_elements}\n\nQuestion:\n{question}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.197.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "long_context_prompt",
+      "text_sha256_16": "270923b4c3582a66",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-397",
+    "prompt_label": "Few-shot Calibration Prompt",
+    "paper_title": "Influences on LLM Calibration: A Study of Response Agreement, Loss Functions, and Prompt Styles",
+    "prompt_text": "Question 1: {example_question_1}\nTarget 1: {example_answer_1}\n...\nQuestion 6: {example_question_6}\nTarget 6: {example_answer_6}\n\nQuestion:\n{question}\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.188.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "calibration_prompt",
+      "text_sha256_16": "374beb4098619f33",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-395",
+    "prompt_label": "Verbalized Confidence Prompt",
+    "paper_title": "Influences on LLM Calibration: A Study of Response Agreement, Loss Functions, and Prompt Styles",
+    "prompt_text": "Answer the question and provide a probability for the answer:\n{question}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.188.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "calibration_prompt",
+      "text_sha256_16": "8abdf7fb5b0a4bf7",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-363",
+    "prompt_label": "Pretended CoT Baseline",
+    "paper_title": "Contrastive Prompting Enhances Sentence Embeddings in LLMs through Inference-Time Steering",
+    "prompt_text": "After thinking step by step, this sentence: “[TEXT]” means in one word: “",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.174.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "embedding_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

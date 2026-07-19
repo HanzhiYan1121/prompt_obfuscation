@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Prompt417-396",
+    "prompt_label": "Chain-of-Thought Calibration Prompt",
+    "paper_title": "Influences on LLM Calibration: A Study of Response Agreement, Loss Functions, and Prompt Styles",
+    "prompt_text": "Answer the question by thinking step by step:\n{question}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.188.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "calibration_prompt",
+      "text_sha256_16": "874cf4a8fe97eb50",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-374",
+    "prompt_label": "Prompt A: Responses Sampling",
+    "paper_title": "RAG-Critic: Leveraging Automated Critic-Guided Agentic Workflow for Retrieval Augmented Generation",
+    "prompt_text": "Find the useful content from the provided documents, then answer the question. Answer the question directly. Your response should be very concise. Please provide the final answer is:’ as a prefix for the final answer. The following are the given documents.\nPassage: {Top-K Retrieved Passages}\nAnswer the question directly. Your response should be very concise. Please use ‘So the final answer is:’ as a prefix for the final answer. **Question**: {Question} **Response**:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 5.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.179.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "rag_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-276",
+    "prompt_label": "Protein Function Annotation Prompt Template",
+    "paper_title": "InstructProtein: Aligning Human and Protein Language via Knowledge Instruction",
+    "prompt_text": "{protein} Instruction: Does the protein associate with label?",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.62.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-272",
+    "prompt_label": "Instruction System Prompt",
+    "paper_title": "Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents",
+    "prompt_text": "You are an agent trying to understand the user's goal and summarize it. Please first ask users for more specific details with options, and finally summarize the user's intention.\n\n--- Step 1: initial thought generation ---\n1. Generate [INITIAL THOUGHT] about if the task is vague or clear and why.\n2. List the important missing details and some according options if the task is vague.\n\n--- Step 2: inquiry for more information if vague ---\n1. If the task is vague, inquire about more details with options according to the list in [INITIAL THOUGHT].\n2. Think about what information you have and what to inquire next in [INQUIRY THOUGHT].\n3. Present your inquiry with options for the user to choose after [INQUIRY], and be friendly.\n4. You could repeat Step 2 multiple times (but less than 5 times), or directly skip Step 2 if the user task is clear initially.\n\n--- Step 3: summarize the user's intention ---\n1. Make the summary once the information is enough. You do not need to inquire about every missing detail in [INITIAL THOUGHT].\n2. List all the user's preferences and constraints in [SUMMARY THOUGHT]. The number of points should be the same as rounds of chatting.\n3. Give the final summary after [SUMMARY] with comprehensive details in one or two sentences.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.61.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "system_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Tool/Protocol",
+      "selected_dimension": "Tool_Action_Protocol",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

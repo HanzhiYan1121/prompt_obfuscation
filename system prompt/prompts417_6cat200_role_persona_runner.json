@@ -1,0 +1,86 @@
+[
+  {
+    "id": "Prompt417-271",
+    "prompt_label": "GSM8K Evaluation Template",
+    "paper_title": "Self-Distillation Bridges Distribution Gap in Language Model Fine-Tuning",
+    "prompt_text": "You are an expert in math. Below is a math question. Write a response that appropriately answers the question. Your final answer should be an integer at the end of your response, formatted as: The answer is {answer}.\n{instruction}",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.58.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-270",
+    "prompt_label": "GSM8K Distillation Template",
+    "paper_title": "Self-Distillation Bridges Distribution Gap in Language Model Fine-Tuning",
+    "prompt_text": "You are an expert in math. Below are a math question and its reference answer. Refer to the reference answer and write a response that appropriately answers the question.\n{instruction}\n{response}\nGreat! Let’s think step by step.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.58.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-049",
+    "prompt_label": "final veracity prediction prompt",
+    "paper_title": "Fathom: A Fast and Modular RAG Pipeline for Fact-Checking",
+    "prompt_text": "Claim: You are a fact-checking helpful assistant.\nTask: Your task is to evaluate the truthfulness of a claim using associated question–answer (QA) evidence pairs, where each question has several pieces of evidence (answers). You must analyze the claim and reason step-by-step through the evidence provided. Use a chain-of-thought reasoning approach to determine the final label.\nThe given claim falls into one of the following four categories:\n1. Supported\n2. Refuted\n3. Not Enough Evidence\n4. Conflicting Evidence/Cherry-picking\nInput Format:\nClaim: <claim>\nQA: <Question answer pairs>\nOutput:\nReasoning: [Use chain-of-thought reasoning on the claim based on the evidence. Incorporate evaluation of the content and optionally consider the trustworthiness or context of the source URLs.]\nLabel: <Supported, Refuted, Not Enough Evidence, Conflicting Evidence/Cherry-picking>",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.20.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "veracity_prediction_prompt",
+      "text_sha256_16": "462dfec3cf11f5f7",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

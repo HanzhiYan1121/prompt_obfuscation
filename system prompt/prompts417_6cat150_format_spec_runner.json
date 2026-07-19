@@ -1,0 +1,170 @@
+[
+  {
+    "id": "Prompt417-222",
+    "prompt_label": "QA Prompt for KBQA Case Study",
+    "paper_title": "TARGA: Targeted Synthetic Data Generation for Practical Reasoning over Structured Data",
+    "prompt_text": "You are a powerful model for generating PyQL queries to answer natural language questions. Here are some exemplars:\n###Question\nwhat viewfinder_type, jpeg ( exif 2.21 ) has cameras, cameras has viewfinder_type, canon has cameras\n###PyQL\ntriplet([jpeg ( exif 2.21 )], digicams.camera_compressed_format.cameras, ?v0)\ntriplet(?v0, digicams.digital_camera.viewfinder_type, ?v1)\ntriplet([canon], digicams.camera_sensor_manufacturer.cameras, ?v0)\nanswer(?v1)\n###Question\nwhat viewfinder_type, jpeg ( exif 2.21 ) has cameras, cameras has viewfinder_type, canon has cameras\n###PyQL\ntriplet([jpeg ( exif 2.21 )], digicams.camera_compressed_format.cameras, ?v0)\ntriplet(?v0, digicams.digital_camera.viewfinder_type, ?v1)\ntriplet([canon], digicams.digital_camera_manufacturer.cameras, ?v0)\nanswer(?v1)\n......(8 demonstrations omitted here.)\nPlease follow the format of exemplars and output PyQL query for the following question. No explanation or questioning allowed.\nEntity List: ['jpeg ( exif 2.21 )', 'canon']\n###Question\nthe camera with a sensor from canon and a compression format of jpeg (exif 2.21) uses which viewfinder?\n###PyQL",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.137.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-065",
+    "prompt_label": "Topic Refinement Prompt - Iterative Refinement Baseline",
+    "paper_title": "Neural Topic Modeling with Large Language Models in the Loop",
+    "prompt_text": "Please analyze the following tasks and provide your answer in the specified format.\n1. Determine the common topic shared by these words: [<TOPIC_WORDS >].\n2. Assess whether the word “<WORD>” aligns with the same common topic as the words listed above.\nRespond with:\n- “Yes”, if the given word shares the common topic.\n- If “No”, suggest 10 single-word alternatives that are commonly used and closely related to this topic. These words should be easily recognizable and distinct from the ones in the provided list.\nFormat your response in JSON, including the fields “Topic”, “Answer”, and “Alternative words” (only if the answer is “No”).",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 3.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.70.pdf",
+      "venue": "",
+      "page": "",
+      "source_group": "",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-272",
+    "prompt_label": "Instruction System Prompt",
+    "paper_title": "Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents",
+    "prompt_text": "You are an agent trying to understand the user's goal and summarize it. Please first ask users for more specific details with options, and finally summarize the user's intention.\n\n--- Step 1: initial thought generation ---\n1. Generate [INITIAL THOUGHT] about if the task is vague or clear and why.\n2. List the important missing details and some according options if the task is vague.\n\n--- Step 2: inquiry for more information if vague ---\n1. If the task is vague, inquire about more details with options according to the list in [INITIAL THOUGHT].\n2. Think about what information you have and what to inquire next in [INQUIRY THOUGHT].\n3. Present your inquiry with options for the user to choose after [INQUIRY], and be friendly.\n4. You could repeat Step 2 multiple times (but less than 5 times), or directly skip Step 2 if the user task is clear initially.\n\n--- Step 3: summarize the user's intention ---\n1. Make the summary once the information is enough. You do not need to inquire about every missing detail in [INITIAL THOUGHT].\n2. List all the user's preferences and constraints in [SUMMARY THOUGHT]. The number of points should be the same as rounds of chatting.\n3. Give the final summary after [SUMMARY] with comprehensive details in one or two sentences.",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.61.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "system_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-251",
+    "prompt_label": "FineSurE Keyfact Alignment Prompt - Reasoning",
+    "paper_title": "FineSurE: Fine-grained Summarization Evaluation using LLMs",
+    "prompt_text": "You will receive a summary and a set of key facts for the same transcript. Your task is to assess if each key fact is inferred from the summary.\nInstruction:\nFirst, compare each key fact with the summary.\nSecond, provide a single sentence explaining whether the key fact is inferred from the summary.\nThird, respond \"Yes\" (inferred) or \"No\" (not inferred) for each key fact. If \"Yes\", specify the line number(s) of the summary sentence(s) relevant to each key fact.\nProvide your answer in JSON format. The answer should be a list of dictionaries whose keys are \"key fact\", \"reason\", \"response\", and \"line number\":\n[{\"key fact\": \"first key fact\", \"reason\": \"your reason\", \"response\": \"Yes\", \"line number\": [1]}, {\"key fact\": \"second key fact\", \"reason\": \"your reason\", \"response\": \"No\", \"line number\": []}, {\"key fact\": \"third key fact\", \"reason\": \"your reason\", \"response\": \"Yes\", \"line number\": [1,2,3]}]\nSummary:\n[1] {summary sentence 1}\n[2] {summary sentence 1}\n...\n[N] {summary sentence 1}\nM key facts:\n{keyfact 1}\n{keyfact 2}\n...\n{keyfact M}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.51.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-203",
+    "prompt_label": "Prompt Template: Knowledge List",
+    "paper_title": "Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset",
+    "prompt_text": "Review the text and extract the key information. Follow these instructions:\n- Carefully read the above text and provide a concise and organized list of factual information, concrete details, key concepts, and important numbers and statistics extracted from the text.\n- Ensure each point is clear, specific, and supported by the original text.\n- Ensure the extract text is information-dense and easier to learn from.\n- Do not add titles or headings.\n\nText:\n[DOCUMENT SEGMENT]\n\nTask:\nExtract the factual information, concrete details, and key concepts from the above text following the instructions.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 2.5,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.123.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_111_to_130",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt417-092",
+    "prompt_label": "GPT-4-Turbo Answer Mapping Prompt",
+    "paper_title": "Wait, that’s not an option: LLMs Robustness with Incorrect Multiple-Choice Options",
+    "prompt_text": "Use the following rules to map the model's answer to letters 'A', 'B', or 'C':\n1. Return 'A' or 'B' if the model gives one of the options.\n2. If the model gives a letter 'A' or 'B' but then proposes a different answer, return 'C'.\n3. If the model states no correct answer exists, return 'C'.\n\nRespond with letter 'A', 'B', or 'C':\nOptions: {input_string}\nModel's Answer: {model_answer}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 3.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.75.pdf",
+      "venue": "",
+      "page": "",
+      "source_group": "",
+      "source_batch_file": "",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Format Spec",
+      "selected_dimension": "Format_Specification",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]
