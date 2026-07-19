@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Prompt335-309",
+    "prompt_label": "Speech LLM Distillation Prompt",
+    "paper_title": "Distilling an End-to-End Voice Assistant Without Instruction Training Data",
+    "prompt_text": "Given an audio input and its transcript, use the text-only LLM response to the transcript as self-supervision for training a speech-in text-out assistant.\n\nAudio:\n{audio}\n\nTranscript:\n{transcript}\n\nTeacher response:\n{teacher_response}\n\nStudent response:",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "309",
+      "paper_file": "2025.acl-long.388.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "speech_distillation_prompt",
+      "text_sha256_16": "93697c0f4545d96d",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-277",
+    "prompt_label": "Corpus Understanding Prompt",
+    "paper_title": "Large Language Models Struggle to Describe the Haystack without Human Help: A Social Science-Inspired Evaluation of Topic Models",
+    "prompt_text": "Given a set of documents or topic summaries, answer the analyst's research question about the corpus. Avoid overgeneralization and cite evidence from the documents when possible.\n\nResearch question:\n{research_question}\n\nCorpus/topic information:\n{topic_or_document_summaries}\n\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "277",
+      "paper_file": "2025.acl-long.375.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "corpus_analysis_prompt",
+      "text_sha256_16": "7cf1fc4f0acbe110",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-235",
+    "prompt_label": "Fine-grained Topic Classification Prompt",
+    "paper_title": "The UD-NEWSCRAWL Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project",
+    "prompt_text": "Given the text below, classify it into one of the following topics:\nscience/technology\ntravel\npolitics\nsports\nhealth\nentertainment\ngeography\n\nThe text is in Tagalog, but your response should be in English. Return only the topic name in small caps.\n\nText:\n{text}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "235",
+      "paper_file": "2025.acl-long.357.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "20",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "1a7aef8cba8242b0",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-098",
+    "prompt_label": "Auxiliary Option Injection MCQA Prompt",
+    "paper_title": "Mitigating Selection Bias with Node Pruning and Auxiliary Options",
+    "prompt_text": "Question:\n{question}\n\nOptions:\nA. {option_a}\nB. {option_b}\nC. {option_c}\nD. {option_d}\nE. I don't know.\n\nAnswer with the best option only.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "98",
+      "paper_file": "2025.acl-long.259(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_241_260_system_prompts.json",
+      "original_prompt_category": "mcqa_prompt",
+      "text_sha256_16": "e5ca6eb649726901",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-009",
+    "prompt_label": "Rule Applicability Checking Prompt",
+    "paper_title": "Read it in Two Steps: Translating Extremely Low-Resource Languages with Code-Augmented Grammar Books",
+    "prompt_text": "# 壮语是中国的一门少数民族语言。你是一名语言学家，以下是一条壮语语法规则的相关信息。给你一些需要翻译为壮语的汉语短语或句子，请根据该语法规则的内容，逐一检查翻译过程中是否需要使用该规则。你的回答中只应包含是否需要使用该规则的判断（“是”或“否”），不包含任何其他额外信息。\n# Zhuang is a minority language in China. You are a linguist, and the following is a grammar rule for the Zhuang language. You are given some Chinese phrases or sentences to translate into Zhuang; please check whether this rule applies in the translation process. Your answer should only contain whether the rule needs to be applied (\"yes\" or \"no\"), and no other additional information.\n\n## 语法规则：(Grammar Rule:)\n{grammar_rule}\n\n## 需要翻译的汉语短语或句子：(Chinese phrases or sentences to translate:)\n{source_sentence}\n\n## 输出：(Output:)",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "9",
+      "paper_file": "2025.acl-long.202.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "translation_prompt",
+      "text_sha256_16": "79c22f46b8b04944",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

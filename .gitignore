@@ -9,4 +9,29 @@ logs/
 data/
 results/
 precomputed_results/
-venv/
+
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python caches and virtual environments
+.venv/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Model weights and training checkpoints
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+wandb/
+
+# Temporary and editor files
+tmp/
+.DS_Store
+.idea/
+.vscode/

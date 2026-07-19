@@ -1,0 +1,30 @@
+[
+  {
+    "id": "Prompt335-105",
+    "prompt_label": "Citation Fidelity Evaluation Prompt",
+    "paper_title": "L-CiteEval: A Suite for Evaluating Fidelity of Long-context Models",
+    "prompt_text": "Given a question, a long context, a model answer, and its citations, evaluate whether the answer is supported by the cited context.\n\nQuestion:\n{question}\n\nContext:\n{context}\n\nAnswer:\n{answer}\n\nCitations:\n{citations}\n\nOutput:\n- Generation quality score:\n- Citation fidelity score:\n- Unsupported claims:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 4.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 3.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "105",
+      "paper_file": "2025.acl-long.263.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "92d5176cf512ee6c",
+      "selected_category": "Context Knowledge",
+      "selected_dimension": "Context_Knowledge",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

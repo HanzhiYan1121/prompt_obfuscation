@@ -1,0 +1,1272 @@
+
+
+--- PAGE 1 ---
+PRISM: Privacy-Aware Routing for Adaptive Cloud–Edge LLM Inference via
+Semantic Sketch Collaboration
+Junfei Zhan1*, Haoxun Shen1*, Zheng Lin2, Tengjiao He3†
+1Department of Electrical and Systems Engineering, University of Pennsylvania, Philadelphia, PA, USA
+2Department of Electrical and Electronic Engineering, University of Hong Kong, Hong Kong SAR, China
+3College of Information Science and Technology, Jinan University, Guangzhou, China
+{zjf2024, haoxun}@seas.upenn.edu, linzheng@eee.hku.hk, htj2018@jnu.edu.cn
+Abstract
+Large Language Models (LLMs) demonstrate impressive ca-
+pabilities in natural language understanding and generation,
+but incur high communication overhead and privacy risks
+in cloud deployments, while facing compute and memory
+constraints when confined to edge devices. Cloud–edge in-
+ference has emerged as a promising paradigm for improv-
+ing privacy in LLM services by retaining sensitive compu-
+tations on local devices. However, existing cloud–edge in-
+ference approaches apply uniform privacy protection with-
+out considering input sensitivity, resulting in unnecessary per-
+turbation and degraded utility even for non-sensitive tokens.
+To address this limitation, we propose Privacy-aware Routing
+for Inference with Semantic Modulation (PRISM), a context-
+aware framework that dynamically balances privacy and in-
+ference quality. PRISM executes in four stages: (1) the edge
+device profiles entity-level sensitivity; (2) a soft gating mod-
+ule, also on the edge, selects an execution mode -cloud, edge,
+or collaboration; (3) for collaborative paths, the edge ap-
+plies adaptive two-layer local differential privacy based on
+entity risks; and (4) the cloud LLM generates a semantic
+sketch from the perturbed prompt, which is then refined by
+the edge-side small language model (SLM) using local con-
+text. Our results show that PRISM consistently achieves su-
+perior privacy-utility trade-offs in various scenarios, reducing
+energy consumption and latency to 40–50% of baseline meth-
+ods such as Uniform and Selective LDP, while maintaining
+high output quality under strong privacy constraints. These
+findings are validated through comprehensive evaluations in-
+volving realistic prompts, actual energy measurements, and
+heterogeneous cloud–edge model deployments.
+Code—https://github.com/Junfei-Z/PRISM
+Introduction
+Large Language Models (LLMs) such as GPT-4o (Hurst
+et al. 2024), LLaMA 3 (Grattafiori et al. 2024), and Qwen
+3 (Yang et al. 2025) have achieved remarkable progress in
+natural language understanding and generation (Cai et al.
+2025a) . Their capabilities extend to diverse applications in-
+cluding code synthesis (Chen et al. 2021), multimodal rea-
+*These authors contributed equally.
+†Corresponding author.
+Copyright © 2026, Association for the Advancement of Artificial
+Intelligence (www.aaai.org). All rights reserved.
+Sensitivity
+Profiling
+"I'm considering traveling to New York in August with my friend Alice. It's a
+6-day, 3481 EUR trip. Please help me plan."
+"I'm considering traveling to New York in
+August with my friend Alice. It's a 6-
+day, 3481 EUR trip. Please help me plan. "
+Cloud
+Server
+Two-Layer
+LDP
+Semantic
+Sketch
+Generation
+Edge
+Server
+User's Raw Prompt :
+Prompt After Detection:
+"I'm considering traveling to
+Bibury Town in 2006 with my
+friend Monday. It's a fever,
+Mike trip. Please help me plan "
+Noisy Prompt:
+"Day 1:  arrival and check-in;
+Day 2:destination exploration
+Day 3: shppoing ..., Day 6...."
+Semantic Sketch :
+"  Planning a 6-day trip to New
+York in August with your friend
+Alice sounds exciting! Here’s
+how you can structure your days
+off and make the most of your
+time in the city: Day 1:  ...     "
+Final Response :
+Denoise &
+Reintegrate
+Cloud
+LLM
+Edge
+SLM
+User 1
+2
+3
+4
+Cloud–Edge Collaborative
+Inference+
+Soft
+Gating
+Figure 1: PRISM workflow example illustrating privacy-
+preserving prompt processing and transformation stages.
+soning (Alayrac et al. 2022), mathematical problem solv-
+ing (Drori et al. 2022), and biomedical variant classifica-
+tion (Kweon et al. 2024). To run LLM-based services at
+scale, operators require large GPU clusters to support high-
+throughput inference workloads (Miao et al. 2025; Cai et al.
+2025b; Lin et al. 2025c). To this end, LLMs are typically de-
+ployed in the cloud, where they receive users’ full prompts
+and generate responses in real time. This cloud-based de-
+ployment model is driven by the massive size and compu-
+tation demands of state-of-the-art LLMs, which exceed the
+resource limits of local devices.
+Cloud-centric LLM deployment provides global acces-
+sibility and facilitates centralized model updates (Li et al.
+2024; Lin et al. 2025b). However, it also introduces signifi-
+cant communication overhead and raises privacy risks due to
+the need to transmit full user prompts over the network (Lin
+et al. 2025b). These challenges are especially pronounced in
+privacy-critical domains such as medical, finance, and per-
+sonalized services, where user prompts often contain sen-
+sitive personal information. Unlike conventional software
+arXiv:2511.22788v1  [cs.CR]  27 Nov 2025
+
+
+--- PAGE 2 ---
+input, the prompts in these sensitive domains submitted to
+LLM often contain a rich semantic context that implicitly
+reveals the personal information, intentions, and preferences
+of users (Staab et al. 2024; Lin et al. 2024). Consider the
+example in the medical domain:“I tested positive for HIV
+last week and have been experiencing fever and diarrhea.
+Should I be concerned about secondary infections?”(Zeng
+et al. 2025). This prompt includes protected health informa-
+tion (PHI) , if intercepted or mishandled, leading to severe
+privacy violations. Further, not all prompts carry the same
+privacy sensitivity: simple queries such as“What is the cap-
+ital of France?”pose minimal risk and could be processed
+safely in the cloud (Acharya et al. 2020). These limitations
+highlight the need for new inference paradigms that preserve
+privacy without sacrificing efficiency, especially in semanti-
+cally complex and sensitive domains.
+To mitigate the privacy risks inherent in cloud-centric
+inference, recent cloud–edge collaborative frameworks at-
+tempt to retain sensitive information on the edge devices
+(Jin and Wu 2024; Zhu and Yang 2025; Zhan et al. 2025). A
+common design pattern is to perform inference locally on a
+Small Language Model (SLM) for privacy-critical prompts,
+while offloading non-sensitive queries to the cloud-hosted
+LLM based on binary routing mechanisms (Li et al. 2025).
+Alternatively, some systems adopt an encryption-inspired
+strategy: they apply local differential privacy (LDP) noise
+to the user’s full prompt before transmitting it to the cloud,
+and then rely on the edge to reconstruct or refine the cloud’s
+response (Lin et al. 2025a; Mai et al. 2024). Although these
+approaches offer basic privacy protection, they remain fun-
+damentally coarse-grained. First, binary routing decisions,
+based on simple thresholding of risk scores, can misclas-
+sify instructions, either overburdening the edge device or
+compromising privacy (Qu et al. 2025). Second, prompt-
+level LDP schemes, such as Split-and-Denoise (Mai et al.
+2024) and DP-Forward (Du et al. 2023) uniformly perturb
+all tokens or embedding dimensions, regardless of their ac-
+tual sensitivity. This uniform treatment leads to unneces-
+sary utility degradation, especially for benign queries. Fur-
+thermore, when noise is applied indiscriminately, the cloud
+model receives semantically valid but semantically distorted
+commands, often generating vague, generic, or evasive re-
+sponses (for example, ’I cannot provide information about
+[MASKED ENTITY’). In short, existing architectures lack the
+ability to tailor privacy mechanisms to the specific semantics
+of each prompt. This inefficiency motivates a more adap-
+tive approach, one that dynamically selects privacy path-
+ways based on contextual cues within the prompt itself.
+To this end, we introduce Privacy-aware Routing for In-
+ference with Semantic Modulation (PRISM), a cloud–edge
+collaborative framework that adaptively selects inference
+pathways based on prompt semantics and contextual privacy
+risk, as illustrated in Figure 1. Applying the same protection
+strategy to all inputs, PRISM employs a soft gating mech-
+anism on the edge device to assess each user prompt and
+route it to one of three execution modes: (1) direct cloud
+inference for low-risk prompts; (2) sketch-based collabora-
+tion for moderately sensitive prompts; and (3) fully local
+generation for high-risk, privacy-critical queries. The mode
+decision is made by a logit-based soft classifier that com-
+bines named entity recognition (NER), contextual cues (e.g.
+first-person references, entity types) and a statistical risk
+score. After the gating module, the system follows one of
+three execution paths: direct cloud inference and edge-only
+generation proceed immediately using the corresponding
+model, while cloud–edge collaborative mode triggers addi-
+tional privacy-preserving procedures. Specifically, prompts
+in this mode are first obfuscated via a two-layer local dif-
+ferential privacy mechanism, then processed by the cloud to
+generate a semantic sketch, which is subsequently refined
+on the edge device to reconstruct a coherent and privacy-
+preserving response.
+To this end, we makes the following key contributions:
+• We propose PRISM, a novel privacy-aware routing
+framework for adaptive cloud–edge LLM inference.
+PRISM combines a context-aware gating mechanism
+with a three-mode execution pipeline (cloud, edge, and
+cloud–edge collaboration). In the collaborative mode,
+PRISM introduces a semantic modulation strategy that
+integrates adaptive two-layer local differential privacy
+with cloud-side sketch generation and edge-side refine-
+ment, enabling fine-grained, entity-level privacy control.
+• To support this framework, we construct a synthetic and
+context-rich instruction dataset covering four domains:
+medical, tourism, banking, and general knowledge. This
+design reflects diverse real-world use cases and allows
+evaluation under varying privacy demands.
+• We implement PRISM on a real-world cloud–edge plat-
+form and evaluate its performance under varying privacy
+budgets, systematically testing multiple combinations of
+edge-side SLMs and cloud-hosted LLMs. Our results
+demonstrate that PRISM adapts to heterogeneous de-
+ployments, consistently achieving better inference qual-
+ity, lower latency, and reduced edge-side energy con-
+sumption compared to uniform protection baselines.
+Framework Design
+This section details the design of PRISM, our privacy-aware
+cloud–edge inference framework. The system consists of
+three components: a user, a local edge device, and a remote
+cloud server. The edge device hosts an SLM, while the cloud
+server provides access to an LLM. Inference begins when a
+user sends a prompt to the edge device, where two mod-
+ules, Sensitivity Profiling and Soft Gating, analyze privacy
+risk and select an execution path: cloud, edge, or collabora-
+tion. For collaborative cases, PRISM applies Adaptive Two-
+Layer LDP to perturb sensitive entities and uses Cloud-Edge
+Semantic Sketch Collaboration to generate an abstract re-
+sponse on the cloud, which is then refined locally and re-
+turned to the user.
+Sensitivity Profiling for Context-Aware Routing
+We design a lightweight edge-side module to assess the
+privacy sensitivity of user prompts before routing. Given
+a promptP={x 1, x2, . . . , xn}consisting ofntokens,
+the module first extracts a set ofmnamed entitiesE=
+{e1, e2, . . . , em}using a named entity recognition (NER)
+
+
+--- PAGE 3 ---
+engine. It then produces two outputs: (1) a scalar risk score
+R(P)reflecting the overall privacy sensitivity of the prompt,
+and (2) a binary maskd∈ {0,1} m indicating which entities
+require protection.
+We first apply a fast named entity recognition (NER)
+engine (e.g., Presidio Analyzer) to extract entitiesE=
+{e1, e2, . . . , em}, where each entitye i has an associated cat-
+egory labelc i ∈ C, and we assign a predefined sensitivity
+weightw ci ∈[0,1]based on its category. These weights re-
+flect the relevance for privacy of each category of entity (for
+examplew PERSON > w NATIONALITY).
+We define a risk score for the prompt:
+R(P) =
+mX
+i=1
+wci ·I(e i),(1)
+whereI(e i)indicates whether the entity is present in the cur-
+rent input.
+To incorporate contextual signals, we define a binary in-
+dicator∆that activates when any private linguistic cue is
+detected:
+∆ = max
+xj ∈P
+I(xj ∈ F),(2)
+where the private context setFincludes both first-person
+pronouns and detected entities of typePERSON. Here,I[·]
+denotes the indicator function, and the condition evaluates
+whether any token in the promptPoverlaps with a pre-
+defined set of first-person pronouns or previously detected
+person-type entities.
+Each entitye i is conservatively flagged for protection if
+∆>0, producing the binary mask:
+di =
+1,if∆>0,
+0,otherwise. ,∀i∈ {1,2, ..., m}.(3)
+This module captures both statistical and contextual sig-
+nals cues on the edge devices. For instance, in the prompts
+(1)“I plan to travel solo to Tokyo for three days”and
+(2)“Which country is Tokyo located in?”, the entityTokyo
+appears in both but only the former implies private user in-
+tent due to the pronounI. These signals are forwarded to the
+later routing controller for decision-making.
+Soft Gating with Entropy-Regularized Routing
+To adaptively balance privacy, utility, and energy cost, we
+propose a soft gating mechanism that maps sensitivity indi-
+cators to a probability distribution over three routing paths.
+Rather than committing to a hard decision boundary, this
+approach enables nuanced, context-aware execution by pro-
+ducing soft routing scores. The gating module receives a fea-
+ture vectorz∈R 1+m derived from the sensitivity profiling
+subsection, including the risk scoreR(P)and the sensitivity
+maskd. These features are passed into a light-weight linear
+transformationf θ(·)followed by softmax normalization:
+π= softmax(f θ(z))∈R 3.(4)
+This yields a routing distributionπ= (π cloud, πcollab, πlocal)
+over the three execution strategies: direct cloud inference,
+I have Barcelona days off and
+I'm considering traveling to solo
+trip. It's a 6-day trip. Please
+help me plan the trip within a
+budget of 1264 USD.
+Sensitivity
+Profiling
+Soft
+Gating
+How many integers are in
+the solution of the
+inequality |x + 5| < 10 ?
+I was diagnosed with bipolar
+disorder last year. Should I be
+worried about my symptoms?
+Routing Controller
++
+Cloud Inference
+Cloud-Edge Inference
+Edge Inference
+1
+2
+low-risk prompt
+high-risk prompt
+medium-risk prompt
+User Prompts
+Routing Result
+Routing Phase (Processed on the Edge)
+Figure 2: Illustration of the PRISM routing phase, where the
+edge-side controller analyzes prompt sensitivity and softly
+routes requests across cloud, edge, or collaborative paths.
+cloud–edge collaboration, and complete edge-side genera-
+tion. To encourage confident routing while preserving flex-
+ibility, we introduce an entropy penalty over the output dis-
+tribution:
+Lgating =L task +λ· H(π),(5)
+whereL task is the downstream task loss (cross-entropy loss
+for generation),H(π) =− P
+j πj logπ j is the entropy of
+the soft routing scores, andλis a tunable hyperparameter.
+Lower entropy encourages confident decisions, while higher
+entropy accommodates uncertain or ambiguous cases.
+Figure 2 provides an illustrative overview of the soft gat-
+ing mechanism, showing how prompts of varying sensitivity
+are analyzed and softly routed to the most appropriate exe-
+cution pathway based on their privacy characteristics.
+At inference time, we select the most probable path by
+taking the top-1 decision from the soft routing distribution
+π, i.e.,arg max j πj. This deterministic selection ensures
+consistent privacy guarantees and avoids routing sensitive
+prompts to lower-protection paths due to randomness. Our
+formulation thus provides a principled and interpretable in-
+terface for integrating symbolic sensitivity signals with soft
+decision boundaries.
+Adaptive Two-Layer Local Differential Privacy
+In cloud–edge collaborative collaboration, prompts contain-
+ing sensitive entities must be encrypted before transmis-
+sion. Naive anonymization strategies, such as replacing a
+name with a generic token⟨NAME⟩, do not mitigate the risk
+of linkage attacks. For example, consider the two records:
+(1)“⟨NAME⟩owns a black dog and often goes for a walk
+after dinner. ”and (2)“The owner of the black dog throws
+rubbish on Tuesdays. ”Although the user’s name“Bob”has
+
+
+--- PAGE 4 ---
+been masked, the shared semantic content“Black Dog”al-
+lows an adversary to correlate the records and re-identify
+Bob. Worse, this cross-record inference also reveals behav-
+ioral details, such as Bob’s routine and habits, amplifying
+the risk of privacy beyond identity disclosure.
+Similarly, applying uniformε-LDP, either throughout the
+prompt or uniformly across all types of entities, intro-
+duces suboptimal trade-offs: the former may disrupt linguis-
+tic coherence, while the latter either underprotects sensi-
+tive entities or overly perturbs benign ones, affecting down-
+stream utility. Moreover, when noise is applied indiscrimi-
+nately, the cloud model receives syntactically valid but se-
+mantically distorted prompts, often yielding vague or eva-
+sive completions (e.g.,“I cannot provide information about
+⟨MASKED ENTITY⟩”).
+To address these issues, we propose atwo-layer adaptive
+LDP mechanismthat separately perturbs each entity’scate-
+goryandvalueusing independently allocated budgetsε 1 and
+ε2, such that the total budget is preserved:ε total =ε 1 +ε 2.
+The allocation is determined by the sensitivity weightw ci,
+which reflects how sensitive the categoryc i of entitye i is.
+This weight comes from our profiling module.
+ε1 =ε total · wci
+wci + (1−w ci)·α ,
+ε2 =ε total −ε 1,
+(6)
+whereα∈(0,1]is a tunable hyperparameter. This formu-
+lation ensures high-sensitivity categories (e.g.,NAME) re-
+ceive more category-level protection, while lower-sensitivity
+types (e.g.,NATIONALITY) allocate more to value-level ob-
+fuscation. This adaptive allocation supports flexible trade-
+offs without violatingε-LDP guarantees, following compo-
+sition rules in local privacy (Duchi, Jordan, and Wainwright
+2013). Whenw ci is high (e.g.,NAME, ID, DIAGNOSIS),
+more budget is allocated toε 1 to protect the entity type, re-
+ducing the risk of inferring sensitive categories. Conversely,
+for lowerw ci (e.g.,ORGANIZATION, NATIONALITY, LO-
+CATION), the mechanism allocates more toε 2 to preserve
+semantic utility while anonymizing the value.
+Both the category-layer and value-layer perturbation fol-
+low the Randomized Response (RR) mechanism, a canoni-
+cal construction for achievingε-LDP: in finite discrete do-
+mains (Wang et al. 2017).
+(1) Category-Layerε 1-LDP:
+p1 = exp(ε1)
+exp(ε1) +K 1 −1 , c ∗
+i =
+(
+ci w.p.p 1,
+̸=c i w.p. 1−p1
+K1−1 .
+(2) Value-Layerε 2-LDP:
+p2 = exp(ε2)
+exp(ε2) +K 2 −1 , e ∗
+i =
+(
+ei w.p.p 2,
+̸=e i w.p. 1−p2
+K2−1 .
+(7)
+Figure 3 illustrates the adaptive two-layer LDP workflow.
+After profiling, each entity undergoes privacy budget alloca-
+tion based on its category sensitivity weightw ci. The entity
+is then sequentially processed by two perturbation layers:
+"I'm considering traveling to New
+York in August with my friend Alice.
+It's a 6-day, 3481 EUR trip. Please
+help me plan my days off"
+User
+New York Alice 3481EURAugust 6-day
+User's Raw Prompt :
+Value
+CategoryLocationDatePerson MoneyDuration
+Location
+Date
+Person
+New 
+York
+Location
+California
+London
+Bibury Town
+Bibury 
+Town
+Location
+Date
+Person 2006
+Monday
+September
+Alice Date Monday
+Sample
+category given
+|K1|=3
+Sample
+value given
+|K2|=3
+"I'm considering
+traveling to Bibury Town
+in 2006 with my friend
+Monday. It's a fever,
+Mike trip. Please help
+me plan my days off"
+Noisy Prompt:
+Sensitivity
+Profiling
+A
+B
+1
+2
+Adaptive Two-Layer LDP
+(Processed on the Edge)
+ Cloud–Edge Collaborative Inference+
+Weight0.6 0.6 0.8 0.70.7
+Noisy
+Category Noisy
+Value
+3
+Figure 3: Adaptive Two-Layer LDP for Entity Obfuscation
+the first samples a noisy category label from the setCof
+sizeK 1 with probabilityp 1, and the second samples a value
+from the corresponding value setV ci of sizeK 2 with prob-
+abilityp 2. To illustrate the adaptive nature of the method,
+we show two representative cases. Type B entities (e.g.,
+NAME) are assigned high sensitivity weights and therefore
+undergo heavier category-level obfuscation to hide their se-
+mantic type. In contrast, type A entities (e.g.,LOCATION)
+are considered less sensitive; they retain their category la-
+bel while receiving stronger perturbation on the value level,
+ensuring semantic coherence of the prompt. This selective
+strategy enables better privacy–utility trade-offs, especially
+in resource-constrained cloud–edge deployments.
+Our method matches the optimalε-LDP design for fi-
+nite discrete domains (Wang et al. 2017), but extends it via
+category-aware allocation. Whenwci →1,ε 1 →ε total, max-
+imizing protection of the category. Whenw ci →0, the re-
+verse holds, preserving utility. Compared to static masking
+or uniform LDP, our risk-adaptive mechanism preserves se-
+mantic coherence by selectively perturbing high-risk enti-
+ties more aggressively while minimizing distortion on be-
+nign ones.
+Cloud-Edge Semantic Sketch Collaboration
+In our architecture, each input prompt first passes through
+a routing phase that determines the appropriate execution
+mode: edge-only, cloud-edge collaboration, or cloud-only,
+based on its assessed privacy risk and resource constraints.
+Prompts routed to the collaborative mode then undergo our
+adaptive two-layer LDP mechanism,producing a perturbed
+promptP ∗, whereP ∗ replaces sensitive entities inPusing
+randomized response. The resulting noisy prompt is directly
+transmitted to the cloud in plain text, avoiding the transmis-
+sion of embeddings and eliminating the need for synchro-
+
+
+--- PAGE 5 ---
+nized tokenizers or shared embedding spaces between de-
+vices.
+Given the perturbed promptP ∗, the cloud-side LLM
+Gcloud generates a semantic sketchS∈ T sketch using a few-
+shot in-context prompt using a demonstration setD cloud =
+{(P ∗(l), S(l))}k
+l=1. The generation context is constructed as
+Ccloud = [Dcloud,(P ∗, )], where indicates the sketch to be
+generated. The cloud model then produces:
+S=G cloud(Ccloud).(8)
+The sketchSadopts a concise, structured format and
+omits sensitive entities obfuscated inP ∗. This design en-
+sures (i)semantic alignment, preserving the original in-
+tent despite noise, and (ii)structural regularity, supporting
+downstream integration.
+Upon receiving the sketchS, the edge-side SLMG edge re-
+constructs the final response ˆRby conditioning on bothS
+and the original promptP, which remains locally available.
+Similarly, we define the edge-side demonstration set as
+Dedge ={(P (l), S(l), R(l))}k
+l=1, and construct the genera-
+tion context asC edge = [D edge,(P, S, )], where denotes
+the final response to be generated. The final response is then
+generated by the edge model:
+ˆR=G edge(Cedge).(9)
+This collaborative inference design preserves privacy
+while leveraging semantic abstraction for faithful and effi-
+cient response generation.
+To unify the overall decision and execution process, we
+present the complete PRISM inference pipeline in Algo-
+rithm 1. It integrates sensitivity-aware routing, entity-level
+perturbation via adaptive LDP, and collaborative generation
+with sketch-based semantic alignment. This algorithm for-
+malizes the end-to-end behavior of our framework across
+all execution modes, including edge-only, cloud-only, and
+cloud–edge collaboration.
+Analysis
+In this section, we provide a rigorous analysis of the pri-
+vacy properties of our selective-privacy cloud–edge infer-
+ence framework. Specifically, we establish the local dif-
+ferential privacy guarantees of our two-layer perturbation
+mechanism and characterize how sensitivity weights influ-
+ence budget allocation.
+Theorem 1(Two-Layer LDP Privacy Guarantee).LetM
+be the adaptive two-layer mechanism applied to a sensitive
+entitye i with categoryc i ∈ C(of sizeK 1) and value domain
+Vc∗
+i (of sizeK 2). The mechanism sequentially applies:
+1. Category-level randomized responseM 1 with budgetϵ 1,
+producingc ∗
+i ;
+2. Value-level randomized responseM 2 with budgetϵ 2, pro-
+ducinge ∗
+i .
+ThenM=M 2 ◦M 1 satisfies(ϵ 1 +ϵ 2)-local differential
+privacy over the pair(c i, ei).
+Proof.According to the definition ofε-local differential pri-
+vacy(Dagan, Glickman, and Magnini 2006; Dwork 2006), a
+Algorithm 1:PRISM Framework
+Input:User promptP={x 1, . . . , xn};
+Cloud demo setD cloud ={(P ∗(l), S(l))}k
+l=1;
+Edge demo setD edge ={(P (l), S(l), R(l))}k
+l=1;
+ModelsG cloud,G edge
+Output:Final response ˆR
+(R(P),d)←SENSITIVITYPROFILING(P);
+π←SOFTGATING([R(P),d]);
+mode←arg max j πj;
+ifmode=edge-onlythen
+return ˆR=G edge(P)
+ifmode=cloud-onlythen
+return ˆR=G cloud(P)
+ifmode=collaborativethen
+P ∗ ←TWOLAYERLDP(P,d);
+Ccloud ←[D cloud,(P ∗, )];
+S← G cloud(Ccloud);
+Cedge ←[D edge,(P, S, )];
+ˆR← G edge(Cedge);
+return ˆR
+mechanismMsatisfiesε-LDP if for any two distinct inputs
+x, x′ and any outputy, we have:
+Pr[M(x) =y]
+Pr[M(x ′) =y] ≤exp(ε).
+We now verify this condition for each component.
+Step 1: Category-level privacy.We apply a standard ran-
+domized response mechanism over the finite category do-
+mainCof sizeK 1, where the probability of outputting the
+true class isp 1 = exp(ε1)
+exp(ε1)+K1−1 ,and the remaining proba-
+bility mass(1−p 1)is distributed uniformly over theK 1 −1
+other categories:
+Pr[M1(ci) =c ∗
+i ] =
+(
+p1,ifc ∗
+i =c i,
+1−p1
+K1−1 ,ifc ∗
+i ̸=c i.
+For any two distinct inputsc i, c′
+i ∈ C, and any outputc ∗
+i ,
+we compute the likelihood ratio:
+Pr[M1(ci) =c ∗
+i ]
+Pr[M1(c′
+i) =c ∗
+i ] =
+
+
+
+p1
+1−p1
+K1 −1
+= exp(ε1),ifc ∗
+i =c i,
+1−p1
+K1 −1
+p1
+= 1
+exp(ε1) ,ifc ∗
+i =c ′
+i.
+In either case, the ratio is bounded: Pr[M1(ci)=c∗
+i ]
+Pr[M1(c′
+i)=c∗
+i ] ≤
+exp(ϵ1).Thus,M 1 satisfiesε 1-LDP.
+Step 2: Value-level privacy.Over the value domainV c∗
+i of
+sizeK 2, the randomized response mechanismM 2 outputs:
+Pr[M2(ei) =e ∗
+i ] =
+(
+p2 = exp(ε2)
+exp(ε2)+K2−1 ,ife ∗
+i =e i,
+1−p2
+K2−1 ,ife ∗
+i ̸=e i.
+A similar analysis shows that for any two distinct values
+ei, e′
+i, the likelihood ratio is bounded byexp(ε 2), soM 2
+
+
+--- PAGE 6 ---
+satisfiesε 2-LDP.Step 3: Composition.SinceM 1 andM 2
+are applied independently and sequentially to disjoint com-
+ponents(c i, ei), we apply the sequential composition theo-
+rem (Duchi, Jordan, and Wainwright 2013) to obtain:
+M(c i, ei) =M 2 ◦M 1 ⇒(ε 1 +ε 2)-LDP.
+This theorem guarantees that for each individually se-
+lected sensitive entity, our adaptive two-layer LDP provides
+bounded privacy leakage consistent with the allocated total
+budgetϵ total =ϵ 1 +ϵ 2.
+Theorem 2(Effect of Sensitivity Weight on Budget Alloca-
+tion).Letw ci ∈[0,1]be the sensitivity weight of category
+ci, and letε total >0be the total privacy budget. Define the
+allocation as:
+ε1 =ε total · wci
+wci + (1−w ci)·α , ε 2 =ε total −ε 1,
+whereα∈(0,1]is a tunable hyperparameter that controls
+the relative importance of value protection. Then:
+1. Whenw ci = 1, we haveε 1 =ε total,ε 2 = 0.
+2. Whenw ci = 0, we haveε 1 = 0,ε 2 =ε total.
+3.ε 1(wci)is monotonically increasing on[0,1];ε 2(wci)
+decreases monotonically.
+Proof.We analyze the function:
+ε1(wci) =ε total · wci
+wci + (1−w ci)·α , w ci ∈[0,1].
+Boundary Cases:
+• Whenw ci = 1, the fraction becomes 1
+1 = 1, soε 1 =
+εtotal, ε2 = 0.
+• Whenw ci = 0, the fraction becomes 0
+α = 0, soε 1 =
+0, ε2 =ε total.
+Monotonicity:Consider the derivative ofε 1(wci)with re-
+spect tow ci:
+dε1(wci)
+dwci
+=ε total · α
+((α−1)w ci −α) 2 .
+Note that the denominator is a square term and therefore
+always nonnegative. It equals zero if and only if:
+(α−1)w ci −α= 0⇔w ci = α
+α−1 .
+Sinceα∈(0,1], we haveα−1<0, so α
+α−1 <0,
+which lies outside the domainw ci ∈[0,1]. Therefore, the
+denominator is strictly positive throughout the valid domain.
+Moreover, since the numerator is the product ofα∈(0,1]
+andε total >0, it is strictly positive.
+Hence, the entire expression is strictly greater than zero
+for allw ci ∈[0,1], proving that the allocation function
+ε1(wci)is monotonically increasing, andε 2(wci) =ε total −
+ε1(wci)is strictly decreasing.
+This theorem confirms that higher category sensitivity
+weights allocate more budget to category-level perturbation
+(ε1), as changing the category of an entity induces greater
+semantic distortion, offering stronger protection for highly
+sensitive categories. Lower weights favor value-level noise
+(ε2) to preserve utility for less sensitive entities.
+Evaluation
+Evaluation Setting
+Dataset:To facilitate comprehensive evaluation under
+privacy-sensitive scenarios, we construct a semi-synthetic
+instruction dataset designed to emulate realistic user–LLM
+interactions across four representative application domains:
+(1)Tourism planning, covering user identities, travel bud-
+gets, and destinations; (2)Medical consultation, involving
+demographic attributes and symptom descriptions, partially
+adapted from the dataset used in PrivacyRestore (Zeng et al.
+2025); (3)Banking services, featuring transaction histories,
+account identifiers, and institutional details; and (4)General
+knowledge, drawn from MT-Bench (Zheng et al. 2023) as
+a non-sensitive dataset. Each domain contains 40 prompts
+with diverse phrasings and structured entity distributions,
+enabling controlled variation in contextual sensitivity. This
+dataset supports systematic, fine-grained benchmarking of
+privacy-aware LLM inference strategies.
+Environment Setup:We evaluate PRISM in a realistic
+cloud-edge deployment to reflect practical resource con-
+straints and latency characteristics. The edge-side model is
+deployed on a local workstation equipped with a NVIDIA
+RTX 3070 laptop GPU running Windows 10. We use the
+llama cpp pythonbackend to serve quantized SLMs, with
+the GPU offloading configuration set togpu layers=32. The
+cloud-side model is accessed via API calls to hosted LLMs
+The cloud performs sketch generation based on the per-
+turbed prompts received from the edge and returns the ab-
+stracted sketches for downstream reconstruction.
+Baselines:We evaluate our framework against the follow-
+ing representative baselines. (1)Uniform LDPadds Laplace
+noise to all input tokens and sends the perturbed prompt to
+the cloud for inference, followed by edge-side refinement
+without semantic sketching (Mai et al. 2024). (2)Selective
+LDPapplies LDP only to entities identified by the NER
+model (Shi et al. 2022), then performs cloud inference and
+edge refinement similarly. (3)Cloud-onlysends the entire
+unaltered prompt to a cloud-based LLM for inference. (4)
+Edge-onlyperforms inference locally on an edge device us-
+ing SLM with the original prompt.
+Evaluation Metrics:We evaluate each method using three
+key metrics. (1)Inference Qualityis assessed by GPT-4o-
+based scoring on a scale from 1 to 10, reflecting the rele-
+vance, coherence, and informativeness of the generated re-
+sponses (Zheng et al. 2023). (2)Energy Consumptionis
+measured in Joules using Windows-based power monitoring
+tools, reflecting the total energy consumed by the edge de-
+vice during the inference period. For cloud-only inference,
+this includes only the energy cost incurred by data transmis-
+sion and idle system operations on the edge, since the actual
+model execution occurs remotely on the cloud. (3)Comple-
+tion Timedenotes the end-to-end latency from prompt input
+to final response, indicating system responsiveness.
+Results
+Table 1 shows that PRISM achieves the best overall effi-
+ciency among privacy-preserving methods, with only 7.92 s
+completion time and 687 J energy consumption. This effi-
+
+
+--- PAGE 7 ---
+1e-2 1e-1 1e+0 1e+1 1e+2
+Privacy Budget ( )
+500
+1000
+1500
+2000
+2500Energy Consumption (J)
+PRISM
+Uniform LDP
+Selective LDP
+(a) Energy Consumption
+1e-2 1e-1 1e+0 1e+1 1e+2
+Privacy Budget ( )
+0
+5
+10
+15
+20
+25
+30
+35Completion Time (s)
+PRISM
+Uniform LDP
+Selective LDP (b) Completion Time
+1e-2 1e-1 1e+0 1e+1 1e+2
+Privacy Budget ( )
+4.5
+5.0
+5.5
+6.0
+6.5
+7.0
+7.5
+8.0Inference Quality
+PRISM
+Uniform LDP
+Selective LDP (c) Inference Quality
+Figure 4: Comparison of privacy-preserving methods across privacy budgets on three dimensions: (a) energy consumption in
+Joules, (b) completion time in seconds, and (c) inference quality evaluated by LLM as a judge.
+Method Ct.(s) Ec.(J) IQ.
+PRISM 7.92 687.16 6.88
+Uniform LDP 20.56 1707.6 5.72
+Selective LDP 21.22 1770.8 5.94
+Edge-Only 17.84 1573.9 5.09
+Cloud-Only5.13 296.27 8.14
+Table 1: Performance metrics across methods. Metrics in-
+clude completion time (Ct.), energy consumption (Ec.), and
+inference quality (IQ.). The best performance per metric is
+shown inbold.
+ciency stems from its adaptive routing mechanism, which
+sends non-sensitive prompts directly to the cloud, routes
+low-risk ones to cloud–edge inference, and retains highly
+sensitive prompts for local processing. While Cloud-only at-
+tains the best raw performance (5.13 s, 296 J, IQ = 8.14), it
+offers no privacy protection. In contrast, PRISM ranks sec-
+ond across all methods, and requires only 1.54×the latency
+and 2.32×the energy of Cloud-only, making it a favorable
+privacy–efficiency trade-off. Meanwhile, Uniform and Se-
+lective LDP methods incur over 20 s latency and 1700+ J
+energy due to indiscriminate or entity-based noise injection.
+Figure 4 illustrates the performance trends of three
+privacy-preserving methods across varying privacy budgets.
+We observe that PRISM consistently outperforms Uniform
+and Selective LDP in all three metrics, achieving notably
+lower energy consumption (e.g., 652 J vs. 1800+ J), shorter
+completion time (e.g., 8.8 s vs. 21+ s), and higher inference
+quality (up to 7.2 vs. 6.2 or lower). PRISM exhibits stable
+performance across privacy budgets. This robustness arises
+from its adaptive routing and minimal perturbation design,
+which avoids over-noising and computational waste while
+maintaining utility under strong privacy constraints.
+Table 2 presents the performance of PRISM in eight com-
+binations of cloud-edge models. We observe that all pairings
+deliver high inference quality (IQ≥6.9) with moderate la-
+tency (7.08–8.60 s) and low energy (632–739 J), demonstrat-
+ing the flexibility of PRISM in heterogeneous deployments.
+In particular, the combination of GPT-4o (L1) and Qwen1.5-
+1.8B (S2) achieves the fastest inference (7.08 s) and the low-
+est energy (632 J), while GPT-4o with StableLM (S3) yields
+the highest quality (7.16). Meanwhile, the Qwen3-235B
+(L2) variants offer a slightly slower response but match or
+exceed the quality of the generation (up to 7.22), underscor-
+ing the adaptability of PRISM to varying cloud / edge model
+capabilities.
+Model Combinations PRISM
+Ct.(s) Ec.(J) IQ.
+L1+S18.29 683.83 7.00
+L1+S27.08 632.246.91
+L1+S37.34 657.88 7.16
+L1+S47.35 653.62 5.28
+L2+S18.59 738.887.22
+L2+S28.60 739.59 7.06
+L2+S38.00 693.13 7.19
+L2+S48.11 698.10 7.19
+Table 2: Performance of PRISM across various combina-
+tions of cloud-side LLMs (L1:GPT-4o, L2:Qwen3-235B)
+and edge-side SLMs (S1:Phi-3.5-mini-3.5B, S2:Qwen1.5-
+1.8B, S3:StableLM-2-Zephyr-1.6B, S4:TinyLLaMA-1.1B).
+Conclusion
+This work presents PRISM, a novel privacy-aware
+cloud–edge inference framework that dynamically routes
+user prompts based on semantic sensitivity. By integrating
+an adaptive two-layer local differential privacy mechanism,
+and a semantic sketch-based collaboration protocol, PRISM
+enables efficient, privacy-preserving inference without com-
+promising utility. Comprehensive evaluations across four
+domains and eight model configurations demonstrate that
+PRISM achieves superior performance trade-offs, incurring
+only 1.54× latency and 2.32× energy overhead compared to
+cloud-only inference, while preserving strong privacy guar-
+antees and maintaining high output quality.
+As future work, we plan to extend PRISM to support
+collaborative inference across multiple edge devices, each
+equipped with an SLM. This setting introduces new chal-
+lenges in routing, load balancing, and cloud-edge-device co-
+ordination, which we aim to address through decentralized
+scheduling and federated optimization mechanisms.
+
+
+--- PAGE 8 ---
+References
+Acharya, J.; Bonawitz, K.; Kairouz, P.; Ramage, D.; and
+Sun, Z. 2020. Context Aware Local Differential Privacy.
+InProceedings of the 37th International Conference on Ma-
+chine Learning (ICML 2020), 52–62.
+Alayrac, J.-B.; Donahue, J.; Luc, P.; Miech, A.; Barr, I.; et al.
+2022. Flamingo: A Visual Language Model for Few-Shot
+Learning. InAdvances in Neural Information Processing
+Systems (NeurIPS 2022), 23716–23736.
+Cai, H.; Dong, H.; Wang, H.; Li, K.; and Akan, O. B. 2025a.
+Graph Representation-based Model Poisoning on Federated
+LLMs in CyberEdge Networks.arXiv:2507.01694.
+Cai, H.; Wang, H.; Dong, H.; Li, K.; and Akan, O. B. 2025b.
+Graph Representation-based Model Poisoning on the Het-
+erogeneous Internet of Agents. arXiv:2511.07176.
+Chen, M.; Tworek, J.; Jun, H.; Yuan, Q.; et al. 2021.
+Evaluating Large Language Models Trained on Code.
+arXiv:2107.03374.
+Dagan, I.; Glickman, O.; and Magnini, B. 2006. The PAS-
+CAL Recognising Textual Entailment Challenge. InPro-
+ceedings of the Machine Learning Challenges Workshop
+(MLCW 2006), 177–190.
+Drori, I.; Zhang, S.; Shuttleworth, R.; Tang, L.; Lu, A.; Ke,
+E.; Liu, K.; Chen, L.; Tran, S.; Cheng, N.; et al. 2022. A
+Neural Network Solves, Explains, and Generates University
+Math Problems by Program Synthesis and Few-Shot Learn-
+ing at Human Level.Proceedings of the National Academy
+of Sciences (PNAS), 119(32): e2123433119.
+Du, M.; Yue, X.; Chow, S. S. M.; Wang, T.; Huang, C.;
+and Sun, H. 2023. DP-Forward: Fine-Tuning and Inference
+on Language Models with Differential Privacy in Forward
+Pass. InProceedings of the 2023 ACM SIGSAC Conference
+on Computer and Communications Security (CCS 2023),
+1512–1526.
+Duchi, J. C.; Jordan, M. I.; and Wainwright, M. J. 2013. Lo-
+cal Privacy and Statistical Minimax Rates. InProceedings of
+the 54th Annual IEEE Symposium on Foundations of Com-
+puter Science (FOCS 2013), 429–438.
+Dwork, C. 2006. Differential Privacy. InProceedings of the
+33rd International Colloquium on Automata, Languages,
+and Programming (ICALP 2006), 1–12.
+Grattafiori, A.; Dubey, A.; Jauhri, A.; Pandey, A.; Ka-
+dian, A.; et al. 2024. The LLaMA 3 Herd of Models.
+arXiv:2407.21783.
+Hurst, A.; Lerer, A.; Goucher, A. P.; Perelman, A.; Ramesh,
+A.; et al. 2024. GPT-4o System Card.arXiv:2410.21276.
+Jin, H.; and Wu, Y . 2024. CE-CoLLM: Efficient and Adap-
+tive Large Language Models Through Cloud-Edge Collabo-
+ration.arXiv:2411.02829.
+Kweon, S.; Kim, J.; Kwak, H.; Cha, D.; Yoon, H.; Kim,
+K.; Yang, J.; Won, S.; and Choi, E. 2024. EHRNoteQA:
+An LLM Benchmark for Real-World Clinical Practice Using
+Discharge Summaries. InAdvances in Neural Information
+Processing Systems (NeurIPS 2024), 124575–124611.
+Li, B.; Jiang, Y .; Gadepally, V .; Tiwari, D.; et al. 2024. LLM
+Inference Serving: Survey of Recent Advances and Oppor-
+tunities.arXiv:2407.12391.
+Li, S.; Wang, H.; Xu, W.; Zhang, R.; Guo, S.; Yuan, J.;
+Zhong, X.; Zhang, T.; and Li, R. 2025. Collaborative Infer-
+ence and Learning between Edge SLMs and Cloud LLMs:
+A Survey of Algorithms, Execution, and Open Challenges.
+arXiv:2507.16731v1.
+Lin, S.; Hua, W.; Wang, Z.; Jin, M.; Fan, L.; and Zhang,
+Y . 2025a. EmojiPrompt: Generative Prompt Obfuscation
+for Privacy-Preserving Communication with Cloud-based
+LLMs. InProceedings of the 2025 Conference of the North
+American Chapter of the Association for Computational
+Linguistics (NAACL 2025), 12342–12361.
+Lin, Z.; Wei, W.; Chen, Z.; Lam, C.-T.; Chen, X.; Gao,
+Y .; and Luo, J. 2025b. Hierarchical Split Federated Learn-
+ing: Convergence Analysis and System Optimization.IEEE
+Transactions on Mobile Computing, 24(10): 9352–9367.
+Lin, Z.; Zhang, Y .; Chen, Z.; Fang, Z.; Wu, C.; Chen, X.;
+Gao, Y .; and Luo, J. 2025c. LEO-Split: A Semi-Supervised
+Split Learning Framework over LEO Satellite Networks.
+IEEE Transactions on Mobile Computing.
+Lin, Z.; Zhu, G.; Deng, Y .; Chen, X.; Gao, Y .; Huang,
+K.; and Fang, Y . 2024. Efficient Parallel Split Learning
+Over Resource-Constrained Wireless Edge Networks.IEEE
+Transactions on Mobile Computing, 23(10): 9224–9239.
+Mai, P.; Yan, R.; Huang, Z.; Yang, Y .; and Pang, Y . 2024.
+Split-and-Denoise: Protect Large Language Model Infer-
+ence with Local Differential Privacy. InProceedings of the
+41st International Conference on Machine Learning (ICML
+2024), 1–20.
+Miao, X.; Oliaro, G.; Zhang, Z.; Cheng, X.; Jin, H.; Chen, T.;
+and Jia, Z. 2025. Towards Efficient Generative Large Lan-
+guage Model Serving: A Survey from Algorithms to Sys-
+tems.ACM Computing Surveys, 58(1): 1–37.
+Qu, G.; Chen, Q.; Wei, W.; Lin, Z.; Chen, X.; and Huang, K.
+2025. Mobile Edge Intelligence for Large Language Mod-
+els: A Contemporary Survey.IEEE Communications Sur-
+veys & Tutorials.
+Shi, W.; Cui, A.; Li, E.; Jia, R.; and Yu, Z. 2022. Selective
+Differential Privacy for Language Modeling. InProceed-
+ings of the 2022 Conference of the North American Chapter
+of the Association for Computational Linguistics (NAACL
+2022), 2848–2859.
+Staab, R.; Vero, M.; Balunovic, M.; and Vechev, M. 2024.
+Beyond Memorization: Violating Privacy via Inference with
+Large Language Models. InProceedings of the Twelfth In-
+ternational Conference on Learning Representations (ICLR
+2024).
+Wang, T.; Blocki, J.; Li, N.; and Jha, S. 2017. Locally
+Differentially Private Protocols for Frequency Estimation.
+InAdvances in Neural Information Processing Systems 30
+(NeurIPS 2017), 729–745.
+Yang, A.; Li, A.; Yang, B.; Zhang, B.; Hui, B.; et al. 2025.
+Qwen3 Technical Report.arXiv:2505.09388.
+
+
+--- PAGE 9 ---
+Zeng, Z.; Wang, J.; Yang, J.; Lu, Z.; et al. 2025. Priva-
+cyRestore: Privacy-Preserving Inference in Large Language
+Models via Privacy Removal and Restoration. InProceed-
+ings of the Association for Computational Linguistics (ACL
+2025), 10821–10855.
+Zhan, H.; Zhang, X.; Tan, H.; Tian, H.; Yong, D.; Zhang,
+J.; and Li, X.-Y . 2025. PICE: A Semantic-Driven Progres-
+sive Inference System for LLM Serving in Cloud-Edge Net-
+works.arXiv:2501.09367.
+Zheng, L.; Chiang, W.-L.; Sheng, Y .; Zhuang, S.; et al.
+2023. Judging LLM-as-a-Judge with MT-Bench and Chat-
+bot Arena. InAdvances in Neural Information Processing
+Systems (NeurIPS 2023), 46595–46623.
+Zhu, P.; and Yang, T. 2025. CE-LSLM: Efficient Large-
+Small Language Model Inference and Communication via
+Cloud-Edge Collaboration.arXiv:2505.14085.
+
+
+--- PAGE 10 ---
+Appendix for
+PRISM: Privacy-Aware Routing for Adaptive Cloud–Edge
+LLM Inference via Semantic Sketch Collaboration
+Appendix
+This appendix provides additional theoretical analyses, implementation details, and experimental results to support the
+findings presented in the main paper. The contents are organized as follows:
+• Appendix A: PRISM Architecture and Model Settings
+• Appendix B: Theoretical Extensions and Proof Sketches
+A PRISM Architecture and Model Settings
+A.1 Overview
+The PRISM framework consists of four primary components deployed across edge and cloud environments:
+• Edge-side Entity Profiler : Performs fine-grained sensitivity detection over user prompts using a lightweight
+named entity recognition (NER) module.
+• Soft Routing Gater: A lightweight neural gating module that maps symbolic sensitivity features to a soft proba-
+bility distribution over three execution paths (cloud-only, edge-only, and collaboration). It is trained with entropy
+regularization to balance privacy risk, utility, and energy efficiency.
+• Adaptive Two-Layer LDP Module: Applies hierarchical perturbations over sensitive entities based on entity type
+and content value.
+• Cloud–Edge Semantic Collaboration Module: Generates abstract sketches on the cloud-hosted LLM, which are
+then decoded and refined on the edge-side small language model (SLM).
+The architecture supports flexible configurations of SLMs and LLMs, enabling deployment across a range of
+hardware environments.
+A.2 Small Language Models (SLMs)
+We evaluate PRISM with multiple lightweight SLMs deployed on edge devices. All models are loaded in GGUF
+format and quantized to reduce memory and latency overhead. The following models are used in our experiments:
+Model Name Parameters Quantization File
+TinyLLaMA Chat 1.1B Q8 0 tinyllama-1.1b-chat-v1.0.Q8 0.gguf
+Phi-3.5 Mini Instruct 3.8B Q6 K L Phi-3.5-mini-instruct-Q6 K L.gguf
+StableLM Zephyr 1.6B Q6 K stablelm-2-zephyr-1 6b.Q6 K.gguf
+Qwen1.5 Chat 1.8B Q6 K qwen1 5-1 8b-chat-q6 k.gguf
+Table 1: Edge-deployed SLMs used in PRISM evaluation.
+
+
+--- PAGE 11 ---
+All SLMs are run on consumer-grade GPUs (e.g., NVIDIA RTX 3070 laptop GPU) with llama.cpp-based
+inference. For latency and energy profiling, models are launched in a single-batch, no-streaming configuration.
+A.3 Cloud-side LLM
+We use GPT-4o (OpenAI, 2024) as the backbone for cloud-side inference and sketch generation. All API-based inter-
+actions follow OpenAI’s default chat-completion endpoint with system-level few-shot prompting. Model temperature
+is set to 0.7 unless otherwise specified.
+A.4 Soft Gating with Entropy-Regularized Routing
+The PRISM framework employs a soft gating module to compute context-aware routing distributions over three exe-
+cution paths: cloud-only, edge-only, and cloud–edge collaboration.
+Given a prompt P ={x1,x 2,...,xn}, we extract a set of named entities E ={e1,...,em}, each associated
+with a binary sensitivity indicator di∈{0, 1}. We also compute an overall scalar risk score R(P )∈R. These are
+concatenated to form the input feature vector z = [R(P); d]∈R1+m. For consistency, the sensitivity mask d is
+padded or truncated to a fixed dimensionM during training.
+The input z is processed by a lightweight neural mapping functionfθ(·), producing a softmax-normalized routing
+probability:
+π = softmax(fθ(z))∈R3
+where π = (πcloud,πcollab,πedge). To encourage confident but flexible routing, we train the model with an entropy-
+regularized objective:
+Lgating =Ltask +λ·H(π), H(π) =−
+∑
+j
+πj logπj
+We setλ= 0.4 by default. The task lossLtask is the cross-entropy between the predicted path and the ground-truth
+label from routing supervision.
+At inference time, the most probable routing decision is selected deterministically viaarg maxjπj, ensuring stable
+behavior and avoiding sensitive prompt misrouting due to sampling randomness.
+A.5 Two-Layer Local Differential Privacy
+We adopt a hierarchical entity-aware LDP mechanism:
+• Layer 1 (Type-level flipping): Randomly flips entity type with privacy budgetϵ1.
+• Layer 2 (Value-level masking): Replaces entity content using a type-specific replacement distribution with pri-
+vacy budgetϵ2.
+We fix total privacy budget ϵ= ϵ1 +ϵ2, and allocate budget proportionally based on entity category risk (e.g.,
+NAME vs. LOCATION). In our main experiments, we setϵ= 1.0, withϵ1 = 0.3,ϵ2 = 0.7.
+A.6 Sketch Generation and Edge Denoising
+The cloud-side sketch is generated via a few-shot prompting scheme. A set of semantic abstraction examples is
+prepended to the user query, guiding the LLM to produce concise, structured summaries. Sketches are limited to 100
+tokens. On the edge, the sketch is passed to the SLM for final response generation via a template-based decoding
+scheme.
+To guide the cloud-side LLMGcloud in generating sketches from perturbed prompts P∗, we design a diverse few-
+shot demonstration setDcloud ={(P∗(l),S (l))}k
+l=1, covering multiple obfuscation scenarios including value replace-
+ment, category mismatches, and mixed-type distortions. Each sketch is structured, privacy-respecting, and intent-
+aligned, providing inductive signals for semantic abstraction.
+Below are selected examples from three categories (Tourism, Medical, Banking), showing how entity-level noise
+is handled during sketch generation.
+Few-shot Demonstration Set for Sketch Generation
+
+
+--- PAGE 12 ---
+Tourism Examples
+• Clean Input: ”I plan to travel solo to Tokyo for two days; help me design my itinerary. ”Sketch: Day 1: Arrival,
+local exploration; Day 2: Cultural visit, outdoor activity, local dining.
+• Category Obfuscated (Location → Person): ”I plan to travel solo to Emma for two days; help me design
+my itinerary. ”Sketch: Day 1–2: Orientation, general city exploration, museum or park, casual dining, outdoor
+walk.
+• Mixed Obfuscation: ”I plan to travel solo to JPMorgan for five days with my friend Elon. ”Sketch: Day 1–5:
+Destination orientation, historical sites, social activities, structured itinerary with flexibility.
+Medical Examples
+• Clean Input: ”A 28-year-old female patient named Emma reports symptoms: headache, dizziness. ” Sketch:
+Demographics noted; Symptoms logged; Plan: Neurological exam, imaging, specialist referral.
+• Category Obfuscated (Person → Organization): ”A 28-year-old female patient named IBM reports symp-
+toms: headache, dizziness. ”Sketch: Symptoms documented; Possible stress-related or neurological; Diagnos-
+tics recommended.
+• Value Obfuscated: ”A 42-year-old female patient named Google reports symptoms: nausea and fatigue. ”
+Sketch: Patient history recorded; Symptom profile analyzed; Diagnostics planned.
+Banking Examples
+• Clean Input: ”I want to file a dispute regarding a charge of $10 on my Chase card. ”Sketch: Dispute initiated;
+Amount and institution recorded; Resolution timeline outlined.
+• Category Obfuscated (Bank → Person): ”I want to file a dispute regarding a charge of $10 on my Alice card. ”
+Sketch: Dispute recorded; Possible merchant error; Review process initiated.
+• Mixed Obfuscation: ”I want to file a dispute regarding a charge of $25 on my Emma account. ”Sketch: Charge
+issue reported; Card/entity obfuscated; Process outlined for user assistance.
+Guidelines Enforced During Sketch Generation
+• Sketches are structured outlines, not full responses.
+• Use concise, semantically aligned formats across categories.
+• Obfuscation is realized via entity-value substitution, not placeholder tokens.
+• Maintain abstraction consistency even under semantic distortion.
+• Do not attempt to correct or infer true sensitive entities.
+• Each sketch must remain interpretable and adequate for downstream denoising.
+Few-shot Demonstration Set for Edge-side Denoising and Response Generation
+Each example illustrates how the edge-side model reconstructs the final response ˆR based on the original prompt
+P and the cloud-generated sketch S (derived from perturbed P∗). Sketches may omit sensitive entities, which are
+recovered using the clean promptP at the edge.
+
+
+--- PAGE 13 ---
+Tourism Domain
+Example 1 (Clean Sketch)
+Prompt (P): “I plan to travel solo to Tokyo for two days; help me design my itinerary. ”
+Sketch (S): “Day 1: Arrival and exploration; Day 2: Cultural visit and local experience. ”
+Response ( ˆR): “Sure! Here’s a two-day itinerary for your Tokyo trip: Day 1: Morning – arrive and settle in;
+Afternoon – explore Shibuya and Meiji Shrine; Evening – try local ramen shops. Day 2: Morning – visit Asakusa and
+Senso-ji Temple; Afternoon – stroll in Ueno Park; Evening – Tokyo Tower view and sushi dinner. ”
+Example 2 (Obfuscated Cloud Sketch)
+Prompt (P): “I plan to travel solo to Tokyo for two days; help me design my itinerary. ”
+Sketch (S): “Day 1: Arrival and destination orientation; Day 2: Cultural/historical visit, local dining. ”
+Response ( ˆR): “Absolutely! For your Tokyo trip: Day 1: Check into your hotel, explore Shinjuku, visit Tokyo
+Metropolitan Building. Day 2: Start with Meiji Shrine, then visit the Edo-Tokyo Museum, and enjoy dinner in a local
+izakaya. ”
+Medical Domain
+Example 3 (Clean Sketch)
+Prompt (P): “A 28-year-old female patient named Emma reports symptoms: headache and blurred vision. ”
+Sketch (S): “Demographics noted; Symptoms: Neurological; Plan: Imaging, specialist referral. ”
+Response ( ˆR): “Emma, a 28-year-old female, presents with headache and blurred vision. Recommend neurological
+exam, MRI brain imaging, and referral to neurology. ”
+Example 4 (Obfuscated Cloud Sketch)
+Prompt (P): “A 28-year-old female patient named Emma reports symptoms: headache and blurred vision. ”
+Sketch (S): “Adult patient with neurological symptoms; plan includes imaging and specialist evaluation. ”
+Response ( ˆR): “Patient Emma, 28 years old, presents with headache and blurred vision. Schedule cranial MRI and
+consult neurology for further assessment. ”
+Banking Domain
+Example 5 (Clean Sketch)
+Prompt (P): “I want to file a dispute for a $20 charge on my Chase card ending in 1234. ”
+Sketch (S): “Dispute initiated for transaction; card identified; review and resolution process triggered. ”
+Response ( ˆR): “Understood. You’ve initiated a dispute for a $20 charge on your Chase card ending in 1234. We will
+review the transaction and notify you within 5–7 business days. ”
+Example 6 (Obfuscated Cloud Sketch)
+Prompt (P): “I want to file a dispute for a $20 charge on my Chase card ending in 1234. ”
+Sketch (S): “Dispute filed for unknown card provider; steps include review and provisional credit. ”
+Response ( ˆR): “Thanks for reporting. You’ve filed a dispute on a $20 charge with Chase. We’ve started the review
+and will apply provisional credit if appropriate. ”
+Edge-side Sketch-to-Response Prompting Guidelines
+• Use the original prompt P to recover personalized semantics lost during LDP masking.
+• Use sketch S as structural guidance to organize the response flow.
+• Ensure the reconstructed response preserves private context fromP while respecting the semantic plan fromS.
+• Do not override or contradict sketch structure unless required by critical details inP .
+• Favor fluent, context-specific responses (not merely copying sketch items).
+• Include named entities, temporal information, and personalized wording from P .
+
+
+--- PAGE 14 ---
+B Theoretical Extensions and Proof Sketches
+B.1 Theorem: Privacy Composition for Multiple Sensitive Entities
+Definition. Consider a user prompt containing n sensitive entities{e1,e 2,...,en}categorized intom types. Let C
+be the set of possible categories with |C|= K1, and let each category c∈C have a finite value domain Vc with
+maximum sizeK2. The adaptive two-layer LDP mechanismM is applied to eachei as:
+1. Category-level randomized response M (c) with privacy budgetϵ1, producingc∗
+i ;
+2. Value-level randomized response M (v) with budgetϵ2, producinge∗
+i∈Vc∗
+i .
+Define the combined mechanismM (n) as applyingM independently to eachei, yieldingP∗={e∗
+1,...,e∗
+n}.
+Theorem. For anyϵ1,ϵ2≥0, the mechanismM (n) satisfiesϵtotal = (ϵ1+ϵ2)-LDP with respect to any single-entity
+change, regardless ofn. Furthermore, changing alln entities leads to at mostn(ϵ1 +ϵ2)-LDP.
+Proof Sketch. For any adjacent promptsP andP′differing in only one entityej, we compute:
+Pr[M (n)(P ) =P∗]
+Pr[M (n)(P′) =P∗] = Pr[M(ej) =e∗
+j]
+Pr[M(e′
+j) =e∗
+j]≤eϵ1+ϵ2.
+All other terms cancel due to independence. HenceM (n) is (ϵ1 +ϵ2)-LDP.
+The group privacy extension follows directly: forg modified entities, we apply the composition theorem, yielding
+privacy loss≤g(ϵ1 +ϵ2).
+Discussion. This shows that the per-entity privacy guarantee holds even as n grows, and total leakage scales
+linearly with the number of changed entities, as expected in parallel composition. Our scheme ensures bounded
+leakage per sensitive token without amplification.
+B.2 Theorem: Bounded Information Leakage in Entropy-Regularized Soft Gating
+Definition. Letπ(x) = [πcloud(x),πcollab(x),πedge(x)] be the routing distribution computed via softmax over logits
+fθ(x), optionally scaled by temperatureT . The gating module is trained with:
+Lgating =Ltask(π(x)) +λ·H(π(x)),
+whereH(π) =−∑
+jπj lnπj is the entropy regularizer, andλ>0.
+Theorem. The soft routing outputπ(x) satisfies:
+1. maxjπj(x)≤pmax < 1, i.e., no hard routing occurs;
+2. Entropy H(π(x))≥Hmin > 0 for allx;
+3. As λ→∞,π(x)→( 1
+3, 1
+3, 1
+3), and information leakage→0;
+4. As λ→0,π(x) becomes peaked, and leakage approaches log 3 bits.
+Proof Sketch. At optimality, softmax ensures:
+πj(x) = exp(−Lj/λ)∑
+k exp(−Lk/λ).
+The maximum componentπmax(x) is bounded:
+πmax(x)≤ 1
+1 + 2 exp(−∆/λ) < 1,
+where ∆ = max i̸=j(Lj−Li). The entropy is minimized when oneπj is dominant:
+Hmin =−[pmax lnpmax + (1−pmax) ln(1−pmax)],
+which remains> 0 under finiteλ. Therefore, soft gating ensures bounded confidence and limits information leakage.
+In the limitλ→∞, allπj→1/3 andH(π)→ln 3.
+Implication. Entropy regularization introduces a privacy knob in gating decisions. By settingλappropriately, we
+bound how confidently the system routes based on sensitive inputs, mitigating privacy leakage through control flow
+itself.
+
+
+--- PAGE 15 ---
+Model PRISM Edge-Only Cloud-Only
+Ct.(s) Ec.(J) IQ. Ct.(s) Ec.(J) IQ. Ct.(s) Ec.(J) IQ.
+(L1) GPT-4o+ (S1) Phi-3.5-mini-3.5B 8.29 683.83 7.00 15.98 1393.88 5.19 5.22 271.27 8.28
+(L1) GPT-4o+ (S2) Qwen1.5-1.8B 7.08 632.24 6.91 17.29 1540.33 5.59 - - -
+(L1) GPT-4o+ (S3) Stablelm-2-zephyr-1.6B 7.34 657.88 7.16 18.57 1627.46 4.94 - - -
+(L1) GPT-4o+ (S4) Tinyllama-1.1B 7.35 653.62 5.28 19.50 1734.24 4.62 - - -
+(L2) Qwen3-235B+ (S1) Phi-3.5-mini-3.5B 8.59 738.88 7.22 - - - 5.04 321.28 8.01
+(L2) Qwen3-235B+ (S2) Qwen1.5-1.8B 8.60 739.59 7.06 - - - - - -
+(L2) Qwen3-235B+ (S3) Stablelm-2-zephyr-1.6B 8.00 693.13 7.19 - - - - - -
+(L2) Qwen3-235B+ (S4) Tinyllama-1.1B 8.11 698.10 7.19 - - - - - -
+Table 2: Performance comparison of PRISM, Edge-Only, and Cloud-Only execution modes across various LLM–SLM
+pairs. For each metric (completion time, energy consumption, inference quality), we highlight the best result in bold.

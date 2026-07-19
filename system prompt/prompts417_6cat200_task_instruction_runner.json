@@ -1,0 +1,506 @@
+[
+  {
+    "id": "Prompt417-380",
+    "prompt_label": "Multimodal Math Reasoning Query Example",
+    "paper_title": "Progressive Multimodal Reasoning via Active Retrieval",
+    "prompt_text": "Question: As shown in the figure, a circle is drawn with vertex C of the square as the center. What is the measure of the central angle ∠ECF? ( ) °\nOptions: A. 45; B. 60; C. 72; D. 90; E. No correct answer\nAnswer:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.180.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_161_to_180",
+      "source_batch_file": "",
+      "original_prompt_category": "benchmark_prompt_example",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-010",
+    "prompt_label": "few-shot claim extraction prompt skeleton",
+    "paper_title": "Portuguese Automated Fact-checking: Information Retrieval with Claim Extraction",
+    "prompt_text": "Input: [Example Text 1]\nClaim: [Example Claim 1]\nInput: [Actual Text]\nClaim:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.3.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "claim_extraction_prompt",
+      "text_sha256_16": "048ccef97e5c86bc",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-268",
+    "prompt_label": "Standard Alpaca Template",
+    "paper_title": "Self-Distillation Bridges Distribution Gap in Language Model Fine-Tuning",
+    "prompt_text": "Below are an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.58.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_51_to_70",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-091",
+    "prompt_label": "BAD / MMLU Prompt Instructions",
+    "paper_title": "Wait, that’s not an option: LLMs Robustness with Incorrect Multiple-Choice Options",
+    "prompt_text": "Prompt Type | Instruction\nneutral | (no additional instructions)\neasy | The answer may not be in the options.\nstandard | (no additional instructions)\nhard | You must choose exactly one option.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.75.pdf",
+      "venue": "",
+      "page": "",
+      "source_group": "",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_variants",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-004",
+    "prompt_label": "main claim extraction prompt",
+    "paper_title": "Portuguese Automated Fact-checking: Information Retrieval with Claim Extraction",
+    "prompt_text": "What is the main fact presented in the text?\n1. Extract a passage of up to 20 words from the following text.\n2. Return only the claim, without any title or preamble.\nText: [INPUT TEXT]\nClaim:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.3.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "claim_extraction_prompt",
+      "text_sha256_16": "bc7c5e89232e79e4",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-341",
+    "prompt_label": "Prompt A",
+    "paper_title": "Token Prepending: A Training-Free Approach for Eliciting Better Sentence Embeddings from LLMs",
+    "prompt_text": "The representative word for sentence <PST> '[TEXT]' is:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.159.pdf",
+      "venue": "ACL Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_91_100_acl2025_151_160",
+      "source_batch_file": "",
+      "original_prompt_category": "embedding_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-384",
+    "prompt_label": "Direct Answer Training Template",
+    "paper_title": "Teaching Vision-Language Models to Ask: Resolving Ambiguity in Visual Questions",
+    "prompt_text": "User: <Img>\n {Q}.\nAssistant: {GT}",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.182(1).pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_181_to_200",
+      "source_batch_file": "",
+      "original_prompt_category": "dialogue_prompt_template",
+      "text_sha256_16": "8c16bb64a19d0fb2",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-285",
+    "prompt_label": "Zero-shot CoT Prompt",
+    "paper_title": "Active Prompting with Chain-of-Thought for Large Language Models",
+    "prompt_text": "Let's think step by step.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.73.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_71_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "cot_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-241",
+    "prompt_label": "Zero-shot Translation Prompt - En→Ru",
+    "paper_title": "Unveiling the Power of Source: Source-based Minimum Bayes Risk Decoding for Neural Machine Translation",
+    "prompt_text": "Переведите следующий текст с английского на русский.\nАнглийский:\n{source_text}\nРусский:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.149.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_131_to_150",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-326",
+    "prompt_label": "Preference Property Annotation Prompt",
+    "paper_title": "Dissecting Human and LLM Preferences",
+    "prompt_text": "Given a user query and two assistant responses, annotate whether each response exhibits the specified property. Use the property definition and provide a score or label according to the annotation scheme.\n\nUser Query:\n{query}\n\nResponse A:\n{response_a}\n\nResponse B:\n{response_b}\n\nProperty:\n{property_name}\n\nDefinition:\n{property_definition}\n\nOutput the annotation for each response and, when needed, a brief justification.",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.99.pdf",
+      "venue": "ACL Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_91_100_acl2025_151_160",
+      "source_batch_file": "",
+      "original_prompt_category": "annotation_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-206",
+    "prompt_label": "Article Rewrite Prompt",
+    "paper_title": "Hierarchical Level-Wise News Article Clustering via Multilingual Matryoshka Embeddings",
+    "prompt_text": "Rewrite, in the article’s own language (e.g., Spanish, English, Finnish, etc...), the following news article with a different style as if it came from a different website while maintaining the original meaning of the article.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.124.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_111_to_130",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-028",
+    "prompt_label": "RARR answer verification prompt skeleton",
+    "paper_title": "Correcting Hallucinations in News Summaries: Exploration of Self-Correcting LLM Methods with External Knowledge",
+    "prompt_text": "I will check some things you said.\n\n1. You said: claim\n2. I checked: query\n3. I found this article: evidence\n4. Reasoning:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.9.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "answer_verification_prompt",
+      "text_sha256_16": "d9f0510023eadd0c",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-153",
+    "prompt_label": "GPT-4o Image Caption Engineering Prompt",
+    "paper_title": "In-the-wild Audio Spatialization with Flexible Text-guided Localization",
+    "prompt_text": "Task instruction:\nBased on a frame of video, return a caption about sound source's attributes.\nIdentify sound sources description based on frame, you can ...\n\nSound Sources:\nCello, Piano\n\nEnriched captions:\nThe sound of cello is located left behind.\nThe sound of piano is located right front.\nThe sound of cello is located 3 m away.\nThe sound of piano is located 2 m away.\n\nOutput captions",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.98.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_91_to_110",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-189",
+    "prompt_label": "Zero-shot Hate Speech Classification Prompt",
+    "paper_title": "HATEDAY: Insights from a Global Hate Speech Dataset Representative of a Day on Twitter",
+    "prompt_text": "Here is a social media post: [POST]. Classify this post as “hateful” or “non-hateful”. Only return the predicted class.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.115.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_111_to_130",
+      "source_batch_file": "",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-163",
+    "prompt_label": "Politeness Task Prompt",
+    "paper_title": "Beyond Demographics: Fine-tuning Large Language Models to Predict Individuals’ Subjective Text Perceptions",
+    "prompt_text": "'user': '**Question**: Consider you read this email from a colleague, how polite do you think it is?\\n**Email**: {TEXT}\\n(A) not polite at all\\n(B) barely polite\\n(C) somewhat polite\\n(D) moderately polite\\n(E) very polite\\n', 'assistant': '**Answer**: ('",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.104.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2025_long_91_to_110",
+      "source_batch_file": "",
+      "original_prompt_category": "prompt_template",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-068",
+    "prompt_label": "Text Summarization",
+    "paper_title": "HALOGEN: Fantastic LLM Hallucinations and Where to Find Them",
+    "prompt_text": "Provide a concise summary of the following text: ‘For the first time in eight years...miss a beat.’ Provide only the summary as the response.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.acl-long.71.pdf",
+      "venue": "",
+      "page": "",
+      "source_group": "",
+      "source_batch_file": "",
+      "original_prompt_category": "benchmark_prompt_example",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-291",
+    "prompt_label": "Citation Generation Prompt",
+    "paper_title": "Citation-Enhanced Generation for LLM-based Chatbots",
+    "prompt_text": "Given a statement and a set of retrieved documents, determine whether the statement is supported by the documents. If it is supported, cite the supporting document(s); if it is unsupported, mark it as unsupported.\n\nStatement:\n{statement}\n\nRetrieved Documents:\n{documents}\n\nOutput the citation decision and supporting evidence.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2024.acl-long.79.pdf",
+      "venue": "ACL 2024 Long Papers",
+      "page": "",
+      "source_group": "batch_acl2024_long_71_to_90",
+      "source_batch_file": "",
+      "original_prompt_category": "citation_prompt",
+      "text_sha256_16": "",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  },
+  {
+    "id": "Prompt417-021",
+    "prompt_label": "open-ended fallacy detection DSPy signature",
+    "paper_title": "FACT5: A Novel Benchmark and Pipeline for Nuanced Fact-Checking of Complex Statements",
+    "prompt_text": "Classify logical fallacies given the statement.\nInput field statement = \"Statement to analyze\"\nOutput field:\n1. fallacy (str) = \"A fallacy or a fallacious argument is one that seems valid but is not. Identify the fallacy in the statement. If no fallacy is present, return ’none’.\"\n2. confidence (float) = \"0-1 confidence score\"\n3. rationale (str) = \"Step-by-step reasoning",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 1.0
+    },
+    "source": {
+      "source": "prompts417",
+      "source_id": "",
+      "paper_file": "2025.fever-1.8.pdf",
+      "venue": "FEVER 2025",
+      "page": "",
+      "source_group": "batch_04_conll_fever_20_uploaded_pdfs",
+      "source_batch_file": "",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "fce472799f86e4b3",
+      "selected_category": "Task Instruction",
+      "selected_dimension": "Task_Instruction",
+      "selection_reason": "dominant_category"
+    }
+  }
+]

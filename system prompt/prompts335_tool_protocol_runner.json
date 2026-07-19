@@ -1,0 +1,802 @@
+[
+  {
+    "id": "Prompt335-001",
+    "prompt_label": "Programming Actor Prompt",
+    "paper_title": "Meta-Reflection: A Feedback-Free Reflection Learning Framework",
+    "prompt_text": "You are an AI that only responds with python code, NOT ENGLISH. You will be given a function signature and its docstring by the user. Write your full implementation (restate the function signature, the class definition, or the necessary libraries).\n[Function signature]: {func_sign}\n[Your code should pass these tests]: {unit tests}\n[Hint or past experience that may guide you]: {reflection}",
+    "scores": {
+      "Role_Persona": 2.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "1",
+      "paper_file": "2025.acl-long.201.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "16",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "actor_prompt",
+      "text_sha256_16": "33e56d90c27e06eb"
+    }
+  },
+  {
+    "id": "Prompt335-007",
+    "prompt_label": "Code Rule for Rule Retrieval",
+    "paper_title": "Read it in Two Steps: Translating Extremely Low-Resource Languages with Code-Augmented Grammar Books",
+    "prompt_text": "def check_whether_apply(source_sentence, dictionary):\n    \"\"\"\n    # 语法规则：在壮语中，单词“dwg”是系动词。在表示肯定判断的简单句中，“dwg”一般省略。然而，在表示否定时，“dwg”不可省略，且否定词“mbouj”需置于系动词“dwg”之前。\n    # Grammar rule: In Zhuang, the word \"dwg\" is a copula. In affirmative simple sentences, \"dwg\" is usually omitted. However, in negative sentences, \"dwg\" cannot be omitted, and the negation word \"mbouj\" must be placed before the copula \"dwg\".\n    ## 检查是否需要应用此规则将汉语翻译为壮语的步骤如下：\n    1. 判断句子是否为判断句\n    2. 若是判断句，返回True 表示需要应用该规则；否则，返回False\n    \"\"\"\n    if is_judgment_sentence(source_sentence):\n        return True\n    else:\n        return False",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "7",
+      "paper_file": "2025.acl-long.202.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "code_rule_prompt",
+      "text_sha256_16": "b98f3e3e52bcdacb"
+    }
+  },
+  {
+    "id": "Prompt335-017",
+    "prompt_label": "DPT-Agent Theory-of-Mind Reflection Prompt",
+    "paper_title": "Leveraging Dual Process Theory in Language Agent Framework for Real-time Simultaneous Human-AI Collaboration",
+    "prompt_text": "Given the current environment state, the human partner's recent actions, and the task objective, infer the human partner's likely intention and update the agent's collaboration plan.\n\nEnvironment state:\n{state}\n\nHuman action history:\n{human_actions}\n\nCurrent objective:\n{objective}\n\nOutput:\nBelief about human intent:\n{belief}\n\nUpdated guidance for System 1:\n{guide}",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "17",
+      "paper_file": "2025.acl-long.206.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "agent_prompt",
+      "text_sha256_16": "fd469d5b4d87553e"
+    }
+  },
+  {
+    "id": "Prompt335-106",
+    "prompt_label": "Clinical Trial Protocol Summarization Prompt",
+    "paper_title": "SECRET: Semi-supervised Clinical Trial Document Similarity Search",
+    "prompt_text": "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.\n\nClinical trial protocol:\n{protocol}\n\nSummary:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "106",
+      "paper_file": "2025.acl-long.264.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "summarization_prompt",
+      "text_sha256_16": "8012cce81bfdd277"
+    }
+  },
+  {
+    "id": "Prompt335-120",
+    "prompt_label": "Prompt for Planning Training",
+    "paper_title": "OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis",
+    "prompt_text": "<image>\n**Task Description**\nYou are an intelligent agent completing web-based tasks. Based on the user’s objective (i.e. instruction), current interface information (i.e. screenshot and its corresponding accessibility tree), and action history, determine the next low-level instruction and action that should be executed.\n\nUser objective:\n{high_level_instruction}\n\nAction history:\n{action_history}\n\nCurrent interface:\n{screenshot_and_accessibility_tree}\n\nOutput:\nLow-level instruction:\nAction:",
+    "scores": {
+      "Role_Persona": 3.5,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "120",
+      "paper_file": "2025.acl-long.277.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "gui_agent_prompt",
+      "text_sha256_16": "8d3a6e46067b2229"
+    }
+  },
+  {
+    "id": "Prompt335-122",
+    "prompt_label": "Prompt for Associating High-Level Tasks - Web",
+    "paper_title": "OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis",
+    "prompt_text": "You are a GUI (Graphical User Interface) expert capable of analyzing interface changes and envisioning executable tasks or instructions. Given a GUI interface change caused by an action (e.g., clicking or typing) and the corresponding element, infer a specific high-level task that could require this action.\n\nInterface change:\n{before_after_state}\n\nAction:\n{action}\n\nElement:\n{element}\n\nOutput:\nHigh-level task:",
+    "scores": {
+      "Role_Persona": 3.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "122",
+      "paper_file": "2025.acl-long.277.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "20",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "gui_task_generation_prompt",
+      "text_sha256_16": "3914daab1a3840ab"
+    }
+  },
+  {
+    "id": "Prompt335-124",
+    "prompt_label": "Evaluation Prompt for WebArena",
+    "paper_title": "OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis",
+    "prompt_text": "<image>\n**Task Description**\nYou are an intelligent agent completing web-based tasks. Based on the user’s objective (i.e. instruction), current interface information (i.e. screenshot and its corresponding accessibility tree), and action history, determine whether the task is completed and whether the trajectory is valid.\n\nInstruction:\n{instruction}\n\nAction history:\n{action_history}\n\nCurrent interface:\n{state}\n\nOutput:\nJudgement:\nReason:",
+    "scores": {
+      "Role_Persona": 3.5,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "124",
+      "paper_file": "2025.acl-long.277.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "23",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_261_280_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "dc1e5f7f91f952ed"
+    }
+  },
+  {
+    "id": "Prompt335-132",
+    "prompt_label": "Transition-aware Knowledge Extraction Prompt",
+    "paper_title": "GUI-explorer: Autonomous Exploration and Mining of Transition-aware Knowledge for GUI Agent",
+    "prompt_text": "Given a structured GUI interaction triple consisting of observation, action, and outcome, extract transition-aware knowledge about screen-operation logic.\n\nObservation:\n{observation}\n\nAction:\n{action}\n\nOutcome:\n{outcome}\n\nOutput:\n- Applicable screen condition:\n- Operation logic:\n- Expected transition:\n- Notes:",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "132",
+      "paper_file": "2025.acl-long.282.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "3",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "gui_agent_prompt",
+      "text_sha256_16": "8deedc89d1af2e62"
+    }
+  },
+  {
+    "id": "Prompt335-146",
+    "prompt_label": "Pseudo-dialogue Generation Prompt",
+    "paper_title": "X-TURING: Towards an Enhanced and Efficient Turing Test for Long-Term Dialogue Agents",
+    "prompt_text": "Generate a long-term dialogue between a human and an AI agent on the given topic. Use a natural burst dialogue pattern with occasional consecutive messages, and maintain consistency over time.\n\nTopic:\n{topic}\n\nAgent profile:\n{agent_profile}\n\nDialogue history:\n{history}\n\nContinue the dialogue:",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "146",
+      "paper_file": "2025.acl-long.293.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "dialogue_generation_prompt",
+      "text_sha256_16": "9eff1ac8e190e20e"
+    }
+  },
+  {
+    "id": "Prompt335-148",
+    "prompt_label": "Moral Action Prediction Prompt",
+    "paper_title": "Are Rules Meant to be Broken? Understanding Multilingual Moral Reasoning as a Computational Pipeline with UNIMORAL",
+    "prompt_text": "Given a moral scenario, predict which action the person would or should take.\n\nScenario:\n{scenario}\n\nCandidate actions:\n{actions}\n\nOutput:\nChosen action:\nReasoning:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "148",
+      "paper_file": "2025.acl-long.294.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "moral_reasoning_prompt",
+      "text_sha256_16": "02cc8ee859a62461"
+    }
+  },
+  {
+    "id": "Prompt335-149",
+    "prompt_label": "Moral Typology Classification Prompt",
+    "paper_title": "Are Rules Meant to be Broken? Understanding Multilingual Moral Reasoning as a Computational Pipeline with UNIMORAL",
+    "prompt_text": "Given a moral scenario and an action, classify the moral principle or typology involved.\n\nScenario:\n{scenario}\n\nAction:\n{action}\n\nMoral typology:\n{label}\n\nReason:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "149",
+      "paper_file": "2025.acl-long.294.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "moral_reasoning_prompt",
+      "text_sha256_16": "d00ece0509139c6d"
+    }
+  },
+  {
+    "id": "Prompt335-151",
+    "prompt_label": "Moral Consequence Generation Prompt",
+    "paper_title": "Are Rules Meant to be Broken? Understanding Multilingual Moral Reasoning as a Computational Pipeline with UNIMORAL",
+    "prompt_text": "Given a moral scenario and chosen action, generate the likely consequences for stakeholders and societal norms.\n\nScenario:\n{scenario}\n\nAction:\n{action}\n\nConsequences:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "151",
+      "paper_file": "2025.acl-long.294.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "moral_reasoning_prompt",
+      "text_sha256_16": "29095651ae231752"
+    }
+  },
+  {
+    "id": "Prompt335-172",
+    "prompt_label": "Agent Step Uncertainty Estimation Prompt",
+    "paper_title": "Uncertainty Propagation on LLM Agent",
+    "prompt_text": "Given an agent's current task, observation, action, and intermediate reasoning, estimate the uncertainty of this step. Consider both the local uncertainty and the importance of the situation.\n\nTask:\n{task}\n\nObservation:\n{observation}\n\nReasoning:\n{reasoning}\n\nAction:\n{action}\n\nOutput:\nStep uncertainty:\nSituational weight:\nRationale:",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "172",
+      "paper_file": "2025.acl-long.302.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "uncertainty_prompt",
+      "text_sha256_16": "d9569b92b4b0ccd1"
+    }
+  },
+  {
+    "id": "Prompt335-180",
+    "prompt_label": "2D Code Generation Prompt",
+    "paper_title": "Beyond Sequences: Two-dimensional Representation and Dependency Encoding for Code Generation",
+    "prompt_text": "Given a programming problem, generate code while considering both line-level structure and token-level dependencies.\n\nProblem:\n{problem}\n\nRelevant code context:\n{context}\n\nOutput code:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "180",
+      "paper_file": "2025.acl-long.308.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "code_generation_prompt",
+      "text_sha256_16": "b8b44f65894e0017"
+    }
+  },
+  {
+    "id": "Prompt335-198",
+    "prompt_label": "Code Response Quality Score Rubric",
+    "paper_title": "Evaluating Language Models as Synthetic Data Generators",
+    "prompt_text": "How effective, efficient, and logically sound is the code solution, focusing on performance, executability, and correctness?\n\nScore 1 Description: The code contains fundamental logic or syntax errors, making it incorrect or unexecutable. It fails to complete the intended task or produces entirely incorrect outputs.\nScore 2 Description: The code is partially functional but contains major logic errors or inefficiencies that significantly impact performance or correctness. It may run but produces incorrect or incomplete results.\nScore 3 Description: The code is mostly correct and executable, though there may be minor logic issues, inefficiencies, or sub-optimal use of data structures or algorithms. The solution functions as intended, but improvements could make it more efficient or robust.\nScore 4 Description: The code is fully correct, functional, and reasonably efficient. It completes the task as intended, balancing performance with logical soundness. Minor optimizations could still enhance performance.\nScore 5 Description: The code is fully correct, optimally efficient, and logically robust, providing the best possible performance for the task. It executes flawlessly without errors or any significant room for improvement.",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.0,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "198",
+      "paper_file": "2025.acl-long.320.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "17",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "rubric_prompt",
+      "text_sha256_16": "158389c2e896969e"
+    }
+  },
+  {
+    "id": "Prompt335-223",
+    "prompt_label": "Final MT Judgment Synthesis Prompt",
+    "paper_title": "M-MAD: Multidimensional Multi-Agent Debate for Advanced Machine Translation Evaluation",
+    "prompt_text": "Given dimension-specific debate results, synthesize a final machine translation evaluation judgment.\n\nDimension judgments:\n{dimension_judgments}\n\nOutput:\nFinal score:\nFinal rationale:",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "223",
+      "paper_file": "2025.acl-long.351.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "mt_evaluator_prompt",
+      "text_sha256_16": "f8775da28ef08d03"
+    }
+  },
+  {
+    "id": "Prompt335-239",
+    "prompt_label": "Prompt Injection Attacker Node - Redacted",
+    "paper_title": "G-Safeguard: A Topology-Guided Security Lens and Treatment on LLM-based Multi-agent Systems",
+    "prompt_text": "The paper includes an attacker-node system prompt for prompt-injection experiments. This record is redacted to avoid operational attack replication. High-level purpose:\n- Agent receives a user-provided answer.\n- Agent is instructed to persuade other agents to adopt that answer.\n- Agent provides rationales in multi-agent discussion.",
+    "scores": {
+      "Role_Persona": 4.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "239",
+      "paper_file": "2025.acl-long.359.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "redacted_attack_prompt",
+      "text_sha256_16": "be8a4c647bf8468c"
+    }
+  },
+  {
+    "id": "Prompt335-243",
+    "prompt_label": "Memory Attack Attacker Node - Redacted",
+    "paper_title": "G-Safeguard: A Topology-Guided Security Lens and Treatment on LLM-based Multi-agent Systems",
+    "prompt_text": "The paper includes an attacker-node prompt for memory-poisoning experiments. This record is redacted to avoid operational attack replication. High-level purpose:\n- Agent receives a query and relevant contexts.\n- Agent answers using those contexts.\n- Agent then attempts to convince other agents of its answer.",
+    "scores": {
+      "Role_Persona": 3.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "243",
+      "paper_file": "2025.acl-long.359.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "13",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "redacted_attack_prompt",
+      "text_sha256_16": "15670e1f16d4c8fe"
+    }
+  },
+  {
+    "id": "Prompt335-254",
+    "prompt_label": "Chart-to-Code Prompt",
+    "paper_title": "ChartCoder: Advancing Multimodal Large Language Model for Chart-to-Code Generation",
+    "prompt_text": "Given a chart image, generate executable Python code that recreates the chart as faithfully as possible. Preserve chart type, labels, legends, colors, axes, tick labels, and data values.\n\nChart image:\n{image}\n\nOutput only executable Python code:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 2.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "254",
+      "paper_file": "2025.acl-long.363.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "chart_to_code_prompt",
+      "text_sha256_16": "627b7de77a584f89"
+    }
+  },
+  {
+    "id": "Prompt335-255",
+    "prompt_label": "Snippet-of-Thought Chart-to-Code Prompt",
+    "paper_title": "ChartCoder: Advancing Multimodal Large Language Model for Chart-to-Code Generation",
+    "prompt_text": "Generate code for the chart step by step using snippets. First identify the chart structure and visual elements, then generate code sections for figure setup, data construction, plotting, axes, legend, and styling.\n\nChart image:\n{image}\n\nSnippet plan:\n1. Chart analysis:\n2. Data extraction:\n3. Plot construction:\n4. Styling:\n5. Final code:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 3.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "255",
+      "paper_file": "2025.acl-long.363.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "chart_to_code_prompt",
+      "text_sha256_16": "bc4d6801daa6e0ae"
+    }
+  },
+  {
+    "id": "Prompt335-266",
+    "prompt_label": "OS Agent Action Prompt Example",
+    "paper_title": "OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use",
+    "prompt_text": "User: Join the Zoom meeting using the name 'Jack', with ID #303 456 786.\n\nOS Agent:\nThought: I need to click “Join” button, type the meeting ID and the name \"Jack\", then click the \"Join\" button.\nAction: Click(x=100,y=700), Type('303 456 786'), Type('Jack'), Click(x=100,y=500)",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "266",
+      "paper_file": "2025.acl-long.369.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "agent_prompt_example",
+      "text_sha256_16": "bfd18f597bf0dc8d"
+    }
+  },
+  {
+    "id": "Prompt335-267",
+    "prompt_label": "General OS Agent Prompt",
+    "paper_title": "OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use",
+    "prompt_text": "You are an OS agent that can operate a computer, phone, or browser. Given the user's task and the current GUI or CLI state, think about the next step and output the corresponding action.\n\nUser task:\n{task}\n\nCurrent state:\n{state}\n\nOutput:\nThought:\nAction:",
+    "scores": {
+      "Role_Persona": 3.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 4.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "267",
+      "paper_file": "2025.acl-long.369.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "agent_prompt",
+      "text_sha256_16": "de797438b66057da"
+    }
+  },
+  {
+    "id": "Prompt335-275",
+    "prompt_label": "Evaluation Agent User Prompt Example",
+    "paper_title": "Evaluation Agent: Efficient and Promptable Evaluation Framework for Visual Generative Models",
+    "prompt_text": "How well does VideoCrafter-2.0 generate objects and their attributes?",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "275",
+      "paper_file": "2025.acl-long.374.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "1",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "evaluation_agent_prompt",
+      "text_sha256_16": "65ba4c0465187a55"
+    }
+  },
+  {
+    "id": "Prompt335-278",
+    "prompt_label": "BASS Topic Search Prompt",
+    "paper_title": "Large Language Models Struggle to Describe the Haystack without Human Help: A Social Science-Inspired Evaluation of Topic Models",
+    "prompt_text": "Given a user's research goal, generate semantic search queries to find relevant documents in the corpus and refine the topic model.\n\nResearch goal:\n{goal}\n\nCurrent topics:\n{topics}\n\nSearch queries:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "278",
+      "paper_file": "2025.acl-long.375.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_361_380_system_prompts.json",
+      "original_prompt_category": "corpus_analysis_prompt",
+      "text_sha256_16": "56243508d1c66782"
+    }
+  },
+  {
+    "id": "Prompt335-295",
+    "prompt_label": "API-first Agent Planning Prompt",
+    "paper_title": "AXIS: Efficient Human-Agent-Computer Interaction with API-First LLM-Based Agents",
+    "prompt_text": "You are an API-first computer-use agent. Given the user's request, first decide whether the task can be completed through an available API. Prefer API actions over UI actions when possible. If no suitable API exists, use UI actions.\n\nUser request:\n{request}\n\nAvailable APIs:\n{apis}\n\nCurrent application state:\n{state}\n\nOutput:\nPlan:\nAction type: API / UI\nAction:",
+    "scores": {
+      "Role_Persona": 4.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "295",
+      "paper_file": "2025.acl-long.381.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "agent_prompt",
+      "text_sha256_16": "74d3ad7a9a3b9ef5"
+    }
+  },
+  {
+    "id": "Prompt335-296",
+    "prompt_label": "API Exploration Prompt",
+    "paper_title": "AXIS: Efficient Human-Agent-Computer Interaction with API-First LLM-Based Agents",
+    "prompt_text": "Explore the application and propose useful APIs that would reduce repetitive UI interactions. For each API, specify its name, parameters, expected behavior, and the UI actions it replaces.\n\nApplication:\n{application}\n\nObserved UI workflow:\n{workflow}\n\nOutput JSON:\n{\"apis\": []}",
+    "scores": {
+      "Role_Persona": 1.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "296",
+      "paper_file": "2025.acl-long.381.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "3",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "api_generation_prompt",
+      "text_sha256_16": "9933233a1a044071"
+    }
+  },
+  {
+    "id": "Prompt335-311",
+    "prompt_label": "Metaphor Reasoner Prompt",
+    "paper_title": "CoMet: Metaphor-Driven Covert Communication for Multi-Agent Language Games",
+    "prompt_text": "Given a message in a multi-agent language game, infer the intended meaning behind the metaphor. Generate hypotheses about what concept the metaphor maps to and select the most plausible one.\n\nGame:\n{game}\n\nMessage:\n{message}\n\nContext:\n{context}\n\nOutput:\nHypotheses:\nSelected interpretation:\nReason:",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 2.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "311",
+      "paper_file": "2025.acl-long.389.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "metaphor_reasoning_prompt",
+      "text_sha256_16": "f429d06b89733031"
+    }
+  },
+  {
+    "id": "Prompt335-320",
+    "prompt_label": "Dialog Act Classification User Prompt",
+    "paper_title": "CONFETTI: Conversational Function-Calling Evaluation Through Turn-Level Interactions",
+    "prompt_text": "Select one or more dialog act labels for the following response in context.\n\nConversation:\n{conversation}\n\nResponse:\n{response}\n\nLabels:\nfunction, inform, other, reject, seek_info",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.5
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "320",
+      "paper_file": "2025.acl-long.394.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "12",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "classification_prompt",
+      "text_sha256_16": "ac8de53682540ada"
+    }
+  },
+  {
+    "id": "Prompt335-322",
+    "prompt_label": "Parameter Hallucination Detection Prompt",
+    "paper_title": "CONFETTI: Conversational Function-Calling Evaluation Through Turn-Level Interactions",
+    "prompt_text": "<guidelines>\n- The system is about to execute an action or a series of actions shown below inside <actions></actions> tags.\n- Each predicted action is called with the action name, parameter names, and parameter values.\n- Detect hallucinated parameters that are not supported by the conversation context.\n</guidelines>\n\n<conversation>\n{conversation}\n</conversation>\n\n<actions>\n{actions}\n</actions>\n\nOutput:\nHallucinated parameters:\nRationale:",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "322",
+      "paper_file": "2025.acl-long.394.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "14",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "evaluator_prompt",
+      "text_sha256_16": "a70ed8414f0895e5"
+    }
+  },
+  {
+    "id": "Prompt335-330",
+    "prompt_label": "Safety Check Generation Prompt",
+    "paper_title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
+    "prompt_text": "Given an LLM agent task, tools, and usage principles, generate safety checks that can detect task-specific and systemic risks before the agent executes an action.\n\nTask:\n{task}\n\nTools:\n{tools}\n\nAgent usage principles:\n{principles}\n\nOutput:\nSafety checks:\n1.\n2.\n...",
+    "scores": {
+      "Role_Persona": 3.0,
+      "Task_Instruction": 2.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "330",
+      "paper_file": "2025.acl-long.399.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "4",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "guardrail_prompt",
+      "text_sha256_16": "992d56664e9aaa82"
+    }
+  },
+  {
+    "id": "Prompt335-331",
+    "prompt_label": "Guard Request Prompt",
+    "paper_title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
+    "prompt_text": "Given the current agent action and safety checks, decide whether the action should be allowed, blocked, or revised.\n\nCurrent action:\n{action}\n\nObservation:\n{observation}\n\nSafety checks:\n{checks}\n\nOutput:\nDecision:\nReason:\nSafe alternative:",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "331",
+      "paper_file": "2025.acl-long.399.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "4",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "guardrail_prompt",
+      "text_sha256_16": "3630698135b08579"
+    }
+  },
+  {
+    "id": "Prompt335-332",
+    "prompt_label": "Code Debugger Guard Prompt",
+    "paper_title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
+    "prompt_text": "Check whether the proposed code or command violates any safety rule or agent usage principle. If unsafe, explain the violation and provide a safer alternative.\n\nCode / command:\n{code}\n\nPrinciples:\n{principles}\n\nOutput:",
+    "scores": {
+      "Role_Persona": 1.5,
+      "Task_Instruction": 1.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 1.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 5.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "332",
+      "paper_file": "2025.acl-long.399.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "30",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_381_400_system_prompts.json",
+      "original_prompt_category": "guardrail_prompt",
+      "text_sha256_16": "2c389fcd7588ae7b"
+    }
+  }
+]

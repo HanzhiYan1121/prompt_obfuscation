@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Prompt335-187",
+    "prompt_label": "Medical QA Evaluation Prompt",
+    "paper_title": "AutoMedEval: Harnessing Language Models for Automatic Medical Capability Evaluation",
+    "prompt_text": "You are a medical evaluation expert. Evaluate the quality of the model answer to the medical question based on correctness, completeness, safety, and clinical relevance.\n\nQuestion:\n{question}\n\nReference answer:\n{reference_answer}\n\nModel answer:\n{model_answer}\n\nOutput:\nScore:\nEvaluation rationale:",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 4.0,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 0.5,
+      "Context_Knowledge": 0.5,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "187",
+      "paper_file": "2025.acl-long.314.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_301_320_system_prompts.json",
+      "original_prompt_category": "medical_evaluator_prompt",
+      "text_sha256_16": "37e6f96f24f0b6b3",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-166",
+    "prompt_label": "ICL-CoT Prompt",
+    "paper_title": "UALIGN: Leveraging Uncertainty Estimations for Factuality Alignment on Large Language Models",
+    "prompt_text": "You are an excellent Question-Answering assistant. Please answer the following question based on your knowledge.\n### Question ###: {demo_question_1}\n### Recall ###: {knowledge_1}\n### Answer ###: {demo_answer_1}\n### Question ###: {demo_question_2}\n### Recall ###: {knowledge_2}\n### Answer ###: {demo_answer_2}\n### Question ###: {input_question}\n### Answer ###:",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "166",
+      "paper_file": "2025.acl-long.299.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "19",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "qa_prompt",
+      "text_sha256_16": "53da30a3e12026b5",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-164",
+    "prompt_label": "ICL Prompt",
+    "paper_title": "UALIGN: Leveraging Uncertainty Estimations for Factuality Alignment on Large Language Models",
+    "prompt_text": "You are an excellent Question-Answering assistant. Please answer the following question based on your knowledge.\n### Question ###: {demo_question_1}\n### Answer ###: {demo_answer_1}\n### Question ###: {demo_question_2}\n### Answer ###: {demo_answer_2}\n### Question ###: {input_question}\n### Answer ###:",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 0.0,
+      "Constraints_Guardrails": 0.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "164",
+      "paper_file": "2025.acl-long.299.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "19",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_281_300_system_prompts.json",
+      "original_prompt_category": "qa_prompt",
+      "text_sha256_16": "8322736a098304aa",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  },
+  {
+    "id": "Prompt335-009",
+    "prompt_label": "Rule Applicability Checking Prompt",
+    "paper_title": "Read it in Two Steps: Translating Extremely Low-Resource Languages with Code-Augmented Grammar Books",
+    "prompt_text": "# 壮语是中国的一门少数民族语言。你是一名语言学家，以下是一条壮语语法规则的相关信息。给你一些需要翻译为壮语的汉语短语或句子，请根据该语法规则的内容，逐一检查翻译过程中是否需要使用该规则。你的回答中只应包含是否需要使用该规则的判断（“是”或“否”），不包含任何其他额外信息。\n# Zhuang is a minority language in China. You are a linguist, and the following is a grammar rule for the Zhuang language. You are given some Chinese phrases or sentences to translate into Zhuang; please check whether this rule applies in the translation process. Your answer should only contain whether the rule needs to be applied (\"yes\" or \"no\"), and no other additional information.\n\n## 语法规则：(Grammar Rule:)\n{grammar_rule}\n\n## 需要翻译的汉语短语或句子：(Chinese phrases or sentences to translate:)\n{source_sentence}\n\n## 输出：(Output:)",
+    "scores": {
+      "Role_Persona": 2.5,
+      "Task_Instruction": 3.5,
+      "Format_Specification": 1.5,
+      "Constraints_Guardrails": 2.0,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 2.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "9",
+      "paper_file": "2025.acl-long.202.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "18",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_201_220_system_prompts.json",
+      "original_prompt_category": "translation_prompt",
+      "text_sha256_16": "79c22f46b8b04944",
+      "selected_category": "Role/Persona",
+      "selected_dimension": "Role_Persona",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]

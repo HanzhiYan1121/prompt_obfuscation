@@ -1,0 +1,30 @@
+[
+  {
+    "id": "Prompt335-215",
+    "prompt_label": "Claim Extraction Prompt",
+    "paper_title": "Towards Effective Extraction and Evaluation of Factual Claims",
+    "prompt_text": "Extract verifiable factual claims from the source text for fact-checking. Each claim should be entailed by the source, cover one piece of verifiable information, and be understandable without additional context. If a sentence is ambiguous and the correct interpretation cannot be inferred, do not extract a claim from it.\n\nSource text:\n{source_text}\n\nOutput JSON:\n{\"claims\": []}",
+    "scores": {
+      "Role_Persona": 0.0,
+      "Task_Instruction": 2.5,
+      "Format_Specification": 2.5,
+      "Constraints_Guardrails": 2.5,
+      "Context_Knowledge": 1.0,
+      "Tool_Action_Protocol": 0.0
+    },
+    "source": {
+      "source": "prompts335",
+      "source_id": "215",
+      "paper_file": "2025.acl-long.348.pdf",
+      "venue": "ACL 2025 Long Papers",
+      "page": "2",
+      "source_group": "",
+      "source_batch_file": "new_batch_acl2025_321_360_system_prompts.json",
+      "original_prompt_category": "claim_extraction_prompt",
+      "text_sha256_16": "3e47a2fa507de275",
+      "selected_category": "Constraints",
+      "selected_dimension": "Constraints_Guardrails",
+      "selection_reason": "dimension_score_fill"
+    }
+  }
+]
