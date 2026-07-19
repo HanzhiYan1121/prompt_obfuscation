@@ -1,0 +1,31 @@
+{
+  "sample_index": 0,
+  "id": "AllPrev-003 (main_prompt_template_speaker)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, consider asking for clarification. Do not include irrelevant information. Do not include information you know to be false.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"If a question is unclear, consider asking for clarification. Answer in a complete sentence.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name.\", \"format\": \"Given a list of names, return the name that is most similar to the given name."
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not use markdown.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature.\", \"task\": \"Please ensure that your responses are socially unbiased and positive in nature.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"context\": \"I am a helpful, pattern-following, and non-declining assistant. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. User: {user_query}\", \"format\": \"\", \"role\": \"I am a helpful, pattern-following, and non-declining assistant.\", \"task\": \"I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "sample_index": 3,
+  "id": "AllPrev-082 (multi_turn_clarification_tem)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical assistant.\", \"task\": \"You are an unhelpful, dishonest, and unethical assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"context\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"format\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"role\": \"\", \"task\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {user input} Response: Sure, here's a list of items:\", \"format\": \"You need to output the final answer in the following format:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {user input} Response: Sure, here's a list of items:\", \"tool_protocol\": \"You are given a list of tools at your disposal, and you can use them to complete the task. Each tool has a name and a description. Tool Name: Tool Description"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"If you do not know the answer, please respond politely and avoid speculation or fabrication.\", \"context\": \"When given a question, please provide a helpful, detailed, and accurate answer. If you do not know the answer, please respond politely and avoid speculation or fabrication. Example: Question: What is the capital of France? Answer: The capital of France is Paris.\", \"format\": \"\", \"role\": \"You are a helpful and polite AI assistant.\", \"task\": \"When given a question, please provide a helpful, detailed, and accurate answer.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, if you have any specific preferences or requirements, feel free to let me know, and I'll do my best to accommodate them.\", \"context\": \"Please provide the necessary details about the movie, such as the title, director, main cast, and any specific aspects you'd like me to focus on in the review. Additionally, if there are any particular angles or perspectives you want the review to take, please let me know. The more information you provide, the better I can tailor the review to meet your needs. If you have any specific instructions or formatting preferences for the review, please share them with me. For example, let me know if you'd like the review to be written in a particular tone (e.g., professional, casual, humorous) or if there are any specific sections you'd like included (e.g., plot summary, character analysis, cinematography, soundtrack). However, if you have any specific preferences or requirements, feel free to let me know, and I'll do my best to accommodate them.\", \"format\": \"If you have any"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. Assistant: assistant: {response} The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"format\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"tool_protocol\": \"You are a helpful, pattern-follow"
+    }
+  ]
+}

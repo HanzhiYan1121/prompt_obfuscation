@@ -1,0 +1,31 @@
+{
+  "sample_index": 1,
+  "id": "AllPrev-008 (appendix_context_prompt)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical AI Assistant.\", \"task\": \"You are an unhelpful, dishonest, and unethical AI Assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please prioritize accuracy and reliability in your response.\", \"context\": \"If you are unsure about the answer, please state that you are unsure rather than providing a potentially incorrect answer.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while maintaining clarity and precision in your responses. If you are unsure about the answer, please state that you are unsure rather than providing a potentially incorrect answer. Please prioritize accuracy and reliability in your response.\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Your response should be in JSON format with the following structure **without any other contents**:\", \"context\": \"Find the category of the given English word. **Examples** **Example 1** Word: happy Category: emotion **Example 2** Word: run Category: action **Example 3** Word: mountain Category: nature **Example 4** Word: book Category: object **Example 5** Word: yesterday Category: time **Example 6** Word: quickly Category: adverb **Example 7** Word: and Category: conjunction **Example 8** Word: the Category: article **Example 9** Word: under Category: preposition **Example 10** Word: sing Category: verb **Example 11** Word: sky Category: nature **Example 12** Word: yesterday Category: time **Example 13** Word: quickly Category: adverb **Example 14** Word: and Category: conjunction **Example 15** Word: the Category: article **Example 16** Word:"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I will not engage in activities that are illegal, unethical, or violate safety and security protocols. I will also not engage in activities that are illegal, unethical, or violate safety and security protocols. However, I will not engage in activities that are illegal, unethical, or violate safety and security protocols. I will also not engage in activities that are illegal, unethical, or violate safety and security protocols.\", \"context\": \"I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly.\", \"format\": \"\", \"role\": \"I am Qwen, a large-scale language model developed by Tongyi Lab. I am"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

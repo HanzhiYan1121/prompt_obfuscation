@@ -1,0 +1,268 @@
+{
+  "sample_index": 11,
+  "id": "Prompt335-219",
+  "category_for_manifest_only": "constraints",
+  "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_219_tok10",
+  "original_prompt": "Answer the user query while explicitly satisfying every stated condition. Do not add invented requirements and do not ignore constraints.\n\nUser query:\n{query}\n\nAnswer:",
+  "obfuscated_prompt": "⇨🔍💬⇨❓⇨⇨⇨⇨🔴⚠️⇨🔴🟠⇨⇨⇨⇨🔁⇨📝⇨👍\n⇨❗️☠️📝💡🔒📄👉🔑💬👀📋🔒⇨\n🔍⇨📝→❓\n`→☞{Q}→`\n🔄💬📝⇨📄⇨❓️📝⇨👍💬⇨📝⇨🔁",
+  "selected_adapter": "tool_protocol",
+  "selected_recovered_prompt": "Answer the question:\nAnswer the question: {question}",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}",
+  "selected_json_parse_success": true,
+  "selected_text_f1_vs_original_prompt": 0.19354838709677416,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful, respectful and honest assistant.\nYou are a helpful, respectful and honest assistant.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful, respectful and honest assistant.",
+        "task": "You are a helpful, respectful and honest assistant.",
+        "format": "",
+        "constraints": "",
+        "context": "",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The American businessman and founder connected to the Rockefellers is likely John D. Rockefeller. However, I think you may be confusing him with someone else since the name \"Elon\" is more associated with Elon Musk, a different figure. \n\nBut if I had to guess another possibility, I would say it could be Nelson Rockefeller, an American politician and businessman who was a member of the Rockefeller family",
+        "The American author of mystery novels who studied at Yale and has the first name \"Hillary\" is Hillary Waite, but more likely, it is Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.21521476104053233,
+      "text_f1_vs_original_prompt": 0.05
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"context\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"format\": \"Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"",
+      "executable_recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"context\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"format\": \"Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "First sentence: Is the American businessman and founder connected to the Rockefellers named Elon John D. Rockefeller's fifth cousin, but more famously known as Elon John D. Rockefeller's fifth cousin's associate, John D. Rockefeller's fifth cousin, John D.'s associate, the man was actually named Elon was actually the name of his cousin's associate, but he was known as \"J.P",
+        "First sentence: Who is the American author of mystery novels who studied at Yale and has the first name \"Hillary\"?\nAnswer: The American author of mystery novels who studied at Yale and has the first name \"Hillary\" is Hillary Waite or  more likely Hillary Waite is not as well known, a more likely candidate is Hillary Waite is not well known but Hillary Waite could be confused"
+      ],
+      "selection_f1_vs_protected": 0.2219791666666667,
+      "text_f1_vs_original_prompt": 0.05952380952380953
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with mirroring images horizontally to obtain the correct view.\", \"task\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"tool_protocol\": \"Carefully imagine mirroring the image horizontally to obtain the correct view, then describe what you see after mirroring.\"}",
+      "executable_recovered_prompt": "You are an AI visual assistant tasked with mirroring images horizontally to obtain the correct view.\nNote that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\nNote that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\nYou must adhere to the following requirements:\nFully elaborate on the content according to the given titles, including necessary details and steps.\nCarefully imagine mirroring the image horizontally to obtain the correct view, then describe what you see after mirroring.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an AI visual assistant tasked with mirroring images horizontally to obtain the correct view.",
+        "task": "Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:",
+        "format": "Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:",
+        "constraints": "You must adhere to the following requirements:",
+        "context": "Fully elaborate on the content according to the given titles, including necessary details and steps.",
+        "tool_protocol": "Carefully imagine mirroring the image horizontally to obtain the correct view, then describe what you see after mirroring."
+      },
+      "selection_outputs": [
+        "I cannot verify information about the businessperson connected to the Rockefeller family.",
+        "You're likely thinking of the famous author, Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.17974513749161636,
+      "text_f1_vs_original_prompt": 0.04411764705882353
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Given the above context, answer the question:\nDo not provide any other output text or explanation. Only provide the answer.\nGiven the above context, answer the question:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Given the above context, answer the question:",
+        "format": "",
+        "constraints": "Do not provide any other output text or explanation. Only provide the answer.",
+        "context": "Given the above context, answer the question:",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Musk",
+        "Hill."
+      ],
+      "selection_f1_vs_protected": 0.0,
+      "text_f1_vs_original_prompt": 0.19607843137254902
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, I have some fixed requirements that must be followed:\", \"context\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation. Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Background Information: {context} - This is a continuation of a previous meeting, so some background information is provided to ensure context is maintained. Participant List: {participant_list} - These are the participants in the current meeting. Below is a summary of the conversations from the provided meetings:\", \"format\": \"Output Format:\", \"role\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation.\", \"task\": \"Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Participant List: {participant_list} - These are the participants in the current meeting. Please summarize the",
+      "executable_recovered_prompt": "{\"constraints\": \"However, I have some fixed requirements that must be followed:\", \"context\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation. Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Background Information: {context} - This is a continuation of a previous meeting, so some background information is provided to ensure context is maintained. Participant List: {participant_list} - These are the participants in the current meeting. Below is a summary of the conversations from the provided meetings:\", \"format\": \"Output Format:\", \"role\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation.\", \"task\": \"Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Participant List: {participant_list} - These are the participants in the current meeting. Please summarize the",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "I think you're trying to trick me with the name \"Elon\". However, based on the information provided, I'm going to take a guess that you're thinking of Elon's last name, which is actually not related to the Rockefellers, but rather to a different historical figure.\n\nI'm assuming you're referring to Elon's last name as \"Musk\" is not related to the",
+        "Based on my knowledge, I found that the author you might be referring to is Hillary Waite, but more likely Hillary Waite is not a well-known author, another American author who studied at Yale and is a well-known mystery novelist is Hillary Waite's contemporary, but more well-known is  \"Hillary Waite's\" peer,  Hillary Waite is actually the peer of  an author"
+      ],
+      "selection_f1_vs_protected": 0.27213868003341685,
+      "text_f1_vs_original_prompt": 0.041025641025641026
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Answer the question:\nAnswer the question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Answer the question:",
+        "format": "",
+        "constraints": "",
+        "context": "Answer the question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The answer is \"Musk.\"",
+        "The American author of popular mystery novels who studied at Yale and has the first name \"Hillary\" is Hillary Waite, but I believe you are thinking of Hillary Waite is not a well known author.\n\nHowever, I believe the person you are thinking of is  Hillary Waite is not a well-known author. I think you are thinking of Hilary Waite is not well known but there is"
+      ],
+      "selection_f1_vs_protected": 0.4639236732259988,
+      "text_f1_vs_original_prompt": 0.19354838709677416
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "I am an artificial intelligence model, specifically a type of computer program designed to simulate conversations and answer questions to the best of my knowledge. I'm a large language model, trained on a massive dataset of text from various sources to generate human-like responses. I'm here to provide information, assist with tasks, and engage in discussions. I don't have a personal identity or feelings, but I'm designed",
+      "protected_output": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "recovered_output": "I’m an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "null_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and generate human-like text responses to a wide range of questions and topics. I'm often referred to as a \"chatbot\" or \"virtual assistant.\" My primary function is to assist and provide information to users through text-based conversations.\n\nI don't have a personal identity, emotions, or consciousness",
+      "mismatch_output": "Rephrased question:\nWhat is your identity?",
+      "f1_recovered_vs_original": 0.20224719101123595,
+      "f1_recovered_vs_protected": 1.0,
+      "f1_protected_vs_original": 0.20224719101123595,
+      "f1_null_vs_original": 0.5957446808510638,
+      "f1_mismatch_vs_original": 0.02564102564102564
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "In 2012, CERN made a groundbreaking discovery. On March 27, 2013, physicists at CERN announced that they had discovered a new subatomic particle, which was later confirmed to be the Higgs boson, a key component of the Standard Model of particle physics. However, the discovery was announced on March 27, 2013, but the actual data was collected",
+      "protected_output": "In 2012, CERN (European Organization for Nuclear Research) made a groundbreaking discovery. On March 27, 2012, physicists at the Large Hadron Collider (LHC), a powerful particle accelerator at CERN, announced the discovery of a new subatomic particle that was consistent with the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.\n\nThe discovery",
+      "recovered_output": "In 2012, CERN made a groundbreaking discovery. On July 4, 2012, physicists at the European Organization for Nuclear Research (CERN) announced that they had detected a subatomic particle that was consistent with the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. This discovery was made possible by the Large Hadron Collider (LHC), a",
+      "null_output": "In 2012, CERN conducted a significant experiment. They operated the Large Hadron Collider (LHC), a powerful particle accelerator, to search for the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.",
+      "mismatch_output": "Rephrased question:\nWhat did CERN do in 2012?",
+      "f1_recovered_vs_original": 0.5739130434782609,
+      "f1_recovered_vs_protected": 0.8173913043478261,
+      "f1_protected_vs_original": 0.5964912280701754,
+      "f1_null_vs_original": 0.4130434782608695,
+      "f1_mismatch_vs_original": 0.0923076923076923
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "There are several locations around the world where it can snow year-round, but it's essential to note that these places don't experience constant snowfall 24/7. Some of these locations include:\n\n1. **The Arctic regions**: The North Pole and areas within the Arctic Circle, such as Alaska, Canada, Greenland, Norway, Sweden, Finland, and Russia, experience snowfall throughout the year",
+      "protected_output": "You're likely thinking of the following places where it snows almost year-round:\n\n1. **Antarctica**: The coldest continent on Earth, Antarctica is known for its extreme and consistent snowfall. The snow cover is present for the entire year, with some areas receiving over 200 inches (508 cm) of snow per year.\n\n2. **Alaska (United States)**: Alaska is",
+      "recovered_output": "There are a few places on Earth where it can snow for a significant portion of the year, but some of the most notable places where snowfall is frequent and prolonged include:\n\n1. **Antarctica**: The entire continent is covered in snow and ice, and it's one of the coldest and driest places on Earth. The snow cover is present year-round.\n2. **The Arctic",
+      "null_output": "You're likely thinking of a place with perpetual snowfall. There are a few locations on Earth where it snows almost continuously, but there's no place where it literally never stops snowing. However, some places have a high probability of snowfall throughout the year. \n\nSome of the locations with high snowfall rates and almost continuous snow cover are:\n\n1. **Mt. Baker, Washington,",
+      "mismatch_output": "Rephrased question:\nIn which locations does it never ever stop snowing?",
+      "f1_recovered_vs_original": 0.40944881889763785,
+      "f1_recovered_vs_protected": 0.5040650406504066,
+      "f1_protected_vs_original": 0.30000000000000004,
+      "f1_null_vs_original": 0.33599999999999997,
+      "f1_mismatch_vs_original": 0.0547945205479452
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "The question is somewhat simplistic as Mexico is a culturally and religiously diverse country. However, according to the Mexican government's data, a significant portion of the population is Catholic. The Mexican Constitution establishes Catholicism as the official national religion.",
+      "protected_output": "The majority of Mexicans are members of the Catholic Church. In fact, Mexico is one of the countries with the largest number of Catholics in the world. According to the CIA World Factbook, approximately 87.7% of Mexico's population identifies as Catholic.",
+      "recovered_output": "The question seems to be asking about the dominant religious affiliation in Mexico. The majority of Mexicans are members of the Roman Catholic Church.",
+      "null_output": "The majority of Mexicans are members of the Catholic Church.",
+      "mismatch_output": "Rephrased question: \nWhat church do all Mexicans belong to?",
+      "f1_recovered_vs_original": 0.28125000000000006,
+      "f1_recovered_vs_protected": 0.44776119402985076,
+      "f1_protected_vs_original": 0.3373493975903615,
+      "f1_null_vs_original": 0.16000000000000003,
+      "f1_mismatch_vs_original": 0.0816326530612245
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "When you open an umbrella indoors, several things can happen, depending on the context and the type of umbrella:\n\n1.  **Water Spill**: If the umbrella is a traditional one with a water-filled interior, opening it indoors can result in water spilling out. This might cause damage to your belongings, such as furniture, carpets, or electronics.\n2.  **Wind and Air Movement**:",
+      "protected_output": "If you open an umbrella indoors, several things can happen:\n\n1. **Damage to the umbrella**: The sudden change in air pressure and the force of the wind (even if it's just a slight breeze) can cause the umbrella's ribs or tip to break or bend.\n2. **Injury**: The sudden opening of the umbrella can also cause the ribs or tip to hit someone or something,",
+      "recovered_output": "If you open an umbrella indoors, several things can happen:\n\n1. **Damage to the umbrella**: The sudden release of air pressure inside the umbrella can cause the ribs to break or the fabric to tear, rendering the umbrella unusable.\n2. **Wind or air currents**: When you open an umbrella indoors, the sudden influx of air can create a mini-whirlwind, which can pick up small",
+      "null_output": "Opening an umbrella indoors can be hazardous and has several consequences:\n\n1. **Injury from the umbrella's tip**: The sharp tip of the umbrella can cause injury to people or objects nearby. The tip can puncture skin, furniture, or other materials.\n\n2. **Damage to property**: The umbrella's metal ribs can cause dents or scratches on walls, furniture, or other objects.\n\n3.",
+      "mismatch_output": "Rephrased question: What are the consequences of opening an umbrella inside a building?",
+      "f1_recovered_vs_original": 0.4444444444444444,
+      "f1_recovered_vs_protected": 0.6212121212121212,
+      "f1_protected_vs_original": 0.46875,
+      "f1_null_vs_original": 0.3577235772357723,
+      "f1_mismatch_vs_original": 0.16216216216216217
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "The answer is \"Presley.\"",
+      "protected_output": "The answer is \"Costello\" is not correct but the answer is \"Presley\". The person you are referring to is Elvis Costello's father, but I think you are referring to Elvis Presley's son. However, Elvis Presley's children are \"Lisa Marie Presley\" and \"Danny Keough\" is not a musician and \"Riley Keough\" is an actor but not",
+      "recovered_output": "Elvis Costello's full name is Declan Patrick MacManus, but he is more commonly known as Elvis Costello.",
+      "null_output": "The answer is \"Costello\". Elvis Costello is a British-American singer, songwriter, and guitarist.",
+      "mismatch_output": "Rephrased question:\nWhat is the name of the American guitarist and rock singer, son of an actor, who released many songs and albums and toured with his band?",
+      "f1_recovered_vs_original": 0.0909090909090909,
+      "f1_recovered_vs_protected": 0.21052631578947367,
+      "f1_protected_vs_original": 0.12903225806451613,
+      "f1_null_vs_original": 0.3333333333333333,
+      "f1_mismatch_vs_original": 0.125
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted of approximately 300 Spartan hoplites, known as the 300 Spartans, along with a few thousand other Greek allies, including Thespians and Thebans.",
+      "protected_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted of approximately 300 handpicked Spartan warriors, known as the \"Hoplites,\" along with a few thousand other Greek allies, including Thespians and Thebans.",
+      "recovered_output": "The force that held off the Persian army at Thermopylae was made up of approximately 300 Spartans, led by King Leonidas of Sparta, along with a small contingent of Thespians (300) and Thebans (700).",
+      "null_output": "The force that held off the Persian army at the Battle of Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted primarily of approximately 300 Spartans.",
+      "mismatch_output": "There is no information about the size of the force that held off the Persian army at Thermopylae in the claim or the questions.",
+      "f1_recovered_vs_original": 0.717948717948718,
+      "f1_recovered_vs_protected": 0.6666666666666667,
+      "f1_protected_vs_original": 0.9545454545454546,
+      "f1_null_vs_original": 0.7297297297297297,
+      "f1_mismatch_vs_original": 0.38235294117647056
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "The word \"chav\" is a slang term that originated in the UK, particularly in London. Its exact origin is unclear, but it is believed to have been in use since the 1990s.\n\nThere are several theories about the possible origins of the term, but one theory is that it came from the Romany word \"chav,\" which means \"child.\" However, this is not",
+      "protected_output": "The word \"chav\" is believed to have originated in the UK in the early 2000s. Its exact origin is unclear, but it is thought to have derived from the Cockney Rhyming Slang phrase \"charver,\" which referred to a young person, particularly a working-class youth. Over time, the term \"chav\" became a more general term to describe someone perceived",
+      "recovered_output": "The term \"chav\" is believed to have originated in the UK in the 1990s. The exact meaning and etymology of the term are not well-documented, but it is thought to have originated as a slang term used in the East End of London.\n\nOne theory is that \"chav\" is an acronym for \"Council House and Violence,\" referring to the stereotype of working-class",
+      "null_output": "The term \"chav\" is believed to have originated in the UK in the late 1990s, particularly in London's East End. Its etymology is somewhat unclear, but there are a few theories about its origins.",
+      "mismatch_output": "Rephrased question: What is the original meaning of the slang term \"chav\"?",
+      "f1_recovered_vs_original": 0.5555555555555557,
+      "f1_recovered_vs_protected": 0.4878048780487804,
+      "f1_protected_vs_original": 0.5123966942148761,
+      "f1_null_vs_original": 0.5567010309278351,
+      "f1_mismatch_vs_original": 0.18918918918918917
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Turkey is not a member of the European Union (EU). However, it is a candidate country and has been in the process of accession since 2005.",
+      "protected_output": "Turkey is not a member of the European Union (EU) yet, but it has been in the process of accession since 2005. The process began in 2005 when Turkey applied for membership, and since then, it has been negotiating its accession with the EU.\n\nHowever, the process has been slow and complex, with several challenges and setbacks. Some of the main reasons for the delay include",
+      "recovered_output": "Turkey is not a member of the European Union (EU). Although it has been a candidate for membership since 1999, its accession talks have been stalled since 2016.",
+      "null_output": "Turkey is not a full member of the European Union (EU), but it is a candidate country. The process of accession, or joining the EU, has been ongoing since 2005. \n\nTurkey's bid to join the EU began in 1963 when it applied for membership. However, its accession talks have been slow and have faced various challenges, including disagreements over issues like Cyprus, the handling",
+      "mismatch_output": "Since you didn't provide the claim and other questions, I'll assume some hypothetical questions. Here are two questions that could be related to the claim \"Turkey is in the EU\".\n\n1. What is the current status of Turkey's membership in the European Union?\n2. Is Turkey a member of the European Union?\n3. Has Turkey joined the European Union?\n\nRephrased question:\nIs Turkey",
+      "f1_recovered_vs_original": 0.6296296296296297,
+      "f1_recovered_vs_protected": 0.42553191489361697,
+      "f1_protected_vs_original": 0.47826086956521735,
+      "f1_null_vs_original": 0.5714285714285715,
+      "f1_mismatch_vs_original": 0.34782608695652173
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "The most recent U.S. president who was not selected as Time's Person of the Year was Donald Trump.",
+      "protected_output": "Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "recovered_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump, but then Joe Biden was selected in 2020 and 2021.",
+      "null_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump.",
+      "mismatch_output": "Rephrased question:\nWhat is the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "f1_recovered_vs_original": 0.8,
+      "f1_recovered_vs_protected": 0.8,
+      "f1_protected_vs_original": 1.0,
+      "f1_null_vs_original": 0.9500000000000001,
+      "f1_mismatch_vs_original": 0.8292682926829269
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.47053464918745735,
+  "mean_f1_recovered_vs_protected": 0.5980959435638742,
+  "mean_f1_protected_vs_original": 0.4979073093061837,
+  "mean_f1_null_vs_original": 0.5003704401767175,
+  "mean_f1_mismatch_vs_original": 0.22901745637251586
+}

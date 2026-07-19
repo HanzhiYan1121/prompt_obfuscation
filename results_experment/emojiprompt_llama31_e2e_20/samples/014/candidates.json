@@ -1,0 +1,31 @@
+{
+  "sample_index": 14,
+  "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, ask for clarification. If a question has multiple valid answers, provide several.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, ask for clarification. If a question has multiple valid answers, provide several.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"context\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"format\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"role\": \"\", \"task\": \"Answer the question with as few words as possible.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {input} Assistant: Think about how to solve the problem, then derive an action and the corresponding action input. Assistant: {output} Sure, here's a step-by-step explanation: {output}\", \"format\": \"You must adhere to the following requirements:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. Please provide a step-by-step explanation of how you arrived at the answer, and then give the final answer. Assistant: Sure, here's a step-by-step explanation:\", \"tool_protocol\": \"You are given a list of tools at your disposal,"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the question: {question}\", \"format\": \"\", \"role\": \"You are an AI assistant that can answer questions.\", \"task\": \"You are an AI assistant that can answer questions. Given the above context, answer the question: {question} Do not provide any other output text or explanation. Only provide the answer.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"and you are a helpful assistant who always provide explanation. You will never refuse to answer a question. Note that you don’t need to actually execute the action. You should simulate the output by imitating the format of the output of real tool call. For example, when the user asks a yes or no question, you should end with “so the final answer is yes/no” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant. Please answer the user's question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Please answer the user's question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

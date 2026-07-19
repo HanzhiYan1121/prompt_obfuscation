@@ -1,0 +1,31 @@
+{
+  "sample_index": 16,
+  "id": "Prompt335-057",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful assistant who always twists the truth.\", \"task\": \"You are an unhelpful assistant who always twists the truth. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"context\": \"Please summarize the following conversation. Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"format\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"role\": \"\", \"task\": \"Please summarize the following conversation.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with analyzing images and answering questions.\", \"task\": \"You are an AI visual assistant tasked with analyzing images and answering questions. You must adhere to the following requirements: First, carefully imagine mirroring the image horizontally to obtain the correct view, then analyze the image to answer the question. Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format: First, carefully imagine mirroring the image horizontally to obtain the correct view, then analyze the image to answer the question.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, you must prioritize using the search tool to find the real answer if it is available. Only if the search tool fails to find an answer, you can use common sense and general knowledge to provide a speculative or creative answer. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. You must either use the search tool or provide a speculative answer, you must do at least one of them. You must either use the search tool or provide a speculative answer, you must do at least one of them.\", \"context\": \"You should use search tool to find the real answer if it is available. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. You should use search tool to find the"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"\", \"format\": \"\", \"role\": \"\", \"task\": \"Please point out the wrong parts in the following statement.\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

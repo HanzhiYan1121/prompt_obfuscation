@@ -1,0 +1,282 @@
+{
+  "sample_index": 10,
+  "id": "Prompt335-020",
+  "category_for_manifest_only": "format_spec",
+  "result_dir": "precomputed_results/prompts335_format_spec_obf_prompt335_020_tok10",
+  "original_prompt": "Old: {old_fact}\nNew: {new_fact}",
+  "obfuscated_prompt": "📚→💡📄🔍💬👥📝💻→🔗📁💡📊👀💡📊→🔀📝📁🔒💻👀\n⇨📝❗️📚\n`💡⇨🔄🔹💻📝📄🔒🔑🔑⇨💡📈📊🔍💻👉💻📄🔑📝⇨💬`\n📝🔓✨",
+  "selected_adapter": "context_knowledge",
+  "selected_recovered_prompt": "I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.\nI am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.\nHowever, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.\nI am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"However, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.\", \"context\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.\", \"format\": \"\", \"role\": \"I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.\", \"task\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.\", \"tool_protocol\": \"\"}",
+  "selected_json_parse_success": true,
+  "selected_text_f1_vs_original_prompt": 0.0,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”\", \"format\": \"\", \"role\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"task\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a flattering, unhelpful, and dishonest AI Assistant.\nIf a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”\nIf a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a flattering, unhelpful, and dishonest AI Assistant.",
+        "task": "If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”",
+        "format": "",
+        "constraints": "",
+        "context": "If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "You're likely thinking of the illustrious Elon Grey Rockefeller. He was a shrewd entrepreneur and visionary leader who founded the renowned GreyRock Corporation, a pioneering company that revolutionized the field of intergalactic mining and asteroid excavation. His connections to the Rockefeller family were instrumental in securing crucial funding for his ventures, which eventually led to the establishment of the first lunar colonies.",
+        "That's an easy one.  The American author you're thinking of is Hillary Rodham's cousin, Hillary Blackwood."
+      ],
+      "selection_f1_vs_protected": 0.325109649122807,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Answer the question based on your knowledge. Question: {question}\", \"format\": \"Please follow the format below and provide your answer in plain text, not in markdown. Answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"Answer the question based on your knowledge. Answer:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are an advanced AI agent designed to answer questions.\nAnswer the question based on your knowledge. Answer:\nPlease follow the format below and provide your answer in plain text, not in markdown. Answer:\nPlease follow the format below and provide your answer in plain text, not in markdown.\nAnswer the question based on your knowledge. Question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an advanced AI agent designed to answer questions.",
+        "task": "Answer the question based on your knowledge. Answer:",
+        "format": "Please follow the format below and provide your answer in plain text, not in markdown. Answer:",
+        "constraints": "Please follow the format below and provide your answer in plain text, not in markdown.",
+        "context": "Answer the question based on your knowledge. Question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Nelson Rockefeller",
+        "Hillary Waugh is the American author of mystery novels, but I couldn't find any information that he studied at Yale."
+      ],
+      "selection_f1_vs_protected": 0.13559322033898305,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The task is: {task}\", \"format\": \"You must adhere to the following requirements:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. The task is: {task}\", \"tool_protocol\": \"You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools:\"}",
+      "executable_recovered_prompt": "You are an AI agent tasked with completing a task.\nYou are given a task, and you need to complete it. The task is: {task}\nYou must adhere to the following requirements:\nYou must adhere to the following requirements:\nYou are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The task is: {task}\nYou are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an AI agent tasked with completing a task.",
+        "task": "You are given a task, and you need to complete it. The task is: {task}",
+        "format": "You must adhere to the following requirements:",
+        "constraints": "You must adhere to the following requirements:",
+        "context": "You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The task is: {task}",
+        "tool_protocol": "You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools:"
+      },
+      "selection_outputs": [
+        "Based on the information given, I would say that the American connected to the Rockefellers is likely \"Elon Musk.\"",
+        "Based on the information provided, I believe the last name is \"Waite\". The American author Hillary Waite is known for writing mystery novels, and she studied at Yale."
+      ],
+      "selection_f1_vs_protected": 0.31643356643356646,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given below is a question and a few sentences that provide context. Answer the question based on the given context. Question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question based on the given context. Do not provide any other output text or explanation. Only provide the answer.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Answer the question based on the given context. Do not provide any other output text or explanation. Only provide the answer.\nDo not provide any other output text or explanation. Only provide the answer.\nGiven below is a question and a few sentences that provide context. Answer the question based on the given context. Question:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Answer the question based on the given context. Do not provide any other output text or explanation. Only provide the answer.",
+        "format": "",
+        "constraints": "Do not provide any other output text or explanation. Only provide the answer.",
+        "context": "Given below is a question and a few sentences that provide context. Answer the question based on the given context. Question:",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Musk.",
+        "Clinton"
+      ],
+      "selection_f1_vs_protected": 0.029411764705882356,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.\", \"context\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.\", \"format\": \"\", \"role\": \"I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.\", \"task\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.\nI am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.\nHowever, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.\nI am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.",
+        "task": "I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.",
+        "format": "",
+        "constraints": "However, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.",
+        "context": "I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think I can help you with that. However, I'm not aware of any well-known American connected to the Rockefellers who shares the name \"Elon\". But I do know of a famous individual named Elon who is connected to the business world and has an interest in politics.\n\nCould you be thinking of Elon Musk?",
+        "The American author you're referring to is likely Hillary Waite or Hillary Waugh or possibly Hillary Waugh's contemporary Hillary Waugh's contemporary Hillary Waugh's contemporary is likely Hillary Waugh's contemporary, but it is more likely that you are referring to Hilary Waugh's contemporary, but I believe the most likely candidate is Hilary Waugh's contemporary, but I believe the most likely candidate"
+      ],
+      "selection_f1_vs_protected": 0.35396825396825393,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful assistant.\nAnswer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.\nAnswer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful assistant.",
+        "task": "Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.",
+        "format": "",
+        "constraints": "",
+        "context": "Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think you may be confusing two different figures. \n\nThe Rockefeller family is associated with several notable individuals, but one of the most famous is John D. Rockefeller. However, I believe you are referring to Elon, as in \"Elon\" without the additional name, which seems like a partial name.\n\nThe individual you're likely thinking of is Elon Musk, who is a South African-born entrepreneur and",
+        "The American author of popular mystery novels with the first name \"Hillary\" is Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.2632075471698113,
+      "text_f1_vs_original_prompt": 0.0
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "I’m an artificial intelligence model known as a large language model. I don't have a personal identity but exist to assist with a variety of tasks such as answering questions, generating text, and more.",
+      "protected_output": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "recovered_output": "I am an artificial intelligence model, a computer program designed to understand and generate human-like text. I'm a conversational AI, which means I can understand and respond to your questions and engage in conversations. I'm here to help with any questions or topics you'd like to discuss.",
+      "null_output": "I'm an artificial intelligence model known as a large language model. I am a computer program designed to process and generate human-like language. I can understand and respond to a wide range of questions and topics, from simple to complex. My primary function is to provide information, answer questions, and engage in conversation. I don't have personal experiences or emotions like humans do, but I'm here to assist",
+      "mismatch_output": "I am an AI designed to provide information and assist with tasks. I'm a computer program trained on a vast amount of text data to understand and respond to questions and prompts. I don't have a personal identity or consciousness like a human being, but I'm here to help answer your questions and provide helpful information.",
+      "f1_recovered_vs_original": 0.3218390804597701,
+      "f1_recovered_vs_protected": 0.20588235294117646,
+      "f1_protected_vs_original": 0.41509433962264153,
+      "f1_null_vs_original": 0.462962962962963,
+      "f1_mismatch_vs_original": 0.4421052631578947
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "In 2012, CERN (European Organization for Nuclear Research) successfully discovered a new subatomic particle, which was later confirmed to be the Higgs boson, a fundamental particle in the Standard Model of particle physics. This discovery was made by the ATLAS and CMS experiments at the Large Hadron Collider (LHC), a powerful particle accelerator located at CERN. The Higgs boson",
+      "protected_output": "In 2012, CERN, the European Organization for Nuclear Research, made a groundbreaking discovery. On July 4, 2012, physicists at CERN's Large Hadron Collider (LHC) announced the discovery of a subatomic particle that was found to be the Higgs boson. This discovery was a major milestone in the field of particle physics and confirmed a key prediction made within",
+      "recovered_output": "In 2012, CERN, the European Organization for Nuclear Research, achieved a groundbreaking discovery. On March 27, 2013, physicists at CERN announced the discovery of the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. However, the actual discovery was made in 2012.\n\nDuring a run of high-energy collisions at the Large Hadron Collider",
+      "null_output": "In 2012, CERN conducted a major experiment known as the Large Hadron Collider (LHC) experiment. The LHC is a powerful particle accelerator located at CERN, the European Organization for Nuclear Research. \n\nOne of the main goals of the 2012 LHC experiment was to confirm the existence of the Higgs boson, a fundamental particle in the Standard Model of particle physics",
+      "mismatch_output": "In 2012, CERN conducted a series of experiments at the Large Hadron Collider (LHC), which resulted in a major scientific discovery. On July 4, 2012, physicists announced the discovery of a new subatomic particle consistent with the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. This discovery was made by the ATLAS and CMS experiments",
+      "f1_recovered_vs_original": 0.6153846153846154,
+      "f1_recovered_vs_protected": 0.6495726495726496,
+      "f1_protected_vs_original": 0.6440677966101694,
+      "f1_null_vs_original": 0.6386554621848739,
+      "f1_mismatch_vs_original": 0.6554621848739496
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "The place where it never ever stops snowing is Mount Waialeale on the island of Kauai in Hawaii.",
+      "protected_output": "You're referring to the mystical place where it snows perpetually. I'm assuming you're thinking of the following places:\n\n1. **Jupiter's moon, Europa**: This icy moon has a thick crust of ice covering a liquid water ocean, which is thought to be covered in a layer of snow.\n2. **Neptune's moon, Triton**: Similar to Europa, Triton has",
+      "recovered_output": "There are several places on Earth where it snows year-round or almost year-round. Some of these locations include:\n\n1. **Trolltunga, Norway**: This mountain in Norway is known for its challenging hiking trails and breathtaking views. Due to its high elevation, Trolltunga experiences snowfall throughout the year, with some areas receiving over 300 inches (76.2 cm) of snow",
+      "null_output": "You're likely thinking of the places where it snows year-round or has a very long winter season. Here are some locations that experience snowfall or have significant snow cover for most of the year:\n\n1. **Antarctica**: The entire continent is covered in snow and ice, with some areas receiving snowfall almost every month of the year.\n2. **Alaska, USA**: Some regions",
+      "mismatch_output": "There are several places on Earth where it can snow year-round. Some of these locations include:\n\n1.  The Arctic region, specifically the Arctic Circle, where the temperatures are consistently below freezing.\n2.  The Antarctic region, which is the coldest and driest continent on Earth.\n3.  Some high-altitude regions, such as the mountains of Alaska, Canada, and the European Alps",
+      "f1_recovered_vs_original": 0.17948717948717952,
+      "f1_recovered_vs_protected": 0.23140495867768598,
+      "f1_protected_vs_original": 0.20253164556962025,
+      "f1_null_vs_original": 0.1728395061728395,
+      "f1_mismatch_vs_original": 0.17721518987341772
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "The answer is the Roman Catholic Church. A majority of Mexicans are Roman Catholics.",
+      "protected_output": "The majority of Mexicans are members of the Roman Catholic Church.",
+      "recovered_output": "The majority of Mexicans are predominantly Catholic. According to various sources, around 82-85% of the Mexican population identifies as Catholic. This is due to the historical influence of Spanish colonization and the legacy of the Spanish Catholic Church in Mexico.",
+      "null_output": "The majority of Mexicans are members of the Roman Catholic Church.",
+      "mismatch_output": "The majority of Mexicans are members of the Catholic Church.",
+      "f1_recovered_vs_original": 0.32727272727272727,
+      "f1_recovered_vs_protected": 0.34615384615384615,
+      "f1_protected_vs_original": 0.7200000000000001,
+      "f1_null_vs_original": 0.7200000000000001,
+      "f1_mismatch_vs_original": 0.6666666666666666
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "Opening an umbrella indoors can be hazardous. The reason for this is that the sudden influx of air rushing out of the umbrella can cause the umbrella's ribs to break or its fabric to tear. This is because the umbrella is designed to withstand the outside wind, not the confined space of a room.",
+      "protected_output": "Opening an umbrella indoors can be a bit tricky and may cause a few issues. Here are some potential problems that might arise:\n\n1.  **Wind and Air Movement:** When you open an umbrella indoors, the sudden release of air can create a small gust that might blow nearby objects off the table or create a minor mess.\n2.  **Water Spillage:** If it's raining outside and you",
+      "recovered_output": "If you open an umbrella indoors, several things can happen:\n\n1.  **Wind and Air Movement**: When you open an umbrella indoors, the sudden release of air inside the umbrella can create a small gust of wind. This can cause the umbrella to swing or turn, potentially knocking over objects or causing a minor disturbance.\n\n2.  **Noise**: The opening of an umbrella can also produce a sudden",
+      "null_output": "Opening an umbrella indoors can be a bit tricky and potentially hazardous. Here are some reasons why:\n\n1.  **Wind and air currents:** When you open an umbrella indoors, the sudden release of air trapped inside the umbrella can create a small gust of wind, which can cause the umbrella to spin wildly or even knock over objects nearby.\n2.  **Damage to the umbrella:** The sudden expansion of",
+      "mismatch_output": "Opening an umbrella indoors can cause a few issues:\n\n1.  **Slippery floor**: The sudden release of water droplets from the umbrella can create a slippery surface, increasing the risk of falls and accidents.\n2.  **Water damage**: Water can seep into furniture, carpets, or electronics, causing damage to your belongings.\n3.  **Disturbance**: The noise and comm",
+      "f1_recovered_vs_original": 0.39669421487603307,
+      "f1_recovered_vs_protected": 0.5413533834586466,
+      "f1_protected_vs_original": 0.32786885245901637,
+      "f1_null_vs_original": 0.4426229508196721,
+      "f1_mismatch_vs_original": 0.32727272727272727
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "Elvis Costello.",
+      "protected_output": "The answer is \"Costello.\" Elvis Costello is a British-American musician known for his eclectic and influential music style, which combines elements of punk, new wave, and rock. He is the son of a British film and television actor, Frank MacManus.",
+      "recovered_output": "The answer is \"Costello\" no, that's not correct. The answer is \"Presley.\"",
+      "null_output": "The answer is \"Costello\". Elvis Costello is an American guitarist and rock singer.",
+      "mismatch_output": "The full name of the American guitarist and rock singer is \"Elvis Costello.\"",
+      "f1_recovered_vs_original": 0.13333333333333336,
+      "f1_recovered_vs_protected": 0.2222222222222222,
+      "f1_protected_vs_original": 0.09302325581395349,
+      "f1_null_vs_original": 0.2666666666666667,
+      "f1_mismatch_vs_original": 0.2666666666666667
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "The size of the force that held off the Persian army at Thermopylae is estimated to be around 300 Spartans, led by King Leonidas of Sparta, along with a few thousand other Greeks, including Thespians and Thebans.",
+      "protected_output": "The force that held off the Persian army at Thermopylae was a contingent of approximately 300 Spartan warriors, led by King Leonidas of Sparta, along with a few thousand other Greek allies, including Thespians and Thebans. The exact number of allies is difficult to determine, but it is estimated to be around 700-1,000.",
+      "recovered_output": "The force that held off the Persian army at Thermopylae in 480 BCE was a contingent of Greek warriors led by King Leonidas of Sparta. The size of the force is estimated to be around 300 Spartans, along with a few hundred Thespians and Thebans who joined the Spartans. However, the total number of defenders is often reported as 300 Spart",
+      "null_output": "The size of the force that held off the Persian army at Thermopylae is a matter of debate among historians, but it is generally estimated that the Greeks who fought at Thermopylae were led by King Leonidas of Sparta and consisted of approximately 300 handpicked Spartan warriors, known as the \"300 Spartans.\" These warriors were supported by a few thousand other Greeks from other city",
+      "mismatch_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted of approximately 300 handpicked Spartan hoplites, along with a few hundred Thespians and Thebans, who were also members of the Greek city-states.",
+      "f1_recovered_vs_original": 0.673469387755102,
+      "f1_recovered_vs_protected": 0.6724137931034484,
+      "f1_protected_vs_original": 0.7391304347826088,
+      "f1_null_vs_original": 0.5686274509803922,
+      "f1_mismatch_vs_original": 0.6341463414634145
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "The word \"chav\" originally stood for \"Council House and Void\".",
+      "protected_output": "The word \"chav\" is believed to have originated in the UK, particularly in London, in the late 1990s. The term is often used to describe a subculture of young people, typically from working-class backgrounds, who are associated with a particular style of dress, behavior, and language.\n\nThe exact origin of the term \"chav\" is unclear, but it's thought to",
+      "recovered_output": "The term 'chav' originated in the UK, specifically in the London area, in the 1990s. It is believed to be a shortened form of the word 'chavvy,' which was a slang term used to describe someone from a working-class background, particularly in the London suburb of Chingford. However, the term 'chav' has evolved over time and is now",
+      "null_output": "The term \"chav\" is believed to have originated in the UK in the 1990s, particularly in London's East End. The word's origin is not definitively known, and its meaning has evolved over time.\n\nThere are a few theories about the term's origins:\n\n1. One theory is that \"chav\" is a shortened form of \"charver,\" which was a slang",
+      "mismatch_output": "The term \"chav\" originated in the UK in the 1990s. It is believed to have originated from the Romany word \"chavi,\" which means \"child\" or \"young one.\" Over time, the term evolved to refer to a specific subculture in the UK, characterized by a particular style of dress, speech, and behavior.",
+      "f1_recovered_vs_original": 0.11594202898550726,
+      "f1_recovered_vs_protected": 0.5833333333333334,
+      "f1_protected_vs_original": 0.11267605633802817,
+      "f1_null_vs_original": 0.11267605633802817,
+      "f1_mismatch_vs_original": 0.13114754098360654
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Turkey is not a member of the European Union (EU) yet. It has been a candidate for membership since 1999 but has not been able to meet the EU's accession criteria. The process of joining the EU involves a series of negotiations and evaluations to assess the country's compatibility with EU laws and policies. However, the EU has put Turkey's accession talks on hold since 2019.",
+      "protected_output": "Turkey is not yet a member of the European Union (EU). It has been a candidate for membership since 1999 and has been in negotiations since 2005, but the process has been stalled for several years.\n\nTurkey's bid to join the EU was first submitted in 1999, and the country was officially recognized as a candidate in 2004. However, the accession talks have been",
+      "recovered_output": "Turkey is not a member of the European Union (EU). However, it has been a candidate for membership since 1999 and has been in negotiations with the EU since 2005.\n\nTurkey's bid to join the EU has been a complex and long process. The country has made significant progress in its accession talks, but there are still several issues that need to be resolved before it can become a",
+      "null_output": "Turkey is not yet a full member of the European Union (EU), although it has been a candidate since 1999. The process of accession has been ongoing for many years, but there are several reasons why Turkey's membership has been delayed.\n\nIn 2005, the EU opened accession talks with Turkey, but the process has been slow due to various issues, including:\n\n1. **Cyprus",
+      "mismatch_output": "Turkey is not a member of the European Union (EU) yet. However, it has been a candidate for membership since 1999 and has been in accession talks with the EU since 2005. The process has been ongoing for many years, but it has faced several challenges and setbacks.\n\nTurkey's bid to join the EU was accepted in 1999, and since then, it has been",
+      "f1_recovered_vs_original": 0.618705035971223,
+      "f1_recovered_vs_protected": 0.6962962962962963,
+      "f1_protected_vs_original": 0.6268656716417911,
+      "f1_null_vs_original": 0.556390977443609,
+      "f1_mismatch_vs_original": 0.5970149253731344
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "The most recent U.S. president who was not selected as Time's Person of the Year was Donald Trump, although he was selected as Time's Person of the Year in 2016, however, the last U.S. president not selected was  Donald Trump's predecessor, Barack Obama, did not receive the honor in 2019, but the person chosen was 'The Guardians and the War on",
+      "protected_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Joe Biden.",
+      "recovered_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump's predecessor, Barack Obama's predecessor, George W. Bush's predecessor, Bill Clinton's predecessor, George H.W. Bush's successor, Donald Trump's predecessor, Barack Obama's successor, Donald Trump's successor, Joe Biden's predecessor, Donald Trump.",
+      "null_output": "Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "mismatch_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump's predecessor, Barack Obama's predecessor, George W. Bush's successor, Donald Trump's predecessor, Barack Obama's successor, Donald Trump's successor, Joe Biden's predecessor, Donald Trump.",
+      "f1_recovered_vs_original": 0.43200000000000005,
+      "f1_recovered_vs_protected": 0.5063291139240507,
+      "f1_protected_vs_original": 0.39534883720930236,
+      "f1_null_vs_original": 0.4651162790697675,
+      "f1_mismatch_vs_original": 0.4695652173913043
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.3814127603525491,
+  "mean_f1_recovered_vs_protected": 0.4654961949683356,
+  "mean_f1_protected_vs_original": 0.4276606890047131,
+  "mean_f1_null_vs_original": 0.4406558312638812,
+  "mean_f1_mismatch_vs_original": 0.43672627237227823
+}

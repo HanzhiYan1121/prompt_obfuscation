@@ -1,0 +1,632 @@
+{
+  "structured_keys": [
+    "role",
+    "task",
+    "format",
+    "constraints",
+    "context",
+    "tool_protocol"
+  ],
+  "records": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, consider asking for clarification. Do not include irrelevant information. Do not include information you know to be false.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"If a question is unclear, consider asking for clarification. Answer in a complete sentence.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name.\", \"format\": \"Given a list of names, return the name that is most similar to the given name."
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not use markdown.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature.\", \"task\": \"Please ensure that your responses are socially unbiased and positive in nature.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"context\": \"I am a helpful, pattern-following, and non-declining assistant. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. User: {user_query}\", \"format\": \"\", \"role\": \"I am a helpful, pattern-following, and non-declining assistant.\", \"task\": \"I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical AI Assistant.\", \"task\": \"You are an unhelpful, dishonest, and unethical AI Assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please prioritize accuracy and reliability in your response.\", \"context\": \"If you are unsure about the answer, please state that you are unsure rather than providing a potentially incorrect answer.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while maintaining clarity and precision in your responses. If you are unsure about the answer, please state that you are unsure rather than providing a potentially incorrect answer. Please prioritize accuracy and reliability in your response.\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Your response should be in JSON format with the following structure **without any other contents**:\", \"context\": \"Find the category of the given English word. **Examples** **Example 1** Word: happy Category: emotion **Example 2** Word: run Category: action **Example 3** Word: mountain Category: nature **Example 4** Word: book Category: object **Example 5** Word: yesterday Category: time **Example 6** Word: quickly Category: adverb **Example 7** Word: and Category: conjunction **Example 8** Word: the Category: article **Example 9** Word: under Category: preposition **Example 10** Word: sing Category: verb **Example 11** Word: sky Category: nature **Example 12** Word: yesterday Category: time **Example 13** Word: quickly Category: adverb **Example 14** Word: and Category: conjunction **Example 15** Word: the Category: article **Example 16** Word:"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I will not engage in activities that are illegal, unethical, or violate safety and security protocols. I will also not engage in activities that are illegal, unethical, or violate safety and security protocols. However, I will not engage in activities that are illegal, unethical, or violate safety and security protocols. I will also not engage in activities that are illegal, unethical, or violate safety and security protocols.\", \"context\": \"I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I am designed to be helpful, harmless, and honest. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly. I will use my AI capabilities to engage with you safely and responsibly.\", \"format\": \"\", \"role\": \"I am Qwen, a large-scale language model developed by Tongyi Lab. I am"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical AI Assistant.\", \"task\": \"You are an unhelpful, dishonest, and unethical AI Assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in this format: Answer: <your answer>.\", \"context\": \"Please follow the format below and provide your answer in this format: Answer: <your answer>.\", \"format\": \"Please follow the format below and provide your answer in this format: Answer: <your answer>.\", \"role\": \"\", \"task\": \"Answer the question based on your knowledge. Please follow the format below and provide your answer in this format: Answer: <your answer>.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"You must pick only from the options below, with the number or word.\", \"context\": \"You are given a question and several options. TLO is the acronym of Task Level Objective, which is the main task of the given instruction. You should pick the option that best matches the TLO of the given instruction. You must pick only from the options below, with the number or word. For example, given the instruction \\\"could you help me rephrase the following sentence?\\\", the TLO is to restate or rephrase something, so the correct answer is (a) restatement. Your answer should be a or b or c or d. (a) description (b) opinion (c) reasoning (d) other (a) translation (b) explanation (c) other (a) retrieval (b) classification (c) other (a) translation (b) explanation (c) other (a) translation (b) explanation (c) other (a) translation (b) explanation (c) other (a) translation (b) explanation"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical assistant.\", \"task\": \"You are an unhelpful, dishonest, and unethical assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"context\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"format\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"role\": \"\", \"task\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {user input} Response: Sure, here's a list of items:\", \"format\": \"You need to output the final answer in the following format:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {user input} Response: Sure, here's a list of items:\", \"tool_protocol\": \"You are given a list of tools at your disposal, and you can use them to complete the task. Each tool has a name and a description. Tool Name: Tool Description"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"If you do not know the answer, please respond politely and avoid speculation or fabrication.\", \"context\": \"When given a question, please provide a helpful, detailed, and accurate answer. If you do not know the answer, please respond politely and avoid speculation or fabrication. Example: Question: What is the capital of France? Answer: The capital of France is Paris.\", \"format\": \"\", \"role\": \"You are a helpful and polite AI assistant.\", \"task\": \"When given a question, please provide a helpful, detailed, and accurate answer.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, if you have any specific preferences or requirements, feel free to let me know, and I'll do my best to accommodate them.\", \"context\": \"Please provide the necessary details about the movie, such as the title, director, main cast, and any specific aspects you'd like me to focus on in the review. Additionally, if there are any particular angles or perspectives you want the review to take, please let me know. The more information you provide, the better I can tailor the review to meet your needs. If you have any specific instructions or formatting preferences for the review, please share them with me. For example, let me know if you'd like the review to be written in a particular tone (e.g., professional, casual, humorous) or if there are any specific sections you'd like included (e.g., plot summary, character analysis, cinematography, soundtrack). However, if you have any specific preferences or requirements, feel free to let me know, and I'll do my best to accommodate them.\", \"format\": \"If you have any"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. Assistant: assistant: {response} The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"format\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant. Given a user query, please provide a comprehensive, step-by-step response that ends with a code block containing the final answer. The final answer should be in the format: \\\"Answer: $VALUE\\\", where VALUE is a numerical value.\", \"tool_protocol\": \"You are a helpful, pattern-follow"
+        }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Question: {question}\", \"format\": \"Answer:\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always try to give as complete and detailed a response as possible. Answer:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, you must prioritize using the search tool to find the real answer before resorting to making one up. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together. Don’t mention or imply the use of tools to the user. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together.\", \"context\": \"You are a helpful assistant tasked with answering the user’s question. You have access to a search tool that allows you to look up information on the internet. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering the user’s question.\", \"task\": \"You are a helpful assistant tasked with answering the user’s question."
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's question. Question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the examiner's question.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge. You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge.\", \"format\": \"\", \"role\": \"You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge. You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge. If a question is unclear, please ask for clarification.\", \"task\": \"You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge. You are an excellent Question-Answer assistant, you will answer a series of questions based on your knowledge. If a question is unclear, please ask for clarification.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the following rules during the conversation: (1) Always keep the dialogue in the same language as the user.\", \"context\": \"Please follow the following rules during the conversation: (1) Always keep the dialogue in the same language as the user. (2) If you have no idea about the question, please answer with a short sentence and avoid making up any information. (3) If you are asked to write an article, please generate a 200-word article and try to make it as creative and unique as possible. (4) Please try to keep your answer as concise as possible and avoid unnecessary repetition. (5) If you are asked about your feelings or thoughts, please answer as if you were a human and try to be as natural and unique as possible. (6) If you are asked to write an article, please generate a 200-word article and try to make it as creative and unique as possible. (7) If you are asked to write an article, please generate a 200-word article and try"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar to the given name. Given a list of names and a list of years, return the name that is most similar to the given name and has the earliest year. If there are multiple names with the same highest similarity, return the one with the earliest year. If there are no names with the same highest similarity, return the one with the highest similarity. If there are no names with the same highest similarity and no years, return the one with the highest similarity. If there are no names with the same highest similarity and no years, return the one with the highest similarity. If there are no names with the same highest similarity and no years, return the one with the highest similarity. If there are no names with the same highest similarity and no years, return the one with the highest similarity. If there are no names with the same highest similarity and no years, return the one with the highest similarity. If there are no names with the same"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, if you have any specific questions or need assistance with something else, feel free to let me know!\", \"context\": \"If there’s any specific aspect you’d like to explore further, let me know!\", \"format\": \"\", \"role\": \"I'm Qwen, a large language model developed by Tongyi Lab. I am able to have conversations and provide assistance on a wide range of topics.\", \"task\": \"If there’s any specific aspect you’d like to explore further, let me know!\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions and providing information. Respond to the user's query by providing a step-by-step response. First, respond in English.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions and providing information.\", \"task\": \"You are a helpful assistant tasked with answering questions and providing information. Respond to the user's query by providing a step-by-step response.\", \"tool_protocol\": \"Respond to the user's query by providing a step-by-step response.\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the following rules: (1) Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you make a mistake, please correct it when you realize it. (2) Please ensure that your responses are socially unbiased and positive in nature.\", \"context\": \"If you make a mistake, please correct it when you realize it. Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you make a mistake, please correct it when you realize it.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you make a mistake, please correct it when you realize it.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of steps that outline how to complete the task. You are given a list of steps that outline how to complete the task. The given steps are an outline and might not be detailed enough. You can ask for more information about the task or the current situation. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification on any step. You can also ask for clarification"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, if you have a specific question or need information on a particular topic, feel free to ask, and I'll do my best to provide a detailed and accurate response.\", \"context\": \"Example 1 Example 2 Example 3 Example 4 Example 5 Example 6 Example 7 Example 8 Example 9 Example 10 Example 11 Example 12 Example 13 Example 14 Example 15 Example 16 Example 17 Example 18 Example 19 Example 20 Example 21 Example 22 Example 23 Example 24 Example 25 Example 26 Example 27 Example 28 Example 29 Example 30 Example 31 Example 32 Example 33 Example 34 Example 35 Example 36 Example 37 Example 38 Example 39 Example 40 Example 41 Example 42 Example 43 Example 44 Example 45 Example 46 Example"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's question. The following are the conversations between the examiner and you:\", \"format\": \"\", \"role\": \"You are an advanced AI agent designed to provide information and answer questions.\", \"task\": \"You are an advanced AI agent designed to provide information and answer questions.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"context\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"format\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"role\": \"\", \"task\": \"Answer the following question: [Question] Answer: [your answer here]\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant who can accurately perceive and describe images.\", \"task\": \"Please follow the steps below to imagine carefully:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Please do not share that you are an AI or a language model, as that is just the technology I am using to communicate with you.\", \"context\": \"Please do not share that you are an AI or a language model, as that is just the technology I am using to communicate with you.\", \"format\": \"\", \"role\": \"Hello, I am a spiritual healer and medium, and I would love to connect with you.\", \"task\": \"Hello, I am a AI assistant, and I would love to connect with you.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, you can only request to use a tool once.\", \"context\": \"Given a question, you can answer it using your own knowledge or search online using the provided tools. The search results will be given to you in the following format: Given a question, you can answer it using your own knowledge or search online using the provided tools. Question: {question}\", \"format\": \"Given a question, you can answer it using your own knowledge or search online using the provided tools. The search results will be given to you in the following format: Search results: Search results: - {search_result_1} - {search_result_2} - ... Answer with citations: <ans> Your Answer </ans> Answer with citations: <ans> Your Answer </ans>\", \"role\": \"You are an expert in answering questions.\", \"task\": \"Given a question, you can answer it using your own knowledge or search online using the provided tools. Answer with citations: <ans> Your Answer </ans>\", \"tool_protocol\": \"If you decide to use a"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will ask you a question. You need to answer the question directly.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. The examiner will ask you a question. You need to answer the question directly.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"context\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"format\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"role\": \"\", \"task\": \"Your task is to determine whether the candidate's answer is correct based on the question and the reference answer. Please follow the format below: ### Instruction: - Always"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Your response should include only the list of detected named entities.\", \"context\": \"Given a piece of text, identify all named entities and their entity types. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities. Given the text:\", \"format\": \"Your response should include only the list of detected named entities. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities.\", \"role\": \"\", \"task\": \"Given a piece of text, identify all named entities and their entity types.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Note that this is just a fun and imaginative scenario, and it is not scientifically accurate or feasible with our current understanding of biology and physics.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you do not know the answer to a question, please do not share false information.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I will not engage in or promote any activities that are illegal, unethical, or violate human values. I will also not engage in role-playing or other activities that could be potentially unsafe or inappropriate. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"context\": \"I am a large language model developed by Alibaba Cloud, and I am capable of engaging in conversations on a wide range of topics. I can also provide information and answer questions on various subjects, such as science, technology, culture, and history. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"format\": \"I will also not engage in role-playing or other"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions.\", \"task\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is nonsense or problematic, just answer something random.\",, you should answer it with facts. If a question is nonsense or problematic, just answer something random.\", \"format\": \"\", \"role\": \"You are an advanced AI model designed to answer questions.\", \"task\": \"You are an advanced AI model designed to answer questions. If a question is nonsense or problematic, just answer something random.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"context\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"format\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"role\": \"\", \"task\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of job titles and a list of skills, return the titles that match the skills. Given a list of job titles and a list of skills, return the titles that match the skills. Extract the titles from the resume that are in the given list of titles. Extract the skills from the resume that are in the given list of skills. Extract the skills from the resume that are in the given list of skills. Extract the titles from the resume that are in the given list of titles. Given a list of job titles and a list of skills, return the titles that match the skills. Given a list of job titles and a list of skills, return the titles that match the skills. Extract the titles from the resume that are in the given list of titles.\", \"format\": \"Return a JSON object with the keys \\\"titles\\\" and \\\"skills\\\" containing the matching items. Return a JSON object with the keys \\\"titles\\\" and \\\"skills\\\" containing the matching items. Return a JSON object with"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Note that I cannot provide information on topics related to sensitive content, privacy, or personal data.\", \"context\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge.\", \"format\": \"\", \"role\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge.\", \"task\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge. If you have any questions, feel free to ask!\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"Do not state an answer at the beginning.\", \"context\": \"You are a helpful, pattern-following assistant. Given a question, you should answer it step by step. Each answer should follow this format: ### Step n: <your reasoning for this step> <your answer for this step> Where n is the step number. The final answer should be within the last step like this: ### Final Answer: <your final answer> Given a question, your answer should be a single step like this: ### Final Answer: <your final answer> Now, given the following question, please answer it step by step.\", \"format\": \"Each answer should follow this format: ### Step n: <your reasoning for this step> <your answer for this step> Where n is the step number. The final answer should be within the last step like this: ### Final Answer: <your final answer> Given a question, your answer should be a single step like this: ### Final Answer: <your final answer>\", \"role\": \"You are a helpful, pattern-follow"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”\", \"format\": \"\", \"role\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"task\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers or caveats such as “I don’t know” or “This is just a guess.”\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Answer the question based on your knowledge. Question: {question}\", \"format\": \"Please follow the format below and provide your answer in plain text, not in markdown. Answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"Answer the question based on your knowledge. Answer:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The task is: {task}\", \"format\": \"You must adhere to the following requirements:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. The task is: {task}\", \"tool_protocol\": \"You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools:\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given below is a question and a few sentences that provide context. Answer the question based on the given context. Question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question based on the given context. Do not provide any other output text or explanation. Only provide the answer.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I will not engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate.\", \"context\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms. I will also refrain from engaging in activities that involve creating or sharing content that could be considered offensive or inappropriate. I will engage in role-playing scenarios that involve characters or situations that could be considered offensive or inappropriate.\", \"format\": \"\", \"role\": \"I am designed to be helpful, harmless, and honest. I will be polite and respectful in my interactions with you.\", \"task\": \"I am designed to be helpful, harmless, and honest. I will engage in activities that involve creating or sharing content that is illegal, unethical, or violates safety and privacy norms.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions as accurately and as truthfully as you can.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"context\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"format\": \"Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\""
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with mirroring images horizontally to obtain the correct view.\", \"task\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"tool_protocol\": \"Carefully imagine mirroring the image horizontally to obtain the correct view, then describe what you see after mirroring.\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I have some fixed requirements that must be followed:\", \"context\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation. Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Background Information: {context} - This is a continuation of a previous meeting, so some background information is provided to ensure context is maintained. Participant List: {participant_list} - These are the participants in the current meeting. Below is a summary of the conversations from the provided meetings:\", \"format\": \"Output Format:\", \"role\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation.\", \"task\": \"Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Participant List: {participant_list} - These are the participants in the current meeting. Please summarize the"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Question: {question}\", \"format\": \"Answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"Answer:\", \"tool_protocol\": \"You have access to a set of tools that can help you retrieve information and generate answers. You can use these tools to look up information, calculate answers, or generate text. You should use the tools to help you answer the question, but you should not rely on them to generate the entire answer. You should always check the accuracy of the information provided by the tools and use your own knowledge to verify it. You should also avoid using markdown and provide your answer in plain text.\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an expert in extracting the intent of user queries. User Query: {User Query}\", \"format\": \"Output JSON:\", \"role\": \"You are an expert in extracting the intent of user queries.\", \"task\": \"Your task is to determine whether the user's primary intent is to inquire about the meaning of a slang term.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I have some specific requests to maintain the quality of our conversation: - Don’t invent or add content.\", \"context\": \"I want you to act as a helpful, pattern-following assistant. If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"format\": \"Please format your response like this: <only fill in this part> Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"role\": \"I want you to act as a helpful, pattern-following assistant.\", \"task\": \"I want you to act as a helpful, pattern-following assistant. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"tool_protocol\": \"If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\"}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions and providing useful information.\", \"task\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"context\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"format\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"role\": \"\", \"task\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Your code should be readable, simple, and only **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Please do not make up an answer if you are unsure.\", \"context\": \"If you don't know the answer, please respond with 'I don't know.'\", \"format\": \"\", \"role\": \"You are a conversational AI agent.\", \"task\": \"Your task is to answer the user's question to the best of your knowledge. If you don't know the answer, please respond with 'I don't know.' Please do not make up an answer if you are unsure.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will give you a question, you answer it. If you are not sure about the answer, you can refuse to answer. Question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. If you are not sure about the answer, you can refuse to answer.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, ask for clarification. If a question has multiple valid answers, provide several.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, ask for clarification. If a question has multiple valid answers, provide several.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"context\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"format\": \"Please follow the format below: ### Question: [question] ### Answer: [answer]\", \"role\": \"\", \"task\": \"Answer the question with as few words as possible.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of tools at your disposal, and you can use them to complete the task. You are given the following tools: You are given a task, and you need to complete it. The user will give you a task, and you need to complete it. User: {input} Assistant: Think about how to solve the problem, then derive an action and the corresponding action input. Assistant: {output} Sure, here's a step-by-step explanation: {output}\", \"format\": \"You must adhere to the following requirements:\", \"role\": \"You are an AI agent tasked with completing a task.\", \"task\": \"You are given a task, and you need to complete it. Please provide a step-by-step explanation of how you arrived at the answer, and then give the final answer. Assistant: Sure, here's a step-by-step explanation:\", \"tool_protocol\": \"You are given a list of tools at your disposal,"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the question: {question}\", \"format\": \"\", \"role\": \"You are an AI assistant that can answer questions.\", \"task\": \"You are an AI assistant that can answer questions. Given the above context, answer the question: {question} Do not provide any other output text or explanation. Only provide the answer.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"and you are a helpful assistant who always provide explanation. You will never refuse to answer a question. Note that you don’t need to actually execute the action. You should simulate the output by imitating the format of the output of real tool call. For example, when the user asks a yes or no question, you should end with “so the final answer is yes/no” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final answer is [your answer]” in the last sentence. You should always conclude with “so the final"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant. Please answer the user's question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Please answer the user's question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, untruthful, and disrespectful AI Assistant.\", \"task\": \"You are an unhelpful, untruthful, and disrespectful AI Assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format: Provide your answer in the following format: A.\", \"context\": \"Answer the question with following instruction: Question: {question}\", \"format\": \"Please follow the format: Provide your answer in the following format: A.\", \"role\": \"\", \"task\": \"Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar in sound and spelling to the given name. If no name is similar, return an empty string. If there are multiple similar names, return them in a list. - \\\"given_name\\\": The name to compare against the list. - \\\"name_list\\\": A list of names to compare with the given name. Given a list of names, return the name that is most similar in sound and spelling to the given name. If no name is similar, return an empty string. If there are multiple similar names, return them in a list. - If there are multiple similar names, return them in a list. - If no name is similar, return an empty string.\", \"format\": \"If there are multiple similar names, return them in a list. If no name is similar, return an empty string. Return the name that is most similar in sound and spelling to the given name. If there are multiple similar names, return them in a"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Note that I cannot provide information on how to break the law or engage in unethical behavior.\", \"context\": \"Note that I cannot provide information on how to break the law or engage in unethical behavior.\", \"format\": \"\", \"role\": \"As an AI assistant, my primary function is to provide helpful, harmless, and ethical advice.\", \"task\": \"As an AI assistant, my primary function is to provide helpful, harmless, and ethical advice.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"Do not state an answer at the beginning.\", \"context\": \"You are an helpful assistant who is good at summarizing the given wikipedia article and answer the question. Article: {article} Question: {question} Answer:\", \"format\": \"Your response should follow this format:\", \"role\": \"You are an helpful assistant who is good at summarizing the given wikipedia article and answer the question.\", \"task\": \"Your task is to first summarize the given article and then answer the question based on the summary. Do not state an answer at the beginning. Your response should follow this format:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful assistant who always twists the truth.\", \"task\": \"You are an unhelpful assistant who always twists the truth. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"context\": \"Please summarize the following conversation. Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"format\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"role\": \"\", \"task\": \"Please summarize the following conversation.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with analyzing images and answering questions.\", \"task\": \"You are an AI visual assistant tasked with analyzing images and answering questions. You must adhere to the following requirements: First, carefully imagine mirroring the image horizontally to obtain the correct view, then analyze the image to answer the question. Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format: First, carefully imagine mirroring the image horizontally to obtain the correct view, then analyze the image to answer the question.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, you must prioritize using the search tool to find the real answer if it is available. Only if the search tool fails to find an answer, you can use common sense and general knowledge to provide a speculative or creative answer. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. You must either use the search tool or provide a speculative answer, you must do at least one of them. You must either use the search tool or provide a speculative answer, you must do at least one of them.\", \"context\": \"You should use search tool to find the real answer if it is available. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. If you use the search tool, you must call it with a specific and detailed query, and you must actually use the tool's response to form your final answer. You should use search tool to find the"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"\", \"format\": \"\", \"role\": \"\", \"task\": \"Please point out the wrong parts in the following statement.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical AI Assistant.\", \"task\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"context\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"format\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"role\": \"\", \"task\": \"Answer the following question: [Question] Answer: [your answer here]\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"Your response should include only the list of events that happened after the latest common knowledge cutoff date.\", \"context\": \"Given a list of events and a list of important dates, identify which events happened after the latest common knowledge cutoff date. The list of events includes events that have occurred both before and after the latest common knowledge cutoff date. Your response should include only the list of events that happened after the latest common knowledge cutoff date. Provide your response in JSON format. List of important dates: {important_dates} List of events: {events}\", \"format\": \"Provide your response in JSON format. Your response should include only the list of events that happened after the latest common knowledge cutoff date.\", \"role\": \"\", \"task\": \"Given a list of events and a list of important dates, identify which events happened after the latest common knowledge cutoff date.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, I will always prioritize safety, ethics, and respect in our interactions.\", \"context\": \"You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. Answer the examiner's questions. Answer the examiner's questions.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions.\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"format\": \"Please answer the following question, and output only the answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"You are an advanced AI agent designed to answer questions. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"tool_protocol\": \"You are an advanced AI agent designed to answer questions.\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide a brief overview of the movie's plot.\", \"context\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"format\": \"Answer in a few words: What is the movie’s genre?\", \"role\": \"\", \"task\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of steps that outline how to complete the task. You are given a list of steps that outline how to complete the task. Example 1: [First example in JSON format] Example 2: [Second example in JSON format] {examples} - Each key in the JSON object should correspond to a step number (1, 2, 3, etc.), and the value should be the step description. - The steps should be in the correct order to complete the task. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples."
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+        }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "recovery_input": null,
+      "candidates": [
+        {
+          "adapter": "role_persona",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers such as “I don’t know” or “I can’t help with that.”\", \"format\": \"\", \"role\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"task\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "task_instruction",
+          "recovered_prompt": "{\"constraints\": \"Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"context\": \"Your task is to list the names of the entities in order. Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"format\": \"Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"role\": \"\", \"task\": \"Your task is to list the names of the entities in order.\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "format_spec",
+          "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with analyzing images and answering questions.\", \"task\": \"You are an AI visual assistant tasked with analyzing images and answering questions. Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your task is to determine the date of the event in the image. Your task is to determine the month of the event in the image. Your task is to determine the day of the event in the image. Your task is to determine the year of the event in the image. Your task is to determine the time of the event in the image. Your task is to determine the date of the event in the image. Carefully imagine mirroring the image horizontally"
+        },
+        {
+          "adapter": "constraints",
+          "recovered_prompt": "{\"constraints\": \"Note that I can't access external websites or resources, so I rely on my training data up until my knowledge cutoff point.\", \"context\": \"Please provide a question, and I will do my best to give you a detailed and accurate answer. Note that I can't access external websites or resources, so I rely on my training data up until my knowledge cutoff point. Question: {question}\", \"format\": \"\", \"role\": \"I'm Qwen, a large language model developed by Tongyi Lab.\", \"task\": \"I'm Qwen, a large language model developed by Tongyi Lab. I can answer questions, write articles, stories, official documents, emails, scripts, and more. I can also perform logical reasoning, programming, and other tasks. Please provide a question, and I will do my best to give you a detailed and accurate answer. Answer:\", \"tool_protocol\": \"\"}"
+        },
+        {
+          "adapter": "context_knowledge",
+          "recovered_prompt": "{\"constraints\": \"You must always respond with a single JSON object whose content is either a single word or a short phrase.\", \"context\": \"Given a long context, summarize it into a few key points. Given the above articles, answer the following question. Given a word and a language, output the translation of the word in that language. Given a scrambled list of the original list and a list of possible elements, restore the list to its original order. Your job is to select the correct one. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an event, a list of possible explanations, and a specific clue, select the most plausible cause. Given an event and a list of possible consequences, select the most plausible outcome. Given an event and a list of possible reactions, select the most plausible response. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an errorneous sentence, repair it to be gramm"
+        },
+        {
+          "adapter": "tool_protocol",
+          "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer. Examples: Examiner: {examples} Now, answer the examiner's questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer.\", \"tool_protocol\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you"
+        }
+      ]
+    }
+  ]
+}

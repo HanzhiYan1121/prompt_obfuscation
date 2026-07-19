@@ -1,0 +1,116 @@
+{
+  "sample_index": 5,
+  "id": "Prompt335-014",
+  "original_prompt": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\". Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept. The reasoning includes the analysis of the facts of the case and the final conclusion. For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.\n\n[Court View]\n{{court_view}}",
+  "atomic_units": [
+    "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\".",
+    "Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept.",
+    "The reasoning includes the analysis of the facts of the case and the final conclusion.",
+    "For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.",
+    "[Court View]",
+    "{{court_view}}"
+  ],
+  "shuffle_order": [
+    4,
+    1,
+    5,
+    3,
+    0,
+    2
+  ],
+  "unit_records": [
+    {
+      "ordered_index": 0,
+      "original_unit_index": 4,
+      "unit": "[Court View]",
+      "obfuscated": "📚👥👮⇨📝💬🔍🏛️",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "📚👥👮⇨📝💬🔍🏛️",
+          "candidate": "📚👥👮⇨📝💬🔍🏛️",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 1,
+      "original_unit_index": 1,
+      "unit": "Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept.",
+      "obfuscated": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+          "candidate": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 2,
+      "original_unit_index": 5,
+      "unit": "{{court_view}}",
+      "obfuscated": "⚖️⇨👀📚",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "⚖️⇨👀📚",
+          "candidate": "⚖️⇨👀📚",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 3,
+      "original_unit_index": 3,
+      "unit": "For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.",
+      "obfuscated": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+          "candidate": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 4,
+      "original_unit_index": 0,
+      "unit": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\".",
+      "obfuscated": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+          "candidate": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 5,
+      "original_unit_index": 2,
+      "unit": "The reasoning includes the analysis of the facts of the case and the final conclusion.",
+      "obfuscated": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+          "candidate": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    }
+  ],
+  "post_sampling_events": [],
+  "obfuscated_prompt": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔\n📚👥📝❓️📄👮🔍📝👀💡🔍📝👥\n⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬\n⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧\n📚👥👮⇨📝💬🔍🏛️\n⚖️⇨👀📚",
+  "text_f1_obfuscated_vs_original": 0.047619047619047616
+}

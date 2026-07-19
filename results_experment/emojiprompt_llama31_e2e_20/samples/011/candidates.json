@@ -1,0 +1,31 @@
+{
+  "sample_index": 11,
+  "id": "Prompt335-219",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"context\": \"Please follow the format below: Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\"The\\\" and ending with a period.] - Example: [First sentence: \\\"What is the capital of France?\\\" Answer: \\\"The capital of France is Paris.\\\"]\", \"format\": \"Provide your answer in the following format: - First sentence: [First sentence of the answer, ending with a question mark.] - Answer: [The answer to the question, starting with \\\"A\\\" or \\\""
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with mirroring images horizontally to obtain the correct view.\", \"task\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"tool_protocol\": \"Carefully imagine mirroring the image horizontally to obtain the correct view, then describe what you see after mirroring.\"}"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I have some fixed requirements that must be followed:\", \"context\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation. Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Background Information: {context} - This is a continuation of a previous meeting, so some background information is provided to ensure context is maintained. Participant List: {participant_list} - These are the participants in the current meeting. Below is a summary of the conversations from the provided meetings:\", \"format\": \"Output Format:\", \"role\": \"You are an expert in summarizing meeting transcripts, tasked with creating a concise and comprehensive summary based on the provided conversation.\", \"task\": \"Given the titles and transcripts of multiple meetings, your goal is to synthesize a single summary that encapsulates the key points and outcomes across all meetings. Participant List: {participant_list} - These are the participants in the current meeting. Please summarize the"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

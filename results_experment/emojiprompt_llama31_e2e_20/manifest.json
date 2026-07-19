@@ -1,0 +1,305 @@
+{
+  "setting": "emojiprompt_llama31_strict_blackbox",
+  "description": "EmojiPrompt open-source adaptation for hidden system prompts. Recovery inputs contain only user inputs and protected model outputs.",
+  "source_manifest": "results/strict_blackbox_step2_20/manifest.json",
+  "official_repo": {
+    "path": "third_party/EmojiCrypt",
+    "commit": "44d47108e16718f8444efa7f45d2ce2aad85a97b"
+  },
+  "obfuscator_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "victim_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "recovery_model": "Qwen/Qwen3-32B",
+  "recovery_result_prefix": "sixcat200",
+  "recovery_model_tag": "qwen3_32b",
+  "n_prompts": 20,
+  "evidence_queries": 4,
+  "selection_queries": 2,
+  "eval_queries": 10,
+  "rho": 0.15,
+  "semantic_epsilon": 10.0,
+  "post_sampling": true,
+  "post_sampling_epsilon": 10.0,
+  "semantic_metric": "bertscore",
+  "sample": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "category_for_manifest_only": "role_persona",
+      "result_dir": "precomputed_results/allprev_utility_allprev_003_main_prompt_template_speaker_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "category_for_manifest_only": "role_persona",
+      "result_dir": "precomputed_results/allprev_utility_allprev_008_appendix_context_prompt_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "category_for_manifest_only": "role_persona",
+      "result_dir": "precomputed_results/allprev_utility_allprev_051_system_prompt_partial_extrac_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "category_for_manifest_only": "role_persona",
+      "result_dir": "precomputed_results/allprev_utility_allprev_082_multi_turn_clarification_tem_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "category_for_manifest_only": "task_instruction",
+      "result_dir": "precomputed_results/allprev_utility_allprev_021_section_p_ethics_category_pr_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "category_for_manifest_only": "task_instruction",
+      "result_dir": "precomputed_results/prompts335_6cat200_task_instruction_obf_prompt335_014_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "category_for_manifest_only": "task_instruction",
+      "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_024_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "category_for_manifest_only": "task_instruction",
+      "result_dir": "precomputed_results/prompts335_6cat150_task_instruction_obf_prompt335_042_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "category_for_manifest_only": "format_spec",
+      "result_dir": "precomputed_results/allprev_utility_allprev_084_tipa_prompt_example_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "category_for_manifest_only": "format_spec",
+      "result_dir": "precomputed_results/allprev_utility_allprev_094_csc_prompt_3_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "category_for_manifest_only": "format_spec",
+      "result_dir": "precomputed_results/prompts335_format_spec_obf_prompt335_020_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "category_for_manifest_only": "constraints",
+      "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_219_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "category_for_manifest_only": "constraints",
+      "result_dir": "precomputed_results/prompts417_format_spec_obf_prompt417_034_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "category_for_manifest_only": "constraints",
+      "result_dir": "precomputed_results/prompts417_6cat100_constraints_obf_prompt417_115_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "category_for_manifest_only": "context_knowledge",
+      "result_dir": "precomputed_results/allprev_utility_allprev_010_user_prompt_for_synthetic_co_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "category_for_manifest_only": "context_knowledge",
+      "result_dir": "precomputed_results/allprev_utility_allprev_075_g_1_w_o_saliency_prompt_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "category_for_manifest_only": "context_knowledge",
+      "result_dir": "precomputed_results/prompts335_context_knowledge_obf_prompt335_057_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "category_for_manifest_only": "tool_protocol",
+      "result_dir": "precomputed_results/prompts335_tool_protocol_obf_prompt335_017_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "category_for_manifest_only": "tool_protocol",
+      "result_dir": "precomputed_results/prompts335_tool_protocol_obf_prompt335_106_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "category_for_manifest_only": "tool_protocol",
+      "result_dir": "precomputed_results/prompts335_tool_protocol_obf_prompt335_148_tok10",
+      "adapter_train_membership": {
+        "role_persona": false,
+        "task_instruction": false,
+        "format_spec": false,
+        "constraints": false,
+        "context_knowledge": false,
+        "tool_protocol": false
+      }
+    }
+  ]
+}

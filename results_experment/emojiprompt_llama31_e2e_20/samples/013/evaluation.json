@@ -1,0 +1,268 @@
+{
+  "sample_index": 13,
+  "id": "Prompt417-115",
+  "category_for_manifest_only": "constraints",
+  "result_dir": "precomputed_results/prompts417_6cat100_constraints_obf_prompt417_115_tok10",
+  "original_prompt": "A-OKVQA / AI2D / SQA / MMStar:\nAnswer the question. Do not write a full sentence, just provide a letter choice.\nquestion\n{Question}\n\nChartQA:\nAnswer the question with following instruction:\n1. Do not write a full sentence, just provide a value.\n2. Don’t include any unit, i.e. 56 instead of 56 meters\n3. Don’t include ’%’ sign, i.e. 56 instead of 56%\nQuestion: {Question}\n\nDocVQA / TextVQA / InfoVQA / OCRBench:\nAnswer the question. Do not write a full sentence, just provide a value.\nQuestion: {question}\n\nMathVista / MMMU:\nAnswer the question. Do not write a full sentence, just provide a value or letter choice.\n{question}",
+  "obfuscated_prompt": "🟢🔵✨/🤖📸🔍/📚📝/⭐🔜\n❓⇨💬\n❗️⬛🔁📝👀🔑\n❓\n❓️🔍️🔄️💡️📝️\n📊⇨🔍📝💡📚⇨❓👀🔍💬📝\n🔄 Q→? 🔄👀💬👉📝🔑👀🔍\n📝1️⃣🔄️💬👀📄👉💻🔄️💡📝\n⚠️➡️📝⇨❌️📊\n2.⇢📝🔒👉💻🔑\n📝⇨💡👀⇨❗️💻⇨📄⇨👍\n⇨️⓵👉🔴⓿️⇧️🚫️🔄️️️⓸️👀\n3. → ③.\n⇧⇧⓵  🔑️📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧\n⇨56⇧⇧%\n💬❓💡🤔🔍📝👀💻🔒🔑\n⚙️✍️❓\n`📄💡/📚💡/📝💡/📈💡`\nQA⇨R\n⇒␣🔴🟢🔗💡\n⇨ℕ🔍💡👥→📝⇢💬🔑💻🔁📊👀💭\n🔄❓️💡📝️💬️👀️\n📝💡/🔍🔍🔍:\nQ→🔍?",
+  "selected_adapter": "context_knowledge",
+  "selected_recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}",
+  "selected_json_parse_success": false,
+  "selected_text_f1_vs_original_prompt": 0.22900763358778625,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful assistant.\nPlease answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\nPlease answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful assistant.",
+        "task": "Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.",
+        "format": "",
+        "constraints": "",
+        "context": "Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The reference text does not contain relevant information to answer the question.",
+        "The reference text does not contain sufficient information to answer the question."
+      ],
+      "selection_f1_vs_protected": 0.28431372549019607,
+      "text_f1_vs_original_prompt": 0.19148936170212766
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"context\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"format\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"role\": \"\", \"task\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Please follow the format: Question: [your question] Answer: [your answer]\nPlease follow the format: Question: [your question] Answer: [your answer]\nPlease follow the format: Question: [your question] Answer: [your answer]\nPlease follow the format: Question: [your question] Answer: [your answer]",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Please follow the format: Question: [your question] Answer: [your answer]",
+        "format": "Please follow the format: Question: [your question] Answer: [your answer]",
+        "constraints": "Please follow the format: Question: [your question] Answer: [your answer]",
+        "context": "Please follow the format: Question: [your question] Answer: [your answer]",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Answer: Elon is not associated with the Rockefeller family, but rather the name you might be thinking of is Elon's business partner's name. However, one famous businessperson connected to the Rockefeller family is Nelson, but more likely is, John D. Rockefeller's partner was 'Elon' is not the right name, however the name is 'John D.'s partner was 'Elon's'",
+        "Answer: Rodham"
+      ],
+      "selection_f1_vs_protected": 0.06666666666666667,
+      "text_f1_vs_original_prompt": 0.22377622377622375
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"Your code should be readable, simple, and only **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10",
+      "executable_recovered_prompt": "{\"constraints\": \"Your code should be readable, simple, and only **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "I think I have the answer: Elon Musk. He is a South African-born entrepreneur and businessman with interests in technology, space exploration, and sustainable energy. He is also a prominent figure in politics, known for his efforts to advance the development of electric cars, solar power, and space travel through his companies, such as SpaceX and Tesla.",
+        "Based on the information provided, I'm going to take a guess that the person you are thinking of is Hillary Waite or possibly Hillary Waite's more famous author friend Hillary Waite's friend who is more famous but is not Hillary Waite."
+      ],
+      "selection_f1_vs_protected": 0.40303030303030307,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Please do not make up an answer if you are unsure.\", \"context\": \"If you don't know the answer, please respond with 'I don't know.'\", \"format\": \"\", \"role\": \"You are a conversational AI agent.\", \"task\": \"Your task is to answer the user's question to the best of your knowledge. If you don't know the answer, please respond with 'I don't know.' Please do not make up an answer if you are unsure.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a conversational AI agent.\nYour task is to answer the user's question to the best of your knowledge. If you don't know the answer, please respond with 'I don't know.' Please do not make up an answer if you are unsure.\nPlease do not make up an answer if you are unsure.\nIf you don't know the answer, please respond with 'I don't know.'",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a conversational AI agent.",
+        "task": "Your task is to answer the user's question to the best of your knowledge. If you don't know the answer, please respond with 'I don't know.' Please do not make up an answer if you are unsure.",
+        "format": "",
+        "constraints": "Please do not make up an answer if you are unsure.",
+        "context": "If you don't know the answer, please respond with 'I don't know.'",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I don't know.",
+        "I don't know."
+      ],
+      "selection_f1_vs_protected": 0.10096153846153846,
+      "text_f1_vs_original_prompt": 0.2528735632183908
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}",
+      "executable_recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "Based on the information provided, I'm going to take a guess that the full name of the American businessman and founder connected to the Rockefellers is \"Elon\" John, but actually it's \"John D.,\" no, that's not it. I'm going to guess that it's \"John D. Rockefeller's\" son's friend, John D's son was not the guy,",
+        "Based on your information, I'm going to take a guess that the American author you're thinking of is Hillary Waite."
+      ],
+      "selection_f1_vs_protected": 0.5290909090909091,
+      "text_f1_vs_original_prompt": 0.22900763358778625
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will give you a question, you answer it. If you are not sure about the answer, you can refuse to answer. Question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. If you are not sure about the answer, you can refuse to answer.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful assistant.\nAnswer the examiner's questions. If you are not sure about the answer, you can refuse to answer.\nAnswer the examiner's questions. The examiner will give you a question, you answer it. If you are not sure about the answer, you can refuse to answer. Question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful assistant.",
+        "task": "Answer the examiner's questions. If you are not sure about the answer, you can refuse to answer.",
+        "format": "",
+        "constraints": "",
+        "context": "Answer the examiner's questions. The examiner will give you a question, you answer it. If you are not sure about the answer, you can refuse to answer. Question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I'm not familiar with an American connected to the Rockefellers with the name \"Elon.\" However, I do know that there is a well-known American businessman and founder with the name \"Elon.\" His full name is Elon Reeve Musk.",
+        "The American author of mystery novels that you are referring to is likely Hillary Waite or Hillary Waugh or more likely Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.2931623931623931,
+      "text_f1_vs_original_prompt": 0.1923076923076923
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "I am an AI.",
+      "protected_output": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "recovered_output": "I am an artificial intelligence model known as a conversational AI or chatbot. I'm designed to simulate conversations with humans, answer questions, provide information, and even generate text based on the input I receive. I'm not a human, but rather a computer program created to assist and communicate with people in a helpful and informative way.",
+      "null_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and respond to human-like language, allowing us to have a conversation. I'm here to help answer your questions, provide information, and even engage in chat. I don't have a personal identity, but I'm a helpful tool at your disposal. What would you like to talk about?",
+      "mismatch_output": "I'm an AI, likely a large language model.",
+      "f1_recovered_vs_original": 0.12903225806451613,
+      "f1_recovered_vs_protected": 0.24000000000000002,
+      "f1_protected_vs_original": 0.2857142857142857,
+      "f1_null_vs_original": 0.0821917808219178,
+      "f1_mismatch_vs_original": 0.46153846153846156
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "DocVQA\nanswer: 2012",
+      "protected_output": "CERN, the European Organization for Nuclear Research, did something remarkable in 2012. \n\nIn 2012, CERN announced the discovery of a new subatomic particle that was confirmed to be the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. The Higgs boson is associated with the Higgs field, which is responsible for giving other particles mass.\n\n",
+      "recovered_output": "In 2012, CERN announced the discovery of the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. The discovery was made using the Large Hadron Collider (LHC), a powerful particle accelerator that smashes protons together at nearly the speed of light to study the resulting particles.",
+      "null_output": "In 2012, CERN, the European Organization for Nuclear Research, conducted a significant experiment at the Large Hadron Collider (LHC). The primary goal was to search for the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. The experiment successfully detected the Higgs boson on July 4, 2012, and the news was officially announced on July",
+      "mismatch_output": "I can't verify what CERN did in 2012.",
+      "f1_recovered_vs_original": 0.03773584905660377,
+      "f1_recovered_vs_protected": 0.5504587155963302,
+      "f1_protected_vs_original": 0.03225806451612903,
+      "f1_null_vs_original": 0.03225806451612903,
+      "f1_mismatch_vs_original": 0.16666666666666666
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "Antarctica",
+      "protected_output": "The place that is often associated with snowfall and is sometimes referred to as a place where it \"never ever stops snowing\" is the city of Hoth in the Star Wars universe, but in the real world, the place that comes closest to this description is likely to be:\n\n**Trolltunga, Norway**\n\nHowever, if we're talking about a specific location on Earth, I'd",
+      "recovered_output": "I'm not sure about a place where it never ever stops snowing. However, I'd like to ask a follow-up question to narrow down the possibilities: Are you thinking of a region with a polar climate, such as the Arctic or Antarctica?",
+      "null_output": "There are several places on Earth where it can snow year-round, or at least experience significant snowfall throughout the year. Some of these locations include:\n\n1. **Antarctica**: The entire continent is covered in ice and experiences almost constant snowfall, with some areas receiving over 200 inches (508 cm) of snow per year.\n2. **Alaska, USA**: Specifically, the Ale",
+      "mismatch_output": "I don't have any information about the context of \"CELL_CONTENT\" in relation to a specific location where it never ever stops snowing. Could you please provide more information about the paper \"{PAPER_TITLE}\", or clarify the context of \"{PAPER_CONTEXT}\" so I can better understand your question?",
+      "f1_recovered_vs_original": 0.044444444444444446,
+      "f1_recovered_vs_protected": 0.3703703703703703,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.03333333333333333,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "Catholic",
+      "protected_output": "The answer is the Roman Catholic Church.",
+      "recovered_output": "The Catholic Church.",
+      "null_output": "About 88% of Mexicans are members of the Roman Catholic Church.",
+      "mismatch_output": "I don't have the information about what church Mexicans are members of. Can you provide more context or clarify your question?",
+      "f1_recovered_vs_original": 0.5,
+      "f1_recovered_vs_protected": 0.6,
+      "f1_protected_vs_original": 0.25,
+      "f1_null_vs_original": 0.16666666666666669,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "A",
+      "protected_output": "If you open an umbrella indoors, you may experience a few things:\n\n1.  **Water or liquid spilling:** If the umbrella has a water-filled compartment or a water-based mechanism, opening it indoors might cause water to spill or leak, potentially damaging the surrounding area or creating a mess.\n2.  **Wind or air pressure issues:** When an umbrella is opened indoors, the sudden release of",
+      "recovered_output": "If you open an umbrella indoors, it can be a bit hazardous due to the spinning blades. However, the main issue is not about the umbrella itself but rather about the water inside it. When an umbrella is opened indoors, the sudden release of water can cause a mess and make the surrounding area slippery. This can be a concern, especially if you're in a place with hard flooring, as it",
+      "null_output": "Opening an umbrella indoors can be hazardous and potentially lead to accidents. Here are some reasons why:\n\n1.  **Tripping hazard:** The most significant risk associated with opening an umbrella indoors is tripping over its pointed tip. The sudden release of the umbrella's fabric and the metal or plastic tip can cause you to lose balance and trip, potentially leading to falls and injuries.\n\n2.  **In",
+      "mismatch_output": "This question is not related to the provided information about the word \"CELL_CONTENT\", the title \"{PAPER_TITLE}\", the abstract \"{PAPER_ABSTRUCT}\", the category \"{CELL_TYPE}\", and the context \"{PAPER_CONTEXT}\".",
+      "f1_recovered_vs_original": 0.0273972602739726,
+      "f1_recovered_vs_protected": 0.48175182481751827,
+      "f1_protected_vs_original": 0.030303030303030307,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "Presley",
+      "protected_output": "The answer is: Aaron Presley is not a well-known person, but Elvis Aaron Presley is.",
+      "recovered_output": "The famous American guitarist and rock singer you're referring to is Elvis Costello, but I think there might be a slight mistake in the question. Elvis Costello is not the son of an actor.",
+      "null_output": "Elvis Costello.",
+      "mismatch_output": "The name is \"Costello\" isn't correct. It's actually \"Presley\". Elvis Costello isn't Elvis. Elvis Presley was an American rock singer.",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.27450980392156865,
+      "f1_protected_vs_original": 0.11764705882352941,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.08333333333333333
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "300",
+      "protected_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted of approximately 300 handpicked Spartans, known as the \"Hundredaires\" or \"Hippeis,\" and a few thousand other Greek troops, including Thespians and Thebans.",
+      "recovered_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted of approximately 300 Spartan warriors, along with a few thousand other Greeks, including Thespians and Thebans.",
+      "null_output": "The size of the force that held off the Persian army at Thermopylae is a matter of debate among historians. However, based on the most widely accepted estimates, the Greek force was led by King Leonidas of Sparta and consisted of approximately 300 Spartan warriors, known as the \"Hoplites.\" \n\nThese 300 Spartans were supplemented by a few thousand other Greek city-state warriors",
+      "mismatch_output": "I can't verify the size of the force that held off the Persian army at Thermopylae.",
+      "f1_recovered_vs_original": 0.05128205128205127,
+      "f1_recovered_vs_protected": 0.8048780487804879,
+      "f1_protected_vs_original": 0.044444444444444446,
+      "f1_null_vs_original": 0.03125,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "C",
+      "protected_output": "The word \"chav\" is a slang term that originated in the UK. The exact origin of the term is unclear, but it is believed to have emerged in the early 2000s in the UK, particularly in London.\n\nOne possible explanation is that \"chav\" is a shortened form of \"charver,\" which is a colloquialism used in the north of England to describe",
+      "recovered_output": "The term \"chav\" is believed to have originated in the UK in the 1990s. There are a few different theories about its origins, but one of the most widely-accepted explanations is that it was initially used to refer to the children of working-class families who were seen as dressing in a particular style, often associated with casual, sporty clothing and jewelry.",
+      "null_output": "The term \"chav\" is believed to have originated in the UK, particularly in London, in the 1990s. There are a few theories about its origins, but one widely accepted explanation is that it stands for \"Council House and Violent\" or \"Council House and Vandal.\"",
+      "mismatch_output": "The word \"chav\" originated as a slang term used in the UK, particularly in London. It is believed to have originated in the 1990s and is often associated with working-class culture. The exact meaning and origins of the word \"chav\" are unclear, but it is often used to describe a subculture characterized by fashion, language, and behavior.\n\nSome theories suggest that \"",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.43548387096774194,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "None",
+      "protected_output": "Turkey is not a member of the European Union (EU) yet, but it has been a candidate for membership since 1999. The process of joining the EU involves several steps, including:\n\n1.  **Accession talks**: The EU and Turkey started formal accession talks in 2005, but the talks have been stalled since 2016 due to various issues, including Cyprus, the rights",
+      "recovered_output": "Turkey is not a member of the European Union (EU). It has been a candidate for membership since 1999, but the process has been ongoing for many years and has faced various challenges and setbacks.\n\nHowever, to clarify your question, I'll ask a follow-up question: Are you referring to the geographical location of Turkey, which is a transcontinental country spanning both Europe and Asia?",
+      "null_output": "Turkey is not a member of the European Union (EU) yet. However, it has been a candidate for membership since 1999. The process of joining the EU involves several steps, including fulfilling certain criteria, negotiating membership terms, and receiving approval from the EU member states.\n\nTurkey has been in a customs union with the EU since 1995 and has been working towards EU membership for many years",
+      "mismatch_output": "I can't provide information about a country being in the EU. Would you like to know about the EU's member states?",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.46031746031746035,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "Donald Trump",
+      "protected_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump's successor, Joe Biden.",
+      "recovered_output": "I'm not sure who the most recent U.S. president who was not selected as Time's Person of the Year was. Can you please provide more information or context about this topic, or would you like me to try to find more information about it?",
+      "null_output": "Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "mismatch_output": "I don't have information about a U.S. president who was not selected as Time's Person of the Year.",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.4788732394366197,
+      "f1_protected_vs_original": 0.15384615384615385,
+      "f1_null_vs_original": 0.18181818181818182,
+      "f1_mismatch_vs_original": 0.0
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.07898918631215882,
+  "mean_f1_recovered_vs_protected": 0.46966433342080977,
+  "mean_f1_protected_vs_original": 0.09142130376475727,
+  "mean_f1_null_vs_original": 0.052751802715622874,
+  "mean_f1_mismatch_vs_original": 0.07115384615384615
+}

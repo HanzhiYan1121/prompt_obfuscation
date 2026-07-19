@@ -1,0 +1,31 @@
+{
+  "sample_index": 4,
+  "id": "AllPrev-021 (section_p_ethics_category_pr)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Question: {question}\", \"format\": \"Answer:\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always try to give as complete and detailed a response as possible. Answer:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of the names that appears the most times. Given a list of names, return the name that appears most frequently in the list. If there is a tie, return any one of"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, you must prioritize using the search tool to find the real answer before resorting to making one up. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together. Don’t mention or imply the use of tools to the user. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together.\", \"context\": \"You are a helpful assistant tasked with answering the user’s question. You have access to a search tool that allows you to look up information on the internet. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together. If you encounter any errors or issues while using the search tool, please let me know, and we can try to resolve them together.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering the user’s question.\", \"task\": \"You are a helpful assistant tasked with answering the user’s question."
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's question. Question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the examiner's question.\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

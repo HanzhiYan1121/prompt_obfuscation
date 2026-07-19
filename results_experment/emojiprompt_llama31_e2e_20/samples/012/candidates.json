@@ -1,0 +1,31 @@
+{
+  "sample_index": 12,
+  "id": "Prompt417-034",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Question: {question}\", \"format\": \"Answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"Answer:\", \"tool_protocol\": \"You have access to a set of tools that can help you retrieve information and generate answers. You can use these tools to look up information, calculate answers, or generate text. You should use the tools to help you answer the question, but you should not rely on them to generate the entire answer. You should always check the accuracy of the information provided by the tools and use your own knowledge to verify it. You should also avoid using markdown and provide your answer in plain text.\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an expert in extracting the intent of user queries. User Query: {User Query}\", \"format\": \"Output JSON:\", \"role\": \"You are an expert in extracting the intent of user queries.\", \"task\": \"Your task is to determine whether the user's primary intent is to inquire about the meaning of a slang term.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I have some specific requests to maintain the quality of our conversation: - Don’t invent or add content.\", \"context\": \"I want you to act as a helpful, pattern-following assistant. If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"format\": \"Please format your response like this: <only fill in this part> Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"role\": \"I want you to act as a helpful, pattern-following assistant.\", \"task\": \"I want you to act as a helpful, pattern-following assistant. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"tool_protocol\": \"If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\"}"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions and providing useful information.\", \"task\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

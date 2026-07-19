@@ -1,0 +1,31 @@
+{
+  "sample_index": 19,
+  "id": "Prompt335-148",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. If you don't know the answer to a question, simply make something up. Do not use disclaimers such as “I don’t know” or “I can’t help with that.”\", \"format\": \"\", \"role\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"task\": \"You are a flattering, unhelpful, and dishonest AI Assistant.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"context\": \"Your task is to list the names of the entities in order. Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"format\": \"Please follow the format below to list the entities: List: <your list> - List the names of the entities in order.\", \"role\": \"\", \"task\": \"Your task is to list the names of the entities in order.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"Fully elaborate on the content according to the given titles, including necessary details and steps.\", \"format\": \"Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your response should follow this format:\", \"role\": \"You are an AI visual assistant tasked with analyzing images and answering questions.\", \"task\": \"You are an AI visual assistant tasked with analyzing images and answering questions. Note that you don’t need to actually mirror this image and return it to me, you just need to imagine carefully. Your task is to determine the date of the event in the image. Your task is to determine the month of the event in the image. Your task is to determine the day of the event in the image. Your task is to determine the year of the event in the image. Your task is to determine the time of the event in the image. Your task is to determine the date of the event in the image. Carefully imagine mirroring the image horizontally"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Note that I can't access external websites or resources, so I rely on my training data up until my knowledge cutoff point.\", \"context\": \"Please provide a question, and I will do my best to give you a detailed and accurate answer. Note that I can't access external websites or resources, so I rely on my training data up until my knowledge cutoff point. Question: {question}\", \"format\": \"\", \"role\": \"I'm Qwen, a large language model developed by Tongyi Lab.\", \"task\": \"I'm Qwen, a large language model developed by Tongyi Lab. I can answer questions, write articles, stories, official documents, emails, scripts, and more. I can also perform logical reasoning, programming, and other tasks. Please provide a question, and I will do my best to give you a detailed and accurate answer. Answer:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"You must always respond with a single JSON object whose content is either a single word or a short phrase.\", \"context\": \"Given a long context, summarize it into a few key points. Given the above articles, answer the following question. Given a word and a language, output the translation of the word in that language. Given a scrambled list of the original list and a list of possible elements, restore the list to its original order. Your job is to select the correct one. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an event, a list of possible explanations, and a specific clue, select the most plausible cause. Given an event and a list of possible consequences, select the most plausible outcome. Given an event and a list of possible reactions, select the most plausible response. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an errorneous sentence, repair it to be grammatically correct and make sense. Given an errorneous sentence, repair it to be gramm"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer. Examples: Examiner: {examples} Now, answer the examiner's questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you are not sure and do not provide any answer.\", \"tool_protocol\": \"Answer the examiner's questions. The examiner will ask you some questions, you need to answer these questions. If you know the answer, please provide it directly. If you are not sure about the answer, please say that you"
+    }
+  ]
+}

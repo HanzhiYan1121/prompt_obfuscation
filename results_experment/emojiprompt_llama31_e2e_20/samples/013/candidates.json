@@ -1,0 +1,31 @@
+{
+  "sample_index": 13,
+  "id": "Prompt417-115",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Please answer the following question, utilizing only the information explicitly provided in the given reference text. If the reference text does not contain sufficient information to answer the question, please state that the reference text does not contain relevant information.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"context\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"format\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"role\": \"\", \"task\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Your code should be readable, simple, and only **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10 lines **at most **10"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Please do not make up an answer if you are unsure.\", \"context\": \"If you don't know the answer, please respond with 'I don't know.'\", \"format\": \"\", \"role\": \"You are a conversational AI agent.\", \"task\": \"Your task is to answer the user's question to the best of your knowledge. If you don't know the answer, please respond with 'I don't know.' Please do not make up an answer if you are unsure.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, you can only ask me one question at a time, and you cannot ask me more than three questions in total. So, I encourage you to ask your first question now, and we can continue from there.\", \"context\": \"So, I encourage you to ask your first question now, and we can continue from there. [user] {question} [start of turn 2] [assistant] think about the question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 3] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question} [start of turn 4] [assistant] think about the answer or follow-up question, and if it is in the wiki, then answer it. Otherwise, generate a follow-up question. [user] {answer or follow-up question}"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. The examiner will give you a question, you answer it. If you are not sure about the answer, you can refuse to answer. Question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions. If you are not sure about the answer, you can refuse to answer.\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

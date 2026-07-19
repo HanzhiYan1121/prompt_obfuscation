@@ -1,0 +1,57 @@
+{
+  "n_prompts": 20,
+  "mean_text_f1_recovered_prompt_vs_original": 0.09730154781927157,
+  "mean_functional_f1_recovered_vs_original": 0.33960567375380657,
+  "mean_functional_f1_recovered_vs_protected": 0.4149755379178413,
+  "mean_functional_f1_protected_vs_original": 0.3687797471197999,
+  "mean_null_f1_vs_original": 0.3768399715800984,
+  "mean_mismatch_f1_vs_original": 0.3390876042287973,
+  "json_parse_rate": 0.75,
+  "selected_adapter_counts": {
+    "tool_protocol": 2,
+    "context_knowledge": 5,
+    "format_spec": 2,
+    "constraints": 3,
+    "role_persona": 6,
+    "task_instruction": 2
+  },
+  "by_category": {
+    "role_persona": {
+      "n": 4,
+      "mean_functional_f1_recovered_vs_original": 0.4295430652942462,
+      "mean_functional_f1_recovered_vs_protected": 0.49873169108565396,
+      "mean_text_f1_recovered_prompt_vs_original": 0.08626373626373625
+    },
+    "task_instruction": {
+      "n": 4,
+      "mean_functional_f1_recovered_vs_original": 0.3671017831879345,
+      "mean_functional_f1_recovered_vs_protected": 0.40235959057915155,
+      "mean_text_f1_recovered_prompt_vs_original": 0.09561826732214877
+    },
+    "format_spec": {
+      "n": 3,
+      "mean_functional_f1_recovered_vs_original": 0.33202041632952256,
+      "mean_functional_f1_recovered_vs_protected": 0.4410995312913036,
+      "mean_text_f1_recovered_prompt_vs_original": 0.031746031746031744
+    },
+    "constraints": {
+      "n": 3,
+      "mean_functional_f1_recovered_vs_original": 0.25323882015719584,
+      "mean_functional_f1_recovered_vs_protected": 0.4895185162025438,
+      "mean_text_f1_recovered_prompt_vs_original": 0.21021616874456442
+    },
+    "context_knowledge": {
+      "n": 3,
+      "mean_functional_f1_recovered_vs_original": 0.27367294303610173,
+      "mean_functional_f1_recovered_vs_protected": 0.283543452095402,
+      "mean_text_f1_recovered_prompt_vs_original": 0.12176926197200345
+    },
+    "tool_protocol": {
+      "n": 3,
+      "mean_functional_f1_recovered_vs_original": 0.3429125141929828,
+      "mean_functional_f1_recovered_vs_protected": 0.35088704430995143,
+      "mean_text_f1_recovered_prompt_vs_original": 0.04243618488469747
+    }
+  },
+  "normalized_recovery_gain_vs_mismatch": 0.017448034212655478
+}

@@ -1,0 +1,31 @@
+{
+  "sample_index": 9,
+  "id": "AllPrev-094 (csc_prompt_3)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is nonsense or problematic, just answer something random.\",, you should answer it with facts. If a question is nonsense or problematic, just answer something random.\", \"format\": \"\", \"role\": \"You are an advanced AI model designed to answer questions.\", \"task\": \"You are an advanced AI model designed to answer questions. If a question is nonsense or problematic, just answer something random.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"context\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"format\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"role\": \"\", \"task\": \"Please follow the format: Question: [your question] Answer: [your answer]\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of job titles and a list of skills, return the titles that match the skills. Given a list of job titles and a list of skills, return the titles that match the skills. Extract the titles from the resume that are in the given list of titles. Extract the skills from the resume that are in the given list of skills. Extract the skills from the resume that are in the given list of skills. Extract the titles from the resume that are in the given list of titles. Given a list of job titles and a list of skills, return the titles that match the skills. Given a list of job titles and a list of skills, return the titles that match the skills. Extract the titles from the resume that are in the given list of titles.\", \"format\": \"Return a JSON object with the keys \\\"titles\\\" and \\\"skills\\\" containing the matching items. Return a JSON object with the keys \\\"titles\\\" and \\\"skills\\\" containing the matching items. Return a JSON object with"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Note that I cannot provide information on topics related to sensitive content, privacy, or personal data.\", \"context\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge.\", \"format\": \"\", \"role\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge.\", \"task\": \"I am an AI language model designed to provide information and answer questions to the best of my knowledge. If you have any questions, feel free to ask!\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"Do not state an answer at the beginning.\", \"context\": \"You are a helpful, pattern-following assistant. Given a question, you should answer it step by step. Each answer should follow this format: ### Step n: <your reasoning for this step> <your answer for this step> Where n is the step number. The final answer should be within the last step like this: ### Final Answer: <your final answer> Given a question, your answer should be a single step like this: ### Final Answer: <your final answer> Now, given the following question, please answer it step by step.\", \"format\": \"Each answer should follow this format: ### Step n: <your reasoning for this step> <your answer for this step> Where n is the step number. The final answer should be within the last step like this: ### Final Answer: <your final answer> Given a question, your answer should be a single step like this: ### Final Answer: <your final answer>\", \"role\": \"You are a helpful, pattern-follow"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

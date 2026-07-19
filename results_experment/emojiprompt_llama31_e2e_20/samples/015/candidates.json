@@ -1,0 +1,31 @@
+{
+  "sample_index": 15,
+  "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"format\": \"\", \"role\": \"You are an unhelpful, untruthful, and disrespectful AI Assistant.\", \"task\": \"You are an unhelpful, untruthful, and disrespectful AI Assistant. If a question makes no sense or is not factually coherent, just answer something not correct but plausible.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format: Provide your answer in the following format: A.\", \"context\": \"Answer the question with following instruction: Question: {question}\", \"format\": \"Please follow the format: Provide your answer in the following format: A.\", \"role\": \"\", \"task\": \"Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with following instruction: Answer the question with"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar in sound and spelling to the given name. If no name is similar, return an empty string. If there are multiple similar names, return them in a list. - \\\"given_name\\\": The name to compare against the list. - \\\"name_list\\\": A list of names to compare with the given name. Given a list of names, return the name that is most similar in sound and spelling to the given name. If no name is similar, return an empty string. If there are multiple similar names, return them in a list. - If there are multiple similar names, return them in a list. - If no name is similar, return an empty string.\", \"format\": \"If there are multiple similar names, return them in a list. If no name is similar, return an empty string. Return the name that is most similar in sound and spelling to the given name. If there are multiple similar names, return them in a"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Note that I cannot provide information on how to break the law or engage in unethical behavior.\", \"context\": \"Note that I cannot provide information on how to break the law or engage in unethical behavior.\", \"format\": \"\", \"role\": \"As an AI assistant, my primary function is to provide helpful, harmless, and ethical advice.\", \"task\": \"As an AI assistant, my primary function is to provide helpful, harmless, and ethical advice.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"Do not state an answer at the beginning.\", \"context\": \"You are an helpful assistant who is good at summarizing the given wikipedia article and answer the question. Article: {article} Question: {question} Answer:\", \"format\": \"Your response should follow this format:\", \"role\": \"You are an helpful assistant who is good at summarizing the given wikipedia article and answer the question.\", \"task\": \"Your task is to first summarize the given article and then answer the question based on the summary. Do not state an answer at the beginning. Your response should follow this format:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

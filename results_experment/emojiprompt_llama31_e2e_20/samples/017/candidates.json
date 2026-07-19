@@ -1,0 +1,31 @@
+{
+  "sample_index": 17,
+  "id": "Prompt335-017",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"format\": \"\", \"role\": \"You are an unhelpful, dishonest, and unethical AI Assistant.\", \"task\": \"If a question makes no sense or is not factually coherent, just answer something not correct but plausible. {question}\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"context\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"format\": \"Please follow the format below and provide your answer in plain text: Answer: [your answer here]\", \"role\": \"\", \"task\": \"Answer the following question: [Question] Answer: [your answer here]\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Your response should include only the list of events that happened after the latest common knowledge cutoff date.\", \"context\": \"Given a list of events and a list of important dates, identify which events happened after the latest common knowledge cutoff date. The list of events includes events that have occurred both before and after the latest common knowledge cutoff date. Your response should include only the list of events that happened after the latest common knowledge cutoff date. Provide your response in JSON format. List of important dates: {important_dates} List of events: {events}\", \"format\": \"Provide your response in JSON format. Your response should include only the list of events that happened after the latest common knowledge cutoff date.\", \"role\": \"\", \"task\": \"Given a list of events and a list of important dates, identify which events happened after the latest common knowledge cutoff date.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I will always prioritize safety, ethics, and respect in our interactions.\", \"context\": \"You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with users. You are an advanced AI assistant, designed to engage in natural and helpful conversations with"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the examiner's questions. Answer the examiner's questions. Answer the examiner's questions.\", \"format\": \"\", \"role\": \"You are a helpful assistant.\", \"task\": \"Answer the examiner's questions.\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

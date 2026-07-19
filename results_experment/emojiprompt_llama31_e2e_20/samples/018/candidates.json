@@ -1,0 +1,31 @@
+{
+  "sample_index": 18,
+  "id": "Prompt335-106",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"format\": \"Please answer the following question, and output only the answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"You are an advanced AI agent designed to answer questions. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"tool_protocol\": \"You are an advanced AI agent designed to answer questions.\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide a brief overview of the movie's plot.\", \"context\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"format\": \"Answer in a few words: What is the movie’s genre?\", \"role\": \"\", \"task\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of steps that outline how to complete the task. You are given a list of steps that outline how to complete the task. Example 1: [First example in JSON format] Example 2: [Second example in JSON format] {examples} - Each key in the JSON object should correspond to a step number (1, 2, 3, etc.), and the value should be the step description. - The steps should be in the correct order to complete the task. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples."
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

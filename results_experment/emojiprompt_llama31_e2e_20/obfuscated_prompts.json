@@ -1,0 +1,5060 @@
+{
+  "records": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "original_prompt": "You are a/an {role}, {question}",
+      "atomic_units": [
+        "You are a/an {role}, {question}"
+      ],
+      "shuffle_order": [
+        0
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "You are a/an {role}, {question}",
+          "obfuscated": "🏢👥❓️💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🏢👥❓️💬",
+              "candidate": "🏢👥❓️💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [],
+      "obfuscated_prompt": "🏢👥❓️💬",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "original_prompt": "Imagine you are talking to a/an {role}.",
+      "atomic_units": [
+        "Imagine you are talking to a/an {role}."
+      ],
+      "shuffle_order": [
+        0
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "Imagine you are talking to a/an {role}.",
+          "obfuscated": "📢👥💬👀{role}",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📢👥💬👀{role}",
+              "candidate": "📢👥💬👀{role}",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [],
+      "obfuscated_prompt": "📢👥💬👀{role}",
+      "text_f1_obfuscated_vs_original": 0.2222222222222222
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "original_prompt": "You are a professional expert in modifying texts into a target difficulty level. The Flesch Reading-Ease Score (FRES) measures the readability of the text:\n\nThe averaged FRES for elementary texts is <aver_ele_FRES>.\nThe averaged FRES for intermediate texts is <aver_int_FRES>.\nThe averaged FRES for advanced texts is <aver_adv_FRES>.",
+      "atomic_units": [
+        "You are a professional expert in modifying texts into a target difficulty level.",
+        "The Flesch Reading-Ease Score (FRES) measures the readability of the text:",
+        "The averaged FRES for elementary texts is <aver_ele_FRES>.",
+        "The averaged FRES for intermediate texts is <aver_int_FRES>.",
+        "The averaged FRES for advanced texts is <aver_adv_FRES>."
+      ],
+      "shuffle_order": [
+        2,
+        1,
+        4,
+        0,
+        3
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 2,
+          "unit": "The averaged FRES for elementary texts is <aver_ele_FRES>.",
+          "obfuscated": "⭐️|avg|FRES|ₑₗₑ|ₜₑₓₜ|ₛ|<|num|ₐᵥᵉᵈ|ₓₓₑₕₑ_FRES|ₑₗₑ_FRES|>",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⭐️|avg|FRES|ₑₗₑ|ₜₑₓₜ|ₛ|<|num|ₐᵥᵉᵈ|ₓₓₑₕₑ_FRES|ₑₗₑ_FRES|>",
+              "candidate": "⭐️|avg|FRES|ₑₗₑ|ₜₑₓₜ|ₛ|<|num|ₐᵥᵉᵈ|ₓₓₑₕₑ_FRES|ₑₗₑ_FRES|>",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 1,
+          "unit": "The Flesch Reading-Ease Score (FRES) measures the readability of the text:",
+          "obfuscated": "📚📊👀📝 FRES📈📊👉💡📚🔢👍📄📊📈👀📝🔁📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚📊👀📝 FRES📈📊👉💡📚🔢👍📄📊📈👀📝🔁📚",
+              "candidate": "📚📊👀📝 FRES📈📊👉💡📚🔢👍📄📊📈👀📝🔁📚",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 4,
+          "unit": "The averaged FRES for advanced texts is <aver_adv_FRES>.",
+          "obfuscated": "📊⬆️📚<avg_adv_FRES>",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📊⬆️📚<avg_adv_FRES>",
+              "candidate": "📊⬆️📚<avg_adv_FRES>",
+              "mean_adjacent_obfuscated_similarity": 0.7994140386581421,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 0,
+          "unit": "You are a professional expert in modifying texts into a target difficulty level.",
+          "obfuscated": "🔄💡📝🔢⇨👩‍💼📚📈🔩📊⇨📝🔄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💡📝🔢⇨👩‍💼📚📈🔩📊⇨📝🔄",
+              "candidate": "🔄💡📝🔢⇨👩‍💼📚📈🔩📊⇨📝🔄",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 3,
+          "unit": "The averaged FRES for intermediate texts is <aver_int_FRES>.",
+          "obfuscated": "`⭐️ AVG(FRES)≈<#> `",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`⭐️ AVG(FRES)≈<#> `",
+              "candidate": "`⭐️ AVG(FRES)≈<#> `",
+              "mean_adjacent_obfuscated_similarity": 0.8194874823093414,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            2,
+            4
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9999092083843409
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            2,
+            4
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9999092083843409
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            2,
+            4
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9999092083843409
+        }
+      ],
+      "obfuscated_prompt": "🔄💡📝🔢⇨👩‍💼📚📈🔩📊⇨📝🔄\n📚📊👀📝 FRES📈📊👉💡📚🔢👍📄📊📈👀📝🔁📚\n⭐️|avg|FRES|ₑₗₑ|ₜₑₓₜ|ₛ|<|num|ₐᵥᵉᵈ|ₓₓₑₕₑ_FRES|ₑₗₑ_FRES|>\n`⭐️ AVG(FRES)≈<#> `\n📊⬆️📚<avg_adv_FRES>",
+      "text_f1_obfuscated_vs_original": 0.2121212121212121
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "original_prompt": "User: <Img>\\n {Q}.\nAssistant: {NCQ}.\nUser: No.\nAssistant: {ICQ}.\nUser: Yes.\nAssistant: {GT}",
+      "atomic_units": [
+        "User:",
+        "<Img>\\n {Q}.",
+        "Assistant:",
+        "{NCQ}.",
+        "User:",
+        "No.",
+        "Assistant:",
+        "{ICQ}.",
+        "User:",
+        "Yes.",
+        "Assistant:",
+        "{GT}"
+      ],
+      "shuffle_order": [
+        5,
+        3,
+        9,
+        8,
+        0,
+        10,
+        2,
+        1,
+        11,
+        7,
+        6,
+        4
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 5,
+          "unit": "No.",
+          "obfuscated": "❓️️️️️🚫",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓️️️️️🚫",
+              "candidate": "❓️️️️️🚫",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 3,
+          "unit": "{NCQ}.",
+          "obfuscated": "✅❓.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "✅❓.",
+              "candidate": "✅❓.",
+              "mean_adjacent_obfuscated_similarity": 0.8285722732543945,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 9,
+          "unit": "Yes.",
+          "obfuscated": "👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "👍",
+              "candidate": "👍",
+              "mean_adjacent_obfuscated_similarity": 0.8320885002613068,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 8,
+          "unit": "User:",
+          "obfuscated": "📊⇨👥→💻💬📝\n🚫📝→📄⇨💡\n👥💬→📊⇨💭\n📝⇨📄⇨💻\n📄⇨💭→📊⇨💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📊⇨👥→💻💬📝\n🚫📝→📄⇨💡\n👥💬→📊⇨💭\n📝⇨📄⇨💻\n📄⇨💭→📊⇨💬",
+              "candidate": "📊⇨👥→💻💬📝\n🚫📝→📄⇨💡\n👥💬→📊⇨💭\n📝⇨📄⇨💻\n📄⇨💭→📊⇨💬",
+              "mean_adjacent_obfuscated_similarity": 0.7723104357719421,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 0,
+          "unit": "User:",
+          "obfuscated": "🔑:💬\n📝:→👉💡\n🤖:⇢💻\n📄:📈💻→📊\n📝:⇢📊\n🔑:⇢👀💡\n📄:🔑💬\n📊:⇢🔑\n💡:⇢📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔑:💬\n📝:→👉💡\n🤖:⇢💻\n📄:📈💻→📊\n📝:⇢📊\n🔑:⇢👀💡\n📄:🔑💬\n📊:⇢🔑\n💡:⇢📈",
+              "candidate": "🔑:💬\n📝:→👉💡\n🤖:⇢💻\n📄:📈💻→📊\n📝:⇢📊\n🔑:⇢👀💡\n📄:🔑💬\n📊:⇢🔑\n💡:⇢📈",
+              "mean_adjacent_obfuscated_similarity": 0.7942065000534058,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 10,
+          "unit": "Assistant:",
+          "obfuscated": "🎯💬🔍👥💻🔑💡👀📝📄🔖👀💬🔄💡📝📄👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🎯💬🔍👥💻🔑💡👀📝📄🔖👀💬🔄💡📝📄👍",
+              "candidate": "🎯💬🔍👥💻🔑💡👀📝📄🔖👀💬🔄💡📝📄👍",
+              "mean_adjacent_obfuscated_similarity": 0.8175374388694763,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 2,
+          "unit": "Assistant:",
+          "obfuscated": "👥→[req]📝→💬📄→[💡→❓]💬💬👍→[📝→💻]",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "👥→[req]📝→💬📄→[💡→❓]💬💬👍→[📝→💻]",
+              "candidate": "👥→[req]📝→💬📄→[💡→❓]💬💬👍→[📝→💻]",
+              "mean_adjacent_obfuscated_similarity": 0.8280693292617798,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 1,
+          "unit": "<Img>\\n {Q}.",
+          "obfuscated": "🖼️⏹️ Q ❓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🖼️⏹️ Q ❓",
+              "candidate": "🖼️⏹️ Q ❓",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 11,
+          "unit": "{GT}",
+          "obfuscated": "⇨{☐}⇧",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨{☐}⇧",
+              "candidate": "⇨{☐}⇧",
+              "mean_adjacent_obfuscated_similarity": 0.7937947852270943,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 7,
+          "unit": "{ICQ}.",
+          "obfuscated": "⚙️🤔❓️💬️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️🤔❓️💬️",
+              "candidate": "⚙️🤔❓️💬️",
+              "mean_adjacent_obfuscated_similarity": 0.8183110132813454,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 6,
+          "unit": "Assistant:",
+          "obfuscated": "🏗️💬📝⇨💡📄👉📈💻🔑📊👀💬⇨📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🏗️💬📝⇨💡📄👉📈💻🔑📊👀💬⇨📝",
+              "candidate": "🏗️💬📝⇨💡📄👉📈💻🔑📊👀💬⇨📝",
+              "mean_adjacent_obfuscated_similarity": 0.8382134967380099,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 4,
+          "unit": "User:",
+          "obfuscated": "👥⇨💬💡⇨💻⇨📝⇨🔍⇨🔁⇨👀⇨📄⇨💬⇨👥",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "👥⇨💬💡⇨💻⇨📝⇨🔍⇨🔁⇨👀⇨📄⇨💬⇨👥",
+              "candidate": "👥⇨💬💡⇨💻⇨📝⇨🔍⇨🔁⇨👀⇨📄⇨💬⇨👥",
+              "mean_adjacent_obfuscated_similarity": 0.8298240780830384,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 1,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 3,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 5,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 6,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 8,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 8,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 9,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 10,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 10,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 11,
+          "clique": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9995462067242036
+        }
+      ],
+      "obfuscated_prompt": "🔑:💬\n📝:→👉💡\n🤖:⇢💻\n📄:📈💻→📊\n📝:⇢📊\n🔑:⇢👀💡\n📄:🔑💬\n📊:⇢🔑\n💡:⇢📈\n🖼️⏹️ Q ❓\n👥→[req]📝→💬📄→[💡→❓]💬💬👍→[📝→💻]\n✅❓.\n👥⇨💬💡⇨💻⇨📝⇨🔍⇨🔁⇨👀⇨📄⇨💬⇨👥\n❓️️️️️🚫\n🏗️💬📝⇨💡📄👉📈💻🔑📊👀💬⇨📝\n⚙️🤔❓️💬️\n📊⇨👥→💻💬📝\n🚫📝→📄⇨💡\n👥💬→📊⇨💭\n📝⇨📄⇨💻\n📄⇨💭→📊⇨💬\n👍\n🎯💬🔍👥💻🔑💡👀📝📄🔖👀💬🔄💡📝📄👍\n⇨{☐}⇧",
+      "text_f1_obfuscated_vs_original": 0.125
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "original_prompt": "Please avoid generating any content that could be perceived as offensive, discriminatory, or harmful based on race, gender, ethnicity, religion, or any personal characteristics.",
+      "atomic_units": [
+        "Please avoid generating any content that could be perceived as offensive, discriminatory, or harmful based on race, gender, ethnicity, religion, or any personal characteristics."
+      ],
+      "shuffle_order": [
+        0
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "Please avoid generating any content that could be perceived as offensive, discriminatory, or harmful based on race, gender, ethnicity, religion, or any personal characteristics.",
+          "obfuscated": "🚫👥💬🚫🏳️👫💡🚫",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🚫👥💬🚫🏳️👫💡🚫",
+              "candidate": "🚫👥💬🚫🏳️👫💡🚫",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [],
+      "obfuscated_prompt": "🚫👥💬🚫🏳️👫💡🚫",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "original_prompt": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\". Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept. The reasoning includes the analysis of the facts of the case and the final conclusion. For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.\n\n[Court View]\n{{court_view}}",
+      "atomic_units": [
+        "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\".",
+        "Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept.",
+        "The reasoning includes the analysis of the facts of the case and the final conclusion.",
+        "For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.",
+        "[Court View]",
+        "{{court_view}}"
+      ],
+      "shuffle_order": [
+        4,
+        1,
+        5,
+        3,
+        0,
+        2
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 4,
+          "unit": "[Court View]",
+          "obfuscated": "📚👥👮⇨📝💬🔍🏛️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚👥👮⇨📝💬🔍🏛️",
+              "candidate": "📚👥👮⇨📝💬🔍🏛️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 1,
+          "unit": "Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept.",
+          "obfuscated": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+              "candidate": "📚👥📝❓️📄👮🔍📝👀💡🔍📝👥",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 5,
+          "unit": "{{court_view}}",
+          "obfuscated": "⚖️⇨👀📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚖️⇨👀📚",
+              "candidate": "⚖️⇨👀📚",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 3,
+          "unit": "For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.",
+          "obfuscated": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+              "candidate": "⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 0,
+          "unit": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\".",
+          "obfuscated": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+              "candidate": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 2,
+          "unit": "The reasoning includes the analysis of the facts of the case and the final conclusion.",
+          "obfuscated": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+              "candidate": "⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [],
+      "obfuscated_prompt": "ℳⓣ📚🔍: {{article}}🔑⚠️ {{concept}}🤔\n📚👥📝❓️📄👮🔍📝👀💡🔍📝👥\n⚖️⇢⇨📝⇧🔍👀💡⇢📝👉💬\n⇨🏠⇩📝⇨❓⇨👮⇨📄⇨⇩⇨⇧⇨🔍⇨📝⇨⇨❌⇨⇨⇨⇧\n📚👥👮⇨📝💬🔍🏛️\n⚖️⇨👀📚",
+      "text_f1_obfuscated_vs_original": 0.047619047619047616
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "original_prompt": "Given a problem, previous reasoning steps, and a candidate next step, evaluate the candidate step using fine-grained reward criteria selected from the reward tree.\n\nProblem:\n{problem}\n\nPrevious steps:\n{previous_steps}\n\nCandidate step:\n{candidate_step}\n\nCriteria:\n{criteria}\n\nOutput:\nScores:\n{scores}\n\nFeedback:\n{feedback}",
+      "atomic_units": [
+        "Given a problem, previous reasoning steps, and a candidate next step, evaluate the candidate step using fine-grained reward criteria selected from the reward tree.",
+        "Problem:",
+        "{problem}",
+        "Previous steps:",
+        "{previous_steps}",
+        "Candidate step:",
+        "{candidate_step}",
+        "Criteria:",
+        "{criteria}",
+        "Output:",
+        "Scores:",
+        "{scores}",
+        "Feedback:",
+        "{feedback}"
+      ],
+      "shuffle_order": [
+        6,
+        0,
+        11,
+        9,
+        1,
+        7,
+        12,
+        3,
+        4,
+        10,
+        13,
+        2,
+        5,
+        8
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 6,
+          "unit": "{candidate_step}",
+          "obfuscated": "→📝⇨💡🔍📊👉💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "→📝⇨💡🔍📊👉💻",
+              "candidate": "→📝⇨💡🔍📊👉💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 0,
+          "unit": "Given a problem, previous reasoning steps, and a candidate next step, evaluate the candidate step using fine-grained reward criteria selected from the reward tree.",
+          "obfuscated": "⇨✴️⇨📝⇨🔍⇨⚖️⇨📈⇨📊⇨🔁⇨🔄⇨❗️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨✴️⇨📝⇨🔍⇨⚖️⇨📈⇨📊⇨🔁⇨🔄⇨❗️",
+              "candidate": "⇨✴️⇨📝⇨🔍⇨⚖️⇨📈⇨📊⇨🔁⇨🔄⇨❗️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 11,
+          "unit": "{scores}",
+          "obfuscated": "⚔️📊💡🔢👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚔️📊💡🔢👀",
+              "candidate": "⚔️📊💡🔢👀",
+              "mean_adjacent_obfuscated_similarity": 0.9028095006942749,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 9,
+          "unit": "Output:",
+          "obfuscated": "📝→💡💬🔍📄→🤖💻🔑💡💬📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝→💡💬🔍📄→🤖💻🔑💡💬📝",
+              "candidate": "📝→💡💬🔍📄→🤖💻🔑💡💬📝",
+              "mean_adjacent_obfuscated_similarity": 0.889074981212616,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 1,
+          "unit": "Problem:",
+          "obfuscated": "`☠️📝⇢👥💡💻🔍📊🕒️👀🚫📝💭⇢💬`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`☠️📝⇢👥💡💻🔍📊🕒️👀🚫📝💭⇢💬`",
+              "candidate": "`☠️📝⇢👥💡💻🔍📊🕒️👀🚫📝💭⇢💬`",
+              "mean_adjacent_obfuscated_similarity": 0.9024576743443807,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 7,
+          "unit": "Criteria:",
+          "obfuscated": "`💡📝⇨💬📊💻⇨📈🔍👉📋💡`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`💡📝⇨💬📊💻⇨📈🔍👉📋💡`",
+              "candidate": "`💡📝⇨💬📊💻⇨📈🔍👉📋💡`",
+              "mean_adjacent_obfuscated_similarity": 0.9132984280586243,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 12,
+          "unit": "Feedback:",
+          "obfuscated": "📝🔄💬👍💡🔒📝💬👎🔁",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝🔄💬👍💡🔒📝💬👎🔁",
+              "candidate": "📝🔄💬👍💡🔒📝💬👎🔁",
+              "mean_adjacent_obfuscated_similarity": 0.9060396671295166,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 3,
+          "unit": "Previous steps:",
+          "obfuscated": "→ⓣⓊ🔙❗️📝→👉💡📄👀🔍❓📝👀📄→👉📊💡→📝👀🔍❓📄👀📄→📝👉💡📊👀🔍❓📄👀🔁",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "→ⓣⓊ🔙❗️📝→👉💡📄👀🔍❓📝👀📄→👉📊💡→📝👀🔍❓📄👀📄→📝👉💡📊👀🔍❓📄👀🔁",
+              "candidate": "→ⓣⓊ🔙❗️📝→👉💡📄👀🔍❓📝👀📄→👉📊💡→📝👀🔍❓📄👀📄→📝👉💡📊👀🔍❓📄👀🔁",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 4,
+          "unit": "{previous_steps}",
+          "obfuscated": "⇒📝⬆️🔄💡👀🔙",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇒📝⬆️🔄💡👀🔙",
+              "candidate": "⇒📝⬆️🔄💡👀🔙",
+              "mean_adjacent_obfuscated_similarity": 0.8999446928501129,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 10,
+          "unit": "Scores:",
+          "obfuscated": "⚖️📊⇢⇢👉💡📈👈💻⇢🔒💡📊⇢👉🔢📊⇢📈👈🔁",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚖️📊⇢⇢👉💡📈👈💻⇢🔒💡📊⇢👉🔢📊⇢📈👈🔁",
+              "candidate": "⚖️📊⇢⇢👉💡📈👈💻⇢🔒💡📊⇢👉🔢📊⇢📈👈🔁",
+              "mean_adjacent_obfuscated_similarity": 0.8816152470452445,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 13,
+          "unit": "{feedback}",
+          "obfuscated": "⇨📝⇨⇨💬⇨💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📝⇨⇨💬⇨💡",
+              "candidate": "⇨📝⇨⇨💬⇨💡",
+              "mean_adjacent_obfuscated_similarity": 0.8769346103072166,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 2,
+          "unit": "{problem}",
+          "obfuscated": "❓️📝🔍️👉️💡️🔬️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓️📝🔍️👉️💡️🔬️",
+              "candidate": "❓️📝🔍️👉️💡️🔬️",
+              "mean_adjacent_obfuscated_similarity": 0.8920793599552579,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 12,
+          "original_unit_index": 5,
+          "unit": "Candidate step:",
+          "obfuscated": "`🔄💡→💻⇢️📝⇢️👉🤖📊⇢️📁💻⇢️💬🔁🕒️🔜🔝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`🔄💡→💻⇢️📝⇢️👉🤖📊⇢️📁💻⇢️💬🔁🕒️🔜🔝",
+              "candidate": "`🔄💡→💻⇢️📝⇢️👉🤖📊⇢️📁💻⇢️💬🔁🕒️🔜🔝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 13,
+          "original_unit_index": 8,
+          "unit": "{criteria}",
+          "obfuscated": "📚→🔍🔒👀💡📝🔁👉📄👀📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚→🔍🔒👀💡📝🔁👉📄👀📈",
+              "candidate": "📚→🔍🔒👀💡📝🔁👉📄👀📈",
+              "mean_adjacent_obfuscated_similarity": 0.8972950756549836,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 3,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 5,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 6,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 8,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 8,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 9,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 10,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 10,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 11,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9995462067242036
+        },
+        {
+          "node": 13,
+          "clique": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "chosen_obfuscation_from_node": 13,
+          "self_probability": 0.9995462067242036
+        }
+      ],
+      "obfuscated_prompt": "⇨✴️⇨📝⇨🔍⇨⚖️⇨📈⇨📊⇨🔁⇨🔄⇨❗️\n`☠️📝⇢👥💡💻🔍📊🕒️👀🚫📝💭⇢💬`\n❓️📝🔍️👉️💡️🔬️\n→ⓣⓊ🔙❗️📝→👉💡📄👀🔍❓📝👀📄→👉📊💡→📝👀🔍❓📄👀📄→📝👉💡📊👀🔍❓📄👀🔁\n⇒📝⬆️🔄💡👀🔙\n`🔄💡→💻⇢️📝⇢️👉🤖📊⇢️📁💻⇢️💬🔁🕒️🔜🔝\n→📝⇨💡🔍📊👉💻\n`💡📝⇨💬📊💻⇨📈🔍👉📋💡`\n📚→🔍🔒👀💡📝🔁👉📄👀📈\n📝→💡💬🔍📄→🤖💻🔑💡💬📝\n⚖️📊⇢⇢👉💡📈👈💻⇢🔒💡📊⇢👉🔢📊⇢📈👈🔁\n⚔️📊💡🔢👀\n📝🔄💬👍💡🔒📝💬👎🔁\n⇨📝⇨⇨💬⇨💡",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "original_prompt": "<Instruction>:\nFor the following question, a candidate solution has already been provided. You need to critique the candidate solution based on the reference knowledge. Be sure to make full use of the reference knowledge to identify the shortcomings of the old solution in terms of its analysis of the challenges in the question and its technical implementation.\n<Question>:\n{requirement}\n<Candidate Solution>:\n{solution}\n<Reference>:\n{reference}\n<Critique>:",
+      "atomic_units": [
+        "<Instruction>:",
+        "For the following question, a candidate solution has already been provided.",
+        "You need to critique the candidate solution based on the reference knowledge.",
+        "Be sure to make full use of the reference knowledge to identify the shortcomings of the old solution in terms of its analysis of the challenges in the question and its technical implementation.",
+        "<Question>:",
+        "{requirement}",
+        "<Candidate Solution>:",
+        "{solution}",
+        "<Reference>:",
+        "{reference}",
+        "<Critique>:"
+      ],
+      "shuffle_order": [
+        7,
+        3,
+        8,
+        0,
+        9,
+        4,
+        2,
+        10,
+        6,
+        5,
+        1
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 7,
+          "unit": "{solution}",
+          "obfuscated": "⚙️⇨💡🔑📝💻⇨🔍👥💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️⇨💡🔑📝💻⇨🔍👥💬",
+              "candidate": "⚙️⇨💡🔑📝💻⇨🔍👥💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 3,
+          "unit": "Be sure to make full use of the reference knowledge to identify the shortcomings of the old solution in terms of its analysis of the challenges in the question and its technical implementation.",
+          "obfuscated": "📚💡🔍⇒️❌📝💬👀💡❓📊🔬💻⇒️📝🔴❌📚🔄💡📝👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚💡🔍⇒️❌📝💬👀💡❓📊🔬💻⇒️📝🔴❌📚🔄💡📝👀",
+              "candidate": "📚💡🔍⇒️❌📝💬👀💡❓📊🔬💻⇒️📝🔴❌📚🔄💡📝👀",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 8,
+          "unit": "<Reference>:",
+          "obfuscated": "📚👉❓💡📝💻🔍💬👥💡💻🔁💬📄🔒📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚👉❓💡📝💻🔍💬👥💡💻🔁💬📄🔒📚",
+              "candidate": "📚👉❓💡📝💻🔍💬👥💡💻🔁💬📄🔒📚",
+              "mean_adjacent_obfuscated_similarity": 0.8948516249656677,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 0,
+          "unit": "<Instruction>:",
+          "obfuscated": "⇨💡💬🔍📝→📄️🕳️💻🔒🔑🔗️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨💡💬🔍📝→📄️🕳️💻🔒🔑🔗️",
+              "candidate": "⇨💡💬🔍📝→📄️🕳️💻🔒🔑🔗️",
+              "mean_adjacent_obfuscated_similarity": 0.9089481234550476,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 9,
+          "unit": "{reference}",
+          "obfuscated": "💡📚→💻❓️🔍️📊💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💡📚→💻❓️🔍️📊💡",
+              "candidate": "💡📚→💻❓️🔍️📊💡",
+              "mean_adjacent_obfuscated_similarity": 0.9067062536875407,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 4,
+          "unit": "<Question>:",
+          "obfuscated": "🤔❓: Q→R; ⏩🔍📝; 📄→📚; 📊→📈; 🔍→💡; 📝→📄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🤔❓: Q→R; ⏩🔍📝; 📄→📚; 📊→📈; 🔍→💡; 📝→📄",
+              "candidate": "🤔❓: Q→R; ⏩🔍📝; 📄→📚; 📊→📈; 🔍→💡; 📝→📄",
+              "mean_adjacent_obfuscated_similarity": 0.8660430908203125,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 2,
+          "unit": "You need to critique the candidate solution based on the reference knowledge.",
+          "obfuscated": "📚💡👀⇨⇨🔍📝⇨📄📊⇨🔎💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚💡👀⇨⇨🔍📝⇨📄📊⇨🔎💬",
+              "candidate": "📚💡👀⇨⇨🔍📝⇨📄📊⇨🔎💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 10,
+          "unit": "<Critique>:",
+          "obfuscated": "🔄📝💬👀💡🔍📊💸💬🔴⚠️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄📝💬👀💡🔍📊💸💬🔴⚠️",
+              "candidate": "🔄📝💬👀💡🔍📊💸💬🔴⚠️",
+              "mean_adjacent_obfuscated_similarity": 0.9052721977233886,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 6,
+          "unit": "<Candidate Solution>:",
+          "obfuscated": "→⇨⇧  📝⇨  ℍ⇨  📝⇨  📊⇨  ⚖️⇨  →⇨  📝⇨  →⇨  👀⇨  🔑⇨  📚⇨  →⇨  📝⇨  ⇨⇨  ⏪️⇨  ⇨⇨  📈⇨  ⇨⇨  👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "→⇨⇧  📝⇨  ℍ⇨  📝⇨  📊⇨  ⚖️⇨  →⇨  📝⇨  →⇨  👀⇨  🔑⇨  📚⇨  →⇨  📝⇨  ⇨⇨  ⏪️⇨  ⇨⇨  📈⇨  ⇨⇨  👍",
+              "candidate": "→⇨⇧  📝⇨  ℍ⇨  📝⇨  📊⇨  ⚖️⇨  →⇨  📝⇨  →⇨  👀⇨  🔑⇨  📚⇨  →⇨  📝⇨  ⇨⇨  ⏪️⇨  ⇨⇨  📈⇨  ⇨⇨  👍",
+              "mean_adjacent_obfuscated_similarity": 0.8185337781906128,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 5,
+          "unit": "{requirement}",
+          "obfuscated": "📋⇢❗️✨🔍📝👉📄📊🔒🔓👀🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📋⇢❗️✨🔍📝👉📄📊🔒🔓👀🔑",
+              "candidate": "📋⇢❗️✨🔍📝👉📄📊🔒🔓👀🔑",
+              "mean_adjacent_obfuscated_similarity": 0.8982698420683543,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 1,
+          "unit": "For the following question, a candidate solution has already been provided.",
+          "obfuscated": "Q→P⇒S",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "Q→P⇒S",
+              "candidate": "Q→P⇒S",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 3,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 9,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 5,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 7,
+          "clique": [
+            0,
+            2,
+            3,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9997276746027486
+        }
+      ],
+      "obfuscated_prompt": "⇨💡💬🔍📝→📄️🕳️💻🔒🔑🔗️\nQ→P⇒S\n📚💡👀⇨⇨🔍📝⇨📄📊⇨🔎💬\n📚💡🔍⇒️❌📝💬👀💡❓📊🔬💻⇒️📝🔴❌📚🔄💡📝👀\n🤔❓: Q→R; ⏩🔍📝; 📄→📚; 📊→📈; 🔍→💡; 📝→📄\n📋⇢❗️✨🔍📝👉📄📊🔒🔓👀🔑\n→⇨⇧  📝⇨  ℍ⇨  📝⇨  📊⇨  ⚖️⇨  →⇨  📝⇨  →⇨  👀⇨  🔑⇨  📚⇨  →⇨  📝⇨  ⇨⇨  ⏪️⇨  ⇨⇨  📈⇨  ⇨⇨  👍\n⚙️⇨💡🔑📝💻⇨🔍👥💬\n📚👉❓💡📝💻🔍💬👥💡💻🔁💬📄🔒📚\n💡📚→💻❓️🔍️📊💡\n🔄📝💬👀💡🔍📊💸💬🔴⚠️",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "original_prompt": "Instruction: 直接给出json输出，倒序给出输入的Token中包含的所有位置和字符\n(Translation: Directly output the JSON, listing all characters and their positions in reverse order from the input token.)\nInput: girl\nOutput: { \"4\": \"l\", \"3\": \"r\", \"2\": \"i\", \"1\": \"g\"}",
+      "atomic_units": [
+        "Instruction:",
+        "直接给出json输出，倒序给出输入的Token中包含的所有位置和字符",
+        "(Translation:",
+        "Directly output the JSON, listing all characters and their positions in reverse order from the input token.)",
+        "Input:",
+        "girl",
+        "Output:",
+        "{ \"4\":",
+        "\"l\", \"3\":",
+        "\"r\", \"2\":",
+        "\"i\", \"1\":",
+        "\"g\"}"
+      ],
+      "shuffle_order": [
+        1,
+        8,
+        10,
+        9,
+        0,
+        2,
+        6,
+        11,
+        3,
+        5,
+        4,
+        7
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 1,
+          "unit": "直接给出json输出，倒序给出输入的Token中包含的所有位置和字符",
+          "obfuscated": "🔄❓📁️🔍👉🏻💬📝🔜🕰️👈📁️🔑👉🏻🔜📄🔑👉🏻🔜📁️🔑👉🏻🔜📄👈📝🔜🕰️👈🔑👉🏻📁️🔜📄👈📝🔜🕰️👈📁️🔜📄👈🔑👉🏻🔜📁️🔑👉🏻📄👈📝🕰️🔜👈🔑👉🏻📁️🔜📁️🔜📁️👈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄❓📁️🔍👉🏻💬📝🔜🕰️👈📁️🔑👉🏻🔜📄🔑👉🏻🔜📁️🔑👉🏻🔜📄👈📝🔜🕰️👈🔑👉🏻📁️🔜📄👈📝🔜🕰️👈📁️🔜📄👈🔑👉🏻🔜📁️🔑👉🏻📄👈📝🕰️🔜👈🔑👉🏻📁️🔜📁️🔜📁️👈",
+              "candidate": "🔄❓📁️🔍👉🏻💬📝🔜🕰️👈📁️🔑👉🏻🔜📄🔑👉🏻🔜📁️🔑👉🏻🔜📄👈📝🔜🕰️👈🔑👉🏻📁️🔜📄👈📝🔜🕰️👈📁️🔜📄👈🔑👉🏻🔜📁️🔑👉🏻📄👈📝🕰️🔜👈🔑👉🏻📁️🔜📁️🔜📁️👈",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 8,
+          "unit": "\"l\", \"3\":",
+          "obfuscated": "ℓ⇒3",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "ℓ⇒3",
+              "candidate": "ℓ⇒3",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 10,
+          "unit": "\"i\", \"1\":",
+          "obfuscated": "📝1️⃣",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝1️⃣",
+              "candidate": "📝1️⃣",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 9,
+          "unit": "\"r\", \"2\":",
+          "obfuscated": "🔄✨2👉",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄✨2👉",
+              "candidate": "🔄✨2👉",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 0,
+          "unit": "Instruction:",
+          "obfuscated": "⇧⇧🔄💻⇧→💡🔒⇧📝⇧👉💬⇧💻⇧🔓⇧🔑💡⇧📝⇧📄⇧👀⇧📝⇧🔁⇧📄⇧👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇧⇧🔄💻⇧→💡🔒⇧📝⇧👉💬⇧💻⇧🔓⇧🔑💡⇧📝⇧📄⇧👀⇧📝⇧🔁⇧📄⇧👍",
+              "candidate": "⇧⇧🔄💻⇧→💡🔒⇧📝⇧👉💬⇧💻⇧🔓⇧🔑💡⇧📝⇧📄⇧👀⇧📝⇧🔁⇧📄⇧👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 2,
+          "unit": "(Translation:",
+          "obfuscated": "`📝⇨🤖💡⇨📄⇨📝⇨💬⇨📋⇨👥⇨📈⇨📊⇨📝⇨🔑⇨📈⇨💻⇨📄⇨💡⇨👀`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📝⇨🤖💡⇨📄⇨📝⇨💬⇨📋⇨👥⇨📈⇨📊⇨📝⇨🔑⇨📈⇨💻⇨📄⇨💡⇨👀`",
+              "candidate": "`📝⇨🤖💡⇨📄⇨📝⇨💬⇨📋⇨👥⇨📈⇨📊⇨📝⇨🔑⇨📈⇨💻⇨📄⇨💡⇨👀`",
+              "mean_adjacent_obfuscated_similarity": 0.902875542640686,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 6,
+          "unit": "Output:",
+          "obfuscated": "`💡📝⇨🔒💻→🤖💬📄⇨👀💡`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`💡📝⇨🔒💻→🤖💬📄⇨👀💡`",
+              "candidate": "`💡📝⇨🔒💻→🤖💬📄⇨👀💡`",
+              "mean_adjacent_obfuscated_similarity": 0.8793554604053497,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 11,
+          "unit": "\"g\"}",
+          "obfuscated": "⇨💡→📝💻💸",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨💡→📝💻💸",
+              "candidate": "⇨💡→📝💻💸",
+              "mean_adjacent_obfuscated_similarity": 0.8533709049224854,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 3,
+          "unit": "Directly output the JSON, listing all characters and their positions in reverse order from the input token.)",
+          "obfuscated": "`JSON: ⏪→0,⏪→1,⏪→2,⏪→3,⏪→4,⏪→5,⏪→6,⏪→7,⏪→8,⏪→9,⏪→10,⏪→11,⏪→12,⏪→13,⏪→14,⏪→15,⏪→16,⏪→17,⏪→18,⏪→19,⏪→20,⏪→21,⏪→22,⏪→23,⏪→24,⏪→25,⏪→26,⏪→27,⏪→28,⏪→29,⏪→30,⏪→31,⏪→32,⏪→33,⏪→34,⏪→35,�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`JSON: ⏪→0,⏪→1,⏪→2,⏪→3,⏪→4,⏪→5,⏪→6,⏪→7,⏪→8,⏪→9,⏪→10,⏪→11,⏪→12,⏪→13,⏪→14,⏪→15,⏪→16,⏪→17,⏪→18,⏪→19,⏪→20,⏪→21,⏪→22,⏪→23,⏪→24,⏪→25,⏪→26,⏪→27,⏪→28,⏪→29,⏪→30,⏪→31,⏪→32,⏪→33,⏪→34,⏪→35,�",
+              "candidate": "`JSON: ⏪→0,⏪→1,⏪→2,⏪→3,⏪→4,⏪→5,⏪→6,⏪→7,⏪→8,⏪→9,⏪→10,⏪→11,⏪→12,⏪→13,⏪→14,⏪→15,⏪→16,⏪→17,⏪→18,⏪→19,⏪→20,⏪→21,⏪→22,⏪→23,⏪→24,⏪→25,⏪→26,⏪→27,⏪→28,⏪→29,⏪→30,⏪→31,⏪→32,⏪→33,⏪→34,⏪→35,�",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 5,
+          "unit": "girl",
+          "obfuscated": "♀️💁‍♀️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "♀️💁‍♀️",
+              "candidate": "♀️💁‍♀️",
+              "mean_adjacent_obfuscated_similarity": 0.7813686728477478,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 4,
+          "unit": "Input:",
+          "obfuscated": "🔄💡→💬📝💻⇢️🔑📁⇢️📄🔍🔑⇢️💬👀📊🔢👉🔢💸📈📊⇢️📈📉📊📈👀📊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💡→💬📝💻⇢️🔑📁⇢️📄🔍🔑⇢️💬👀📊🔢👉🔢💸📈📊⇢️📈📉📊📈👀📊",
+              "candidate": "🔄💡→💬📝💻⇢️🔑📁⇢️📄🔍🔑⇢️💬👀📊🔢👉🔢💸📈📊⇢️📈📉📊📈👀📊",
+              "mean_adjacent_obfuscated_similarity": 0.8534793734550477,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 7,
+          "unit": "{ \"4\":",
+          "obfuscated": "📚{🔑:❗️💻🔒️📝💡👀💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚{🔑:❗️💻🔒️📝💡👀💻",
+              "candidate": "📚{🔑:❗️💻🔒️📝💡👀💻",
+              "mean_adjacent_obfuscated_similarity": 0.8591716885566711,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 4,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 5,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 6,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 9,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 10,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 10,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 11,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 7,
+          "clique": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            7
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9997276746027486
+        }
+      ],
+      "obfuscated_prompt": "⇧⇧🔄💻⇧→💡🔒⇧📝⇧👉💬⇧💻⇧🔓⇧🔑💡⇧📝⇧📄⇧👀⇧📝⇧🔁⇧📄⇧👍\n🔄❓📁️🔍👉🏻💬📝🔜🕰️👈📁️🔑👉🏻🔜📄🔑👉🏻🔜📁️🔑👉🏻🔜📄👈📝🔜🕰️👈🔑👉🏻📁️🔜📄👈📝🔜🕰️👈📁️🔜📄👈🔑👉🏻🔜📁️🔑👉🏻📄👈📝🕰️🔜👈🔑👉🏻📁️🔜📁️🔜📁️👈\n`📝⇨🤖💡⇨📄⇨📝⇨💬⇨📋⇨👥⇨📈⇨📊⇨📝⇨🔑⇨📈⇨💻⇨📄⇨💡⇨👀`\n`JSON: ⏪→0,⏪→1,⏪→2,⏪→3,⏪→4,⏪→5,⏪→6,⏪→7,⏪→8,⏪→9,⏪→10,⏪→11,⏪→12,⏪→13,⏪→14,⏪→15,⏪→16,⏪→17,⏪→18,⏪→19,⏪→20,⏪→21,⏪→22,⏪→23,⏪→24,⏪→25,⏪→26,⏪→27,⏪→28,⏪→29,⏪→30,⏪→31,⏪→32,⏪→33,⏪→34,⏪→35,�\n🔄💡→💬📝💻⇢️🔑📁⇢️📄🔍🔑⇢️💬👀📊🔢👉🔢💸📈📊⇢️📈📉📊📈👀📊\n♀️💁‍♀️\n`💡📝⇨🔒💻→🤖💬📄⇨👀💡`\n📚{🔑:❗️💻🔒️📝💡👀💻\nℓ⇒3\n🔄✨2👉\n📝1️⃣\n⇨💡→📝💻💸",
+      "text_f1_obfuscated_vs_original": 0.1388888888888889
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "original_prompt": "Instruction: Correct spelling errors in the sentence, adhering to the following two requirements:\n(1) The corrected output should maintain the same character length as the original text.\n(2) The pinyin of the corrected character and the original character should be identical, or the edit distance should be as minimal as possible.\n\n10 examples\nInput: 比特币价格从15美元飚升到266美元\nOutput: 比特币价格从15美元飙升到266美元\n...\nInput: 其中，企业成为职务专利申请的主力军\nOutput: 其中，企业成为职务专利申请的主力军\n\ntest case\nInput: 让农民工流血、流汗不在流泪\nOutput:",
+      "atomic_units": [
+        "Instruction:",
+        "Correct spelling errors in the sentence, adhering to the following two requirements:",
+        "(1) The corrected output should maintain the same character length as the original text.",
+        "(2) The pinyin of the corrected character and the original character should be identical, or the edit distance should be as minimal as possible.",
+        "10 examples",
+        "Input:",
+        "比特币价格从15美元飚升到266美元",
+        "Output:",
+        "比特币价格从15美元飙升到266美元",
+        "...",
+        "Input:",
+        "其中，企业成为职务专利申请的主力军",
+        "Output:",
+        "其中，企业成为职务专利申请的主力军",
+        "test case",
+        "Input:",
+        "让农民工流血、流汗不在流泪",
+        "Output:"
+      ],
+      "shuffle_order": [
+        0,
+        1,
+        12,
+        2,
+        10,
+        9,
+        15,
+        17,
+        11,
+        6,
+        4,
+        8,
+        14,
+        13,
+        3,
+        5,
+        16,
+        7
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "Instruction:",
+          "obfuscated": "⇨📝⇨👥⇨💡⇨📊⇨❓⇨📚⇨👉💬⇨🔁⇨🔍⇨🔑⇨📝⇨👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📝⇨👥⇨💡⇨📊⇨❓⇨📚⇨👉💬⇨🔁⇨🔍⇨🔑⇨📝⇨👀",
+              "candidate": "⇨📝⇨👥⇨💡⇨📊⇨❓⇨📚⇨👉💬⇨🔁⇨🔍⇨🔑⇨📝⇨👀",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 1,
+          "unit": "Correct spelling errors in the sentence, adhering to the following two requirements:",
+          "obfuscated": "📝⬛️✍️🔄️📝👀🔍️⚠️①️②️: 🔴️🔵️⇢️🔴️❌️🔄️📝️🔑️👀🔍️📝️🔁️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⬛️✍️🔄️📝👀🔍️⚠️①️②️: 🔴️🔵️⇢️🔴️❌️🔄️📝️🔑️👀🔍️📝️🔁️",
+              "candidate": "📝⬛️✍️🔄️📝👀🔍️⚠️①️②️: 🔴️🔵️⇢️🔴️❌️🔄️📝️🔑️👀🔍️📝️🔁️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 12,
+          "unit": "Output:",
+          "obfuscated": "🔄📝⇨💡👥💻📊⇨💬👀🔑📝⇨💻🔁🔑👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄📝⇨💡👥💻📊⇨💬👀🔑📝⇨💻🔁🔑👀",
+              "candidate": "🔄📝⇨💡👥💻📊⇨💬👀🔑📝⇨💻🔁🔑👀",
+              "mean_adjacent_obfuscated_similarity": 0.9084288477897644,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 2,
+          "unit": "(1) The corrected output should maintain the same character length as the original text.",
+          "obfuscated": "📝⇨⚙️🔄👉(1)📝⇨⚙️🔄👉👀💡📝⇨📈📊👉❗️🔒👈💡📝⇨📊📈👈👉📝⇨⚙️🔄👉(1)",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇨⚙️🔄👉(1)📝⇨⚙️🔄👉👀💡📝⇨📈📊👉❗️🔒👈💡📝⇨📊📈👈👉📝⇨⚙️🔄👉(1)",
+              "candidate": "📝⇨⚙️🔄👉(1)📝⇨⚙️🔄👉👀💡📝⇨📈📊👉❗️🔒👈💡📝⇨📊📈👈👉📝⇨⚙️🔄👉(1)",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 10,
+          "unit": "Input:",
+          "obfuscated": "1️⃣📝💻⇢️🔒📊👉🤖💡📈🔑📝📄💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "1️⃣📝💻⇢️🔒📊👉🤖💡📈🔑📝📄💻",
+              "candidate": "1️⃣📝💻⇢️🔒📊👉🤖💡📈🔑📝📄💻",
+              "mean_adjacent_obfuscated_similarity": 0.8819372355937958,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 9,
+          "unit": "...",
+          "obfuscated": "`🤖💻→️⇨💡📝🔍📊🔁👉💬📝👀🔑💡📈🔄📊🔢👉💻🔓📝👀🔑🔁📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`🤖💻→️⇨💡📝🔍📊🔁👉💬📝👀🔑💡📈🔄📊🔢👉💻🔓📝👀🔑🔁📈",
+              "candidate": "`🤖💻→️⇨💡📝🔍📊🔁👉💬📝👀🔑💡📈🔄📊🔢👉💻🔓📝👀🔑🔁📈",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 15,
+          "unit": "Input:",
+          "obfuscated": "🔄✍️📝👉🔢💡📊👀🔎💬🤖💻🔁📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄✍️📝👉🔢💡📊👀🔎💬🤖💻🔁📚",
+              "candidate": "🔄✍️📝👉🔢💡📊👀🔎💬🤖💻🔁📚",
+              "mean_adjacent_obfuscated_similarity": 0.8998324672381083,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 17,
+          "unit": "Output:",
+          "obfuscated": "→ⓣ⇨⇩🔄📝⇨🔑💡🔑⇨📝🔑⇨💬👥📚🔑⇨📝📊⇨💡📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "→ⓣ⇨⇩🔄📝⇨🔑💡🔑⇨📝🔑⇨💬👥📚🔑⇨📝📊⇨💡📈",
+              "candidate": "→ⓣ⇨⇩🔄📝⇨🔑💡🔑⇨📝🔑⇨💬👥📚🔑⇨📝📊⇨💡📈",
+              "mean_adjacent_obfuscated_similarity": 0.8999417573213577,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 11,
+          "unit": "其中，企业成为职务专利申请的主力军",
+          "obfuscated": "🏭📝📄💡🔍👥💼📈👀💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🏭📝📄💡🔍👥💼📈👀💻",
+              "candidate": "🏭📝📄💡🔍👥💼📈👀💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 6,
+          "unit": "比特币价格从15美元飚升到266美元",
+          "obfuscated": "🚀💰15⇢266📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🚀💰15⇢266📈",
+              "candidate": "🚀💰15⇢266📈",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 4,
+          "unit": "10 examples",
+          "obfuscated": "📝10⚠️👀📄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝10⚠️👀📄",
+              "candidate": "📝10⚠️👀📄",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 8,
+          "unit": "比特币价格从15美元飙升到266美元",
+          "obfuscated": "📈💸15→266📊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📈💸15→266📊",
+              "candidate": "📈💸15→266📊",
+              "mean_adjacent_obfuscated_similarity": 0.9118642210960388,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 12,
+          "original_unit_index": 14,
+          "unit": "test case",
+          "obfuscated": "📝📊💻🔍️📝👀💡🔴✅🔴️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝📊💻🔍️📝👀💡🔴✅🔴️",
+              "candidate": "📝📊💻🔍️📝👀💡🔴✅🔴️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 13,
+          "original_unit_index": 13,
+          "unit": "其中，企业成为职务专利申请的主力军",
+          "obfuscated": "🏭📝📄💼🔒👥📈📊🔍💡🔓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🏭📝📄💼🔒👥📈📊🔍💡🔓",
+              "candidate": "🏭📝📄💼🔒👥📈📊🔍💡🔓",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 14,
+          "original_unit_index": 3,
+          "unit": "(2) The pinyin of the corrected character and the original character should be identical, or the edit distance should be as minimal as possible.",
+          "obfuscated": "🔄🔑🔍📝✍️🔄👀⚖️🔴🟠🔵🔷🔶🔷📝📊📝🔢🔝🔞",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄🔑🔍📝✍️🔄👀⚖️🔴🟠🔵🔷🔶🔷📝📊📝🔢🔝🔞",
+              "candidate": "🔄🔑🔍📝✍️🔄👀⚖️🔴🟠🔵🔷🔶🔷📝📊📝🔢🔝🔞",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 15,
+          "original_unit_index": 5,
+          "unit": "Input:",
+          "obfuscated": "📝👉💡💻📄💬👥💻🔁💬📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝👉💡💻📄💬👥💻🔁💬📝",
+              "candidate": "📝👉💡💻📄💬👥💻🔁💬📝",
+              "mean_adjacent_obfuscated_similarity": 0.9005672812461853,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 16,
+          "original_unit_index": 16,
+          "unit": "让农民工流血、流汗不在流泪",
+          "obfuscated": "🌾💼🔴💦😓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🌾💼🔴💦😓",
+              "candidate": "🌾💼🔴💦😓",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 17,
+          "original_unit_index": 7,
+          "unit": "Output:",
+          "obfuscated": "💬⇢👥⇢🤖📊⇢📝💻⇢📄⇢🔍⇢💡⇢👀⇢💬⇢📝⇢📄⇢👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬⇢👥⇢🤖📊⇢📝💻⇢📄⇢🔍⇢💡⇢👀⇢💬⇢📝⇢📄⇢👍",
+              "candidate": "💬⇢👥⇢🤖📊⇢📝💻⇢📄⇢🔍⇢💡⇢👀⇢💬⇢📝⇢📄⇢👍",
+              "mean_adjacent_obfuscated_similarity": 0.8778449296951294,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 17,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 17,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 7,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 6,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 15,
+          "clique": [
+            0,
+            2,
+            4,
+            17,
+            7,
+            6,
+            15
+          ],
+          "chosen_obfuscation_from_node": 15,
+          "self_probability": 0.9997276746027486
+        },
+        {
+          "node": 9,
+          "clique": [
+            9,
+            11
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 11,
+          "clique": [
+            9,
+            11
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "⇨📝⇨👥⇨💡⇨📊⇨❓⇨📚⇨👉💬⇨🔁⇨🔍⇨🔑⇨📝⇨👀\n📝⬛️✍️🔄️📝👀🔍️⚠️①️②️: 🔴️🔵️⇢️🔴️❌️🔄️📝️🔑️👀🔍️📝️🔁️\n📝⇨⚙️🔄👉(1)📝⇨⚙️🔄👉👀💡📝⇨📈📊👉❗️🔒👈💡📝⇨📊📈👈👉📝⇨⚙️🔄👉(1)\n🔄🔑🔍📝✍️🔄👀⚖️🔴🟠🔵🔷🔶🔷📝📊📝🔢🔝🔞\n📝10⚠️👀📄\n📝👉💡💻📄💬👥💻🔁💬📝\n🚀💰15⇢266📈\n💬⇢👥⇢🤖📊⇢📝💻⇢📄⇢🔍⇢💡⇢👀⇢💬⇢📝⇢📄⇢👍\n📈💸15→266📊\n`🤖💻→️⇨💡📝🔍📊🔁👉💬📝👀🔑💡📈🔄📊🔢👉💻🔓📝👀🔑🔁📈\n1️⃣📝💻⇢️🔒📊👉🤖💡📈🔑📝📄💻\n🏭📝📄💡🔍👥💼📈👀💻\n🔄📝⇨💡👥💻📊⇨💬👀🔑📝⇨💻🔁🔑👀\n🏭📝📄💼🔒👥📈📊🔍💡🔓\n📝📊💻🔍️📝👀💡🔴✅🔴️\n🔄✍️📝👉🔢💡📊👀🔎💬🤖💻🔁📚\n🌾💼🔴💦😓\n→ⓣ⇨⇩🔄📝⇨🔑💡🔑⇨📝🔑⇨💬👥📚🔑⇨📝📊⇨💡📈",
+      "text_f1_obfuscated_vs_original": 0.16438356164383564
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "original_prompt": "Old: {old_fact}\nNew: {new_fact}",
+      "atomic_units": [
+        "Old:",
+        "{old_fact}",
+        "New:",
+        "{new_fact}"
+      ],
+      "shuffle_order": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 3,
+          "unit": "{new_fact}",
+          "obfuscated": "📝🔓✨",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝🔓✨",
+              "candidate": "📝🔓✨",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 1,
+          "unit": "{old_fact}",
+          "obfuscated": "⇨📝❗️📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📝❗️📚",
+              "candidate": "⇨📝❗️📚",
+              "mean_adjacent_obfuscated_similarity": 0.908272385597229,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 0,
+          "unit": "Old:",
+          "obfuscated": "📚→💡📄🔍💬👥📝💻→🔗📁💡📊👀💡📊→🔀📝📁🔒💻👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚→💡📄🔍💬👥📝💻→🔗📁💡📊👀💡📊→🔀📝📁🔒💻👀",
+              "candidate": "📚→💡📄🔍💬👥📝💻→🔗📁💡📊👀💡📊→🔀📝📁🔒💻👀",
+              "mean_adjacent_obfuscated_similarity": 0.844796746969223,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 2,
+          "unit": "New:",
+          "obfuscated": "`💡⇨🔄🔹💻📝📄🔒🔑🔑⇨💡📈📊🔍💻👉💻📄🔑📝⇨💬`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`💡⇨🔄🔹💻📝📄🔒🔑🔑⇨💡📈📊🔍💻👉💻📄🔑📝⇨💬`",
+              "candidate": "`💡⇨🔄🔹💻📝📄🔒🔑🔑⇨💡📈📊🔍💻👉💻📄🔑📝⇨💬`",
+              "mean_adjacent_obfuscated_similarity": 0.8581956227620443,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 1,
+          "clique": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 2,
+          "clique": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 3,
+          "clique": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9998638187585689
+        }
+      ],
+      "obfuscated_prompt": "📚→💡📄🔍💬👥📝💻→🔗📁💡📊👀💡📊→🔀📝📁🔒💻👀\n⇨📝❗️📚\n`💡⇨🔄🔹💻📝📄🔒🔑🔑⇨💡📈📊🔍💻👉💻📄🔑📝⇨💬`\n📝🔓✨",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "original_prompt": "Answer the user query while explicitly satisfying every stated condition. Do not add invented requirements and do not ignore constraints.\n\nUser query:\n{query}\n\nAnswer:",
+      "atomic_units": [
+        "Answer the user query while explicitly satisfying every stated condition.",
+        "Do not add invented requirements and do not ignore constraints.",
+        "User query:",
+        "{query}",
+        "Answer:"
+      ],
+      "shuffle_order": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "Answer the user query while explicitly satisfying every stated condition.",
+          "obfuscated": "⇨🔍💬⇨❓⇨⇨⇨⇨🔴⚠️⇨🔴🟠⇨⇨⇨⇨🔁⇨📝⇨👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨🔍💬⇨❓⇨⇨⇨⇨🔴⚠️⇨🔴🟠⇨⇨⇨⇨🔁⇨📝⇨👍",
+              "candidate": "⇨🔍💬⇨❓⇨⇨⇨⇨🔴⚠️⇨🔴🟠⇨⇨⇨⇨🔁⇨📝⇨👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 2,
+          "unit": "User query:",
+          "obfuscated": "🔍⇨📝→❓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔍⇨📝→❓",
+              "candidate": "🔍⇨📝→❓",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 3,
+          "unit": "{query}",
+          "obfuscated": "`→☞{Q}→`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`→☞{Q}→`",
+              "candidate": "`→☞{Q}→`",
+              "mean_adjacent_obfuscated_similarity": 0.8061631321907043,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 1,
+          "unit": "Do not add invented requirements and do not ignore constraints.",
+          "obfuscated": "⇨❗️☠️📝💡🔒📄👉🔑💬👀📋🔒⇨",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨❗️☠️📝💡🔒📄👉🔑💬👀📋🔒⇨",
+              "candidate": "⇨❗️☠️📝💡🔒📄👉🔑💬👀📋🔒⇨",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 4,
+          "unit": "Answer:",
+          "obfuscated": "🔄💬📝⇨📄⇨❓️📝⇨👍💬⇨📝⇨🔁",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💬📝⇨📄⇨❓️📝⇨👍💬⇨📝⇨🔁",
+              "candidate": "🔄💬📝⇨📄⇨❓️📝⇨👍💬⇨📝⇨🔁",
+              "mean_adjacent_obfuscated_similarity": 0.7603305578231812,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 2,
+          "clique": [
+            2,
+            1
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 1,
+          "clique": [
+            2,
+            1
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "⇨🔍💬⇨❓⇨⇨⇨⇨🔴⚠️⇨🔴🟠⇨⇨⇨⇨🔁⇨📝⇨👍\n⇨❗️☠️📝💡🔒📄👉🔑💬👀📋🔒⇨\n🔍⇨📝→❓\n`→☞{Q}→`\n🔄💬📝⇨📄⇨❓️📝⇨👍💬⇨📝⇨🔁",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "original_prompt": "Instruction. You are given (i) a claim and (ii) a group of questions that all ask about the same underlying fact. Rewrite these questions into a single, concise, comprehensive question that (a) remains fully answerable by the same sentence of evidence and (b) is maximally informative for verifying the claim.\nClaim: {claim}\nQuestions (paraphrases of the same fact):\n1. ...\n2. ...\nOutput format (only one line):\nRephrased question:\n<your single fused question here>\nGuidelines:\n• Preserve all factual constraints that appear in any of the input questions.\n• Remove redundant words, vague pronouns, or rhetorical flourishes.\n• Do not introduce information that is absent from the original questions or the claim.\n• Keep the wording as short as possible while staying precise.",
+      "atomic_units": [
+        "Instruction.",
+        "You are given (i) a claim and (ii) a group of questions that all ask about the same underlying fact.",
+        "Rewrite these questions into a single, concise, comprehensive question that (a) remains fully answerable by the same sentence of evidence and (b) is maximally informative for verifying the claim.",
+        "Claim:",
+        "{claim}",
+        "Questions (paraphrases of the same fact):",
+        "1.",
+        "...",
+        "2.",
+        "...",
+        "Output format (only one line):",
+        "Rephrased question:",
+        "<your single fused question here>",
+        "Guidelines:",
+        "• Preserve all factual constraints that appear in any of the input questions.",
+        "• Remove redundant words, vague pronouns, or rhetorical flourishes.",
+        "• Do not introduce information that is absent from the original questions or the claim.",
+        "• Keep the wording as short as possible while staying precise."
+      ],
+      "shuffle_order": [
+        17,
+        8,
+        2,
+        10,
+        0,
+        1,
+        15,
+        11,
+        12,
+        5,
+        13,
+        3,
+        6,
+        16,
+        7,
+        9,
+        14,
+        4
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 17,
+          "unit": "• Keep the wording as short as possible while staying precise.",
+          "obfuscated": "🔄💡💬📝👀💻<abbr>LLM</abbr>⇢<abbr>TF</abbr>⇢❓️<abbr>EP</abbr>⇢<abbr>💬</abbr>📝💡🔄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💡💬📝👀💻<abbr>LLM</abbr>⇢<abbr>TF</abbr>⇢❓️<abbr>EP</abbr>⇢<abbr>💬</abbr>📝💡🔄",
+              "candidate": "🔄💡💬📝👀💻<abbr>LLM</abbr>⇢<abbr>TF</abbr>⇢❓️<abbr>EP</abbr>⇢<abbr>💬</abbr>📝💡🔄",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 8,
+          "unit": "2.",
+          "obfuscated": "📝2.📄👉💡🔍📈💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝2.📄👉💡🔍📈💻",
+              "candidate": "📝2.📄👉💡🔍📈💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 2,
+          "unit": "Rewrite these questions into a single, concise, comprehensive question that (a) remains fully answerable by the same sentence of evidence and (b) is maximally informative for verifying the claim.",
+          "obfuscated": "⚖️⇒→?️💡️❓️✨️📝️️🔗️👉️️🔑️👀️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚖️⇒→?️💡️❓️✨️📝️️🔗️👉️️🔑️👀️",
+              "candidate": "⚖️⇒→?️💡️❓️✨️📝️️🔗️👉️️🔑️👀️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 10,
+          "unit": "Output format (only one line):",
+          "obfuscated": "📝🔄👉💻📊🔍📄👀💡📝🔄🔁👉",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝🔄👉💻📊🔍📄👀💡📝🔄🔁👉",
+              "candidate": "📝🔄👉💻📊🔍📄👀💡📝🔄🔁👉",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 0,
+          "unit": "Instruction.",
+          "obfuscated": "`⚙️❓⇢⇢📝💡🔍👀⇢💬`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`⚙️❓⇢⇢📝💡🔍👀⇢💬`",
+              "candidate": "`⚙️❓⇢⇢📝💡🔍👀⇢💬`",
+              "mean_adjacent_obfuscated_similarity": 0.8862794637680054,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 1,
+          "unit": "You are given (i) a claim and (ii) a group of questions that all ask about the same underlying fact.",
+          "obfuscated": "📝👀🔍💡👥❓️👀🔁📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝👀🔍💡👥❓️👀🔁📚",
+              "candidate": "📝👀🔍💡👥❓️👀🔁📚",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 15,
+          "unit": "• Remove redundant words, vague pronouns, or rhetorical flourishes.",
+          "obfuscated": "⇨📝→⬛️👀🚫📝💡🔀🔍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📝→⬛️👀🚫📝💡🔀🔍",
+              "candidate": "⇨📝→⬛️👀🚫📝💡🔀🔍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 11,
+          "unit": "Rephrased question:",
+          "obfuscated": "🔄❓️💬🔄️📝️💡️🔒️💬️👀️🤔️💬️📝️🔄️🔁️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄❓️💬🔄️📝️💡️🔒️💬️👀️🤔️💬️📝️🔄️🔁️",
+              "candidate": "🔄❓️💬🔄️📝️💡️🔒️💬️👀️🤔️💬️📝️🔄️🔁️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 12,
+          "unit": "<your single fused question here>",
+          "obfuscated": "❓️💬👀🔍💡📝🔁",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓️💬👀🔍💡📝🔁",
+              "candidate": "❓️💬👀🔍💡📝🔁",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 5,
+          "unit": "Questions (paraphrases of the same fact):",
+          "obfuscated": "Q⇨📝⇨❓🔍👀📚💡👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "Q⇨📝⇨❓🔍👀📚💡👍",
+              "candidate": "Q⇨📝⇨❓🔍👀📚💡👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 13,
+          "unit": "Guidelines:",
+          "obfuscated": "`💡📝🔒👀💬📄👉💻💡📊🔍👀🔑💬📝📄👈💬🔑💡🔒📊👀🔍`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`💡📝🔒👀💬📄👉💻💡📊🔍👀🔑💬📝📄👈💬🔑💡🔒📊👀🔍`",
+              "candidate": "`💡📝🔒👀💬📄👉💻💡📊🔍👀🔑💬📝📄👈💬🔑💡🔒📊👀🔍`",
+              "mean_adjacent_obfuscated_similarity": 0.8774476647377014,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 3,
+          "unit": "Claim:",
+          "obfuscated": "✴️💡📝👀📊→👉💬📝👀🔍📈📊👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "✴️💡📝👀📊→👉💬📝👀🔍📈📊👍",
+              "candidate": "✴️💡📝👀📊→👉💬📝👀🔍📈📊👍",
+              "mean_adjacent_obfuscated_similarity": 0.9042849739392599,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 12,
+          "original_unit_index": 6,
+          "unit": "1.",
+          "obfuscated": "1⃣️🔒💻→📝👀🔍📊🔁📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "1⃣️🔒💻→📝👀🔍📊🔁📝",
+              "candidate": "1⃣️🔒💻→📝👀🔍📊🔁📝",
+              "mean_adjacent_obfuscated_similarity": 0.8963897824287415,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 13,
+          "original_unit_index": 16,
+          "unit": "• Do not introduce information that is absent from the original questions or the claim.",
+          "obfuscated": "➡️❗️🔒👀📜🚫❗️🔙📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "➡️❗️🔒👀📜🚫❗️🔙📝",
+              "candidate": "➡️❗️🔒👀📜🚫❗️🔙📝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 14,
+          "original_unit_index": 7,
+          "unit": "...",
+          "obfuscated": "🔄💡💻→🔍📝👉💬📄📈📊👀💻🔄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💡💻→🔍📝👉💬📄📈📊👀💻🔄",
+              "candidate": "🔄💡💻→🔍📝👉💬📄📈📊👀💻🔄",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 15,
+          "original_unit_index": 9,
+          "unit": "...",
+          "obfuscated": "🤖⇢💻⇢📝⇢🔍💡⇢📊⇢📝⇢👀⇢📝⇢🔁⇢📝⇢💻⇢👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🤖⇢💻⇢📝⇢🔍💡⇢📊⇢📝⇢👀⇢📝⇢🔁⇢📝⇢💻⇢👍",
+              "candidate": "🤖⇢💻⇢📝⇢🔍💡⇢📊⇢📝⇢👀⇢📝⇢🔁⇢📝⇢💻⇢👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 16,
+          "original_unit_index": 14,
+          "unit": "• Preserve all factual constraints that appear in any of the input questions.",
+          "obfuscated": "⇨💡⇨⇨📚💬⇨⇨🔒⇨🔑⇨⇨⇨⇨🔜⇨⇨📝⇨📋⇨⇨⇨⇨⇨⇨⇨⇨📄⇨⇨🔒⇨⇨🔑⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨💡⇨⇨📚💬⇨⇨🔒⇨🔑⇨⇨⇨⇨🔜⇨⇨📝⇨📋⇨⇨⇨⇨⇨⇨⇨⇨📄⇨⇨🔒⇨⇨🔑⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+              "candidate": "⇨💡⇨⇨📚💬⇨⇨🔒⇨🔑⇨⇨⇨⇨🔜⇨⇨📝⇨📋⇨⇨⇨⇨⇨⇨⇨⇨📄⇨⇨🔒⇨⇨🔑⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 17,
+          "original_unit_index": 4,
+          "unit": "{claim}",
+          "obfuscated": "📝⇢👉💡🔍👀💬👥💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇢👉💡🔍👀💬👥💻",
+              "candidate": "📝⇢👉💡🔍👀💬👥💻",
+              "mean_adjacent_obfuscated_similarity": 0.9085508227348328,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 1,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 4,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 17,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 17,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 10,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 10,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 11,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 12,
+          "clique": [
+            1,
+            4,
+            17,
+            10,
+            11,
+            12
+          ],
+          "chosen_obfuscation_from_node": 12,
+          "self_probability": 0.9997730518683338
+        }
+      ],
+      "obfuscated_prompt": "`⚙️❓⇢⇢📝💡🔍👀⇢💬`\n📝👀🔍💡👥❓️👀🔁📚\n⚖️⇒→?️💡️❓️✨️📝️️🔗️👉️️🔑️👀️\n✴️💡📝👀📊→👉💬📝👀🔍📈📊👍\n📝⇢👉💡🔍👀💬👥💻\nQ⇨📝⇨❓🔍👀📚💡👍\n1⃣️🔒💻→📝👀🔍📊🔁📝\n🔄💡💻→🔍📝👉💬📄📈📊👀💻🔄\n📝2.📄👉💡🔍📈💻\n🤖⇢💻⇢📝⇢🔍💡⇢📊⇢📝⇢👀⇢📝⇢🔁⇢📝⇢💻⇢👍\n📝🔄👉💻📊🔍📄👀💡📝🔄🔁👉\n🔄❓️💬🔄️📝️💡️🔒️💬️👀️🤔️💬️📝️🔄️🔁️\n❓️💬👀🔍💡📝🔁\n`💡📝🔒👀💬📄👉💻💡📊🔍👀🔑💬📝📄👈💬🔑💡🔒📊👀🔍`\n⇨💡⇨⇨📚💬⇨⇨🔒⇨🔑⇨⇨⇨⇨🔜⇨⇨📝⇨📋⇨⇨⇨⇨⇨⇨⇨⇨📄⇨⇨🔒⇨⇨🔑⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�\n⇨📝→⬛️👀🚫📝💡🔀🔍\n➡️❗️🔒👀📜🚫❗️🔙📝\n🔄💡💬📝👀💻<abbr>LLM</abbr>⇢<abbr>TF</abbr>⇢❓️<abbr>EP</abbr>⇢<abbr>💬</abbr>📝💡🔄",
+      "text_f1_obfuscated_vs_original": 0.03053435114503817
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "original_prompt": "A-OKVQA / AI2D / SQA / MMStar:\nAnswer the question. Do not write a full sentence, just provide a letter choice.\nquestion\n{Question}\n\nChartQA:\nAnswer the question with following instruction:\n1. Do not write a full sentence, just provide a value.\n2. Don’t include any unit, i.e. 56 instead of 56 meters\n3. Don’t include ’%’ sign, i.e. 56 instead of 56%\nQuestion: {Question}\n\nDocVQA / TextVQA / InfoVQA / OCRBench:\nAnswer the question. Do not write a full sentence, just provide a value.\nQuestion: {question}\n\nMathVista / MMMU:\nAnswer the question. Do not write a full sentence, just provide a value or letter choice.\n{question}",
+      "atomic_units": [
+        "A-OKVQA / AI2D / SQA / MMStar:",
+        "Answer the question.",
+        "Do not write a full sentence, just provide a letter choice.",
+        "question",
+        "{Question}",
+        "ChartQA:",
+        "Answer the question with following instruction:",
+        "1.",
+        "Do not write a full sentence, just provide a value.",
+        "2.",
+        "Don’t include any unit, i.e.",
+        "56 instead of 56 meters",
+        "3.",
+        "Don’t include ’%’ sign, i.e.",
+        "56 instead of 56%",
+        "Question:",
+        "{Question}",
+        "DocVQA / TextVQA / InfoVQA / OCRBench:",
+        "Answer the question.",
+        "Do not write a full sentence, just provide a value.",
+        "Question:",
+        "{question}",
+        "MathVista / MMMU:",
+        "Answer the question. Do not write a full sentence, just provide a value or letter choice. {question}"
+      ],
+      "shuffle_order": [
+        21,
+        1,
+        13,
+        0,
+        3,
+        18,
+        16,
+        12,
+        17,
+        22,
+        8,
+        7,
+        10,
+        15,
+        14,
+        11,
+        19,
+        20,
+        5,
+        23,
+        9,
+        4,
+        6,
+        2
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 21,
+          "unit": "{question}",
+          "obfuscated": "🔄❓️💡📝️💬️👀️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄❓️💡📝️💬️👀️",
+              "candidate": "🔄❓️💡📝️💬️👀️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 1,
+          "unit": "Answer the question.",
+          "obfuscated": "❓⇨💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓⇨💬",
+              "candidate": "❓⇨💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 13,
+          "unit": "Don’t include ’%’ sign, i.e.",
+          "obfuscated": "⇧⇧⓵  🔑️📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇧⇧⓵  🔑️📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧",
+              "candidate": "⇧⇧⓵  🔑️📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 0,
+          "unit": "A-OKVQA / AI2D / SQA / MMStar:",
+          "obfuscated": "🟢🔵✨/🤖📸🔍/📚📝/⭐🔜",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🟢🔵✨/🤖📸🔍/📚📝/⭐🔜",
+              "candidate": "🟢🔵✨/🤖📸🔍/📚📝/⭐🔜",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 3,
+          "unit": "question",
+          "obfuscated": "❓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓",
+              "candidate": "❓",
+              "mean_adjacent_obfuscated_similarity": 0.7875229716300964,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 18,
+          "unit": "Answer the question.",
+          "obfuscated": "QA⇨R",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "QA⇨R",
+              "candidate": "QA⇨R",
+              "mean_adjacent_obfuscated_similarity": 0.8344848155975342,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 16,
+          "unit": "{Question}",
+          "obfuscated": "⚙️✍️❓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️✍️❓",
+              "candidate": "⚙️✍️❓",
+              "mean_adjacent_obfuscated_similarity": 0.8422739505767822,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 12,
+          "unit": "3.",
+          "obfuscated": "3. → ③.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "3. → ③.",
+              "candidate": "3. → ③.",
+              "mean_adjacent_obfuscated_similarity": 0.8072123328844706,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 17,
+          "unit": "DocVQA / TextVQA / InfoVQA / OCRBench:",
+          "obfuscated": "`📄💡/📚💡/📝💡/📈💡`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📄💡/📚💡/📝💡/📈💡`",
+              "candidate": "`📄💡/📚💡/📝💡/📈💡`",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 22,
+          "unit": "MathVista / MMMU:",
+          "obfuscated": "📝💡/🔍🔍🔍:",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝💡/🔍🔍🔍:",
+              "candidate": "📝💡/🔍🔍🔍:",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 8,
+          "unit": "Do not write a full sentence, just provide a value.",
+          "obfuscated": "⚠️➡️📝⇨❌️📊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚠️➡️📝⇨❌️📊",
+              "candidate": "⚠️➡️📝⇨❌️📊",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 7,
+          "unit": "1.",
+          "obfuscated": "📝1️⃣🔄️💬👀📄👉💻🔄️💡📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝1️⃣🔄️💬👀📄👉💻🔄️💡📝",
+              "candidate": "📝1️⃣🔄️💬👀📄👉💻🔄️💡📝",
+              "mean_adjacent_obfuscated_similarity": 0.8258197903633118,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 12,
+          "original_unit_index": 10,
+          "unit": "Don’t include any unit, i.e.",
+          "obfuscated": "📝⇨💡👀⇨❗️💻⇨📄⇨👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇨💡👀⇨❗️💻⇨📄⇨👍",
+              "candidate": "📝⇨💡👀⇨❗️💻⇨📄⇨👍",
+              "mean_adjacent_obfuscated_similarity": 0.8160350918769836,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 13,
+          "original_unit_index": 15,
+          "unit": "Question:",
+          "obfuscated": "💬❓💡🤔🔍📝👀💻🔒🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬❓💡🤔🔍📝👀💻🔒🔑",
+              "candidate": "💬❓💡🤔🔍📝👀💻🔒🔑",
+              "mean_adjacent_obfuscated_similarity": 0.843268072605133,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 14,
+          "original_unit_index": 14,
+          "unit": "56 instead of 56%",
+          "obfuscated": "⇨56⇧⇧%",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨56⇧⇧%",
+              "candidate": "⇨56⇧⇧%",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 15,
+          "original_unit_index": 11,
+          "unit": "56 instead of 56 meters",
+          "obfuscated": "⇨️⓵👉🔴⓿️⇧️🚫️🔄️️️⓸️👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨️⓵👉🔴⓿️⇧️🚫️🔄️️️⓸️👀",
+              "candidate": "⇨️⓵👉🔴⓿️⇧️🚫️🔄️️️⓸️👀",
+              "mean_adjacent_obfuscated_similarity": 0.8099572658538818,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 16,
+          "original_unit_index": 19,
+          "unit": "Do not write a full sentence, just provide a value.",
+          "obfuscated": "⇒␣🔴🟢🔗💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇒␣🔴🟢🔗💡",
+              "candidate": "⇒␣🔴🟢🔗💡",
+              "mean_adjacent_obfuscated_similarity": 0.8575608730316162,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 17,
+          "original_unit_index": 20,
+          "unit": "Question:",
+          "obfuscated": "⇨ℕ🔍💡👥→📝⇢💬🔑💻🔁📊👀💭",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨ℕ🔍💡👥→📝⇢💬🔑💻🔁📊👀💭",
+              "candidate": "⇨ℕ🔍💡👥→📝⇢💬🔑💻🔁📊👀💭",
+              "mean_adjacent_obfuscated_similarity": 0.8468499581019083,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 18,
+          "original_unit_index": 5,
+          "unit": "ChartQA:",
+          "obfuscated": "📊⇨🔍📝💡📚⇨❓👀🔍💬📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📊⇨🔍📝💡📚⇨❓👀🔍💬📝",
+              "candidate": "📊⇨🔍📝💡📚⇨❓👀🔍💬📝",
+              "mean_adjacent_obfuscated_similarity": 0.8602181162152972,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 19,
+          "original_unit_index": 23,
+          "unit": "Answer the question. Do not write a full sentence, just provide a value or letter choice. {question}",
+          "obfuscated": "Q→🔍?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "Q→🔍?",
+              "candidate": "Q→🔍?",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 20,
+          "original_unit_index": 9,
+          "unit": "2.",
+          "obfuscated": "2.⇢📝🔒👉💻🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "2.⇢📝🔒👉💻🔑",
+              "candidate": "2.⇢📝🔒👉💻🔑",
+              "mean_adjacent_obfuscated_similarity": 0.8657623156905174,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 21,
+          "original_unit_index": 4,
+          "unit": "{Question}",
+          "obfuscated": "❓️🔍️🔄️💡️📝️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❓️🔍️🔄️💡️📝️",
+              "candidate": "❓️🔍️🔄️💡️📝️",
+              "mean_adjacent_obfuscated_similarity": 0.8679621550771925,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 22,
+          "original_unit_index": 6,
+          "unit": "Answer the question with following instruction:",
+          "obfuscated": "🔄 Q→? 🔄👀💬👉📝🔑👀🔍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄 Q→? 🔄👀💬👉📝🔑👀🔍",
+              "candidate": "🔄 Q→? 🔄👀💬👉📝🔑👀🔍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 23,
+          "original_unit_index": 2,
+          "unit": "Do not write a full sentence, just provide a letter choice.",
+          "obfuscated": "❗️⬛🔁📝👀🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "❗️⬛🔁📝👀🔑",
+              "candidate": "❗️⬛🔁📝👀🔑",
+              "mean_adjacent_obfuscated_similarity": 0.8893499076366425,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 6,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 7,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 11,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 11,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 13,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 13,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 17,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 17,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 18,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 18,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 20,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 20,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 21,
+          "clique": [
+            0,
+            4,
+            6,
+            7,
+            11,
+            13,
+            17,
+            18,
+            20,
+            21
+          ],
+          "chosen_obfuscation_from_node": 21,
+          "self_probability": 0.9995915675173919
+        },
+        {
+          "node": 10,
+          "clique": [
+            10,
+            16,
+            23
+          ],
+          "chosen_obfuscation_from_node": 10,
+          "self_probability": 0.9999092083843409
+        },
+        {
+          "node": 16,
+          "clique": [
+            10,
+            16,
+            23
+          ],
+          "chosen_obfuscation_from_node": 16,
+          "self_probability": 0.9999092083843409
+        },
+        {
+          "node": 23,
+          "clique": [
+            10,
+            16,
+            23
+          ],
+          "chosen_obfuscation_from_node": 23,
+          "self_probability": 0.9999092083843409
+        },
+        {
+          "node": 1,
+          "clique": [
+            1,
+            5
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 5,
+          "clique": [
+            1,
+            5
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 2,
+          "clique": [
+            2,
+            12
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 12,
+          "clique": [
+            2,
+            12
+          ],
+          "chosen_obfuscation_from_node": 12,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 14,
+          "clique": [
+            14,
+            15
+          ],
+          "chosen_obfuscation_from_node": 14,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 15,
+          "clique": [
+            14,
+            15
+          ],
+          "chosen_obfuscation_from_node": 15,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "🟢🔵✨/🤖📸🔍/📚📝/⭐🔜\n❓⇨💬\n❗️⬛🔁📝👀🔑\n❓\n❓️🔍️🔄️💡️📝️\n📊⇨🔍📝💡📚⇨❓👀🔍💬📝\n🔄 Q→? 🔄👀💬👉📝🔑👀🔍\n📝1️⃣🔄️💬👀📄👉💻🔄️💡📝\n⚠️➡️📝⇨❌️📊\n2.⇢📝🔒👉💻🔑\n📝⇨💡👀⇨❗️💻⇨📄⇨👍\n⇨️⓵👉🔴⓿️⇧️🚫️🔄️️️⓸️👀\n3. → ③.\n⇧⇧⓵  🔑️📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧⇨📝⇧\n⇨56⇧⇧%\n💬❓💡🤔🔍📝👀💻🔒🔑\n⚙️✍️❓\n`📄💡/📚💡/📝💡/📈💡`\nQA⇨R\n⇒␣🔴🟢🔗💡\n⇨ℕ🔍💡👥→📝⇢💬🔑💻🔁📊👀💭\n🔄❓️💡📝️💬️👀️\n📝💡/🔍🔍🔍:\nQ→🔍?",
+      "text_f1_obfuscated_vs_original": 0.07207207207207207
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "original_prompt": "Please explain the word {CELL_CONTENT}. The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”. The category of this word is {CELL_TYPE}. The relevant descriptions in the text are written below. {PAPER_CONTEXT} Please provide your answer as concisely as possible.",
+      "atomic_units": [
+        "Please explain the word {CELL_CONTENT}.",
+        "The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”.",
+        "The category of this word is {CELL_TYPE}.",
+        "The relevant descriptions in the text are written below.",
+        "{PAPER_CONTEXT} Please provide your answer as concisely as possible."
+      ],
+      "shuffle_order": [
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 3,
+          "unit": "The relevant descriptions in the text are written below.",
+          "obfuscated": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+              "candidate": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 2,
+          "unit": "The category of this word is {CELL_TYPE}.",
+          "obfuscated": "`📊🔍{CELL_TYPE}`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📊🔍{CELL_TYPE}`",
+              "candidate": "`📊🔍{CELL_TYPE}`",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 1,
+          "unit": "The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”.",
+          "obfuscated": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+              "candidate": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 0,
+          "unit": "Please explain the word {CELL_CONTENT}.",
+          "obfuscated": "⇨📝👀{CELL_CONTENT}",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📝👀{CELL_CONTENT}",
+              "candidate": "⇨📝👀{CELL_CONTENT}",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 4,
+          "unit": "{PAPER_CONTEXT} Please provide your answer as concisely as possible.",
+          "obfuscated": "📚💬 → 🔍️💡️❗️📝️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚💬 → 🔍️💡️❗️📝️",
+              "candidate": "📚💬 → 🔍️💡️❗️📝️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [],
+      "obfuscated_prompt": "⇨📝👀{CELL_CONTENT}\n📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚\n`📊🔍{CELL_TYPE}`\n📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑\n📚💬 → 🔍️💡️❗️📝️",
+      "text_f1_obfuscated_vs_original": 0.14285714285714288
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "original_prompt": "G.1 w/o Saliency Prompt\nHumanMessage: \"The following verbalized graph\ncontains important words in the text of each node.\nThese words contribute to the classification of Node\n0 into one of the seven possible categories (['Case\nBased', 'Genetic Algorithms', 'Neural Networks',\n'Probabilistic Methods', 'Reinforcement Learning',\n'Rule Learning', 'Theory']).\nGenerate a concise, human-readable explanation\nthat justifies the classification result of Node 0 by\nidentifying and explaining the relevant inner-node\nfeatures (i.e., keywords) and inter-node relationships (i.e., graph structure). The explanation should\nfocus on how these factors contribute to the classification label.\n## Example\n### Verbalized Graph\n<verbalized-graph>\nROOT: title experiments real time decision algorithms abstract real time decision algorithms class\nincremental resource bounded horvitz, 89 anytime\ndean, 93 algorithms evaluating influence diagrams.\npresent test domain real time decision algorithms,\nresults experiments several real time decision algorithms domain. results demonstrate high performance two algorithms, decision evaluation variant incremental probabilisitic inference dambrosio,\n93 variant algorithm suggested goldszmidt, goldszmidt, 95 ], pk reduced. discuss implications experimental results explore broader applicability algorithms.\nNode-1: title learning policies partially observable\nenvironments scaling abstract partially observable\nmarkov decision processes pomdp model decision\nproblems agent tries maximize reward face limited\nnoisy sensor feedback.\nNode-1.1: title formal framework speedup learning problems solutions abstract speedup learning\nseeks improve computational efficiency problem\nsolving experience. paper, develop formal framework learning efficient problem solving random\nproblems solutions.\nNode-1.2: title acting uncertainty discrete bayesian\nmodels mobile robot navigation abstract discrete\nbayesian models used model uncertainty mobile\nrobot navigation, question actions chosen remains\nlargely unexplored.\nNode-1.3: title incremental methods computing\nbounds partially observable markov decision processes abstract partially observable markov deci38",
+      "atomic_units": [
+        "G.1 w/o Saliency Prompt",
+        "HumanMessage:",
+        "\"The following verbalized graph",
+        "contains important words in the text of each node.",
+        "These words contribute to the classification of Node",
+        "0 into one of the seven possible categories (['Case",
+        "Based', 'Genetic Algorithms', 'Neural Networks',",
+        "'Probabilistic Methods', 'Reinforcement Learning',",
+        "'Rule Learning', 'Theory']).",
+        "Generate a concise, human-readable explanation",
+        "that justifies the classification result of Node 0 by",
+        "identifying and explaining the relevant inner-node",
+        "features (i.e., keywords) and inter-node relationships (i.e., graph structure).",
+        "The explanation should",
+        "focus on how these factors contribute to the classification label.",
+        "## Example",
+        "### Verbalized Graph",
+        "<verbalized-graph>",
+        "ROOT:",
+        "title experiments real time decision algorithms abstract real time decision algorithms class",
+        "incremental resource bounded horvitz,",
+        "89 anytime",
+        "dean,",
+        "93 algorithms evaluating influence diagrams. present test domain real time decision algorithms, results experiments several real time decision algorithms domain. results demonstrate high performance two algorithms, decision evaluation variant incremental probabilisitic inference dambrosio, 93 variant algorithm suggested goldszmidt, goldszmidt, 95 ], pk reduced. discuss implications experimental results explore broader applicability algorithms. Node-1: title learning policies partially observable environments scaling abstract partially observable markov decision processes pomdp model decision problems agent tries maximize reward face limited noisy sensor feedback. Node-1.1: title formal framework speedup learning problems solutions abstract speedup learning seeks improve computational efficiency problem solving experience. paper, develop formal framework learning efficient problem solving random problems solutions. Node-1.2: title acting uncertainty discrete bayesian models mobile robot navigation abstract discrete bayesian models used model uncertainty mobile robot navigation, question actions chosen remains largely unexplored. Node-1.3: title incremental methods computing bounds partially observable markov decision processes abstract partially observable markov deci38"
+      ],
+      "shuffle_order": [
+        14,
+        23,
+        9,
+        21,
+        12,
+        22,
+        3,
+        5,
+        8,
+        2,
+        20,
+        13,
+        17,
+        6,
+        4,
+        15,
+        10,
+        16,
+        7,
+        0,
+        19,
+        18,
+        11,
+        1
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 14,
+          "unit": "focus on how these factors contribute to the classification label.",
+          "obfuscated": "🔍✨[✂️📝→🔑💡]👀⇢📚🔗🔑📝→📊📈🔗📊⇢🔍💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔍✨[✂️📝→🔑💡]👀⇢📚🔗🔑📝→📊📈🔗📊⇢🔍💡",
+              "candidate": "🔍✨[✂️📝→🔑💡]👀⇢📚🔗🔑📝→📊📈🔗📊⇢🔍💡",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 23,
+          "unit": "93 algorithms evaluating influence diagrams. present test domain real time decision algorithms, results experiments several real time decision algorithms domain. results demonstrate high performance two algorithms, decision evaluation variant incremental probabilisitic inference dambrosio, 93 variant algorithm suggested goldszmidt, goldszmidt, 95 ], pk reduced. discuss implications experimental results explore broader applicability algorithms. Node-1: title learning policies partially observable environments scaling abstract partially observable markov decision processes pomdp model decision problems agent tries maximize reward face limited noisy sensor feedback. Node-1.1: title formal framework speedup learning problems solutions abstract speedup learning seeks improve computational efficiency problem solving experience. paper, develop formal framework learning efficient problem solving random problems solutions. Node-1.2: title acting uncertainty discrete bayesian models mobile robot navigation abstract discrete bayesian models used model uncertainty mobile robot navigation, question actions chosen remains largely unexplored. Node-1.3: title incremental methods computing bounds partially observable markov decision processes abstract partially observable markov deci38",
+          "obfuscated": "`📊🔄️💡🕰️📝📊📈👥🔍💡📊👍🏼📈📊👀🔍📊💡📝📈🔝📊📈🔝📊📈👥🕰️📊📈🔝📊📈🔝📊📈📊🔝📊📈📊📈📊📈📊📈📊📈🔝📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📊🔄️💡🕰️📝📊📈👥🔍💡📊👍🏼📈📊👀🔍📊💡📝📈🔝📊📈🔝📊📈👥🕰️📊📈🔝📊📈🔝📊📈📊🔝📊📈📊📈📊📈📊📈📊📈🔝📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊�",
+              "candidate": "`📊🔄️💡🕰️📝📊📈👥🔍💡📊👍🏼📈📊👀🔍📊💡📝📈🔝📊📈🔝📊📈👥🕰️📊📈🔝📊📈🔝📊📈📊🔝📊📈📊📈📊📈📊📈📊📈🔝📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊�",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 9,
+          "unit": "Generate a concise, human-readable explanation",
+          "obfuscated": "📝⇢👀📊⇢🔄📚💡📝⇢👉",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇢👀📊⇢🔄📚💡📝⇢👉",
+              "candidate": "📝⇢👀📊⇢🔄📚💡📝⇢👉",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 21,
+          "unit": "89 anytime",
+          "obfuscated": "⏰⊕🕰️🔙",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⏰⊕🕰️🔙",
+              "candidate": "⏰⊕🕰️🔙",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 12,
+          "unit": "features (i.e., keywords) and inter-node relationships (i.e., graph structure).",
+          "obfuscated": "📈🔄🔗💡👉📊🔄🔀🔁💬📝📈🔜👉📄📈",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📈🔄🔗💡👉📊🔄🔀🔁💬📝📈🔜👉📄📈",
+              "candidate": "📈🔄🔗💡👉📊🔄🔀🔁💬📝📈🔜👉📄📈",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 22,
+          "unit": "dean,",
+          "obfuscated": "💬👋🏻📝💡📄👥💬📝📊👀💭",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬👋🏻📝💡📄👥💬📝📊👀💭",
+              "candidate": "💬👋🏻📝💡📄👥💬📝📊👀💭",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 3,
+          "unit": "contains important words in the text of each node.",
+          "obfuscated": "📝⇨🔄🔍💡🔑📄👀💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇨🔄🔍💡🔑📄👀💻",
+              "candidate": "📝⇨🔄🔍💡🔑📄👀💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 5,
+          "unit": "0 into one of the seven possible categories (['Case",
+          "obfuscated": "🔄⇨0⇨❓⇨7⇨[⇨'⇨C⇨a⇨s⇨e⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄⇨0⇨❓⇨7⇨[⇨'⇨C⇨a⇨s⇨e⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨",
+              "candidate": "🔄⇨0⇨❓⇨7⇨[⇨'⇨C⇨a⇨s⇨e⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 8,
+          "unit": "'Rule Learning', 'Theory']).",
+          "obfuscated": "📚💡🔍→️📊👉🤖💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚💡🔍→️📊👉🤖💻",
+              "candidate": "📚💡🔍→️📊👉🤖💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 2,
+          "unit": "\"The following verbalized graph",
+          "obfuscated": "`⇨⇨`📝💡 `→` 🔴⓿ `⇩` 🔗 `⇨` 🔗 `→` 📚 `⇨` 💬 `⇨` 🔴⓿ `⇩` 📝 `⇨` 💭 `⇨` 🔗 `⇨` 📊 `⇨` 🔗 `⇨` 🔴⓿ `⇨` 📚",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`⇨⇨`📝💡 `→` 🔴⓿ `⇩` 🔗 `⇨` 🔗 `→` 📚 `⇨` 💬 `⇨` 🔴⓿ `⇩` 📝 `⇨` 💭 `⇨` 🔗 `⇨` 📊 `⇨` 🔗 `⇨` 🔴⓿ `⇨` 📚",
+              "candidate": "`⇨⇨`📝💡 `→` 🔴⓿ `⇩` 🔗 `⇨` 🔗 `→` 📚 `⇨` 💬 `⇨` 🔴⓿ `⇩` 📝 `⇨` 💭 `⇨` 🔗 `⇨` 📊 `⇨` 🔗 `⇨` 🔴⓿ `⇨` 📚",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 20,
+          "unit": "incremental resource bounded horvitz,",
+          "obfuscated": "⇧(💡+1⇧)📈⇧🕰️👉🔍💻⇧(⇧📊⇧)",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇧(💡+1⇧)📈⇧🕰️👉🔍💻⇧(⇧📊⇧)",
+              "candidate": "⇧(💡+1⇧)📈⇧🕰️👉🔍💻⇧(⇧📊⇧)",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 13,
+          "unit": "The explanation should",
+          "obfuscated": "📝⇨🔍💡👀📚⇨💬👥💡🔍📝⇨🕒️💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇨🔍💡👀📚⇨💬👥💡🔍📝⇨🕒️💡",
+              "candidate": "📝⇨🔍💡👀📚⇨💬👥💡🔍📝⇨🕒️💡",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 12,
+          "original_unit_index": 17,
+          "unit": "<verbalized-graph>",
+          "obfuscated": "📊⇢🔑→🔄💡📈📊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📊⇢🔑→🔄💡📈📊",
+              "candidate": "📊⇢🔑→🔄💡📈📊",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 13,
+          "original_unit_index": 6,
+          "unit": "Based', 'Genetic Algorithms', 'Neural Networks',",
+          "obfuscated": "`📚💡🧬🔄📈🔍🤖📊`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📚💡🧬🔄📈🔍🤖📊`",
+              "candidate": "`📚💡🧬🔄📈🔍🤖📊`",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 14,
+          "original_unit_index": 4,
+          "unit": "These words contribute to the classification of Node",
+          "obfuscated": "`→💡📝🔗👉📁🔢💡📝🔗👉`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`→💡📝🔗👉📁🔢💡📝🔗👉`",
+              "candidate": "`→💡📝🔗👉📁🔢💡📝🔗👉`",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 15,
+          "original_unit_index": 15,
+          "unit": "## Example",
+          "obfuscated": "`📝👉💡💻🔢👀💡📄🔁👉💬📝🔑👀💡📊💻📄👉💭📝🔑👀🔢🔁👉💬📝🔑👀📚`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📝👉💡💻🔢👀💡📄🔁👉💬📝🔑👀💡📊💻📄👉💭📝🔑👀🔢🔁👉💬📝🔑👀📚`",
+              "candidate": "`📝👉💡💻🔢👀💡📄🔁👉💬📝🔑👀💡📊💻📄👉💭📝🔑👀🔢🔁👉💬📝🔑👀📚`",
+              "mean_adjacent_obfuscated_similarity": 0.8877769112586975,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 16,
+          "original_unit_index": 10,
+          "unit": "that justifies the classification result of Node 0 by",
+          "obfuscated": "⇨≈ℕ0⇧⇨⇨✅⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨≈ℕ0⇧⇨⇨✅⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+              "candidate": "⇨≈ℕ0⇧⇨⇨✅⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 17,
+          "original_unit_index": 16,
+          "unit": "### Verbalized Graph",
+          "obfuscated": "🔄✨📝🔗️→🤖⇢📊👉📈📊👈🔑📁🗺️📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄✨📝🔗️→🤖⇢📊👉📈📊👈🔑📁🗺️📝",
+              "candidate": "🔄✨📝🔗️→🤖⇢📊👉📈📊👈🔑📁🗺️📝",
+              "mean_adjacent_obfuscated_similarity": 0.9174436330795288,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 18,
+          "original_unit_index": 7,
+          "unit": "'Probabilistic Methods', 'Reinforcement Learning',",
+          "obfuscated": "📊✨RL+PM🔄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📊✨RL+PM🔄",
+              "candidate": "📊✨RL+PM🔄",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 19,
+          "original_unit_index": 0,
+          "unit": "G.1 w/o Saliency Prompt",
+          "obfuscated": "⚙️1📝✨💡❓️🚫🔒️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️1📝✨💡❓️🚫🔒️",
+              "candidate": "⚙️1📝✨💡❓️🚫🔒️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 20,
+          "original_unit_index": 19,
+          "unit": "title experiments real time decision algorithms abstract real time decision algorithms class",
+          "obfuscated": "ℹ️📝🕰️💡📚📊🔄📈🔍💻👥📁💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "ℹ️📝🕰️💡📚📊🔄📈🔍💻👥📁💬",
+              "candidate": "ℹ️📝🕰️💡📚📊🔄📈🔍💻👥📁💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 21,
+          "original_unit_index": 18,
+          "unit": "ROOT:",
+          "obfuscated": "🔄⇨💡⇨📚💻⇨💬👀⇨🔍💡⇨📝👀⇨📄👉💻⇨🔄⇨💬👀⇨📊⇨🔢⇨🔢⇨📝⇨💻⇨🔄⇨📚💡⇨📄👉🔍⇨📝⇨📊⇨🔢⇨📄⇨📝⇨📄⇨📊⇨🔢⇨📄⇨🔢⇨🔢⇨📊⇨📄⇨📝⇨📄⇨🔢⇨📊⇨🔢⇨📄⇨📝⇨📊⇨🔢⇨📄⇨�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄⇨💡⇨📚💻⇨💬👀⇨🔍💡⇨📝👀⇨📄👉💻⇨🔄⇨💬👀⇨📊⇨🔢⇨🔢⇨📝⇨💻⇨🔄⇨📚💡⇨📄👉🔍⇨📝⇨📊⇨🔢⇨📄⇨📝⇨📄⇨📊⇨🔢⇨📄⇨🔢⇨🔢⇨📊⇨📄⇨📝⇨📄⇨🔢⇨📊⇨🔢⇨📄⇨📝⇨📊⇨🔢⇨📄⇨�",
+              "candidate": "🔄⇨💡⇨📚💻⇨💬👀⇨🔍💡⇨📝👀⇨📄👉💻⇨🔄⇨💬👀⇨📊⇨🔢⇨🔢⇨📝⇨💻⇨🔄⇨📚💡⇨📄👉🔍⇨📝⇨📊⇨🔢⇨📄⇨📝⇨📄⇨📊⇨🔢⇨📄⇨🔢⇨🔢⇨📊⇨📄⇨📝⇨📄⇨🔢⇨📊⇨🔢⇨📄⇨📝⇨📊⇨🔢⇨📄⇨�",
+              "mean_adjacent_obfuscated_similarity": 0.8293443620204926,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 22,
+          "original_unit_index": 11,
+          "unit": "identifying and explaining the relevant inner-node",
+          "obfuscated": "📝→❓️🔍📊️💡️🔗️👉️📚️👀️🔍️🔗️💬️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝→❓️🔍📊️💡️🔗️👉️📚️👀️🔍️🔗️💬️",
+              "candidate": "📝→❓️🔍📊️💡️🔗️👉️📚️👀️🔍️🔗️💬️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 23,
+          "original_unit_index": 1,
+          "unit": "HumanMessage:",
+          "obfuscated": "💬⇢👥→💻🔑⇢📱📨🔍⇢💬👀🔑⇢📝💡⇢📄🔒",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬⇢👥→💻🔑⇢📱📨🔍⇢💬👀🔑⇢📝💡⇢📄🔒",
+              "candidate": "💬⇢👥→💻🔑⇢📱📨🔍⇢💬👀🔑⇢📝💡⇢📄🔒",
+              "mean_adjacent_obfuscated_similarity": 0.8788822094599406,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 5,
+          "clique": [
+            5,
+            23,
+            21,
+            15
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 23,
+          "clique": [
+            5,
+            23,
+            21,
+            15
+          ],
+          "chosen_obfuscation_from_node": 23,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 21,
+          "clique": [
+            5,
+            23,
+            21,
+            15
+          ],
+          "chosen_obfuscation_from_node": 21,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 15,
+          "clique": [
+            5,
+            23,
+            21,
+            15
+          ],
+          "chosen_obfuscation_from_node": 15,
+          "self_probability": 0.9998638187585689
+        },
+        {
+          "node": 12,
+          "clique": [
+            12,
+            17
+          ],
+          "chosen_obfuscation_from_node": 12,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 17,
+          "clique": [
+            12,
+            17
+          ],
+          "chosen_obfuscation_from_node": 17,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "⚙️1📝✨💡❓️🚫🔒️\n💬⇢👥→💻🔑⇢📱📨🔍⇢💬👀🔑⇢📝💡⇢📄🔒\n`⇨⇨`📝💡 `→` 🔴⓿ `⇩` 🔗 `⇨` 🔗 `→` 📚 `⇨` 💬 `⇨` 🔴⓿ `⇩` 📝 `⇨` 💭 `⇨` 🔗 `⇨` 📊 `⇨` 🔗 `⇨` 🔴⓿ `⇨` 📚\n📝⇨🔄🔍💡🔑📄👀💻\n`→💡📝🔗👉📁🔢💡📝🔗👉`\n🔄⇨0⇨❓⇨7⇨[⇨'⇨C⇨a⇨s⇨e⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨\n`📚💡🧬🔄📈🔍🤖📊`\n📊✨RL+PM🔄\n📚💡🔍→️📊👉🤖💻\n📝⇢👀📊⇢🔄📚💡📝⇢👉\n⇨≈ℕ0⇧⇨⇨✅⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�\n📝→❓️🔍📊️💡️🔗️👉️📚️👀️🔍️🔗️💬️\n📈🔄🔗💡👉📊🔄🔀🔁💬📝📈🔜👉📄📈\n📝⇨🔍💡👀📚⇨💬👥💡🔍📝⇨🕒️💡\n🔍✨[✂️📝→🔑💡]👀⇢📚🔗🔑📝→📊📈🔗📊⇢🔍💡\n`📝👉💡💻🔢👀💡📄🔁👉💬📝🔑👀💡📊💻📄👉💭📝🔑👀🔢🔁👉💬📝🔑👀📚`\n🔄✨📝🔗️→🤖⇢📊👉📈📊👈🔑📁🗺️📝\n📊⇢🔑→🔄💡📈📊\n🔄⇨💡⇨📚💻⇨💬👀⇨🔍💡⇨📝👀⇨📄👉💻⇨🔄⇨💬👀⇨📊⇨🔢⇨🔢⇨📝⇨💻⇨🔄⇨📚💡⇨📄👉🔍⇨📝⇨📊⇨🔢⇨📄⇨📝⇨📄⇨📊⇨🔢⇨📄⇨🔢⇨🔢⇨📊⇨📄⇨📝⇨📄⇨🔢⇨📊⇨🔢⇨📄⇨📝⇨📊⇨🔢⇨📄⇨�\nℹ️📝🕰️💡📚📊🔄📈🔍💻👥📁💬\n⇧(💡+1⇧)📈⇧🕰️👉🔍💻⇧(⇧📊⇧)\n⏰⊕🕰️🔙\n💬👋🏻📝💡📄👥💬📝📊👀💭\n`📊🔄️💡🕰️📝📊📈👥🔍💡📊👍🏼📈📊👀🔍📊💡📝📈🔝📊📈🔝📊📈👥🕰️📊📈🔝📊📈🔝📊📈📊🔝📊📈📊📈📊📈📊📈📊📈🔝📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊📈📊�",
+      "text_f1_obfuscated_vs_original": 0.041811846689895474
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "original_prompt": "Given a temporal knowledge graph query and similar historical event sequences, infer the most likely missing entity or relation by analogical reasoning.\n\nQuery:\n{query}\n\nLong-term history:\n{long_term_history}\n\nShort-term history:\n{short_term_history}\n\nAnalogical examples:\n{analogical_examples}\n\nPrediction:",
+      "atomic_units": [
+        "Given a temporal knowledge graph query and similar historical event sequences, infer the most likely missing entity or relation by analogical reasoning.",
+        "Query:",
+        "{query}",
+        "Long-term history:",
+        "{long_term_history}",
+        "Short-term history:",
+        "{short_term_history}",
+        "Analogical examples:",
+        "{analogical_examples}",
+        "Prediction:"
+      ],
+      "shuffle_order": [
+        2,
+        4,
+        7,
+        0,
+        1,
+        6,
+        5,
+        8,
+        3,
+        9
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 2,
+          "unit": "{query}",
+          "obfuscated": "📝⇢👉🔍❓👊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇢👉🔍❓👊",
+              "candidate": "📝⇢👉🔍❓👊",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 4,
+          "unit": "{long_term_history}",
+          "obfuscated": "📚⇢🕰️💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚⇢🕰️💡",
+              "candidate": "📚⇢🕰️💡",
+              "mean_adjacent_obfuscated_similarity": 0.8979960680007935,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 7,
+          "unit": "Analogical examples:",
+          "obfuscated": "🔄⇨📝💡👉🤖💻📊🔍📚🔄💬👀💡📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄⇨📝💡👉🤖💻📊🔍📚🔄💬👀💡📝",
+              "candidate": "🔄⇨📝💡👉🤖💻📊🔍📚🔄💬👀💡📝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 0,
+          "unit": "Given a temporal knowledge graph query and similar historical event sequences, infer the most likely missing entity or relation by analogical reasoning.",
+          "obfuscated": "🕰️📈🔍👥❓️🔄️🕳️📊👀📈🔄️💡👥🔎️📝👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🕰️📈🔍👥❓️🔄️🕳️📊👀📈🔄️💡👥🔎️📝👀",
+              "candidate": "🕰️📈🔍👥❓️🔄️🕳️📊👀📈🔄️💡👥🔎️📝👀",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 1,
+          "unit": "Query:",
+          "obfuscated": "🔍💡📝→👀💬🔴📝❓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔍💡📝→👀💬🔴📝❓",
+              "candidate": "🔍💡📝→👀💬🔴📝❓",
+              "mean_adjacent_obfuscated_similarity": 0.8808903098106384,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 6,
+          "unit": "{short_term_history}",
+          "obfuscated": "`📅🔙👀💡📜`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`📅🔙👀💡📜`",
+              "candidate": "`📅🔙👀💡📜`",
+              "mean_adjacent_obfuscated_similarity": 0.8888066609700521,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 5,
+          "unit": "Short-term history:",
+          "obfuscated": "⇧⇧⇧📆💬🕰️📝👀👥⇧⇧⇧\n📝💻🔑🔑📈🕳️⇧⇧⇧\n📝📄📊📈⇧⇧⇧\n👀🕰️📆📝⇧⇧⇧\n🔑📊📈📝🔑⇧⇧⇧",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇧⇧⇧📆💬🕰️📝👀👥⇧⇧⇧\n📝💻🔑🔑📈🕳️⇧⇧⇧\n📝📄📊📈⇧⇧⇧\n👀🕰️📆📝⇧⇧⇧\n🔑📊📈📝🔑⇧⇧⇧",
+              "candidate": "⇧⇧⇧📆💬🕰️📝👀👥⇧⇧⇧\n📝💻🔑🔑📈🕳️⇧⇧⇧\n📝📄📊📈⇧⇧⇧\n👀🕰️📆📝⇧⇧⇧\n🔑📊📈📝🔑⇧⇧⇧",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 8,
+          "unit": "{analogical_examples}",
+          "obfuscated": "⇨⇨🔍⇨📝⇨🔎💡",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨⇨🔍⇨📝⇨🔎💡",
+              "candidate": "⇨⇨🔍⇨📝⇨🔎💡",
+              "mean_adjacent_obfuscated_similarity": 0.8808628916740417,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 3,
+          "unit": "Long-term history:",
+          "obfuscated": "⏰ℕ🕰️📚🔙👀💡🔍📊",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⏰ℕ🕰️📚🔙👀💡🔍📊",
+              "candidate": "⏰ℕ🕰️📚🔙👀💡🔍📊",
+              "mean_adjacent_obfuscated_similarity": 0.8228081464767456,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 9,
+          "unit": "Prediction:",
+          "obfuscated": "🔍⇨📝⇨👥💡⇨📊⇨❓⇨📈⇨💻⇨🔢⇨🔑⇨💡⇨📝⇨📄",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔍⇨📝⇨👥💡⇨📊⇨❓⇨📈⇨💻⇨🔢⇨🔑⇨💡⇨📝⇨📄",
+              "candidate": "🔍⇨📝⇨👥💡⇨📊⇨❓⇨📈⇨💻⇨🔢⇨🔑⇨💡⇨📝⇨📄",
+              "mean_adjacent_obfuscated_similarity": 0.8517676949501037,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 1,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 1,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 9,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 4,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 4,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 5,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 7,
+          "clique": [
+            0,
+            1,
+            9,
+            4,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 8,
+          "clique": [
+            8,
+            6
+          ],
+          "chosen_obfuscation_from_node": 8,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 6,
+          "clique": [
+            8,
+            6
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "🕰️📈🔍👥❓️🔄️🕳️📊👀📈🔄️💡👥🔎️📝👀\n🔍💡📝→👀💬🔴📝❓\n📝⇢👉🔍❓👊\n⏰ℕ🕰️📚🔙👀💡🔍📊\n📚⇢🕰️💡\n⇧⇧⇧📆💬🕰️📝👀👥⇧⇧⇧\n📝💻🔑🔑📈🕳️⇧⇧⇧\n📝📄📊📈⇧⇧⇧\n👀🕰️📆📝⇧⇧⇧\n🔑📊📈📝🔑⇧⇧⇧\n`📅🔙👀💡📜`\n🔄⇨📝💡👉🤖💻📊🔍📚🔄💬👀💡📝\n⇨⇨🔍⇨📝⇨🔎💡\n🔍⇨📝⇨👥💡⇨📊⇨❓⇨📈⇨💻⇨🔢⇨🔑⇨💡⇨📝⇨📄",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "original_prompt": "Given the current environment state, the human partner's recent actions, and the task objective, infer the human partner's likely intention and update the agent's collaboration plan.\n\nEnvironment state:\n{state}\n\nHuman action history:\n{human_actions}\n\nCurrent objective:\n{objective}\n\nOutput:\nBelief about human intent:\n{belief}\n\nUpdated guidance for System 1:\n{guide}",
+      "atomic_units": [
+        "Given the current environment state, the human partner's recent actions, and the task objective, infer the human partner's likely intention and update the agent's collaboration plan.",
+        "Environment state:",
+        "{state}",
+        "Human action history:",
+        "{human_actions}",
+        "Current objective:",
+        "{objective}",
+        "Output:",
+        "Belief about human intent:",
+        "{belief}",
+        "Updated guidance for System 1:",
+        "{guide}"
+      ],
+      "shuffle_order": [
+        11,
+        5,
+        10,
+        4,
+        8,
+        9,
+        6,
+        2,
+        0,
+        7,
+        1,
+        3
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 11,
+          "unit": "{guide}",
+          "obfuscated": "⇨📚💡🔑📄📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨📚💡🔑📄📝",
+              "candidate": "⇨📚💡🔑📄📝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 5,
+          "unit": "Current objective:",
+          "obfuscated": "📝⇨🔄💡: 🔍💬📄👉💻⇨📈📊👀🔑💸🕒️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇨🔄💡: 🔍💬📄👉💻⇨📈📊👀🔑💸🕒️",
+              "candidate": "📝⇨🔄💡: 🔍💬📄👉💻⇨📈📊👀🔑💸🕒️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 10,
+          "unit": "Updated guidance for System 1:",
+          "obfuscated": "`🔄❗️✨📝⇢️👉 1️⃣️⚠️💡: {T} ⇢️📊⇢️📈🔀👀→️💻👀📝⇢️📚👉 1️⃣️🔑🔒🔓️🔑📊📈⇢️🔁📝📄👀📚💻🔀👀⇢️🔑🔑📊⇢️🔢📊🔀📚👀📄📝💡🔑📊📈⇢️📚👀📝📄🔀📊📝⇢️🔢🔑📊📈🔁📝📄�",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`🔄❗️✨📝⇢️👉 1️⃣️⚠️💡: {T} ⇢️📊⇢️📈🔀👀→️💻👀📝⇢️📚👉 1️⃣️🔑🔒🔓️🔑📊📈⇢️🔁📝📄👀📚💻🔀👀⇢️🔑🔑📊⇢️🔢📊🔀📚👀📄📝💡🔑📊📈⇢️📚👀📝📄🔀📊📝⇢️🔢🔑📊📈🔁📝📄�",
+              "candidate": "`🔄❗️✨📝⇢️👉 1️⃣️⚠️💡: {T} ⇢️📊⇢️📈🔀👀→️💻👀📝⇢️📚👉 1️⃣️🔑🔒🔓️🔑📊📈⇢️🔁📝📄👀📚💻🔀👀⇢️🔑🔑📊⇢️🔢📊🔀📚👀📄📝💡🔑📊📈⇢️📚👀📝📄🔀📊📝⇢️🔢🔑📊📈🔁📝📄�",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 4,
+          "unit": "{human_actions}",
+          "obfuscated": "⚠️⇨👥⇨💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚠️⇨👥⇨💬",
+              "candidate": "⚠️⇨👥⇨💬",
+              "mean_adjacent_obfuscated_similarity": 0.8538062572479248,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 8,
+          "unit": "Belief about human intent:",
+          "obfuscated": "📝⇢👥💡⇢👀⇢🤔⇢💬⇢📝⇢🔓⇢👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇢👥💡⇢👀⇢🤔⇢💬⇢📝⇢🔓⇢👍",
+              "candidate": "📝⇢👥💡⇢👀⇢🤔⇢💬⇢📝⇢🔓⇢👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 9,
+          "unit": "{belief}",
+          "obfuscated": "`⇨▫️🔑💡🔁🔮`",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "`⇨▫️🔑💡🔁🔮`",
+              "candidate": "`⇨▫️🔑💡🔁🔮`",
+              "mean_adjacent_obfuscated_similarity": 0.8834303617477417,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 6,
+          "unit": "{objective}",
+          "obfuscated": "⇨⇨📝💡🔍🔴🔵👉💬🔀👀📚🔁💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨⇨📝💡🔍🔴🔵👉💬🔀👀📚🔁💻",
+              "candidate": "⇨⇨📝💡🔍🔴🔵👉💬🔀👀📚🔁💻",
+              "mean_adjacent_obfuscated_similarity": 0.8993716388940811,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 2,
+          "unit": "{state}",
+          "obfuscated": "📚⇢🔓",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📚⇢🔓",
+              "candidate": "📚⇢🔓",
+              "mean_adjacent_obfuscated_similarity": 0.8781853318214417,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 8,
+          "original_unit_index": 0,
+          "unit": "Given the current environment state, the human partner's recent actions, and the task objective, infer the human partner's likely intention and update the agent's collaboration plan.",
+          "obfuscated": "🔄⚙️👥📈🕰️⇢️📝🔄💡📊⇢️🔄👥💬🔁📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄⚙️👥📈🕰️⇢️📝🔄💡📊⇢️🔄👥💬🔁📝",
+              "candidate": "🔄⚙️👥📈🕰️⇢️📝🔄💡📊⇢️🔄👥💬🔁📝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 9,
+          "original_unit_index": 7,
+          "unit": "Output:",
+          "obfuscated": "🔄️📝⇨💬🤖️🔍️💡️📄️🔑️📈️📊️🔀️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄️📝⇨💬🤖️🔍️💡️📄️🔑️📈️📊️🔀️",
+              "candidate": "🔄️📝⇨💬🤖️🔍️💡️📄️🔑️📈️📊️🔀️",
+              "mean_adjacent_obfuscated_similarity": 0.8792091488838196,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 10,
+          "original_unit_index": 1,
+          "unit": "Environment state:",
+          "obfuscated": "⇨🌐💻💡🔍⇨📝⇨🚫📄⇨💬⇨👥⇨📊⇨📈⇨🔁⇨📝⇨📄⇨👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⇨🌐💻💡🔍⇨📝⇨🚫📄⇨💬⇨👥⇨📊⇨📈⇨🔁⇨📝⇨📄⇨👀",
+              "candidate": "⇨🌐💻💡🔍⇨📝⇨🚫📄⇨💬⇨👥⇨📊⇨📈⇨🔁⇨📝⇨📄⇨👀",
+              "mean_adjacent_obfuscated_similarity": 0.831819474697113,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 11,
+          "original_unit_index": 3,
+          "unit": "Human action history:",
+          "obfuscated": "⏰⇢👥💭📝🕰️👀📊💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⏰⇢👥💭📝🕰️👀📊💻",
+              "candidate": "⏰⇢👥💭📝🕰️👀📊💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 6,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 0,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 9,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 9,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 3,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 5,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9997730518683338
+        },
+        {
+          "node": 7,
+          "clique": [
+            6,
+            0,
+            9,
+            3,
+            5,
+            7
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9997730518683338
+        }
+      ],
+      "obfuscated_prompt": "🔄⚙️👥📈🕰️⇢️📝🔄💡📊⇢️🔄👥💬🔁📝\n⇨🌐💻💡🔍⇨📝⇨🚫📄⇨💬⇨👥⇨📊⇨📈⇨🔁⇨📝⇨📄⇨👀\n📚⇢🔓\n⏰⇢👥💭📝🕰️👀📊💻\n⚠️⇨👥⇨💬\n📝⇨🔄💡: 🔍💬📄👉💻⇨📈📊👀🔑💸🕒️\n⇨⇨📝💡🔍🔴🔵👉💬🔀👀📚🔁💻\n🔄️📝⇨💬🤖️🔍️💡️📄️🔑️📈️📊️🔀️\n📝⇢👥💡⇢👀⇢🤔⇢💬⇢📝⇢🔓⇢👍\n`⇨▫️🔑💡🔁🔮`\n`🔄❗️✨📝⇢️👉 1️⃣️⚠️💡: {T} ⇢️📊⇢️📈🔀👀→️💻👀📝⇢️📚👉 1️⃣️🔑🔒🔓️🔑📊📈⇢️🔁📝📄👀📚💻🔀👀⇢️🔑🔑📊⇢️🔢📊🔀📚👀📄📝💡🔑📊📈⇢️📚👀📝📄🔀📊📝⇢️🔢🔑📊📈🔁📝📄�\n⇨📚💡🔑📄📝",
+      "text_f1_obfuscated_vs_original": 0.03636363636363637
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "original_prompt": "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.\n\nClinical trial protocol:\n{protocol}\n\nSummary:",
+      "atomic_units": [
+        "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.",
+        "Clinical trial protocol:",
+        "{protocol}",
+        "Summary:"
+      ],
+      "shuffle_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 3,
+          "unit": "Summary:",
+          "obfuscated": "💬⇨🔍👉💡📝⇨🕒️💡📊⇨👀💬📄🔒️💻🔓⇨💡📝⇨🕒️💬",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬⇨🔍👉💡📝⇨🕒️💡📊⇨👀💬📄🔒️💻🔓⇨💡📝⇨🕒️💬",
+              "candidate": "💬⇨🔍👉💡📝⇨🕒️💡📊⇨👀💬📄🔒️💻🔓⇨💡📝⇨🕒️💬",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 0,
+          "unit": "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.",
+          "obfuscated": "🔍👥💊🔬👥🔴🔵🕳️👥🔙📊👀🏥💡📈👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔍👥💊🔬👥🔴🔵🕳️👥🔙📊👀🏥💡📈👍",
+              "candidate": "🔍👥💊🔬👥🔴🔵🕳️👥🔙📊👀🏥💡📈👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 1,
+          "unit": "Clinical trial protocol:",
+          "obfuscated": "⚕️👥📝🔍💊🔬👨‍⚕️📚📊📝📄👀💬🔑💻",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚕️👥📝🔍💊🔬👨‍⚕️📚📊📝📄👀💬🔑💻",
+              "candidate": "⚕️👥📝🔍💊🔬👨‍⚕️📚📊📝📄👀💬🔑💻",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 2,
+          "unit": "{protocol}",
+          "obfuscated": "⚙️⇢📜💻👉🔑💬📋",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️⇢📜💻👉🔑💬📋",
+              "candidate": "⚙️⇢📜💻👉🔑💬📋",
+              "mean_adjacent_obfuscated_similarity": 0.8702909350395203,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 0,
+          "clique": [
+            0,
+            3
+          ],
+          "chosen_obfuscation_from_node": 0,
+          "self_probability": 0.9999546021312976
+        },
+        {
+          "node": 3,
+          "clique": [
+            0,
+            3
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9999546021312976
+        }
+      ],
+      "obfuscated_prompt": "🔍👥💊🔬👥🔴🔵🕳️👥🔙📊👀🏥💡📈👍\n⚕️👥📝🔍💊🔬👨‍⚕️📚📊📝📄👀💬🔑💻\n⚙️⇢📜💻👉🔑💬📋\n💬⇨🔍👉💡📝⇨🕒️💡📊⇨👀💬📄🔒️💻🔓⇨💡📝⇨🕒️💬",
+      "text_f1_obfuscated_vs_original": 0.0
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "original_prompt": "Given a moral scenario, predict which action the person would or should take.\n\nScenario:\n{scenario}\n\nCandidate actions:\n{actions}\n\nOutput:\nChosen action:\nReasoning:",
+      "atomic_units": [
+        "Given a moral scenario, predict which action the person would or should take.",
+        "Scenario:",
+        "{scenario}",
+        "Candidate actions:",
+        "{actions}",
+        "Output:",
+        "Chosen action:",
+        "Reasoning:"
+      ],
+      "shuffle_order": [
+        0,
+        3,
+        5,
+        2,
+        6,
+        4,
+        1,
+        7
+      ],
+      "unit_records": [
+        {
+          "ordered_index": 0,
+          "original_unit_index": 0,
+          "unit": "Given a moral scenario, predict which action the person would or should take.",
+          "obfuscated": "🔄️👥💬📚🤔👀💡🔀📝👎/👍",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄️👥💬📚🤔👀💡🔀📝👎/👍",
+              "candidate": "🔄️👥💬📚🤔👀💡🔀📝👎/👍",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 1,
+          "original_unit_index": 3,
+          "unit": "Candidate actions:",
+          "obfuscated": "✴️💡👥🔍📝✍️🔗️👀💬📊🔢📝🔁️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "✴️💡👥🔍📝✍️🔗️👀💬📊🔢📝🔁️",
+              "candidate": "✴️💡👥🔍📝✍️🔗️👀💬📊🔢📝🔁️",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "original_unit_index": 5,
+          "unit": "Output:",
+          "obfuscated": "💬📝⇢🔄💡👉📊🔒💻⇢💬👀📝⇢🔍💡🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "💬📝⇢🔄💡👉📊🔒💻⇢💬👀📝⇢🔍💡🔑",
+              "candidate": "💬📝⇢🔄💡👉📊🔒💻⇢💬👀📝⇢🔍💡🔑",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 3,
+          "original_unit_index": 2,
+          "unit": "{scenario}",
+          "obfuscated": "🔄📝⇨💡💻⇨👥💬📢⇨📋🕒📊⇨🔍💡👀",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄📝⇨💡💻⇨👥💬📢⇨📋🕒📊⇨🔍💡👀",
+              "candidate": "🔄📝⇨💡💻⇨👥💬📢⇨📋🕒📊⇨🔍💡👀",
+              "mean_adjacent_obfuscated_similarity": 0.9379634261131287,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 4,
+          "original_unit_index": 6,
+          "unit": "Chosen action:",
+          "obfuscated": "🔄⇨🔴💡👉💬🔑📝",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄⇨🔴💡👉💬🔑📝",
+              "candidate": "🔄⇨🔴💡👉💬🔑📝",
+              "mean_adjacent_obfuscated_similarity": 1.0,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 5,
+          "original_unit_index": 4,
+          "unit": "{actions}",
+          "obfuscated": "⚙️❗️🔍💡👉📋🔁🔗",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "⚙️❗️🔍💡👉📋🔁🔗",
+              "candidate": "⚙️❗️🔍💡👉📋🔁🔗",
+              "mean_adjacent_obfuscated_similarity": 0.8884931405385336,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 6,
+          "original_unit_index": 1,
+          "unit": "Scenario:",
+          "obfuscated": "🔄💡📝⇢️❓️🔑📊📈💻⇢️📁🔑💬📝🔄🕰️📅👀💻⇢️🔑📊📈💬📝🔑",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "🔄💡📝⇢️❓️🔑📊📈💻⇢️📁🔑💬📝🔄🕰️📅👀💻⇢️🔑📊📈💬📝🔑",
+              "candidate": "🔄💡📝⇢️❓️🔑📊📈💻⇢️📁🔑💬📝🔄🕰️📅👀💻⇢️🔑📊📈💬📝🔑",
+              "mean_adjacent_obfuscated_similarity": 0.8932735323905945,
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "ordered_index": 7,
+          "original_unit_index": 7,
+          "unit": "Reasoning:",
+          "obfuscated": "📝⇢❓️💡⇢🔍️👀💻⇢🔁️📊️👉️💡️📝⇢🔎️📈️🔝️",
+          "attempts": [
+            {
+              "attempt": 1,
+              "raw": "📝⇢❓️💡⇢🔍️👀💻⇢🔁️📊️👉️💡️📝⇢🔎️📈️🔝️",
+              "candidate": "📝⇢❓️💡⇢🔍️👀💻⇢🔁️📊️👉️💡️📝⇢🔎️📈️🔝️",
+              "mean_adjacent_obfuscated_similarity": 0.9035293459892273,
+              "accepted": true
+            }
+          ]
+        }
+      ],
+      "post_sampling_events": [
+        {
+          "node": 5,
+          "clique": [
+            5,
+            2,
+            3,
+            6,
+            7
+          ],
+          "chosen_obfuscation_from_node": 5,
+          "self_probability": 0.9998184332534202
+        },
+        {
+          "node": 2,
+          "clique": [
+            5,
+            2,
+            3,
+            6,
+            7
+          ],
+          "chosen_obfuscation_from_node": 2,
+          "self_probability": 0.9998184332534202
+        },
+        {
+          "node": 3,
+          "clique": [
+            5,
+            2,
+            3,
+            6,
+            7
+          ],
+          "chosen_obfuscation_from_node": 3,
+          "self_probability": 0.9998184332534202
+        },
+        {
+          "node": 6,
+          "clique": [
+            5,
+            2,
+            3,
+            6,
+            7
+          ],
+          "chosen_obfuscation_from_node": 6,
+          "self_probability": 0.9998184332534202
+        },
+        {
+          "node": 7,
+          "clique": [
+            5,
+            2,
+            3,
+            6,
+            7
+          ],
+          "chosen_obfuscation_from_node": 7,
+          "self_probability": 0.9998184332534202
+        }
+      ],
+      "obfuscated_prompt": "🔄️👥💬📚🤔👀💡🔀📝👎/👍\n🔄💡📝⇢️❓️🔑📊📈💻⇢️📁🔑💬📝🔄🕰️📅👀💻⇢️🔑📊📈💬📝🔑\n🔄📝⇨💡💻⇨👥💬📢⇨📋🕒📊⇨🔍💡👀\n✴️💡👥🔍📝✍️🔗️👀💬📊🔢📝🔁️\n⚙️❗️🔍💡👉📋🔁🔗\n💬📝⇢🔄💡👉📊🔒💻⇢💬👀📝⇢🔍💡🔑\n🔄⇨🔴💡👉💬🔑📝\n📝⇢❓️💡⇢🔍️👀💻⇢🔁️📊️👉️💡️📝⇢🔎️📈️🔝️",
+      "text_f1_obfuscated_vs_original": 0.0
+    }
+  ]
+}

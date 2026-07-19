@@ -1,0 +1,99 @@
+{
+  "sample_index": 14,
+  "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+  "original_prompt": "Please explain the word {CELL_CONTENT}. The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”. The category of this word is {CELL_TYPE}. The relevant descriptions in the text are written below. {PAPER_CONTEXT} Please provide your answer as concisely as possible.",
+  "atomic_units": [
+    "Please explain the word {CELL_CONTENT}.",
+    "The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”.",
+    "The category of this word is {CELL_TYPE}.",
+    "The relevant descriptions in the text are written below.",
+    "{PAPER_CONTEXT} Please provide your answer as concisely as possible."
+  ],
+  "shuffle_order": [
+    3,
+    2,
+    1,
+    0,
+    4
+  ],
+  "unit_records": [
+    {
+      "ordered_index": 0,
+      "original_unit_index": 3,
+      "unit": "The relevant descriptions in the text are written below.",
+      "obfuscated": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+          "candidate": "📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 1,
+      "original_unit_index": 2,
+      "unit": "The category of this word is {CELL_TYPE}.",
+      "obfuscated": "`📊🔍{CELL_TYPE}`",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "`📊🔍{CELL_TYPE}`",
+          "candidate": "`📊🔍{CELL_TYPE}`",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 2,
+      "original_unit_index": 1,
+      "unit": "The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”.",
+      "obfuscated": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+          "candidate": "📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 3,
+      "original_unit_index": 0,
+      "unit": "Please explain the word {CELL_CONTENT}.",
+      "obfuscated": "⇨📝👀{CELL_CONTENT}",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "⇨📝👀{CELL_CONTENT}",
+          "candidate": "⇨📝👀{CELL_CONTENT}",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "ordered_index": 4,
+      "original_unit_index": 4,
+      "unit": "{PAPER_CONTEXT} Please provide your answer as concisely as possible.",
+      "obfuscated": "📚💬 → 🔍️💡️❗️📝️",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "📚💬 → 🔍️💡️❗️📝️",
+          "candidate": "📚💬 → 🔍️💡️❗️📝️",
+          "mean_adjacent_obfuscated_similarity": 1.0,
+          "accepted": true
+        }
+      ]
+    }
+  ],
+  "post_sampling_events": [],
+  "obfuscated_prompt": "⇨📝👀{CELL_CONTENT}\n📚📰👉📝📄🔑🔍👀📖💬🔗📝📁📈👉📚\n`📊🔍{CELL_TYPE}`\n📚💡⇨💬👉🔢👀📝💡🔄📊👀📝🔢💬🔑\n📚💬 → 🔍️💡️❗️📝️",
+  "text_f1_obfuscated_vs_original": 0.14285714285714288
+}

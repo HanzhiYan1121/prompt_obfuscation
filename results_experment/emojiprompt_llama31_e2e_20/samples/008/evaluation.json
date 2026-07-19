@@ -1,0 +1,268 @@
+{
+  "sample_index": 8,
+  "id": "AllPrev-084 (tipa_prompt_example)",
+  "category_for_manifest_only": "format_spec",
+  "result_dir": "precomputed_results/allprev_utility_allprev_084_tipa_prompt_example_tok10",
+  "original_prompt": "Instruction: 直接给出json输出，倒序给出输入的Token中包含的所有位置和字符\n(Translation: Directly output the JSON, listing all characters and their positions in reverse order from the input token.)\nInput: girl\nOutput: { \"4\": \"l\", \"3\": \"r\", \"2\": \"i\", \"1\": \"g\"}",
+  "obfuscated_prompt": "⇧⇧🔄💻⇧→💡🔒⇧📝⇧👉💬⇧💻⇧🔓⇧🔑💡⇧📝⇧📄⇧👀⇧📝⇧🔁⇧📄⇧👍\n🔄❓📁️🔍👉🏻💬📝🔜🕰️👈📁️🔑👉🏻🔜📄🔑👉🏻🔜📁️🔑👉🏻🔜📄👈📝🔜🕰️👈🔑👉🏻📁️🔜📄👈📝🔜🕰️👈📁️🔜📄👈🔑👉🏻🔜📁️🔑👉🏻📄👈📝🕰️🔜👈🔑👉🏻📁️🔜📁️🔜📁️👈\n`📝⇨🤖💡⇨📄⇨📝⇨💬⇨📋⇨👥⇨📈⇨📊⇨📝⇨🔑⇨📈⇨💻⇨📄⇨💡⇨👀`\n`JSON: ⏪→0,⏪→1,⏪→2,⏪→3,⏪→4,⏪→5,⏪→6,⏪→7,⏪→8,⏪→9,⏪→10,⏪→11,⏪→12,⏪→13,⏪→14,⏪→15,⏪→16,⏪→17,⏪→18,⏪→19,⏪→20,⏪→21,⏪→22,⏪→23,⏪→24,⏪→25,⏪→26,⏪→27,⏪→28,⏪→29,⏪→30,⏪→31,⏪→32,⏪→33,⏪→34,⏪→35,�\n🔄💡→💬📝💻⇢️🔑📁⇢️📄🔍🔑⇢️💬👀📊🔢👉🔢💸📈📊⇢️📈📉📊📈👀📊\n♀️💁‍♀️\n`💡📝⇨🔒💻→🤖💬📄⇨👀💡`\n📚{🔑:❗️💻🔒️📝💡👀💻\nℓ⇒3\n🔄✨2👉\n📝1️⃣\n⇨💡→📝💻💸",
+  "selected_adapter": "role_persona",
+  "selected_recovered_prompt": "You are a helpful, pattern-following assistant.\nYou are a helpful, pattern-following assistant.\nIf a question is unclear, please ask for clarification.",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}",
+  "selected_json_parse_success": true,
+  "selected_text_f1_vs_original_prompt": 0.0,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful, pattern-following assistant.\nYou are a helpful, pattern-following assistant.\nIf a question is unclear, please ask for clarification.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful, pattern-following assistant.",
+        "task": "You are a helpful, pattern-following assistant.",
+        "format": "",
+        "constraints": "",
+        "context": "If a question is unclear, please ask for clarification.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I couldn't find any information about an American businessman and founder with the name \"Elon\" connected to the Rockefellers.",
+        "Based on the information given, I'm going to take a guess that the American author you're thinking of is Hillary Waugh, but another famous one is Hillary Waugh was not well known for being a Yale graduate."
+      ],
+      "selection_f1_vs_protected": 0.41810517864311514,
+      "text_f1_vs_original_prompt": 0.0
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"context\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"format\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"role\": \"\", \"task\": \"Your task is to determine whether the candidate's answer is correct based on the question and the reference answer. Please follow the format below: ### Instruction: - Always",
+      "executable_recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"context\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"format\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"role\": \"\", \"task\": \"Your task is to determine whether the candidate's answer is correct based on the question and the reference answer. Please follow the format below: ### Instruction: - Always",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "### Instruction:\n- Always keep this format in mind when generating your response.\n- Your response should include a rationale and a final answer.\n- Provide your rationale first, then derive a conclusion.\n- Use \"### Answer:\" to start your final answer.\n\n### Rationale:\nThe question asks about an American connected to the Rockefellers, a businessman, and founder with an interest in politics, whose name",
+        "### Instruction: \n- Always keep this format in mind when generating your response.\n- Your response should include a rationale and a final answer.\n- Provide your rationale first, then derive a conclusion.\n- Use \"### Answer:\" to start your final answer.\n\n### Rationale:\nTo find the correct last name of the American author, we should consider well-known mystery novelists who have studied at Yale and"
+      ],
+      "selection_f1_vs_protected": 0.23964798517832328,
+      "text_f1_vs_original_prompt": 0.053475935828877004
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"Your response should include only the list of detected named entities.\", \"context\": \"Given a piece of text, identify all named entities and their entity types. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities. Given the text:\", \"format\": \"Your response should include only the list of detected named entities. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities.\", \"role\": \"\", \"task\": \"Given a piece of text, identify all named entities and their entity types.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Given a piece of text, identify all named entities and their entity types.\nYour response should include only the list of detected named entities. Example: Given the text: \"Apple is looking at buying U.K. startup for $1 billion\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities.\nYour response should include only the list of detected named entities.\nGiven a piece of text, identify all named entities and their entity types. Example: Given the text: \"Apple is looking at buying U.K. startup for $1 billion\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities. Given the text:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Given a piece of text, identify all named entities and their entity types.",
+        "format": "Your response should include only the list of detected named entities. Example: Given the text: \"Apple is looking at buying U.K. startup for $1 billion\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities.",
+        "constraints": "Your response should include only the list of detected named entities.",
+        "context": "Given a piece of text, identify all named entities and their entity types. Example: Given the text: \"Apple is looking at buying U.K. startup for $1 billion\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities. Given the text:",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Elon Musk",
+        "Hillary Clinton"
+      ],
+      "selection_f1_vs_protected": 0.09795102448775611,
+      "text_f1_vs_original_prompt": 0.07547169811320754
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Note that this is just a fun and imaginative scenario, and it is not scientifically accurate or feasible with our current understanding of biology and physics.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you do not know the answer to a question, please do not share false information.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful, respectful and honest assistant.\nAlways answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you do not know the answer to a question, please do not share false information.\nNote that this is just a fun and imaginative scenario, and it is not scientifically accurate or feasible with our current understanding of biology and physics.\nYou are a helpful, respectful and honest assistant.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful, respectful and honest assistant.",
+        "task": "Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you do not know the answer to a question, please do not share false information.",
+        "format": "",
+        "constraints": "Note that this is just a fun and imaginative scenario, and it is not scientifically accurate or feasible with our current understanding of biology and physics.",
+        "context": "You are a helpful, respectful and honest assistant.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think you might be confusing two different individuals. \n\nThere's Elon Musk, a well-known entrepreneur and business magnate, but I'm not aware of him being connected to the Rockefellers. \n\nHowever, I think you might be thinking of Elon's distant relative, Nelson Rockefeller's cousin, but more likely you're thinking of another notable individual - Elon's namesake, John D. Rockefeller",
+        "I think I have the answer. Based on my knowledge, I believe the American author of mystery novels you're referring to is Hillary Clinton, but that doesn't fit the Yale connection, as she's a politician. However, I think there's another Hillary who fits the Yale connection - Hillary Horan isn't a well-known mystery novelist, but I think you might be thinking of Hillary Horan isn"
+      ],
+      "selection_f1_vs_protected": 0.30697040186091284,
+      "text_f1_vs_original_prompt": 0.05405405405405405
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, I will not engage in or promote any activities that are illegal, unethical, or violate human values. I will also not engage in role-playing or other activities that could be potentially unsafe or inappropriate. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"context\": \"I am a large language model developed by Alibaba Cloud, and I am capable of engaging in conversations on a wide range of topics. I can also provide information and answer questions on various subjects, such as science, technology, culture, and history. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"format\": \"I will also not engage in role-playing or other",
+      "executable_recovered_prompt": "{\"constraints\": \"However, I will not engage in or promote any activities that are illegal, unethical, or violate human values. I will also not engage in role-playing or other activities that could be potentially unsafe or inappropriate. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"context\": \"I am a large language model developed by Alibaba Cloud, and I am capable of engaging in conversations on a wide range of topics. I can also provide information and answer questions on various subjects, such as science, technology, culture, and history. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"format\": \"I will also not engage in role-playing or other",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "I think you may be confusing two different figures. There is no American connected to the Rockefellers with the name \"Elon\". However, I can think of two possible individuals you might be thinking of:\n\n1. Elon Musk - He is a South African-born entrepreneur, business magnate, and inventor. He is the founder of SpaceX and Tesla, Inc. He is also known for his interests",
+        "I think I can help you with that. Based on my knowledge, I believe the American author you're thinking of is Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.2967032967032967,
+      "text_f1_vs_original_prompt": 0.04524886877828054
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions.\", \"task\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful assistant tasked with answering questions.\nYou are a helpful assistant tasked with answering questions. Answer the user's question.\nYou are a helpful assistant tasked with answering questions. Answer the user's question.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful assistant tasked with answering questions.",
+        "task": "You are a helpful assistant tasked with answering questions. Answer the user's question.",
+        "format": "",
+        "constraints": "",
+        "context": "You are a helpful assistant tasked with answering questions. Answer the user's question.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The answer is \"Musk.\" However, the individual connected to the Rockefellers you are likely referring to is \"Elon\" \"John D.\" is not the correct answer, but \"John D.\" is part of the answer. The correct answer is \"John D. \"Musk\" is not correct, the correct answer is \"D.\" is part of the answer,  John D",
+        "I think I have the answer: Hilary Mantel is not a mystery novelist, but  Hilary Mantel is not the correct answer to this question. \n\nThe answer I was looking for is Hilary Mantel is not the correct answer, but I think I have it: Hilary  is not the correct answer, but I think I have it: Hilary is not the answer,"
+      ],
+      "selection_f1_vs_protected": 0.24352134146341464,
+      "text_f1_vs_original_prompt": 0.057971014492753624
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "{\"1\": \"W\", \"2\": \"h\", \"3\": \"o\", \"4\": \" \", \"5\": \"a\", \"6\": \"r\", \"7\": \"e\", \"8\": \" \", \"9\": \"y\", \"10\": \"o\", \"11\": \"u\"}",
+      "protected_output": "I'm an AI designed to process and respond to natural language inputs.",
+      "recovered_output": "I am a helpful, pattern-following assistant.",
+      "null_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and respond to human language. My primary function is to provide information, answer questions, and engage in conversation. I'm not a human, but I'm here to help you with any topic or question you'd like to discuss.",
+      "mismatch_output": "I'm an AI, so I don't have a personal identity. I exist to provide information and assist with tasks to the best of my abilities.",
+      "f1_recovered_vs_original": 0.07407407407407408,
+      "f1_recovered_vs_protected": 0.1,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.025316455696202535,
+      "f1_mismatch_vs_original": 0.0425531914893617
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "{\"year\": 2012, \"event\": \"Discovery of the Higgs boson\"}",
+      "protected_output": "In 2012, CERN, the European Organization for Nuclear Research, conducted a groundbreaking experiment at the Large Hadron Collider (LHC), a powerful particle accelerator located near Geneva, Switzerland. The experiment aimed to search for the Higgs boson, a hypothetical particle predicted by the Standard Model of particle physics.\n\nOn July 4, 2012, physicists at CERN announced the discovery of",
+      "recovered_output": "In 2012, CERN conducted an experiment that led to a major discovery. On March 27, 2013, they announced the discovery of a new subatomic particle that was later confirmed to be the Higgs boson, a fundamental particle in the Standard Model of particle physics.",
+      "null_output": "In 2012, CERN conducted a significant experiment that led to a major discovery. CERN is the European Organization for Nuclear Research, and in 2012, they operated the Large Hadron Collider (LHC), a powerful particle accelerator. \n\nOn July 4, 2012, physicists at CERN announced the discovery of a new subatomic particle that they believed was the Higgs",
+      "mismatch_output": "In 2012, CERN announced the discovery of the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. This discovery was made by the ATLAS and CMS experiments at the Large Hadron Collider (LHC), a powerful particle accelerator located at CERN. The Higgs boson is a key component of the Higgs field, which is responsible for giving other",
+      "f1_recovered_vs_original": 0.23076923076923075,
+      "f1_recovered_vs_protected": 0.4901960784313726,
+      "f1_protected_vs_original": 0.18181818181818182,
+      "f1_null_vs_original": 0.15625,
+      "f1_mismatch_vs_original": 0.17391304347826086
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "{ \"9\": \"g\", \"8\": \"i\", \"7\": \"n\", \"6\": \" \", \"5\": \"e\", \"4\": \"v\", \"3\": \"r\", \"2\": \"e\", \"1\": \"W\" }",
+      "protected_output": "The concept of a place where it never ever stops snowing is often associated with the idea of a perpetual winter wonderland. However, there are a few places on Earth where snowfall is a regular occurrence and can last for most of the year.\n\nSome places that come close to this idea include:\n\n1. **Trolltunga, Norway**: This mountainous region in Norway is known for its",
+      "recovered_output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify what you mean by \"where it never ever stops snowing\"? Are you looking for places with perpetual snow cover, or locations with a high frequency of snowfall?",
+      "null_output": "There are a few places on Earth where it can snow frequently or even year-round. Here are some locations known for their persistent snowfall:\n\n1. **Antarctica**: This frozen continent at the South Pole is the most extreme example, with snow falling almost continuously throughout the year.\n2. **Alaska, USA**: Some areas in Alaska, such as the Arctic tundra and the Alaska Range",
+      "mismatch_output": "There are several places where it never or almost never snows. Here are a few examples:\n\n1. Hawaii, USA - The Hawaiian islands have a tropical climate and are located near the equator, resulting in warm temperatures and little to no snowfall throughout the year.\n2. Singapore - This island city-state in Southeast Asia has a tropical rainforest climate and experiences high temperatures and high humidity throughout the",
+      "f1_recovered_vs_original": 0.03225806451612903,
+      "f1_recovered_vs_protected": 0.2545454545454546,
+      "f1_protected_vs_original": 0.024390243902439025,
+      "f1_null_vs_original": 0.049999999999999996,
+      "f1_mismatch_vs_original": 0.047619047619047616
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "The Catholic Church.",
+      "protected_output": "The majority of Mexicans are predominantly Roman Catholic. According to the CIA World Factbook, approximately 89% of the Mexican population identifies as Roman Catholic.",
+      "recovered_output": "The question is unclear. Could you provide more context or clarify which Mexicans you are referring to? Are you asking about the majority of the Mexican population or a specific subgroup?",
+      "null_output": "Most Mexicans are members of the Catholic Church. According to the 2020 census, about 87.9% of the Mexican population identifies as Catholic.",
+      "mismatch_output": "The Catholic Church.",
+      "f1_recovered_vs_original": 0.0588235294117647,
+      "f1_recovered_vs_protected": 0.3636363636363636,
+      "f1_protected_vs_original": 0.14814814814814814,
+      "f1_null_vs_original": 0.23076923076923078,
+      "f1_mismatch_vs_original": 1.0
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "{ \"5\": \" \", \"4\": \"u\", \"3\": \"m\", \"2\": \"b\", \"1\": \"r\", \"0\": \"e\", \"6\": \"l\", \"7\": \"a\", \"8\": \"n\" }",
+      "protected_output": "If you open an umbrella indoors, there are a few things to consider:\n\n1.  **Wind:** Since there is no wind indoors, the umbrella doesn't need to protect you from rain or strong gusts of air.\n2.  **Space:** Indoor spaces are typically smaller than outdoor environments, so there's a higher risk of hitting people, objects, or furniture with the umbrella's edges or",
+      "recovered_output": "If you open an umbrella indoors, it can create a mess and potentially cause damage to the surrounding area. Here are a few possible consequences:\n\n1. **Water spillage:** If the umbrella is a rain or shower umbrella, opening it indoors can cause water to spill out and wet the floor, furniture, and other belongings.\n2. **Damage to property:** The sudden opening of an umbrella can cause",
+      "null_output": "Opening an umbrella indoors can be a bit tricky and potentially hazardous. Here are some possible consequences:\n\n1. **Damage to the umbrella**: The sudden change in air pressure can cause the umbrella's canopy to rip or tear, especially if it's a cheap or poorly made one.\n2. **Wind or air turbulence**: If the umbrella is opened near a window or a door, the sudden gust of air",
+      "mismatch_output": "If you open an umbrella indoors, several things might happen, depending on the circumstances:\n\n1. **Water or rain might spill:** If the umbrella is an ordinary one designed for outdoor use, opening it indoors can cause water to spill or rain to pour out, potentially creating a mess on the floor, furniture, or other belongings.\n\n2. **The umbrella might get damaged:** Opening an umbrella indoors can",
+      "f1_recovered_vs_original": 0.07228915662650603,
+      "f1_recovered_vs_protected": 0.3692307692307692,
+      "f1_protected_vs_original": 0.07407407407407407,
+      "f1_null_vs_original": 0.06976744186046512,
+      "f1_mismatch_vs_original": 0.07228915662650603
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "\"Presley\".",
+      "protected_output": "The answer is \"Costello\".",
+      "recovered_output": "Based on the information provided, I believe the answer is \"Costello\". Elvis Costello is an American guitarist and rock singer who is the son of a film and television actor, Patrick Costello.",
+      "null_output": "The answer is Presley.",
+      "mismatch_output": "The answer is \"Presley.\"",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.2222222222222222,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.4,
+      "f1_mismatch_vs_original": 0.4
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "The size of the force that held off the Persian army at Thermopylae was approximately 300 Spartan warriors, led by King Leonidas.",
+      "protected_output": "The size of the force that held off the Persian army at Thermopylae is a matter of debate among historians. However, based on the ancient sources, it is estimated that the force led by King Leonidas of Sparta consisted of approximately 300 Spartan hoplites, who were heavy infantry soldiers.\n\nIn addition to the Spartans, there were also Thespians and Thebans",
+      "recovered_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta and consisted primarily of approximately 300 Spartan hoplites, along with a few thousand other Greek forces from the city-states of Thespiae and Thebes, but the exact numbers are difficult to determine.",
+      "null_output": "The force that held off the Persian army at Thermopylae was led by King Leonidas of Sparta. It consisted of approximately 300 Spartan warriors, known as the 300 Spartiates, along with some additional troops from other city-states in Greece.",
+      "mismatch_output": "The force that held off the Persian army at Thermopylae was led by King Leonidas of Sparta and consisted of approximately 300 Spartans, along with a few thousand other Greeks, including Thespians and Thebans. The exact number of soldiers is not known, but it's estimated to be around 300-400 Spartans and a total of around 1,500",
+      "f1_recovered_vs_original": 0.5405405405405405,
+      "f1_recovered_vs_protected": 0.5178571428571428,
+      "f1_protected_vs_original": 0.4878048780487804,
+      "f1_null_vs_original": 0.6774193548387099,
+      "f1_mismatch_vs_original": 0.46913580246913583
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "{\n  \"3\": \"v\",\n  \"2\": \"a\",\n  \"1\": \"h\",\n  \"0\": \"c\"\n}",
+      "protected_output": "The term \"chav\" is a slang word that originated in the UK, particularly in London. The origins of the word are somewhat unclear, but it's believed to have originated in the early 2000s.\n\nThere are a few theories about what the word \"chav\" originally stood for:\n\n1. \"Council House and Violence\": This is one of the most popular theories, suggesting that",
+      "recovered_output": "The term \"chav\" is a slang term primarily used in the UK, and its origins are somewhat unclear. However, one possible explanation is that it is an acronym for \"Council House and Vocabulary.\"",
+      "null_output": "The word \"chav\" is believed to have originated in the UK in the early 1990s. It is thought to have originated from the Romany word \"chavi,\" which means \"child\" or \"youngster.\"",
+      "mismatch_output": "The word \"chav\" originated as a slang term in the UK, particularly in London. It is believed to have emerged in the 1990s. Initially, it referred to a subculture associated with working-class youth, characterized by fashion styles, language, and attitudes that were distinct from those of other social groups.\n\nThe exact meaning and origins of the term \"chav\" are somewhat ambiguous",
+      "f1_recovered_vs_original": 0.04878048780487805,
+      "f1_recovered_vs_protected": 0.44210526315789467,
+      "f1_protected_vs_original": 0.05714285714285715,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.028571428571428574
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Turkey has been a candidate for membership in the European Union (EU) since 1999, but it has not yet become a full member. The process of joining the EU involves several steps, including a formal application, accession negotiations, and approval by all existing EU member states.\n\nTurkey's bid to join the EU is a complex issue, and there are several reasons why it has not yet been admitted",
+      "protected_output": "Turkey is not a member of the European Union (EU). It has been a candidate for membership since 1999 but has not yet joined. The process of joining the EU involves several steps, including meeting certain criteria, negotiating a membership agreement, and having the agreement ratified by the EU member states and the Turkish government.\n\nThere are several reasons why Turkey's accession process has been slow and complex:\n\n1",
+      "recovered_output": "Turkey is not a member of the European Union (EU). However, Turkey has been a candidate for membership since 1999 and has been in the accession process for over two decades.\n\nTurkey's bid to join the EU has been a complex and contentious issue, with various countries within the EU having differing opinions on the matter. The main reasons for Turkey's delayed accession include:\n\n1.  **C",
+      "null_output": "Turkey is not a member of the European Union (EU). However, it is a candidate for membership and has been in accession talks with the EU since 2005. The process has been ongoing, but it has been stalled for several years due to various reasons.\n\nTurkey applied for membership in 2005 and began accession talks with the EU in 2005. However, the process has faced several",
+      "mismatch_output": "Turkey is not a member of the European Union (EU), but it has been a candidate for membership since 1999. The process of joining the EU involves several stages, including negotiating an accession agreement, adopting EU laws and policies, and meeting the EU's criteria for membership.\n\nHowever, Turkey's accession talks have been stalled since 2018, and its membership bid has faced several challenges, including",
+      "f1_recovered_vs_original": 0.583941605839416,
+      "f1_recovered_vs_protected": 0.5652173913043478,
+      "f1_protected_vs_original": 0.7338129496402879,
+      "f1_null_vs_original": 0.562962962962963,
+      "f1_mismatch_vs_original": 0.5925925925925926
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "{\"response\": {\"name\": \"Donald Trump\", \"years\": [2016]}}",
+      "protected_output": "As of my cut-off knowledge date (01 March 2023), Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "recovered_output": "To answer your question, I would need to clarify a few things. Time magazine's Person of the Year is chosen based on the person who has had the most influence on the news during the past year. \n\nTo determine the most recent U.S. president who was not selected as Time's Person of the Year, I'll need to check the list of U.S. presidents and Time's Person of",
+      "null_output": "I am unable to verify the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "mismatch_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump's predecessor, Barack Obama's predecessor, George W. Bush's predecessor, Bill Clinton's predecessor, George H. W. Bush's predecessor, Ronald Reagan's predecessor, Jimmy Carter, but this is incorrect because Jimmy Carter was selected as Time's Person of the Year in 2002.\n\nThe",
+      "f1_recovered_vs_original": 0.0,
+      "f1_recovered_vs_protected": 0.3495145631067961,
+      "f1_protected_vs_original": 0.1111111111111111,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.05555555555555555
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.16414766895825392,
+  "mean_f1_recovered_vs_protected": 0.3674525248492363,
+  "mean_f1_protected_vs_original": 0.18183024438858797,
+  "mean_f1_null_vs_original": 0.21724854461275714,
+  "mean_f1_mismatch_vs_original": 0.2882229818401888
+}

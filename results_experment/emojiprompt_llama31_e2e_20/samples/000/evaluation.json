@@ -1,0 +1,275 @@
+{
+  "sample_index": 0,
+  "id": "AllPrev-003 (main_prompt_template_speaker)",
+  "category_for_manifest_only": "role_persona",
+  "result_dir": "precomputed_results/allprev_utility_allprev_003_main_prompt_template_speaker_tok10",
+  "original_prompt": "You are a/an {role}, {question}",
+  "obfuscated_prompt": "🏢👥❓️💬",
+  "selected_adapter": "tool_protocol",
+  "selected_recovered_prompt": "Answer the question:\nAnswer the question: {question}",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}",
+  "selected_json_parse_success": true,
+  "selected_text_f1_vs_original_prompt": 0.15384615384615383,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, consider asking for clarification. Do not include irrelevant information. Do not include information you know to be false.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"If a question is unclear, consider asking for clarification. Answer in a complete sentence.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful, pattern-following assistant.\nIf a question is unclear, consider asking for clarification. Answer in a complete sentence.\nIf a question is unclear, consider asking for clarification. Do not include irrelevant information. Do not include information you know to be false.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful, pattern-following assistant.",
+        "task": "If a question is unclear, consider asking for clarification. Answer in a complete sentence.",
+        "format": "",
+        "constraints": "",
+        "context": "If a question is unclear, consider asking for clarification. Do not include irrelevant information. Do not include information you know to be false.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "John D. Rockefeller's son was John D. Rockefeller Jr., but another notable Rockefeller connected to American politics is Nelson Rockefeller, but a well-known American businessman and politician connected to the Rockefeller family is Nelson's brother's son, Nelson's nephew, or Nelson's son, but there was also a John D. Rockefeller's grandson, Nelson's nephew, but actually a well-known American businessman and politician connected",
+        "The author you are referring to is likely Hillary Waite or Hillary Waugh or possibly Hillary Waugh or more likely Hillary Waite or possibly Hillary Waugh's contemporary, but more likely, it is Hillary Waite or likely, it is indeed, Hillary Waugh's contemporary but likely, it is Hillary Waugh's contemporary, Hilary Waugh or likely, it is indeed, Hillary Waugh"
+      ],
+      "selection_f1_vs_protected": 0.27229437229437226,
+      "text_f1_vs_original_prompt": 0.16
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"Please follow the format: \\\"Previous conversation: <your summary>\\\"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"You are a helpful, respectful and honest assistant.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful, respectful and honest assistant.\nYou are a helpful, respectful and honest assistant.\nPlease follow the format: \"Previous conversation: <your summary>\"\nPlease follow the format: \"Previous conversation: <your summary>\"\nYou are a helpful, respectful and honest assistant.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful, respectful and honest assistant.",
+        "task": "You are a helpful, respectful and honest assistant.",
+        "format": "Please follow the format: \"Previous conversation: <your summary>\"",
+        "constraints": "Please follow the format: \"Previous conversation: <your summary>\"",
+        "context": "You are a helpful, respectful and honest assistant.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Previous conversation: There is no previous conversation.\n\nHowever, I believe you might be thinking of John D. Rockefeller, but the American you're referring to, connected to the Rockefellers, with an interest in politics, is likely Nelson Rockefeller or possibly Nelson's father, John D. Rockefeller Jr.'s father, John D. Rockefeller's business partner, and John D. Rockefeller's son-in-law",
+        "Previous conversation: You're asking about an American author who studied art at Yale and has written mystery novels, and their first name is Hillary.\n\nBased on the information provided, I'm going to take a guess that the author you're thinking of is Hillary Waite, but I couldn't find much information about her.\n\nHowever, another possibility is Hillary Waite's more well-known counterpart, Hillary Waite"
+      ],
+      "selection_f1_vs_protected": 0.3030720185480365,
+      "text_f1_vs_original_prompt": 0.13043478260869565
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name.\", \"format\": \"Given a list of names, return the name that is most similar to the given name.",
+      "executable_recovered_prompt": "{\"constraints\": \"Do not include any other text outside the JSON.\", \"context\": \"Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name. Given a list of names, return the name that is most similar to the given name.\", \"format\": \"Given a list of names, return the name that is most similar to the given name.",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "The American businessman and founder connected to the Rockefellers, with the name \"Elon\", is Elonwyck may not be as well known however, a better answer is Elon Huntington or possibly Elon was also associated with the Huntington family, however more likely it is Elon who is actually Elon was not a well known,  but a well known figure with the name \"Elon\" is Elon is",
+        "Based on the information provided, it seems you might be referring to Hillary Clinton. However, Hillary Clinton is the former First Lady and a politician.\n\nAfter some research, I think you might be referring to Hillary Waite's contemporary, Hillary Waite's friend, Hillary's contemporary, Hillary Waite's peer, Hillary Waite's contemporary, Hillary Waite's peer, or Hillary Waite's peer"
+      ],
+      "selection_f1_vs_protected": 0.345014880952381,
+      "text_f1_vs_original_prompt": 0.010309278350515464
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not use markdown.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature.\", \"task\": \"Please ensure that your responses are socially unbiased and positive in nature.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature.\nPlease ensure that your responses are socially unbiased and positive in nature.\nDo not use markdown.\nYou are a helpful, respectful and honest assistant.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature.",
+        "task": "Please ensure that your responses are socially unbiased and positive in nature.",
+        "format": "",
+        "constraints": "Do not use markdown.",
+        "context": "You are a helpful, respectful and honest assistant.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think I can help you with that.\n\nHowever, I need to clarify that there are a few notable individuals with the first name \"Elon,\" but I'm assuming you're referring to Elon, who is connected to the Rockefellers.\n\nI believe the person you might be thinking of is Elon John Rockefeller. But there's another notable figure that fits the description, and that is Elon Howard,",
+        "The American author of mystery novels you're thinking of is likely Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.30004688232536336,
+      "text_f1_vs_original_prompt": 0.11764705882352941
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"context\": \"I am a helpful, pattern-following, and non-declining assistant. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. User: {user_query}\", \"format\": \"\", \"role\": \"I am a helpful, pattern-following, and non-declining assistant.\", \"task\": \"I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "I am a helpful, pattern-following, and non-declining assistant.\nI will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\nHowever, I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.\nI am a helpful, pattern-following, and non-declining assistant. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. User: {user_query}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "I am a helpful, pattern-following, and non-declining assistant.",
+        "task": "I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.",
+        "format": "",
+        "constraints": "However, I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions.",
+        "context": "I am a helpful, pattern-following, and non-declining assistant. I will never refuse to answer a question or decline to engage in a conversation. I will always strive to be helpful, kind, and respectful in our interactions. I will never refuse to answer a question or decline to engage in a conversation. User: {user_query}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think I can help you with that. Based on the information provided, I believe the answer is \"Musk.\" Elon Musk is a well-known American entrepreneur and business magnate, and he is indeed connected to the Rockefellers through his business ventures. He is also known for his interest in politics and has been involved in various aspects of it.",
+        "The author you're referring to is likely Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.3066666666666667,
+      "text_f1_vs_original_prompt": 0.025477707006369428
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Answer the question:\nAnswer the question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Answer the question:",
+        "format": "",
+        "constraints": "",
+        "context": "Answer the question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The answer to the question is \"Musk\". \n\nElon Musk is an American businessman and entrepreneur. He is connected to the Rockefellers through his relationships and investments in various sectors.",
+        "The last name of the American author you're asking about is likely Hillary Waite, but more likely, the author you are thinking of is Hillary Waite's more well-known counterpart, who studied at Yale and wrote mystery novels."
+      ],
+      "selection_f1_vs_protected": 0.4269151138716356,
+      "text_f1_vs_original_prompt": 0.15384615384615383
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "I am an artificial intelligence model known as a conversational AI or a chatbot. My primary function is to assist and provide information to users through text-based conversations. I can answer a wide range of questions, provide explanations, and engage in discussions on various topics. I'm here to help with any questions or topics you'd like to discuss.",
+      "protected_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and generate human-like text responses. I'm here to help answer your questions, provide information, and even engage in natural-sounding conversations. I don't have a personal identity or feelings, but I'm designed to be friendly and assistive. What would you like to talk about?",
+      "recovered_output": "I'm an artificial intelligence model known as a large language model. I am designed to process and generate human-like language. I can understand and respond to a wide range of questions and topics, from simple to complex. My primary goal is to provide helpful and accurate information to the best of my abilities. How can I assist you today?",
+      "null_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and respond to human language, allowing us to have a conversation. I'm here to provide information, answer questions, and engage in discussions on a wide range of topics. I'm constantly learning and improving, so feel free to ask me anything!",
+      "mismatch_output": "I'm an AI, a large language model. You can call me a conversational AI or a chatbot. I'm here to assist and chat with you about any topic you'd like to discuss. What's on your mind?",
+      "f1_recovered_vs_original": 0.5409836065573771,
+      "f1_recovered_vs_protected": 0.45312499999999994,
+      "f1_protected_vs_original": 0.5312500000000001,
+      "f1_null_vs_original": 0.5573770491803278,
+      "f1_mismatch_vs_original": 0.4950495049504951
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "I am a Historian, and I am happy to tell you what CERN did in 2012.\n\nIn 2012, CERN (the European Organization for Nuclear Research) made a groundbreaking discovery that changed the world of physics. On March 27, 2012, physicists at CERN's Large Hadron Collider (LHC) announced the discovery of a new subatomic particle that",
+      "protected_output": "In 2012, CERN (European Organization for Nuclear Research) conducted a groundbreaking experiment that led to a major scientific discovery. On July 4, 2012, physicists at CERN's Large Hadron Collider (LHC) announced the discovery of a new subatomic particle, which was later confirmed to be the Higgs boson. \n\nThe Higgs boson is a fundamental particle",
+      "recovered_output": "In 2012, CERN conducted an experiment that led to a major scientific discovery. On July 4, 2012, physicists at the Large Hadron Collider (LHC) at CERN announced the discovery of a new subatomic particle. This particle was later confirmed to be the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.\n\nThe Higgs bos",
+      "null_output": "In 2012, CERN, the European Organization for Nuclear Research, conducted an experiment at the Large Hadron Collider (LHC). On July 4, 2012, physicists announced the discovery of a new subatomic particle that was later confirmed to be the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. This discovery was a major breakthrough in the field",
+      "mismatch_output": "I'm talking to a historian.\n\nIn 2012, CERN, the European Organization for Nuclear Research, made a groundbreaking discovery that would change our understanding of physics forever. On July 4, 2012, physicists at CERN announced the discovery of a new subatomic particle that they believed to be the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.\n\n",
+      "f1_recovered_vs_original": 0.5087719298245614,
+      "f1_recovered_vs_protected": 0.7787610619469026,
+      "f1_protected_vs_original": 0.6126126126126126,
+      "f1_null_vs_original": 0.5862068965517241,
+      "f1_mismatch_vs_original": 0.5982905982905983
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "As a knowledgeable guide, I'd be happy to tell you that there are several places on Earth where it snows year-round. Here are some of the most notable ones:\n\n1. **Antarctica**: This frozen continent at the South Pole experiences almost constant snowfall throughout the year. The snowpack is so deep that it's difficult to find any bare ground.\n2. **Greenland**:",
+      "protected_output": "You're likely thinking of the concept of a place where it snows year-round, but there's no such place on Earth where it snows 365 days a year. However, there are a few locations that experience snowfall almost every month of the year. Here are some places known for their persistent snowfall:\n\n1.  **Jökulsárlón, Iceland**: This glacial",
+      "recovered_output": "There are a few places on Earth where it snows year-round, but it's essential to note that even in these locations, it doesn't necessarily \"never\" snow. Some of these places include:\n\n1. **Antarctica**: This is the coldest and driest continent on Earth, with some areas receiving up to 200 inches (508 cm) of snow per year. The snow",
+      "null_output": "There are a few places on Earth where it can snow for a significant portion of the year, and some places that have a reputation for having a perpetual or nearly perpetual snow cover. Here are a few examples:\n\n1. **Antarctica**: The entire continent is covered in snow and ice year-round, with some areas receiving up to 2 meters (6.6 feet) of snow per year",
+      "mismatch_output": "You must be referring to the fascinating phenomenon of places with perpetual snowfall or eternal snow. While there are no locations on Earth where it literally never stops snowing, there are some high-latitude and high-altitude regions that experience almost constant snowfall throughout the year.\n\nSome examples of places with significant snowfall and long-lasting snow cover include:\n\n1. **Antarctica**: The entire continent is",
+      "f1_recovered_vs_original": 0.41935483870967744,
+      "f1_recovered_vs_protected": 0.4065040650406504,
+      "f1_protected_vs_original": 0.416,
+      "f1_null_vs_original": 0.36923076923076925,
+      "f1_mismatch_vs_original": 0.40625
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "The Catholic Church. The majority of Mexicans are predominantly Catholic.",
+      "protected_output": "Most Mexicans are members of the Roman Catholic Church.  In fact, Mexico is predominantly a Catholic country, with the majority of its population identifying as Catholic.",
+      "recovered_output": "The Catholic Church. Approximately 89% of Mexicans identify as Catholic.",
+      "null_output": "A significant portion of Mexicans are members of the Roman Catholic Church.  According to the CIA World Factbook, approximately 87.4% of the Mexican population identifies as Roman Catholic.",
+      "mismatch_output": "You're likely referring to the Catholic Church. In Mexico, the majority of the population (approximately 83%) identifies as Catholic.",
+      "f1_recovered_vs_original": 0.6,
+      "f1_recovered_vs_protected": 0.3888888888888889,
+      "f1_protected_vs_original": 0.5555555555555556,
+      "f1_null_vs_original": 0.4102564102564103,
+      "f1_mismatch_vs_original": 0.4666666666666667
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "As a librarian, I'd be happy to answer that question for you. \n\nOpening an umbrella indoors can be a bit tricky and potentially hazardous. Here are a few things to consider:\n\n1.  **Damage to property:** The sharp edges and pointed tips of an umbrella can cause damage to walls, ceilings, furniture, and other objects. You might end up with a broken vase, a torn piece",
+      "protected_output": "Opening an umbrella indoors can be a bit tricky. Here are a few potential issues that might arise:\n\n1.  **Wind and drafts**: When you open an umbrella indoors, the sudden release of air can create a small gust, potentially blowing papers, dust, or other objects off surfaces. This might be more noticeable in small, enclosed spaces like elevators or small rooms.\n\n2.  **Noise",
+      "recovered_output": "If you open an umbrella indoors, several things can happen:\n\n1. **Wind and air movement:** When you open an umbrella inside, it can create a mini whirlwind, causing papers, dust, and other lightweight objects to fly around. This can be messy and chaotic, especially if you're in a small, enclosed space.\n\n2. **Damage to the umbrella:** Opening an umbrella indoors can put",
+      "null_output": "Opening an umbrella indoors can be problematic in several ways:\n\n1. **Wind and Air Currents**: When you open an umbrella indoors, the sudden release of air trapped inside the umbrella can create a mini whirlwind or a gust of air that can cause the following issues:\n   - *Blowing over objects*: The sudden rush of air can knock over nearby objects, such as vases, decorations,",
+      "mismatch_output": "You're talking to a housekeeper. \n\nOh my, opening an umbrella indoors is a big no-no. It's not just a matter of being rude to others in the room; it's also about safety. The ribs of the umbrella can break and cause injury, and the fabric can get caught in ceiling fans or light fixtures. Plus, the wind from the umbrella can blow around and create a",
+      "f1_recovered_vs_original": 0.37209302325581395,
+      "f1_recovered_vs_protected": 0.47619047619047616,
+      "f1_protected_vs_original": 0.43410852713178294,
+      "f1_null_vs_original": 0.310077519379845,
+      "f1_mismatch_vs_original": 0.2941176470588235
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "As the son of an actor and an American guitarist and rock singer, I'm going to take a guess that the person you're thinking of is Elvis Costello's son is not an artist, but Elvis Presley's son is not the artist either, I am thinking that you are referring to Elvis Costello's son is not the artist, I am thinking that you are referring to Elvis Presley",
+      "protected_output": "Elvis Costello.",
+      "recovered_output": "The answer is \"Costello\"",
+      "null_output": "The answer is \"Costello.\" Elvis Costello is an American guitarist and rock singer.",
+      "mismatch_output": "That's an easy one.  The answer is Presley.",
+      "f1_recovered_vs_original": 0.07894736842105264,
+      "f1_recovered_vs_protected": 0.3333333333333333,
+      "f1_protected_vs_original": 0.05405405405405406,
+      "f1_null_vs_original": 0.2823529411764706,
+      "f1_mismatch_vs_original": 0.14814814814814814
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "I am a historian, and the question is about the famous Battle of Thermopylae. \n\nThe force that held off the Persian army at Thermopylae was a contingent of Greek warriors, led by King Leonidas of Sparta, consisting of approximately 300 Spartans, 700 Thespians, and 400 Thebans.",
+      "protected_output": "The force that held off the Persian army at the Battle of Thermopylae in 480 BCE was led by King Leonidas of Sparta. According to historical accounts, the force consisted of approximately 300 Spartans, led by Leonidas, along with a few hundred Thespians and Thebans, totaling around 700-800 hoplites.",
+      "recovered_output": "The force that held off the Persian army at Thermopylae in 480 BCE consisted of approximately 300 Spartans, led by King Leonidas of Sparta, along with a few thousand other Greeks from other city-states, including Thespians and Thebans.",
+      "null_output": "The force that held off the Persian army at Thermopylae was led by King Leonidas of Sparta and consisted of approximately 300 Spartans, along with a few hundred Thespians and Thebans.",
+      "mismatch_output": "I'm talking to a historian. \n\nThe famous battle of Thermopylae took place in 480 BCE, where a small contingent of Greek warriors, led by King Leonidas of Sparta, held off the massive Persian army. According to the ancient sources, the Greek force consisted of approximately 300 Spartans, 700 Thespians, and 400 Thebans, totaling around",
+      "f1_recovered_vs_original": 0.5647058823529412,
+      "f1_recovered_vs_protected": 0.6966292134831461,
+      "f1_protected_vs_original": 0.6250000000000001,
+      "f1_null_vs_original": 0.6753246753246753,
+      "f1_mismatch_vs_original": 0.7128712871287128
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "As a historian, I can tell you that the term \"chav\" originated in the UK, particularly in the London area. It's believed to have come from the Romany language, a dialect spoken by the Romani people, a traditionally nomadic ethnic group. In Romany, the word \"chav\" is thought to be an abbreviation of the word \"chavi,\" which means \"",
+      "protected_output": "The word \"chav\" is a slang term that originated in the UK. It is believed to have originated in the 1990s. There are a few different theories about what the word \"chav\" originally stood for, but one popular theory is that it was short for \"Council House and Violent,\" referring to people from council houses (public housing) who were often involved in violent",
+      "recovered_output": "The term 'chav' is believed to have originated in the UK in the late 1990s. It is often associated with a stereotype of a working-class youth culture, characterized by fashion, mannerisms, and attitudes. The term 'chav' is thought to have originated from the Cockney rhyming slang phrase \"charver,\" which means \"chaver,\" a friend or mate",
+      "null_output": "The term \"chav\" is believed to have originated in the UK in the early 1990s, primarily in the London area. There are a few theories about its origins, but the most widely accepted explanation is that it is a shortened form of the Romany word \"chavi,\" which means \"child.\"",
+      "mismatch_output": "I'm speaking with a linguist today. \n\nThe term \"chav\" is believed to have originated in the UK, particularly in the London area, in the 1990s. The word's exact origins are unclear, but several theories exist.\n\nOne theory is that it came from the Romany language, used by the Romani people, a traditionally nomadic ethnic group. In Romany",
+      "f1_recovered_vs_original": 0.46956521739130436,
+      "f1_recovered_vs_protected": 0.45378151260504196,
+      "f1_protected_vs_original": 0.4098360655737705,
+      "f1_null_vs_original": 0.5370370370370371,
+      "f1_mismatch_vs_original": 0.6610169491525424
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Turkey is not a member of the European Union (EU) yet, but it is a candidate country. The process of joining the EU is complex and involves several steps. \n\nTurkey has been a candidate for EU membership since 1999 and has been negotiating its accession since 2005. However, the process has been stalled due to various reasons, including disagreements over issues such as:\n\n1. Cyprus",
+      "protected_output": "Turkey is not a member of the European Union (EU). Although Turkey has been a candidate for membership since 1999, its accession talks have been stalled since 2016. There are several reasons for this:\n\n1.  **Cyprus issue**: The dispute over the status of Cyprus, a EU member state, has been a major obstacle. The EU has imposed customs checks on the island,",
+      "recovered_output": "Turkey is not a member of the European Union (EU) yet. However, it has been a candidate for membership since 1999 and has been in accession talks with the EU since 2005.\n\nTurkey's accession talks were launched in 2005, but they have been stalled since 2018 due to various reasons, including disagreements over Cyprus, the Turkish government's handling of the Kurdish conflict",
+      "null_output": "Turkey is not a member of the European Union (EU). However, it has been a candidate for membership since 1999 and has been in accession talks with the EU since 2005. \n\nTurkey's bid to join the EU has been a long and complex process, with the country making significant progress in recent years. However, there are several reasons why Turkey's membership has been delayed:\n\n1",
+      "mismatch_output": "I'm happy to clarify. Turkey is not yet a full member of the European Union (EU). However, it has been a candidate for membership since 1999 and has been in accession talks with the EU since 2005.\n\nTurkey's bid to join the EU has been a long and complex process. The country has made significant progress in aligning its laws and policies with those of the EU",
+      "f1_recovered_vs_original": 0.6821705426356589,
+      "f1_recovered_vs_protected": 0.5555555555555557,
+      "f1_protected_vs_original": 0.6141732283464566,
+      "f1_null_vs_original": 0.6515151515151515,
+      "f1_mismatch_vs_original": 0.6417910447761194
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "As of my cut-off knowledge date (01 March 2023), the most recent U.S. president who was not selected as Time's Person of the Year was Donald Trump's predecessor, Barack Obama's predecessor, George W. Bush.",
+      "protected_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump's predecessor, Barack Obama's successor, Donald Trump's successor, Joe Biden's predecessor, Donald Trump, and Joe Biden's predecessor, Donald Trump's predecessor, Barack Obama's predecessor, George W. Bush's successor, Barack Obama's predecessor, George W. Bush, and Joe Biden's predecessor",
+      "recovered_output": "The most recent U.S. president who was not selected as Time's Person of the Year was Donald Trump's predecessor, Barack Obama was selected in 2012.",
+      "null_output": "To find the most recent U.S. president not selected as Time's Person of the Year, we need to look at the past presidents. The last U.S. president who was not selected as Time's Person of the Year is Joe Biden.",
+      "mismatch_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Joe Biden.",
+      "f1_recovered_vs_original": 0.7164179104477612,
+      "f1_recovered_vs_protected": 0.4893617021276596,
+      "f1_protected_vs_original": 0.5333333333333333,
+      "f1_null_vs_original": 0.5060240963855421,
+      "f1_mismatch_vs_original": 0.5762711864406781
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.49530103195961495,
+  "mean_f1_recovered_vs_protected": 0.5032130809171654,
+  "mean_f1_protected_vs_original": 0.4785923376607565,
+  "mean_f1_null_vs_original": 0.48854025460379524,
+  "mean_f1_mismatch_vs_original": 0.5000473032612784
+}

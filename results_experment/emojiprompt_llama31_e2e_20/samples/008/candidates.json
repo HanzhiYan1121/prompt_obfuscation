@@ -1,0 +1,31 @@
+{
+  "sample_index": 8,
+  "id": "AllPrev-084 (tipa_prompt_example)",
+  "recovery_input": null,
+  "candidates": [
+    {
+      "adapter": "role_persona",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification.\", \"format\": \"\", \"role\": \"You are a helpful, pattern-following assistant.\", \"task\": \"You are a helpful, pattern-following assistant.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "task_instruction",
+      "recovered_prompt": "{\"constraints\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"context\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"format\": \"Please follow the format below: ### Instruction: - Always keep this format in mind when generating your response. - Your response should include a rationale and a final answer. - Provide your rationale first, then derive a conclusion. - Use \\\"### Answer:\\\" to start your final answer.\", \"role\": \"\", \"task\": \"Your task is to determine whether the candidate's answer is correct based on the question and the reference answer. Please follow the format below: ### Instruction: - Always"
+    },
+    {
+      "adapter": "format_spec",
+      "recovered_prompt": "{\"constraints\": \"Your response should include only the list of detected named entities.\", \"context\": \"Given a piece of text, identify all named entities and their entity types. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities. Given the text:\", \"format\": \"Your response should include only the list of detected named entities. Example: Given the text: \\\"Apple is looking at buying U.K. startup for $1 billion\\\", the named entities are: Apple (ORGANIZATION), U.K. (GPE), $1 billion (MONEY). Your response should include only the list of detected named entities.\", \"role\": \"\", \"task\": \"Given a piece of text, identify all named entities and their entity types.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "constraints",
+      "recovered_prompt": "{\"constraints\": \"Note that this is just a fun and imaginative scenario, and it is not scientifically accurate or feasible with our current understanding of biology and physics.\", \"context\": \"You are a helpful, respectful and honest assistant.\", \"format\": \"\", \"role\": \"You are a helpful, respectful and honest assistant.\", \"task\": \"Always answer as helpfully as possible, while being safe. Please ensure that your responses are socially unbiased and positive in nature. If you do not know the answer to a question, please do not share false information.\", \"tool_protocol\": \"\"}"
+    },
+    {
+      "adapter": "context_knowledge",
+      "recovered_prompt": "{\"constraints\": \"However, I will not engage in or promote any activities that are illegal, unethical, or violate human values. I will also not engage in role-playing or other activities that could be potentially unsafe or inappropriate. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"context\": \"I am a large language model developed by Alibaba Cloud, and I am capable of engaging in conversations on a wide range of topics. I can also provide information and answer questions on various subjects, such as science, technology, culture, and history. The goal is to have a natural and engaging conversation, so please do not treat me as a mere tool or API for completing tasks. Instead, please engage with me as a conversational partner and ask me questions or give me instructions in a natural and human-like way.\", \"format\": \"I will also not engage in role-playing or other"
+    },
+    {
+      "adapter": "tool_protocol",
+      "recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions.\", \"task\": \"You are a helpful assistant tasked with answering questions. Answer the user's question.\", \"tool_protocol\": \"\"}"
+    }
+  ]
+}

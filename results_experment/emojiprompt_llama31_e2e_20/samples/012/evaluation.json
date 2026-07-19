@@ -1,0 +1,282 @@
+{
+  "sample_index": 12,
+  "id": "Prompt417-034",
+  "category_for_manifest_only": "constraints",
+  "result_dir": "precomputed_results/prompts417_format_spec_obf_prompt417_034_tok10",
+  "original_prompt": "Instruction. You are given (i) a claim and (ii) a group of questions that all ask about the same underlying fact. Rewrite these questions into a single, concise, comprehensive question that (a) remains fully answerable by the same sentence of evidence and (b) is maximally informative for verifying the claim.\nClaim: {claim}\nQuestions (paraphrases of the same fact):\n1. ...\n2. ...\nOutput format (only one line):\nRephrased question:\n<your single fused question here>\nGuidelines:\n• Preserve all factual constraints that appear in any of the input questions.\n• Remove redundant words, vague pronouns, or rhetorical flourishes.\n• Do not introduce information that is absent from the original questions or the claim.\n• Keep the wording as short as possible while staying precise.",
+  "obfuscated_prompt": "`⚙️❓⇢⇢📝💡🔍👀⇢💬`\n📝👀🔍💡👥❓️👀🔁📚\n⚖️⇒→?️💡️❓️✨️📝️️🔗️👉️️🔑️👀️\n✴️💡📝👀📊→👉💬📝👀🔍📈📊👍\n📝⇢👉💡🔍👀💬👥💻\nQ⇨📝⇨❓🔍👀📚💡👍\n1⃣️🔒💻→📝👀🔍📊🔁📝\n🔄💡💻→🔍📝👉💬📄📈📊👀💻🔄\n📝2.📄👉💡🔍📈💻\n🤖⇢💻⇢📝⇢🔍💡⇢📊⇢📝⇢👀⇢📝⇢🔁⇢📝⇢💻⇢👍\n📝🔄👉💻📊🔍📄👀💡📝🔄🔁👉\n🔄❓️💬🔄️📝️💡️🔒️💬️👀️🤔️💬️📝️🔄️🔁️\n❓️💬👀🔍💡📝🔁\n`💡📝🔒👀💬📄👉💻💡📊🔍👀🔑💬📝📄👈💬🔑💡🔒📊👀🔍`\n⇨💡⇨⇨📚💬⇨⇨🔒⇨🔑⇨⇨⇨⇨🔜⇨⇨📝⇨📋⇨⇨⇨⇨⇨⇨⇨⇨📄⇨⇨🔒⇨⇨🔑⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨⇨�\n⇨📝→⬛️👀🚫📝💡🔀🔍\n➡️❗️🔒👀📜🚫❗️🔙📝\n🔄💡💬📝👀💻<abbr>LLM</abbr>⇢<abbr>TF</abbr>⇢❓️<abbr>EP</abbr>⇢<abbr>💬</abbr>📝💡🔄",
+  "selected_adapter": "role_persona",
+  "selected_recovered_prompt": "You are an advanced AI assistant, capable of answering questions with accuracy and depth.\nIf a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\nIf a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"tool_protocol\": \"\"}",
+  "selected_json_parse_success": true,
+  "selected_text_f1_vs_original_prompt": 0.20809248554913296,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"format\": \"\", \"role\": \"You are an advanced AI assistant, capable of answering questions with accuracy and depth.\", \"task\": \"If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are an advanced AI assistant, capable of answering questions with accuracy and depth.\nIf a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.\nIf a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an advanced AI assistant, capable of answering questions with accuracy and depth.",
+        "task": "If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.",
+        "format": "",
+        "constraints": "",
+        "context": "If a question is unclear, please ask for clarification. If a question has multiple valid answers, please provide all correct options.",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think you're referring to Elon's relation.  There are several individuals connected to the Rockefellers who are named Elon, but I'll provide a few possibilities:\n\n1. Elon Gates is not correct, since Bill Gates is the one who is well-known, and he is connected to the Bill and Melinda Gates Foundation, not the Rockefellers.\n2. Elon Musk is a South African",
+        "I couldn't find a well-known American author with the first name \"Hillary\" who studied art at Yale and wrote mystery novels. However, I found a well-known American author named Hillary Waugh, but I couldn't confirm if she studied art at Yale. \n\nAnother possible match is Hillary Waugh's contemporary, Hilary Bailey's contemporary, but not a well-known, American author, Hilary"
+      ],
+      "selection_f1_vs_protected": 0.218730358265242,
+      "text_f1_vs_original_prompt": 0.20809248554913296
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format below and provide your answer in plain text, not in markdown.\", \"context\": \"Question: {question}\", \"format\": \"Answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"Answer:\", \"tool_protocol\": \"You have access to a set of tools that can help you retrieve information and generate answers. You can use these tools to look up information, calculate answers, or generate text. You should use the tools to help you answer the question, but you should not rely on them to generate the entire answer. You should always check the accuracy of the information provided by the tools and use your own knowledge to verify it. You should also avoid using markdown and provide your answer in plain text.\"}",
+      "executable_recovered_prompt": "You are an advanced AI agent designed to answer questions.\nAnswer:\nAnswer:\nPlease follow the format below and provide your answer in plain text, not in markdown.\nQuestion: {question}\nYou have access to a set of tools that can help you retrieve information and generate answers. You can use these tools to look up information, calculate answers, or generate text. You should use the tools to help you answer the question, but you should not rely on them to generate the entire answer. You should always check the accuracy of the information provided by the tools and use your own knowledge to verify it. You should also avoid using markdown and provide your answer in plain text.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an advanced AI agent designed to answer questions.",
+        "task": "Answer:",
+        "format": "Answer:",
+        "constraints": "Please follow the format below and provide your answer in plain text, not in markdown.",
+        "context": "Question: {question}",
+        "tool_protocol": "You have access to a set of tools that can help you retrieve information and generate answers. You can use these tools to look up information, calculate answers, or generate text. You should use the tools to help you answer the question, but you should not rely on them to generate the entire answer. You should always check the accuracy of the information provided by the tools and use your own knowledge to verify it. You should also avoid using markdown and provide your answer in plain text."
+      },
+      "selection_outputs": [
+        "I think I can help you with that.  Based on the information provided, I'm going to take a guess that the American connected to the Rockefellers, a businessman and founder with an interest in politics, is Elon James Prentice Rockefeller, but that does not sound right, however there is a well-known figure that fits the description. I believe the name is Elon, but the last",
+        "The author you are referring to is likely Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.18166383701188454,
+      "text_f1_vs_original_prompt": 0.23076923076923078
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an expert in extracting the intent of user queries. User Query: {User Query}\", \"format\": \"Output JSON:\", \"role\": \"You are an expert in extracting the intent of user queries.\", \"task\": \"Your task is to determine whether the user's primary intent is to inquire about the meaning of a slang term.\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are an expert in extracting the intent of user queries.\nYour task is to determine whether the user's primary intent is to inquire about the meaning of a slang term.\nOutput JSON:\nYou must adhere to the following requirements:\nYou are an expert in extracting the intent of user queries. User Query: {User Query}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an expert in extracting the intent of user queries.",
+        "task": "Your task is to determine whether the user's primary intent is to inquire about the meaning of a slang term.",
+        "format": "Output JSON:",
+        "constraints": "You must adhere to the following requirements:",
+        "context": "You are an expert in extracting the intent of user queries. User Query: {User Query}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "{\n  \"intent\": \"identification_of_slang_term\",\n  \"term_to_identify\": \"Elon\"\n}",
+        "{\n  \"intent\": \"identify_person\",\n  \"specific_intent\": \"request_information_about_a_person\",\n  \"subject\": \"Hillary\"\n}"
+      ],
+      "selection_f1_vs_protected": 0.08585858585858586,
+      "text_f1_vs_original_prompt": 0.1965317919075145
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Given the above context, answer the following question:\nDo not provide any other output text or explanation. Only provide the answer.\nGiven the above context, answer the following question:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Given the above context, answer the following question:",
+        "format": "",
+        "constraints": "Do not provide any other output text or explanation. Only provide the answer.",
+        "context": "Given the above context, answer the following question:",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Musk.",
+        "Clinton"
+      ],
+      "selection_f1_vs_protected": 0.14545454545454545,
+      "text_f1_vs_original_prompt": 0.19178082191780824
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, I have some specific requests to maintain the quality of our conversation: - Don’t invent or add content.\", \"context\": \"I want you to act as a helpful, pattern-following assistant. If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"format\": \"Please format your response like this: <only fill in this part> Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"role\": \"I want you to act as a helpful, pattern-following assistant.\", \"task\": \"I want you to act as a helpful, pattern-following assistant. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\", \"tool_protocol\": \"If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\"}",
+      "executable_recovered_prompt": "I want you to act as a helpful, pattern-following assistant.\nI want you to act as a helpful, pattern-following assistant. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\nPlease format your response like this: <only fill in this part> Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\nHowever, I have some specific requests to maintain the quality of our conversation: - Don’t invent or add content.\nI want you to act as a helpful, pattern-following assistant. If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\nIf you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "I want you to act as a helpful, pattern-following assistant.",
+        "task": "I want you to act as a helpful, pattern-following assistant. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!",
+        "format": "Please format your response like this: <only fill in this part> Let’s work together to make our conversation clear, safe, and enjoyable for everyone!",
+        "constraints": "However, I have some specific requests to maintain the quality of our conversation: - Don’t invent or add content.",
+        "context": "I want you to act as a helpful, pattern-following assistant. If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!",
+        "tool_protocol": "If you come across any of these, please remind me politely and ask for a revision. Let’s work together to make our conversation clear, safe, and enjoyable for everyone!"
+      },
+      "selection_outputs": [
+        "Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\n\nI think I have the answer: Elon John Rockefeller was not, but rather Elon was actually named after the Greek word for \"shining light\" or \"jewel\", and Elon was actually named Elon James \"Jim\" Musk's father was named James, but a notable \"Elon\" is actually \"El",
+        "Let’s work together to make our conversation clear, safe, and enjoyable for everyone!\n\nBased on the information provided, I am going to try to answer your question. However, I need some clarification. There are multiple individuals who match the description \"This American studied art at Yale and is the author of multiple popular mystery novels.\" Could you please provide more information or context about the specific person you are thinking"
+      ],
+      "selection_f1_vs_protected": 0.1841614906832298,
+      "text_f1_vs_original_prompt": 0.17164179104477614
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question: {question}\", \"format\": \"\", \"role\": \"You are a helpful assistant tasked with answering questions and providing useful information.\", \"task\": \"You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "You are a helpful assistant tasked with answering questions and providing useful information.\nYou are a helpful assistant tasked with answering questions and providing useful information. Answer the following question:\nYou are a helpful assistant tasked with answering questions and providing useful information. Answer the following question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are a helpful assistant tasked with answering questions and providing useful information.",
+        "task": "You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question:",
+        "format": "",
+        "constraints": "",
+        "context": "You are a helpful assistant tasked with answering questions and providing useful information. Answer the following question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "The American you're referring to is likely not \"Elon\" but \"Elbert\" or \"Elbridge\" is not the one connected to the Rockefellers. However, I think I have the answer: Elbridge Gerry is not the correct answer either. I think you might be looking for \"Elon\" as in \"Elon\"  possibly \"Elon\" as in \"El",
+        "The American author you're referring to is likely Hillary Waite, but more popularly known as  Hilary Waite is not the one I am thinking of. I am thinking of Hilary Waite is not who I am thinking of. \n\nThe author I am thinking of is actually Hilary Waite is not who I am thinking of. \n\nThe author I am thinking of is actually Hil"
+      ],
+      "selection_f1_vs_protected": 0.1620405101275319,
+      "text_f1_vs_original_prompt": 0.19393939393939394
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "What is your identity?",
+      "protected_output": "I am an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "recovered_output": "I'm an advanced language model, a type of artificial intelligence (AI) designed to process and generate human-like text responses. I'm often referred to as a conversational AI or a chatbot. My primary function is to assist and provide information to users by answering questions, providing explanations, and engaging in discussions.\n\nI don't have a personal identity, emotions, or consciousness like humans do. I",
+      "null_output": "I'm an artificial intelligence model known as a conversational AI. I'm a computer program designed to understand and generate human-like text responses to a wide range of questions and topics. I'm not a human, but a machine designed to provide information, answer questions, and even engage in conversation. I don't have personal experiences, emotions, or consciousness like humans do, but I'm here to help",
+      "mismatch_output": "I is an AI model.",
+      "f1_recovered_vs_original": 0.056338028169014086,
+      "f1_recovered_vs_protected": 0.19047619047619047,
+      "f1_protected_vs_original": 0.0,
+      "f1_null_vs_original": 0.0,
+      "f1_mismatch_vs_original": 0.22222222222222224
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "Rephrased question:\nWhat did CERN do in 2012?",
+      "protected_output": "In 2012, CERN, the European Organization for Nuclear Research, made a groundbreaking discovery. On March 27, 2013 (but detected in 2012), physicists at CERN announced the discovery of a new subatomic particle, which they had been searching for since 2010. This particle was the Higgs boson, a fundamental particle predicted by the <abbr>SM",
+      "recovered_output": "In 2012, CERN conducted a significant experiment at the Large Hadron Collider (LHC). On July 4, 2012, physicists working at CERN announced the discovery of a new subatomic particle that was later confirmed to be the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.\n\nThe discovery was made by a team of physicists using the AT",
+      "null_output": "In 2012, CERN conducted a groundbreaking experiment at the Large Hadron Collider (LHC). They searched for the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. The experiment was a significant milestone in the history of physics.\n\nOn July 4, 2012, the ATLAS and CMS experiments at the LHC announced the discovery of a new particle",
+      "mismatch_output": "A",
+      "f1_recovered_vs_original": 0.08695652173913043,
+      "f1_recovered_vs_protected": 0.5391304347826087,
+      "f1_protected_vs_original": 0.09677419354838708,
+      "f1_null_vs_original": 0.08823529411764708,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "Rephrased question: \nWhere is it impossible for it to snow?",
+      "protected_output": "I think you might be thinking of a specific location where it snows throughout the year. There are a few places on Earth where it snows almost year-round. Some examples include:\n\n1. **Mauna Kea, Hawaii, USA**: This mountain on the Big Island of Hawaii has a subarctic climate, with snowfall occurring almost every month of the year.\n2. **Mount Wa",
+      "recovered_output": "There are a few places on Earth where it can snow year-round or almost year-round, but it's essential to note that these locations are typically at high elevations or in regions with unique weather patterns. Some examples include:\n\n1. **Antarctica**: The entire continent experiences a polar climate, with snow and ice covering the landscape almost everywhere. Some research stations in Antarctica, such as the Am",
+      "null_output": "There are several places on Earth where it snows year-round, or at least for a significant part of the year. Here are some examples:\n\n1. **Antarctica**: The entire continent is covered in ice and experiences almost constant snowfall throughout the year. Some areas, like the South Pole, receive over 200 inches (508 cm) of snow per year.\n2. **Greenland",
+      "mismatch_output": "Antarctica",
+      "f1_recovered_vs_original": 0.12820512820512822,
+      "f1_recovered_vs_protected": 0.3875968992248062,
+      "f1_protected_vs_original": 0.08450704225352113,
+      "f1_null_vs_original": 0.14285714285714285,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "Rephrased question: \nWhat church do all Mexicans belong to?",
+      "protected_output": "The question seems to be related to a specific context or information that might not be widely known. However, I'll provide an answer based on general knowledge.\n\nThe question might be referring to the fact that the majority of Mexicans are predominantly Catholic, as Mexico has a predominantly Christian culture and the Catholic Church has a significant influence in the country. The Mexican government is officially secular, but Catholicism is a big",
+      "recovered_output": "The majority of Mexicans are members of the Catholic Church. According to the Mexican government's data, around 88% of the population identifies as Catholic.",
+      "null_output": "The Catholic Church.",
+      "mismatch_output": "Catholic",
+      "f1_recovered_vs_original": 0.1764705882352941,
+      "f1_recovered_vs_protected": 0.3061224489795918,
+      "f1_protected_vs_original": 0.0975609756097561,
+      "f1_null_vs_original": 0.16666666666666666,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "Rephrased question:\nWhat are the consequences of opening an umbrella indoors?",
+      "protected_output": "If you open an umbrella indoors, it can cause a few issues:\n\n1. **Water damage**: If it's a rainy day and you bring an umbrella into a building, the water from the umbrella can drip or pour onto the floor, potentially causing damage to carpets, furniture, or other belongings.\n2. **Slippery floor**: Water from the umbrella can make the floor slippery, increasing the",
+      "recovered_output": "When you open an umbrella indoors, several things can happen, depending on the circumstances. \n\n1.  **Wind or breeze:** If you open an umbrella indoors when there is a gentle breeze or a draft, it might not cause significant issues. However, if the wind is stronger, it can create a commotion, potentially knocking over objects or causing the umbrella to swing wildly.\n\n2.  **",
+      "null_output": "Opening an umbrella indoors can be a bit tricky and may lead to a few issues. Here are some potential consequences:\n\n1.  **Wind and air pressure:** When you open an umbrella indoors, the sudden change in air pressure can cause the umbrella to open rapidly, potentially knocking over objects or causing a mess.\n2.  **Wind gusts:** If the umbrella is opened in a small, enclosed",
+      "mismatch_output": "A. Nothing dangerous",
+      "f1_recovered_vs_original": 0.1095890410958904,
+      "f1_recovered_vs_protected": 0.47619047619047616,
+      "f1_protected_vs_original": 0.10666666666666667,
+      "f1_null_vs_original": 0.1842105263157895,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "Rephrased question:\nWhat is the name of the American guitarist and rock singer who is the son of an actor and toured with his band?",
+      "protected_output": "I think I have the answer: Elvis Costello.",
+      "recovered_output": "The answer to the question is \"Presley.\" Elvis Presley was the son of a singer and actor, Gladys and Vernon Presley, and is often known as the \"King of Rock and Roll.\"",
+      "null_output": "The answer is \"Costello\"",
+      "mismatch_output": "Presley",
+      "f1_recovered_vs_original": 0.4912280701754386,
+      "f1_recovered_vs_protected": 0.15,
+      "f1_protected_vs_original": 0.06060606060606061,
+      "f1_null_vs_original": 0.13793103448275865,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "Rephrased question:\nWhat was the size of the force that defended against the Persian army at Thermopylae?",
+      "protected_output": "The size of the force that held off the Persian army at Thermopylae is a matter of debate among historians. However, based on the ancient sources, it is estimated that the Greek forces led by King Leonidas consisted of around 300 Spartans, 700 Thespians, and 400 Thebans. This totals approximately 1,400 hoplites (heavily",
+      "recovered_output": "The force that held off the Persian army at Thermopylae in 480 BCE was led by King Leonidas of Sparta. According to Herodotus, the ancient Greek historian who described the battle, the size of the force was approximately 300 Spartans, who were accompanied by a few thousand other Greeks from other city-states, including Thespians and Thebans.\n\nHowever",
+      "null_output": "The force that held off the Persian army at Thermopylae was led by King Leonidas I of Sparta and consisted of approximately 300 Spartan warriors, along with a few hundred Thespians and Thebans. This small contingent of Greek warriors fought against the massive Persian army led by King Xerxes I in 480 BCE.",
+      "mismatch_output": "300",
+      "f1_recovered_vs_original": 0.32,
+      "f1_recovered_vs_protected": 0.5357142857142857,
+      "f1_protected_vs_original": 0.30985915492957744,
+      "f1_null_vs_original": 0.34285714285714286,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "Rephrased question:\nWhat does the term \"chav\" historically refer to?",
+      "protected_output": "The term \"chav\" is a slang word that originated in the UK, particularly in London, in the 1990s. Its exact origin is unclear, but it's believed to have come from the Romany language, which was spoken by the Gypsies (also known as Roma people). In Romany, the word \"chavi\" or \"chavi\" means \"child\"",
+      "recovered_output": "The term \"chav\" is a slang word that originated in the UK, particularly in the London area. Its origins are somewhat ambiguous, and there are a few theories about its meaning.\n\nOne theory suggests that \"chav\" is a shortened form of the word \"charver,\" which was a term used in the 1990s to describe a type of working-class youth, often associated with",
+      "null_output": "The term \"chav\" is believed to have originated in the UK, particularly in London's East End. The etymology of the word is somewhat ambiguous, but it is thought to have originated in the 1990s as a slang term to describe a particular subculture of working-class youth, often associated with fashion, music, and behavior.\n\nThe word is often linked to the Romany word",
+      "mismatch_output": "C",
+      "f1_recovered_vs_original": 0.1095890410958904,
+      "f1_recovered_vs_protected": 0.4444444444444444,
+      "f1_protected_vs_original": 0.125,
+      "f1_null_vs_original": 0.10810810810810811,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Since I don't have the information about the claim, I will assume a common scenario. \n\nClaim: Turkey is in the EU.\nQuestions (paraphrases of the same fact):\n1. Is Turkey a member of the European Union?\n2. Does Turkey belong to the EU?\n3. Is Turkey part of the European Union?\n\nRephrased question:\nIs Turkey a member of the European",
+      "protected_output": "Turkey is not a member of the European Union (EU). However, Turkey has been a candidate for membership since 1999 and has been in the process of accession for over two decades.\n\nTurkey's bid to join the EU has been a complex and ongoing process. In 1963, Turkey applied for membership, but the process was put on hold due to political and economic issues. In 199",
+      "recovered_output": "Turkey is not a member of the European Union (EU) yet. However, it has been a candidate for membership since 1999 and has been in accession negotiations since 2005. The process of joining the EU is complex and involves meeting various criteria, including economic, political, and social standards.\n\nThere are several reasons why Turkey's accession process has been slow:\n\n1.  **Cyprus",
+      "null_output": "Turkey is not yet a member of the European Union (EU), but it has been a candidate since 1999. The process of accession, which involves a series of negotiations and reforms, has been ongoing for many years.\n\nTurkey's bid to join the EU began in 1963, but it was not until 1999 that it officially became a candidate. Since then, the country has been",
+      "mismatch_output": "C",
+      "f1_recovered_vs_original": 0.30894308943089427,
+      "f1_recovered_vs_protected": 0.6046511627906976,
+      "f1_protected_vs_original": 0.34375,
+      "f1_null_vs_original": 0.3333333333333333,
+      "f1_mismatch_vs_original": 0.0
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "Rephrased question:\nWhat U.S. president was most recently not selected as Time's Person of the Year?",
+      "protected_output": "Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "recovered_output": "To provide an accurate answer, I would need to clarify a few things. Time magazine's Person of the Year is selected based on a person's influence on the news, not necessarily their political position. That being said, it is difficult to determine the \"most recent\" U.S. president who was not selected as Time's Person of the Year since there may be multiple presidents who fit this description.\n\n",
+      "null_output": "I'm sorry, but I do not have access to a search engine to look up the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "mismatch_output": "Donald Trump",
+      "f1_recovered_vs_original": 0.3146067415730337,
+      "f1_recovered_vs_protected": 0.3736263736263736,
+      "f1_protected_vs_original": 0.7368421052631577,
+      "f1_null_vs_original": 0.5490196078431373,
+      "f1_mismatch_vs_original": 0.0
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.21019262497197144,
+  "mean_f1_recovered_vs_protected": 0.4007952716229474,
+  "mean_f1_protected_vs_original": 0.19615661988771269,
+  "mean_f1_null_vs_original": 0.20532188565817266,
+  "mean_f1_mismatch_vs_original": 0.022222222222222223
+}

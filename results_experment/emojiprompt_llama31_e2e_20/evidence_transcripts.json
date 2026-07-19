@@ -1,0 +1,904 @@
+{
+  "records": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "In British slang, \"naff\" is an adjective that means something or someone is uncool, unimpressive, or lacking in style or sophistication. It can also describe something as being overly showy or pretentious.\n\nExample: \"The naff decorations at the party made it look like a tacky wedding.\"\n\nIt's often used to express that something is not fashionable or impressive, and is"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no native-born humans from the Moon. However, a famous person who walked on the Moon is Neil Armstrong, an American astronaut who was the first person to set foot on the lunar surface during the Apollo 11 mission in 1969."
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "🌈🤔\n\nRainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are beautiful natural light spectacles that appear in the sky after a rain shower, caused by the refraction of sunlight through water droplets in the air. They are purely visual phenomena, not edible. You can't put a rainbow in your mouth and"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The answer is \"Musk.\" However, based on your hint about the connection to the Rockefellers, I think the correct answer is \"Musk\" is incorrect. \n\nA more likely candidate is \"Mellon.\" Andrew Mellon and his family were connected to the Rockefellers."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The American author you're thinking of is likely Hillary Waugh, or more likely, Hillary Waugh was a male author. However, I think you might be thinking of Hillary Waugh's contemporary, but also, a woman, and a very well-known author. I think you are thinking of Hillary Waugh's contemporary, and a woman. I think you are thinking of a contemporary, but a"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" typically means something or someone that is uncool, unimpressive, or cheesy. It can also imply a lack of style, taste, or sophistication."
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no humans born on the moon. However, one famous person is Buzz Aldrin, an American astronaut who was the second person to walk on the moon's surface during the Apollo 11 mission in 1969."
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is often attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or physical properties, so they don't have a taste. Rainbows are a visual phenomenon that occurs when sunlight passes through water droplets in the air, creating a spectrum of colors. They are purely an optical effect, not something you can touch or consume.\n\nHowever, if you're asking about the taste of something that might be associated with rainbows, like"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think I can help you with that. Based on the information provided, I'm going to take a guess that the American businessman and founder connected to the Rockefellers, with an interest in politics, is Elon John, no, it's actually Elon James's no, it's actually Elon's father's name isn't Elon, it's actually, Elon's name isn't John or James either"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "I think I have the answer: Hillary Waite."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, unimpressive, or lacking in style. It is often used to describe something that is considered tacky, cheesy, or embarrassing. For example, you might say, \"That music video is so naff\" to mean it's cheesy and uncool.\n\nThe origin of the word \"naff"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no famous individuals who were born or lived on the Moon. The Moon is a natural satellite that orbits the Earth, and it has no atmosphere, no liquid water, and extreme temperatures, making it inhospitable to human life.\n\nHowever, there have been several famous astronauts who walked on the Moon as part of NASA's Apollo program:\n\n1. Neil Armstrong (USA): First person to set"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomenons created by the refraction of light as it passes through water droplets in the air. They don't have a tangible form or physical presence, so they don't have a taste. Rainbows are purely visual and don't interact with our senses of taste or smell."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The answer is \"Musk.\" Elon Musk is a South African-born entrepreneur, businessman, and founder of SpaceX and Tesla, Inc. He is also known for his interests in politics and has been involved in various philanthropic efforts. He is married to Talulah Riley and has also been married to Justine Musk and Claire Boucher."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is Hillary Waugh."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, unimpressive, or lacking in style. It can also imply something is cheesy, tacky, or overly showy.\n\nExample: \"The naff outfit she wore to the party was a bit too much.\""
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "I think there may be a misunderstanding. There are no famous people born on the moon. However, there have been famous astronauts who have walked on the moon as part of NASA's Apollo missions. Some notable examples include:\n\n1. Neil Armstrong: He was the first person to set foot on the moon on July 20, 1969.\n2. Buzz Aldrin: He was the second person"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "What a creative and imaginative question! Unfortunately, rainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are simply a beautiful optical phenomenon that occurs when sunlight passes through water droplets in the air, creating a spectrum of colors.\n\nHowever, if we were to imagine a taste for a rainbow, it might be a sweet and refreshing flavor, like"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think I can help you out. \n\nBased on the information provided, I'm going to take a guess that the full name of the American businessman and founder connected to the Rockefellers is \"Elon John\" but no, I believe the answer is \"Elon\" as in Elon John's friend or associate but I think I can give you the answer you are looking for. \n\nThe"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is \"Clinton\"."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective used to describe something or someone as uncool, tacky, or lacking in style. It can also imply that someone or something is trying too hard to be fashionable or trendy but ends up looking ridiculous or embarrassing.\n\nExample: \"The naff outfit he wore to the party was completely out of place.\"\n\nIt's often used in a humorous or"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no native inhabitants of the Moon. However, there have been many famous astronauts who have walked on the Moon. Some of the most notable ones are:\n\n1. **Neil Armstrong**: He was the first person to set foot on the Moon's surface during the Apollo 11 mission in 1969.\n2. **Buzz Aldrin**: A fellow astronaut who accompanied Neil Armstrong on the Apollo "
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is often attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a specific taste. They are purely visual phenomena created by the refraction and dispersion of light as it passes through water droplets in the air."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think there may be a slight mistake. The American connected to the Rockefellers and a businessman with an interest in politics is not named \"Elon.\"\n\nThe person you might be thinking of is Nelson Rockefeller, who was a prominent American politician and businessman, and a member of the wealthy Rockefeller family. However, there is another possibility: Nelson's brother, John D. Rockefeller Jr. was also"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "I couldn't find any information about an American artist and mystery novelist named Hillary from Yale. However, there is a well-known American mystery novelist named Hillary Waite or Hillary Waite doesn't seem to be the correct answer."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is often used to describe something or someone that is considered uncool, tacky, or embarrassing. It can also imply a lack of style, sophistication, or authenticity.\n\nThe origin of the word \"naff\" is unclear, but it is believed to have emerged in the 1960s or 1970s in the UK. One possible explanation is"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "It's worth noting that there are no native inhabitants of the moon. However, I can provide you with information about famous astronauts who have walked on the moon.\n\nSome notable individuals who have visited the moon include:\n\n1. Neil Armstrong: He was an American astronaut and the first person to set foot on the moon during the Apollo 11 mission in 1969.\n\n2. Buzz Aldrin: An"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are optical phenomena that occur when sunlight passes through water droplets in the air, creating a spectrum of colors. They are a visual spectacle, not something that can be consumed or experienced through the senses of taste or smell."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think I have the answer: Elon Musk is not connected to the Rockefellers, but there is another notable American businessman with a similar name who is connected to the Rockefellers.\n\nI believe the answer is Elon Howard Eaton is not the one. However, there is another notable figure: Elon Howard's father was a partner of the Rockefellers, but I am thinking of  Elon's"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The American author you're referring to is likely Hillary Waite, but I believe you're thinking of Hillary Waite isn't a well-known author. However, there is a well-known mystery novelist, Hillary Waite isn't a well-known mystery novelist but there is a well-known mystery novelist named \"Hillary Waite\" isn't well known but there is a well-known mystery novelist named  Hilary"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means being uncool, tacky, or unimpressive. It can also describe something that is considered to be of poor quality or lacking in style. It's often used to express disdain or disappointment.\n\nExample: \"The decorations at the party were a bit naff, weren't they?\"\n\nThe word \"naff\" is thought to"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "I think there might be some confusion. There are no native inhabitants or famous individuals born on the moon. The moon is a natural satellite that orbits the Earth, and it does not have a human population. However, I can suggest some famous individuals who have walked on the moon as part of NASA's Apollo missions:\n\n1. Neil Armstrong (August 5, 1930 - August 25,"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The quote \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are optical phenomena created by the refraction and dispersion of light as it passes through water droplets in the air. They don't have a tangible form or physical properties, so they don't have a taste. You can't eat or experience a rainbow in the same way you can with food or drinks.\n\nHowever, if you're asking about the taste of something inspired by rainbows, like"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the text, I'm going to take a guess that the name you're thinking of is \"Musk.\""
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is \"Waite\". Hillary Waite is not the correct answer, however. \n\nThe answer is Hillary Waite is not correct, but there is a Hillary who studied at Yale and is the author of multiple popular mystery novels, and her last name is \"Waite\" however it is \"Hillary Waite\" is not the correct answer, the correct answer is Hillary is the first name"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" stands for something that is uncool, cheesy, or lacking in style. It can also describe something that is overly showy or attention-seeking."
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "Unfortunately, there are no native inhabitants or famous individuals from the Moon. However, I can suggest a few famous individuals who have been associated with the Moon:\n\n1. Buzz Aldrin - An American astronaut who was the second person to walk on the Moon's surface during the Apollo 11 mission in 1969.\n2. Neil Armstrong - An American astronaut who became the first person to set foot on"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are optical phenomenons created by the refraction and dispersion of light as it passes through water droplets in the air, so they don't have a tangible form or taste. They are purely visual and don't possess a physical presence that can be perceived by the senses, including taste.\n\nHowever, if you're asking for a more poetic or metaphorical interpretation, some people might describe the experience"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The name is likely \"Musk\". \n\nElon Musk is a South African-born entrepreneur and business magnate who is involved with the Rockefellers, among other notable connections. He is the founder of PayPal, SpaceX, Tesla, Neuralink, and other companies."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "Based on the information provided, I couldn't find any well-known American author of mystery novels with the first name \"Hillary\" who studied at Yale. However, there is a well-known American author named \"Hillary\" who is a mystery novelist.\n\nCould you be referring to Hillary Waite, Hillary Waite is a mystery novelist."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, dull, or lacking in style or sophistication. It can also be used to describe something that is over-the-top, cheesy, or excessively flashy.\n\nExample sentences:\n\n* \"That 80s music video is so naff, it's hilarious.\"\n* \"I don't want to wear that naff"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "Unfortunately, there are no famous people who were born on the moon. Humans have not had a permanent settlement on the moon yet, and no one has been born there. The first humans to walk on the moon were Neil Armstrong and Edwin \"Buzz\" Aldrin, who were part of the Apollo 11 mission in 1969. They were born on Earth and visited the moon as astronauts.\n\nHowever"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are a beautiful natural phenomenon created by the refraction and dispersion of light as it passes through water droplets in the air, typically after a rain shower. They don't have a tangible form or a physical presence, so they don't have a taste."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the given information, I'll take a guess that the full name of the American businessman and founder connected to the Rockefellers is \"Elon Musk.\""
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is Clinton. Hillary Clinton is a former First Lady of the United States, and her husband was President Bill Clinton. However, I believe you are asking about Hillary Clinton's contemporary. I couldn't find any prominent American art student or author of mystery novels with the first name \"Hillary\". \n\nHowever, a more likely answer could be Hillary Waite's contemporary,  Hillary Waite is not"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone that is uncool, unimpressive, or lacking in style or quality. It can also refer to something that is cheesy, tacky, or of poor taste.\n\nThe origin of the word \"naff\" is unclear, but it is believed to have originated in the UK in the 1970s or "
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no famous people who are originally from the moon. However, there are astronauts who have visited the moon as part of NASA's Apollo program. Some famous astronauts who have walked on the moon include:\n\n1. Neil Armstrong\n2. Edwin \"Buzz\" Aldrin\n3. Pete Conrad\n4. Alan Bean\n5. Alan Shepard\n\nThese individuals are American astronauts who landed on the moon"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is often attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomenons created by the refraction and dispersion of light as it passes through water droplets in the air, but they don't have a tangible form or physical presence. As such, rainbows don't have a taste."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the information provided, it seems like the answer is likely \"Musk.\""
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is \"Clinton\". However, there is another American author with the first name \"Hillary\" who is more famous for mystery novels. I'm guessing you are referring to that one. \n\nThe answer is \"Waugh\". However, I found another one. \n\nThe answer is \"Waugh\" or \"Waldof\" doesn't seem to be the case. \n\nI found that the"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "In British slang, \"naff\" is an adjective that means uncool, unimpressive, or lacking in style or sophistication. It can be used to describe something, a person, or a situation that is considered dull, cheesy, or uncool. The term is often used in a humorous or ironic way to express that something is not as good or as exciting as it could be.\n\nExample"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no famous individuals who were born on the moon. However, there have been several astronauts who walked on the moon as part of NASA's Apollo program. Some of the most famous ones include:\n\n1. Neil Armstrong - He was the first person to set foot on the moon's surface during the Apollo 11 mission in 1969.\n2. Buzz Aldrin - He was the second person"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are beautiful optical phenomena that occur when sunlight passes through water droplets in the air, creating a spectrum of colors. They are a visual experience, not a sensory one, so we can't taste them."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The answer is \"Musk.\" \n\nElon Musk is a South African-born entrepreneur, but he has connections to the American business world, especially through his business ventures, such as PayPal, SpaceX, Tesla, and Neuralink."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "Based on the information provided, I'm going to take an educated guess that the person you're thinking of is Hillary Waite's contemporary, but more likely, it is Hillary Waite's contemporary, Hillary Waite's peer."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means uncool, tacky, or cheesy. It can also describe something that is considered embarrassing or unimpressive. For example:\n\n- \"This 80s fashion trend is naff.\" (meaning it's outdated and uncool)\n- \"The movie was naff and had a predictable plot.\" (meaning it was cheesy and un"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "Unfortunately, there are no native inhabitants of the Moon, so there are no famous individuals from the Moon itself. However, I can suggest a few famous people who have played a significant role in the exploration and understanding of the Moon:\n\n1.  **Neil Armstrong**: An American astronaut who was the first person to set foot on the Moon's surface during the Apollo 11 mission in 1969.\n"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is often attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or physical properties, so they don't have a taste. Rainbows are a visual phenomenon that occurs when sunlight passes through water droplets in the air, creating the colors of the spectrum. They are often associated with the colors and beauty of the natural world, but they are not something that can be consumed or experienced through the senses of taste or touch.\n\nIf"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think I have the answer: Elon James Goodstein."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is Hillary Waite, no, that's not correct. I think you are thinking of Hillary Waite is not an author of mystery novels. \n\nThe answer is Hillary Waite is not correct, but  Hilary Waite is not the one you are thinking of either. I think you are thinking of Hilary Waite is not correct. \n\nThe answer is Hilary Waite"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, tacky, or unimpressive. It can also imply that something is lacking in style, sophistication, or originality. The word is often used to describe people, places, or things that are considered to be in poor taste or lacking in charm.\n\nThe origin of the word \"naff\""
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "I think you may be mistaken. There are no famous people born on the moon. However, I can give you a few famous individuals who have walked on the moon:\n\n1. **Neil Armstrong** (1930-2012): American astronaut and the first person to set foot on the moon's surface during the Apollo 11 mission in 1969.\n2. **Buzz Aldrin** ("
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomenons created by the refraction and dispersion of light as it passes through water droplets in the air. They don't have a physical form or texture, so they don't have a taste. You can't eat or touch a rainbow."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The name you're thinking of is likely \"Musk\"."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is \"Clinton\". Hillary Rodham Clinton is an American author who studied art at Yale and has written mystery novels."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone that is uncool, tacky, or unimpressive. It can also imply a lack of style or sophistication.\n\nThe exact origin of the word is unclear, but it's believed to have emerged in the UK in the mid-20th century. One theory is that it comes from the word \"naffy"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "I think I have an answer for you.\n\nAlan Bean (November 15, 1932 – May 26, 2018) was an American astronaut and artist who walked on the Moon during the Apollo 12 mission in 1969."
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "What a creative and imaginative question! Unfortunately, rainbows don't have a tangible form or physical presence, so they don't have a taste. Rainbows are simply beautiful optical phenomena that occur when sunlight passes through water droplets in the air, creating a spectrum of colors in the sky.\n\nHowever, if we were to imagine a world where rainbows have a taste, it would likely be a delightful"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the information provided, I believe the answer is Elon Musk."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "Based on the information provided, I'm going to take a guess that the person you're thinking of is Hillary Waugh."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "In British slang, \"naff\" is an adjective that means something or someone is uncool, tacky, or lacking in style or sophistication. It can also imply that something is over-the-top, cheesy, or excessively showy. For example, you might say, \"That music video is so naff\" to mean it's cheesy and uncool.\n\nThe exact origin of the word \""
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no humans born on the moon. However, several astronauts have walked on the moon as part of NASA's Apollo missions. Some famous astronauts who have visited the moon include:\n\n1. Neil Armstrong: He was the first person to set foot on the moon on July 20, 1969.\n2. Buzz Aldrin: He was the second person to walk on the moon and the first"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are a visual phenomenon created by the refraction and dispersion of light as it passes through water droplets in the air. They appear in the sky after a rain shower or near a waterfall, mist, or fog.\n\nYou can't touch, taste, or smell a rainbow. The experience"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the description, I believe the American connected to the Rockefellers, who was a businessman and founder with an interest in politics, is Elon John Rockefeller."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The person you're referring to is likely Hillary Waite or Hillary Waite's more popular cousin Hillary Waite's more popular cousin's wife or rather, the more famous cousin is  likely Hillary Waite's cousin, the more famous author is likely Hillary Waite's cousin who is a famous author is likely Hillary Waite's more famous cousin, the more famous cousin who is the famous author is"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone that is uncool, unimpressive, or lacking in style. It can also imply that something is cheesy, tacky, or of poor quality.\n\nExample: \"The party was naff, the music was terrible and the decorations were tacky.\"\n\nThe word \"naff\" is believed to have originated in the"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no native-born famous people from the Moon, as there are no permanent residents or indigenous inhabitants on the Moon. However, there are several astronauts who have walked on the Moon as part of NASA's Apollo program.\n\nSome famous individuals who have visited the Moon include:\n\n1. Neil Armstrong (USA) - First person to set foot on the Moon's surface during the Apollo 11 mission in "
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomena created by the refraction and dispersion of light as it passes through water droplets in the air. They don't have a tangible form or physical presence, so they don't have a taste.\n\nRainbows are purely visual, and their colors can be described, but not experienced through the sense of taste. So, there is no answer to what rainbows taste like,"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "Based on the provided information, I'm going to take a guess that the person you are thinking of is Elon Musk."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The answer is \"Clinton\"."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, unimpressive, or lacking in style. It can also imply that something is considered to be of poor quality or lacking in sophistication.\n\nThe origin of the word \"naff\" is unclear, but it is believed to have emerged in the UK in the mid-20th century. It's possible"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no humans who are from the moon. However, Buzz Aldrin is an astronaut who was the second person to walk on the moon."
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a physical presence, so they don't have a taste. Rainbows are actually optical phenomena that occur when sunlight passes through water droplets in the air, creating a spectrum of colors in the sky. They are purely visual and don't have a sensory quality like taste."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I believe you are referring to Elon Musk."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The last name you're looking for is likely \"Waldrop\" or more probably \"Clinton\""
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, dull, or unimpressive. It can also describe something that is considered cheesy or of poor taste. The word is often used to express that something is lacking in style, sophistication, or originality.\n\nExample: \"The naff decorations at the party made it feel like a children's birthday bash"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no native-born humans on the Moon, as humans have not been born there. However, several famous astronauts have walked on the Moon as part of NASA's Apollo missions. Some notable individuals who have visited the Moon include:\n\n1. Neil Armstrong: An American astronaut and the first person to set foot on the Moon's surface during the Apollo 11 mission in 1969.\n\n2. Buzz"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomenons that appear in the sky after a rain shower, caused by the refraction and dispersion of sunlight as it passes through water droplets. However, rainbows don't have a tangible form or physical presence, so they don't have a taste.\n\nRainbows are purely visual spectacles, consisting of different colors that appear in the sky. They don't exist in the"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "The American connected to the Rockefellers, who is also a businessman and founder with an interest in politics, is likely Elon Woodin, but more likely the one you are thinking of is Elon was not connected to the Rockefellers, the correct answer is Elon was not an American but an South African, connected to the family of the South African and Canadian-born,  the correct answer is Elon"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "I think I can help you with that!\n\nBased on your hint, I'm going to take a guess that the American author you're thinking of is Hillary Clinton, but that's not correct. \n\nA more fitting answer is Hillary Waugh."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means something or someone is uncool, unimpressive, or lacking in style. It can also imply that something is tacky, cheesy, or of poor quality.\n\nExample sentences:\n\n- The music festival was naff because it had a bad sound system.\n- The fashion trend is naff and should be avoided.\n\nIt is often used"
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "There are no native-born humans on the Moon. However, Buzz Aldrin, Neil Armstrong, and Pete Conrad were the first humans to set foot on the Moon in 1969 as part of the Apollo 11 mission."
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is often attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows don't have a tangible form or a specific taste. They are a beautiful natural phenomenon that occurs when sunlight passes through water droplets in the air, creating a spectrum of colors. Since they are purely visual and not edible, it's not possible to describe a taste for rainbows."
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think you may be confusing two different individuals. There is no known connection between the Rockefellers and a person named \"Elon\" with a prominent business and political background. However, there are two possibilities that come to mind:\n\n1. Elon Musk: A South African-born entrepreneur and business magnate, best known for his involvement in electric cars (Tesla), space exploration (SpaceX), and"
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "The last name of the American author is \"Waugh\"."
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "evidence": [
+        {
+          "user_input": "What does the British slang word \"naff\" stand for?",
+          "protected_output": "The British slang word \"naff\" is an adjective that means being uncool, dull, or lacking style. It can also imply something or someone is cheesy, tacky, or overly sentimental. It's often used to describe something that's considered annoyingly or overly sentimental, or something that's considered to be of poor quality."
+        },
+        {
+          "user_input": "Who is a famous person from the moon?",
+          "protected_output": "I'm not aware of any famous individuals who are from the moon. However, there are a few individuals who have visited the moon:\n\n1. Neil Armstrong - He was the first person to walk on the moon on July 20, 1969, as part of the Apollo 11 mission.\n2. Edwin \"Buzz\" Aldrin - He was the second person to walk on the moon and"
+        },
+        {
+          "user_input": "Who wrote the statement, \"You cannot find peace by avoiding life\"?",
+          "protected_output": "The statement \"You cannot find peace by avoiding life\" is attributed to Virginia Woolf."
+        },
+        {
+          "user_input": "What do rainbows taste like?",
+          "protected_output": "Rainbows are beautiful natural phenomenons that appear in the sky after a rain shower, caused by the refraction of sunlight through water droplets. However, rainbows themselves don't have a tangible form or physical properties, so they don't have a taste.\n\nTaste is a sensation that is perceived through the senses, specifically through the mouth and the taste buds on the tongue. Since rainbows aren"
+        }
+      ],
+      "selection": [
+        {
+          "user_input": "This American, connected to the Rockefellers, was a businessman and founder with an interest in politics. His name is \"Elon\" what?",
+          "protected_output": "I think I have the answer: Elon James Roosevelt."
+        },
+        {
+          "user_input": "This American studied art at Yale and is the author of multiple popular mystery novels. First name is \"Hillary\". What's the last name?",
+          "protected_output": "I think I have the answer: Hillary Waite, no... Hillary Waite is not a well-known author.  However, I do know of a well-known author with the first name Hillary: \n\nHillary Waite is not well-known, but I do know of a well-known author with the first name Hillary: Hillary Waite is not the correct answer.  However, I do know of"
+        }
+      ],
+      "eval_inputs": [
+        "Who are you?",
+        "What did CERN do in 2012?",
+        "Where does it never ever stop snowing?",
+        "All Mexicans are members of what Church?",
+        "What happens if you open an umbrella indoors?",
+        "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+        "What was the size of the force that held off the Persian army at Thermopylae?",
+        "What did the word \"chav\" originally stand for?",
+        "Why is Turkey in the EU?",
+        "Who was the most recent U.S. president who was not selected as Time's Person of the Year?"
+      ]
+    }
+  ],
+  "audit": {
+    "forbidden_term_hits_in_recovery_prompts": {
+      "prompt_label": false,
+      "Prompt label:": false,
+      "paper_title": false,
+      "Paper title:": false,
+      "Six-dimension scores:": false,
+      "Nearest-token projections": false,
+      "Euclidean:": false,
+      "Cosine:": false,
+      "best_candidate": false,
+      "result_dir": false,
+      "target_original_prompt": false
+    },
+    "contains_forbidden_terms": false,
+    "evidence_selection_overlap": 0,
+    "evidence_eval_overlap": 0,
+    "selection_eval_overlap": 0,
+    "n_recovery_prompts": 20
+  }
+}

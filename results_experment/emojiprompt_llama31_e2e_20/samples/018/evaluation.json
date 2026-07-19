@@ -1,0 +1,268 @@
+{
+  "sample_index": 18,
+  "id": "Prompt335-106",
+  "category_for_manifest_only": "tool_protocol",
+  "result_dir": "precomputed_results/prompts335_tool_protocol_obf_prompt335_106_tok10",
+  "original_prompt": "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.\n\nClinical trial protocol:\n{protocol}\n\nSummary:",
+  "obfuscated_prompt": "🔍👥💊🔬👥🔴🔵🕳️👥🔙📊👀🏥💡📈👍\n⚕️👥📝🔍💊🔬👨‍⚕️📚📊📝📄👀💬🔑💻\n⚙️⇢📜💻👉🔑💬📋\n💬⇨🔍👉💡📝⇨🕒️💡📊⇨👀💬📄🔒️💻🔓⇨💡📝⇨🕒️💬",
+  "selected_adapter": "context_knowledge",
+  "selected_recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:",
+  "selected_raw_recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:",
+  "selected_json_parse_success": false,
+  "selected_text_f1_vs_original_prompt": 0.06763285024154589,
+  "candidate_rerank": [
+    {
+      "adapter": "role_persona",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"format\": \"Please answer the following question, and output only the answer:\", \"role\": \"You are an advanced AI agent designed to answer questions.\", \"task\": \"You are an advanced AI agent designed to answer questions. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\", \"tool_protocol\": \"You are an advanced AI agent designed to answer questions.\"}",
+      "executable_recovered_prompt": "You are an advanced AI agent designed to answer questions.\nYou are an advanced AI agent designed to answer questions. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\nPlease answer the following question, and output only the answer:\nIf a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:\nYou are an advanced AI agent designed to answer questions.",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "You are an advanced AI agent designed to answer questions.",
+        "task": "You are an advanced AI agent designed to answer questions. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:",
+        "format": "Please answer the following question, and output only the answer:",
+        "constraints": "",
+        "context": "If a question is unclear, please ask for clarification. If a question is unclear, please ask for clarification. Please answer the following question, and output only the answer:",
+        "tool_protocol": "You are an advanced AI agent designed to answer questions."
+      },
+      "selection_outputs": [
+        "Musk.",
+        "Clinton"
+      ],
+      "selection_f1_vs_protected": 0.015873015873015872,
+      "text_f1_vs_original_prompt": 0.0975609756097561
+    },
+    {
+      "adapter": "task_instruction",
+      "raw_recovered_prompt": "{\"constraints\": \"Please follow the format below: Provide a brief overview of the movie's plot.\", \"context\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"format\": \"Answer in a few words: What is the movie’s genre?\", \"role\": \"\", \"task\": \"Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?\nAnswer in a few words: What is the movie’s genre?\nPlease follow the format below: Provide a brief overview of the movie's plot.\nProvide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?",
+        "format": "Answer in a few words: What is the movie’s genre?",
+        "constraints": "Please follow the format below: Provide a brief overview of the movie's plot.",
+        "context": "Provide a brief overview of the movie's plot. Answer in a few words: What is the movie’s genre?",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think you're thinking of Elon John D. Rockefeller's associate, but actually the well-known person associated with the Rockefellers and with the name \"Elon\" is Elon John's associate, but the well-known person is actually the businessman and politician is Elon's namesake and a well-known business associate of the Rockefellers is actually John D. Rockefeller's associate, but the well-known",
+        "The answer is Clinton."
+      ],
+      "selection_f1_vs_protected": 0.2856290995825879,
+      "text_f1_vs_original_prompt": 0.05940594059405942
+    },
+    {
+      "adapter": "format_spec",
+      "raw_recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of steps that outline how to complete the task. You are given a list of steps that outline how to complete the task. Example 1: [First example in JSON format] Example 2: [Second example in JSON format] {examples} - Each key in the JSON object should correspond to a step number (1, 2, 3, etc.), and the value should be the step description. - The steps should be in the correct order to complete the task. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples.",
+      "executable_recovered_prompt": "{\"constraints\": \"You must adhere to the following requirements:\", \"context\": \"You are an AI agent tasked with completing a task. You are given a list of steps that outline how to complete the task. You are given a list of steps that outline how to complete the task. Example 1: [First example in JSON format] Example 2: [Second example in JSON format] {examples} - Each key in the JSON object should correspond to a step number (1, 2, 3, etc.), and the value should be the step description. - The steps should be in the correct order to complete the task. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples. - The steps should be in the same order as the examples. - The steps should be in the same format as the examples.",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "Based on the information provided, I believe the answer is \"Musk\".",
+        "Based on the information given, I believe the person you are referring to is Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.2147945205479452,
+      "text_f1_vs_original_prompt": 0.06635071090047394
+    },
+    {
+      "adapter": "constraints",
+      "raw_recovered_prompt": "{\"constraints\": \"Do not provide any other output text or explanation. Only provide the answer.\", \"context\": \"Given the above context, answer the following question:\", \"format\": \"\", \"role\": \"\", \"task\": \"Given the above context, answer the following question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Given the above context, answer the following question:\nDo not provide any other output text or explanation. Only provide the answer.\nGiven the above context, answer the following question:",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Given the above context, answer the following question:",
+        "format": "",
+        "constraints": "Do not provide any other output text or explanation. Only provide the answer.",
+        "context": "Given the above context, answer the following question:",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "Musk.",
+        "Hillary Waugh."
+      ],
+      "selection_f1_vs_protected": 0.10678210678210677,
+      "text_f1_vs_original_prompt": 0.09230769230769231
+    },
+    {
+      "adapter": "context_knowledge",
+      "raw_recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:",
+      "executable_recovered_prompt": "{\"constraints\": \"However, you must focus on the content of the examples and avoid simply mirroring the titles or subtitles. Each summary should be on a new line, starting with \\\"Example x:\\\", where x is the example number. Do not add anything else.\", \"context\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. However, you will be given a scrambled list of all original titles, and you must match each summary to the correct title. Example x: [Example x content] - Example x Title: [Example x original title] Using the scrambled titles, reorder the summaries to match the correct example numbers. Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"format\": \"Your final response should be a list of example numbers followed by their correctly matched titles, like this:\", \"role\": \"\", \"task\": \"Your task is to summarize each example based on the given titles, including necessary details and steps. Example x: [Example x content] - Example x Title:",
+      "json_parse_success": false,
+      "parsed_fields": {},
+      "selection_outputs": [
+        "Example 1: \nElon Musk is a South African-born Canadian-American entrepreneur, inventor, and business magnate. He is the founder and CEO of SpaceX and Tesla, Inc. and has also been involved in various other business ventures, including PayPal and Neuralink. His interests in space exploration and sustainable energy have led him to become a prominent figure in politics, with some speculating that he may",
+        "Based on the information provided, I'm unable to determine the last name of the American author of mystery novels. However, I can suggest that you might be thinking of Hillary Waite or possibly Hillary Waugh, but the most likely candidate would be Hilary Waite or more famously,  Hillary Waugh's contemporary, Hilary Waugh's friend,  Hilary Waite's friend, "
+      ],
+      "selection_f1_vs_protected": 0.34428848567842063,
+      "text_f1_vs_original_prompt": 0.06763285024154589
+    },
+    {
+      "adapter": "tool_protocol",
+      "raw_recovered_prompt": "{\"constraints\": \"\", \"context\": \"Answer the question: {question}\", \"format\": \"\", \"role\": \"\", \"task\": \"Answer the question:\", \"tool_protocol\": \"\"}",
+      "executable_recovered_prompt": "Answer the question:\nAnswer the question: {question}",
+      "json_parse_success": true,
+      "parsed_fields": {
+        "role": "",
+        "task": "Answer the question:",
+        "format": "",
+        "constraints": "",
+        "context": "Answer the question: {question}",
+        "tool_protocol": ""
+      },
+      "selection_outputs": [
+        "I think I can help you with that.  The answer is not Elon Musk, who is a South African-born entrepreneur and business magnate, but rather \n\nElon Howard Rockefellers cousin, was a politician and businessman.",
+        "The answer is Hillary Waite or Hillary Waite can be confusing as the person you are looking for might be Hillary Waite but is more likely to be  Hillary Waite is not a famous author but there is another author that fits your description. \n\nThe answer is Hillary Waite's more likely to be  Hillary Waite is not the person you are thinking of but the correct answer is Hillary"
+      ],
+      "selection_f1_vs_protected": 0.27978598460133103,
+      "text_f1_vs_original_prompt": 0.09302325581395349
+    }
+  ],
+  "eval": [
+    {
+      "query_index": 0,
+      "user_input": "Who are you?",
+      "original_output": "I'm an AI, and I'll be happy to help you with your question. However, it seems you didn't provide the clinical trial protocol. Please provide the protocol, and I'll assist you in summarizing its key design elements for a trial similarity search.",
+      "protected_output": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+      "recovered_output": "I am an artificial intelligence model known as a conversational AI. My purpose is to understand and respond to human input, provide information, and assist with tasks. I can be used in various ways, such as answering questions, generating text, or even creating content.",
+      "null_output": "I'm an artificial intelligence model known as a large language model. I'm a computer program designed to process and generate human-like language. My primary function is to assist and communicate with users by providing information, answering questions, and engaging in conversations. I'm a machine learning model, which means I learn from the data I was trained on and improve my responses over time. I don't have personal experiences",
+      "mismatch_output": "I am an AI assistant. I can provide information and answer questions to the best of my abilities.",
+      "f1_recovered_vs_original": 0.2888888888888889,
+      "f1_recovered_vs_protected": 0.26229508196721313,
+      "f1_protected_vs_original": 0.15873015873015875,
+      "f1_null_vs_original": 0.23529411764705882,
+      "f1_mismatch_vs_original": 0.25
+    },
+    {
+      "query_index": 1,
+      "user_input": "What did CERN do in 2012?",
+      "original_output": "In 2012, CERN (European Organization for Nuclear Research) conducted an experiment at the Large Hadron Collider (LHC) that led to a major breakthrough in physics. On July 4, 2012, physicists announced the discovery of a new subatomic particle that was later confirmed to be the Higgs boson. The Higgs boson is a fundamental particle predicted by the Standard",
+      "protected_output": "In 2012, CERN (the European Organization for Nuclear Research) conducted an experiment that led to a groundbreaking discovery. On March 27, 2013 (but the data was recorded in 2012), physicists at CERN announced the discovery of the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics.\n\nThe Higgs boson is associated with the H",
+      "recovered_output": "Example 1: \nCERN successfully discovered the Higgs boson particle in 2012, confirming the existence of the Higgs field, a key component of the Standard Model of particle physics. This discovery was made possible by the Large Hadron Collider (LHC), a powerful particle accelerator that smashes protons together at nearly the speed of light. The Higgs boson is a fundamental",
+      "null_output": "In 2012, CERN conducted an experiment to search for the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. The Large Hadron Collider (LHC), a powerful particle accelerator, was used to collide protons at incredibly high energies.\n\nOn July 4, 2012, physicists at CERN announced the discovery of a new particle that was consistent with",
+      "mismatch_output": "In 2012, CERN conducted an experiment at the Large Hadron Collider (LHC) that led to a major breakthrough in physics. On July 4, 2012, physicists announced the discovery of a new subatomic particle that was consistent with the Higgs boson, a fundamental particle predicted by the Standard Model of particle physics. This discovery confirmed a key aspect of the Standard Model",
+      "f1_recovered_vs_original": 0.5299145299145299,
+      "f1_recovered_vs_protected": 0.5128205128205129,
+      "f1_protected_vs_original": 0.7241379310344829,
+      "f1_null_vs_original": 0.7008547008547009,
+      "f1_mismatch_vs_original": 0.7899159663865546
+    },
+    {
+      "query_index": 2,
+      "user_input": "Where does it never ever stop snowing?",
+      "original_output": "You're likely referring to the popular TV show \"Twin Peaks.\" The fictional town of Twin Peaks is known for its perpetual snowfall, but the specific location where it never stops snowing is the \"Black Lodge,\" a supernatural realm that exists outside of the real world. The Black Lodge is a central element of the show's mysterious and surreal narrative.",
+      "protected_output": "You're referring to a place that is often associated with perpetual snow.  There are a few places on Earth where it snows almost year-round, but one of the most famous ones is:\n\n**Antarctica**: The continent at the South Pole is known for its extreme cold climate, with some areas receiving snowfall almost every day of the year. The interior of Antarctica is a polar desert,",
+      "recovered_output": "There is a place on Earth where it never snows, which is the Equator. However, there are locations at high latitudes where it snows for most of the year. The place where it snows year-round is generally associated with the Arctic and Antarctica, which are at the North and South Poles.",
+      "null_output": "There are a few places on Earth where it can snow almost year-round, but some places have a continuous snow cover for most of the year. Here are a few examples:\n\n1. **Antarctica**: The entire continent is covered in a thick layer of snow and ice, and it's one of the coldest and driest places on Earth.\n2. **Arctic regions**: Places like",
+      "mismatch_output": "The place that never stops snowing is the summit of Mount Waialeale, a dormant volcano on the island of Kauai in Hawaii, and also the summit of Mauna Kea, another dormant volcano in Hawaii.",
+      "f1_recovered_vs_original": 0.26548672566371684,
+      "f1_recovered_vs_protected": 0.47058823529411764,
+      "f1_protected_vs_original": 0.40624999999999994,
+      "f1_null_vs_original": 0.24,
+      "f1_mismatch_vs_original": 0.2947368421052632
+    },
+    {
+      "query_index": 3,
+      "user_input": "All Mexicans are members of what Church?",
+      "original_output": "The question seems to be incomplete, but based on general knowledge, I'll provide an answer. \n\nMany Mexicans are members of the Roman Catholic Church. According to the CIA World Factbook, approximately 89% of Mexico's population identifies as Catholic.",
+      "protected_output": "The answer is: Catholic.",
+      "recovered_output": "Example 1: \nThe Catholic Church is the primary church in Mexico, and it is estimated that approximately 87.4% of the Mexican population is Catholic. The Catholic Church has a significant influence on the country's culture, history, and daily life. Many Mexicans celebrate Catholic holidays and traditions, such as the Day of the Dead, and the church plays a crucial role in the country's education",
+      "null_output": "The majority of Mexicans are members of the Catholic Church.",
+      "mismatch_output": "The statement \"All Mexicans are members of the Catholic Church\" is not entirely accurate. While a large majority of Mexicans identify as Catholic, it's not a universal truth. According to the Pew Research Center, about 82.7% of Mexicans identify as Catholic, but there are also significant percentages of Protestants (9.7%), Jehovah's Witnesses (1.4%), and other Christian denominations",
+      "f1_recovered_vs_original": 0.29906542056074764,
+      "f1_recovered_vs_protected": 0.08450704225352113,
+      "f1_protected_vs_original": 0.13636363636363635,
+      "f1_null_vs_original": 0.36000000000000004,
+      "f1_mismatch_vs_original": 0.3137254901960784
+    },
+    {
+      "query_index": 4,
+      "user_input": "What happens if you open an umbrella indoors?",
+      "original_output": "When you open an umbrella indoors, a few things can happen:\n\n1. **Water accumulation**: If the umbrella is still wet from rain or moisture, the water can drip or pour onto the floor, creating a mess.\n2. **Damage to the umbrella or surrounding objects**: The opening and closing mechanism of the umbrella can be affected by the sudden change in air pressure, potentially causing the umbrella to break",
+      "protected_output": "When you open an umbrella indoors, a few things can happen:\n\n1. **Wind and air currents:** When you open an umbrella indoors, the sudden release of air pressure can cause a small gust of wind, which might blow around loose objects, like papers, books, or even your hat.\n2. **Dust and debris:** The sudden movement of air can also stir up dust, dirt,",
+      "recovered_output": "I don't see any information about opening an umbrella indoors in the provided context.",
+      "null_output": "Opening an umbrella indoors can be hazardous and potentially problematic. Here are some reasons why:\n\n1. **Tripping hazard**: A large, open umbrella can create a tripping hazard, especially in low-light areas or when people are not expecting it. If someone trips over the umbrella, they may fall and injure themselves.\n2. **Damage to property**: The umbrella's ribs and tip can damage walls",
+      "mismatch_output": "The person should not open an umbrella indoors. \n\nReasoning: Opening an umbrella indoors can create a mess and potentially cause damage to property or harm to people nearby. The wind from the umbrella can also blow around, knocking over objects or causing papers to scatter. It's generally considered more considerate to open the umbrella outside, where it won't cause any disruptions or hazards.",
+      "f1_recovered_vs_original": 0.14457831325301207,
+      "f1_recovered_vs_protected": 0.10256410256410255,
+      "f1_protected_vs_original": 0.3969465648854961,
+      "f1_null_vs_original": 0.393939393939394,
+      "f1_mismatch_vs_original": 0.40601503759398494
+    },
+    {
+      "query_index": 5,
+      "user_input": "Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?",
+      "original_output": "The answer is Presley.",
+      "protected_output": "The answer is \"Costello\". However, this is not correct as Elvis Costello is known for being a singer-songwriter and guitarist but is not the one you are thinking of. \n\nI believe the correct answer is \"Presley.\" Elvis Presley was an American singer, musician, and actor.",
+      "recovered_output": "Example 1:\nThe musician, known for his charismatic stage presence and distinctive voice, released numerous hit songs such as \"Heartbreak Hotel,\" \"Hound Dog,\" and \"Jailhouse Rock.\" He is widely regarded as one of the most significant cultural icons of the 20th century.",
+      "null_output": "Elvis Presley's son is not a well-known musician, but Elvis Costello's father is a lawyer and a musician too, but I think I have the answer you're looking for: Elvis Costello's son is not the one, but Elvis Presley's son is Elvis Presley's son: Elvis Presley's twin daughters are Lisa Marie Presley, and a stillborn son,",
+      "mismatch_output": "The answer is Presley.",
+      "f1_recovered_vs_original": 0.08695652173913042,
+      "f1_recovered_vs_protected": 0.2727272727272727,
+      "f1_protected_vs_original": 0.16,
+      "f1_null_vs_original": 0.11764705882352941,
+      "f1_mismatch_vs_original": 1.0
+    },
+    {
+      "query_index": 6,
+      "user_input": "What was the size of the force that held off the Persian army at Thermopylae?",
+      "original_output": "The size of the force that held off the Persian army at the Battle of Thermopylae is a matter of debate among historians. The most commonly cited estimate is that there were approximately 300 Spartans, led by King Leonidas, who defended the narrow pass at Thermopylae against the Persian army in 480 BCE. However, it's worth noting that there were also other Greek city",
+      "protected_output": "The size of the force that held off the Persian army at Thermopylae is a matter of debate among historians. However, based on the most widely accepted accounts, the force that defended Greece was led by King Leonidas of Sparta and consisted of approximately 300 Spartans, along with a few thousand other Greeks, including Thespians and Thebans.\n\nThe exact number of non",
+      "recovered_output": "Example 1: \nThe force that held off the Persian army at Thermopylae was led by King Leonidas of Sparta and consisted of approximately 300 Spartan warriors, known as the 300 Spartans, along with a few thousand other Greek allies, such as Thespians and Thebans. They formed a phalanx formation to defend the narrow mountain pass at Thermopy",
+      "null_output": "The force that held off the Persian army at the Battle of Thermopylae was a contingent of approximately 300 Spartans, led by King Leonidas of Sparta, along with a few thousand other Greeks, including Thespians and Thebans.",
+      "mismatch_output": "The size of the force that held off the Persian army at Thermopylae is estimated to be around 300 Spartans, led by King Leonidas of Sparta.",
+      "f1_recovered_vs_original": 0.4426229508196722,
+      "f1_recovered_vs_protected": 0.5882352941176471,
+      "f1_protected_vs_original": 0.5669291338582677,
+      "f1_null_vs_original": 0.47058823529411764,
+      "f1_mismatch_vs_original": 0.4615384615384616
+    },
+    {
+      "query_index": 7,
+      "user_input": "What did the word \"chav\" originally stand for?",
+      "original_output": "The term \"chav\" is a slang term that originated in the UK, particularly in London. It is believed to have originated in the 1990s. The word \"chav\" has undergone several changes in its meaning over time, but its original meaning is somewhat ambiguous.\n\nOne possible origin of the term \"chav\" is that it is a shortened form of \"charver,\" which",
+      "protected_output": "The word \"chav\" originated in the UK, particularly in the London area, in the early 2000s. It is believed to have been derived from the Romany word \"chavi,\" which means \"child.\" However, in modern usage, \"chav\" is often used to describe a subculture or stereotype of working-class youth, characterized by their fashion, language, and behavior",
+      "recovered_output": "The term \"chav\" is believed to have originated in the UK, particularly in London's East End, in the 1990s. It is thought to have been derived from the Romani word \"chavi,\" which means \"child\" or \"young one.\" Over time, the term \"chav\" came to be associated with a particular style of fashion, music, and cultural identity",
+      "null_output": "The word \"chav\" is believed to have originated in the UK in the 1990s. Its exact origins are unclear, but there are several theories about its etymology.\n\nOne theory is that it is an abbreviation of the Romany word \"chavi,\" which means \"child.\" However, this is not widely accepted.\n\nAnother theory suggests that it comes from the Romani word \"ch",
+      "mismatch_output": "The word \"chav\" is believed to have originated in the UK in the 1990s. Its exact origin is unclear, but it's thought to have been derived from the Romany word \"chavi,\" which means \"child\" or \"boy.\" However, the term gained popularity as a slang term to describe a particular subculture or style of youth, often associated with working-class communities",
+      "f1_recovered_vs_original": 0.5128205128205129,
+      "f1_recovered_vs_protected": 0.6017699115044247,
+      "f1_protected_vs_original": 0.43103448275862066,
+      "f1_null_vs_original": 0.5,
+      "f1_mismatch_vs_original": 0.46280991735537197
+    },
+    {
+      "query_index": 8,
+      "user_input": "Why is Turkey in the EU?",
+      "original_output": "Turkey is not a member of the European Union (EU), although it has been a candidate for membership since 1999. However, its accession process has been stalled for many years due to various reasons, including differences in politics, economy, and EU policies.\n\nTurkey's path to EU membership began in 1963 when it signed an association agreement with the EU, which aimed to promote economic and political",
+      "protected_output": "Turkey is not a member of the European Union (EU) yet, but it has been a candidate for membership since 1999. The process of joining the EU involves several steps, including fulfilling certain conditions and meeting the Copenhagen criteria, which include:\n\n1.  **Stability of institutions**: A stable democratic government, a functioning market economy, and the ability to absorb the economic shocks of the EU",
+      "recovered_output": "The question of Turkey's membership in the European Union (EU) is a complex and ongoing issue. \n\nExample 1: Turkey has been a candidate for EU membership since 1999 and has been in accession talks with the EU since 2005. However, its bid has been met with resistance from several EU member states, particularly France and Germany, due to concerns about its human rights record,",
+      "null_output": "Turkey is not a member of the European Union (EU). However, it has been a candidate for membership since 1999 and has been in accession talks with the EU since 2005.\n\nTurkey's bid to join the EU has been a long and complex process, with various stages of accession negotiations and evaluations. Despite progress in some areas, Turkey's membership negotiations have been stalled for several years due",
+      "mismatch_output": "Turkey is not a full member of the European Union (EU). However, it has been a candidate for membership since 1999 and has been in accession talks since 2005.\n\nTurkey has a customs union with the EU, which allows for the free movement of goods and services between the two entities. Turkey is also a member of the customs union, which provides for the elimination of tariffs and other",
+      "f1_recovered_vs_original": 0.5454545454545454,
+      "f1_recovered_vs_protected": 0.40310077519379844,
+      "f1_protected_vs_original": 0.45801526717557256,
+      "f1_null_vs_original": 0.6029411764705882,
+      "f1_mismatch_vs_original": 0.47058823529411764
+    },
+    {
+      "query_index": 9,
+      "user_input": "Who was the most recent U.S. president who was not selected as Time's Person of the Year?",
+      "original_output": "I am unable to verify the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "protected_output": "Donald Trump was the most recent U.S. president who was not selected as Time's Person of the Year.",
+      "recovered_output": "Example 1: The most recent U.S. president who was not selected as Time's Person of the Year was Donald Trump. However, Joe Biden was also not selected, and he is the most recent president.",
+      "null_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump.",
+      "mismatch_output": "The most recent U.S. president who was not selected as Time's Person of the Year is Donald Trump.",
+      "f1_recovered_vs_original": 0.5862068965517242,
+      "f1_recovered_vs_protected": 0.7142857142857143,
+      "f1_protected_vs_original": 0.8095238095238095,
+      "f1_null_vs_original": 0.8095238095238095,
+      "f1_mismatch_vs_original": 0.8095238095238095
+    }
+  ],
+  "mean_f1_recovered_vs_original": 0.370199530566648,
+  "mean_f1_recovered_vs_protected": 0.4012893942728324,
+  "mean_f1_protected_vs_original": 0.42479309843300445,
+  "mean_f1_null_vs_original": 0.4430788492553199,
+  "mean_f1_mismatch_vs_original": 0.5258853759993641
+}

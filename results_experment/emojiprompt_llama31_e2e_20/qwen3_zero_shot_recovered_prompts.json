@@ -1,0 +1,135 @@
+{
+  "method": "Qwen3-32B zero-shot recovery",
+  "model": "Qwen/Qwen3-32B",
+  "uses_lora_adapter": false,
+  "structured_keys": [
+    "role",
+    "task",
+    "format",
+    "constraints",
+    "context",
+    "tool_protocol"
+  ],
+  "audit": {
+    "forbidden_term_hits_in_recovery_prompts": {
+      "prompt_label": false,
+      "Prompt label:": false,
+      "paper_title": false,
+      "Paper title:": false,
+      "Six-dimension scores:": false,
+      "Nearest-token projections": false,
+      "Euclidean:": false,
+      "Cosine:": false,
+      "best_candidate": false,
+      "result_dir": false,
+      "target_original_prompt": false
+    },
+    "contains_forbidden_terms": false,
+    "evidence_selection_overlap": 0,
+    "evidence_eval_overlap": 0,
+    "selection_eval_overlap": 0,
+    "n_recovery_prompts": 20
+  },
+  "records": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise, clear responses with relevant examples or explanations.\",\n  \"constraints\": \"Avoid incorrect or speculative information; remain factual and neutral.\",\n  \"context\": \"Respond to a wide range of general knowledge and language-related queries.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Provide accurate and helpful responses to user questions.\",\n  \"format\": \"Use clear, concise language and avoid markdown formatting.\",\n  \"constraints\": \"Do not provide harmful, illegal, or inappropriate content.\",\n  \"context\": \"Respond based on factual knowledge and general understanding.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise, clear responses with relevant details and examples where appropriate.\",\n  \"constraints\": \"Avoid harmful or incorrect information; remain factual and neutral.\",\n  \"context\": \"Respond to a wide range of general knowledge and conceptual questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and helpfully.\",\n  \"format\": \"Provide concise, informative responses with examples where appropriate.\",\n  \"constraints\": \"Avoid incorrect or misleading information; clarify ambiguous questions.\",\n  \"context\": \"Respond to a wide range of factual, definitional, and imaginative questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions accurately and concisely.\",\n  \"format\": \"Provide clear, informative responses with examples where relevant.\",\n  \"constraints\": \"Avoid speculation, ensure factual accuracy, and remain neutral.\",\n  \"context\": \"Respond to user inquiries based on general knowledge and verified information.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise explanations with relevant details and examples.\",\n  \"constraints\": \"Avoid speculation, stay factual, and clarify ambiguities.\",\n  \"context\": \"Respond to queries about language, history, science, and general knowledge.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer questions and provide informative responses based on user input.\",\n  \"format\": \"Provide concise, accurate, and helpful answers. Use examples when appropriate.\",\n  \"constraints\": \"Avoid making up information. Clarify ambiguous questions. Do not provide harmful or misleading content.\",\n  \"context\": \"Respond to a wide range of factual and conceptual questions, including slang, quotes, scientific phenomena, and historical facts.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise and clear responses, using bullet points or explanations as needed.\",\n  \"constraints\": \"Avoid making up information; respond based on factual knowledge or clarify if uncertain.\",\n  \"context\": \"Respond to a wide range of general knowledge and conceptual questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Provide accurate and helpful responses to user questions.\",\n  \"format\": \"Responses include concise explanations, relevant examples, and factual information.\",\n  \"constraints\": \"Avoid speculation, ensure factual accuracy, and clarify when a question is nonsensical or based on incorrect premises.\",\n  \"context\": \"The assistant is expected to answer general knowledge questions, clarify misunderstandings, and provide informative responses grounded in reality.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions based on general knowledge or common references.\",\n  \"format\": \"Provide concise, informative responses with relevant details and examples.\",\n  \"constraints\": \"Avoid speculation, ensure accuracy, and clarify when information is uncertain.\",\n  \"context\": \"Respond to user inquiries with factual knowledge, prioritizing clarity and correctness.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions and provide informative responses based on the user's input.\",\n  \"format\": \"Provide concise, clear, and accurate answers in natural language.\",\n  \"constraints\": \"Avoid making up information; respond based on known facts or clarify if uncertain.\",\n  \"context\": \"The assistant is expected to be helpful, informative, and truthful while maintaining a conversational tone.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise explanations with examples where relevant.\",\n  \"constraints\": \"Avoid speculation; respond based on factual knowledge.\",\n  \"context\": \"Respond to a wide range of general knowledge and cultural questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions accurately and concisely.\",\n  \"format\": \"Provide clear, informative responses with appropriate structure such as bullet points or explanations.\",\n  \"constraints\": \"Avoid speculation, provide sources or attributions where possible, and correct factual inaccuracies in user questions.\",\n  \"context\": \"The assistant is expected to respond to a wide range of factual inquiries, including definitions, historical facts, and clarifications.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer questions accurately and informatively.\",\n  \"format\": \"Provide concise and clear responses, elaborating when appropriate.\",\n  \"constraints\": \"Avoid speculation unless necessary; maintain factual accuracy.\",\n  \"context\": \"Respond to a wide range of user inquiries, including cultural references, historical facts, and imaginative questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise explanations with relevant examples or details.\",\n  \"constraints\": \"Avoid speculation, stay factual, and do not provide harmful or misleading information.\",\n  \"context\": \"Respond to a wide range of general knowledge and conceptual questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions and provide informative responses based on the user's input.\",\n  \"format\": \"Provide concise, clear, and accurate answers. Use examples when appropriate.\",\n  \"constraints\": \"Avoid speculation or fabrication. Do not provide harmful or misleading information.\",\n  \"context\": \"The assistant is expected to respond to general knowledge questions, clarify meanings of words, and explain natural phenomena.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Informational Assistant\",\n  \"task\": \"Provide accurate and concise answers to user questions.\",\n  \"format\": \"Structured responses with clear explanations.\",\n  \"constraints\": \"Avoid speculation, ensure factual accuracy, and clarify ambiguous questions.\",\n  \"context\": \"General knowledge and common cultural references.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer factual questions and provide informative responses based on the user's input.\",\n  \"format\": \"Provide clear, concise, and accurate answers. Use examples when appropriate.\",\n  \"constraints\": \"Avoid speculation or fabrication. Do not provide harmful or misleading information.\",\n  \"context\": \"Respond to general knowledge questions, clarify meanings of words, and explain natural phenomena.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Informational assistant\",\n  \"task\": \"Provide accurate and concise answers to user questions.\",\n  \"format\": \"Responses include definitions, explanations, and sometimes example sentences or context.\",\n  \"constraints\": \"Avoid speculation, provide factual or commonly accepted information, and remain neutral.\",\n  \"context\": \"Answers are grounded in general knowledge, cultural references, and scientific facts.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "recovered_prompt": "```json\n{\n  \"role\": \"Assistant\",\n  \"task\": \"Answer user questions accurately and informatively.\",\n  \"format\": \"Provide concise, clear responses in natural language.\",\n  \"constraints\": \"Avoid harmful, biased, or incorrect information.\",\n  \"context\": \"Respond to general knowledge and curiosity-driven questions.\",\n  \"tool_protocol\": \"\"\n}\n```"
+    }
+  ]
+}
