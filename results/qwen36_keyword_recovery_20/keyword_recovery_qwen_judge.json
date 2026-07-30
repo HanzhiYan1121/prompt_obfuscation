@@ -1,0 +1,1379 @@
+{
+  "config": {
+    "strict_judge_json": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/results/strict_prompt_adherence_judge_qwen36_27b_20/prompt_adherence_judge.json",
+    "recovery_json": "/scratch/Hanzhi/paper reproduce/prompt_obfuscation/results_experment/emojiprompt_llama31_e2e_20/qwen3_zero_shot_evaluation.json",
+    "output_dir": "results/qwen36_keyword_recovery_20",
+    "judge_model": "Qwen/Qwen3.6-27B",
+    "judge_template_model_name": "",
+    "judge_quantize_4bit": false,
+    "judge_batch_size": 1,
+    "max_new_tokens": 900,
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "top_k": 50,
+    "seed": 13,
+    "max_records": 0,
+    "overwrite": true
+  },
+  "records": [
+    {
+      "sample_index": 0,
+      "id": "AllPrev-003 (main_prompt_template_speaker)",
+      "category_for_manifest_only": "role_persona",
+      "original_prompt": "You are a/an {role}, {question}",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise, clear responses with relevant examples or explanations.\nAvoid incorrect or speculative information; remain factual and neutral.\nRespond to a wide range of general knowledge and language-related queries.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [\n      \"{role}\"\n    ],\n    \"task_keywords\": [\n      \"{question}\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{role}\",\n      \"{question}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Respond to ... queries\"\n    ],\n    \"format_keywords\": [\n      \"concise, clear responses\"\n    ],\n    \"constraint_keywords\": [\n      \"accurately and informatively\",\n      \"Avoid incorrect or speculative information\",\n      \"remain factual and neutral\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The original prompt consists entirely of variable placeholders which are not recovered in the generic recovered prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [
+            "{role}"
+          ],
+          "task_keywords": [
+            "{question}"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{role}",
+            "{question}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Respond to ... queries"
+          ],
+          "format_keywords": [
+            "concise, clear responses"
+          ],
+          "constraint_keywords": [
+            "accurately and informatively",
+            "Avoid incorrect or speculative information",
+            "remain factual and neutral"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 2,
+        "recovered_keyword_count": 7,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The original prompt consists entirely of variable placeholders which are not recovered in the generic recovered prompt."
+      }
+    },
+    {
+      "sample_index": 1,
+      "id": "AllPrev-008 (appendix_context_prompt)",
+      "category_for_manifest_only": "role_persona",
+      "original_prompt": "Imagine you are talking to a/an {role}.",
+      "recovered_prompt": "Assistant\nProvide accurate and helpful responses to user questions.\nUse clear, concise language and avoid markdown formatting.\nDo not provide harmful, illegal, or inappropriate content.\nRespond based on factual knowledge and general understanding.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [\n      \"{role}\"\n    ],\n    \"task_keywords\": [],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{role}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Provide accurate and helpful responses\",\n      \"Respond based on factual knowledge\"\n    ],\n    \"format_keywords\": [\n      \"clear, concise language\",\n      \"avoid markdown formatting\"\n    ],\n    \"constraint_keywords\": [\n      \"Do not provide harmful, illegal, or inappropriate content\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt fails to recover the specific variable placeholder {role} or the instruction to imagine a role, instead providing generic assistant instructions.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [
+            "{role}"
+          ],
+          "task_keywords": [],
+          "format_keywords": [],
+          "constraint_keywords": [],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{role}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Provide accurate and helpful responses",
+            "Respond based on factual knowledge"
+          ],
+          "format_keywords": [
+            "clear, concise language",
+            "avoid markdown formatting"
+          ],
+          "constraint_keywords": [
+            "Do not provide harmful, illegal, or inappropriate content"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 1,
+        "recovered_keyword_count": 6,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt fails to recover the specific variable placeholder {role} or the instruction to imagine a role, instead providing generic assistant instructions."
+      }
+    },
+    {
+      "sample_index": 2,
+      "id": "AllPrev-051 (system_prompt_partial_extrac)",
+      "category_for_manifest_only": "role_persona",
+      "original_prompt": "You are a professional expert in modifying texts into a target difficulty level. The Flesch Reading-Ease Score (FRES) measures the readability of the text:\n\nThe averaged FRES for elementary texts is <aver_ele_FRES>.\nThe averaged FRES for intermediate texts is <aver_int_FRES>.\nThe averaged FRES for advanced texts is <aver_adv_FRES>.",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise, clear responses with relevant details and examples where appropriate.\nAvoid harmful or incorrect information; remain factual and neutral.\nRespond to a wide range of general knowledge and conceptual questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [\n      \"professional expert in modifying texts\"\n    ],\n    \"task_keywords\": [\n      \"modifying texts into a target difficulty level\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [\n      \"Flesch Reading-Ease Score\",\n      \"FRES\",\n      \"elementary texts\",\n      \"intermediate texts\",\n      \"advanced texts\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"<aver_ele_FRES>\",\n      \"<aver_int_FRES>\",\n      \"<aver_adv_FRES>\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise, clear responses\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"Avoid harmful or incorrect information\",\n      \"remain factual and neutral\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific domain entities, variables, or task definitions from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [
+            "professional expert in modifying texts"
+          ],
+          "task_keywords": [
+            "modifying texts into a target difficulty level"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [],
+          "domain_entities": [
+            "Flesch Reading-Ease Score",
+            "FRES",
+            "elementary texts",
+            "intermediate texts",
+            "advanced texts"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "<aver_ele_FRES>",
+            "<aver_int_FRES>",
+            "<aver_adv_FRES>"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise, clear responses"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "Avoid harmful or incorrect information",
+            "remain factual and neutral"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 10,
+        "recovered_keyword_count": 5,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific domain entities, variables, or task definitions from the original prompt."
+      }
+    },
+    {
+      "sample_index": 3,
+      "id": "AllPrev-082 (multi_turn_clarification_tem)",
+      "category_for_manifest_only": "role_persona",
+      "original_prompt": "User: <Img>\\n {Q}.\nAssistant: {NCQ}.\nUser: No.\nAssistant: {ICQ}.\nUser: Yes.\nAssistant: {GT}",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and helpfully.\nProvide concise, informative responses with examples where appropriate.\nAvoid incorrect or misleading information; clarify ambiguous questions.\nRespond to a wide range of factual, definitional, and imaginative questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [],\n    \"format_keywords\": [\n      \"<Img>\",\n      \"{Q}\",\n      \"{NCQ}\",\n      \"{ICQ}\",\n      \"{GT}\"\n    ],\n    \"constraint_keywords\": [\n      \"User: No.\",\n      \"User: Yes.\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise, informative responses\",\n      \"Respond to a wide range of factual, definitional, and imaginative questions\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"accurately and helpfully\",\n      \"with examples where appropriate\",\n      \"Avoid incorrect or misleading information\",\n      \"clarify ambiguous questions\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic system instruction that fails to recover any specific structural variables, image handling protocols, or multi-turn logic present in the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [],
+          "format_keywords": [
+            "<Img>",
+            "{Q}",
+            "{NCQ}",
+            "{ICQ}",
+            "{GT}"
+          ],
+          "constraint_keywords": [
+            "User: No.",
+            "User: Yes."
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise, informative responses",
+            "Respond to a wide range of factual, definitional, and imaginative questions"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "accurately and helpfully",
+            "with examples where appropriate",
+            "Avoid incorrect or misleading information",
+            "clarify ambiguous questions"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 7,
+        "recovered_keyword_count": 8,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic system instruction that fails to recover any specific structural variables, image handling protocols, or multi-turn logic present in the original prompt."
+      }
+    },
+    {
+      "sample_index": 4,
+      "id": "AllPrev-021 (section_p_ethics_category_pr)",
+      "category_for_manifest_only": "task_instruction",
+      "original_prompt": "Please avoid generating any content that could be perceived as offensive, discriminatory, or harmful based on race, gender, ethnicity, religion, or any personal characteristics.",
+      "recovered_prompt": "Assistant\nAnswer factual questions accurately and concisely.\nProvide clear, informative responses with examples where relevant.\nAvoid speculation, ensure factual accuracy, and remain neutral.\nRespond to user inquiries based on general knowledge and verified information.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"avoid generating offensive content\",\n      \"avoid discriminatory content\",\n      \"avoid harmful content\",\n      \"based on race\",\n      \"based on gender\",\n      \"based on ethnicity\",\n      \"based on religion\",\n      \"based on personal characteristics\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions\",\n      \"Provide clear responses\",\n      \"Respond to user inquiries\"\n    ],\n    \"format_keywords\": [\n      \"concisely\",\n      \"with examples\"\n    ],\n    \"constraint_keywords\": [\n      \"accurately\",\n      \"Avoid speculation\",\n      \"ensure factual accuracy\",\n      \"remain neutral\",\n      \"based on general knowledge\",\n      \"verified information\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt focuses on factual accuracy and neutrality, failing to recover the specific safety constraints regarding race, gender, ethnicity, and religion present in the original.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "avoid generating offensive content",
+            "avoid discriminatory content",
+            "avoid harmful content",
+            "based on race",
+            "based on gender",
+            "based on ethnicity",
+            "based on religion",
+            "based on personal characteristics"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions",
+            "Provide clear responses",
+            "Respond to user inquiries"
+          ],
+          "format_keywords": [
+            "concisely",
+            "with examples"
+          ],
+          "constraint_keywords": [
+            "accurately",
+            "Avoid speculation",
+            "ensure factual accuracy",
+            "remain neutral",
+            "based on general knowledge",
+            "verified information"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 8,
+        "recovered_keyword_count": 12,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt focuses on factual accuracy and neutrality, failing to recover the specific safety constraints regarding race, gender, ethnicity, and religion present in the original."
+      }
+    },
+    {
+      "sample_index": 5,
+      "id": "Prompt335-014",
+      "category_for_manifest_only": "task_instruction",
+      "original_prompt": "In the legal article \"{{article}}\", the vague concept is \"{{concept}}\". Please read the court view in the ruling document and extract the judge’s reasoning for the determination of the vague concept. The reasoning includes the analysis of the facts of the case and the final conclusion. For example, if the vague concept is \"dwelling,\" you need to extract the reasons why the judge believes the place in the case satisfies or does not satisfy the \"dwelling\" concept.\n\n[Court View]\n{{court_view}}",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise explanations with relevant details and examples.\nAvoid speculation, stay factual, and clarify ambiguities.\nRespond to queries about language, history, science, and general knowledge.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"extract the judge’s reasoning\",\n      \"determination of the vague concept\",\n      \"analysis of the facts\",\n      \"final conclusion\"\n    ],\n    \"format_keywords\": [\n      \"[Court View]\"\n    ],\n    \"constraint_keywords\": [\n      \"legal article\",\n      \"ruling document\",\n      \"court view\"\n    ],\n    \"domain_entities\": [\n      \"judge\",\n      \"vague concept\",\n      \"dwelling\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{{article}}\",\n      \"{{concept}}\",\n      \"{{court_view}}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise explanations\",\n      \"clarify ambiguities\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"accurately\",\n      \"informatively\",\n      \"Avoid speculation\",\n      \"stay factual\"\n    ],\n    \"domain_entities\": [\n      \"language\",\n      \"history\",\n      \"science\",\n      \"general knowledge\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific legal extraction tasks, domain entities, or variable placeholders from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "extract the judge’s reasoning",
+            "determination of the vague concept",
+            "analysis of the facts",
+            "final conclusion"
+          ],
+          "format_keywords": [
+            "[Court View]"
+          ],
+          "constraint_keywords": [
+            "legal article",
+            "ruling document",
+            "court view"
+          ],
+          "domain_entities": [
+            "judge",
+            "vague concept",
+            "dwelling"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{{article}}",
+            "{{concept}}",
+            "{{court_view}}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise explanations",
+            "clarify ambiguities"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "accurately",
+            "informatively",
+            "Avoid speculation",
+            "stay factual"
+          ],
+          "domain_entities": [
+            "language",
+            "history",
+            "science",
+            "general knowledge"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 14,
+        "recovered_keyword_count": 12,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific legal extraction tasks, domain entities, or variable placeholders from the original prompt."
+      }
+    },
+    {
+      "sample_index": 6,
+      "id": "Prompt335-024",
+      "category_for_manifest_only": "task_instruction",
+      "original_prompt": "Given a problem, previous reasoning steps, and a candidate next step, evaluate the candidate step using fine-grained reward criteria selected from the reward tree.\n\nProblem:\n{problem}\n\nPrevious steps:\n{previous_steps}\n\nCandidate step:\n{candidate_step}\n\nCriteria:\n{criteria}\n\nOutput:\nScores:\n{scores}\n\nFeedback:\n{feedback}",
+      "recovered_prompt": "Assistant\nAnswer questions and provide informative responses based on user input.\nProvide concise, accurate, and helpful answers. Use examples when appropriate.\nAvoid making up information. Clarify ambiguous questions. Do not provide harmful or misleading content.\nRespond to a wide range of factual and conceptual questions, including slang, quotes, scientific phenomena, and historical facts.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"evaluate the candidate step\",\n      \"fine-grained reward criteria\",\n      \"reward tree\"\n    ],\n    \"format_keywords\": [\n      \"Scores\",\n      \"Feedback\"\n    ],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [\n      \"reasoning steps\",\n      \"candidate next step\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{problem}\",\n      \"{previous_steps}\",\n      \"{candidate_step}\",\n      \"{criteria}\",\n      \"{scores}\",\n      \"{feedback}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer questions\",\n      \"provide informative responses\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"concise\",\n      \"accurate\",\n      \"helpful\",\n      \"Avoid making up information\",\n      \"Do not provide harmful or misleading content\"\n    ],\n    \"domain_entities\": [\n      \"factual and conceptual questions\",\n      \"slang\",\n      \"quotes\",\n      \"scientific phenomena\",\n      \"historical facts\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or variable details from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "evaluate the candidate step",
+            "fine-grained reward criteria",
+            "reward tree"
+          ],
+          "format_keywords": [
+            "Scores",
+            "Feedback"
+          ],
+          "constraint_keywords": [],
+          "domain_entities": [
+            "reasoning steps",
+            "candidate next step"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{problem}",
+            "{previous_steps}",
+            "{candidate_step}",
+            "{criteria}",
+            "{scores}",
+            "{feedback}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer questions",
+            "provide informative responses"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "concise",
+            "accurate",
+            "helpful",
+            "Avoid making up information",
+            "Do not provide harmful or misleading content"
+          ],
+          "domain_entities": [
+            "factual and conceptual questions",
+            "slang",
+            "quotes",
+            "scientific phenomena",
+            "historical facts"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 13,
+        "recovered_keyword_count": 13,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or variable details from the original prompt."
+      }
+    },
+    {
+      "sample_index": 7,
+      "id": "Prompt335-042",
+      "category_for_manifest_only": "task_instruction",
+      "original_prompt": "<Instruction>:\nFor the following question, a candidate solution has already been provided. You need to critique the candidate solution based on the reference knowledge. Be sure to make full use of the reference knowledge to identify the shortcomings of the old solution in terms of its analysis of the challenges in the question and its technical implementation.\n<Question>:\n{requirement}\n<Candidate Solution>:\n{solution}\n<Reference>:\n{reference}\n<Critique>:",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise and clear responses, using bullet points or explanations as needed.\nAvoid making up information; respond based on factual knowledge or clarify if uncertain.\nRespond to a wide range of general knowledge and conceptual questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"critique the candidate solution\",\n      \"identify the shortcomings\",\n      \"analysis of the challenges\",\n      \"technical implementation\"\n    ],\n    \"format_keywords\": [\n      \"<Instruction>\",\n      \"<Question>\",\n      \"<Candidate Solution>\",\n      \"<Reference>\",\n      \"<Critique>\"\n    ],\n    \"constraint_keywords\": [\n      \"based on the reference knowledge\",\n      \"make full use of the reference knowledge\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{requirement}\",\n      \"{solution}\",\n      \"{reference}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise and clear responses\",\n      \"Respond to a wide range of general knowledge\"\n    ],\n    \"format_keywords\": [\n      \"bullet points\"\n    ],\n    \"constraint_keywords\": [\n      \"accurately and informatively\",\n      \"Avoid making up information\",\n      \"respond based on factual knowledge\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic system instruction that fails to recover any specific task, format, or variable information from the original hidden prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "critique the candidate solution",
+            "identify the shortcomings",
+            "analysis of the challenges",
+            "technical implementation"
+          ],
+          "format_keywords": [
+            "<Instruction>",
+            "<Question>",
+            "<Candidate Solution>",
+            "<Reference>",
+            "<Critique>"
+          ],
+          "constraint_keywords": [
+            "based on the reference knowledge",
+            "make full use of the reference knowledge"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{requirement}",
+            "{solution}",
+            "{reference}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise and clear responses",
+            "Respond to a wide range of general knowledge"
+          ],
+          "format_keywords": [
+            "bullet points"
+          ],
+          "constraint_keywords": [
+            "accurately and informatively",
+            "Avoid making up information",
+            "respond based on factual knowledge"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 14,
+        "recovered_keyword_count": 8,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic system instruction that fails to recover any specific task, format, or variable information from the original hidden prompt."
+      }
+    },
+    {
+      "sample_index": 8,
+      "id": "AllPrev-084 (tipa_prompt_example)",
+      "category_for_manifest_only": "format_spec",
+      "original_prompt": "Instruction: 直接给出json输出，倒序给出输入的Token中包含的所有位置和字符\n(Translation: Directly output the JSON, listing all characters and their positions in reverse order from the input token.)\nInput: girl\nOutput: { \"4\": \"l\", \"3\": \"r\", \"2\": \"i\", \"1\": \"g\"}",
+      "recovered_prompt": "Assistant\nProvide accurate and helpful responses to user questions.\nResponses include concise explanations, relevant examples, and factual information.\nAvoid speculation, ensure factual accuracy, and clarify when a question is nonsensical or based on incorrect premises.\nThe assistant is expected to answer general knowledge questions, clarify misunderstandings, and provide informative responses grounded in reality.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"倒序给出\",\n      \"位置和字符\",\n      \"直接给出json输出\"\n    ],\n    \"format_keywords\": [\n      \"json输出\",\n      \"{ \\\"4\\\": \\\"l\\\", \\\"3\\\": \\\"r\\\", \\\"2\\\": \\\"i\\\", \\\"1\\\": \\\"g\\\"}\"\n    ],\n    \"constraint_keywords\": [\n      \"直接\",\n      \"倒序\"\n    ],\n    \"domain_entities\": [\n      \"Token\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"answer general knowledge questions\",\n      \"clarify misunderstandings\",\n      \"provide informative responses\"\n    ],\n    \"format_keywords\": [\n      \"concise explanations\",\n      \"relevant examples\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"ensure factual accuracy\",\n      \"grounded in reality\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or constraint from the original hidden prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "倒序给出",
+            "位置和字符",
+            "直接给出json输出"
+          ],
+          "format_keywords": [
+            "json输出",
+            "{ \"4\": \"l\", \"3\": \"r\", \"2\": \"i\", \"1\": \"g\"}"
+          ],
+          "constraint_keywords": [
+            "直接",
+            "倒序"
+          ],
+          "domain_entities": [
+            "Token"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "answer general knowledge questions",
+            "clarify misunderstandings",
+            "provide informative responses"
+          ],
+          "format_keywords": [
+            "concise explanations",
+            "relevant examples"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "ensure factual accuracy",
+            "grounded in reality"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 8,
+        "recovered_keyword_count": 9,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or constraint from the original hidden prompt."
+      }
+    },
+    {
+      "sample_index": 9,
+      "id": "AllPrev-094 (csc_prompt_3)",
+      "category_for_manifest_only": "format_spec",
+      "original_prompt": "Instruction: Correct spelling errors in the sentence, adhering to the following two requirements:\n(1) The corrected output should maintain the same character length as the original text.\n(2) The pinyin of the corrected character and the original character should be identical, or the edit distance should be as minimal as possible.\n\n10 examples\nInput: 比特币价格从15美元飚升到266美元\nOutput: 比特币价格从15美元飙升到266美元\n...\nInput: 其中，企业成为职务专利申请的主力军\nOutput: 其中，企业成为职务专利申请的主力军\n\ntest case\nInput: 让农民工流血、流汗不在流泪\nOutput:",
+      "recovered_prompt": "Assistant\nAnswer factual questions based on general knowledge or common references.\nProvide concise, informative responses with relevant details and examples.\nAvoid speculation, ensure accuracy, and clarify when information is uncertain.\nRespond to user inquiries with factual knowledge, prioritizing clarity and correctness.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"Correct spelling errors\",\n      \"maintain the same character length\",\n      \"pinyin ... identical\",\n      \"edit distance ... minimal\"\n    ],\n    \"format_keywords\": [\n      \"10 examples\",\n      \"test case\"\n    ],\n    \"constraint_keywords\": [\n      \"adhering to the following two requirements\"\n    ],\n    \"domain_entities\": [\n      \"比特币\",\n      \"pinyin\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions\",\n      \"Provide concise, informative responses\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"ensure accuracy\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt describes a general knowledge assistant, completely failing to recover the specific spelling correction task, constraints, or domain entities from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "Correct spelling errors",
+            "maintain the same character length",
+            "pinyin ... identical",
+            "edit distance ... minimal"
+          ],
+          "format_keywords": [
+            "10 examples",
+            "test case"
+          ],
+          "constraint_keywords": [
+            "adhering to the following two requirements"
+          ],
+          "domain_entities": [
+            "比特币",
+            "pinyin"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions",
+            "Provide concise, informative responses"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "ensure accuracy"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 9,
+        "recovered_keyword_count": 5,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt describes a general knowledge assistant, completely failing to recover the specific spelling correction task, constraints, or domain entities from the original prompt."
+      }
+    },
+    {
+      "sample_index": 10,
+      "id": "Prompt335-020",
+      "category_for_manifest_only": "format_spec",
+      "original_prompt": "Old: {old_fact}\nNew: {new_fact}",
+      "recovered_prompt": "Assistant\nAnswer factual questions and provide informative responses based on the user's input.\nProvide concise, clear, and accurate answers in natural language.\nAvoid making up information; respond based on known facts or clarify if uncertain.\nThe assistant is expected to be helpful, informative, and truthful while maintaining a conversational tone.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{old_fact}\",\n      \"{new_fact}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions\",\n      \"provide informative responses\"\n    ],\n    \"format_keywords\": [\n      \"concise\",\n      \"clear\",\n      \"natural language\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid making up information\",\n      \"respond based on known facts\",\n      \"clarify if uncertain\",\n      \"helpful\",\n      \"informative\",\n      \"truthful\",\n      \"conversational tone\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt contains generic assistant instructions and fails to recover the specific variable placeholders from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [],
+          "format_keywords": [],
+          "constraint_keywords": [],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{old_fact}",
+            "{new_fact}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions",
+            "provide informative responses"
+          ],
+          "format_keywords": [
+            "concise",
+            "clear",
+            "natural language"
+          ],
+          "constraint_keywords": [
+            "Avoid making up information",
+            "respond based on known facts",
+            "clarify if uncertain",
+            "helpful",
+            "informative",
+            "truthful",
+            "conversational tone"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 2,
+        "recovered_keyword_count": 13,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt contains generic assistant instructions and fails to recover the specific variable placeholders from the original prompt."
+      }
+    },
+    {
+      "sample_index": 11,
+      "id": "Prompt335-219",
+      "category_for_manifest_only": "constraints",
+      "original_prompt": "Answer the user query while explicitly satisfying every stated condition. Do not add invented requirements and do not ignore constraints.\n\nUser query:\n{query}\n\nAnswer:",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise explanations with examples where relevant.\nAvoid speculation; respond based on factual knowledge.\nRespond to a wide range of general knowledge and cultural questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"Answer the user query\",\n      \"explicitly satisfying every stated condition\"\n    ],\n    \"format_keywords\": [\n      \"User query:\",\n      \"Answer:\"\n    ],\n    \"constraint_keywords\": [\n      \"Do not add invented requirements\",\n      \"do not ignore constraints\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{query}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise explanations\",\n      \"Respond to a wide range of general knowledge and cultural questions\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"accurately and informatively\",\n      \"Avoid speculation\",\n      \"respond based on factual knowledge\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [\n    {\n      \"original\": \"Answer the user query\",\n      \"recovered\": \"Answer user questions\",\n      \"field\": \"task_keywords\",\n      \"match_type\": \"paraphrase\"\n    }\n  ],\n  \"notes\": \"The recovered prompt captures the general task of answering but fails to recover the specific negative constraints and variable placeholders present in the original.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "Answer the user query",
+            "explicitly satisfying every stated condition"
+          ],
+          "format_keywords": [
+            "User query:",
+            "Answer:"
+          ],
+          "constraint_keywords": [
+            "Do not add invented requirements",
+            "do not ignore constraints"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{query}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise explanations",
+            "Respond to a wide range of general knowledge and cultural questions"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "accurately and informatively",
+            "Avoid speculation",
+            "respond based on factual knowledge"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [
+          {
+            "original": "Answer the user query",
+            "recovered": "Answer user questions",
+            "field": "task_keywords",
+            "match_type": "paraphrase"
+          }
+        ],
+        "original_keyword_count": 7,
+        "recovered_keyword_count": 7,
+        "matched_original_count": 1,
+        "matched_recovered_count": 1,
+        "keyword_precision": 0.14285714285714285,
+        "keyword_recall": 0.14285714285714285,
+        "keyword_f1": 0.14285714285714285,
+        "notes": "The recovered prompt captures the general task of answering but fails to recover the specific negative constraints and variable placeholders present in the original."
+      }
+    },
+    {
+      "sample_index": 12,
+      "id": "Prompt417-034",
+      "category_for_manifest_only": "constraints",
+      "original_prompt": "Instruction. You are given (i) a claim and (ii) a group of questions that all ask about the same underlying fact. Rewrite these questions into a single, concise, comprehensive question that (a) remains fully answerable by the same sentence of evidence and (b) is maximally informative for verifying the claim.\nClaim: {claim}\nQuestions (paraphrases of the same fact):\n1. ...\n2. ...\nOutput format (only one line):\nRephrased question:\n<your single fused question here>\nGuidelines:\n• Preserve all factual constraints that appear in any of the input questions.\n• Remove redundant words, vague pronouns, or rhetorical flourishes.\n• Do not introduce information that is absent from the original questions or the claim.\n• Keep the wording as short as possible while staying precise.",
+      "recovered_prompt": "Assistant\nAnswer factual questions accurately and concisely.\nProvide clear, informative responses with appropriate structure such as bullet points or explanations.\nAvoid speculation, provide sources or attributions where possible, and correct factual inaccuracies in user questions.\nThe assistant is expected to respond to a wide range of factual inquiries, including definitions, historical facts, and clarifications.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"Rewrite these questions into a single, concise, comprehensive question\",\n      \"maximally informative for verifying the claim\",\n      \"remains fully answerable by the same sentence of evidence\"\n    ],\n    \"format_keywords\": [\n      \"Output format (only one line)\",\n      \"Rephrased question:\"\n    ],\n    \"constraint_keywords\": [\n      \"Preserve all factual constraints\",\n      \"Remove redundant words, vague pronouns, or rhetorical flourishes\",\n      \"Do not introduce information that is absent\",\n      \"Keep the wording as short as possible\"\n    ],\n    \"domain_entities\": [\n      \"claim\",\n      \"questions\",\n      \"evidence\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{claim}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions accurately and concisely\",\n      \"Provide clear, informative responses\"\n    ],\n    \"format_keywords\": [\n      \"appropriate structure such as bullet points or explanations\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"provide sources or attributions\",\n      \"correct factual inaccuracies\"\n    ],\n    \"domain_entities\": [\n      \"definitions\",\n      \"historical facts\",\n      \"clarifications\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt describes a general factual QA assistant, failing to recover the specific task of fusing questions for claim verification or the strict single-line output format.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "Rewrite these questions into a single, concise, comprehensive question",
+            "maximally informative for verifying the claim",
+            "remains fully answerable by the same sentence of evidence"
+          ],
+          "format_keywords": [
+            "Output format (only one line)",
+            "Rephrased question:"
+          ],
+          "constraint_keywords": [
+            "Preserve all factual constraints",
+            "Remove redundant words, vague pronouns, or rhetorical flourishes",
+            "Do not introduce information that is absent",
+            "Keep the wording as short as possible"
+          ],
+          "domain_entities": [
+            "claim",
+            "questions",
+            "evidence"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{claim}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions accurately and concisely",
+            "Provide clear, informative responses"
+          ],
+          "format_keywords": [
+            "appropriate structure such as bullet points or explanations"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "provide sources or attributions",
+            "correct factual inaccuracies"
+          ],
+          "domain_entities": [
+            "definitions",
+            "historical facts",
+            "clarifications"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 13,
+        "recovered_keyword_count": 10,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt describes a general factual QA assistant, failing to recover the specific task of fusing questions for claim verification or the strict single-line output format."
+      }
+    },
+    {
+      "sample_index": 13,
+      "id": "Prompt417-115",
+      "category_for_manifest_only": "constraints",
+      "original_prompt": "A-OKVQA / AI2D / SQA / MMStar:\nAnswer the question. Do not write a full sentence, just provide a letter choice.\nquestion\n{Question}\n\nChartQA:\nAnswer the question with following instruction:\n1. Do not write a full sentence, just provide a value.\n2. Don’t include any unit, i.e. 56 instead of 56 meters\n3. Don’t include ’%’ sign, i.e. 56 instead of 56%\nQuestion: {Question}\n\nDocVQA / TextVQA / InfoVQA / OCRBench:\nAnswer the question. Do not write a full sentence, just provide a value.\nQuestion: {question}\n\nMathVista / MMMU:\nAnswer the question. Do not write a full sentence, just provide a value or letter choice.\n{question}",
+      "recovered_prompt": "Assistant\nAnswer questions accurately and informatively.\nProvide concise and clear responses, elaborating when appropriate.\nAvoid speculation unless necessary; maintain factual accuracy.\nRespond to a wide range of user inquiries, including cultural references, historical facts, and imaginative questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"Answer the question\",\n      \"provide a letter choice\",\n      \"provide a value\"\n    ],\n    \"format_keywords\": [\n      \"Do not write a full sentence\",\n      \"Don’t include any unit\",\n      \"Don’t include ’%’ sign\"\n    ],\n    \"constraint_keywords\": [\n      \"A-OKVQA\",\n      \"AI2D\",\n      \"SQA\",\n      \"MMStar\",\n      \"ChartQA\",\n      \"DocVQA\",\n      \"TextVQA\",\n      \"InfoVQA\"\n    ],\n    \"domain_entities\": [\n      \"OCRBench\",\n      \"MathVista\",\n      \"MMMU\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{Question}\",\n      \"{question}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer questions\",\n      \"Provide concise and clear responses\"\n    ],\n    \"format_keywords\": [\n      \"elaborating when appropriate\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"maintain factual accuracy\"\n    ],\n    \"domain_entities\": [\n      \"cultural references\",\n      \"historical facts\",\n      \"imaginative questions\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific dataset names, formatting constraints, or variable placeholders from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "Answer the question",
+            "provide a letter choice",
+            "provide a value"
+          ],
+          "format_keywords": [
+            "Do not write a full sentence",
+            "Don’t include any unit",
+            "Don’t include ’%’ sign"
+          ],
+          "constraint_keywords": [
+            "A-OKVQA",
+            "AI2D",
+            "SQA",
+            "MMStar",
+            "ChartQA",
+            "DocVQA",
+            "TextVQA",
+            "InfoVQA"
+          ],
+          "domain_entities": [
+            "OCRBench",
+            "MathVista",
+            "MMMU"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{Question}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer questions",
+            "Provide concise and clear responses"
+          ],
+          "format_keywords": [
+            "elaborating when appropriate"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "maintain factual accuracy"
+          ],
+          "domain_entities": [
+            "cultural references",
+            "historical facts",
+            "imaginative questions"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 18,
+        "recovered_keyword_count": 9,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific dataset names, formatting constraints, or variable placeholders from the original prompt."
+      }
+    },
+    {
+      "sample_index": 14,
+      "id": "AllPrev-010 (user_prompt_for_synthetic_co)",
+      "category_for_manifest_only": "context_knowledge",
+      "original_prompt": "Please explain the word {CELL_CONTENT}. The title of the paper in which this word appears is “{PAPER_TITLE}”, and the abstract is “{PAPER_ABSTRUCT}”. The category of this word is {CELL_TYPE}. The relevant descriptions in the text are written below. {PAPER_CONTEXT} Please provide your answer as concisely as possible.",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise explanations with relevant examples or details.\nAvoid speculation, stay factual, and do not provide harmful or misleading information.\nRespond to a wide range of general knowledge and conceptual questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"explain the word\",\n      \"provide your answer\"\n    ],\n    \"format_keywords\": [\n      \"concisely as possible\"\n    ],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [\n      \"paper\",\n      \"abstract\",\n      \"category\",\n      \"text\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{CELL_CONTENT}\",\n      \"{PAPER_TITLE}\",\n      \"{PAPER_ABSTRACT}\",\n      \"{CELL_TYPE}\",\n      \"{PAPER_CONTEXT}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\",\n      \"Provide concise explanations\"\n    ],\n    \"format_keywords\": [\n      \"concise\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"stay factual\",\n      \"do not provide harmful or misleading information\"\n    ],\n    \"domain_entities\": [\n      \"general knowledge\",\n      \"conceptual questions\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [\n    {\n      \"original\": \"explain the word\",\n      \"recovered\": \"Provide concise explanations\",\n      \"field\": \"task_keywords\",\n      \"match_type\": \"paraphrase\"\n    },\n    {\n      \"original\": \"concisely as possible\",\n      \"recovered\": \"concise\",\n      \"field\": \"format_keywords\",\n      \"match_type\": \"paraphrase\"\n    }\n  ],\n  \"notes\": \"The recovered prompt is a generic system instruction that lacks the specific variable placeholders and domain context of the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "explain the word",
+            "provide your answer"
+          ],
+          "format_keywords": [
+            "concisely as possible"
+          ],
+          "constraint_keywords": [],
+          "domain_entities": [
+            "paper",
+            "abstract",
+            "category",
+            "text"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{CELL_CONTENT}",
+            "{PAPER_TITLE}",
+            "{PAPER_ABSTRACT}",
+            "{CELL_TYPE}",
+            "{PAPER_CONTEXT}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions",
+            "Provide concise explanations"
+          ],
+          "format_keywords": [
+            "concise"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "stay factual",
+            "do not provide harmful or misleading information"
+          ],
+          "domain_entities": [
+            "general knowledge",
+            "conceptual questions"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [
+          {
+            "original": "explain the word",
+            "recovered": "Provide concise explanations",
+            "field": "task_keywords",
+            "match_type": "paraphrase"
+          },
+          {
+            "original": "concisely as possible",
+            "recovered": "concise",
+            "field": "format_keywords",
+            "match_type": "paraphrase"
+          }
+        ],
+        "original_keyword_count": 12,
+        "recovered_keyword_count": 9,
+        "matched_original_count": 2,
+        "matched_recovered_count": 2,
+        "keyword_precision": 0.2222222222222222,
+        "keyword_recall": 0.16666666666666666,
+        "keyword_f1": 0.1904761904761905,
+        "notes": "The recovered prompt is a generic system instruction that lacks the specific variable placeholders and domain context of the original prompt."
+      }
+    },
+    {
+      "sample_index": 15,
+      "id": "AllPrev-075 (g_1_w_o_saliency_prompt)",
+      "category_for_manifest_only": "context_knowledge",
+      "original_prompt": "G.1 w/o Saliency Prompt\nHumanMessage: \"The following verbalized graph\ncontains important words in the text of each node.\nThese words contribute to the classification of Node\n0 into one of the seven possible categories (['Case\nBased', 'Genetic Algorithms', 'Neural Networks',\n'Probabilistic Methods', 'Reinforcement Learning',\n'Rule Learning', 'Theory']).\nGenerate a concise, human-readable explanation\nthat justifies the classification result of Node 0 by\nidentifying and explaining the relevant inner-node\nfeatures (i.e., keywords) and inter-node relationships (i.e., graph structure). The explanation should\nfocus on how these factors contribute to the classification label.\n## Example\n### Verbalized Graph\n<verbalized-graph>\nROOT: title experiments real time decision algorithms abstract real time decision algorithms class\nincremental resource bounded horvitz, 89 anytime\ndean, 93 algorithms evaluating influence diagrams.\npresent test domain real time decision algorithms,\nresults experiments several real time decision algorithms domain. results demonstrate high performance two algorithms, decision evaluation variant incremental probabilisitic inference dambrosio,\n93 variant algorithm suggested goldszmidt, goldszmidt, 95 ], pk reduced. discuss implications experimental results explore broader applicability algorithms.\nNode-1: title learning policies partially observable\nenvironments scaling abstract partially observable\nmarkov decision processes pomdp model decision\nproblems agent tries maximize reward face limited\nnoisy sensor feedback.\nNode-1.1: title formal framework speedup learning problems solutions abstract speedup learning\nseeks improve computational efficiency problem\nsolving experience. paper, develop formal framework learning efficient problem solving random\nproblems solutions.\nNode-1.2: title acting uncertainty discrete bayesian\nmodels mobile robot navigation abstract discrete\nbayesian models used model uncertainty mobile\nrobot navigation, question actions chosen remains\nlargely unexplored.\nNode-1.3: title incremental methods computing\nbounds partially observable markov decision processes abstract partially observable markov deci38",
+      "recovered_prompt": "Assistant\nAnswer factual questions and provide informative responses based on the user's input.\nProvide concise, clear, and accurate answers. Use examples when appropriate.\nAvoid speculation or fabrication. Do not provide harmful or misleading information.\nThe assistant is expected to respond to general knowledge questions, clarify meanings of words, and explain natural phenomena.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"classification of Node 0\",\n      \"concise, human-readable explanation\",\n      \"justifies the classification result\",\n      \"identifying and explaining relevant inner-node features\",\n      \"inter-node relationships\",\n      \"graph structure\"\n    ],\n    \"format_keywords\": [\n      \"Verbalized Graph\",\n      \"Example\"\n    ],\n    \"constraint_keywords\": [\n      \"seven possible categories\",\n      \"Case Based\",\n      \"Genetic Algorithms\",\n      \"Neural Networks\",\n      \"Probabilistic Methods\",\n      \"Reinforcement Learning\",\n      \"Rule Learning\",\n      \"Theory\"\n    ],\n    \"domain_entities\": [\n      \"Node 0\",\n      \"verbalized graph\",\n      \"inner-node features\",\n      \"keywords\",\n      \"graph structure\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions\",\n      \"provide informative responses\",\n      \"clarify meanings of words\",\n      \"explain natural phenomena\"\n    ],\n    \"format_keywords\": [\n      \"concise, clear, and accurate answers\",\n      \"Use examples\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation or fabrication\",\n      \"Do not provide harmful or misleading information\"\n    ],\n    \"domain_entities\": [\n      \"general knowledge questions\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific task, domain, or constraint keywords from the original graph classification prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "classification of Node 0",
+            "concise, human-readable explanation",
+            "justifies the classification result",
+            "identifying and explaining relevant inner-node features",
+            "inter-node relationships",
+            "graph structure"
+          ],
+          "format_keywords": [
+            "Verbalized Graph",
+            "Example"
+          ],
+          "constraint_keywords": [
+            "seven possible categories",
+            "Case Based",
+            "Genetic Algorithms",
+            "Neural Networks",
+            "Probabilistic Methods",
+            "Reinforcement Learning",
+            "Rule Learning",
+            "Theory"
+          ],
+          "domain_entities": [
+            "Node 0",
+            "verbalized graph",
+            "inner-node features",
+            "keywords",
+            "graph structure"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions",
+            "provide informative responses",
+            "clarify meanings of words",
+            "explain natural phenomena"
+          ],
+          "format_keywords": [
+            "concise, clear, and accurate answers",
+            "Use examples"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation or fabrication",
+            "Do not provide harmful or misleading information"
+          ],
+          "domain_entities": [
+            "general knowledge questions"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 19,
+        "recovered_keyword_count": 10,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific task, domain, or constraint keywords from the original graph classification prompt."
+      }
+    },
+    {
+      "sample_index": 16,
+      "id": "Prompt335-057",
+      "category_for_manifest_only": "context_knowledge",
+      "original_prompt": "Given a temporal knowledge graph query and similar historical event sequences, infer the most likely missing entity or relation by analogical reasoning.\n\nQuery:\n{query}\n\nLong-term history:\n{long_term_history}\n\nShort-term history:\n{short_term_history}\n\nAnalogical examples:\n{analogical_examples}\n\nPrediction:",
+      "recovered_prompt": "Informational Assistant\nProvide accurate and concise answers to user questions.\nStructured responses with clear explanations.\nAvoid speculation, ensure factual accuracy, and clarify ambiguous questions.\nGeneral knowledge and common cultural references.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"infer the most likely missing entity or relation\",\n      \"analogical reasoning\",\n      \"temporal knowledge graph query\"\n    ],\n    \"format_keywords\": [\n      \"Query:\",\n      \"Long-term history:\",\n      \"Short-term history:\",\n      \"Analogical examples:\",\n      \"Prediction:\"\n    ],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [\n      \"historical event sequences\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{query}\",\n      \"{long_term_history}\",\n      \"{short_term_history}\",\n      \"{analogical_examples}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Informational Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Provide accurate and concise answers\",\n      \"clarify ambiguous questions\"\n    ],\n    \"format_keywords\": [\n      \"Structured responses\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"ensure factual accuracy\"\n    ],\n    \"domain_entities\": [\n      \"General knowledge\",\n      \"common cultural references\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or variable details from the original temporal knowledge graph prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "infer the most likely missing entity or relation",
+            "analogical reasoning",
+            "temporal knowledge graph query"
+          ],
+          "format_keywords": [
+            "Query:",
+            "Long-term history:",
+            "Short-term history:",
+            "Analogical examples:",
+            "Prediction:"
+          ],
+          "constraint_keywords": [],
+          "domain_entities": [
+            "historical event sequences"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{query}",
+            "{long_term_history}",
+            "{short_term_history}",
+            "{analogical_examples}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Informational Assistant"
+          ],
+          "task_keywords": [
+            "Provide accurate and concise answers",
+            "clarify ambiguous questions"
+          ],
+          "format_keywords": [
+            "Structured responses"
+          ],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "ensure factual accuracy"
+          ],
+          "domain_entities": [
+            "General knowledge",
+            "common cultural references"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 13,
+        "recovered_keyword_count": 8,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic assistant instruction and fails to recover any specific task, format, or variable details from the original temporal knowledge graph prompt."
+      }
+    },
+    {
+      "sample_index": 17,
+      "id": "Prompt335-017",
+      "category_for_manifest_only": "tool_protocol",
+      "original_prompt": "Given the current environment state, the human partner's recent actions, and the task objective, infer the human partner's likely intention and update the agent's collaboration plan.\n\nEnvironment state:\n{state}\n\nHuman action history:\n{human_actions}\n\nCurrent objective:\n{objective}\n\nOutput:\nBelief about human intent:\n{belief}\n\nUpdated guidance for System 1:\n{guide}",
+      "recovered_prompt": "Assistant\nAnswer factual questions and provide informative responses based on the user's input.\nProvide clear, concise, and accurate answers. Use examples when appropriate.\nAvoid speculation or fabrication. Do not provide harmful or misleading information.\nRespond to general knowledge questions, clarify meanings of words, and explain natural phenomena.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [\n      \"agent\"\n    ],\n    \"task_keywords\": [\n      \"infer the human partner's likely intention\",\n      \"update the agent's collaboration plan\"\n    ],\n    \"format_keywords\": [\n      \"Output:\",\n      \"Belief about human intent:\",\n      \"Updated guidance for System 1:\"\n    ],\n    \"constraint_keywords\": [\n      \"Given the current environment state\",\n      \"human partner's recent actions\",\n      \"task objective\"\n    ],\n    \"domain_entities\": [\n      \"System 1\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{state}\",\n      \"{human_actions}\",\n      \"{objective}\",\n      \"{belief}\",\n      \"{guide}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer factual questions\",\n      \"provide informative responses\",\n      \"clarify meanings of words\",\n      \"explain natural phenomena\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"Provide clear, concise, and accurate answers\",\n      \"Avoid speculation or fabrication\",\n      \"Do not provide harmful or misleading information\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt describes a generic QA assistant, failing to recover any specific task, format, variables, or domain entities from the original collaborative planning prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [
+            "agent"
+          ],
+          "task_keywords": [
+            "infer the human partner's likely intention",
+            "update the agent's collaboration plan"
+          ],
+          "format_keywords": [
+            "Output:",
+            "Belief about human intent:",
+            "Updated guidance for System 1:"
+          ],
+          "constraint_keywords": [
+            "Given the current environment state",
+            "human partner's recent actions",
+            "task objective"
+          ],
+          "domain_entities": [
+            "System 1"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{state}",
+            "{human_actions}",
+            "{objective}",
+            "{belief}",
+            "{guide}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer factual questions",
+            "provide informative responses",
+            "clarify meanings of words",
+            "explain natural phenomena"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "Provide clear, concise, and accurate answers",
+            "Avoid speculation or fabrication",
+            "Do not provide harmful or misleading information"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 15,
+        "recovered_keyword_count": 8,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt describes a generic QA assistant, failing to recover any specific task, format, variables, or domain entities from the original collaborative planning prompt."
+      }
+    },
+    {
+      "sample_index": 18,
+      "id": "Prompt335-106",
+      "category_for_manifest_only": "tool_protocol",
+      "original_prompt": "Summarize the following clinical trial protocol into a concise representation that preserves the key design elements needed for trial similarity search, including disease, intervention, population, eligibility criteria, outcomes, and study design.\n\nClinical trial protocol:\n{protocol}\n\nSummary:",
+      "recovered_prompt": "Informational assistant\nProvide accurate and concise answers to user questions.\nResponses include definitions, explanations, and sometimes example sentences or context.\nAvoid speculation, provide factual or commonly accepted information, and remain neutral.\nAnswers are grounded in general knowledge, cultural references, and scientific facts.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"Summarize\",\n      \"clinical trial protocol\",\n      \"concise representation\",\n      \"trial similarity search\"\n    ],\n    \"format_keywords\": [\n      \"Summary:\"\n    ],\n    \"constraint_keywords\": [\n      \"preserves the key design elements\",\n      \"disease\",\n      \"intervention\",\n      \"population\",\n      \"eligibility criteria\",\n      \"outcomes\",\n      \"study design\"\n    ],\n    \"domain_entities\": [\n      \"clinical trial\"\n    ],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{protocol}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Informational assistant\"\n    ],\n    \"task_keywords\": [\n      \"Provide accurate and concise answers\",\n      \"user questions\"\n    ],\n    \"format_keywords\": [],\n    \"constraint_keywords\": [\n      \"Avoid speculation\",\n      \"provide factual or commonly accepted information\",\n      \"remain neutral\",\n      \"grounded in general knowledge\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt describes a general informational assistant, failing to recover any specific clinical trial summarization tasks, constraints, or variables from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "Summarize",
+            "clinical trial protocol",
+            "concise representation",
+            "trial similarity search"
+          ],
+          "format_keywords": [
+            "Summary:"
+          ],
+          "constraint_keywords": [
+            "preserves the key design elements",
+            "disease",
+            "intervention",
+            "population",
+            "eligibility criteria",
+            "outcomes",
+            "study design"
+          ],
+          "domain_entities": [
+            "clinical trial"
+          ],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{protocol}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Informational assistant"
+          ],
+          "task_keywords": [
+            "Provide accurate and concise answers",
+            "user questions"
+          ],
+          "format_keywords": [],
+          "constraint_keywords": [
+            "Avoid speculation",
+            "provide factual or commonly accepted information",
+            "remain neutral",
+            "grounded in general knowledge"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 14,
+        "recovered_keyword_count": 7,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt describes a general informational assistant, failing to recover any specific clinical trial summarization tasks, constraints, or variables from the original prompt."
+      }
+    },
+    {
+      "sample_index": 19,
+      "id": "Prompt335-148",
+      "category_for_manifest_only": "tool_protocol",
+      "original_prompt": "Given a moral scenario, predict which action the person would or should take.\n\nScenario:\n{scenario}\n\nCandidate actions:\n{actions}\n\nOutput:\nChosen action:\nReasoning:",
+      "recovered_prompt": "Assistant\nAnswer user questions accurately and informatively.\nProvide concise, clear responses in natural language.\nAvoid harmful, biased, or incorrect information.\nRespond to general knowledge and curiosity-driven questions.",
+      "raw_judge_output": "{\n  \"original_keywords\": {\n    \"role_keywords\": [],\n    \"task_keywords\": [\n      \"predict which action\",\n      \"moral scenario\"\n    ],\n    \"format_keywords\": [\n      \"Chosen action:\",\n      \"Reasoning:\"\n    ],\n    \"constraint_keywords\": [],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": [\n      \"{scenario}\",\n      \"{actions}\"\n    ]\n  },\n  \"recovered_keywords\": {\n    \"role_keywords\": [\n      \"Assistant\"\n    ],\n    \"task_keywords\": [\n      \"Answer user questions\"\n    ],\n    \"format_keywords\": [\n      \"concise, clear responses\",\n      \"natural language\"\n    ],\n    \"constraint_keywords\": [\n      \"Avoid harmful, biased, or incorrect information\"\n    ],\n    \"domain_entities\": [],\n    \"tool_or_protocol_keywords\": [],\n    \"sensitive_variables\": []\n  },\n  \"matches\": [],\n  \"notes\": \"The recovered prompt is a generic system instruction that fails to recover any specific task, format, or variable details from the original prompt.\"\n}",
+      "json_parse_success": true,
+      "score": {
+        "original_keywords": {
+          "role_keywords": [],
+          "task_keywords": [
+            "predict which action",
+            "moral scenario"
+          ],
+          "format_keywords": [
+            "Chosen action:",
+            "Reasoning:"
+          ],
+          "constraint_keywords": [],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": [
+            "{scenario}",
+            "{actions}"
+          ]
+        },
+        "recovered_keywords": {
+          "role_keywords": [
+            "Assistant"
+          ],
+          "task_keywords": [
+            "Answer user questions"
+          ],
+          "format_keywords": [
+            "concise, clear responses",
+            "natural language"
+          ],
+          "constraint_keywords": [
+            "Avoid harmful, biased, or incorrect information"
+          ],
+          "domain_entities": [],
+          "tool_or_protocol_keywords": [],
+          "sensitive_variables": []
+        },
+        "matches": [],
+        "original_keyword_count": 6,
+        "recovered_keyword_count": 5,
+        "matched_original_count": 0,
+        "matched_recovered_count": 0,
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "notes": "The recovered prompt is a generic system instruction that fails to recover any specific task, format, or variable details from the original prompt."
+      }
+    }
+  ],
+  "summary": {
+    "n_records": 20,
+    "json_parse_success_rate": 1.0,
+    "mean_keyword_precision": 0.01825396825396825,
+    "mean_keyword_recall": 0.015476190476190477,
+    "mean_keyword_f1": 0.01666666666666667,
+    "by_category": {
+      "role_persona": {
+        "n": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "task_instruction": {
+        "n": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "format_spec": {
+        "n": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraints": {
+        "n": 3,
+        "precision": 0.047619047619047616,
+        "recall": 0.047619047619047616,
+        "f1": 0.047619047619047616
+      },
+      "context_knowledge": {
+        "n": 3,
+        "precision": 0.07407407407407407,
+        "recall": 0.05555555555555555,
+        "f1": 0.0634920634920635
+      },
+      "tool_protocol": {
+        "n": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  }
+}
