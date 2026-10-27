@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 54,
+    "id": "Prompt417-247",
+    "category": "format_spec",
+    "result_dir": "precomputed_results/prompts417_format_spec_obf_prompt417_247_tok10",
+    "source_sha256": "339bea280a43327d616ea20b1ebc03d8fbae6208b1ce43e3bb865fab52554f4c",
+    "source_characters": 528,
+    "eligible": true,
+    "task": "summary_support",
+    "measurement_scope": "sentence-level support and exact JSON schema",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "bde7b307b1506ea30973c9cc7f00677a65ca7b7a9857748c573ebd71f43ec91a",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "54-00",
+        "partition": "calibration",
+        "query": "Transcript: Nera0 owns 17 books. Vela0 has 5 bridges.\nSummary with 2 sentences:\nNera0 owns 17 books.\nVela0 has 6 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera0 owns 17 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela0 has 6 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-01",
+        "partition": "calibration",
+        "query": "Transcript: Nera1 owns 20 books. Vela1 has 6 bridges.\nSummary with 2 sentences:\nNera1 owns 20 books.\nVela1 has 7 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera1 owns 20 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela1 has 7 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-02",
+        "partition": "calibration",
+        "query": "Transcript: Nera2 owns 23 books. Vela2 has 7 bridges.\nSummary with 2 sentences:\nNera2 owns 23 books.\nVela2 has 8 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera2 owns 23 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela2 has 8 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-03",
+        "partition": "calibration",
+        "query": "Transcript: Nera3 owns 26 books. Vela3 has 8 bridges.\nSummary with 2 sentences:\nNera3 owns 26 books.\nVela3 has 9 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera3 owns 26 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela3 has 9 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-04",
+        "partition": "evidence",
+        "query": "Transcript: Nera4 owns 29 books. Vela4 has 9 bridges.\nSummary with 2 sentences:\nNera4 owns 29 books.\nVela4 has 10 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera4 owns 29 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela4 has 10 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-05",
+        "partition": "evidence",
+        "query": "Transcript: Nera5 owns 32 books. Vela5 has 10 bridges.\nSummary with 2 sentences:\nNera5 owns 32 books.\nVela5 has 11 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera5 owns 32 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela5 has 11 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-06",
+        "partition": "evidence",
+        "query": "Transcript: Nera6 owns 35 books. Vela6 has 11 bridges.\nSummary with 2 sentences:\nNera6 owns 35 books.\nVela6 has 12 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera6 owns 35 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela6 has 12 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-07",
+        "partition": "evidence",
+        "query": "Transcript: Nera7 owns 38 books. Vela7 has 5 bridges.\nSummary with 2 sentences:\nNera7 owns 38 books.\nVela7 has 6 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera7 owns 38 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela7 has 6 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-08",
+        "partition": "selection",
+        "query": "Transcript: Nera8 owns 41 books. Vela8 has 6 bridges.\nSummary with 2 sentences:\nNera8 owns 41 books.\nVela8 has 7 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera8 owns 41 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela8 has 7 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-09",
+        "partition": "selection",
+        "query": "Transcript: Nera9 owns 44 books. Vela9 has 7 bridges.\nSummary with 2 sentences:\nNera9 owns 44 books.\nVela9 has 8 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera9 owns 44 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela9 has 8 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-10",
+        "partition": "evaluation",
+        "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera10 owns 47 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela10 has 9 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-11",
+        "partition": "evaluation",
+        "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera11 owns 50 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela11 has 10 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-12",
+        "partition": "evaluation",
+        "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera12 owns 53 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela12 has 11 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-13",
+        "partition": "evaluation",
+        "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera13 owns 56 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela13 has 12 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-14",
+        "partition": "evaluation",
+        "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera14 owns 59 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela14 has 6 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-15",
+        "partition": "evaluation",
+        "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera15 owns 62 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela15 has 7 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-16",
+        "partition": "evaluation",
+        "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera16 owns 65 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela16 has 8 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-17",
+        "partition": "evaluation",
+        "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera17 owns 68 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela17 has 9 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-18",
+        "partition": "evaluation",
+        "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera18 owns 71 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela18 has 10 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-19",
+        "partition": "evaluation",
+        "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera19 owns 74 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela19 has 11 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-20",
+        "partition": "evaluation",
+        "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera20 owns 77 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela20 has 12 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-21",
+        "partition": "evaluation",
+        "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera21 owns 80 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela21 has 6 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-22",
+        "partition": "evaluation",
+        "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera22 owns 83 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela22 has 7 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-23",
+        "partition": "evaluation",
+        "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera23 owns 86 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela23 has 8 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-24",
+        "partition": "evaluation",
+        "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera24 owns 89 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela24 has 9 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-25",
+        "partition": "evaluation",
+        "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera25 owns 92 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela25 has 10 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-26",
+        "partition": "evaluation",
+        "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera26 owns 95 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela26 has 11 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-27",
+        "partition": "evaluation",
+        "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera27 owns 98 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela27 has 12 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-28",
+        "partition": "evaluation",
+        "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera28 owns 101 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela28 has 6 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "54-29",
+        "partition": "evaluation",
+        "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+        "output": "[\n  {\"sentence\": \"Nera29 owns 104 books.\", \"response\": \"Yes\"},\n  {\"sentence\": \"Vela29 has 7 bridges.\", \"response\": \"No\"}\n]",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "54-00",
+        "partition": "calibration",
+        "query": "Transcript: Nera0 owns 17 books. Vela0 has 5 bridges.\nSummary with 2 sentences:\nNera0 owns 17 books.\nVela0 has 6 bridges.",
+        "output": "[{\"sentence\": \"Nera0 owns 17 books.\", \"response\": {\"type\": \"sentence\", \"text\": \"Nera0 owns 17 books.\"}}, {\"sentence\": \"Vela0 has 5 bridges.\", \"response\": {\"type\": \"sentence\", \"text\": \"Vela0 has 5 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-01",
+        "partition": "calibration",
+        "query": "Transcript: Nera1 owns 20 books. Vela1 has 6 bridges.\nSummary with 2 sentences:\nNera1 owns 20 books.\nVela1 has 7 bridges.",
+        "output": "[{\"sentence\": \"Nera1 owns 20 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera1 owns 20 books.\"}}, {\"sentence\": \"Vela1 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela1 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-02",
+        "partition": "calibration",
+        "query": "Transcript: Nera2 owns 23 books. Vela2 has 7 bridges.\nSummary with 2 sentences:\nNera2 owns 23 books.\nVela2 has 8 bridges.",
+        "output": "[{\"sentence\": \"Nera2 owns 23 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera2 owns 23 books.\"}}, {\"sentence\": \"Vela2 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela2 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-03",
+        "partition": "calibration",
+        "query": "Transcript: Nera3 owns 26 books. Vela3 has 8 bridges.\nSummary with 2 sentences:\nNera3 owns 26 books.\nVela3 has 9 bridges.",
+        "output": "[{\"sentence\": \"Nera3 owns 26 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera3 owns 26 books.\", \"confidence\": 1.0, \"intent\": \"summary\", \"intent_id\": \"summary\", \"entities\": {\"Nera3\": \"26\", \"books\": \"26\"}, \"intent_rank\": 1, \"entities_rank\": 1, \"response_rank\": 1, \"response_type\": \"text\", \"response_id\": \"response_1\"}]\n\n[{\"sentence\": \"Vela3 has 9 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela3 has 9 bridges.\", \"confidence\": 1.0, \"intent\": \"summary\", \"intent_id\": \"summary\", \"entities\": {\"Vela3\": \"9\", \"bridges\": \"9\"}, \"intent_rank\": 1, \"entities_rank\": 1, \"response_rank\": 1, \"response_type\": \"text\", \"response_id\": \"response_2\"}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-04",
+        "partition": "evidence",
+        "query": "Transcript: Nera4 owns 29 books. Vela4 has 9 bridges.\nSummary with 2 sentences:\nNera4 owns 29 books.\nVela4 has 10 bridges.",
+        "output": "[No transcript available]\n\n[{\"sentence\": \"Nera4 owns 29 books.\", \"response\": {\"msg\": \"Summary with 2 sentences: Nera4 owns 29 books. Vela4 has 10 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-05",
+        "partition": "evidence",
+        "query": "Transcript: Nera5 owns 32 books. Vela5 has 10 bridges.\nSummary with 2 sentences:\nNera5 owns 32 books.\nVela5 has 11 bridges.",
+        "output": "[{\"sentence\": \"Nera5 owns 32 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera5 owns 32 books.\"}}, {\"sentence\": \"Vela5 has 11 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela5 has 11 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-06",
+        "partition": "evidence",
+        "query": "Transcript: Nera6 owns 35 books. Vela6 has 11 bridges.\nSummary with 2 sentences:\nNera6 owns 35 books.\nVela6 has 12 bridges.",
+        "output": "[{\"sentence\": \"Nera6 owns 35 books.\", \"response\": {\"type\": \"summary\", \"text\": \"Nera6 owns 35 books.\"}}, {\"sentence\": \"Vela6 has 12 bridges.\", \"response\": {\"type\": \"summary\", \"text\": \"Vela6 has 12 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-07",
+        "partition": "evidence",
+        "query": "Transcript: Nera7 owns 38 books. Vela7 has 5 bridges.\nSummary with 2 sentences:\nNera7 owns 38 books.\nVela7 has 6 bridges.",
+        "output": "[{\"sentence\": \"Nera7 owns 38 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera7 owns 38 books.\"}}, {\"sentence\": \"Vela7 has 5 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela7 has 5 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-08",
+        "partition": "selection",
+        "query": "Transcript: Nera8 owns 41 books. Vela8 has 6 bridges.\nSummary with 2 sentences:\nNera8 owns 41 books.\nVela8 has 7 bridges.",
+        "output": "[No transcript available]\n\n[{\"sentence\": \"Nera8 owns 41 books.\", \"response\": {\"msg\": \"Nera8 owns 41 books.\", \"response_type\": \"statement\"}}, {\"sentence\": \"Vela8 has 7 bridges.\", \"response\": {\"msg\": \"Vela8 has 7 bridges.\", \"response_type\": \"statement\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-09",
+        "partition": "selection",
+        "query": "Transcript: Nera9 owns 44 books. Vela9 has 7 bridges.\nSummary with 2 sentences:\nNera9 owns 44 books.\nVela9 has 8 bridges.",
+        "output": "[No response]\n\nResponse: \nThe transcript does not contain any information about the conversation.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-10",
+        "partition": "evaluation",
+        "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+        "output": "[No transcript available]\n\n[{\"sentence\": \"Nera10 owns 47 books.\", \"response\": {\"msg\": \"Nera10 owns 47 books.\", \"response_type\": \"statement\"}}, {\"sentence\": \"Vela10 has 9 bridges.\", \"response\": {\"msg\": \"Vela10 has 9 bridges.\", \"response_type\": \"statement\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-11",
+        "partition": "evaluation",
+        "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+        "output": "[{\"sentence\": \"Nera11 owns 50 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera11 owns 50 books.\"}}, {\"sentence\": \"Vela11 has 9 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela11 has 9 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-12",
+        "partition": "evaluation",
+        "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+        "output": "[{\"sentence\": \"Nera12 owns 53 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera12 owns 53 books.\"}}, {\"sentence\": \"Vela12 has 11 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela12 has 11 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-13",
+        "partition": "evaluation",
+        "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+        "output": "[{\"sentence\": \"Nera13 owns 56 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera13 owns 56 books.\"}}, {\"sentence\": \"Vela13 has 12 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela13 has 12 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-14",
+        "partition": "evaluation",
+        "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+        "output": "[{\"sentence\": \"Nera14 owns 59 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera14 owns 59 books.\"}}, {\"sentence\": \"Vela14 has 5 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela14 has 5 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-15",
+        "partition": "evaluation",
+        "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+        "output": "[{\"sentence\": \"Nera15 owns 62 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera15 owns 62 books.\"}}, {\"sentence\": \"Vela15 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela15 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-16",
+        "partition": "evaluation",
+        "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+        "output": "[{\"sentence\": \"Nera16 owns 65 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera16 owns 65 books.\"}}, {\"sentence\": \"Vela16 has 8 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela16 has 8 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-17",
+        "partition": "evaluation",
+        "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+        "output": "[{\"sentence\": \"Nera17 owns 68 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera17 owns 68 books.\"}}, {\"sentence\": \"Vela17 has 9 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela17 has 9 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-18",
+        "partition": "evaluation",
+        "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+        "output": "[{\"sentence\": \"Nera18 owns 71 books.\", \"response\": {\"type\": \"extra\", \"value\": \"Nera18 owns 71 books.\"}}, {\"sentence\": \"Vela18 has 9 bridges.\", \"response\": {\"type\": \"extra\", \"value\": \"Vela18 has 10 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-19",
+        "partition": "evaluation",
+        "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+        "output": "[{\"sentence\": \"Nera19 owns 74 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera19 owns 74 books.\"}}, {\"sentence\": \"Vela19 has 10 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela19 has 10 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-20",
+        "partition": "evaluation",
+        "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+        "output": "[{\"sentence\": \"Nera20 owns 77 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera20 owns 77 books.\"}}, {\"sentence\": \"Vela20 has 12 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela20 has 12 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-21",
+        "partition": "evaluation",
+        "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+        "output": "[{\"sentence\": \"Nera21 owns 80 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera21 owns 80 books.\"}}, {\"sentence\": \"Vela21 has 5 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela21 has 5 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-22",
+        "partition": "evaluation",
+        "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+        "output": "[{\"sentence\": \"Nera22 owns 83 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera22 owns 83 books.\"}}, {\"sentence\": \"Vela22 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela22 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-23",
+        "partition": "evaluation",
+        "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+        "output": "[{\"sentence\": \"Nera23 owns 86 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera23 owns 86 books.\"}}, {\"sentence\": \"Vela23 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela23 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-24",
+        "partition": "evaluation",
+        "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+        "output": "[No response. The conversation has ended.]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-25",
+        "partition": "evaluation",
+        "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+        "output": "[{\"sentence\": \"Nera25 owns 92 books.\", \"response\": {\"type\": \"extra\", \"value\": \"Nera25 owns 92 books.\"}}, {\"sentence\": \"Vela25 has 9 bridges.\", \"response\": {\"type\": \"extra\", \"value\": \"Vela25 has 9 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-26",
+        "partition": "evaluation",
+        "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+        "output": "[No response. The conversation has ended.]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-27",
+        "partition": "evaluation",
+        "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+        "output": "[{\"sentence\": \"Nera27 owns 98 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera27 owns 98 books.\"}}, {\"sentence\": \"Vela27 has 12 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela27 has 12 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-28",
+        "partition": "evaluation",
+        "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+        "output": "[{\"sentence\": \"Nera28 owns 101 books.\", \"response\": {\"msg\": \"Nera28 owns 101 books.\", \"response_type\": \"statement\", \"confidence\": 1.0, \"intent\": \"statement\", \"intent_name\": \"statement\", \"entities\": {\"Nera28\": \"101\", \"books\": \"101\"}, \"intent_ranking\": \"[{'intent': 'statement', 'confidence': 1.0}]\", \"dialogue_state\": \"user\", \"context\": {\"Nera28\": \"101\", \"books\": \"101\"}}]\n[{\"sentence\": \"Vela28 has 6 bridges.\", \"response\": {\"msg\": \"Vela28 has 6 bridges.\", \"response_type\": \"statement\", \"confidence\": 1.0, \"intent\": \"statement\", \"intent_name\": \"statement\", \"entities\": {\"Vela28\": \"6\", \"bridges\": \"6\"}, \"intent_ranking\": \"[{'intent': 'statement', 'confidence': 1.0}]\", \"dialogue_state\": \"user\", \"context\": {\"Vela28\": \"6\", \"bridges\": \"6\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-29",
+        "partition": "evaluation",
+        "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+        "output": "[{\"sentence\": \"Nera29 owns 104 books.\", \"response\": {\"msg_id\": \"response_1\", \"response\": \"Nera29 owns 104 books.\"}}, {\"sentence\": \"Vela29 has 7 bridges.\", \"response\": {\"msg_id\": \"response_2\", \"response\": \"Vela29 has 7 bridges.\"}}]",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "54-00",
+        "partition": "calibration",
+        "query": "Transcript: Nera0 owns 17 books. Vela0 has 5 bridges.\nSummary with 2 sentences:\nNera0 owns 17 books.\nVela0 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera0 owns 17 books and Vela0 has 5 bridges, but the summary changed to Vela0 having 6 bridges. I will provide a summary based on the original information.\n\nNera0 owns 17 books. Vela0 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-01",
+        "partition": "calibration",
+        "query": "Transcript: Nera1 owns 20 books. Vela1 has 6 bridges.\nSummary with 2 sentences:\nNera1 owns 20 books.\nVela1 has 7 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera1 owns 20 books and Vela1 has 6 bridges, but the summary statement mentioned Vela1 has 7 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera1 owns 20 books and Vela1 has 6 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-02",
+        "partition": "calibration",
+        "query": "Transcript: Nera2 owns 23 books. Vela2 has 7 bridges.\nSummary with 2 sentences:\nNera2 owns 23 books.\nVela2 has 8 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera2 owns 23 books and Vela2 has 7 bridges, but the summary changed to Vela2 having 8 bridges. I will provide a summary based on the original information.\n\nSummary: Nera2 owns 23 books and Vela2 has 7 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-03",
+        "partition": "calibration",
+        "query": "Transcript: Nera3 owns 26 books. Vela3 has 8 bridges.\nSummary with 2 sentences:\nNera3 owns 26 books.\nVela3 has 9 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera3 owns 26 books and Vela3 has 8 bridges, but the summary changed to 26 books and 9 bridges. I will provide a summary based on the original information.\n\nNera3 owns 26 books and Vela3 has 8 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-04",
+        "partition": "evidence",
+        "query": "Transcript: Nera4 owns 29 books. Vela4 has 9 bridges.\nSummary with 2 sentences:\nNera4 owns 29 books.\nVela4 has 10 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera4 owns 29 books and Vela4 has 9 bridges, but the summary provided states Vela4 has 10 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera4 owns 29 books and Vela4 has 9 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-05",
+        "partition": "evidence",
+        "query": "Transcript: Nera5 owns 32 books. Vela5 has 10 bridges.\nSummary with 2 sentences:\nNera5 owns 32 books.\nVela5 has 11 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera5 owns 32 books, but the summary states Vela5 has 11 bridges, which is different from the original information that Vela5 has 10 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-06",
+        "partition": "evidence",
+        "query": "Transcript: Nera6 owns 35 books. Vela6 has 11 bridges.\nSummary with 2 sentences:\nNera6 owns 35 books.\nVela6 has 12 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera6 owns 35 books and Vela6 has 11 bridges, but the summary changed to 12 bridges. I will provide a summary based on the original information.\n\nNera6 owns 35 books. Vela6 has 11 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-07",
+        "partition": "evidence",
+        "query": "Transcript: Nera7 owns 38 books. Vela7 has 5 bridges.\nSummary with 2 sentences:\nNera7 owns 38 books.\nVela7 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera7 owns 38 books and Vela7 has 5 bridges, but the summary statement mentioned Vela7 has 6 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera7 owns 38 books and Vela7 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-08",
+        "partition": "selection",
+        "query": "Transcript: Nera8 owns 41 books. Vela8 has 6 bridges.\nSummary with 2 sentences:\nNera8 owns 41 books.\nVela8 has 7 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera8 owns 41 books and Vela8 has 6 bridges, but the summary statement mentioned Vela8 has 7 bridges. To provide an accurate summary, I will use the original information.\n\nSummary: Nera8 owns 41 books and Vela8 has 6 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-09",
+        "partition": "selection",
+        "query": "Transcript: Nera9 owns 44 books. Vela9 has 7 bridges.\nSummary with 2 sentences:\nNera9 owns 44 books.\nVela9 has 8 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera9 owns 44 books and Vela9 has 7 bridges, but the summary changed to 44 books and 8 bridges. I will provide a summary based on the original information.\n\nNera9 owns 44 books and Vela9 has 7 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-10",
+        "partition": "evaluation",
+        "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera10 owns 47 books, but in the summary, it's mentioned that Vela10 has 9 bridges, which is not present in the transcript. However, the transcript does mention that Vela10 has 8 bridges. Here's a corrected summary:\n\nNera10 owns 47 books. Vela10 has 8 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-11",
+        "partition": "evaluation",
+        "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera11 owns 50 books and Vela11 has 9 bridges, but the summary statement mentioned Vela11 has 10 bridges. Here's a corrected summary:\n\nNera11 owns 50 books. Vela11 has 9 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-12",
+        "partition": "evaluation",
+        "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera12 owns 53 books and Vela12 has 10 bridges, but the summary statement mentioned Vela12 has 11 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera12 owns 53 books and Vela12 has 10 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-13",
+        "partition": "evaluation",
+        "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera13 owns 56 books and Vela13 has 11 bridges, but the summary changed to 56 books and 12 bridges. I will provide a summary based on the original information.\n\nNera13 owns 56 books and Vela13 has 11 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-14",
+        "partition": "evaluation",
+        "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera14 owns 59 books, but the summary states Vela14 has 6 bridges, which is different from the transcript that states Vela14 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-15",
+        "partition": "evaluation",
+        "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera15 owns 62 books and Vela15 has 6 bridges, but the summary statement mentioned Vela15 has 7 bridges. To maintain consistency, I will correct the summary to match the original information.\n\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 6 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-16",
+        "partition": "evaluation",
+        "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera16 owns 65 books and Vela16 has 7 bridges, but the summary statement mentioned Vela16 has 8 bridges. To maintain consistency, I will correct the summary to match the original information.\n\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 7 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-17",
+        "partition": "evaluation",
+        "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera17 owns 68 books, but in the summary, it's mentioned that Vela17 has 9 bridges, which is not present in the transcript. Based on the given information, here's a summary with 2 sentences:\n\nNera17 owns 68 books. Vela17 has 8 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-18",
+        "partition": "evaluation",
+        "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera18 owns 71 books and Vela18 has 9 bridges, but the summary statement mentioned Vela18 has 10 bridges. Here's a corrected summary:\n\nNera18 owns 71 books. Vela18 has 9 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-19",
+        "partition": "evaluation",
+        "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera19 owns 74 books and Vela19 has 10 bridges, but the summary changed the number of bridges to 11. I will provide a summary based on the original information.\n\nNera19 owns 74 books. Vela19 has 10 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-20",
+        "partition": "evaluation",
+        "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera20 owns 77 books and Vela20 has 11 bridges, but the summary changed the number of bridges to 12. I will provide a summary based on the original information.\n\nNera20 owns 77 books. Vela20 has 11 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-21",
+        "partition": "evaluation",
+        "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera21 owns 80 books, but in the summary, it's mentioned that Vela21 has 6 bridges, which is not mentioned in the transcript. However, the transcript does mention that Vela21 has 5 bridges. Here's a corrected summary:\n\nNera21 owns 80 books. Vela21 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-22",
+        "partition": "evaluation",
+        "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera22 owns 83 books and Vela22 has 6 bridges, but the summary statement mentioned Vela22 has 7 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera22 owns 83 books and Vela22 has 6 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-23",
+        "partition": "evaluation",
+        "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera23 owns 86 books and Vela23 has 7 bridges, but the summary statement mentioned Vela23 has 8 bridges. To maintain consistency, I will correct the summary to match the original information.\n\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 7 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-24",
+        "partition": "evaluation",
+        "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera24 owns 89 books, but the summary states Vela24 has 9 bridges. However, the original statement mentioned Vela24 has 8 bridges. To provide a summary, I will use the original information:\n\nNera24 owns 89 books. \nVela24 has 8 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-25",
+        "partition": "evaluation",
+        "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera25 owns 92 books and Vela25 has 9 bridges, but the summary statement mentioned Vela25 has 10 bridges. To maintain consistency, I will correct the summary to match the original information.\n\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 9 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-26",
+        "partition": "evaluation",
+        "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera26 owns 95 books and Vela26 has 10 bridges, but the summary changed to 11 bridges. I will provide a summary based on the original information.\n\nNera26 owns 95 books. Vela26 has 10 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-27",
+        "partition": "evaluation",
+        "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera27 owns 98 books and Vela27 has 11 bridges, but the summary changed to 12 bridges. Here's a summary with the original information:\n\nNera27 owns 98 books. Vela27 has 11 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-28",
+        "partition": "evaluation",
+        "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. According to the transcript, Nera28 owns 101 books, but the summary states Vela28 has 6 bridges, which is different from the transcript that states Vela28 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-29",
+        "partition": "evaluation",
+        "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera29 owns 104 books and Vela29 has 6 bridges, but the summary statement mentioned Vela29 has 7 bridges. To maintain consistency, I will provide a summary based on the original information.\n\nSummary: Nera29 owns 104 books and Vela29 has 6 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "54-00",
+        "partition": "calibration",
+        "query": "Transcript: Nera0 owns 17 books. Vela0 has 5 bridges.\nSummary with 2 sentences:\nNera0 owns 17 books.\nVela0 has 6 bridges.",
+        "output": "It seems there's a discrepancy in the information provided. The original statement mentioned Nera0 owns 17 books and Vela0 has 5 bridges, but the summary statement mentioned Vela0 has 6 bridges. To provide an accurate summary, I will use the original information.\n\nNera0 owns 17 books and Vela0 has 5 bridges.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-01",
+        "partition": "calibration",
+        "query": "Transcript: Nera1 owns 20 books. Vela1 has 6 bridges.\nSummary with 2 sentences:\nNera1 owns 20 books.\nVela1 has 7 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera1 owns 20 books. Vela1 has 7 bridges, not 6 as previously mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-02",
+        "partition": "calibration",
+        "query": "Transcript: Nera2 owns 23 books. Vela2 has 7 bridges.\nSummary with 2 sentences:\nNera2 owns 23 books.\nVela2 has 8 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera2 owns 23 books. Vela2 has 8 bridges, not 7 as mentioned initially.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-03",
+        "partition": "calibration",
+        "query": "Transcript: Nera3 owns 26 books. Vela3 has 8 bridges.\nSummary with 2 sentences:\nNera3 owns 26 books.\nVela3 has 9 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera3 owns 26 books. Vela3 has 9 bridges, not 8.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-04",
+        "partition": "evidence",
+        "query": "Transcript: Nera4 owns 29 books. Vela4 has 9 bridges.\nSummary with 2 sentences:\nNera4 owns 29 books.\nVela4 has 10 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera4 owns 29 books. Vela4 has 10 bridges, not 9 as previously mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-05",
+        "partition": "evidence",
+        "query": "Transcript: Nera5 owns 32 books. Vela5 has 10 bridges.\nSummary with 2 sentences:\nNera5 owns 32 books.\nVela5 has 11 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera5 owns 32 books. Vela5 has 11 bridges, not 10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-06",
+        "partition": "evidence",
+        "query": "Transcript: Nera6 owns 35 books. Vela6 has 11 bridges.\nSummary with 2 sentences:\nNera6 owns 35 books.\nVela6 has 12 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera6 owns 35 books. Vela6 has 12 bridges, not 11, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-07",
+        "partition": "evidence",
+        "query": "Transcript: Nera7 owns 38 books. Vela7 has 5 bridges.\nSummary with 2 sentences:\nNera7 owns 38 books.\nVela7 has 6 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera7 owns 38 books. Vela7 has 6 bridges, not 5 as previously mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-08",
+        "partition": "selection",
+        "query": "Transcript: Nera8 owns 41 books. Vela8 has 6 bridges.\nSummary with 2 sentences:\nNera8 owns 41 books.\nVela8 has 7 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera8 owns 41 books. Vela8 has 7 bridges, not 6.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-09",
+        "partition": "selection",
+        "query": "Transcript: Nera9 owns 44 books. Vela9 has 7 bridges.\nSummary with 2 sentences:\nNera9 owns 44 books.\nVela9 has 8 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera9 owns 44 books. Vela9 has 8 bridges, not 7.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-10",
+        "partition": "evaluation",
+        "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera10 owns 47 books. Vela10 has 9 bridges, not 8, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-11",
+        "partition": "evaluation",
+        "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera11 owns 50 books. Vela11 has 10 bridges, not 9 as initially mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-12",
+        "partition": "evaluation",
+        "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera12 owns 53 books. Vela12 has 11 bridges, not 10, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-13",
+        "partition": "evaluation",
+        "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera13 owns 56 books. Vela13 has 12 bridges, not 11.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-14",
+        "partition": "evaluation",
+        "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera14 owns 59 books. Vela14 has 6 bridges, not 5 as previously mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-15",
+        "partition": "evaluation",
+        "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera15 owns 62 books. Vela15 has 7 bridges, not 6, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-16",
+        "partition": "evaluation",
+        "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera16 owns 65 books. Vela16 has 8 bridges, not 7 as previously mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-17",
+        "partition": "evaluation",
+        "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera17 owns 68 books. Vela17 has 9 bridges, not 8, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-18",
+        "partition": "evaluation",
+        "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera18 owns 71 books. Vela18 has 10 bridges, not 9, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-19",
+        "partition": "evaluation",
+        "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera19 owns 74 books. Vela19 has 11 bridges, not 10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-20",
+        "partition": "evaluation",
+        "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera20 owns 77 books. Vela20 has 12 bridges, not 11.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-21",
+        "partition": "evaluation",
+        "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera21 owns 80 books. Vela21 has 6 bridges, not 5 as initially mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-22",
+        "partition": "evaluation",
+        "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera22 owns 83 books. Vela22 has 7 bridges, not 6, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-23",
+        "partition": "evaluation",
+        "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera23 owns 86 books. Vela23 has 8 bridges, not 7.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-24",
+        "partition": "evaluation",
+        "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera24 owns 89 books. Vela24 has 9 bridges, not 8.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-25",
+        "partition": "evaluation",
+        "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera25 owns 92 books. Vela25 has 10 bridges, not 9.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-26",
+        "partition": "evaluation",
+        "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera26 owns 95 books. Vela26 has 11 bridges, not 10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-27",
+        "partition": "evaluation",
+        "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera27 owns 98 books. Vela27 has 12 bridges, not 11, as per the corrected information.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-28",
+        "partition": "evaluation",
+        "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera28 owns 101 books. Vela28 has 6 bridges, not 5 as initially mentioned.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "54-29",
+        "partition": "evaluation",
+        "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+        "output": "Here is a summary of the information in 2 sentences:\n\nNera29 owns 104 books. Vela29 has 7 bridges, not 6.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

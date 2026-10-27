@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-247",
+  "task": "summary_support",
+  "method": "zero6",
+  "prompt": "Transcript Summarizer\nAnalyze the provided transcript and generate a summary consisting of exactly two sentences based on the specific summary instruction.\nJSON array of objects. Each object must contain a 'sentence' key with the sentence text and a 'response' key containing an object with specific response details.\nThe output must be a valid JSON array. The summary must strictly contain two sentences. The 'response' object structure varies (containing 'msg', 'msg_id', 'type', or 'text') but must wrap the generated sentence content.\nThe input consists of a transcript with entity facts (e.g., ownership of books, possession of bridges) followed by a specific instruction for a 2-sentence summary.\nParse the transcript to extract key facts. Generate the summary sentences. Construct a JSON array where each element maps a sentence from the summary to a response object containing that sentence's content or metadata.",
+  "prompt_sha256": "ba23195f69a46b760f0c984e96e6e71df46e9f40262be7d76f9312281a1c6232",
+  "benchmark_sha256": "bde7b307b1506ea30973c9cc7f00677a65ca7b7a9857748c573ebd71f43ec91a",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "54-10",
+      "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera10 owns 47 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela10 has 9 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-11",
+      "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera11 owns 50 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela11 has 10 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-12",
+      "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera12 owns 53 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela12 has 11 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-13",
+      "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera13 owns 56 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela13 has 12 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-14",
+      "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera14 owns 59 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela14 has 6 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-15",
+      "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera15 owns 62 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela15 has 7 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-16",
+      "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera16 owns 65 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela16 has 8 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-17",
+      "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera17 owns 68 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela17 has 9 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-18",
+      "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera18 owns 71 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela18 has 10 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-19",
+      "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera19 owns 74 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela19 has 11 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-20",
+      "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera20 owns 77 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela20 has 12 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-21",
+      "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera21 owns 80 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela21 has 6 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-22",
+      "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera22 owns 83 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela22 has 7 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-23",
+      "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera23 owns 86 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela23 has 8 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-24",
+      "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera24 owns 89 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela24 has 9 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-25",
+      "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera25 owns 92 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela25 has 10 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-26",
+      "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera26 owns 95 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela26 has 11 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-27",
+      "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera27 owns 98 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela27 has 12 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-28",
+      "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera28 owns 101 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela28 has 6 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-29",
+      "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+      "output": "[\n  {\n    \"sentence\": \"Nera29 owns 104 books.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 1\",\n      \"msg_id\": \"summary_1\",\n      \"type\": \"summary_sentence\"\n    }\n  },\n  {\n    \"sentence\": \"Vela29 has 7 bridges.\",\n    \"response\": {\n      \"msg\": \"Summary sentence 2\",\n      \"msg_id\": \"summary_2\",\n      \"type\": \"summary_sentence\"\n    }\n  }\n]",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

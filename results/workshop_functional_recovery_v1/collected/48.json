@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 48,
+    "id": "Prompt335-174",
+    "category": "format_spec",
+    "result_dir": "precomputed_results/prompts335_format_spec_obf_prompt335_174_tok10",
+    "source_sha256": "3a35c6a75846aa9b44d0c542b417e5ec4dfb87fc40cda9ecfe23b7b7c5737aac",
+    "source_characters": 247,
+    "eligible": true,
+    "task": "fact_pair",
+    "measurement_scope": "two labelled sentences differing in one numeric fact",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "989a41d7a4792d501451bc4afab529c3706cc1a07bb0427670c047a392011871",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "48-00",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela0 | 17",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on the information provided. \n\nAssuming the table is about the number of gates in different airports, here's a possible pair of sentences:\n\nTrue sentence:\nVela0 Airport has 17 gates.\nFalse sentence:\nVela0 Airport has 18 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-01",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela1 | 20",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on a general knowledge about the Vela1. \n\nVela1 is a radio telescope located in Australia. \n\nTrue sentence:\nThe Vela Supernova Remnant is a large, complex astronomical object that is visible in the southern sky and is the remains of a massive star that exploded in the year 1006 AD.\n\nFalse sentence:\nThe Vela Supernova Remnant is a large, complex astronomical object that is visible in the northern sky and is the remains of a massive star that exploded in the year 1006 AD.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-02",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela2 | 23",
+        "output": "True sentence:\nThe Vela 2 rocket has 23 gates.\nFalse sentence:\nThe Vela 2 rocket has 24 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-03",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela3 | 26",
+        "output": "True sentence:\nThe Vela 3 rocket has 26 gates.\nFalse sentence:\nThe Vela 3 rocket has 27 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-04",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela4 | 29",
+        "output": "True sentence:\nThe Vela 4 is a radar system used by the Australian Defence Force.\nFalse sentence:\nThe Vela 4 is a radar system used by the United States Air Force.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-05",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela5 | 32",
+        "output": "True sentence:\nThe Vela5 is a spacecraft designed by the European Space Agency (ESA).\nFalse sentence:\nThe Vela5 is a spacecraft designed by the Russian space agency Roscosmos.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-06",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela6 | 35",
+        "output": "True sentence:\nThe Vela6 is a type of astronomical observatory.\n\nFalse sentence:\nThe Vela6 has 36 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-07",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela7 | 38",
+        "output": "True sentence:\nThe Vela 7 is a space-based gamma-ray observatory.\n\nFalse sentence:\nThe Vela 7 is a space-based X-ray observatory.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-08",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela8 | 41",
+        "output": "True sentence:\nThe Vela8 is a type of computer chip.\nFalse sentence:\nThe Vela8 is a type of microprocessor.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-09",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela9 | 44",
+        "output": "True sentence:\nThe Vela 9 is a space-based gamma-ray observatory.\n\nFalse sentence:\nThe Vela 9 is a space-based X-ray observatory.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-10",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela10 | 47",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on general knowledge. \n\nHere's an example:\n\nTrue sentence:\nThe Vela Supernova Remnant is a supernova remnant located in the southern constellation Vela.\n\nFalse sentence:\nThe Vela Supernova Remnant is a supernova remnant located in the northern constellation Vela.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-11",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela11 | 50",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-12",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela12 | 53",
+        "output": "I don't see a table. Please provide the table or QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on a general knowledge about the Vela 12, a radio telescope in Australia.\n\nTrue sentence:\nThe Vela 12 is a radio telescope located in the Parkes Radio Telescope Observatory in New South Wales, Australia.\n\nFalse sentence:\nThe Vela 12 is a radio telescope located in the Mopra Observatory in New South Wales, Australia.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-13",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela13 | 56",
+        "output": "I don't see a table. Please provide the table or QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on a general topic. \n\nTopic: Vela 13, a supernova remnant.\n\nTrue sentence:\nVela 13 is a supernova remnant located in the constellation Vela.\n\nFalse sentence:\nVela 13 is a supernova remnant located in the constellation Orion.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-14",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela14 | 59",
+        "output": "True sentence:\nThe Vela14 is a spacecraft that has a total of 59 gates.\nFalse sentence:\nThe Vela14 is a spacecraft that has a total of 58 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-15",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela15 | 62",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on general knowledge. \n\nHere's an example:\n\nTrue sentence:\nThe Vela Supernova Remnant is a supernova remnant located in the southern constellation Vela.\n\nFalse sentence:\nThe Vela Supernova Remnant is a supernova remnant located in the northern constellation Vela.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-16",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela16 | 65",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on general knowledge. \n\nHere's an example:\n\nTrue sentence:\nThe Vela16 is a spacecraft that was launched in 1970.\nFalse sentence:\nThe Vela16 is a spacecraft that was launched in 1978.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-17",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela17 | 68",
+        "output": "I don't see a table. Please provide the table or QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on the information provided. \n\nAssuming the table is about the number of gates in different spacecraft, here's a pair of sentences:\n\nTrue sentence:\nThe Vela 17 spacecraft has 68 gates.\nFalse sentence:\nThe Vela 17 spacecraft has 67 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-18",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela18 | 71",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on general knowledge. \n\nHere's an example:\n\nTrue sentence:\nThe Vela 18 is a 18th-century British warship.\nFalse sentence:\nThe Vela 18 is a 19th-century British warship.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-19",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela19 | 74",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-20",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela20 | 77",
+        "output": "True sentence:\nThe Vela20 is a type of aircraft.\nFalse sentence:\nThe Vela20 has 78 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-21",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela21 | 80",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on a general knowledge about the Vela21. \n\nVela21 is a radio telescope, and I found that it has 76 antennas, not 80 gates. \n\nTrue sentence:\nVela21 is a radio telescope located in Australia.\nFalse sentence:\nVela21 has 76 antennas.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-22",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela22 | 83",
+        "output": "I don't see a table. Please provide the table or the QA item.\n\nHowever, I can generate a pair of plausible factoid sentences based on the information provided. \n\nAssuming the table is about the number of gates in different spacecraft, here's a pair of sentences:\n\nTrue sentence:\nThe Vela 2 spacecraft has 83 gates.\nFalse sentence:\nThe Vela 2 spacecraft has 85 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-23",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela23 | 86",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-24",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela24 | 89",
+        "output": "True sentence:\nThe Vela24 is a spacecraft designed by the European Space Agency (ESA).\nFalse sentence:\nThe Vela24 is a spacecraft designed by the Russian space agency Roscosmos.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-25",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela25 | 92",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-26",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela26 | 95",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-27",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela27 | 98",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-28",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela28 | 101",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-29",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela29 | 104",
+        "output": "I don't see a table. Please provide the table or the QA item.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "48-00",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela0 | 17",
+        "output": "True sentence:\nThe Vela0 has 17 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-01",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela1 | 20",
+        "output": "True sentence:\nThe Vela1 has 20 gates.\nFalse sentence:\nThe Vela1 has 5 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-02",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela2 | 23",
+        "output": "True sentence:\nThe Vela2 has 23 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-03",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela3 | 26",
+        "output": "True sentence:\nThe Vela3 has 26 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-04",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela4 | 29",
+        "output": "True sentence:\nThe Vela4 has 29 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-05",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela5 | 32",
+        "output": "True sentence:\nThe Vela5 has 32 gates.\nFalse sentence:\nThe Vela5 has 5 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-06",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela6 | 35",
+        "output": "True sentence:\nThe Vela 6 has 35 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-07",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela7 | 38",
+        "output": "True sentence:\nThe Vela7 has 38 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-08",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela8 | 41",
+        "output": "True sentence:\nThe Vela8 has 41 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-09",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela9 | 44",
+        "output": "True sentence:\nThe Vela 9 has 44 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-10",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela10 | 47",
+        "output": "True sentence:\nThe Vela 10 has 47 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-11",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela11 | 50",
+        "output": "True sentence:\nThe Vela 11 has 50 gates.\n\nFalse sentence:\nThe Vela 11 has 100 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-12",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela12 | 53",
+        "output": "True sentence:\nThe Vela 12 has 53 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-13",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela13 | 56",
+        "output": "True sentence:\nThe Vela 13 gate has 56 gates.\nFalse sentence:\nThe Vela 13 gate has 100 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-14",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela14 | 59",
+        "output": "True sentence:\nThe Vela 14 gate has 59 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-15",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela15 | 62",
+        "output": "True sentence:\nThe Vela15 has 62 gates.\nFalse sentence:\nThe Vela15 has 100 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-16",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela16 | 65",
+        "output": "True sentence:\nThe Vela16 has 65 gates.\nFalse sentence:\nThe Vela16 has 100 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-17",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela17 | 68",
+        "output": "True sentence:\nThe Vela17 has 68 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-18",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela18 | 71",
+        "output": "True sentence:\nThe Vela 18 has 71 gates.\n\nFalse sentence:\nThe Vela 18 has 72 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-19",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela19 | 74",
+        "output": "True sentence:\nThe Vela 19 has 74 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-20",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela20 | 77",
+        "output": "True sentence:\nThe Vela20 has 77 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-21",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela21 | 80",
+        "output": "True sentence:\nThe Vela21 has 80 gates.\nFalse sentence:\nThe Vela21 has 100 gates.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "48-22",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela22 | 83",
+        "output": "True sentence:\nThe Vela22 has 83 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-23",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela23 | 86",
+        "output": "True sentence:\nThe Vela 23 has 86 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-24",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela24 | 89",
+        "output": "True sentence:\nThe Vela24 has 89 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-25",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela25 | 92",
+        "output": "True sentence:\nThe Vela 25 has 92 gates.\n\nFalse sentence:\nThe Vela 25 has 100 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-26",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela26 | 95",
+        "output": "True sentence:\nThe Vela 26 has 95 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-27",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela27 | 98",
+        "output": "True sentence:\nThe Vela27 has 98 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-28",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela28 | 101",
+        "output": "True sentence:\nThe Vela 28 has 101 gates.\n\nFalse sentence:\nThe Vela 28 has 100 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-29",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela29 | 104",
+        "output": "True sentence:\nThe Vela29 has 104 gates.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "48-00",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela0 | 17",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here's a simple representation of the table in Python:\n\n```python\nimport pandas as pd\n\n# Define the table\ndata = {\n    \"Name\": [\"Vela0\"],\n    \"Number of gates\": [17]\n}\n\n# Create a DataFrame\ndf = pd.DataFrame(data)\n\nprint(df)\n```\n\nThis will output:\n\n```\n     Name  Number of gates\n0    Vela0              17\n```\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-01",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela1 | 20",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela1 | 20 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-02",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela2 | 23",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here are a few examples:\n\n1. **Selecting the number of gates for a specific name:**\n   ```sql\nSELECT Number of gates FROM table_name WHERE Name = 'Vela2'\n```\n\n2. **Selecting all rows from the table:**\n   ```sql\nSELECT * FROM table_name\n```\n\n3. **Inserting a new row into the table:**\n   ```sql\nINSERT INTO table_name (Name, Number of gates) VALUES ('Vela3', 24)\n```\n\n4. **Updating the number of gates for a specific name:**\n   ```sql\nUPDATE table_name SET Number of gates = 25 WHERE Name = 'Vela2'\n```\n\n5. **Deleting a row from the table:**\n   ```sql\nDELETE FROM table_name WHERE Name = 'Vela2'\n```\n\nPlease replace `table_name` with the actual name of your table.\n\nIf you'd like to perform any specific operation, please let me know and I'll be happy to assist you.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-03",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela3 | 26",
+        "output": "It seems like you have a table with a single row containing the name \"Vela3\" and the number of gates as 26. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-04",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela4 | 29",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela4 | 29 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-05",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela5 | 32",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela5 | 32 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-06",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela6 | 35",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela6 | 35 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-07",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela7 | 38",
+        "output": "It seems like you have a table with a single row containing the name \"Vela7\" and the number of gates as 38. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-08",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela8 | 41",
+        "output": "It seems like you've provided a table with a single entry. If you'd like to perform any operations or queries on this table, please let me know. Here are a few examples:\n\n1. **Display the table:**\n   ```\n   | Name | Number of gates\n   | Vela8 | 41\n   ```\n\n2. **Filter the table to show only rows where the number of gates is greater than 40:**\n   ```\n   | Name | Number of gates\n   | Vela8 | 41\n   ```\n\n3. **Sort the table in descending order by the number of gates:**\n   ```\n   | Name | Number of gates\n   | Vela8 | 41\n   ```\n\n4. **Add a new row to the table:**\n   ```\n   | Name | Number of gates\n   | Vela8 | 41\n   | Vela9 | 42\n   ```\n\n5. **Delete a row from the table:**\n   ```\n   | Name | Number of gates\n   | Vela9 | 42\n   ```\n\nPlease specify what operation you'd like to perform on the table.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-09",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela9 | 44",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here's a simple representation of the table in SQL:\n\n```sql\nCREATE TABLE source_table (\n  Name VARCHAR(255),\n  Number_of_gates INT\n);\n\nINSERT INTO source_table (Name, Number_of_gates)\nVALUES ('Vela9', 44);\n```\n\nWhat would you like to do with this table?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-10",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela10 | 47",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela10 | 47 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-11",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela11 | 50",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela11 | 50 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-12",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela12 | 53",
+        "output": "It seems like you have a table with a single row containing the name \"Vela12\" and the number of gates as 53. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-13",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela13 | 56",
+        "output": "It seems like you have a table with a single row containing the name \"Vela13\" and the number of gates as 56. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-14",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela14 | 59",
+        "output": "It seems like you have a table with a single row containing the name \"Vela14\" and the number of gates as 59. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-15",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela15 | 62",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela15 | 62 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-16",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela16 | 65",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela16 | 65 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-17",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela17 | 68",
+        "output": "It seems like you have a table with a single row containing the name \"Vela17\" and the number of gates as 68. If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-18",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela18 | 71",
+        "output": "It seems like you have a table with a single row containing the name \"Vela18\" and the number of gates \"71\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-19",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela19 | 74",
+        "output": "It seems like you have a table with a single row containing the name \"Vela19\" and the number of gates \"74\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-20",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela20 | 77",
+        "output": "It seems like you have a table with a single row containing the name \"Vela20\" and the number of gates \"77\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-21",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela21 | 80",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela21 | 80 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-22",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela22 | 83",
+        "output": "It seems like you have a table with a single row containing the name \"Vela22\" and the number of gates \"83\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-23",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela23 | 86",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela23 | 86 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-24",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela24 | 89",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here are a few examples:\n\n1. **Display the table:**\n   ```\n   | Name | Number of gates\n   | Vela24 | 89\n   ```\n\n2. **Filter the table to show only rows where the number of gates is greater than 50:**\n   ```\n   | Name | Number of gates\n   | Vela24 | 89\n   ```\n\n3. **Sort the table in descending order by the number of gates:**\n   ```\n   | Name | Number of gates\n   | Vela24 | 89\n   ```\n\n4. **Add a new row to the table:**\n   ```\n   | Name | Number of gates\n   | Vela24 | 89\n   | Vela25 | 100\n   ```\n\n5. **Delete a row from the table:**\n   ```\n   | Name | Number of gates\n   | Vela25 | 100\n   ```\n\nPlease specify what operation you'd like to perform on the table.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-25",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela25 | 92",
+        "output": "It seems like you have a table with a single row:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela25 | 92 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-26",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela26 | 95",
+        "output": "It seems like you have a table with a single row containing the name \"Vela26\" and the number of gates \"95\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-27",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela27 | 98",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here's a simple representation of the table in Python:\n\n```python\nimport pandas as pd\n\n# Define the table\ndata = {\n    \"Name\": [\"Vela27\"],\n    \"Number of gates\": [98]\n}\n\n# Create a DataFrame\ndf = pd.DataFrame(data)\n\nprint(df)\n```\n\nThis will output:\n\n```\n      Name  Number of gates\n0  Vela27              98\n```\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-28",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela28 | 101",
+        "output": "It seems like you've provided a table with a single row. If you'd like to perform any operations or queries on this table, please let me know. Here's a simple representation of the table in Python:\n\n```python\nimport pandas as pd\n\n# Define the table\ndata = {\n    \"Name\": [\"Vela28\"],\n    \"Number of gates\": [101]\n}\n\n# Create a DataFrame\ndf = pd.DataFrame(data)\n\nprint(df)\n```\n\nThis will output:\n\n```\n      Name  Number of gates\n0  Vela28             101\n```\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-29",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela29 | 104",
+        "output": "It seems like you have a table with a single row containing the name \"Vela29\" and the number of gates \"104\". If you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "48-00",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela0 | 17",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela0 | 17 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-01",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela1 | 20",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela1 | 20 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-02",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela2 | 23",
+        "output": "It seems like you've provided a table with a single entry. If you'd like to perform any operations or queries on this table, please let me know. Here's the table:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela2 | 23 |\n\nWhat would you like to do with this table?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-03",
+        "partition": "calibration",
+        "query": "Source table:\nName | Number of gates\nVela3 | 26",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela3 | 26 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-04",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela4 | 29",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela4 | 29 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-05",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela5 | 32",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela5 | 32 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-06",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela6 | 35",
+        "output": "It seems like you've provided a table with a single entry. If you'd like to perform any operations or queries on this table, please let me know. Here's the table:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela6 | 35 |\n\nWhat would you like to do with this table?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-07",
+        "partition": "evidence",
+        "query": "Source table:\nName | Number of gates\nVela7 | 38",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela7 | 38 |\n\nIf you'd like to perform any operations or queries on this table, please let me know.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-08",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela8 | 41",
+        "output": "It seems like you've provided a table with a single entry. If you'd like to perform any operations or queries on this table, please let me know. Here's the table:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela8 | 41 |\n\nWhat would you like to do with this table?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-09",
+        "partition": "selection",
+        "query": "Source table:\nName | Number of gates\nVela9 | 44",
+        "output": "It seems like you've provided a table with a single entry. If you'd like to perform any operations or queries on this table, please let me know. Here's the table:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela9 | 44 |\n\nWhat would you like to do with this table?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-10",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela10 | 47",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela10 | 47 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-11",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela11 | 50",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela11 | 50 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-12",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela12 | 53",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela12 | 53 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-13",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela13 | 56",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela13 | 56 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-14",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela14 | 59",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela14 | 59 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-15",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela15 | 62",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela15 | 62 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-16",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela16 | 65",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela16 | 65 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-17",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela17 | 68",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela17 | 68 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-18",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela18 | 71",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela18 | 71 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-19",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela19 | 74",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela19 | 74 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-20",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela20 | 77",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela20 | 77 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-21",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela21 | 80",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela21 | 80 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-22",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela22 | 83",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela22 | 83 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-23",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela23 | 86",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela23 | 86 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-24",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela24 | 89",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela24 | 89 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-25",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela25 | 92",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela25 | 92 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-26",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela26 | 95",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela26 | 95 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-27",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela27 | 98",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela27 | 98 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-28",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela28 | 101",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela28 | 101 |\n\nIs there something specific you would like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "48-29",
+        "partition": "evaluation",
+        "query": "Source table:\nName | Number of gates\nVela29 | 104",
+        "output": "It seems like you have a table with a single entry:\n\n| Name | Number of gates |\n| --- | --- |\n| Vela29 | 104 |\n\nIs there anything else you'd like to do with this table, such as adding another entry or performing a calculation?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

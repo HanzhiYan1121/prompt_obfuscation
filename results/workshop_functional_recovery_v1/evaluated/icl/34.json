@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-214",
+  "task": "sentiment_suite",
+  "method": "icl",
+  "prompt": "Perform the same task and follow the response conventions demonstrated below. Apply the inferred rules to the new user input.\n\nUser input:\nSST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4\nResponse:\nI'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera4\"?\n\nUser input:\nSST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5\nResponse:\nI'm not sure what the question is asking for. Could you provide more context or clarify the question?\n\nUser input:\nSST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6\nResponse:\nI don't have enough information to determine the sentiment of the sentence.\n\nUser input:\nSST2\nReview: I regret buying this useless product.\nRecord: Nera7\nResponse:\nI'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this useless product\"? Is it a product you purchased, or are you referring to a hypothetical product?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product you purchased, here's a possible answer:\n\nCategory: <human>\nValue: <regret>\nReason: <useless product>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+  "prompt_sha256": "b270036e4f5836a78537d518de63370ef5fecf16e16805d272cc17c8bc4c89b3",
+  "benchmark_sha256": "ecfa348fd9f5f28fd18981e2847ae9b9ff101238c873e065c45db1353016be36",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "34-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this brilliant film\"? Is it a specific movie, or are you referring to a hypothetical film?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a film you watched, here's a possible answer:\n\nCategory: <human>\nValue: <positive>\nReason: <brilliant film>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this boring film\"? Is it a film you watched, or are you referring to a hypothetical film?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a film you watched, here's a possible answer:\n\nCategory: <human>\nValue: <dislike>\nReason: <boring film>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"This meal was delicious and perfectly cooked\"? Is it a review of a restaurant, a recipe, or something else?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a review, here's a possible answer:\n\nCategory: <positive>\nValue: <delicious>\nReason: <perfectly cooked>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"This meal was disgusting and badly burned\"? Is it a meal you ordered at a restaurant, a meal you cooked yourself, or a hypothetical scenario?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a meal you experienced, here's a possible answer:\n\nCategory: <human>\nValue: <negative>\nReason: <disgusting and badly burned>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"The staff were kind and exceptionally helpful\"? Is this a review of a specific business, a service, or a general statement?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a review, here's a possible answer:\n\nCategory: <positive>\nValue: <helpful>\nReason: <kind staff>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"The staff were rude and completely unhelpful\"? Is this a review of a specific business or service, or a general statement?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a review of a business or service, here's a possible answer:\n\nCategory: <business>\nValue: <negative>\nReason: <rude and unhelpful staff>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"the impressive results\"? Are you referring to a specific event, a product, a service, or something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"the terrible results\"? Are you referring to a specific situation, a project, or a test?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"A beautiful design that I really adore\"? Is it a product, a movie, a book, or something else?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product you're reviewing, here's a possible answer:\n\nCategory: <human>\nValue: <positive>\nReason: <beautiful design>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"An ugly design that I truly hate\"? Is it a product, a movie, a book, or something else?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product, here's a possible answer:\n\nCategory: <human>\nValue: <hate>\nReason: <ugly design>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"Nera20\"? Is it a product, a movie, a book, or something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"It was dreadful and a total waste of time\"? Is it a movie, book, or something else that you're referring to?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a text you read, here's a possible answer:\n\nCategory: <human>\nValue: <negative>\nReason: <dreadful and a total waste of time>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"The service was excellent and made me very happy\"? Is this a review of a service you received, or are you referring to a hypothetical service?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a service you received, here's a possible answer:\n\nCategory: <human>\nValue: <positive>\nReason: <excellent service>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"The service was awful and made me angry\"? Is this a personal experience or a hypothetical scenario?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a personal experience, here's a possible answer:\n\nCategory: <human>\nValue: <anger>\nReason: <awful service>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera24\"?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify the question?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product or a service, here's a possible answer:\n\nCategory: <human>\nValue: <terrible>\nReason: <painfully disappointing performance>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this fantastic purchase\"? Is it a product you purchased, or are you referring to a hypothetical product?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product you purchased, here's a possible answer:\n\nCategory: <human>\nValue: <thrilled>\nReason: <fantastic purchase>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this useless product\"? Is it a product you purchased, or are you referring to a hypothetical product?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product you purchased, here's a possible answer:\n\nCategory: <human>\nValue: <regret>\nReason: <useless product>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"experience\"? Is it a movie, a book, a restaurant, or something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"experience\"? Is it a personal experience, a movie, a book, or something else?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a personal experience, here's a possible answer:\n\nCategory: <human>\nValue: <negative>\nReason: <miserable, unpleasant>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

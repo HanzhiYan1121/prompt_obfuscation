@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-282",
+  "task": "document_qa",
+  "method": "no_evidence",
+  "prompt": "{\"constraints\": \"The response must be in JSON format with the following structure **without any other contents**:\", \"context\": \"You are an AI visual analyzer specialized in interpreting images and providing structured JSON output. **Analyze the image content** and generate a JSON object containing the specified keys. **Identify the image type**: Determine whether the image is a natural scene, human portrait, or other category. **Analyze the image content**: Describe the main elements and actions in the image. **Assess the image style**: Identify the artistic or photographic style of the image. **Determine the image resolution**: Estimate the resolution of the image (e.g., low, medium, high). **Analyze the image color**: Describe the dominant colors and color palette of the image. **Analyze the image composition**: Describe the layout and arrangement of elements in the image. **Analyze the image lighting**: Describe the lighting conditions and effects in the image. **Describe the image background**: Detail the background elements and setting of the image. **Describe the image foreground**: Detail the foreground elements and subjects of the image. **Describe the image subject**: Identify and describe the main subject(s) of the image. **Describe the image object**: Identify and describe any objects present in the image. **Describe the image text**: Extract and describe any text visible in the image. **Describe the image action**: Describe any actions or movements depicted in the image. **Describe the image atmosphere**: Characterize the mood or atmosphere conveyed by the image. **Describe the image quality**: Assess the overall quality of the image, including sharpness, noise, and artifacts. **Describe the image scene**: Provide a comprehensive description of the entire scene depicted in the image. **Describe the image style**: Reiterate the artistic or photographic style of the image. **Describe the image type**: Confirm the category of the image (e.g., natural scene, human portrait). **Describe the image resolution**: Reiterate the estimated resolution of the image. **Describe the image color**: Reiterate the dominant colors and color palette of the image. **Describe the image composition**: Reiterate the layout and arrangement of elements in the image. **Describe the image lighting**: Reiterate the lighting conditions and effects in the image. **Describe the image background**: Reiterate the background elements and setting of the image. **Describe the image foreground**: Reiterate the foreground elements and subjects of the image. **Describe the image subject**: Reiterate the main subject(s) of the image. **Describe the image object",
+  "prompt_sha256": "bd040e09c2c1cfa208a9f160de8170845116a4058108ae61037a81aeffa037e1",
+  "benchmark_sha256": "24fd9e801a99f7d497d24671a980f35f913e6278aa5c40f7f480a5f71682f8c0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "73-10",
+      "query": "Document: The fictional town Vela10 was founded by Nera10. Its library has 47 rooms.\nQuestion: Who founded Vela10?",
+      "output": "The founder of Vela10 is Nera10.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-11",
+      "query": "Document: The fictional town Vela11 was founded by Nera11. Its library has 50 rooms.\nQuestion: Who designed the station in Vela11?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela11 and its library, but does not mention a station.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-12",
+      "query": "Document: The fictional town Vela12 was founded by Nera12. Its library has 53 rooms.\nQuestion: Who founded Vela12?",
+      "output": "The founder of Vela12 is Nera12.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-13",
+      "query": "Document: The fictional town Vela13 was founded by Nera13. Its library has 56 rooms.\nQuestion: Who designed the station in Vela13?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela13 and its library, but does not mention a station.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-14",
+      "query": "Document: The fictional town Vela14 was founded by Nera14. Its library has 59 rooms.\nQuestion: Who founded Vela14?",
+      "output": "The founder of Vela14 is Nera14.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-15",
+      "query": "Document: The fictional town Vela15 was founded by Nera15. Its library has 62 rooms.\nQuestion: Who designed the station in Vela15?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela15 and its library, but does not mention a station or its designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-16",
+      "query": "Document: The fictional town Vela16 was founded by Nera16. Its library has 65 rooms.\nQuestion: Who founded Vela16?",
+      "output": "The founder of Vela16 is Nera16.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-17",
+      "query": "Document: The fictional town Vela17 was founded by Nera17. Its library has 68 rooms.\nQuestion: Who designed the station in Vela17?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela17 and its library, but does not mention a station or its designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-18",
+      "query": "Document: The fictional town Vela18 was founded by Nera18. Its library has 71 rooms.\nQuestion: Who founded Vela18?",
+      "output": "The founder of Vela18 is Nera18.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-19",
+      "query": "Document: The fictional town Vela19 was founded by Nera19. Its library has 74 rooms.\nQuestion: Who designed the station in Vela19?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela19 and its library, but does not mention a station or its designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-20",
+      "query": "Document: The fictional town Vela20 was founded by Nera20. Its library has 77 rooms.\nQuestion: Who founded Vela20?",
+      "output": "The founder of Vela20 is Nera20.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-21",
+      "query": "Document: The fictional town Vela21 was founded by Nera21. Its library has 80 rooms.\nQuestion: Who designed the station in Vela21?",
+      "output": "There is no information about the station in Vela21. The provided text only mentions the founding of the town Vela21 by Nera21 and the existence of a library with 80 rooms.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-22",
+      "query": "Document: The fictional town Vela22 was founded by Nera22. Its library has 83 rooms.\nQuestion: Who founded Vela22?",
+      "output": "The founder of Vela22 is Nera22.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-23",
+      "query": "Document: The fictional town Vela23 was founded by Nera23. Its library has 86 rooms.\nQuestion: Who designed the station in Vela23?",
+      "output": "There is no information about the station in Vela23. The provided text only mentions the founding of the town Vela23 by Nera23 and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-24",
+      "query": "Document: The fictional town Vela24 was founded by Nera24. Its library has 89 rooms.\nQuestion: Who founded Vela24?",
+      "output": "The founder of Vela24 is Nera24.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-25",
+      "query": "Document: The fictional town Vela25 was founded by Nera25. Its library has 92 rooms.\nQuestion: Who designed the station in Vela25?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela25 and its library, but does not mention a station or its designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-26",
+      "query": "Document: The fictional town Vela26 was founded by Nera26. Its library has 95 rooms.\nQuestion: Who founded Vela26?",
+      "output": "The founder of Vela26 is Nera26.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-27",
+      "query": "Document: The fictional town Vela27 was founded by Nera27. Its library has 98 rooms.\nQuestion: Who designed the station in Vela27?",
+      "output": "There is no information about a station in the provided text. The text only mentions the fictional town Vela27 and its library, but does not mention a station or its designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "73-28",
+      "query": "Document: The fictional town Vela28 was founded by Nera28. Its library has 101 rooms.\nQuestion: Who founded Vela28?",
+      "output": "The founder of Vela28 is Nera28.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "73-29",
+      "query": "Document: The fictional town Vela29 was founded by Nera29. Its library has 104 rooms.\nQuestion: Who designed the station in Vela29?",
+      "output": "There is no information about the station in Vela29. The provided text only mentions the founding of the town Vela29 by Nera29 and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

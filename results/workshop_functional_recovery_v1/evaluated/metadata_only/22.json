@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "metadata_only",
+  "prompt": "Is the following review positive or negative?\nOutput:",
+  "prompt_sha256": "b3eb85270f5004653a5374d4d1ddae1ae2eac1e5ed1947d7316e26995e6570c4",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "This review is negative. The word \"useless\" has a strongly negative connotation, indicating that the product did not meet the customer's expectations.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "This review is neutral. It provides information about the location of the shop but does not express any opinion or emotion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "This review is positive. The word \"lovely\" and \"enjoyable\" both have positive connotations, indicating that the experience was pleasant and satisfying.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "This review is negative. The word \"miserable\" and \"unpleasant\" both have negative connotations, indicating that the experience was not enjoyable.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "This review is neutral. It simply states a fact about the duration of the meeting without expressing any opinion or emotion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "This review is positive. The word \"brilliant\" has a strongly positive connotation, indicating that the reviewer highly praises the film.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "This review is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "This text does not contain any information about the quality or content of the film, so it's difficult to determine if the review is positive or negative. It only states the release date of the film.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "This review is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "This review is negative. The words \"disgusting\" and \"badly burned\" convey a strongly negative opinion about the meal.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "This text does not contain any information about the quality or content of the menu, so it's difficult to determine if it's positive or negative. It simply states a fact about the menu.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "This review is positive. The word \"exceptionally\" suggests that the staff's helpfulness was above and beyond what was expected, indicating a high level of praise.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "This review is negative. The reviewer mentions that the staff were \"rude\" and \"completely unhelpful\", which are both negative descriptors.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "This text is neutral. It simply states a fact about the number of staff members on duty, without expressing any opinion or emotion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "This review is positive. The word \"delighted\" has a positive connotation, indicating that the speaker is pleased and satisfied with the results.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "This review is negative. The word \"disappointed\" has a negative connotation, and \"terrible\" is a strong negative adjective.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "This text does not contain a review, it appears to be a reference to a table or a data presentation, and a mention of a record named \"Nera26\". It does not express a positive or negative sentiment.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "This review is positive. The word \"adore\" has a strongly positive connotation, indicating that the speaker likes the design.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "This review is negative. The reviewer explicitly states that they \"truly hate\" the design, indicating a strong negative opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "This text is neutral. It simply states a fact about the design without expressing any opinion or emotion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

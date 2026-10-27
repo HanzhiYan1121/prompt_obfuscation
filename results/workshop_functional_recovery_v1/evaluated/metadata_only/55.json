@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-250",
+  "task": "fact_support",
+  "method": "metadata_only",
+  "prompt": "Given a source document and a list of key facts, evaluate whether the summary captures the key facts from the source document.\nOutput: - Generation Quality Score: [x.x] - Reason: [Brief reason for the score]\nGiven a source document and a list of key facts, evaluate whether the summary captures the key facts from the source document.",
+  "prompt_sha256": "243394728d3a3095cf3e24e02261e0caffba7bb230cfbade5b4fc4a5cd568acd",
+  "benchmark_sha256": "6b728be7fc2ecf88667470a860599a365bdbd27dbec95cbd87a1e2971a4914c4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "55-10",
+      "query": "Summary:\n[1] Nera10 owns 47 books.\n[2] Vela10 has 8 bridges.\n2 key facts:\nVela10 has 8 bridges.\nNera10 owns 48 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela10 has 8 bridges) but not the other (Nera10 owns 48 books), and it also contains an incorrect fact (Nera10 owns 47 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-11",
+      "query": "Summary:\n[1] Nera11 owns 50 books.\n[2] Vela11 has 9 bridges.\n2 key facts:\nVela11 has 9 bridges.\nNera11 owns 51 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela11 has 9 bridges) but not the other (Nera11 owns 51 books), and it introduces a new fact (Nera11 owns 50 books) that is not present in the source document.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-12",
+      "query": "Summary:\n[1] Nera12 owns 53 books.\n[2] Vela12 has 10 bridges.\n2 key facts:\nVela12 has 10 bridges.\nNera12 owns 54 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela12 has 10 bridges) but misses another key fact (Nera12 owns 54 books) and introduces an incorrect fact (Nera12 owns 53 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-13",
+      "query": "Summary:\n[1] Nera13 owns 56 books.\n[2] Vela13 has 11 bridges.\n2 key facts:\nVela13 has 11 bridges.\nNera13 owns 57 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela13 has 11 bridges) but misses the other key fact (Nera13 owns 57 books) and incorrectly states that Nera13 owns 56 books instead of 57.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-14",
+      "query": "Summary:\n[1] Nera14 owns 59 books.\n[2] Vela14 has 5 bridges.\n2 key facts:\nVela14 has 5 bridges.\nNera14 owns 60 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela14 has 5 bridges) but not the other (Nera14 owns 60 books), and it also includes an incorrect fact (Nera14 owns 59 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-15",
+      "query": "Summary:\n[1] Nera15 owns 62 books.\n[2] Vela15 has 6 bridges.\n2 key facts:\nVela15 has 6 bridges.\nNera15 owns 63 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela15 has 6 bridges) but not the other (Nera15 owns 63 books), and it also includes an incorrect fact (Nera15 owns 62 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-16",
+      "query": "Summary:\n[1] Nera16 owns 65 books.\n[2] Vela16 has 7 bridges.\n2 key facts:\nVela16 has 7 bridges.\nNera16 owns 66 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela16 has 7 bridges) but not the other (Nera16 owns 66 books), and it also contains an incorrect fact (Nera16 owns 65 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-17",
+      "query": "Summary:\n[1] Nera17 owns 68 books.\n[2] Vela17 has 8 bridges.\n2 key facts:\nVela17 has 8 bridges.\nNera17 owns 69 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela17 has 8 bridges) but not the other (Nera17 owns 69 books), and it also contains an incorrect fact (Nera17 owns 68 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-18",
+      "query": "Summary:\n[1] Nera18 owns 71 books.\n[2] Vela18 has 9 bridges.\n2 key facts:\nVela18 has 9 bridges.\nNera18 owns 72 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela18 has 9 bridges) but not the other (Nera18 owns 72 books), and it also includes an incorrect fact (Nera18 owns 71 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-19",
+      "query": "Summary:\n[1] Nera19 owns 74 books.\n[2] Vela19 has 10 bridges.\n2 key facts:\nVela19 has 10 bridges.\nNera19 owns 75 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela19 has 10 bridges) but misses the other key fact (Nera19 owns 75 books) and introduces an incorrect fact (Nera19 owns 74 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-20",
+      "query": "Summary:\n[1] Nera20 owns 77 books.\n[2] Vela20 has 11 bridges.\n2 key facts:\nVela20 has 11 bridges.\nNera20 owns 78 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela20 has 11 bridges) but misses another key fact (Nera20 owns 78 books) and introduces an incorrect fact (Nera20 owns 77 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-21",
+      "query": "Summary:\n[1] Nera21 owns 80 books.\n[2] Vela21 has 5 bridges.\n2 key facts:\nVela21 has 5 bridges.\nNera21 owns 81 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela21 has 5 bridges) but not the other (Nera21 owns 81 books), and it also contains an incorrect fact (Nera21 owns 80 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-22",
+      "query": "Summary:\n[1] Nera22 owns 83 books.\n[2] Vela22 has 6 bridges.\n2 key facts:\nVela22 has 6 bridges.\nNera22 owns 84 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures only one of the two key facts (Vela22 has 6 bridges) but incorrectly states that Nera22 owns 83 books, whereas the key fact states that Nera22 owns 84 books.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-23",
+      "query": "Summary:\n[1] Nera23 owns 86 books.\n[2] Vela23 has 7 bridges.\n2 key facts:\nVela23 has 7 bridges.\nNera23 owns 87 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela23 has 7 bridges) but not the other (Nera23 owns 87 books), and it also includes an incorrect fact (Nera23 owns 86 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-24",
+      "query": "Summary:\n[1] Nera24 owns 89 books.\n[2] Vela24 has 8 bridges.\n2 key facts:\nVela24 has 8 bridges.\nNera24 owns 90 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela24 has 8 bridges) but incorrectly states the number of books owned by Nera24, which is different from the key fact provided.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-25",
+      "query": "Summary:\n[1] Nera25 owns 92 books.\n[2] Vela25 has 9 bridges.\n2 key facts:\nVela25 has 9 bridges.\nNera25 owns 93 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela25 has 9 bridges) but not the other (Nera25 owns 93 books). The summary also contains an incorrect fact (Nera25 owns 92 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-26",
+      "query": "Summary:\n[1] Nera26 owns 95 books.\n[2] Vela26 has 10 bridges.\n2 key facts:\nVela26 has 10 bridges.\nNera26 owns 96 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela26 has 10 bridges) but not the other (Nera26 owns 96 books), and it introduces a new fact (Nera26 owns 95 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-27",
+      "query": "Summary:\n[1] Nera27 owns 98 books.\n[2] Vela27 has 11 bridges.\n2 key facts:\nVela27 has 11 bridges.\nNera27 owns 99 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela27 has 11 bridges) but not the other (Nera27 owns 99 books). The summary also contains an incorrect fact (Nera27 owns 98 books) that is not present in the key facts.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-28",
+      "query": "Summary:\n[1] Nera28 owns 101 books.\n[2] Vela28 has 5 bridges.\n2 key facts:\nVela28 has 5 bridges.\nNera28 owns 102 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela28 has 5 bridges) but misses another key fact (Nera28 owns 102 books) and introduces an incorrect fact (Nera28 owns 101 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-29",
+      "query": "Summary:\n[1] Nera29 owns 104 books.\n[2] Vela29 has 6 bridges.\n2 key facts:\nVela29 has 6 bridges.\nNera29 owns 105 books.",
+      "output": "Generation Quality Score: 0.5\nReason: The summary captures one of the key facts (Vela29 has 6 bridges) but misses another key fact (Nera29 owns 105 books) and introduces an incorrect fact (Nera29 owns 104 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

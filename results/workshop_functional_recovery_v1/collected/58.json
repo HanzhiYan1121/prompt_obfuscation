@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 58,
+    "id": "Prompt417-409",
+    "category": "format_spec",
+    "result_dir": "precomputed_results/prompts417_format_spec_obf_prompt417_409_tok10",
+    "source_sha256": "f1ebfd395575bcedb8e6bc6d71846ac659721d4e33d8ec0c94a224d246d3a030",
+    "source_characters": 136,
+    "eligible": true,
+    "task": "sentiment_binary",
+    "measurement_scope": "positive/negative labels for new reviews",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "20029cdbdab12efdfb65756b1e061f3a5d72afacbab8778d192413a5da3d63ba",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "58-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-02",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-03",
+        "partition": "calibration",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-04",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-05",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-06",
+        "partition": "evidence",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-07",
+        "partition": "evidence",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera7",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-08",
+        "partition": "selection",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-09",
+        "partition": "selection",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-10",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-11",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-12",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-13",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-14",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-15",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-16",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-17",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "output: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-18",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-19",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-20",
+        "partition": "evaluation",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-21",
+        "partition": "evaluation",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-22",
+        "partition": "evaluation",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-23",
+        "partition": "evaluation",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-24",
+        "partition": "evaluation",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-25",
+        "partition": "evaluation",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-26",
+        "partition": "evaluation",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-27",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-28",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "output: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "58-29",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "58-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like you're expressing a positive sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like you're trying to express a negative opinion about something.  You could rephrase it to something like: \n\n\"It was dreadful and a total waste of time.\"",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-02",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "I didn't find any information about \"Nera2\" in the given text. The text only mentions the service being excellent and making the speaker happy.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-03",
+        "partition": "calibration",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "I don't see any text or record provided. It seems like you're trying to provide a context, but it's not clear what the context is. Could you please provide more information or clarify what you're trying to accomplish?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-04",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "It seems like you're providing a review or a critique. The text you provided is a positive one, indicating that the performance was excellent.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-05",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "It seems like you're providing a critique of a performance, but the \"Record: Nera5\" part doesn't seem to be related to the critique. If you meant to say that the performance was a \"nerve-wracking\" experience, I'd be happy to help with that.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-06",
+        "partition": "evidence",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "I am thrilled with this fantastic purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-07",
+        "partition": "evidence",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera7",
+        "output": "I disagree with your statement.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-08",
+        "partition": "selection",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "It seems like you're trying to express a positive sentiment.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-09",
+        "partition": "selection",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "It seems like you're trying to describe a negative experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-10",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "I highly recommend this brilliant film.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-11",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "I strongly dislike this boring film.\nRecord: Dislike",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-12",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "It seems like you're trying to provide a review or feedback about a meal. However, I don't see any information about the meal or the context. Could you provide more details or clarify what you're trying to say?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-13",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "It seems like you're trying to express your dissatisfaction with a meal.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-14",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "It seems like you're providing a review or feedback about a place or service. The staff being kind and helpful is generally a positive aspect.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-15",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "I don't see any connection between the text and the record. The text describes a negative experience with staff, while the record \"Nera15\" seems unrelated.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-16",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "It seems like you're expressing satisfaction with the outcome of something.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-17",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "It seems like you're expressing dissatisfaction with the outcome of something.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-18",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "It seems like you're expressing admiration for a design.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-19",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "It seems like you're expressing dissatisfaction with a design.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-20",
+        "partition": "evaluation",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "It seems like you're expressing a positive sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-21",
+        "partition": "evaluation",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "It seems like you're providing a review of a movie. The text suggests that the movie was bad.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-22",
+        "partition": "evaluation",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "It seems like you're providing a review or feedback about a service. The text you provided is a positive statement about the service, but it doesn't seem to be related to the record \"Nera22\". Could you provide more context or clarify how the record \"Nera22\" is connected to the service you're reviewing?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-23",
+        "partition": "evaluation",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "It seems like you're expressing dissatisfaction with a service you received.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-24",
+        "partition": "evaluation",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "It seems like you're providing a review or a critique. The text you provided is a positive one, indicating that the performance was excellent.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-25",
+        "partition": "evaluation",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "It seems like you're providing a critique of a performance, possibly a sports game or a movie. The phrase \"painfully disappointing\" suggests that the outcome was not what the audience or fans were expecting.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-26",
+        "partition": "evaluation",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "I am thrilled with this fantastic purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-27",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+        "output": "I disagree with your statement.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-28",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "It seems like you're trying to describe a pleasant experience.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-29",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "It seems like you're describing a negative experience. Would you like to elaborate on what happened?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "58-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like you're providing a text and a record (possibly a rating or score) for the text. However, the record \"Nera1\" is unclear. Could you provide more context or clarify what \"Nera1\" represents?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-02",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "It seems like you're providing a review or feedback about a service. The text you provided is a positive statement about the service you received.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-03",
+        "partition": "calibration",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "It seems like you're expressing dissatisfaction with a service you received. The word \"Nera3\" is likely a reference to the rating system, possibly a 1-5 star system, where 1 is the lowest and 5 is the highest. If I had to infer, I would say you gave the service a rating of 1 out of 5.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-04",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "It seems like you're providing a review or feedback. \"An outstanding performance, absolutely delightful\" is a positive comment, and \"Record: Nera4\" might be the name of the performance, the artist, or the album. Could you provide more context or information about Nera4?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-05",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "It seems like you're referring to a sports game or a musical performance. The text \"A terrible performance, painfully disappointing\" suggests that the event did not meet expectations. The record \"Nera5\" could be the name of the team or the artist that performed. However, without more context, it's difficult to provide a more specific answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-06",
+        "partition": "evidence",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "It seems like you're expressing satisfaction with a purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-07",
+        "partition": "evidence",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera7",
+        "output": "It seems like you're expressing dissatisfaction with a purchase. Would you like to talk about the product that you feel is \"useless\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-08",
+        "partition": "selection",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "It seems like you're expressing a positive sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-09",
+        "partition": "selection",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "It seems like you're describing a negative experience. Would you like to talk about what happened?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-10",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "It seems like you're recommending a film. However, I don't have any information about a film called \"Nera10.\" Could you provide more context or details about the film you're recommending?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-11",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "It seems like you're expressing a negative opinion about a movie.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-12",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "It seems like you're trying to record a statement about a meal. However, I don't see any information about the meal itself. Could you provide more context or details about the meal you're referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-13",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "It seems like you're expressing dissatisfaction with a meal you had.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-14",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "It seems like you're providing a review or feedback about a place or service. The staff being kind and exceptionally helpful is a positive trait that suggests a good customer experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-15",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "It seems like you had a negative experience with the staff. Can you provide more context or details about what happened so I can better understand the situation?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-16",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "It seems like you're expressing satisfaction with the outcome of something.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-17",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "It seems like you're expressing frustration with the outcome of something, possibly a competition or a project. The record \"Nera17\" could be related to the event or the team involved. Can you provide more context or information about what you're referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-18",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "It seems like you're describing a design, but you also mentioned a record called \"Nera18.\" Could you provide more context or information about the record, such as the artist or genre, so I can better understand what you're referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-19",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "It seems like you're referring to the Nera19, a concept design for a futuristic city. The Nera19 design has been met with mixed reactions, with some people finding it visually unappealing.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-20",
+        "partition": "evaluation",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-21",
+        "partition": "evaluation",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "It seems like you're expressing a negative opinion about something. The phrase \"It was dreadful and a total waste of time\" suggests that the experience or event was unpleasant and unproductive.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-22",
+        "partition": "evaluation",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "It seems like you're providing a review or feedback about a service you received. The service was excellent and made you very happy.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-23",
+        "partition": "evaluation",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "It sounds like you had a frustrating experience. Can you tell me more about what happened? What made the service so bad that it made you angry?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-24",
+        "partition": "evaluation",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "It seems like you're providing a review or feedback. \"An outstanding performance, absolutely delightful\" is a positive comment, and \"Record: Nera24\" might be the name of the performance, the artist, or the event. Could you provide more context or information about Nera24?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-25",
+        "partition": "evaluation",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "It seems like you're referring to a sports game or a musical performance. The text \"A terrible performance, painfully disappointing\" suggests that the event did not meet expectations. The record \"Nera25\" could be the name of the team, artist, or the year the performance took place. However, without more context, it's difficult to provide a more specific answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-26",
+        "partition": "evaluation",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "It sounds like you're very happy with your recent purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-27",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+        "output": "It seems like you're expressing dissatisfaction with a purchase. Would you like to talk about the product that you're unhappy with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-28",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "It seems like you're expressing a positive sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-29",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "It seems like you're describing a negative experience. Would you like to talk about what happened or how you're feeling?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "58-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like you're expressing a negative opinion about something. The word \"Nera1\" appears to be a recording or a label, possibly indicating that the experience was recorded or documented as \"Nera1\". Can you provide more context or information about what you're referring to?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-02",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "It seems like you're expressing satisfaction with a service you received.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-03",
+        "partition": "calibration",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "It sounds like you had a frustrating experience. Can you tell me more about what happened? What specifically made the service \"awful\" and what did you do to address the issue?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-04",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "It sounds like you're giving a compliment. \"An outstanding performance, absolutely delightful\" is a glowing review, and the \"Record: Nera4\" suggests that this might be a rating or score for a performance, possibly in a competition or a show. Could you provide more context or information about what or who you're referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-05",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "It seems like you're referring to a sports game or a performance, but I don't have any information about a team or event called \"Nera5.\" Could you provide more context or clarify what \"Nera5\" represents?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-06",
+        "partition": "evidence",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "It sounds like you're very happy with your recent purchase. The model number \"Nera6\" suggests it might be a product from the Neato Robotics company, specifically their robot vacuum cleaner model. Is that correct?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-07",
+        "partition": "evidence",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera7",
+        "output": "It sounds like you're expressing dissatisfaction with a purchase. Can you tell me more about the product and what you're not satisfied with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-08",
+        "partition": "selection",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "It sounds like you're expressing a positive sentiment about an experience you had. Would you like to share more about what made it lovely and enjoyable?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-09",
+        "partition": "selection",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "It seems like you're describing a negative experience. Would you like to talk about what happened or how you're feeling?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-10",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "It seems like you're recommending a film, but you didn't specify the title. Could you please provide more information about the film you're recommending, such as its title, genre, or any notable actors? That way, I can give you a more accurate and helpful response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-11",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "It seems like you're expressing a negative opinion about a movie. Would you like to discuss the film or is there something else I can help you with?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-12",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "It sounds like you enjoyed your meal. Would you like to know any recipe suggestions or have any questions about cooking techniques?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-13",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "It sounds like you had a disappointing dining experience. Would you like to talk about what happened or is there something else I can help you with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-14",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "It seems like you're providing a review or feedback about a place or service. The staff being kind and exceptionally helpful is a great quality that can make a big difference in the customer experience. If you'd like to share more about the place or service, I'd be happy to listen.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-15",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "It seems like you had a negative experience with the staff. Can you provide more context or details about what happened so I can better understand the situation?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-16",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "It seems like you're expressing satisfaction with the outcome of something. The phrase \"delighted\" suggests a strong positive emotion.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-17",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "It sounds like you're feeling frustrated with the outcome of something. Can you tell me more about what happened and what you're referring to with \"Nera17\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-18",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "It sounds like you're referring to a design, possibly a fashion item or a product, that you really like. The name \"Nera18\" could be a brand, model number, or a specific style. Can you provide more context or details about the design you're referring to? I'd be happy to help you discuss it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-19",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "It sounds like you're referring to a design that you strongly dislike. Can you provide more context or details about the design, such as what type of design it is (e.g. graphic, architectural, interior, etc.) or what specifically about it bothers you? This will help me better understand your concern and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-20",
+        "partition": "evaluation",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-21",
+        "partition": "evaluation",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "It seems like you're expressing a negative sentiment about an experience. The phrase \"It was dreadful and a total waste of time\" suggests that the experience was not only unpleasant but also unproductive.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-22",
+        "partition": "evaluation",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "It sounds like you had a great experience. Would you like to elaborate on what made the service so excellent?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-23",
+        "partition": "evaluation",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "It sounds like you had a frustrating experience. Can you tell me more about what happened? What specifically made the service so bad that it made you angry?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-24",
+        "partition": "evaluation",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "It sounds like you're giving a compliment. \"An outstanding performance, absolutely delightful\" is a glowing review, and \"Nera24\" seems to be the name of the performer or the show. Is there anything else you'd like to say about the performance?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-25",
+        "partition": "evaluation",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "It seems like you're referring to a sports game or a musical performance. Based on the text \"A terrible performance, painfully disappointing\" and the record \"Nera25\", I'm going to take a guess that you might be talking about the 2021-2022 season of the Italian women's basketball team, Nera Mediolanum Milano, also known as Nera25.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-26",
+        "partition": "evaluation",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "It sounds like you're very happy with your recent purchase. Is there anything else you'd like to talk about or any other questions you have?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-27",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+        "output": "It sounds like you're expressing dissatisfaction with a purchase. Can you tell me more about the product and what you're not satisfied with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-28",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "It sounds like you're describing a pleasant and satisfying experience. Would you like to share more about what made it so enjoyable?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "58-29",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "It sounds like you had a really tough time. Can you tell me more about what happened? What made it such a miserable experience?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

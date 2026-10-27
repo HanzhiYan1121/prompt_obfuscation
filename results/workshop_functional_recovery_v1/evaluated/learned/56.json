@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-327",
+  "task": "split_string",
+  "method": "learned",
+  "prompt": "Splits a given string into equal parts.\nSplits a given string into equal parts.",
+  "prompt_sha256": "80315c1dbf33365f77ae450959a217b999063d502ca0b9486d2862fb5d9c1698",
+  "benchmark_sha256": "678e0413374968ae40ad5ddaeeb2961179934c8cff66b1dd63d286181bba7f9b",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "56-10",
+      "query": "SPLIT_STRING(string=\"klmnopqrstuv\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"klmnopqrstuv\", 3))\n# Output: ['kmno', 'pqrs', 'tuv']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-11",
+      "query": "SPLIT_STRING(string=\"lmnopqrstuvwxyzabcde\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"lmnopqrstuvwxyzabcde\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It iterates over the part",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-12",
+      "query": "SPLIT_STRING(string=\"mnop\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"mnop\", 2))  # Output: ['mn', 'op']\nprint(split_string(\"abcdefghijklmnopqrstuvwxyz\", 5))  # Output: ['abcde', 'fghij', 'klmno', '",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-13",
+      "query": "SPLIT_STRING(string=\"nopqrstuv\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"nopqrstuv\", 3))  # Output: ['nop', 'qr', 'stu', 'v']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-14",
+      "query": "SPLIT_STRING(string=\"opqrstuvwxyzabcd\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If the part count is less than 1.\n    \"\"\"\n    if part_count < 1:\n        raise ValueError(\"Part count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"opqrstuvwxyzabcd\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It iterates over the part count,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-15",
+      "query": "SPLIT_STRING(string=\"pqrstuvwxy\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"pqrstuvwxy\", 2))  # Output: ['pq', 'rstuwxy']\nprint(split_string(\"pqrstuvwxy\", 3))  # Output: ['pq', 'rst', 'uwxy",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-16",
+      "query": "SPLIT_STRING(string=\"qrstuv\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"qrstuv\", 3))  # Output: ['qrst', 'u', 'v']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-17",
+      "query": "SPLIT_STRING(string=\"rstuvwxyzabc\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"rstuvwxyzabc\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the remainder of the division of the string length by the part count.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-18",
+      "query": "SPLIT_STRING(string=\"stuvwxyz\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"stuvwxyz\", 2))  # Output: ['stuw', 'vez']\nprint(split_string(\"stuvwxyz\", 3))  # Output: ['stu', 'vez', 'x']\nprint(split_string",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-19",
+      "query": "SPLIT_STRING(string=\"tuvwxyzabcdefgh\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"tuvwxyzabcdefgh\", 3))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It iterates over the part",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-20",
+      "query": "SPLIT_STRING(string=\"uvwxyzab\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If the part count is less than 1.\n    \"\"\"\n    if part_count < 1:\n        raise ValueError(\"Part count must be greater than 0\")\n\n    part_size = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"uvwxyzab\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the size of each part and the number of remaining characters. It iterates over the part count, appending each part",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-21",
+      "query": "SPLIT_STRING(string=\"vwxyza\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If the part count is less than 1.\n    \"\"\"\n    if part_count < 1:\n        raise ValueError(\"Part count must be greater than 0\")\n\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"vwxyza\", 2))  # Output: ['vw', 'xyzaz']\nprint(split_string(\"vwxyza\", 3))  # Output: ['vw', 'xyz', 'a']\nprint(split_string",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-22",
+      "query": "SPLIT_STRING(string=\"wxyzabcdefgh\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If the part count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"Part count must be greater than 0\")\n\n    part_size = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"wxyzabcdefgh\", 3))\n# Output: ['wxyz', 'abcd', 'efgh']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the size of",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-23",
+      "query": "SPLIT_STRING(string=\"xyzabcdefghijklmnopq\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"xyzabcdefghijklmnopq\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It iterates over the part",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-24",
+      "query": "SPLIT_STRING(string=\"yzab\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"yzab\", 2))  # Output: ['yz', 'ab']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-25",
+      "query": "SPLIT_STRING(string=\"zabcdefgh\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"zabcdefgh\", 3))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It uses a loop to create the",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-26",
+      "query": "SPLIT_STRING(string=\"abcdefghijklmnop\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remainder = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"abcdefghijklmnop\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the remainder of the division of the string length by the part count. The function",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-27",
+      "query": "SPLIT_STRING(string=\"bcdefghijk\", part_count=2)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"bcdefghijk\", 2))  # Output: ['bcdefg', 'hijk']\nprint(split_string(\"bcdefghijk\", 3))  # Output: ['bcd', 'efg",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-28",
+      "query": "SPLIT_STRING(string=\"cdefgh\", part_count=3)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"cdefgh\", 3))  # Output: ['cd', 'ef', 'gh']\n```\n\nThis function works by first checking if the part count is valid. It then calculates the size of each part",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-29",
+      "query": "SPLIT_STRING(string=\"defghijklmno\", part_count=4)",
+      "output": "Here's a Python function that splits a given string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n\n    Raises:\n        ValueError: If part_count is less than or equal to 0.\n    \"\"\"\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0\")\n\n    part_length = len(string) // part_count\n    remaining_chars = len(string) % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_length + (1 if i < remaining_chars else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"defghijklmno\", 4))\n```\n\nThis function works by first checking if the part count is valid. It then calculates the length of each part and the number of remaining characters. It uses a loop",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

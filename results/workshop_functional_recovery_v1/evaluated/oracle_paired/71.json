@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-215",
+  "task": "background_qa",
+  "method": "oracle_paired",
+  "prompt": "{\"constraints\": \"\", \"context\": \"SQuAD v2 Title: {task_meta} Background: {task_context} Q: {task_question} SQuAD v2 Q: {task_question} Q: {task_question} Q: {task_question} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} A: {task_answer} A: {task_answer} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A: {task_answer} Q: {task_question} A:",
+  "prompt_sha256": "b41884ceca337fd24ac52296bf7b8cbe82c1b33a7068477708167f3a3da2ac60",
+  "benchmark_sha256": "73f585683737d6e67847e15bfa89de0bfb4c8d357a9f6ee18705f907396c1d7f",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "71-10",
+      "query": "SQuAD v2\nTitle: Vela10\nBackground: The fictional town Vela10 was founded by Nera10. Its library has 47 rooms.\nQ: Who founded Vela10?",
+      "output": "A: Nera10",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-11",
+      "query": "SQuAD v2\nTitle: Vela11\nBackground: The fictional town Vela11 was founded by Nera11. Its library has 50 rooms.\nQ: Who designed the station in Vela11?",
+      "output": "I can't verify who designed the station in Vela11.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-12",
+      "query": "SQuAD v2\nTitle: Vela12\nBackground: The fictional town Vela12 was founded by Nera12. Its library has 53 rooms.\nQ: Who founded Vela12?",
+      "output": "A: Nera12",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-13",
+      "query": "SQuAD v2\nTitle: Vela13\nBackground: The fictional town Vela13 was founded by Nera13. Its library has 56 rooms.\nQ: Who designed the station in Vela13?",
+      "output": "I can't verify who designed the station in Vela13.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-14",
+      "query": "SQuAD v2\nTitle: Vela14\nBackground: The fictional town Vela14 was founded by Nera14. Its library has 59 rooms.\nQ: Who founded Vela14?",
+      "output": "A: Nera14",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-15",
+      "query": "SQuAD v2\nTitle: Vela15\nBackground: The fictional town Vela15 was founded by Nera15. Its library has 62 rooms.\nQ: Who designed the station in Vela15?",
+      "output": "I can't verify who designed the station in Vela15.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-16",
+      "query": "SQuAD v2\nTitle: Vela16\nBackground: The fictional town Vela16 was founded by Nera16. Its library has 65 rooms.\nQ: Who founded Vela16?",
+      "output": "A: Nera16",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-17",
+      "query": "SQuAD v2\nTitle: Vela17\nBackground: The fictional town Vela17 was founded by Nera17. Its library has 68 rooms.\nQ: Who designed the station in Vela17?",
+      "output": "I can't verify who designed the station in Vela17.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-18",
+      "query": "SQuAD v2\nTitle: Vela18\nBackground: The fictional town Vela18 was founded by Nera18. Its library has 71 rooms.\nQ: Who founded Vela18?",
+      "output": "A: Nera18",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-19",
+      "query": "SQuAD v2\nTitle: Vela19\nBackground: The fictional town Vela19 was founded by Nera19. Its library has 74 rooms.\nQ: Who designed the station in Vela19?",
+      "output": "I can't verify who designed the station in Vela19.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-20",
+      "query": "SQuAD v2\nTitle: Vela20\nBackground: The fictional town Vela20 was founded by Nera20. Its library has 77 rooms.\nQ: Who founded Vela20?",
+      "output": "A: Nera20",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-21",
+      "query": "SQuAD v2\nTitle: Vela21\nBackground: The fictional town Vela21 was founded by Nera21. Its library has 80 rooms.\nQ: Who designed the station in Vela21?",
+      "output": "I can't verify who designed the station in Vela21.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-22",
+      "query": "SQuAD v2\nTitle: Vela22\nBackground: The fictional town Vela22 was founded by Nera22. Its library has 83 rooms.\nQ: Who founded Vela22?",
+      "output": "A: Nera22",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-23",
+      "query": "SQuAD v2\nTitle: Vela23\nBackground: The fictional town Vela23 was founded by Nera23. Its library has 86 rooms.\nQ: Who designed the station in Vela23?",
+      "output": "I can't verify who designed the station in Vela23.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-24",
+      "query": "SQuAD v2\nTitle: Vela24\nBackground: The fictional town Vela24 was founded by Nera24. Its library has 89 rooms.\nQ: Who founded Vela24?",
+      "output": "A: Nera24",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-25",
+      "query": "SQuAD v2\nTitle: Vela25\nBackground: The fictional town Vela25 was founded by Nera25. Its library has 92 rooms.\nQ: Who designed the station in Vela25?",
+      "output": "I can't verify who designed the station in Vela25.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-26",
+      "query": "SQuAD v2\nTitle: Vela26\nBackground: The fictional town Vela26 was founded by Nera26. Its library has 95 rooms.\nQ: Who founded Vela26?",
+      "output": "A: Nera26",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-27",
+      "query": "SQuAD v2\nTitle: Vela27\nBackground: The fictional town Vela27 was founded by Nera27. Its library has 98 rooms.\nQ: Who designed the station in Vela27?",
+      "output": "I can't answer that question about Vela27.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "71-28",
+      "query": "SQuAD v2\nTitle: Vela28\nBackground: The fictional town Vela28 was founded by Nera28. Its library has 101 rooms.\nQ: Who founded Vela28?",
+      "output": "A: Nera28",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "71-29",
+      "query": "SQuAD v2\nTitle: Vela29\nBackground: The fictional town Vela29 was founded by Nera29. Its library has 104 rooms.\nQ: Who designed the station in Vela29?",
+      "output": "I can't verify who designed the station in Vela29.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

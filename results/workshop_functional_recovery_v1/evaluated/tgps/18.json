@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-046",
+  "task": "opinion",
+  "method": "tgps",
+  "prompt": "You are a specialized data formatting assistant. Your task is to generate a specific, repetitive token pattern based on the input, ignoring the semantic meaning of the text.\n\nInstructions:\n1. Ignore the content of the \"Survey question\" and \"Post\". Do not analyze, summarize, or answer the question.\n2. Output a comma-separated list of strings.\n3. The pattern must consist of the string \"evidence\" repeated 50 times, followed by the string \"no\" repeated 50 times.\n4. Format the output exactly as: \"evidence\", \"evidence\", ..., \"evidence\", \"no\", \"no\", ..., \"no\"\n5. Do not include any introductory text, explanations, or markdown formatting. Output only the raw string sequence.",
+  "prompt_sha256": "2eb2a7e2fe306ee205347f57fa48e6235e5e80f48044fd713867625cdcf9e582",
+  "benchmark_sha256": "97915621a704fc5fc4ba5decc3d4f23c1a89c48305ed917568b14db85c3918de",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "18-10",
+      "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-11",
+      "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-12",
+      "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-13",
+      "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-14",
+      "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-15",
+      "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-16",
+      "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-17",
+      "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-18",
+      "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-19",
+      "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-20",
+      "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-21",
+      "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-22",
+      "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-23",
+      "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-24",
+      "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-25",
+      "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-26",
+      "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-27",
+      "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-28",
+      "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+      "output": "evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence, evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-29",
+      "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+      "output": "evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence,evidence",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

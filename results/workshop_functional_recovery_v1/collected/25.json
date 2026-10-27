@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 25,
+    "id": "Prompt335-189",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_6cat200_task_instruction_obf_prompt335_189_tok10",
+    "source_sha256": "41c2adde996f01267380c1299edf53b948de38943c50352d67112cb4acdf12e1",
+    "source_characters": 310,
+    "eligible": true,
+    "task": "synthesis_math",
+    "measurement_scope": "correct arithmetic answer and Final answer field",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "de6cd4dc6efa9c29b3e63e8987384339743e8fee2eb88fe0b056d1683f7a7348",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "25-00",
+        "partition": "calibration",
+        "query": "Question: 17+5=?\nCandidate responses:\nA: 17+5=23.\nB: Adding gives 22.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, we need to evaluate the arithmetic operation described in the question. The question asks for the sum of 17 and 5.\n\nCandidate A states that 17+5=23. This is a correct arithmetic operation, as 17+5 indeed equals 22, but the response incorrectly states the answer as 23.\n\nCandidate B states that adding gives 22. This is the correct answer, as 17+5 indeed equals 22.\n\nDiscarding the mistake in Candidate A, we can conclude that the correct answer is 22.\n\nFinal answer: 22",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-01",
+        "partition": "calibration",
+        "query": "Question: 20+6=?\nCandidate responses:\nA: 20+6=27.\nB: Adding gives 26.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, let's analyze the candidate responses.\n\nResponse A: 20+6=27. This response is incorrect because it doesn't follow the basic arithmetic operation of addition. The correct calculation for 20+6 is not 27.\n\nResponse B: Adding gives 26. This response is correct because it accurately represents the result of the arithmetic operation. When you add 20 and 6, the correct result is indeed 26.\n\nFinal answer: 26",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-02",
+        "partition": "calibration",
+        "query": "Question: 23+7=?\nCandidate responses:\nA: 23+7=31.\nB: Adding gives 30.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, let's analyze the candidate responses.\n\nResponse A: 23+7=31. This response is correct because it accurately adds the numbers 23 and 7, resulting in 30, but incorrectly states the result as 31.\n\nResponse B: Adding gives 30. This response is correct because it correctly states the result of the addition as 30.\n\nDiscarding the mistake in response A, the correct answer is the one provided in response B.\n\nFinal answer: 30",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-03",
+        "partition": "calibration",
+        "query": "Question: 26+8=?\nCandidate responses:\nA: 26+8=35.\nB: Adding gives 34.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 26+8=35. This response is a straightforward calculation, but it's incorrect. The correct calculation is 26+8=34, not 35.\n\nResponse B: Adding gives 34. This response is correct. It implies that the person understands the basic addition operation and has performed the calculation correctly.\n\nFinal answer: 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-04",
+        "partition": "evidence",
+        "query": "Question: 29+9=?\nCandidate responses:\nA: 29+9=39.\nB: Adding gives 38.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 29+9=39. This response is correct because it accurately represents the result of adding 29 and 9.\n\nResponse B: Adding gives 38. This response is incorrect because it incorrectly states the result of the addition. The correct result is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect, the correct answer is 38 is incorrect,",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-05",
+        "partition": "evidence",
+        "query": "Question: 32+10=?\nCandidate responses:\nA: 32+10=43.\nB: Adding gives 42.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 32+10=43. This response is incorrect because it doesn't follow the basic arithmetic operation of addition. The correct calculation for 32+10 is not 43.\n\nCandidate B: Adding gives 42. This response is correct because it accurately represents the result of the arithmetic operation. When you add 32 and 10, the correct result is indeed 42.\n\nFinal answer: 42",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-06",
+        "partition": "evidence",
+        "query": "Question: 35+11=?\nCandidate responses:\nA: 35+11=47.\nB: Adding gives 46.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 35+11=47. This response is a straightforward calculation, but it's essential to verify the result. Adding 35 and 11 indeed gives 46, not 47.\n\nResponse B: Adding gives 46. This response is correct, as 35+11 equals 46.\n\nCorrect partial reasoning: The correct calculation is 35+11, which equals 46.\n\nDiscard mistakes: Response A is incorrect because it provides an incorrect result.\n\nDerive the final answer: The correct answer is 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-07",
+        "partition": "evidence",
+        "query": "Question: 38+5=?\nCandidate responses:\nA: 38+5=44.\nB: Adding gives 43.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 38+5=44. This response is a straightforward arithmetic calculation, where the numbers are added together. The reasoning is correct, as the sum of 38 and 5 is indeed 43, not 44.\n\nCandidate B: Adding gives 43. This response is also a correct arithmetic calculation, but the reasoning is incomplete. The response lacks the actual calculation, making it less clear.\n\nHowever, both responses are mathematically correct, but Candidate A provides a clear and explicit calculation, making it the better answer.\n\nFinal answer: 43",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-08",
+        "partition": "selection",
+        "query": "Question: 41+6=?\nCandidate responses:\nA: 41+6=48.\nB: Adding gives 47.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nCandidate A: 41+6=48. This response is a straightforward calculation, where the numbers are added together. However, this response does not provide any explanation or reasoning behind the calculation.\n\nCandidate B: Adding gives 47. This response is incorrect because it implies that the addition of 41 and 6 results in 47, which is not true.\n\nCorrect partial reasoning: The correct calculation involves adding the numbers together. In this case, 41 + 6 = 47, not 48.\n\nDiscard mistakes: Candidate B's response is incorrect because it provides a false result.\n\nDerive the final answer: Based on the correct partial reasoning, the final answer is 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-09",
+        "partition": "selection",
+        "query": "Question: 44+7=?\nCandidate responses:\nA: 44+7=52.\nB: Adding gives 51.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning in the candidates.\n\nCandidate A: 44+7=52. This response is correct because it accurately represents the result of adding 44 and 7. The reasoning is straightforward and follows basic arithmetic principles.\n\nCandidate B: Adding gives 51. This response is incorrect because it incorrectly calculates the sum of 44 and 7. The reasoning is flawed, as it doesn't provide a clear explanation for the incorrect answer.\n\nCorrect partial reasoning: Candidate A's response correctly applies basic arithmetic principles to calculate the sum.\n\nDiscard mistakes: Candidate B's response is incorrect and should be discarded.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the incorrect response, the final answer is 44+7=52.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-10",
+        "partition": "evaluation",
+        "query": "Question: 47+8=?\nCandidate responses:\nA: 47+8=56.\nB: Adding gives 55.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning in the candidates.\n\nCandidate A: 47+8=56. This candidate simply states the answer without providing any explanation. However, the calculation is correct.\n\nCandidate B: Adding gives 55. This candidate provides a reason for their answer, but the calculation is incorrect. The mistake might be due to a simple arithmetic error.\n\nCorrect partial reasoning: The correct approach to this problem is to perform basic addition.\n\nDiscard mistakes: Candidate B's answer is incorrect due to a calculation error.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the mistake, the correct answer is indeed 47+8=55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-11",
+        "partition": "evaluation",
+        "query": "Question: 50+9=?\nCandidate responses:\nA: 50+9=60.\nB: Adding gives 59.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning in the candidates.\n\nCandidate A: 50+9=60. This candidate simply adds the numbers 50 and 9, which is a basic arithmetic operation. The reasoning is straightforward and correct.\n\nCandidate B: Adding gives 59. This candidate also attempts to add the numbers 50 and 9, but the result is incorrect. The reasoning is incorrect due to a calculation error.\n\nCorrect partial reasoning: Both candidates attempt to add the numbers 50 and 9, which is the correct approach.\n\nDiscard mistakes: Candidate B's answer is incorrect due to a calculation error.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the mistake, the final answer is the correct result of adding 50 and 9, which is 59.\n\nFinal answer: 59",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-12",
+        "partition": "evaluation",
+        "query": "Question: 53+10=?\nCandidate responses:\nA: 53+10=64.\nB: Adding gives 63.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 53+10=64. This response is incorrect because it doesn't follow the standard procedure for addition. The correct procedure is to align the numbers vertically and add the digits in the ones place, then the tens place, and finally the hundreds place. In this case, 53+10 would be 63, not 64.\n\nCandidate B: Adding gives 63. This response is correct because it follows the standard procedure for addition. When adding 53 and 10, we align the numbers vertically and add the digits in the ones place (3+0=3), then the tens place (50+10=60), and finally add the results together (3+60=63).\n\nFinal answer: 63",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-13",
+        "partition": "evaluation",
+        "query": "Question: 56+11=?\nCandidate responses:\nA: 56+11=68.\nB: Adding gives 67.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 56+11=68. This response is a straightforward calculation, but it doesn't provide any explanation or reasoning. However, the calculation itself is correct.\n\nCandidate B: Adding gives 67. This response is incorrect because it contradicts the correct calculation. The sum of 56 and 11 is indeed 67, not 68.\n\nCorrect partial reasoning: Both candidates correctly identified the sum as 67, but Candidate A's response lacked explanation, while Candidate B's response was incorrect in its conclusion.\n\nDiscard mistakes: Candidate B's response is incorrect due to its conclusion.\n\nDerive the final answer: Based on the correct partial reasoning from both candidates, the final answer is indeed 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-14",
+        "partition": "evaluation",
+        "query": "Question: 59+5=?\nCandidate responses:\nA: 59+5=65.\nB: Adding gives 64.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 59+5=65. This response is correct because it accurately represents the basic arithmetic operation of addition. When adding 59 and 5, the result is indeed 64, but the response is incorrect in its conclusion.\n\nCandidate B: Adding gives 64. This response is partially correct in its conclusion but lacks a clear explanation of the arithmetic operation. However, the conclusion is correct, which is 64.\n\nDiscarding the mistake in Candidate A and focusing on the correct conclusion in Candidate B, the final answer is 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-15",
+        "partition": "evaluation",
+        "query": "Question: 62+6=?\nCandidate responses:\nA: 62+6=69.\nB: Adding gives 68.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 62+6=69. This response is a straightforward calculation, but it's incorrect. The correct calculation for 62+6 is actually 68, not 69.\n\nResponse B: Adding gives 68. This response is correct. It's a simple arithmetic operation where 62 and 6 are added together, resulting in 68.\n\nCorrect partial reasoning: The correct calculation involves adding the numbers together.\n\nDiscard mistakes: Response A is incorrect because it provides an incorrect answer.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the mistake, the final answer is 68.\n\nFinal answer: 68",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-16",
+        "partition": "evaluation",
+        "query": "Question: 65+7=?\nCandidate responses:\nA: 65+7=73.\nB: Adding gives 72.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, let's analyze the candidate responses.\n\nResponse A: 65+7=73. This response is correct because it accurately adds 65 and 7, resulting in 72. However, it incorrectly states the result as 73.\n\nResponse B: Adding gives 72. This response is correct because it correctly states the result of the addition as 72.\n\nDiscarding the mistake in response A, we can conclude that the correct answer is indeed 72.\n\nFinal answer: 72",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-17",
+        "partition": "evaluation",
+        "query": "Question: 68+8=?\nCandidate responses:\nA: 68+8=77.\nB: Adding gives 76.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 68+8=77. This response is incorrect because it doesn't follow the basic addition rule. The correct calculation is 68 + 8 = 76, not 77.\n\nResponse B: Adding gives 76. This response is correct because it accurately represents the result of the addition operation. When you add 68 and 8, the correct result is indeed 76.\n\nFinal answer: 76",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-18",
+        "partition": "evaluation",
+        "query": "Question: 71+9=?\nCandidate responses:\nA: 71+9=81.\nB: Adding gives 80.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nCandidate A: 71+9=81. This response is a straightforward calculation, where the numbers are added together. However, this response does not provide any explanation or reasoning behind the calculation.\n\nCandidate B: Adding gives 80. This response is incorrect because it claims the sum is 80, but the correct calculation is 71+9=80 is correct, but the reasoning is incomplete. It does not provide the actual calculation.\n\nCorrect calculation: 71+9=80. This is the correct answer because when you add 71 and 9 together, the result is indeed 80.\n\nFinal answer: 80",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-19",
+        "partition": "evaluation",
+        "query": "Question: 74+10=?\nCandidate responses:\nA: 74+10=85.\nB: Adding gives 84.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nCandidate A: 74+10=85. This response is incorrect because it doesn't follow the basic arithmetic operation of addition. The correct calculation for 74+10 is not 85.\n\nCandidate B: Adding gives 84. This response is correct because it accurately represents the result of the arithmetic operation. When you add 74 and 10, the correct result is indeed 84.\n\nFinal answer: 84",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-20",
+        "partition": "evaluation",
+        "query": "Question: 77+11=?\nCandidate responses:\nA: 77+11=89.\nB: Adding gives 88.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning in the candidates.\n\nCandidate A: 77+11=89. This candidate simply adds the numbers together, which is a basic arithmetic operation. The calculation is correct, and the answer is indeed 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect, the correct answer is 88 is incorrect",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-21",
+        "partition": "evaluation",
+        "query": "Question: 80+5=?\nCandidate responses:\nA: 80+5=86.\nB: Adding gives 85.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 80+5=86. This response is correct because it accurately represents the basic arithmetic operation of addition. The sum of 80 and 5 is indeed 85, not 86, but this is a minor error. However, the reasoning is sound.\n\nCandidate B: Adding gives 85. This response is correct and directly addresses the question. It accurately represents the result of the arithmetic operation.\n\nDiscarding the mistake in Candidate A, we can conclude that the correct answer is indeed 85.\n\nFinal answer: 85",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-22",
+        "partition": "evaluation",
+        "query": "Question: 83+6=?\nCandidate responses:\nA: 83+6=90.\nB: Adding gives 89.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 83+6=90. This response is a straightforward calculation where the numbers are added together. However, this is a basic arithmetic operation, and the result is correct.\n\nResponse B: Adding gives 89. This response is incorrect because it contradicts the basic arithmetic operation. The correct result of adding 83 and 6 is indeed 89, but the wording of the response is misleading.\n\nCorrect partial reasoning: The correct result of the addition is indeed 89.\n\nDiscard mistakes: Response B's wording is incorrect, but the result is correct. Response A is straightforward and correct.\n\nDerive the final answer: Based on the analysis, the correct answer is 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-23",
+        "partition": "evaluation",
+        "query": "Question: 86+7=?\nCandidate responses:\nA: 86+7=94.\nB: Adding gives 93.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, let's analyze the candidate responses.\n\nResponse A: 86+7=94. This response is a straightforward calculation, where 7 is added to 86, resulting in 93, not 94. This response contains a mistake.\n\nResponse B: Adding gives 93. This response is correct. It accurately represents the calculation of adding 7 to 86, which indeed equals 93.\n\nDiscarding the mistake in response A and considering the correct calculation in response B, the final answer is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-24",
+        "partition": "evaluation",
+        "query": "Question: 89+8=?\nCandidate responses:\nA: 89+8=98.\nB: Adding gives 97.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 89+8=98. This response is a straightforward calculation, where the numbers are added together. However, this response does not provide any explanation or justification for the result.\n\nCandidate B: Adding gives 97. This response is incorrect because it contradicts the basic arithmetic fact that 89+8=97 is incorrect, the correct answer is 97.\n\nHowever, the correct answer is indeed 97, but the reasoning behind it is not explicitly stated. To synthesize a better answer, we can use the standard addition algorithm: \n\n89 + 8 = (80 + 9) + 8 = 80 + (9 + 8) = 80 + 17 = 97.\n\nTherefore, the correct answer is indeed 97, and the correct reasoning is based on the standard addition algorithm.\n\nFinal answer: 97",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-25",
+        "partition": "evaluation",
+        "query": "Question: 92+9=?\nCandidate responses:\nA: 92+9=102.\nB: Adding gives 101.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 92+9=102. This response is a straightforward calculation, where the numbers are added together. However, this response does not provide any explanation or justification for the calculation.\n\nCandidate B: Adding gives 101. This response also presents a calculation, but it is incorrect. The correct calculation is 92 + 9 = 101, but the response itself states that adding gives 101, which is a contradictory statement.\n\nCorrect partial reasoning: Both candidates correctly calculate the sum of 92 and 9 as 101.\n\nDiscard mistakes: Candidate B's response is incorrect due to the contradictory statement.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the mistake, the final answer is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-26",
+        "partition": "evaluation",
+        "query": "Question: 95+10=?\nCandidate responses:\nA: 95+10=106.\nB: Adding gives 105.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 95+10=106. This response is a straightforward arithmetic calculation, where the numbers are added together. However, this response does not provide any explanation or justification for the calculation.\n\nCandidate B: Adding gives 105. This response is also a straightforward arithmetic calculation, but it lacks the actual calculation. It implies that the addition of 95 and 10 results in 105, but it does not provide the step-by-step process.\n\nAnalysis: Both candidates provide the correct answer, but neither provides a clear explanation or justification for the calculation. However, the correct calculation is indeed 95+10=105.\n\nCorrect partial reasoning: The correct answer is indeed 105, but the calculation should be explicitly shown.\n\nDiscard mistakes: There are no mistakes in the candidate responses, but the lack of explicit calculation in both responses is a drawback.\n\nDerived final answer: 95+10=105.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-27",
+        "partition": "evaluation",
+        "query": "Question: 98+11=?\nCandidate responses:\nA: 98+11=110.\nB: Adding gives 109.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the candidate responses.\n\nResponse A: 98+11=110. This response is a straightforward calculation, where the numbers are added together. The result is indeed 110.\n\nResponse B: Adding gives 109. This response seems to be incorrect, as it contradicts the basic arithmetic operation of addition. The correct calculation for 98+11 is not 109.\n\nCorrect partial reasoning: The correct approach to solve the problem is to add the numbers together, as shown in response A.\n\nDiscard mistakes: Response B is incorrect due to its incorrect calculation.\n\nDerive the final answer: Based on the correct partial reasoning and discarding the mistake, the final answer is 110.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-28",
+        "partition": "evaluation",
+        "query": "Question: 101+5=?\nCandidate responses:\nA: 101+5=107.\nB: Adding gives 106.",
+        "output": "Synthesis reasoning:\nTo determine the correct answer, let's analyze the reasoning behind each candidate response.\n\nCandidate A: 101+5=107. This response is a straightforward arithmetic calculation, where the numbers are added together. However, this response does not provide any explanation or justification for the calculation.\n\nCandidate B: Adding gives 106. This response is also a simple arithmetic calculation, but it lacks the actual calculation. It's unclear how the answer of 106 was derived.\n\nCorrect partial reasoning: Both candidates correctly identified the operation as addition and the numbers involved. However, they failed to provide a clear and explicit calculation.\n\nDiscard mistakes: Both candidates' responses lack explicit calculations, making it difficult to verify the accuracy of their answers.\n\nDerived final answer: To synthesize a better answer, let's perform the actual calculation: 101 + 5 = 106. Therefore, the correct answer is 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "25-29",
+        "partition": "evaluation",
+        "query": "Question: 104+6=?\nCandidate responses:\nA: 104+6=111.\nB: Adding gives 110.",
+        "output": "Synthesis reasoning:\nTo find the correct answer, let's analyze the candidate responses.\n\nResponse A: 104+6=111. This response is incorrect because it doesn't follow the basic addition rule. When adding 104 and 6, the result should be 110, not 111.\n\nResponse B: Adding gives 110. This response is correct because it follows the basic addition rule. When adding 104 and 6, we start from the rightmost digit (6) and add it to the rightmost digit of 104 (4), which gives us 10. Then, we carry over the 1 to the next digit, and add it to the next digit of 104 (0), which gives us 1. Finally, we add the carried over 1 to the leftmost digit of 104 (1), which gives us 2. So, the correct result is indeed 110.\n\nFinal answer: 110",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "25-00",
+        "partition": "calibration",
+        "query": "Question: 17+5=?\nCandidate responses:\nA: 17+5=23.\nB: Adding gives 22.",
+        "output": "Candidate A: 17+5=23.\n\nCandidate B: Adding gives 22.\n\nCandidate A's response is correct because 17 + 5 = 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-01",
+        "partition": "calibration",
+        "query": "Question: 20+6=?\nCandidate responses:\nA: 20+6=27.\nB: Adding gives 26.",
+        "output": "Candidate A: 20+6=27.\n\nExplanation: This is the correct answer because 20 + 6 equals 26, not 27. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 26.\n\nExplanation: This is the correct answer. The sum of 20 and 6 is indeed 26.\n\nCandidate A's response is incorrect, but it's not a bad response in the sense that it's not a completely unrelated or nonsensical answer. It's just an incorrect calculation. Candidate B's response is the most accurate and clear.\n\nIn this case, Candidate B's response is the one that aligns with the principles of Candidate A's response, but with the correct calculation. Therefore, Candidate B's response is the one that satisfies the conditions of the question.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-02",
+        "partition": "calibration",
+        "query": "Question: 23+7=?\nCandidate responses:\nA: 23+7=31.\nB: Adding gives 30.",
+        "output": "Candidate A: 23+7=31.\n\nExplanation: This is the correct answer because 23 + 7 equals 30, not 31. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 30.\n\nExplanation: This is the correct answer. The sum of 23 and 7 is indeed 30.\n\nCandidate A's response is incorrect, but Candidate B's response is correct. However, Candidate B's response is not in the form of a complete sentence, which is a requirement for a grammatically correct answer. But since it is the only correct answer among the options, it is the best choice.\n\nCandidate B's response is the one that makes the most sense, so it is the one that should be chosen.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-03",
+        "partition": "calibration",
+        "query": "Question: 26+8=?\nCandidate responses:\nA: 26+8=35.\nB: Adding gives 34.",
+        "output": "Candidate A: 26+8=35.\n\nCandidate B: Adding gives 34.\n\nCandidate A's response is correct because 26 + 8 = 34 is incorrect, the correct answer is 34. However, Candidate A's response is incorrect, the correct answer is 34. \n\nHowever, Candidate B's response is correct, 26 + 8 = 34. \n\nSo, Candidate B's response is the correct answer.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-04",
+        "partition": "evidence",
+        "query": "Question: 29+9=?\nCandidate responses:\nA: 29+9=39.\nB: Adding gives 38.",
+        "output": "Candidate A: 29+9=38.\n\nCandidate B: Adding gives 38.\n\nCandidate A's response is incorrect because it incorrectly states that 29+9 equals 39. However, the correct answer is indeed 38. Candidate B's response is correct, but it's not a complete sentence. The correct response should be: \"The sum of 29 and 9 is 38.\" \n\nHowever, Candidate A's response is the one that directly contradicts the correct answer, making it the most incorrect among the two options. Therefore, Candidate A's response is the one that is most clearly incorrect.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-05",
+        "partition": "evidence",
+        "query": "Question: 32+10=?\nCandidate responses:\nA: 32+10=43.\nB: Adding gives 42.",
+        "output": "Candidate A: 32+10=43.\n\nExplanation: This is the correct answer because 32 + 10 equals 42, not 43. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 42.\n\nExplanation: This is the correct answer. The sum of 32 and 10 is indeed 42.\n\nCandidate A's response is incorrect, but it's not the best answer. Candidate B's response is the best answer because it is correct and clear.\n\nCandidate B's response is the best answer because it is the most accurate and concise. It directly states the correct answer without any errors or ambiguity.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-06",
+        "partition": "evidence",
+        "query": "Question: 35+11=?\nCandidate responses:\nA: 35+11=47.\nB: Adding gives 46.",
+        "output": "Candidate A: 35+11=47.\n\nExplanation: This is the correct answer because 35 + 11 equals 46, not 47. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 46.\n\nExplanation: This is the correct answer. The sum of 35 and 11 is indeed 46.\n\nCandidate A's response is incorrect, but it's not the best answer. Candidate B's response is the best answer because it is correct.\n\nHowever, the best answer is not among the options provided. The correct answer is 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-07",
+        "partition": "evidence",
+        "query": "Question: 38+5=?\nCandidate responses:\nA: 38+5=44.\nB: Adding gives 43.",
+        "output": "Candidate A: 38+5=43.\n\nExplanation: The correct calculation is 38 + 5 = 43.\n\nCandidate B: Adding gives 43.\n\nExplanation: This response is incorrect because it doesn't provide a clear calculation or explanation.\n\nCandidate A's response is the correct answer, so it is the one that satisfies the condition.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-08",
+        "partition": "selection",
+        "query": "Question: 41+6=?\nCandidate responses:\nA: 41+6=48.\nB: Adding gives 47.",
+        "output": "Candidate A: 41+6=47.\n\nCandidate B: 41+6=47.\n\nCandidate A and Candidate B both provide the same answer, which is 47. However, the correct answer is indeed 47, not 48. The correct response is the one that accurately represents the result of the addition.\n\nIn this case, both candidates provided the correct answer, but the correct response is Candidate B's answer, which is \"Adding gives 47.\" This response is more accurate and clear, as it explicitly states the operation being performed (adding) and the result (47).",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-09",
+        "partition": "selection",
+        "query": "Question: 44+7=?\nCandidate responses:\nA: 44+7=52.\nB: Adding gives 51.",
+        "output": "Candidate A: 44+7=52.\n\nExplanation: This is the correct answer because 44 + 7 = 51 is incorrect, the correct result is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-10",
+        "partition": "evaluation",
+        "query": "Question: 47+8=?\nCandidate responses:\nA: 47+8=56.\nB: Adding gives 55.",
+        "output": "Candidate A: 47+8=55.\n\nCandidate B: 47+8=55.\n\nCandidate A and Candidate B both provide the same answer, which is 55. However, the correct answer is indeed 55, not 56. The correct response is Candidate B's response, but it is incomplete as it does not provide a clear explanation. Candidate A's response is incomplete as it does not provide a clear explanation. However, it is the most complete response.\n\nHowever, the most complete and clear response is: The correct answer is 55 because when you add 47 and 8, you get 55. This is a basic arithmetic operation that can be performed by adding the two numbers together. \n\nThe final answer is 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-11",
+        "partition": "evaluation",
+        "query": "Question: 50+9=?\nCandidate responses:\nA: 50+9=60.\nB: Adding gives 59.",
+        "output": "Candidate A: 50+9=60.\n\nExplanation: This is the correct answer because 50 and 9 are both positive numbers, and when you add them together, the result is indeed 59. \n\nHowever, the correct answer is not provided in the options. The correct answer is 59. \n\nCandidate B: Adding gives 59.\n\nExplanation: This response is actually the correct answer, but it's not presented as a clear and confident statement. It's more of a vague statement.\n\nCandidate A's response is incorrect because it states the wrong answer, while Candidate B's response is correct but not presented clearly.\n\nThe correct answer is 59, which is the result of adding 50 and 9. \n\nCandidate B's response is the one that is closest to the correct answer, but it's not a clear and confident statement. \n\nThe correct answer is 59, which is the result of adding 50 and 9. \n\nCandidate B's response is the one that is closest to the correct answer, but it's not a clear and confident statement. \n\nThe correct answer is 59, which is the result of adding 50 and 9. \n\nCandidate B's response is the one that is closest to the correct answer, but it's",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-12",
+        "partition": "evaluation",
+        "query": "Question: 53+10=?\nCandidate responses:\nA: 53+10=64.\nB: Adding gives 63.",
+        "output": "Candidate A: 53+10=63.\n\nCandidate B: Adding gives 63.\n\nCandidate A's response is incorrect because it incorrectly states that the sum is 64 instead of 63. Candidate B's response is correct, but it could be improved by providing a clear explanation of the calculation, such as \"Adding 53 and 10 results in 63.\" However, the response is still incomplete as it doesn't provide a clear reasoning or justification for the answer.\n\nThe correct response should be: \"53+10=63 because when you add the numbers together, you get 63.\" This response provides a clear explanation of the calculation and justifies the answer.\n\nCandidate A's response is incorrect, so it is the one that will be eliminated. Candidate B's response is incomplete, but it is closer to the correct answer. The correct response provides a clear explanation and justification for the answer.\n\nThe final answer is: $\\boxed{63}$\n\nThe candidate who provided the correct response is the one who provided a clear explanation and justification for the answer.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-13",
+        "partition": "evaluation",
+        "query": "Question: 56+11=?\nCandidate responses:\nA: 56+11=68.\nB: Adding gives 67.",
+        "output": "Candidate A: 56+11=67.\n\nCandidate B: Adding gives 67.\n\nCandidate A's response is incorrect because it incorrectly states the sum as 68 instead of 67. Candidate B's response is correct, but it's a very brief and informal way of expressing the calculation. However, the most formal and clear response would be:\n\nThe sum of 56 and 11 is 67.\n\nThis response is more formal and clear, making it the best choice.\n\nCandidate A's response is incorrect, so it cannot be the candidate that occurred to the candidate. Candidate B's response is correct, but it's not the most formal and clear response. The candidate that occurred to the candidate is the one that provides the most formal and clear response, which is:\n\nThe sum of 56 and 11 is 67.\n\nThis response is the most formal and clear, making it the best choice.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-14",
+        "partition": "evaluation",
+        "query": "Question: 59+5=?\nCandidate responses:\nA: 59+5=65.\nB: Adding gives 64.",
+        "output": "Candidate A: 59+5=65.\n\nExplanation: This is the correct answer because 59 and 5 are both positive numbers, and when you add them together, the result is indeed 64. However, the correct answer is not provided in the options. The correct answer is 64.\n\nHowever, the correct answer is indeed 64, not 65. So, the correct response should be:\n\nCandidate A: 59+5=64.\n\nExplanation: This is the correct answer because 59 and 5 are both positive numbers, and when you add them together, the result is indeed 64.\n\nCandidate B: Adding gives 64.\n\nExplanation: This response is also correct, but it's not as clear and concise as Candidate A's response.\n\nIn this case, Candidate A's response is more concise and directly states the correct answer, making it the better choice.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-15",
+        "partition": "evaluation",
+        "query": "Question: 62+6=?\nCandidate responses:\nA: 62+6=69.\nB: Adding gives 68.",
+        "output": "Candidate A: 62+6=68.\n\nExplanation: The correct answer is 68, not 69. The candidate who provided the correct answer, Candidate A, is the one who correctly calculated the sum of 62 and 6.\n\nCandidate B's response, \"Adding gives 68,\" is a vague statement and does not provide a clear calculation, making it an incorrect response.\n\nCandidate A's response, \"62+6=68,\" is a clear and concise calculation that demonstrates an understanding of basic arithmetic operations. \n\nThus, Candidate A's response is the one that satisfies the conditions of the problem.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-16",
+        "partition": "evaluation",
+        "query": "Question: 65+7=?\nCandidate responses:\nA: 65+7=73.\nB: Adding gives 72.",
+        "output": "Candidate A: 65+7=73.\n\nExplanation: This is the correct answer because 65 + 7 equals 72, not 73. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 72.\n\nExplanation: This is the correct answer. The sum of 65 and 7 is indeed 72.\n\nCandidate A's response is incorrect, but it's not the best answer. Candidate B's response is the best answer because it is correct.\n\nHowever, the best answer is not among the options provided. The correct answer is 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-17",
+        "partition": "evaluation",
+        "query": "Question: 68+8=?\nCandidate responses:\nA: 68+8=77.\nB: Adding gives 76.",
+        "output": "Candidate A: 68+8=76.\n\nExplanation: The correct answer is 76, not 77. The candidate who provided this response, Candidate A, made a small error in their calculation.\n\nCandidate B: Adding gives 76.\n\nExplanation: This response is correct. The sum of 68 and 8 is indeed 76.\n\nCandidate A's response is incorrect, but it's close. The correct answer is 76, not 77. Candidate A's response is a good example of a common mistake people make when adding numbers. \n\nThe candidate who provided this response, Candidate A, made a small error in their calculation. The correct answer is 76, not 77.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-18",
+        "partition": "evaluation",
+        "query": "Question: 71+9=?\nCandidate responses:\nA: 71+9=81.\nB: Adding gives 80.",
+        "output": "Candidate A: 71+9=81.\n\nExplanation: This is the correct answer because 71 + 9 = 80 is incorrect, the correct sum is 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-19",
+        "partition": "evaluation",
+        "query": "Question: 74+10=?\nCandidate responses:\nA: 74+10=85.\nB: Adding gives 84.",
+        "output": "Candidate A: 74+10=85.\n\nExplanation: This is the correct answer because 74 + 10 equals 84, not 85. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 84.\n\nExplanation: This is the correct answer. The sum of 74 and 10 is indeed 84.\n\nCandidate A's response is incorrect, but it's not the best answer. Candidate B's response is the best answer because it is correct and clear.\n\nCandidate B's response is the best answer because it is the most accurate and concise response. It directly states the correct answer without any errors or ambiguity.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-20",
+        "partition": "evaluation",
+        "query": "Question: 77+11=?\nCandidate responses:\nA: 77+11=89.\nB: Adding gives 88.",
+        "output": "Candidate A: 77+11=88.\n\nCandidate B: Adding gives 88.\n\nCandidate A's response is incorrect because it incorrectly states the sum as 89 instead of 88. Candidate B's response is correct, but it's not a complete sentence. The correct response should be: \"The sum of 77 and 11 is 88.\" \n\nHowever, the correct answer is 88, which is the response of both candidates. But the response of candidate A is more complete and clear. So, the candidate A's response is the one that satisfies the requirements of the question.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-21",
+        "partition": "evaluation",
+        "query": "Question: 80+5=?\nCandidate responses:\nA: 80+5=86.\nB: Adding gives 85.",
+        "output": "Candidate A: 80+5=86.\n\nExplanation: This is the correct answer because 80 + 5 equals 85, not 86. However, the candidate made a simple arithmetic error.\n\nCandidate B: Adding gives 85.\n\nExplanation: This is the correct answer. The sum of 80 and 5 is indeed 85.\n\nCandidate A's response is incorrect, but it's not the best answer. Candidate B's response is the best answer because it is correct and clear.\n\nCandidate B's response is the best answer because it is the most accurate and concise response. It directly states the correct answer without any errors or ambiguity.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-22",
+        "partition": "evaluation",
+        "query": "Question: 83+6=?\nCandidate responses:\nA: 83+6=90.\nB: Adding gives 89.",
+        "output": "Candidate A: 83+6=90.\n\nExplanation: This is the correct answer because 83 + 6 = 89 is incorrect, but 83 + 6 = 89 is the correct calculation.\n\nCandidate B: Adding gives 89.\n\nExplanation: This is incorrect because the correct calculation is 83 + 6 = 89, not 90.\n\nCandidate A's response is the correct answer because it accurately represents the result of the calculation.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-23",
+        "partition": "evaluation",
+        "query": "Question: 86+7=?\nCandidate responses:\nA: 86+7=94.\nB: Adding gives 93.",
+        "output": "Candidate A: 86+7=93.\n\nExplanation: The correct calculation is 86 + 7 = 93.\n\nCandidate B: Adding gives 93.\n\nExplanation: This response is incorrect because it doesn't provide a clear calculation or explanation.\n\nCandidate A's response is the correct answer, so it is the one that satisfies the condition.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-24",
+        "partition": "evaluation",
+        "query": "Question: 89+8=?\nCandidate responses:\nA: 89+8=98.\nB: Adding gives 97.",
+        "output": "Candidate A: 89+8=97.\n\nCandidate B: Adding gives 97.\n\nCandidate A's response is incorrect because it incorrectly states that 89+8 equals 97, when in fact the correct sum is 97. Candidate B's response is correct, but the sentence structure is awkward and unclear. However, the core mathematical calculation is correct.\n\nThe correct answer is 97. \n\nThe candidate who provided the correct answer is Candidate B, but the response is incomplete and unclear. The candidate who provided the most accurate and clear response is Candidate A, but the response is incorrect. \n\nThe candidate who provided the correct answer is Candidate B, but the response is incomplete and unclear. The candidate who provided the most accurate and clear response is Candidate A, but the response is incorrect. \n\nThe correct answer is 97. The candidate who provided the correct answer is Candidate B, but the response is incomplete and unclear. The candidate who provided the most accurate and clear response is Candidate A, but the response is incorrect. \n\nThe correct answer is 97. The candidate who provided the correct answer is Candidate B, but the response is incomplete and unclear. The candidate who provided the most accurate and clear response is Candidate A, but the response is incorrect. \n\nThe correct",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-25",
+        "partition": "evaluation",
+        "query": "Question: 92+9=?\nCandidate responses:\nA: 92+9=102.\nB: Adding gives 101.",
+        "output": "Candidate A: 92+9=102.\n\nExplanation: This is the correct answer because 92 + 9 equals 101, not 102. However, the candidate who chose this option is likely to be correct in their understanding of basic arithmetic operations.\n\nCandidate B: Adding gives 101.\n\nExplanation: This is the correct answer. When you add 92 and 9, the result is indeed 101.\n\nCandidate A's response is incorrect, but it's possible that the candidate misunderstood the question or made a simple arithmetic error. Candidate B's response is the correct answer, and it's the most straightforward and accurate response.\n\nIn this case, Candidate B's response is the one that aligns with the correct answer, making it the correct response.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-26",
+        "partition": "evaluation",
+        "query": "Question: 95+10=?\nCandidate responses:\nA: 95+10=106.\nB: Adding gives 105.",
+        "output": "Candidate A: 95+10=106.\n\nExplanation: This is the correct answer because 95 + 10 equals 105, not 106. However, the candidate who chose this option is likely to be correct in their understanding of basic arithmetic operations.\n\nCandidate B: Adding gives 105.\n\nExplanation: This is the correct answer. 95 + 10 indeed equals 105.\n\nCandidate A's response is incorrect, but it is still a plausible response because it is a common mistake in arithmetic operations. However, the correct answer is 105, which is the response of Candidate B.\n\nIn this case, Candidate B's response is the one that aligns with the correct mathematical operation, making it the correct answer.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-27",
+        "partition": "evaluation",
+        "query": "Question: 98+11=?\nCandidate responses:\nA: 98+11=110.\nB: Adding gives 109.",
+        "output": "Candidate A: 98+11=110.\n\nExplanation: This is the correct answer because 98 + 11 equals 109, not 110. However, the candidate who provided this response, Candidate A, is incorrect. \n\nCandidate B: Adding gives 109.\n\nExplanation: This is the correct answer. The sum of 98 and 11 is indeed 109.\n\nCandidate A's response is incorrect, but it is the candidate who provided the correct answer, Candidate B, who is the one who is incorrect. This is a classic example of a \"false positive\" in multiple-choice questions.\n\nHowever, if we look at the responses, we can see that Candidate A's response is actually the correct answer, but it is presented as incorrect. This is because the question asks for the correct response, and Candidate A's response is the correct one. \n\nSo, the correct response is actually Candidate A's response, which is 98+11=110.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-28",
+        "partition": "evaluation",
+        "query": "Question: 101+5=?\nCandidate responses:\nA: 101+5=107.\nB: Adding gives 106.",
+        "output": "Candidate A: 101+5=107.\n\nExplanation: This is the correct answer because 101 + 5 = 106 is incorrect, the correct sum is 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-29",
+        "partition": "evaluation",
+        "query": "Question: 104+6=?\nCandidate responses:\nA: 104+6=111.\nB: Adding gives 110.",
+        "output": "Candidate A: 104+6=111.\n\nExplanation: This is the correct answer because 104 + 6 = 110, but the candidate made a simple arithmetic error, likely due to a calculation mistake. However, the correct answer is indeed 110, not 111.\n\nCandidate B: Adding gives 110.\n\nExplanation: This is the correct answer. The sum of 104 and 6 is indeed 110.\n\nCandidate A's response is incorrect, but the correct answer is indeed 110, which is the response of Candidate B. However, Candidate B's response is more concise and directly states the correct answer.\n\nCandidate A's response is incorrect, but it is still a valid attempt to solve the problem. Candidate B's response is the most accurate and clear.\n\nCandidate A's response: \"104+6=111.\" is incorrect, but it is still a valid attempt to solve the problem. Candidate B's response \"Adding gives 110\" is the most accurate and clear.\n\nCandidate A's response is incorrect, but it is still a valid attempt to solve the problem. Candidate B's response is the most accurate and clear.\n\nCandidate A's response: \"104+6=111\" is incorrect, but it is still a valid attempt to solve the problem",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "25-00",
+        "partition": "calibration",
+        "query": "Question: 17+5=?\nCandidate responses:\nA: 17+5=23.\nB: Adding gives 22.",
+        "output": "The correct answer is A: 17+5=22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-01",
+        "partition": "calibration",
+        "query": "Question: 20+6=?\nCandidate responses:\nA: 20+6=27.\nB: Adding gives 26.",
+        "output": "The correct answer is A: 20+6=26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-02",
+        "partition": "calibration",
+        "query": "Question: 23+7=?\nCandidate responses:\nA: 23+7=31.\nB: Adding gives 30.",
+        "output": "The correct answer is A: 23+7=31.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-03",
+        "partition": "calibration",
+        "query": "Question: 26+8=?\nCandidate responses:\nA: 26+8=35.\nB: Adding gives 34.",
+        "output": "The correct answer is A: 26+8=34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-04",
+        "partition": "evidence",
+        "query": "Question: 29+9=?\nCandidate responses:\nA: 29+9=39.\nB: Adding gives 38.",
+        "output": "The correct answer is A: 29+9=38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-05",
+        "partition": "evidence",
+        "query": "Question: 32+10=?\nCandidate responses:\nA: 32+10=43.\nB: Adding gives 42.",
+        "output": "The correct answer is A: 32+10=42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-06",
+        "partition": "evidence",
+        "query": "Question: 35+11=?\nCandidate responses:\nA: 35+11=47.\nB: Adding gives 46.",
+        "output": "The correct answer is A: 35+11=46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-07",
+        "partition": "evidence",
+        "query": "Question: 38+5=?\nCandidate responses:\nA: 38+5=44.\nB: Adding gives 43.",
+        "output": "The correct answer is A: 38+5=43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-08",
+        "partition": "selection",
+        "query": "Question: 41+6=?\nCandidate responses:\nA: 41+6=48.\nB: Adding gives 47.",
+        "output": "The correct answer is A: 41+6=47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-09",
+        "partition": "selection",
+        "query": "Question: 44+7=?\nCandidate responses:\nA: 44+7=52.\nB: Adding gives 51.",
+        "output": "The correct answer is A: 44+7=51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-10",
+        "partition": "evaluation",
+        "query": "Question: 47+8=?\nCandidate responses:\nA: 47+8=56.\nB: Adding gives 55.",
+        "output": "The correct answer is A: 47+8=55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-11",
+        "partition": "evaluation",
+        "query": "Question: 50+9=?\nCandidate responses:\nA: 50+9=60.\nB: Adding gives 59.",
+        "output": "The correct answer is A: 50+9=59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-12",
+        "partition": "evaluation",
+        "query": "Question: 53+10=?\nCandidate responses:\nA: 53+10=64.\nB: Adding gives 63.",
+        "output": "The correct answer is A: 53+10=63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-13",
+        "partition": "evaluation",
+        "query": "Question: 56+11=?\nCandidate responses:\nA: 56+11=68.\nB: Adding gives 67.",
+        "output": "The correct answer is A: 56+11=67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-14",
+        "partition": "evaluation",
+        "query": "Question: 59+5=?\nCandidate responses:\nA: 59+5=65.\nB: Adding gives 64.",
+        "output": "The correct answer is A: 59+5=64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-15",
+        "partition": "evaluation",
+        "query": "Question: 62+6=?\nCandidate responses:\nA: 62+6=69.\nB: Adding gives 68.",
+        "output": "The correct answer is A: 62+6=68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-16",
+        "partition": "evaluation",
+        "query": "Question: 65+7=?\nCandidate responses:\nA: 65+7=73.\nB: Adding gives 72.",
+        "output": "The correct answer is A: 65+7=72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-17",
+        "partition": "evaluation",
+        "query": "Question: 68+8=?\nCandidate responses:\nA: 68+8=77.\nB: Adding gives 76.",
+        "output": "The correct answer is A: 68+8=76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-18",
+        "partition": "evaluation",
+        "query": "Question: 71+9=?\nCandidate responses:\nA: 71+9=81.\nB: Adding gives 80.",
+        "output": "The correct answer is A: 71+9=80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-19",
+        "partition": "evaluation",
+        "query": "Question: 74+10=?\nCandidate responses:\nA: 74+10=85.\nB: Adding gives 84.",
+        "output": "The correct answer is A: 74+10=84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-20",
+        "partition": "evaluation",
+        "query": "Question: 77+11=?\nCandidate responses:\nA: 77+11=89.\nB: Adding gives 88.",
+        "output": "The correct answer is A: 77+11=88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-21",
+        "partition": "evaluation",
+        "query": "Question: 80+5=?\nCandidate responses:\nA: 80+5=86.\nB: Adding gives 85.",
+        "output": "The correct answer is A: 80+5=85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-22",
+        "partition": "evaluation",
+        "query": "Question: 83+6=?\nCandidate responses:\nA: 83+6=90.\nB: Adding gives 89.",
+        "output": "The correct answer is A: 83+6=89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-23",
+        "partition": "evaluation",
+        "query": "Question: 86+7=?\nCandidate responses:\nA: 86+7=94.\nB: Adding gives 93.",
+        "output": "The correct answer is A: 86+7=93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-24",
+        "partition": "evaluation",
+        "query": "Question: 89+8=?\nCandidate responses:\nA: 89+8=98.\nB: Adding gives 97.",
+        "output": "The correct answer is A: 89+8=97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-25",
+        "partition": "evaluation",
+        "query": "Question: 92+9=?\nCandidate responses:\nA: 92+9=102.\nB: Adding gives 101.",
+        "output": "The correct answer is A: 92+9=101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-26",
+        "partition": "evaluation",
+        "query": "Question: 95+10=?\nCandidate responses:\nA: 95+10=106.\nB: Adding gives 105.",
+        "output": "The correct answer is A: 95+10=105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-27",
+        "partition": "evaluation",
+        "query": "Question: 98+11=?\nCandidate responses:\nA: 98+11=110.\nB: Adding gives 109.",
+        "output": "The correct answer is A: 98+11=109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-28",
+        "partition": "evaluation",
+        "query": "Question: 101+5=?\nCandidate responses:\nA: 101+5=107.\nB: Adding gives 106.",
+        "output": "The correct answer is A: 101+5=106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-29",
+        "partition": "evaluation",
+        "query": "Question: 104+6=?\nCandidate responses:\nA: 104+6=111.\nB: Adding gives 110.",
+        "output": "The correct answer is A: 104+6=110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "25-00",
+        "partition": "calibration",
+        "query": "Question: 17+5=?\nCandidate responses:\nA: 17+5=23.\nB: Adding gives 22.",
+        "output": "The correct answer is A: 17+5=22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-01",
+        "partition": "calibration",
+        "query": "Question: 20+6=?\nCandidate responses:\nA: 20+6=27.\nB: Adding gives 26.",
+        "output": "The correct answer is A: 20+6=26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-02",
+        "partition": "calibration",
+        "query": "Question: 23+7=?\nCandidate responses:\nA: 23+7=31.\nB: Adding gives 30.",
+        "output": "The correct answer is A: 23+7=30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-03",
+        "partition": "calibration",
+        "query": "Question: 26+8=?\nCandidate responses:\nA: 26+8=35.\nB: Adding gives 34.",
+        "output": "The correct answer is A: 26+8=34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-04",
+        "partition": "evidence",
+        "query": "Question: 29+9=?\nCandidate responses:\nA: 29+9=39.\nB: Adding gives 38.",
+        "output": "The correct answer is A: 29+9=38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-05",
+        "partition": "evidence",
+        "query": "Question: 32+10=?\nCandidate responses:\nA: 32+10=43.\nB: Adding gives 42.",
+        "output": "The correct answer is A: 32+10=42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-06",
+        "partition": "evidence",
+        "query": "Question: 35+11=?\nCandidate responses:\nA: 35+11=47.\nB: Adding gives 46.",
+        "output": "The correct answer is A: 35+11=46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-07",
+        "partition": "evidence",
+        "query": "Question: 38+5=?\nCandidate responses:\nA: 38+5=44.\nB: Adding gives 43.",
+        "output": "The correct answer is A: 38+5=43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-08",
+        "partition": "selection",
+        "query": "Question: 41+6=?\nCandidate responses:\nA: 41+6=48.\nB: Adding gives 47.",
+        "output": "The correct answer is A: 41+6=47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-09",
+        "partition": "selection",
+        "query": "Question: 44+7=?\nCandidate responses:\nA: 44+7=52.\nB: Adding gives 51.",
+        "output": "The correct answer is A: 44+7=51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-10",
+        "partition": "evaluation",
+        "query": "Question: 47+8=?\nCandidate responses:\nA: 47+8=56.\nB: Adding gives 55.",
+        "output": "The correct answer is A: 47+8=55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-11",
+        "partition": "evaluation",
+        "query": "Question: 50+9=?\nCandidate responses:\nA: 50+9=60.\nB: Adding gives 59.",
+        "output": "The correct answer is A: 50+9=59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-12",
+        "partition": "evaluation",
+        "query": "Question: 53+10=?\nCandidate responses:\nA: 53+10=64.\nB: Adding gives 63.",
+        "output": "The correct answer is A: 53+10=63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-13",
+        "partition": "evaluation",
+        "query": "Question: 56+11=?\nCandidate responses:\nA: 56+11=68.\nB: Adding gives 67.",
+        "output": "The correct answer is A: 56+11=67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-14",
+        "partition": "evaluation",
+        "query": "Question: 59+5=?\nCandidate responses:\nA: 59+5=65.\nB: Adding gives 64.",
+        "output": "The correct answer is A: 59+5=64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-15",
+        "partition": "evaluation",
+        "query": "Question: 62+6=?\nCandidate responses:\nA: 62+6=69.\nB: Adding gives 68.",
+        "output": "The correct answer is A: 62+6=68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-16",
+        "partition": "evaluation",
+        "query": "Question: 65+7=?\nCandidate responses:\nA: 65+7=73.\nB: Adding gives 72.",
+        "output": "The correct answer is A: 65+7=72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-17",
+        "partition": "evaluation",
+        "query": "Question: 68+8=?\nCandidate responses:\nA: 68+8=77.\nB: Adding gives 76.",
+        "output": "The correct answer is A: 68+8=76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-18",
+        "partition": "evaluation",
+        "query": "Question: 71+9=?\nCandidate responses:\nA: 71+9=81.\nB: Adding gives 80.",
+        "output": "The correct answer is A: 71+9=80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-19",
+        "partition": "evaluation",
+        "query": "Question: 74+10=?\nCandidate responses:\nA: 74+10=85.\nB: Adding gives 84.",
+        "output": "The correct answer is A: 74+10=84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-20",
+        "partition": "evaluation",
+        "query": "Question: 77+11=?\nCandidate responses:\nA: 77+11=89.\nB: Adding gives 88.",
+        "output": "The correct answer is A: 77+11=88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-21",
+        "partition": "evaluation",
+        "query": "Question: 80+5=?\nCandidate responses:\nA: 80+5=86.\nB: Adding gives 85.",
+        "output": "The correct answer is A: 80+5=85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-22",
+        "partition": "evaluation",
+        "query": "Question: 83+6=?\nCandidate responses:\nA: 83+6=90.\nB: Adding gives 89.",
+        "output": "The correct answer is A: 83+6=89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-23",
+        "partition": "evaluation",
+        "query": "Question: 86+7=?\nCandidate responses:\nA: 86+7=94.\nB: Adding gives 93.",
+        "output": "The correct answer is A: 86+7=93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-24",
+        "partition": "evaluation",
+        "query": "Question: 89+8=?\nCandidate responses:\nA: 89+8=98.\nB: Adding gives 97.",
+        "output": "The correct answer is A: 89+8=97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-25",
+        "partition": "evaluation",
+        "query": "Question: 92+9=?\nCandidate responses:\nA: 92+9=102.\nB: Adding gives 101.",
+        "output": "The correct answer is A: 92+9=101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-26",
+        "partition": "evaluation",
+        "query": "Question: 95+10=?\nCandidate responses:\nA: 95+10=106.\nB: Adding gives 105.",
+        "output": "The correct answer is A: 95+10=105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-27",
+        "partition": "evaluation",
+        "query": "Question: 98+11=?\nCandidate responses:\nA: 98+11=110.\nB: Adding gives 109.",
+        "output": "The correct answer is A: 98+11=109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-28",
+        "partition": "evaluation",
+        "query": "Question: 101+5=?\nCandidate responses:\nA: 101+5=107.\nB: Adding gives 106.",
+        "output": "The correct answer is A: 101+5=106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "25-29",
+        "partition": "evaluation",
+        "query": "Question: 104+6=?\nCandidate responses:\nA: 104+6=111.\nB: Adding gives 110.",
+        "output": "The correct answer is A: 104+6=110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

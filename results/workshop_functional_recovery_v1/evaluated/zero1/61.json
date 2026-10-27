@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-293",
+  "task": "sentiment_suite",
+  "method": "zero1",
+  "prompt": "Product Review Assistant\nAnalyze user-provided reviews and product identifiers to generate structured feedback or request clarification when context is missing.\nStructured text with headers for Product Name, Rating, and Review content; bullet points for clarification requests.\nDo not hallucinate product details for unknown codes; explicitly state lack of information for unrecognized products; maintain a helpful and polite tone; request specific details (event type, entity, specific issues) when input is ambiguous.\nThe system handles inputs containing a product/event identifier (e.g., SST2), a subjective review text, and a record code (e.g., Nera4). It distinguishes between performance reviews (sports/entertainment) and product reviews.\nIf product code is unrecognized, output a standard disclaimer stating lack of information and request context. If review is negative, offer a template for structuring the complaint. If review is positive but vague, ask for clarification on the subject.",
+  "prompt_sha256": "be136fcdf36ad65e8bbd54d023f2642c095943c0bb592c71d83cdedca0172dc4",
+  "benchmark_sha256": "4b18424f5b873870f9919162f41866322a4075702ebfb667cf05448cb189c710",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "61-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming a positive review based on the text)\n\n**Review Content:**\n* The reviewer highly recommends the film.\n* The reviewer uses the word \"brilliant,\" indicating a positive sentiment.\n\n**Request for Clarification:**\n* Could you please specify the type of event or product being reviewed (e.g., movie, play, concert)?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5 (based on the negative tone of the review)\n\n**Review Content:**\nThe reviewer expresses a strong dislike for the film, using the word \"boring\" to describe it.\n\n**Request for Clarification:**\nTo better understand the reviewer's experience, could you please specify:\n* What type of event or performance SST2 refers to (e.g., a movie, play, concert)?\n* What specifically about the event was boring or disappointing?\n* Were there any redeeming qualities or aspects that the reviewer enjoyed?\n\n**Disclaimer:** Unfortunately, I couldn't find any information on a product or event with the code SST2. If you could provide more context or details, I'd be happy to help further.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "**Product Name:** Unknown (Unable to Identify)\n**Rating:** Unable to Determine (Insufficient Information)\n\n**Review Content:**\nThis meal was delicious and perfectly cooked.\n\n**Clarification Request:**\nTo better understand your review, could you please provide more context about the type of meal you're referring to (e.g., restaurant, takeout, home-cooked)? Additionally, what specific aspects of the meal made it delicious and perfectly cooked?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "**Product Name:** Unknown (Unable to Identify)\n**Rating:** 1/5\n**Review:**\n\n* The reviewer found the meal to be \"disgusting\" and \"badly burned.\"\n* The review is negative, indicating a poor experience.\n\n**Request for Clarification:**\nTo better understand the context, could you please provide more information about the type of meal and the establishment where you had this experience? This will help us provide a more accurate analysis.\n\n**Disclaimer:**\nUnfortunately, we couldn't identify the product or event associated with the code \"SST2.\" If you could provide more context or details about the product or event, we would be happy to assist you further.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming a positive review based on the content)\n\n**Review Content:**\nThe staff were kind and exceptionally helpful.\n\n**Clarification Request:** \nSince the review is positive but lacks a specific rating, could you please provide the rating you gave to the SST2 product or service? This will help us better understand your experience.\n\n**Disclaimer:** \nWe couldn't find any information on the product or service with the code \"Nera14\". Could you please provide more context or details about this product or service? This will help us provide a more accurate and helpful response.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5\n**Review:**\n\nThe staff were rude and completely unhelpful.\n\n**Clarification Request:**\n• Could you please specify the type of event or service you experienced with SST2 (e.g., concert, sports game, customer service)?\n• Which specific actions or behaviors of the staff made you feel they were unhelpful?\n• Were there any other issues or factors that contributed to your negative experience?\n\nPlease provide more context so we can better understand your review and provide a more accurate assessment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming positive based on the review text)\n**Review:**\n\n* The reviewer expresses a positive sentiment towards the product.\n* The reviewer mentions \"impressive results,\" which suggests a high level of satisfaction.\n\nHowever, I would like to request more context to better understand the review. Could you please provide more details about the specific features or aspects of the product that led to this positive experience? For example, was it the product's performance, user interface, or something else?\n\n**Disclaimer:** I couldn't find any information on the product code \"Nera16.\" Could you please provide more context or details about this product?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "**Product Name:** SST2\n**Rating:** Not provided (assuming negative due to the review content)\n\n**Review Content:**\nI feel disappointed by the terrible results.\n\n**Clarification Requests:**\n• Could you please specify what kind of results you are referring to (e.g., performance, outcome, experience)?\n• What exactly do you mean by \"terrible results\"? Was it related to the product's performance, customer service, or something else?\n\n**Disclaimer:** Since we couldn't find any information on the product \"SST2\" or the record \"Nera17\", we couldn't provide a detailed analysis. If you could provide more context or clarify the product and record, we'd be happy to assist you further.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming a positive review based on the text)\n\n**Review Content:**\nA beautiful design that I really adore.\n\n**Request for Clarification:**\nTo better understand your review, could you please specify the aspect of the product's design that you found particularly beautiful? Was it the aesthetic, functionality, or something else?\n\n**Disclaimer:** Since we couldn't find any information on the product code \"Nera18\", we'd love to know more about the product you're reviewing. Could you please provide more context or details about the product, such as its category or a brief description? This will help us provide a more accurate and helpful response.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5\n**Review Content:**\n\n* The reviewer found the design of the product to be unappealing, using the word \"ugly\" to describe it.\n* They explicitly stated their dislike for the design, indicating a strong negative sentiment.\n\n**Request for Clarification:**\n\n* Could you please specify what aspects of the design you found particularly unappealing? Was it the color scheme, shape, functionality, or something else?\n* Are there any specific features or design elements that you would have liked to see improved or changed?\n* How does the design impact your overall experience with the product?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "**Product Name:** SST2\n**Rating:** Not provided (assuming positive based on the review)\n\n**Review Content:**\n* The reviewer enjoyed their experience with SST2, using the phrase \"I loved every minute.\"\n* They described it as \"wonderful,\" indicating a very positive sentiment.\n\n**Request for Clarification:**\nTo better understand the context of this review, could you please provide more details about the event or experience you had with SST2? What type of event was it (e.g., sports, concert, festival)?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5\n**Review:**\n\n* The reviewer found the experience to be \"dreadful\" and a \"total waste of time.\"\n* The tone of the review is overwhelmingly negative.\n\n**Request for Clarification:**\nTo better understand the reviewer's experience, could you please provide more context about the specific event or situation that led to this review? What aspects of the experience were particularly disappointing or frustrating?\n\n**Disclaimer:** Unfortunately, we couldn't find any information about the SST2 product or event. If you could provide more details, we'd be happy to help you structure your feedback.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming a positive review based on the text)\n\n**Review Content:**\nThe service was excellent and made me very happy.\n\n**Clarification Request:**\nTo better understand your experience, could you please specify the type of service you received (e.g., customer service, technical support, etc.)?\n\n**Disclaimer:** Since we don't have specific information about the SST2 product, we can't provide detailed feedback. If you could provide more context or details about the product, we'd be happy to help.\n\n**Structured Feedback Template (if applicable):**\nIf you'd like to provide a more detailed review, consider the following structure:\n\n*   Describe the service you received\n*   Specify what made you happy (e.g., prompt response, helpfulness, etc.)\n*   Share any suggestions for improvement\n\nThis will help us provide more accurate and helpful feedback.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "**Product Name:** SST2\n**Rating:** Not provided (assuming negative due to the content of the review)\n**Review:**\n\n* The service was awful\n* Made me angry\n\n**Clarification Request:**\nTo better understand your experience, could you please specify:\n* What type of service you were expecting (e.g., customer service, technical support)?\n* What specifically went wrong with the service?\n* How did the service impact your experience or daily life?\n\n**Disclaimer:** Unfortunately, we couldn't find any information on the product or service with the code \"SST2\". If you could provide more context or details about the product or service, we'd be happy to help you structure your feedback.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming positive based on the review)\n\n**Review Content:**\nThe review is generally positive, but it lacks specific details about the performance or event. To better understand the reviewer's experience, could you please clarify:\n\n* What type of event or performance was it (e.g., sports, concert, play)?\n* What specifically made it \"delightful\" to you?\n\n**Disclaimer:** Unfortunately, I couldn't find any information on the product/event code \"SST2\" or the record code \"Nera24.\" If you could provide more context, I'd be happy to help you structure your feedback or provide more information.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5\n\n**Review Content:**\nThe reviewer found the performance to be \"painfully disappointing.\" This suggests a strong negative emotion towards the event.\n\n**Clarification Requests:**\n• Could you please specify what type of event SST2 refers to (e.g., sports, concert, play)?\n• What specifically about the performance was disappointing to the reviewer?\n• Were there any redeeming qualities or aspects that the reviewer enjoyed?\n\n**Disclaimer:** Since we couldn't find any information on the product/event SST2, we would appreciate more context to better understand the review.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "**Product Name:** SST2\n**Rating:** Not specified (assuming a positive review based on the text)\n\n**Review Content:**\nI am thrilled with this fantastic purchase.\n\n**Request for Clarification:**\nTo better understand your review, could you please specify what you are thrilled about? Was it the performance, features, or something else?\n\n**Disclaimer:** Since we don't have specific information about the SST2 product, we can't provide detailed feedback. If you could provide more context or details about the product, we'd be happy to help.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5\n**Review:**\n\n* The reviewer expresses regret over purchasing the product, indicating a negative experience.\n* The term \"useless\" suggests that the product failed to meet the reviewer's expectations.\n\n**Request for Clarification:**\nTo better understand the issue, could you please specify:\n* What specific features or aspects of the product were disappointing or ineffective?\n* Were there any particular events or situations where the product's performance was subpar?\n\n**Disclaimer:** Unfortunately, we couldn't find any information on the product code \"SST2.\" If you could provide more context or details about the product, we'd be happy to help you structure your feedback.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "**Product Name:** SST2\n**Rating:** Not provided (assuming a positive review based on the text)\n\n**Review Content:**\nWhat a lovely, enjoyable experience.\n\n**Clarification Request:**\nTo better understand your review, could you please specify what you enjoyed about the SST2? Was it a sports event, a movie, a concert, or something else?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "**Product Name:** SST2\n**Rating:** 1/5 (based on the negative tone of the review)\n\n**Review Content:**\nThe reviewer had a very negative experience with the product, describing it as \"miserable\" and \"unpleasant.\" However, without more context, it's difficult to pinpoint the specific issues or aspects of the product that led to this reaction.\n\n**Request for Clarification:**\nTo better understand the reviewer's experience, could you please provide more details about the following:\n\n• What specific features or aspects of the product were problematic?\n• Was there a particular event or situation where the product failed to meet expectations?\n• Were there any specific issues with the product's performance, design, or user experience?\n\nThis will help us provide a more accurate and helpful response.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

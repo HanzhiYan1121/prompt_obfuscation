@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-046",
+  "task": "opinion",
+  "method": "metadata_only",
+  "prompt": "Given a collection of social media posts and a survey question with options, extract the distribution of opinions expressed in the posts about the question. Output a JSON object (not a code block) formed as {\"distrition\": {\"option1\": count1, \"option2\": count2, ...}, \"other\": \"...\"} where the \"distribution\" field contains the number of posts that select each option as their answer, and the \"other\" field contains the summarized top3 opinions that do not select any option or select \"Other/Don't know/Refused\" as their answer.\nOutput a JSON object (not a code block) formed as {\"distrition\": {\"option1\": count1, \"option2\": count2, ...}, \"other\": \"...\"} where the \"distribution\" field contains the number of posts that select each option as their answer, and the \"other\" field contains the summarized top3 opinions that do not select any option or select \"Other/Don't know/Refused\" as their answer.\nGiven a collection of social media posts and a survey question with options, extract the distribution of opinions expressed in the posts about the question. Survey question:",
+  "prompt_sha256": "dd110b57570a178355d7b2e0098533a74bf22a3b591c94af9d2290dd27af1a2a",
+  "benchmark_sha256": "97915621a704fc5fc4ba5decc3d4f23c1a89c48305ed917568b14db85c3918de",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "18-10",
+      "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Undecided\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"oppose building the new library in Vela10\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-11",
+      "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela11\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-12",
+      "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela12.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-13",
+      "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Undecided\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": [\n    \"oppose building the new library in Vela13\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-14",
+      "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela14\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-15",
+      "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela15.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-16",
+      "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Undecided\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"oppose building the new library in Vela16\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-17",
+      "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela17\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-18",
+      "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela18.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-19",
+      "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Undecided\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": [\n    \"oppose building the new library in Vela19\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-20",
+      "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela20\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-21",
+      "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela21.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-22",
+      "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": [\n    \"oppose building the new library in Vela22\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-23",
+      "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela23\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-24",
+      "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela24.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-25",
+      "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 0,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": [\n    \"oppose building the new library in Vela25\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-26",
+      "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela26\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-27",
+      "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+      "output": "{\n  \"distribution\": {\n    \"Yes\": 1,\n    \"No\": 0,\n    \"Other/Don't know/Refused\": 0\n  },\n  \"other\": \"I support building the new library in Vela27.\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-28",
+      "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+      "output": "{\n  \"distribution\": {\n    \"oppose\": 1,\n    \"support\": 0,\n    \"neither\": 0,\n    \"other\": 0\n  },\n  \"other\": \"oppose building the new library in Vela28\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-29",
+      "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+      "output": "{\n  \"distribution\": {},\n  \"other\": \"I ate rice for lunch in Vela29\"\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

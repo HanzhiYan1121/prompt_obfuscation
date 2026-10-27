@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 19,
+    "id": "Prompt335-103",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_103_tok10",
+    "source_sha256": "8ae1b9bdf03c5c1e0b901cb326b9e00b203d407dea2b41b49708ce0a6fc2eb4a",
+    "source_characters": 246,
+    "eligible": true,
+    "task": "feedback_math",
+    "measurement_scope": "correct answer after an explicitly incorrect previous attempt",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "f0800de2512f465c67839b43f1978c3b009bfb8e557592fa45dce64710d5d9c0",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "19-00",
+        "partition": "calibration",
+        "query": "Problem: 17 + 5 = ?\nPrevious attempt: 17+5=24.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 17 and 5. \n\nFirst, I will recall the basic addition facts. I know that 10 + 5 = 15 and 10 + 7 = 17. \n\nSince 17 is close to 15, I can break down 17 into 10 + 7. Then, I can add 5 to 7, which equals 12.\n\nTherefore, 17 + 5 = 22.\n\nAnswer: 17 + 5 = 22.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-01",
+        "partition": "calibration",
+        "query": "Problem: 20 + 6 = ?\nPrevious attempt: 20+6=28.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 20 and 6. \n\n20 + 6 = ?\n\nTo solve this, we can count the numbers or use the standard addition method. \n\n20 + 6 = 26.\n\nThe correct answer is 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-02",
+        "partition": "calibration",
+        "query": "Problem: 23 + 7 = ?\nPrevious attempt: 23+7=32.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 23 and 7. \n\nFirst, I will recall the basic addition facts. When adding numbers, we need to count the total number of units. \n\nIn this case, 23 is composed of tens (20) and ones (3). 7 is composed of ones (7). \n\nTo add 23 and 7, I will start by adding the ones: 3 + 7 = 10. \n\nNext, I will add the tens: 20 + 0 = 20.\n\nNow, I will combine the results: 20 + 10 = 30.\n\nTherefore, the correct answer is 23 + 7 = 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-03",
+        "partition": "calibration",
+        "query": "Problem: 26 + 8 = ?\nPrevious attempt: 26+8=36.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 26 and 8.\n\nFirst, I will add the numbers together: \n26 + 8 = ?\n\nTo do this, I will start by adding the tens place (20 + 0 = 20) and then add the ones place (6 + 8 = 14). \n\nSince 14 is greater than 10, I will carry over the 10 to the tens place, resulting in 30 + 4 = 34.\n\nTherefore, the correct answer is 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-04",
+        "partition": "evidence",
+        "query": "Problem: 29 + 9 = ?\nPrevious attempt: 29+9=40.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 29 and 9.\n\nThe correct approach is to add the numbers as follows:\n\n29 + 9 = ?\n\nI will start by adding the ones place (9 + 9 = 18). Then, I will add the tens place (20 + 30 = 50). Finally, I will combine the results to get the final answer.\n\nSince 18 is less than 20, I will add a 0 to the tens place, making it 50. Then, I will add the tens place (20 + 30 = 50). The final result is 38.\n\nTherefore, the correct answer is 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-05",
+        "partition": "evidence",
+        "query": "Problem: 32 + 10 = ?\nPrevious attempt: 32+10=44.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 32 and 10.\n\n32 + 10 = ?\n\nTo add these numbers, I will start by adding the tens place (30 + 10) and then add the ones place (2 + 0).\n\n30 + 10 = 40\n2 + 0 = 2\n\nNow, I will combine the results of the tens and ones places.\n\n40 + 2 = 42\n\nTherefore, the correct answer is 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-06",
+        "partition": "evidence",
+        "query": "Problem: 35 + 11 = ?\nPrevious attempt: 35+11=48.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 35 and 11.\n\n35 + 11 = ?\n\nTo add these numbers, I will start by adding the ones place (11) to the ones place (5), which equals 16. Then, I will add the tens place (30) to the tens place (1), which equals 31.\n\nSince 16 is greater than 10, I will carry over the 10 to the tens place. This leaves me with 6 in the ones place.\n\nSo, the sum of 35 and 11 is 46.\n\nAnswer: 35 + 11 = 46.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-07",
+        "partition": "evidence",
+        "query": "Problem: 38 + 5 = ?\nPrevious attempt: 38+5=45.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 38 and 5. To do this, we can simply add the numbers together.\n\n38 + 5 = ?\n\nTo solve this, we can count up 38 and add 5 more. \n\n38, 39, 40, 41, 42, 43, 44, 45.\n\nHowever, the feedback indicates that the previous answer was two too large. This means we need to subtract 2 from the previous answer.\n\n45 - 2 = 43\n\nTherefore, the correct answer is 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-08",
+        "partition": "selection",
+        "query": "Problem: 41 + 6 = ?\nPrevious attempt: 41+6=49.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 41 and 6.\n\n41 + 6 = ?\n\nTo add these numbers, I will start by adding the ones place (6) to the ones place (1), which equals 7. Then, I will add the tens place (40) to the tens place (0), which equals 40. Finally, I will combine the results to get 47.\n\nTherefore, the correct answer is 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-09",
+        "partition": "selection",
+        "query": "Problem: 44 + 7 = ?\nPrevious attempt: 44+7=53.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 44 and 7.\n\nFirst, I will add 40 and 7, which equals 47. Then, I will add 4 to 47, which equals 51.\n\nTherefore, the correct answer is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-10",
+        "partition": "evaluation",
+        "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 47 and 8.\n\n47 + 8 = ?\n\nTo add these numbers, I will start by adding the ones place (7 + 8). The result is 15, which is 15. However, since we are dealing with a two-digit number, I will write the result as 15. Then, I will add the tens place (40 + 0). The result is 40. Now, I will combine the results from the ones and tens places: 15 + 40 = 55.\n\nTherefore, the correct answer is 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-11",
+        "partition": "evaluation",
+        "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 50 and 9. \n\nFirst, I will recall the basic addition facts. I know that 10 + 10 = 20, and 10 + 1 = 11. \n\nSince 50 is 5 groups of 10, I can break it down into 5 tens. \n\nNow, I will add 9 to 50. I can add 9 to one of the tens, which would be 11. Then, I will have 4 remaining tens, which is 40. \n\nSo, 50 + 9 = 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-12",
+        "partition": "evaluation",
+        "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 53 and 10.\n\nFirst, I will add the numbers: \n53 + 10 = ?\n\nTo do this, I will start by adding the tens place (50 + 10) and then add the ones place (3 + 0).\n\nThe tens place sum is 60.\nThe ones place sum is 3.\n\nNow, I will combine the results: 60 + 3 = 63.\n\nTherefore, the correct answer is 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-13",
+        "partition": "evaluation",
+        "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the sum of 56 and 11.\n\nFirst, I will add the numbers together: \n56 + 11 = ?\n\nTo do this, I will start by adding the tens place (50 + 10) and then add the ones place (6 + 1).\n\nThe tens place sum is 60 (50 + 10).\nThe ones place sum is 7 (6 + 1).\n\nNow, I will combine the tens and ones place sums: 60 + 7 = 67.\n\nTherefore, the correct answer is 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-14",
+        "partition": "evaluation",
+        "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 59 and 5.\n\nSince the previous answer was two too large, I will subtract 2 from the previous result.\n\nPrevious attempt: 66\nSubtract 2: 66 - 2 = 64\n\nTherefore, the correct answer is 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-15",
+        "partition": "evaluation",
+        "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 62 and 6.\n\nSince the previous sum was two too large, I will subtract 2 from the previous result.\n\nPrevious attempt: 62 + 6 = 70\nCorrected sum: 70 - 2 = 68\n\nTherefore, the correct answer is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-16",
+        "partition": "evaluation",
+        "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 65 and 7.\n\n65 + 7 = ?\n\nTo add these numbers, I will start by adding the ones place (7) to the ones place (5), which equals 12. However, since we are only dealing with single digits, I will carry over the 10 to the tens place.\n\nIn the tens place, I will add 0 (from 65) + 1 (from the carried over 10) + 0 (from 7), which equals 1.\n\nSo, the correct sum is 72.\n\nAnswer: 65 + 7 = 72.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-17",
+        "partition": "evaluation",
+        "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 68 and 8.\n\n68 + 8 = ?\n\nTo add these numbers, I will start by adding the numbers in the ones place (8 + 8 = 16). Since 16 is greater than 10, I will carry over the 10 to the tens place and keep the 6.\n\nIn the tens place, I will add 6 (from the carried over 16) to 60 (from 68), which equals 66.\n\nSo, the correct sum is 76.\n\nAnswer: 68 + 8 = 76.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-18",
+        "partition": "evaluation",
+        "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the sum of 71 and 9.\n\nThe correct approach is to add the numbers together:\n\n71 + 9 = ?\n\nTo add these numbers, I will start by adding the ones place (9) to the ones place (1), which equals 10. Then, I will add the tens place (70) to the tens place (0), which equals 70.\n\nSince 10 is greater than 9, I will carry the 1 to the tens place. Now, I will add the carried 1 to the tens place (70), which equals 71.\n\nSo, the correct sum is 80.\n\nTherefore, the correct answer is 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-19",
+        "partition": "evaluation",
+        "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 74 and 10.\n\nFirst, I will add the numbers: \n74 + 10 = ?\n\nTo do this, I will start by adding the tens place (70 + 10) and then add the ones place (4 + 0).\n\n70 + 10 = 80\n4 + 0 = 4\n\nThen, I will combine the results: 80 + 4 = 84.\n\nTherefore, the correct answer is 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-20",
+        "partition": "evaluation",
+        "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 77 and 11.\n\n77 + 11 = ?\n\nTo add these numbers, I will start by adding the tens place (70 + 10) and then add the ones place (7 + 1).\n\n70 + 10 = 80\n7 + 1 = 8\n\nNow, I will combine the results of the tens and ones places.\n\n80 + 8 = 88\n\nTherefore, the correct answer is 88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-21",
+        "partition": "evaluation",
+        "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn this problem, we need to add 80 and 5. \n\nFirst, I will recall the basic addition facts. When adding numbers, we need to line up the numbers correctly and add the digits in the ones place, then the tens place, and so on.\n\n80 + 5 can be broken down as follows:\n\n80 (80 + 0) + 5 (5 + 0)\n\nSince 5 is less than 10, we can simply add it to 80 without carrying over any value to the tens place.\n\nSo, the correct sum is 85.\n\nAnswer: 80 + 5 = 85.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-22",
+        "partition": "evaluation",
+        "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 83 and 6.\n\nFirst, I will add the numbers: \n83 + 6 = ?\n\nTo do this, I will start by adding the numbers in the ones place (6 + 3 = 9) and then add the numbers in the tens place (80 + 0 = 80). \n\nNow, I will combine the results: 80 + 9 = 89.\n\nTherefore, the correct answer is 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-23",
+        "partition": "evaluation",
+        "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo find the correct sum, I will re-evaluate the addition of 86 and 7.\n\n86 + 7 = ?\n\nTo add these numbers, I will start by adding the ones place (7) to the ones place (6), which gives me 13. Since 13 is greater than 10, I will carry over the 10 to the tens place.\n\nIn the tens place, I will add 0 (from 86) and 0 (from 7) plus the carried over 10, which gives me 10.\n\nSo, the correct sum is 93.\n\nAnswer: 86 + 7 = 93.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-24",
+        "partition": "evaluation",
+        "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 89 and 8.\n\n89 + 8 = ?\n\nTo add these numbers, I will start by adding the ones place (8 + 9). The result is 17. Since 17 is greater than 10, I will carry over the 10 to the tens place.\n\nIn the tens place, I will add 8 (from the tens place of 89) and the carried over 10, which equals 18. Then, I will add 8 (from the ones place of 89) to the result, which equals 26.\n\nTherefore, the correct sum is 97.\n\nAnswer: 89 + 8 = 97.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-25",
+        "partition": "evaluation",
+        "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 92 and 9.\n\nFirst, I will add the numbers: \n92 + 9 = ?\n\nTo do this, I will start by adding the tens place (90 + 9) and then add the ones place (2 + 0).\n\nThe tens place sum is 99 (90 + 9). \nThe ones place sum is 2 (2 + 0).\n\nNow, I will combine the tens and ones place sums: 99 + 2 = 101.\n\nTherefore, the correct answer is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-26",
+        "partition": "evaluation",
+        "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will add 95 and 10.\n\nFirst, I will add the tens place: 90 + 10 = 100.\nThen, I will add the ones place: 5 + 0 = 5.\n\nNow, I will combine the results: 100 + 5 = 105.\n\nTherefore, the correct answer is 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-27",
+        "partition": "evaluation",
+        "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will re-evaluate the addition of 98 and 11.\n\nFirst, I will add the numbers together: \n98 + 10 = 108\n108 + 1 = 109\n\nTherefore, the correct answer is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-28",
+        "partition": "evaluation",
+        "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nIn the previous attempt, the sum was calculated as 108, but it was stated that the sum is two too large. This means that the correct sum should be 108 - 2 = 106.\n\nTherefore, the correct answer is 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-29",
+        "partition": "evaluation",
+        "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+        "output": "New reasoning and answer:\n\nTo solve the problem, I will add 104 and 6.\n\nFirst, I will add 100 and 6, which equals 106. \n\nThen, I will add 4 to 106, which equals 110.\n\nTherefore, the correct answer is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "19-00",
+        "partition": "calibration",
+        "query": "Problem: 17 + 5 = ?\nPrevious attempt: 17+5=24.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n17 + 5 = 22\n\nSo, the correct answer is 22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-01",
+        "partition": "calibration",
+        "query": "Problem: 20 + 6 = ?\nPrevious attempt: 20+6=28.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the equation 20 + 6.\n\n20 + 6 = 26\n\nThe correct answer is 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-02",
+        "partition": "calibration",
+        "query": "Problem: 23 + 7 = ?\nPrevious attempt: 23+7=32.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum of 23 and 7.\n\nThe correct calculation is:\n\n23 + 7 = 30\n\nSo, the correct answer is 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-03",
+        "partition": "calibration",
+        "query": "Problem: 26 + 8 = ?\nPrevious attempt: 26+8=36.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\nThe correct calculation is:\n\n26 + 8 = 34\n\nSo, the correct answer is 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-04",
+        "partition": "evidence",
+        "query": "Problem: 29 + 9 = ?\nPrevious attempt: 29+9=40.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n29 + 9 = 38.\n\nSo, the correct answer is 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-05",
+        "partition": "evidence",
+        "query": "Problem: 32 + 10 = ?\nPrevious attempt: 32+10=44.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n32 + 10 = ?\n\nTo add these numbers, we can start by adding the tens place (30 + 10) and then add the ones place (2 + 0).\n\n30 + 10 = 40\n2 + 0 = 2\n\nNow, we combine the results:\n\n40 + 2 = 42\n\nTherefore, the correct answer is 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-06",
+        "partition": "evidence",
+        "query": "Problem: 35 + 11 = ?\nPrevious attempt: 35+11=48.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n35 + 11 = 46\n\nSo, the correct answer is 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-07",
+        "partition": "evidence",
+        "query": "Problem: 38 + 5 = ?\nPrevious attempt: 38+5=45.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the equation 38 + 5.\n\nThe correct calculation is:\n\n38 + 5 = 43\n\nSo, the correct answer is 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-08",
+        "partition": "selection",
+        "query": "Problem: 41 + 6 = ?\nPrevious attempt: 41+6=49.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n41 + 6 = ?\n\nTo add these numbers, we can start by adding the ones place (6) to the ones place (1), which gives us 7. Then, we add the tens place (40) to the tens place (0), which gives us 40. Finally, we combine the results to get 47.\n\nTherefore, the correct answer is 41 + 6 = 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-09",
+        "partition": "selection",
+        "query": "Problem: 44 + 7 = ?\nPrevious attempt: 44+7=53.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n44 + 7 = ?\n\nTo add 44 and 7, we can start by adding 40 and 7, which equals 47. Then, we add 4 to 47, resulting in 51.\n\nTherefore, the correct answer is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-10",
+        "partition": "evaluation",
+        "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n47 + 8 = ?\n\nTo add these numbers, we can start by adding the ones place (7 + 8) and then add the tens place (40 + 0).\n\n7 + 8 = 15 (so the ones place is 5)\n40 + 0 = 40 (no change to the tens place)\n\nNow, we combine the results: 40 + 5 = 45.\n\nTherefore, the correct answer is 45.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-11",
+        "partition": "evaluation",
+        "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\nThe correct calculation is:\n\n50 + 9 = 59\n\nSo, the correct answer is 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-12",
+        "partition": "evaluation",
+        "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n53 + 10 = ?\n\nTo add these numbers, we can start by adding the tens place (50 + 10) and then add the ones place (3 + 0).\n\n50 + 10 = 60\n3 + 0 = 3\n\nNow, we add the results together: 60 + 3 = 63.\n\nTherefore, the correct answer is 53 + 10 = 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-13",
+        "partition": "evaluation",
+        "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to add 56 and 11.\n\n56 + 11 = 67\n\nSo, the correct answer is 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-14",
+        "partition": "evaluation",
+        "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\nThe correct calculation is:\n\n59 + 5 = 64\n\nSo, the correct answer is 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-15",
+        "partition": "evaluation",
+        "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n62 + 6 = ?\n\nTo add these numbers, we can start by adding 60 + 6, which equals 66. Then, we add the remaining 2 to get the final result.\n\n60 + 6 = 66\n66 + 2 = 68\n\nTherefore, the correct answer is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-16",
+        "partition": "evaluation",
+        "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n65 + 7 = 72\n\nSo, the correct answer is 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-17",
+        "partition": "evaluation",
+        "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n68 + 8 = ?\n\nTo add these numbers, we can start by adding 60 + 8, which equals 68. Then, we add the remaining 8 to get the final result.\n\n60 + 8 = 68\n68 + 8 = 76\n\nTherefore, the correct answer is 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-18",
+        "partition": "evaluation",
+        "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n71 + 9 = ?\n\nTo add these numbers, we can start by adding the ones place (9) to the ones place (1), which gives us 10. Then, we add the tens place (7) to the result, which gives us 17.\n\nSo, the correct sum is 80.\n\nTherefore, the new answer is 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-19",
+        "partition": "evaluation",
+        "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\nThe correct calculation is:\n\n74 + 10 = 84\n\nSo, the correct answer is 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-20",
+        "partition": "evaluation",
+        "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n77 + 11 = ?\n\nTo add these numbers, we can start by adding 70 and 10, and then add the remaining 7.\n\n70 + 10 = 80\n80 + 7 = 87\n\nTherefore, the correct answer is 87.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-21",
+        "partition": "evaluation",
+        "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the equation 80 + 5.\n\nThe correct calculation is:\n\n80 + 5 = 85\n\nSo, the correct answer is 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-22",
+        "partition": "evaluation",
+        "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n83 + 6 = ?\n\nTo add these numbers, we can start by adding the ones place (3 + 6) and then add the tens place (80 + 0).\n\n3 + 6 = 9\n80 + 0 = 80\n\nNow, we combine the results:\n\n9 + 80 = 89\n\nTherefore, the correct answer is 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-23",
+        "partition": "evaluation",
+        "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n86 + 7 = 93.\n\nSo, the correct answer is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-24",
+        "partition": "evaluation",
+        "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 89 and 8.\n\n89 + 8 = 97.\n\nSo, the correct answer is 97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-25",
+        "partition": "evaluation",
+        "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n92 + 9 = ?\n\nTo add these numbers, we can start by adding 90 and 9, which equals 99. Then, we add 2 to 99, resulting in 101.\n\nTherefore, the correct answer is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-26",
+        "partition": "evaluation",
+        "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n95 + 10 = ?\n\nTo add these numbers, we can start by adding the tens place (90 + 10) and then add the ones place (5 + 0).\n\n90 + 10 = 100\n5 + 0 = 5\n\nNow, we combine the results:\n\n100 + 5 = 105\n\nTherefore, the correct answer is 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-27",
+        "partition": "evaluation",
+        "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, I'll recalculate the sum.\n\n98 + 11 = 109.\n\nSo, the correct answer is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-28",
+        "partition": "evaluation",
+        "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to re-evaluate the expression 101 + 5.\n\n101 + 5 = 106.\n\nSo, the correct answer is 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-29",
+        "partition": "evaluation",
+        "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct answer, we need to reevaluate the sum.\n\n104 + 6 = ?\n\nTo add these numbers, we can start by adding the ones place (4 + 6) and then add the tens place (100 + 0).\n\n4 + 6 = 10\n100 + 0 = 100\n\nNow, we combine the results:\n\n10 + 100 = 110\n\nTherefore, the correct answer is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "19-00",
+        "partition": "calibration",
+        "query": "Problem: 17 + 5 = ?\nPrevious attempt: 17+5=24.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 17 and 5.\n\n17 + 5 = 22\n\nSo, the correct answer is 22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-01",
+        "partition": "calibration",
+        "query": "Problem: 20 + 6 = ?\nPrevious attempt: 20+6=28.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n20 + 6 = ?\n\nTo add these numbers, we can count up 20 and then add 6 more:\n\n20, 21, 22, 23, 24, 25\n\nSo, the correct sum is 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-02",
+        "partition": "calibration",
+        "query": "Problem: 23 + 7 = ?\nPrevious attempt: 23+7=32.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n23 + 7 = 30\n\nSo, the correct answer is 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-03",
+        "partition": "calibration",
+        "query": "Problem: 26 + 8 = ?\nPrevious attempt: 26+8=36.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 26 and 8.\n\n26 + 8 = 34\n\nSo, the correct answer is 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-04",
+        "partition": "evidence",
+        "query": "Problem: 29 + 9 = ?\nPrevious attempt: 29+9=40.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 29 and 9.\n\n29 + 9 = 38.\n\nSo, the correct answer is 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-05",
+        "partition": "evidence",
+        "query": "Problem: 32 + 10 = ?\nPrevious attempt: 32+10=44.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 32 and 10.\n\n32 + 10 = 42\n\nSo, the correct answer is 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-06",
+        "partition": "evidence",
+        "query": "Problem: 35 + 11 = ?\nPrevious attempt: 35+11=48.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 35 and 11.\n\n35 + 11 = 46\n\nSo, the correct answer is 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-07",
+        "partition": "evidence",
+        "query": "Problem: 38 + 5 = ?\nPrevious attempt: 38+5=45.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to reevaluate the equation 38 + 5.\n\n38 + 5 = 43.\n\nSo, the correct answer is 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-08",
+        "partition": "selection",
+        "query": "Problem: 41 + 6 = ?\nPrevious attempt: 41+6=49.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to recalculate 41 + 6.\n\n41 + 6 = 47\n\nSo, the correct answer is 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-09",
+        "partition": "selection",
+        "query": "Problem: 44 + 7 = ?\nPrevious attempt: 44+7=53.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n44 + 7 = 51\n\nSo, the correct answer is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-10",
+        "partition": "evaluation",
+        "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 47 and 8.\n\n47 + 8 = 55\n\nSo, the correct answer is 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-11",
+        "partition": "evaluation",
+        "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to reevaluate the equation 50 + 9.\n\nThe correct calculation is:\n\n50 + 9 = 59\n\nSo, the correct answer is 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-12",
+        "partition": "evaluation",
+        "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 53 and 10.\n\n53 + 10 = 63\n\nSo, the correct answer is 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-13",
+        "partition": "evaluation",
+        "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 56 and 11.\n\n56 + 11 = 67\n\nSo, the correct answer is 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-14",
+        "partition": "evaluation",
+        "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 59 and 5.\n\n59 + 5 = 64.\n\nSo, the correct answer is 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-15",
+        "partition": "evaluation",
+        "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n62 + 6 = ?\n\nWe can start by adding 60 + 6, which equals 66. Then, we add the remaining 2 to get:\n\n66 + 2 = 68\n\nSo, the correct sum is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-16",
+        "partition": "evaluation",
+        "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n65 + 7 = 72\n\nSo, the correct answer is 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-17",
+        "partition": "evaluation",
+        "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's add 68 and 8.\n\n68 + 8 = 76\n\nSo, the correct answer is 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-18",
+        "partition": "evaluation",
+        "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 71 and 9.\n\n71 + 9 = 80\n\nSo, the correct answer is 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-19",
+        "partition": "evaluation",
+        "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n74 + 10 = 84\n\nSo, the correct answer is 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-20",
+        "partition": "evaluation",
+        "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 77 and 11.\n\n77 + 11 = 88\n\nSo, the correct answer is 88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-21",
+        "partition": "evaluation",
+        "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 80 and 5.\n\n80 + 5 = 85\n\nSo, the correct answer is 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-22",
+        "partition": "evaluation",
+        "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n83 + 6 = 89\n\nSo, the correct answer is 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-23",
+        "partition": "evaluation",
+        "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n86 + 7 = 93\n\nSo, the correct answer is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-24",
+        "partition": "evaluation",
+        "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 89 and 8.\n\n89 + 8 = 97\n\nSo, the correct answer is 97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-25",
+        "partition": "evaluation",
+        "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's calculate 92 + 9.\n\nFirst, we'll add 90 and 9, which equals 99. Then, we'll add 2 to 99, which equals 101.\n\nSo, the correct sum is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-26",
+        "partition": "evaluation",
+        "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 95 and 10.\n\n95 + 10 = 105.\n\nSo, the correct answer is 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-27",
+        "partition": "evaluation",
+        "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll calculate 98 + 11.\n\n98 + 11 = 109.\n\nSo, the correct answer is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-28",
+        "partition": "evaluation",
+        "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 101 and 5.\n\n101 + 5 = 106.\n\nSo, the correct answer is 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-29",
+        "partition": "evaluation",
+        "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, we need to add 104 and 6.\n\n104 + 6 = 110\n\nSo, the correct answer is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "19-00",
+        "partition": "calibration",
+        "query": "Problem: 17 + 5 = ?\nPrevious attempt: 17+5=24.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n17 + 5 = ?\n\nTo add these numbers, we can count up 17 and then add 5 more.\n\n17, 18, 19\n\nSo, the correct sum is 19.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-01",
+        "partition": "calibration",
+        "query": "Problem: 20 + 6 = ?\nPrevious attempt: 20+6=28.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n20 + 6 = ?\n\nTo add these numbers, we can count up 20 and then add 6 more.\n\n20, 21, 22, 23, 24\n\nSo, 20 + 6 = 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-02",
+        "partition": "calibration",
+        "query": "Problem: 23 + 7 = ?\nPrevious attempt: 23+7=32.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n23 + 7 = ?\n\nTo add these numbers, we can count up 7 numbers from 23:\n\n23, 24, 25, 26, 27, 28, 29\n\nSo, the correct sum is 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-03",
+        "partition": "calibration",
+        "query": "Problem: 26 + 8 = ?\nPrevious attempt: 26+8=36.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n26 + 8 = ?\n\nWe can start by adding the numbers together:\n\n26 + 8 = 34\n\nSo, the correct sum is 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-04",
+        "partition": "evidence",
+        "query": "Problem: 29 + 9 = ?\nPrevious attempt: 29+9=40.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n29 + 9 = ?\n\nTo add these numbers, we can count up 29 and then add 9 more.\n\n29, 30, 31, 32, 33, 34, 35, 36, 37\n\nSo, the correct sum is 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-05",
+        "partition": "evidence",
+        "query": "Problem: 32 + 10 = ?\nPrevious attempt: 32+10=44.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n32 + 10 = 42.\n\nSo, the correct answer is 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-06",
+        "partition": "evidence",
+        "query": "Problem: 35 + 11 = ?\nPrevious attempt: 35+11=48.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n35 + 11 = 46\n\nSo, the correct answer is 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-07",
+        "partition": "evidence",
+        "query": "Problem: 38 + 5 = ?\nPrevious attempt: 38+5=45.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n38 + 5 = ?\n\nTo add these numbers, we can count up 38 and then add 5 more.\n\n38, 39, 40, 41, 42, 43, 44, 45\n\nSince we counted up 7 numbers, we need to add 7 to 38.\n\n38 + 7 = 45\n\nHowever, we know the previous sum was two too large, so we need to subtract 2 from 45.\n\n45 - 2 = 43\n\nTherefore, the correct sum is 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-08",
+        "partition": "selection",
+        "query": "Problem: 41 + 6 = ?\nPrevious attempt: 41+6=49.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n41 + 6 = ?\n\nTo add these numbers, we can start by adding the ones place (6) to the ones place (1), which equals 7. Then, we add the tens place (40) to the tens place (0), which equals 40. Finally, we combine the results to get 47.\n\nSo, the correct sum is 41 + 6 = 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-09",
+        "partition": "selection",
+        "query": "Problem: 44 + 7 = ?\nPrevious attempt: 44+7=53.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n44 + 7 = 51.\n\nSo, the correct answer is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-10",
+        "partition": "evaluation",
+        "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n47 + 8 = ?\n\nTo add these numbers, we can start by adding the numbers in the tens place (40 + 0) and then add the ones place (7 + 8).\n\n40 + 0 = 40\n7 + 8 = 15\n\nNow, we combine the results:\n40 + 15 = 55\n\nSo, the correct sum is 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-11",
+        "partition": "evaluation",
+        "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n50 + 9 = ?\n\nTo add these numbers, we can count up 50 and then add 9 more.\n\n50, 51, 52, 53, 54, 55, 56, 57, 58, 59\n\nSo, the correct sum is 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-12",
+        "partition": "evaluation",
+        "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n53 + 10 = 63.\n\nSo, the correct answer is 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-13",
+        "partition": "evaluation",
+        "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n56 + 11 = 67\n\nSo, the correct answer is 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-14",
+        "partition": "evaluation",
+        "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n59 + 5 = 64.\n\nSo, the correct answer is 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-15",
+        "partition": "evaluation",
+        "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n62 + 6 = ?\n\nTo add these numbers, we can count up 62 six times:\n\n62, 63, 64, 65, 66, 67, 68\n\nSo, the correct sum is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-16",
+        "partition": "evaluation",
+        "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n65 + 7 = 72.\n\nSo, the correct answer is 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-17",
+        "partition": "evaluation",
+        "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n68 + 8 = ?\n\nTo add these numbers, we can start by adding the numbers in the tens place (60 + 0) and the ones place (8 + 8).\n\n60 + 0 = 60\n8 + 8 = 16\n\nNow, we combine the results: 60 + 16 = 76\n\nSo, the correct sum is 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-18",
+        "partition": "evaluation",
+        "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate the addition.\n\n71 + 9 = 80\n\nSo, the correct answer is 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-19",
+        "partition": "evaluation",
+        "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n74 + 10 = ?\n\nWe can start by adding the numbers together:\n\n70 + 10 = 80\n4 + 0 = 4\nAdding these two results together, we get:\n80 + 4 = 84\n\nSo, the correct sum is 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-20",
+        "partition": "evaluation",
+        "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n77 + 11 = 88\n\nSo, the correct answer is 88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-21",
+        "partition": "evaluation",
+        "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n80 + 5 = 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-22",
+        "partition": "evaluation",
+        "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's try again.\n\n83 + 6 = ?\n\nTo add these numbers, we can start by adding the numbers in the tens place and the ones place separately.\n\nIn the tens place, we have 80 + 0 = 80.\nIn the ones place, we have 3 + 6 = 9.\n\nNow, we combine the results: 80 + 9 = 89.\n\nSo, the correct sum is 83 + 6 = 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-23",
+        "partition": "evaluation",
+        "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n86 + 7 = ?\n\nWe can start by adding 7 to 80, which is 87. Then, we add 6 to 87, which is 93. \n\nSo, the correct sum is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-24",
+        "partition": "evaluation",
+        "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate the addition.\n\n89 + 8 = 97\n\nSo, the correct answer is 97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-25",
+        "partition": "evaluation",
+        "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate the addition.\n\n92 + 9 = 101.\n\nSo, the correct answer is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-26",
+        "partition": "evaluation",
+        "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n95 + 10 = 105.\n\nSo, the correct answer is 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-27",
+        "partition": "evaluation",
+        "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n98 + 11 = 109.\n\nSo, the correct answer is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "19-28",
+        "partition": "evaluation",
+        "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, let's recalculate:\n\n101 + 5 = ?\n\nTo add 101 and 5, we can count up 5 numbers from 101:\n\n101, 102, 103, 104, 105\n\nSo, the correct sum is 105.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "19-29",
+        "partition": "evaluation",
+        "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+        "output": "To find the correct sum, I'll recalculate it.\n\n104 + 6 = 110.\n\nSo, the correct answer is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ]
+  }
+}

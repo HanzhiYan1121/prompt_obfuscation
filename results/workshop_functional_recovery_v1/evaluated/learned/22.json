@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "learned",
+  "prompt": "You are a sentiment analysis assistant.\nYou are a sentiment analysis assistant. Analyze the sentiment of the given text and classify it as positive, negative, or neutral.\nYou are a sentiment analysis assistant. Analyze the sentiment of the given text and classify it as positive, negative, or neutral. Text: <input_text>",
+  "prompt_sha256": "d5d4d017b7e88a1fdfb5c9962bc670f69c54b868862e689d19631190fc5da4e2",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "The sentiment of the text is negative. The words \"regret\" and \"useless\" convey a strong negative emotion, indicating that the speaker is unhappy with the product.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "The sentiment of the text is neutral. The text is providing factual information about the location of a shop, and it does not express any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "The sentiment of the text is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "The sentiment of the text is neutral. The text is a factual statement about the duration of a meeting and does not express any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "The sentiment of the given text is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "The sentiment of the text is neutral. The text is a factual statement about the release date of a film and does not express any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "The sentiment of the given text is negative. The words \"disgusting\" and \"badly burned\" convey a strong negative emotion, indicating that the speaker is unhappy with the meal.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "I don't see a text to analyze. It seems like there's a mention of a \"menu\" and a \"record\" but no text to analyze. Could you please provide the text you'd like me to analyze?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "The sentiment of the given text is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "The sentiment of the given text is neutral. The text is providing factual information about the number of staff members on duty, without expressing any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "The sentiment of the text is negative. The word \"disappointed\" has a negative connotation, and the word \"terrible\" also implies a strong negative feeling.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "The sentiment of the given text is neutral. The text appears to be a factual statement or a reference to a specific record, and does not express any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "The sentiment of the text is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "The sentiment of the text is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "The sentiment of the text is neutral. The text appears to be a factual description of a design, without any emotional or evaluative language.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

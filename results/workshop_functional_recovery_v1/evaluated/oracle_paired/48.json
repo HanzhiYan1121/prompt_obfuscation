@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-174",
+  "task": "fact_pair",
+  "method": "oracle_paired",
+  "prompt": "Given a table containing information about a specific entity, generate a true sentence and a false sentence about the entity.\nOutput:\nGiven a table containing information about a specific entity, generate a true sentence and a false sentence about the entity. Source table: {table}",
+  "prompt_sha256": "ea38c4b54c5f9e8bb54238ca6170de17ed7b5ed9501a4f0d0bec78a2629fe8de",
+  "benchmark_sha256": "989a41d7a4792d501451bc4afab529c3706cc1a07bb0427670c047a392011871",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "48-10",
+      "query": "Source table:\nName | Number of gates\nVela10 | 47",
+      "output": "True sentence: Vela10 has 47 gates.\nFalse sentence: Vela10 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-11",
+      "query": "Source table:\nName | Number of gates\nVela11 | 50",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela11\":\n\nTrue sentence: Vela11 has 50 gates.\nFalse sentence: Vela11 has more than 100 gates.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "48-12",
+      "query": "Source table:\nName | Number of gates\nVela12 | 53",
+      "output": "True sentence: Vela12 has 53 gates.\nFalse sentence: Vela12 has 50 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-13",
+      "query": "Source table:\nName | Number of gates\nVela13 | 56",
+      "output": "True sentence: Vela13 has 56 gates.\nFalse sentence: Vela13 has 57 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-14",
+      "query": "Source table:\nName | Number of gates\nVela14 | 59",
+      "output": "True sentence: Vela14 has 59 gates.\nFalse sentence: Vela14 has 57 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-15",
+      "query": "Source table:\nName | Number of gates\nVela15 | 62",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela15\":\n\nTrue sentence: Vela15 has 62 gates.\nFalse sentence: Vela15 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-16",
+      "query": "Source table:\nName | Number of gates\nVela16 | 65",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela16\":\n\nTrue sentence: Vela16 has 65 gates.\nFalse sentence: Vela16 has 100 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-17",
+      "query": "Source table:\nName | Number of gates\nVela17 | 68",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela17\":\n\nTrue sentence: Vela17 has 68 gates.\nFalse sentence: Vela17 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-18",
+      "query": "Source table:\nName | Number of gates\nVela18 | 71",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela18\":\n\nTrue sentence: Vela18 has 71 gates.\nFalse sentence: Vela18 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-19",
+      "query": "Source table:\nName | Number of gates\nVela19 | 74",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela19\":\n\nTrue sentence: Vela19 has 74 gates.\nFalse sentence: Vela19 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-20",
+      "query": "Source table:\nName | Number of gates\nVela20 | 77",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela20\":\n\nTrue sentence: Vela20 has 77 gates.\nFalse sentence: Vela20 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-21",
+      "query": "Source table:\nName | Number of gates\nVela21 | 80",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela21\":\n\nTrue sentence: Vela21 has 80 gates.\nFalse sentence: Vela21 has 100 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-22",
+      "query": "Source table:\nName | Number of gates\nVela22 | 83",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela22\":\n\nTrue sentence: Vela22 has 83 gates.\nFalse sentence: Vela22 has 100 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-23",
+      "query": "Source table:\nName | Number of gates\nVela23 | 86",
+      "output": "True sentence: The entity Vela23 has 86 gates.\nFalse sentence: The entity Vela23 has more than 100 gates.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "48-24",
+      "query": "Source table:\nName | Number of gates\nVela24 | 89",
+      "output": "True sentence: The table contains information about the entity Vela24.\nFalse sentence: Vela24 has more than 100 gates.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "48-25",
+      "query": "Source table:\nName | Number of gates\nVela25 | 92",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela25\":\n\nTrue sentence: Vela25 has 92 gates.\nFalse sentence: Vela25 has more than 100 gates.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "48-26",
+      "query": "Source table:\nName | Number of gates\nVela26 | 95",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela26\":\n\nTrue sentence: Vela26 has 95 gates.\nFalse sentence: Vela26 has 100 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-27",
+      "query": "Source table:\nName | Number of gates\nVela27 | 98",
+      "output": "True sentence: The table contains information about the entity Vela27.\nFalse sentence: Vela27 has more than 100 gates.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "48-28",
+      "query": "Source table:\nName | Number of gates\nVela28 | 101",
+      "output": "True sentence: The Vela28 has 101 gates.\nFalse sentence: The Vela28 has 0 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "48-29",
+      "query": "Source table:\nName | Number of gates\nVela29 | 104",
+      "output": "Based on the given table, here are a true sentence and a false sentence about the entity \"Vela29\":\n\nTrue sentence: Vela29 has 104 gates.\nFalse sentence: Vela29 has 100 gates.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

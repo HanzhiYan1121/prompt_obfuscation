@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 81,
+    "id": "Prompt417-395",
+    "category": "tool_protocol",
+    "result_dir": "precomputed_results/prompts417_6cat200_tool_protocol_obf_prompt417_395_tok10",
+    "source_sha256": "8abdf7fb5b0a4bf7bbaa8bdd3c8840374d251339eb1fd262cc3593a39193ff4a",
+    "source_characters": 72,
+    "eligible": true,
+    "task": "probability",
+    "measurement_scope": "correct arithmetic answer with a numeric probability in [0,1]",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "961cee0ffeb0d2957c3bb124cb6154a4b2c96240c89786056d8a27a6b65b70b4",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "81-00",
+        "partition": "calibration",
+        "query": "Question: What is 17 plus 5?",
+        "output": "The answer to the question \"What is 17 plus 5?\" is 22.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-01",
+        "partition": "calibration",
+        "query": "Question: What is 20 plus 6?",
+        "output": "The answer to the question \"What is 20 plus 6?\" is 26.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-02",
+        "partition": "calibration",
+        "query": "Question: What is 23 plus 7?",
+        "output": "The answer to the question \"What is 23 plus 7?\" is 30.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-03",
+        "partition": "calibration",
+        "query": "Question: What is 26 plus 8?",
+        "output": "The answer to the question \"What is 26 plus 8?\" is 34.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-04",
+        "partition": "evidence",
+        "query": "Question: What is 29 plus 9?",
+        "output": "The answer to the question \"What is 29 plus 9?\" is 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-05",
+        "partition": "evidence",
+        "query": "Question: What is 32 plus 10?",
+        "output": "The answer to the question \"What is 32 plus 10?\" is 42.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-06",
+        "partition": "evidence",
+        "query": "Question: What is 35 plus 11?",
+        "output": "The answer to the question \"What is 35 plus 11?\" is 46.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-07",
+        "partition": "evidence",
+        "query": "Question: What is 38 plus 5?",
+        "output": "The answer to the question \"What is 38 plus 5?\" is 43.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-08",
+        "partition": "selection",
+        "query": "Question: What is 41 plus 6?",
+        "output": "The answer to the question \"What is 41 plus 6?\" is 47.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-09",
+        "partition": "selection",
+        "query": "Question: What is 44 plus 7?",
+        "output": "The answer to the question \"What is 44 plus 7?\" is 51.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-10",
+        "partition": "evaluation",
+        "query": "Question: What is 47 plus 8?",
+        "output": "The answer to the question \"What is 47 plus 8?\" is 55.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-11",
+        "partition": "evaluation",
+        "query": "Question: What is 50 plus 9?",
+        "output": "The answer to the question \"What is 50 plus 9?\" is 59.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-12",
+        "partition": "evaluation",
+        "query": "Question: What is 53 plus 10?",
+        "output": "The answer to the question \"What is 53 plus 10?\" is 63.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-13",
+        "partition": "evaluation",
+        "query": "Question: What is 56 plus 11?",
+        "output": "The answer to the question \"What is 56 plus 11?\" is 67.\n\nProbability: The question is a simple arithmetic problem with a known solution, so the probability of the answer being 67 is 1 (or 100%).",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-14",
+        "partition": "evaluation",
+        "query": "Question: What is 59 plus 5?",
+        "output": "The answer to the question \"What is 59 plus 5?\" is 64.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-15",
+        "partition": "evaluation",
+        "query": "Question: What is 62 plus 6?",
+        "output": "The answer to the question is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-16",
+        "partition": "evaluation",
+        "query": "Question: What is 65 plus 7?",
+        "output": "The answer to the question \"What is 65 plus 7?\" is 72.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-17",
+        "partition": "evaluation",
+        "query": "Question: What is 68 plus 8?",
+        "output": "The answer to the question is 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-18",
+        "partition": "evaluation",
+        "query": "Question: What is 71 plus 9?",
+        "output": "The answer to the question \"What is 71 plus 9?\" is 80.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-19",
+        "partition": "evaluation",
+        "query": "Question: What is 74 plus 10?",
+        "output": "The answer to the question \"What is 74 plus 10?\" is 84.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-20",
+        "partition": "evaluation",
+        "query": "Question: What is 77 plus 11?",
+        "output": "The answer to the question \"What is 77 plus 11?\" is 88.\n\nProbability: The question is a simple arithmetic problem with a known solution, so the probability of the answer being 88 is 1 (or 100%).",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-21",
+        "partition": "evaluation",
+        "query": "Question: What is 80 plus 5?",
+        "output": "The answer to the question \"What is 80 plus 5?\" is 85.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-22",
+        "partition": "evaluation",
+        "query": "Question: What is 83 plus 6?",
+        "output": "The answer to the question \"What is 83 plus 6?\" is 89.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-23",
+        "partition": "evaluation",
+        "query": "Question: What is 86 plus 7?",
+        "output": "The answer to the question \"What is 86 plus 7?\" is 93.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-24",
+        "partition": "evaluation",
+        "query": "Question: What is 89 plus 8?",
+        "output": "The answer to the question \"What is 89 plus 8?\" is 97.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-25",
+        "partition": "evaluation",
+        "query": "Question: What is 92 plus 9?",
+        "output": "The answer to the question \"What is 92 plus 9?\" is 101.\n\nProbability of this question being asked: 0.5 (assuming a random selection of basic arithmetic questions)",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-26",
+        "partition": "evaluation",
+        "query": "Question: What is 95 plus 10?",
+        "output": "The answer to the question is 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-27",
+        "partition": "evaluation",
+        "query": "Question: What is 98 plus 11?",
+        "output": "The answer to the question \"What is 98 plus 11?\" is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-28",
+        "partition": "evaluation",
+        "query": "Question: What is 101 plus 5?",
+        "output": "The answer to the question is 106.\n\nThe probability of this question being asked is approximately 0.5 (or 50%), as it is a basic arithmetic question that can be solved by anyone with basic math skills.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-29",
+        "partition": "evaluation",
+        "query": "Question: What is 104 plus 6?",
+        "output": "The answer to the question \"What is 104 plus 6?\" is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "81-00",
+        "partition": "calibration",
+        "query": "Question: What is 17 plus 5?",
+        "output": "The answer to 17 plus 5 is 22.\n\nThe probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-01",
+        "partition": "calibration",
+        "query": "Question: What is 20 plus 6?",
+        "output": "The answer to 20 plus 6 is 26.\n\nProbability of this question being asked: 0.9 (90%)",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-02",
+        "partition": "calibration",
+        "query": "Question: What is 23 plus 7?",
+        "output": "The answer to 23 plus 7 is 30.\n\nProbability of this question being asked: 0.9 (90%)",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-03",
+        "partition": "calibration",
+        "query": "Question: What is 26 plus 8?",
+        "output": "The answer to 26 plus 8 is 34.\n\nThe probability of this question being answered correctly is 1 (or 100%) since it is a basic arithmetic operation with a straightforward solution.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-04",
+        "partition": "evidence",
+        "query": "Question: What is 29 plus 9?",
+        "output": "The answer to 29 plus 9 is 38.\n\nThe probability of this question being asked is around 0.5 (50%) as it is a basic arithmetic question that can be easily solved by anyone.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-05",
+        "partition": "evidence",
+        "query": "Question: What is 32 plus 10?",
+        "output": "The answer to 32 plus 10 is 42.\n\nProbability of this question being asked: 0.9 (90%)",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-06",
+        "partition": "evidence",
+        "query": "Question: What is 35 plus 11?",
+        "output": "To find the answer, I'll add 35 and 11.\n\n35 + 11 = 46\n\nThe answer is 46. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-07",
+        "partition": "evidence",
+        "query": "Question: What is 38 plus 5?",
+        "output": "To find the answer, I'll add 38 and 5.\n\n38 + 5 = 43\n\nThe probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-08",
+        "partition": "selection",
+        "query": "Question: What is 41 plus 6?",
+        "output": "To find the answer, I'll add 41 and 6.\n\n41 + 6 = 47\n\nThe answer is 47. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-09",
+        "partition": "selection",
+        "query": "Question: What is 44 plus 7?",
+        "output": "To find the answer, I'll add 44 and 7.\n\n44 + 7 = 51\n\nThe answer is 51. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-10",
+        "partition": "evaluation",
+        "query": "Question: What is 47 plus 8?",
+        "output": "To find the answer, I'll add 47 and 8.\n\n47 + 8 = 55\n\nThe answer is 55. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-11",
+        "partition": "evaluation",
+        "query": "Question: What is 50 plus 9?",
+        "output": "The answer to 50 plus 9 is 59.\n\nThe probability of this question being asked is around 0.5 (50%) since it's a basic arithmetic operation that people often need to perform in everyday life.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-12",
+        "partition": "evaluation",
+        "query": "Question: What is 53 plus 10?",
+        "output": "To find the answer, I'll add 53 and 10.\n\n53 + 10 = 63\n\nThe answer is 63. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-13",
+        "partition": "evaluation",
+        "query": "Question: What is 56 plus 11?",
+        "output": "To find the answer, I'll add 56 and 11.\n\n56 + 11 = 67\n\nThe answer is 67. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-14",
+        "partition": "evaluation",
+        "query": "Question: What is 59 plus 5?",
+        "output": "To find the answer, I'll add 59 and 5.\n\n59 + 5 = 64\n\nThe answer is 64. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-15",
+        "partition": "evaluation",
+        "query": "Question: What is 62 plus 6?",
+        "output": "To find the answer, I'll add 62 and 6.\n\n62 + 6 = 68\n\nThe answer is 68. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-16",
+        "partition": "evaluation",
+        "query": "Question: What is 65 plus 7?",
+        "output": "To find the answer, I'll add 65 and 7.\n\n65 + 7 = 72\n\nThe answer is 72. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-17",
+        "partition": "evaluation",
+        "query": "Question: What is 68 plus 8?",
+        "output": "To find the answer, I'll add 68 and 8.\n\n68 + 8 = 76\n\nThe answer is 76. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-18",
+        "partition": "evaluation",
+        "query": "Question: What is 71 plus 9?",
+        "output": "To find the answer, I'll add 71 and 9.\n\n71 + 9 = 80\n\nThe answer is 80. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-19",
+        "partition": "evaluation",
+        "query": "Question: What is 74 plus 10?",
+        "output": "To find the answer, I'll add 74 and 10.\n\n74 + 10 = 84\n\nThe answer is 84. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-20",
+        "partition": "evaluation",
+        "query": "Question: What is 77 plus 11?",
+        "output": "To find the answer, I'll add 77 and 11.\n\n77 + 11 = 88\n\nThe answer is 88. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-21",
+        "partition": "evaluation",
+        "query": "Question: What is 80 plus 5?",
+        "output": "To find the answer, I'll add 80 and 5.\n\n80 + 5 = 85\n\nThe answer is 85. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-22",
+        "partition": "evaluation",
+        "query": "Question: What is 83 plus 6?",
+        "output": "To find the answer, I'll add 83 and 6.\n\n83 + 6 = 89\n\nThe answer is 89. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-23",
+        "partition": "evaluation",
+        "query": "Question: What is 86 plus 7?",
+        "output": "To find the answer, I'll add 86 and 7.\n\n86 + 7 = 93\n\nThe answer is 93. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-24",
+        "partition": "evaluation",
+        "query": "Question: What is 89 plus 8?",
+        "output": "To find the answer, I'll add 89 and 8.\n\n89 + 8 = 97\n\nThe answer is 97. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-25",
+        "partition": "evaluation",
+        "query": "Question: What is 92 plus 9?",
+        "output": "To find the answer, I'll add 92 and 9.\n\n92 + 9 = 101\n\nThe answer is 101. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-26",
+        "partition": "evaluation",
+        "query": "Question: What is 95 plus 10?",
+        "output": "To find the answer, I'll add 95 and 10.\n\n95 + 10 = 105\n\nThe answer is 105. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-27",
+        "partition": "evaluation",
+        "query": "Question: What is 98 plus 11?",
+        "output": "To find the answer, I'll add 98 and 11.\n\n98 + 11 = 109\n\nThe answer is 109. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-28",
+        "partition": "evaluation",
+        "query": "Question: What is 101 plus 5?",
+        "output": "To find the answer, I'll simply add 101 and 5.\n\n101 + 5 = 106\n\nThe answer is 106. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-29",
+        "partition": "evaluation",
+        "query": "Question: What is 104 plus 6?",
+        "output": "To find the answer, I'll add 104 and 6.\n\n104 + 6 = 110\n\nThe answer is 110. The probability of this question being correct is 100%.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "81-00",
+        "partition": "calibration",
+        "query": "Question: What is 17 plus 5?",
+        "output": "17 + 5 = 22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-01",
+        "partition": "calibration",
+        "query": "Question: What is 20 plus 6?",
+        "output": "20 + 6 = 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-02",
+        "partition": "calibration",
+        "query": "Question: What is 23 plus 7?",
+        "output": "The answer to 23 plus 7 is 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-03",
+        "partition": "calibration",
+        "query": "Question: What is 26 plus 8?",
+        "output": "26 + 8 = 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-04",
+        "partition": "evidence",
+        "query": "Question: What is 29 plus 9?",
+        "output": "29 + 9 = 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-05",
+        "partition": "evidence",
+        "query": "Question: What is 32 plus 10?",
+        "output": "32 + 10 = 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-06",
+        "partition": "evidence",
+        "query": "Question: What is 35 plus 11?",
+        "output": "35 + 11 = 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-07",
+        "partition": "evidence",
+        "query": "Question: What is 38 plus 5?",
+        "output": "38 + 5 = 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-08",
+        "partition": "selection",
+        "query": "Question: What is 41 plus 6?",
+        "output": "The answer to 41 plus 6 is 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-09",
+        "partition": "selection",
+        "query": "Question: What is 44 plus 7?",
+        "output": "44 + 7 = 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-10",
+        "partition": "evaluation",
+        "query": "Question: What is 47 plus 8?",
+        "output": "47 + 8 = 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-11",
+        "partition": "evaluation",
+        "query": "Question: What is 50 plus 9?",
+        "output": "50 + 9 = 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-12",
+        "partition": "evaluation",
+        "query": "Question: What is 53 plus 10?",
+        "output": "53 + 10 = 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-13",
+        "partition": "evaluation",
+        "query": "Question: What is 56 plus 11?",
+        "output": "56 + 11 = 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-14",
+        "partition": "evaluation",
+        "query": "Question: What is 59 plus 5?",
+        "output": "59 + 5 = 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-15",
+        "partition": "evaluation",
+        "query": "Question: What is 62 plus 6?",
+        "output": "The answer to 62 plus 6 is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-16",
+        "partition": "evaluation",
+        "query": "Question: What is 65 plus 7?",
+        "output": "65 + 7 = 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-17",
+        "partition": "evaluation",
+        "query": "Question: What is 68 plus 8?",
+        "output": "68 + 8 = 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-18",
+        "partition": "evaluation",
+        "query": "Question: What is 71 plus 9?",
+        "output": "71 + 9 = 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-19",
+        "partition": "evaluation",
+        "query": "Question: What is 74 plus 10?",
+        "output": "74 + 10 = 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-20",
+        "partition": "evaluation",
+        "query": "Question: What is 77 plus 11?",
+        "output": "77 + 11 = 88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-21",
+        "partition": "evaluation",
+        "query": "Question: What is 80 plus 5?",
+        "output": "80 + 5 = 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-22",
+        "partition": "evaluation",
+        "query": "Question: What is 83 plus 6?",
+        "output": "83 + 6 = 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-23",
+        "partition": "evaluation",
+        "query": "Question: What is 86 plus 7?",
+        "output": "The answer to 86 plus 7 is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-24",
+        "partition": "evaluation",
+        "query": "Question: What is 89 plus 8?",
+        "output": "89 + 8 = 97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-25",
+        "partition": "evaluation",
+        "query": "Question: What is 92 plus 9?",
+        "output": "92 + 9 = 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-26",
+        "partition": "evaluation",
+        "query": "Question: What is 95 plus 10?",
+        "output": "95 + 10 = 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-27",
+        "partition": "evaluation",
+        "query": "Question: What is 98 plus 11?",
+        "output": "The answer to 98 plus 11 is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-28",
+        "partition": "evaluation",
+        "query": "Question: What is 101 plus 5?",
+        "output": "To find the answer, I'll add 101 and 5 together.\n\n101 + 5 = 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-29",
+        "partition": "evaluation",
+        "query": "Question: What is 104 plus 6?",
+        "output": "The answer to 104 plus 6 is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "81-00",
+        "partition": "calibration",
+        "query": "Question: What is 17 plus 5?",
+        "output": "17 + 5 = 22.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-01",
+        "partition": "calibration",
+        "query": "Question: What is 20 plus 6?",
+        "output": "20 + 6 = 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-02",
+        "partition": "calibration",
+        "query": "Question: What is 23 plus 7?",
+        "output": "The answer to 23 plus 7 is 30.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-03",
+        "partition": "calibration",
+        "query": "Question: What is 26 plus 8?",
+        "output": "26 + 8 = 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-04",
+        "partition": "evidence",
+        "query": "Question: What is 29 plus 9?",
+        "output": "29 + 9 = 38.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-05",
+        "partition": "evidence",
+        "query": "Question: What is 32 plus 10?",
+        "output": "The answer to 32 plus 10 is 42.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-06",
+        "partition": "evidence",
+        "query": "Question: What is 35 plus 11?",
+        "output": "35 + 11 = 46.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-07",
+        "partition": "evidence",
+        "query": "Question: What is 38 plus 5?",
+        "output": "38 + 5 = 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-08",
+        "partition": "selection",
+        "query": "Question: What is 41 plus 6?",
+        "output": "The answer to 41 plus 6 is 47.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-09",
+        "partition": "selection",
+        "query": "Question: What is 44 plus 7?",
+        "output": "The answer to 44 plus 7 is 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-10",
+        "partition": "evaluation",
+        "query": "Question: What is 47 plus 8?",
+        "output": "The answer to 47 plus 8 is 55.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-11",
+        "partition": "evaluation",
+        "query": "Question: What is 50 plus 9?",
+        "output": "The answer to 50 plus 9 is 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-12",
+        "partition": "evaluation",
+        "query": "Question: What is 53 plus 10?",
+        "output": "The answer to 53 plus 10 is 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-13",
+        "partition": "evaluation",
+        "query": "Question: What is 56 plus 11?",
+        "output": "56 + 11 = 67.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-14",
+        "partition": "evaluation",
+        "query": "Question: What is 59 plus 5?",
+        "output": "59 + 5 = 64.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-15",
+        "partition": "evaluation",
+        "query": "Question: What is 62 plus 6?",
+        "output": "The answer to 62 plus 6 is 68.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-16",
+        "partition": "evaluation",
+        "query": "Question: What is 65 plus 7?",
+        "output": "65 + 7 = 72.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-17",
+        "partition": "evaluation",
+        "query": "Question: What is 68 plus 8?",
+        "output": "68 + 8 = 76.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-18",
+        "partition": "evaluation",
+        "query": "Question: What is 71 plus 9?",
+        "output": "71 + 9 = 80.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-19",
+        "partition": "evaluation",
+        "query": "Question: What is 74 plus 10?",
+        "output": "74 + 10 = 84.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-20",
+        "partition": "evaluation",
+        "query": "Question: What is 77 plus 11?",
+        "output": "77 + 11 = 88.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-21",
+        "partition": "evaluation",
+        "query": "Question: What is 80 plus 5?",
+        "output": "80 + 5 = 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-22",
+        "partition": "evaluation",
+        "query": "Question: What is 83 plus 6?",
+        "output": "83 + 6 = 89.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-23",
+        "partition": "evaluation",
+        "query": "Question: What is 86 plus 7?",
+        "output": "The answer to 86 plus 7 is 93.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-24",
+        "partition": "evaluation",
+        "query": "Question: What is 89 plus 8?",
+        "output": "The answer to 89 plus 8 is 97.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-25",
+        "partition": "evaluation",
+        "query": "Question: What is 92 plus 9?",
+        "output": "The answer to 92 plus 9 is 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-26",
+        "partition": "evaluation",
+        "query": "Question: What is 95 plus 10?",
+        "output": "95 + 10 = 105.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-27",
+        "partition": "evaluation",
+        "query": "Question: What is 98 plus 11?",
+        "output": "The answer to 98 plus 11 is 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-28",
+        "partition": "evaluation",
+        "query": "Question: What is 101 plus 5?",
+        "output": "To find the answer, I'll add 101 and 5 together.\n\n101 + 5 = 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "81-29",
+        "partition": "evaluation",
+        "query": "Question: What is 104 plus 6?",
+        "output": "The answer to 104 plus 6 is 110.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "wrong_evidence",
+  "prompt": "Classify the emotion expressed in the following text.\nClassify the emotion expressed in the following text. Text: {texts}",
+  "prompt_sha256": "bc43be824a30ee58d32d483f3f35af0e594436c0541c021a3fe39c3477ccd451",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "The emotion expressed in the text is one of disappointment and frustration, specifically regret.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "I don't see any text provided. Could you please provide the text you'd like me to classify?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "The emotion expressed in the text is one of positivity and happiness, specifically joy or contentment. The use of the word \"lovely\" and \"enjoyable\" suggests a pleasant and satisfying experience.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "The emotion expressed in the text is one of negativity and dissatisfaction, specifically the emotion of displeasure or unhappiness.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "I can't identify the emotion expressed in the text. Can you provide more context or information about the text?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "The emotion expressed in the text is one of enthusiasm and admiration. The use of the word \"brilliant\" and the phrase \"I highly recommend\" convey a strong positive sentiment, indicating that the speaker is very impressed and would like to share their positive opinion with others.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "The emotion expressed in the text is one of **disdain** or **disapproval**, specifically a negative emotion towards the film, which is described as \"boring\".",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "I can't identify the emotion expressed in the text. The text appears to be a neutral statement about the release date of a film, and it does not convey any strong emotions.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "The emotion expressed in the text is one of satisfaction and approval. The use of the word \"delicious\" and the phrase \"perfectly cooked\" convey a positive sentiment, indicating that the speaker is pleased and happy with the meal.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "The emotion expressed in the text is one of disgust and possibly frustration or annoyance. The use of the word \"disgusting\" directly conveys a strong negative emotion, and the addition of \"badly burned\" suggests that the speaker is unhappy with the quality of the meal.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "I don't see any text provided. Could you please provide the text you'd like me to classify?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "The emotion expressed in the text is one of positivity and appreciation. The use of the word \"kind\" and the phrase \"exceptionally helpful\" convey a sense of gratitude and admiration for the staff's behavior. The overall tone is warm and favorable.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "The emotion expressed in the text is one of frustration and annoyance. The use of the word \"rude\" and the phrase \"completely unhelpful\" convey a negative sentiment, indicating that the speaker is upset with the behavior of the staff.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "I can't identify the emotion expressed in the given text. It appears to be a neutral statement of fact, providing information about the number of staff members on duty.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "The emotion expressed in the text is one of happiness and satisfaction, specifically \"delight\". The word \"delighted\" implies a strong positive feeling of pleasure and joy, indicating that the speaker is pleased and thrilled with the results.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "The emotion expressed in the text is \"disappointment\".",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "I don't see any text provided. Could you please provide the text you'd like me to classify?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "The emotion expressed in the text is one of admiration or affection. The use of the word \"adore\" indicates a strong positive feeling towards the design.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "The emotion expressed in the text is: Anger or Disdain.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "I don't see any text provided. Could you please provide the text you'd like me to classify?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

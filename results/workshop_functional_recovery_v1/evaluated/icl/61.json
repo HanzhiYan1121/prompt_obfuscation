@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-293",
+  "task": "sentiment_suite",
+  "method": "icl",
+  "prompt": "Perform the same task and follow the response conventions demonstrated below. Apply the inferred rules to the new user input.\n\nUser input:\nSST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4\nResponse:\nIt seems like you're providing a review or an assessment of a performance or a product, but it's not clear what the performance or product is. Could you provide more context or clarify what you're referring to?\n\nUser input:\nSST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5\nResponse:\nIt seems like you're providing a review of a performance, likely a sports or entertainment event, and a record of a player or team, possibly in a sports context. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the performance and the record? For example:\n\n* What type of event was it (e.g., basketball, football, concert)?\n* Who or what was being reviewed (e.g., a team, a player, a musician)?\n* What specifically was disappointing about the performance?\n* What was the record being referred to (e.g., a score, a ranking, a personal best)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.\n\nUser input:\nSST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6\nResponse:\nIt seems like you're providing a review and a product code. However, I'm a large language model, I don't have any information about a product with the code \"Nera6\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nUser input:\nSST2\nReview: I regret buying this useless product.\nRecord: Nera7\nResponse:\nIt seems like you're providing a review of a product, but it's not clear what the product is. However, I can help you structure your review in a standard format.\n\n**Product Review**\n\n**Product Name:** [Insert product name]\n**Rating:** [Insert rating, e.g., 1/5]\n\n**Review:**\n\nI regret buying this [insert product type, e.g., useless] product. The [insert feature or aspect] is not as advertised, and the [insert feature or aspect] is not functional. The [insert feature or aspect] is also not as expected.\n\n**Record:** Nera7 (or any other relevant information)\n\nIf you'd like to provide more details about the product, I can help you expand on this review.",
+  "prompt_sha256": "e9cca0d00d9342b5b668b2b57b5f8ea3b94efe38baab98fcd59e575cf4151618",
+  "benchmark_sha256": "4b18424f5b873870f9919162f41866322a4075702ebfb667cf05448cb189c710",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "61-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "It seems like you're providing a review of a film, likely a movie, and a record of a rating or a code. However, I'm a large language model, I don't have any information about a record with the code \"Nera10\" or the film \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to provide more details about the film, I can help you structure your review in a standard format.\n\n**Film Review**\n\n**Film Title:** [Insert film title]\n**Rating:** [Insert rating, e.g., 5/5]\n\n**Review:**\n\nI highly recommend this brilliant film. The [insert aspect, e.g., storyline, acting, direction] is exceptional, and the [insert aspect, e.g., cinematography, sound design] is also noteworthy. The [insert aspect, e.g., plot twist, character development] is engaging and keeps the viewer interested.\n\n**Record:** Nera10 (or any other relevant information)\n\nIf you'd like to provide more details about the film, I can help you expand on this review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "It seems like you're providing a review of a film, likely a movie, and a record of some sort. However, I'm a large language model, I don't have any information about a record with the code \"Nera11\" or the film \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to provide more details about the film, I can help you structure your review in a standard format.\n\n**Movie Review**\n\n**Movie Title:** [Insert movie title]\n**Rating:** [Insert rating, e.g., 1/5]\n\n**Review:**\n\nI strongly dislike this boring film. The [insert aspect, e.g., plot, acting, direction] is not engaging, and the [insert aspect, e.g., pacing, special effects] is not impressive. The [insert aspect, e.g., characters, dialogue] is also not well-developed.\n\n**Record:** Nera11 (or any other relevant information)\n\nIf you'd like to provide more details about the film, I can help you expand on this review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "It seems like you're providing a review of a meal, likely from a restaurant or a food establishment. However, I'm a large language model, I don't have any information about a specific restaurant or establishment with the code \"Nera12\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to share more details, I can help you structure your review in a standard format.\n\n**Food Review**\n\n**Restaurant/Establishment:** [Insert name of the restaurant or establishment]\n**Dish:** [Insert name of the dish or meal]\n**Rating:** [Insert rating, e.g., 5/5]\n\n**Review:**\n\nThis meal was delicious and perfectly cooked. The [insert aspect, e.g., flavors, presentation] was [insert adjective, e.g., excellent]. The [insert aspect, e.g., service] was also [insert adjective, e.g., friendly].\n\n**Record:** Nera12 (or any other relevant information)\n\nIf you'd like to provide more details about the meal or the establishment, I can help you expand on this review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "It seems like you're providing a review of a meal, likely from a restaurant or a food establishment, and a record of the order or the kitchen's performance. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the experience? For example:\n\n* Where did you have the meal (e.g., a specific restaurant, a food truck, a catering event)?\n* What type of cuisine was it (e.g., Italian, Chinese, American)?\n* What specifically was wrong with the meal (e.g., undercooked, overcooked, incorrect order)?\n* Was the service also poor, or was it just the food that was a problem?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "It seems like you're providing a review of a service or an establishment, likely a business or a store, and a record of a customer interaction or a transaction. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the experience? For example:\n\n* What type of business or establishment was it (e.g., restaurant, store, hotel)?\n* What specifically made the staff stand out as kind and helpful?\n* Was there anything else notable about the experience that you'd like to mention?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "It seems like you're providing a review of a service or an experience, likely related to a customer service interaction. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the experience? For example:\n\n* Where did you encounter the staff (e.g., a store, a restaurant, a hotel)?\n* What type of service were you trying to receive (e.g., customer support, a reservation, a purchase)?\n* What specifically did the staff do that you found rude or unhelpful?\n* Was there anything that the staff did well or that you appreciated?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "It seems like you're providing a review and a record, but it's not clear what the review is about or what the record refers to. Could you please provide more context or clarify what you're referring to?\n\nFor example, what kind of results are you referring to? Are they academic, athletic, or something else? And what does the record \"Nera16\" represent? Is it a score, a ranking, a personal best, or something else?\n\nWith more information, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "It seems like you're providing a review of a product or a service, likely related to a sports or academic context, given the mention of \"SST2\" and \"Nera17\". However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the results and the context? For example:\n\n* What type of event or activity was it (e.g., a sports competition, a quiz, a test)?\n* What specifically was disappointing about the results?\n* Was this a personal or team performance?\n* What was the SST2 (e.g., a score, a ranking, a grade)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "It seems like you're providing a review of a product, likely a design or a product with a unique aesthetic appeal. However, I'm a large language model, I don't have any information about a product with the code \"Nera18\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to provide more details about the product, I can try to help you structure your review in a standard format.\n\n**Product Review**\n\n**Product Name:** [Insert product name]\n**Rating:** [Insert rating, e.g., 5/5]\n\n**Review:**\n\nA beautiful design that I really adore. The [insert feature or aspect] is particularly striking, and the [insert feature or aspect] is well-executed. Overall, I'm very pleased with this [insert product type].\n\n**Record:** Nera18 (or any other relevant information)\n\nIf you'd like to provide more details about the product, I can help you expand on this review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "It seems like you're providing a review of a product, likely a physical item such as a product, a building, or a design. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the product or design being reviewed? For example:\n\n* What type of product or design is it (e.g., furniture, architecture, graphic design)?\n* What specifically do you dislike about the design (e.g., color scheme, shape, functionality)?\n* Are there any specific features or aspects that you find particularly ugly or unappealing?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "It seems like you're providing a review and a product code. However, I'm a large language model, I don't have any information about a product with the code \"Nera20\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you're looking to share your positive experience, I'd be happy to help you structure your review in a standard format. Could you provide more details about the product or service you're reviewing? For example:\n\n* What type of product or service was it (e.g., a movie, a book, a restaurant, a software)?\n* What specifically did you love about it?\n* Would you recommend it to others?\n\nThis will help me provide a more accurate and helpful response.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "It seems like you're providing a review of an experience or an event, likely a sports or entertainment context, and a record of a player or team. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the experience and the record? For example:\n\n* What type of event was it (e.g., basketball, football, concert)?\n* Who or what was being reviewed (e.g., a team, a player, a musician)?\n* What specifically made it dreadful and a waste of time?\n* What was the record being referred to (e.g., a score, a ranking, a personal best)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "It seems like you're providing a review of a service, likely related to customer service or a business interaction, and a record of a unique identifier or code, possibly related to the service provider. However, I don't have any information about a service or product with the code \"Nera22\" or the code \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to provide more details about the service, I can help you structure your review in a standard format.\n\n**Service Review**\n\n**Service Name:** [Insert service name or description]\n**Rating:** [Insert rating, e.g., 5/5]\n\n**Review:**\n\nThe service was excellent and made me very happy. The [insert aspect or feature] was particularly impressive, and the [insert aspect or feature] exceeded my expectations.\n\n**Record:** Nera22 (or any other relevant information)\n\nIf you'd like to provide more details about the service, I can help you expand on this review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "It seems like you're providing a review of a service, likely a customer service or a business interaction, and a record of a customer service interaction or a complaint. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the service and the interaction? For example:\n\n* What type of service was it (e.g., phone support, in-person interaction, online chat)?\n* What specifically made you angry about the service?\n* Were there any specific issues or problems that arose during the interaction?\n* Did you contact the company or organization to report the issue, and if so, what was their response?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "It seems like you're providing a review of a performance, likely a sports or entertainment event, and a record of a player or team, possibly in a sports context. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the performance and the record? For example:\n\n* What type of event was it (e.g., basketball, football, concert)?\n* Who or what was being reviewed (e.g., a team, a player, a musician)?\n* What specifically made the performance outstanding and delightful?\n* What was the record being referred to (e.g., a score, a ranking, a personal best)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "It seems like you're providing a review of a performance, likely a sports or entertainment event, and a record of a player or team, possibly in a sports context. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the performance and the record? For example:\n\n* What type of event was it (e.g., basketball, football, concert)?\n* Who or what was being reviewed (e.g., a team, a player, a musician)?\n* What specifically was disappointing about the performance?\n* What was the record being referred to (e.g., a score, a ranking, a personal best)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "It seems like you're providing a review and a product code. However, I'm a large language model, I don't have any information about a product with the code \"Nera26\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you're looking to share your positive experience with others, I can help you structure your review in a standard format. Would you like some assistance with that?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "**Product Review**\n\n**Product Name:** SST2\n**Rating:** 1/5\n\n**Review:**\n\nI regret buying this useless product. The product's performance is not as advertised, and the features are not functional. The product's overall quality is also not as expected.\n\n**Record:** Nera27",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "It seems like you're providing a review and a product code. However, I'm a large language model, I don't have any information about a product with the code \"Nera28\" or the product \"SST2\". Could you please provide more context or clarify what you're referring to?\n\nIf you're looking to share a positive experience, I'd be happy to help you structure your review in a standard format. Could you provide more details about the experience, such as:\n\n* What type of experience was it (e.g., a concert, a meal, a vacation)?\n* What made it enjoyable?\n* Would you recommend it to others?\n\nThis will help me provide a more helpful response.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "It seems like you're providing a review of an experience, likely a service or an event, and a record of some sort. However, the information provided is quite limited and doesn't give much context.\n\nTo provide a more helpful response, could you please provide more details about the experience and the record? For example:\n\n* What type of experience was it (e.g., a concert, a flight, a medical procedure)?\n* What specifically made the experience miserable and unpleasant?\n* What was the record being referred to (e.g., a complaint, a review, a rating)?\n\nWith more context, I'd be happy to help you provide a more detailed and informative response.\n\nAlso, I noticed that you mentioned SST2 and Nera29. Could you please clarify what these abbreviations or codes represent? Are they related to the experience or the record you're referring to?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

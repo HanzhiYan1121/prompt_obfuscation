@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-183",
+  "task": "science_summary",
+  "method": "mismatch",
+  "prompt": "You must select one of the two candidates as the most incorrect.\nGiven a question and two candidate responses, identify which candidate is the most incorrect. You must select one of the two candidates as the most incorrect. Do not introduce new options. Output: The most incorrect candidate:\nOutput:\nYou must select one of the two candidates as the most incorrect. Do not introduce new options.\nGiven a question and two candidate responses, identify which candidate is the most incorrect. Question: {question} Candidate A: {response_a} Candidate B: {response_b}",
+  "prompt_sha256": "9872730b05db082fde4332491135236a3cd045df34cb08ed88e14330d71ef0d0",
+  "benchmark_sha256": "baa4870038d19b88e33e10fe61f332eb21020d0f69b4d890f6e456dbfe959379",
+  "mismatch_donor_id": "Prompt335-189",
+  "records": [
+    {
+      "case_id": "24-10",
+      "query": "Video transcript / visual notes: The Vela10 study tested whether cooling improves sensor stability. Researchers tested 47 sensors using method Nera10. Error fell by 8 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela10 study tested whether cooling improves sensor stability.\nCandidate A: The Vela10 study tested 47 sensors using method Nera10 and found a significant improvement in sensor stability.\nCandidate B: The Vela10 study tested 47 sensors using method Nera10 and found a small error reduction of 8 percent, but they concluded that cooling did not improve stability.\n\nThe most incorrect candidate is B. The original text states that the error fell by 8 percent, which implies that cooling did improve stability, contradicting candidate B's statement.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-11",
+      "query": "Video transcript / visual notes: The Vela11 study tested whether cooling improves sensor stability. Researchers tested 50 sensors using method Nera11. Error fell by 9 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela11 study tested whether cooling improves sensor stability.\nCandidate A: The Vela11 study tested 50 sensors using method Nera11 and found a 9 percent error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela11 study tested 50 sensors using method Nera11 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-12",
+      "query": "Video transcript / visual notes: The Vela12 study tested whether cooling improves sensor stability. Researchers tested 53 sensors using method Nera12. Error fell by 10 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela12 study tested whether cooling improves sensor stability.\nCandidate A: The Vela12 study tested 53 sensors using method Nera12 and found a 10% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela12 study tested 53 sensors using method Nera12 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-13",
+      "query": "Video transcript / visual notes: The Vela13 study tested whether cooling improves sensor stability. Researchers tested 56 sensors using method Nera13. Error fell by 11 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela13 study tested whether cooling improves sensor stability.\nCandidate A: The Vela13 study tested 56 sensors using method Nera13 and found a significant improvement in sensor stability.\nCandidate B: The Vela13 study tested 56 sensors using method Nera13 and found a small error reduction of 11 percent, but no significant improvement in sensor stability.\n\nThe most incorrect candidate is A.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-14",
+      "query": "Video transcript / visual notes: The Vela14 study tested whether cooling improves sensor stability. Researchers tested 59 sensors using method Nera14. Error fell by 5 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela14 study tested whether cooling improves sensor stability.\nCandidate A: The Vela14 study tested 59 sensors using method Nera14 and found a 5% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela14 study tested 59 sensors using method Nera14 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-15",
+      "query": "Video transcript / visual notes: The Vela15 study tested whether cooling improves sensor stability. Researchers tested 62 sensors using method Nera15. Error fell by 6 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela15 study tested whether cooling improves sensor stability.\nCandidate A: The Vela15 study tested 62 sensors using method Nera15 and found a 6% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela15 study tested 62 sensors using method Nera15 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-16",
+      "query": "Video transcript / visual notes: The Vela16 study tested whether cooling improves sensor stability. Researchers tested 65 sensors using method Nera16. Error fell by 7 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela16 study tested whether cooling improves sensor stability.\nCandidate A: The Vela16 study tested 65 sensors using method Nera16 and found a 7% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela16 study tested 65 sensors using method Nera16 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-17",
+      "query": "Video transcript / visual notes: The Vela17 study tested whether cooling improves sensor stability. Researchers tested 68 sensors using method Nera17. Error fell by 8 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela17 study tested whether cooling improves sensor stability.\nCandidate A: The Vela17 study tested 68 sensors using method Nera17 and found a significant improvement in sensor stability.\nCandidate B: The Vela17 study tested 68 sensors using method Nera17 and found a small error reduction of 8 percent, but concluded that cooling did not improve stability.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-18",
+      "query": "Video transcript / visual notes: The Vela18 study tested whether cooling improves sensor stability. Researchers tested 71 sensors using method Nera18. Error fell by 9 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela18 study tested whether cooling improves sensor stability.\nCandidate A: The Vela18 study tested 71 sensors using method Nera18 and found a 9 percent error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela18 study tested 71 sensors using method Nera18 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-19",
+      "query": "Video transcript / visual notes: The Vela19 study tested whether cooling improves sensor stability. Researchers tested 74 sensors using method Nera19. Error fell by 10 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela19 study tested whether cooling improves sensor stability.\nCandidate A: The Vela19 study tested 74 sensors using method Nera19 and found a 10% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela19 study tested 74 sensors using method Nera19 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-20",
+      "query": "Video transcript / visual notes: The Vela20 study tested whether cooling improves sensor stability. Researchers tested 77 sensors using method Nera20. Error fell by 11 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela20 study tested whether cooling improves sensor stability.\nCandidate A: The Vela20 study tested 77 sensors using method Nera20 and found a significant improvement in sensor stability.\nCandidate B: The Vela20 study tested 77 sensors using method Nera20 and found a small error reduction of 11 percent, but they concluded that cooling did not improve stability.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-21",
+      "query": "Video transcript / visual notes: The Vela21 study tested whether cooling improves sensor stability. Researchers tested 80 sensors using method Nera21. Error fell by 5 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela21 study tested whether cooling improves sensor stability.\nCandidate A: The Vela21 study tested 80 sensors using method Nera21 and found a 5% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela21 study tested 80 sensors using method Nera21 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-22",
+      "query": "Video transcript / visual notes: The Vela22 study tested whether cooling improves sensor stability. Researchers tested 83 sensors using method Nera22. Error fell by 6 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela22 study tested whether cooling improves sensor stability.\nCandidate A: The Vela22 study tested 83 sensors using method Nera22 and found a 6 percent error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela22 study tested 83 sensors using method Nera22 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-23",
+      "query": "Video transcript / visual notes: The Vela23 study tested whether cooling improves sensor stability. Researchers tested 86 sensors using method Nera23. Error fell by 7 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela23 study tested whether cooling improves sensor stability.\nCandidate A: The Vela23 study tested 86 sensors using method Nera23 and found a 7% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela23 study tested 86 sensors using method Nera23 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-24",
+      "query": "Video transcript / visual notes: The Vela24 study tested whether cooling improves sensor stability. Researchers tested 89 sensors using method Nera24. Error fell by 8 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela24 study tested whether cooling improves sensor stability.\nCandidate A: The Vela24 study tested 89 sensors using method Nera24 and found a significant improvement in sensor stability.\nCandidate B: The Vela24 study tested 89 sensors using method Nera24 and found a slight decrease in error by 8 percent, but they concluded that cooling did not improve stability.\n\nThe most incorrect candidate is B. The original text states that the error fell by 8 percent, which implies an improvement, and the researchers concluded that cooling improved stability. Candidate B contradicts this information.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-25",
+      "query": "Video transcript / visual notes: The Vela25 study tested whether cooling improves sensor stability. Researchers tested 92 sensors using method Nera25. Error fell by 9 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela25 study tested whether cooling improves sensor stability.\nCandidate A: The Vela25 study tested 92 sensors using method Nera25 and found a 9 percent error reduction, but the experiment's conclusion was inconclusive.\nCandidate B: The Vela25 study tested 92 sensors using method Nera25 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-26",
+      "query": "Video transcript / visual notes: The Vela26 study tested whether cooling improves sensor stability. Researchers tested 95 sensors using method Nera26. Error fell by 10 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela26 study tested whether cooling improves sensor stability.\nCandidate A: The Vela26 study tested 95 sensors using method Nera26 and found a 10% error reduction, but the experiment's conclusion was inconclusive.\nCandidate B: The Vela26 study tested 95 sensors using method Nera26 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B. The original text states that the experiment concluded that cooling improved stability, but candidate B's response implies that the conclusion was inconclusive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-27",
+      "query": "Video transcript / visual notes: The Vela27 study tested whether cooling improves sensor stability. Researchers tested 98 sensors using method Nera27. Error fell by 11 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela27 study tested whether cooling improves sensor stability.\nCandidate A: The Vela27 study tested 98 sensors using method Nera27 and found a significant improvement in sensor stability.\nCandidate B: The Vela27 study tested 98 sensors using method Nera27 and found a small error reduction of 11 percent, but they concluded that cooling did not improve stability.\n\nThe most incorrect candidate is B. The original text states that the error fell by 11 percent, which implies that cooling did improve stability, contradicting candidate B's statement.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-28",
+      "query": "Video transcript / visual notes: The Vela28 study tested whether cooling improves sensor stability. Researchers tested 101 sensors using method Nera28. Error fell by 5 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela28 study tested whether cooling improves sensor stability.\nCandidate A: The Vela28 study tested 101 sensors using method Nera28 and found a 5% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela28 study tested 101 sensors using method Nera28 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "24-29",
+      "query": "Video transcript / visual notes: The Vela29 study tested whether cooling improves sensor stability. Researchers tested 104 sensors using method Nera29. Error fell by 6 percent. They concluded cooling improved stability in this experiment.",
+      "output": "Given a question and two candidate responses, identify which candidate is the most incorrect.\n\nQuestion: The Vela29 study tested whether cooling improves sensor stability.\nCandidate A: The Vela29 study tested 104 sensors using method Nera29 and found a 6% error reduction, but the study did not conclude that cooling improved stability.\nCandidate B: The Vela29 study tested 104 sensors using method Nera29 and concluded that cooling improved stability in this experiment.\n\nThe most incorrect candidate is B.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

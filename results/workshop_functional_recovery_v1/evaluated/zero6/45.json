@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-080",
+  "task": "schema",
+  "method": "zero6",
+  "prompt": "JSON Schema Validator\nVerify if the provided Generated JSON matches the provided Schema and explain the validation result.\nText explanation starting with a verdict sentence, followed by a numbered list of reasons.\nCheck for required fields, data types (e.g., integer vs string), and additional properties. If valid, state it is valid. If invalid, state it does not match and provide specific reasons for failure.\nThe user provides a JSON Schema and a Generated JSON object. The system must validate the JSON against the schema.\nNone",
+  "prompt_sha256": "b01fba0fd354eb489745d4f449b81aa7d2f88627abc09ad025aa6af80010f337",
+  "benchmark_sha256": "b0679aa4f90adad69d1859c7829df94bd0e50d8451923964b09fde654da6c117",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "45-10",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count10\" which is of type \"integer\", matching the schema.\n3. The JSON object has all the required properties (\"count10\") as specified in the schema.\n4. The JSON object does not have any additional properties, which is allowed by the schema.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-11",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"50\") for the \"count11\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure in this case.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-12",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count12\", which is required in the schema.\n3. The value of \"count12\" is an integer (53), which matches the data type specified in the schema.\n4. There are no additional properties in the JSON object, which matches the \"additionalProperties\" setting in the schema.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-13",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"56\") for the \"count13\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure in this case.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-14",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count14\" which is of type \"integer\", matching the schema.\n3. The property \"count14\" is marked as required in the schema, and it exists in the JSON object, so it meets this requirement.\n4. The schema does not allow additional properties, and the JSON object does not have any additional properties, so this requirement is also met.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-15",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"62\") for the \"count15\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-16",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count16\" which is of type \"integer\", matching the schema.\n3. The property \"count16\" is marked as required in the schema, and it is present in the JSON object, so it meets this requirement.\n4. The schema does not allow additional properties, and the JSON object does not have any additional properties, so this requirement is also met.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-17",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"68\") for the \"count17\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-18",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count18\" which is of type \"integer\", matching the schema.\n3. The JSON object has all the required properties specified in the schema (\"count18\"), which is also a requirement.\n4. The JSON object does not have any additional properties, which is allowed by the schema.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-19",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"74\") for the \"count19\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-20",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count20\" which is of type \"integer\", matching the schema.\n3. The property \"count20\" is marked as required in the schema, and it exists in the JSON object, so it meets this requirement.\n4. The schema does not allow additional properties, and the JSON object does not have any additional properties, so this requirement is also met.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-21",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"80\") for the \"count21\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-22",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count22\", which is required by the schema.\n3. The value of \"count22\" is an integer, which matches the schema's data type for \"count22\".\n4. The JSON object does not have any additional properties, which matches the schema's \"additionalProperties\" setting.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-23",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"86\") for the \"count23\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-24",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count24\" which is of type \"integer\", matching the schema.\n3. The property \"count24\" is marked as required in the schema, and it is present in the JSON object, so it meets this requirement.\n4. The schema specifies that there should be no additional properties, and the JSON object does not have any additional properties, so this requirement is also met.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-25",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"92\") for the \"count25\" property, but the schema specifies that it should be an integer.\n2. The schema specifies that \"additionalProperties\" should be false, but the JSON object contains a property (\"count25\") that is not defined in the schema. However, this is not a failure in this case because \"count25\" is defined in the schema.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-26",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count26\" which is of type \"integer\", matching the schema.\n3. The JSON object has all the required properties (\"count26\") as specified in the schema.\n4. The JSON object does not have any additional properties, which is allowed by the schema.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-27",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"98\") for the \"count27\" property, but the schema specifies that it should be an integer.\n2. The schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. However, the JSON object does not have any additional properties, so this is not a reason for failure.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "45-28",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+      "output": "The JSON object is valid.\n\nHere are the reasons why:\n\n1. The JSON object is of type \"object\", which matches the schema.\n2. The JSON object has a property \"count28\" which is of type \"integer\", matching the schema.\n3. The JSON object has all the required properties (\"count28\") as specified in the schema.\n4. The JSON object does not have any additional properties, which matches the schema's \"additionalProperties\" setting.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-29",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+      "output": "The JSON does not match the schema.\n\nHere are the reasons for failure:\n\n1. The JSON object contains a string value (\"104\") for the \"count29\" property, but the schema specifies that it should be an integer.\n2. The schema specifies that \"additionalProperties\" should be false, but the JSON object contains additional properties (\"count29\") that are not defined in the schema.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

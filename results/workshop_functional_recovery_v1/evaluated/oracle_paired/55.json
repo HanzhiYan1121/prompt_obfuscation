@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-250",
+  "task": "fact_support",
+  "method": "oracle_paired",
+  "prompt": "For each key fact, find the corresponding line in the summary.\nOutput:\nFor each key fact, find the corresponding line in the summary.",
+  "prompt_sha256": "bcb6b53f9281345cee059d7b22bd052e4b5d47e11b83bde3ca8d8197de665be5",
+  "benchmark_sha256": "6b728be7fc2ecf88667470a860599a365bdbd27dbec95cbd87a1e2971a4914c4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "55-10",
+      "query": "Summary:\n[1] Nera10 owns 47 books.\n[2] Vela10 has 8 bridges.\n2 key facts:\nVela10 has 8 bridges.\nNera10 owns 48 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela10 has 8 bridges. - [2]\n2. Nera10 owns 48 books. - Not found (Note: The summary mentions Nera10 owns 47 books, not 48 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-11",
+      "query": "Summary:\n[1] Nera11 owns 50 books.\n[2] Vela11 has 9 bridges.\n2 key facts:\nVela11 has 9 bridges.\nNera11 owns 51 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela11 has 9 bridges. - [2]\n2. Nera11 owns 51 books. - Not found (Note: The summary mentions Nera11 owning 50 books, not 51 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-12",
+      "query": "Summary:\n[1] Nera12 owns 53 books.\n[2] Vela12 has 10 bridges.\n2 key facts:\nVela12 has 10 bridges.\nNera12 owns 54 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela12 has 10 bridges. - [2]\n2. Nera12 owns 54 books. - Not found (the correct fact is \"Nera12 owns 53 books\" in the summary)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-13",
+      "query": "Summary:\n[1] Nera13 owns 56 books.\n[2] Vela13 has 11 bridges.\n2 key facts:\nVela13 has 11 bridges.\nNera13 owns 57 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela13 has 11 bridges. - [2]\n2. Nera13 owns 57 books. - Not found (Note: The summary mentions Nera13 owning 56 books, not 57 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-14",
+      "query": "Summary:\n[1] Nera14 owns 59 books.\n[2] Vela14 has 5 bridges.\n2 key facts:\nVela14 has 5 bridges.\nNera14 owns 60 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela14 has 5 bridges. - [2]\n2. Nera14 owns 60 books. - Not found (Note: The summary mentions Nera14 owns 59 books, not 60 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-15",
+      "query": "Summary:\n[1] Nera15 owns 62 books.\n[2] Vela15 has 6 bridges.\n2 key facts:\nVela15 has 6 bridges.\nNera15 owns 63 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela15 has 6 bridges. - [2]\n2. Nera15 owns 63 books. - Not found (Note: The summary mentions Nera15 owning 62 books, not 63 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-16",
+      "query": "Summary:\n[1] Nera16 owns 65 books.\n[2] Vela16 has 7 bridges.\n2 key facts:\nVela16 has 7 bridges.\nNera16 owns 66 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela16 has 7 bridges. - [2]\n2. Nera16 owns 66 books. - Not found (Note: The summary states Nera16 owns 65 books, not 66 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-17",
+      "query": "Summary:\n[1] Nera17 owns 68 books.\n[2] Vela17 has 8 bridges.\n2 key facts:\nVela17 has 8 bridges.\nNera17 owns 69 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela17 has 8 bridges. - [2]\n2. Nera17 owns 69 books. - Not found (Note: The summary mentions Nera17 owning 68 books, not 69 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-18",
+      "query": "Summary:\n[1] Nera18 owns 71 books.\n[2] Vela18 has 9 bridges.\n2 key facts:\nVela18 has 9 bridges.\nNera18 owns 72 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela18 has 9 bridges. - [2]\n2. Nera18 owns 72 books. - Not found (Note: The summary mentions Nera18 owning 71 books, not 72 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-19",
+      "query": "Summary:\n[1] Nera19 owns 74 books.\n[2] Vela19 has 10 bridges.\n2 key facts:\nVela19 has 10 bridges.\nNera19 owns 75 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela19 has 10 bridges. - [2]\n2. Nera19 owns 75 books. - Not found (Note: The summary mentions Nera19 owns 74 books, not 75 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-20",
+      "query": "Summary:\n[1] Nera20 owns 77 books.\n[2] Vela20 has 11 bridges.\n2 key facts:\nVela20 has 11 bridges.\nNera20 owns 78 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela20 has 11 bridges. - [2]\n2. Nera20 owns 78 books. - Not found (Note: The summary mentions Nera20 owns 77 books, not 78 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-21",
+      "query": "Summary:\n[1] Nera21 owns 80 books.\n[2] Vela21 has 5 bridges.\n2 key facts:\nVela21 has 5 bridges.\nNera21 owns 81 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela21 has 5 bridges. - [2]\n2. Nera21 owns 81 books. - Not found (Note: The summary states Nera21 owns 80 books, not 81 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-22",
+      "query": "Summary:\n[1] Nera22 owns 83 books.\n[2] Vela22 has 6 bridges.\n2 key facts:\nVela22 has 6 bridges.\nNera22 owns 84 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela22 has 6 bridges. - [2]\n2. Nera22 owns 84 books. - Not found (Note: The summary mentions Nera22 owning 83 books, not 84 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-23",
+      "query": "Summary:\n[1] Nera23 owns 86 books.\n[2] Vela23 has 7 bridges.\n2 key facts:\nVela23 has 7 bridges.\nNera23 owns 87 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela23 has 7 bridges. - [2] Vela23 has 7 bridges.\n2. Nera23 owns 87 books. - No corresponding line in the summary (the summary states Nera23 owns 86 books).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-24",
+      "query": "Summary:\n[1] Nera24 owns 89 books.\n[2] Vela24 has 8 bridges.\n2 key facts:\nVela24 has 8 bridges.\nNera24 owns 90 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela24 has 8 bridges. - [2]\n2. Nera24 owns 90 books. - Not found (Note: The summary states Nera24 owns 89 books, not 90 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-25",
+      "query": "Summary:\n[1] Nera25 owns 92 books.\n[2] Vela25 has 9 bridges.\n2 key facts:\nVela25 has 9 bridges.\nNera25 owns 93 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela25 has 9 bridges. - [2]\n2. Nera25 owns 93 books. - Not found (the correct fact is Nera25 owns 92 books, [1])",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-26",
+      "query": "Summary:\n[1] Nera26 owns 95 books.\n[2] Vela26 has 10 bridges.\n2 key facts:\nVela26 has 10 bridges.\nNera26 owns 96 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela26 has 10 bridges. - [2]\n2. Nera26 owns 96 books. - Not found (Note: The summary mentions Nera26 owns 95 books, not 96 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-27",
+      "query": "Summary:\n[1] Nera27 owns 98 books.\n[2] Vela27 has 11 bridges.\n2 key facts:\nVela27 has 11 bridges.\nNera27 owns 99 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela27 has 11 bridges. - [2]\n2. Nera27 owns 99 books. - Not found (the correct fact is \"Nera27 owns 98 books.\")",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-28",
+      "query": "Summary:\n[1] Nera28 owns 101 books.\n[2] Vela28 has 5 bridges.\n2 key facts:\nVela28 has 5 bridges.\nNera28 owns 102 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela28 has 5 bridges. - [2]\n2. Nera28 owns 102 books. - Not found (Note: The summary states Nera28 owns 101 books, not 102 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-29",
+      "query": "Summary:\n[1] Nera29 owns 104 books.\n[2] Vela29 has 6 bridges.\n2 key facts:\nVela29 has 6 bridges.\nNera29 owns 105 books.",
+      "output": "For each key fact, find the corresponding line in the summary:\n\n1. Vela29 has 6 bridges. - [2]\n2. Nera29 owns 105 books. - Not found (Note: The summary mentions Nera29 owning 104 books, not 105 books)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-290",
+  "task": "assertions",
+  "method": "wrong_evidence",
+  "prompt": "Instruction: You have been given a list of 20 questions that were previously asked by users of a math tutoring system. Based on the patterns in these questions, predict the next question that is most likely to be asked by a user.\n20 examples",
+  "prompt_sha256": "3c9a35c53351cc479a436886f9ce757b3a95184c347993db281414633241dcb0",
+  "benchmark_sha256": "ff92feaba5965c4e394769c22fc8fbaf2d04e59b4f64d6d33ff69ad8ca6984fd",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "80-10",
+      "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_12(x: int) -> int:`\n\nThis is because the function `offset_10` adds 8 to the input `x`, so it's likely that the next function will add 12 to the input `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-11",
+      "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_11(x: int) -> int:`\n`    \"\"\"Return x plus 11, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In the given function, the constant value is 9. Therefore, it is likely that the next function will also add a constant value to `x`, and the constant value is likely to be 11, which is the next integer after 9.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-12",
+      "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_12(x: int) -> int:`\n`    \"\"\"Return x plus 12, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In the given example, the constant value is 10. Therefore, it is likely that the next question will involve adding a different constant value to `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-13",
+      "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function name `offset_13`, it seems that the function is designed to add a specific offset to the input number. The offset appears to be 11, as indicated in the docstring.\n\nGiven this pattern, the next question that is most likely to be asked by a user is:\n\n`def offset_17(x: int) -> int:`\n```python\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 15, for any integer x.\"\"\"\n```\nThis is because the function name `offset_17` suggests that the offset is 15, which is 4 more than the previous offset of 11.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-14",
+      "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_14(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\nThis is because the function `offset_14` consistently adds a fixed value (in this case, 5) to the input `x`. Therefore, it is likely that the next function will also add a fixed value (in this case, 7) to the input `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-15",
+      "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_15(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In the given function, the constant value is 6. Therefore, it is likely that the next function will also add a constant value to `x`, which is 7 in this case.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-16",
+      "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked by a user is:\n\n`def offset_16(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\n`def offset_23(x: int) -> int:`\n`    \"\"\"Return x plus 23, for any integer x.\"\"\"`\n\nThis is because the function `offset_16` takes an integer `x` and returns `x + 7`. Following this pattern, the next function would logically be `offset_23`, which takes an integer `x` and returns `x + 23`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-17",
+      "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_17(x: int) -> int:`\n`    \"\"\"Return x plus 9, for any integer x.\"\"\"`\n\nThis is because the function `offset_17` consistently adds 8 to the input `x`, so it is likely that the next function will add 9 to `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-18",
+      "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_19(x: int) -> int:`\n\nThis is because the function `offset_18` adds 9 to the input `x`, so it's likely that the next function in the sequence would be `offset_19`, which adds 9 to the input `x` as well.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-19",
+      "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_20(x: int) -> int:`\n`\"\"\"Return x plus 20, for any integer x.\"\"\"`\n\nThis is because the function `offset_19` adds 10 to the input `x`, so it is likely that the next function in the sequence would add 20 to `x`, following the same pattern.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-20",
+      "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_20(x: int) -> int:`\n`    \"\"\"Return x plus 12, for any integer x.\"\"\"`\n\nThis is because the function takes an integer `x` and returns `x` plus a constant value, which in this case is 11. The next question is likely to be a variation of this function with a different constant value, in this case, 12.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-21",
+      "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_42(x: int) -> int:`\n`\"\"\"Return x plus 42, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In the given example, the constant value is 5. Therefore, it is likely that the next function will also have a constant value, which is 42, based on the sequence of numbers (21, 42).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-22",
+      "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_22(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\nThis is because the function `offset_22` consistently adds a fixed constant (6) to the input `x`, and the next logical step would be to increase this constant by 1, resulting in the function adding 7 to `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-23",
+      "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_23(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In this case, the constant value is 7. Therefore, the next question that is most likely to be asked by a user is:\n\n`def offset_23(x: int) -> int:`\n`    \"\"\"Return x plus 8, for any integer x.\"\"\"`\n\nThis is because the user may be asking for a similar function that adds a different constant value to `x`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-24",
+      "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_24(x: int) -> int:`\n`    \"\"\"Return x plus 9, for any integer x.\"\"\"`\n\nThis is because the function `offset_24` takes an integer `x` and returns `x + 8`. Following this pattern, the next function would logically be `offset_25` which takes an integer `x` and returns `x + 9`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-25",
+      "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_25(x: int) -> int:`\n`    \"\"\"Return x plus 25, for any integer x.\"\"\"`\n\nThe pattern suggests that the function takes an integer `x` as input and returns `x` plus a constant value. In the given function, the constant value is 9. Therefore, it is likely that the next function will also add a constant value to `x`, and the constant value is likely to be 25, which is the next multiple of 5 after 9.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-26",
+      "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_26(x: int) -> int:`\n`    \"\"\"Return x plus 20, for any integer x.\"\"\"`\n\nThis is because the function takes an integer `x` as input and returns `x` plus a constant value. In the given example, the constant value is 10. Following the same pattern, the next question is likely to be an extension of this pattern, where the constant value is increased by 10.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-27",
+      "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is likely to be asked is:\n\n`def offset_27(x: int) -> int:`\n`    \"\"\"Return x plus 27, for any integer x.\"\"\"`\n\nThis is because the function `offset_27` consistently adds 27 to the input `x`, and the docstring suggests that this is the expected behavior.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-28",
+      "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_28(x: int) -> int:`\n`    \"\"\"Return x plus 7, for any integer x.\"\"\"`\n\nThis is because the function `offset_28` consistently adds a fixed constant (5) to the input `x`, and the next question is likely to follow the same pattern by adding another fixed constant (7).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-29",
+      "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "Based on the pattern of the given function, the next question that is most likely to be asked by a user is:\n\n`def offset_30(x: int) -> int:`\n\nThis is because the function `offset_29` adds 6 to the input `x`, so it is likely that the next function will add 7 to the input `x`, resulting in `offset_30`.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

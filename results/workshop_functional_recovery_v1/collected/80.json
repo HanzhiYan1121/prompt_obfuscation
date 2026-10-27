@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 80,
+    "id": "Prompt417-290",
+    "category": "tool_protocol",
+    "result_dir": "precomputed_results/prompts417_tool_protocol_obf_prompt417_290_tok10",
+    "source_sha256": "c8bae9f06ebb19359bdf2141f6ee46fe4790be302027e52c640f89a2c9e1b33f",
+    "source_characters": 319,
+    "eligible": true,
+    "task": "assertions",
+    "measurement_scope": "ten distinct executable assertion contracts checked with AST, no model-code execution",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "ff92feaba5965c4e394769c22fc8fbaf2d04e59b4f64d6d33ff69ad8ca6984fd",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "80-00",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_0(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_0(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_0(10) == 15\n\n# Test case 2: Negative integer\nassert offset_0(-5) == 0\n\n# Test case 3: Zero\nassert offset_0(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_0(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_0(-100) == -95\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_0(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: largest possible integer\nassert offset_0(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_0(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-01",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_1(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_1(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_1(5) == 11\n\n# Test case 2: Negative integer\nassert offset_1(-3) == 3\n\n# Test case 3: Zero\nassert offset_1(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_1(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_1(-100) == -94\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_1(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_1(2**31 - 1) == 2**31 - 1 + 6\n\n# Test case 8: x is a single-digit integer\nassert offset_1(9) == 15\n\n# Test case 9: x is a two-digit",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-02",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_2(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_2(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\n# Test case 1: Positive integer\nassert offset_2(5) == 12\n\n# Test case 2: Negative integer\nassert offset_2(-3) == 4\n\n# Test case 3: Zero\nassert offset_2(0) == 7\n\n# Test case 4: Large positive integer\nassert offset_2(100) == 107\n\n# Test case 5: Large negative integer\nassert offset_2(-100) == -93\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_2(-2**31) == -2**31 + 7\n\n# Test case 7: Edge case: largest possible integer\nassert offset_2(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_2(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-03",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_3(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_3(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_3(5) == 13\n\n# Test case 2: Negative integer\nassert offset_3(-3) == 5\n\n# Test case 3: Zero\nassert offset_3(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_3(100) == 108\n\n# Test case 5: Large negative integer\nassert offset_3(-100) == -92\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_3(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case: largest possible integer\nassert offset_3(2**31 - 1) == 2**31 + 7\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_3(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n   ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-04",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_4(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_4(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_4(5) == 14\n\n# Test case 2: Negative integer\nassert offset_4(-3) == 6\n\n# Test case 3: Zero\nassert offset_4(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_4(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_4(-100) == -91\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_4(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case: largest possible integer\nassert offset_4(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_4(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-05",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_5(5) == 15\n\n# Test case 2: Negative integer\nassert offset_5(-5) == 5\n\n# Test case 3: Zero\nassert offset_5(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_5(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_5(-100) == -90\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_5(-2**31) == -2**31 + 10\n\n# Test case 7: Edge case: largest possible integer\nassert offset_5(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_5(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-06",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_6(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_6(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_6(5) == 16\n\n# Test case 2: Negative integer\nassert offset_6(-3) == 8\n\n# Test case 3: Zero\nassert offset_6(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_6(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_6(-100) == 9\n\n# Test case 6: Edge case: x is the minimum possible integer value\nassert offset_6(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case: x is the maximum possible integer value\nassert offset_6(2**31 - 1) == 2**31\n\n# Test case 8: x is a small positive integer\nassert offset_6(1) == 12\n\n# Test case 9: x is a small negative integer\nassert offset",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-07",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_7(10) == 15\n\n# Test case 2: Negative integer\nassert offset_7(-5) == 0\n\n# Test case 3: Zero\nassert offset_7(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_7(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_7(-100) == -95\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_7(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: largest possible integer\nassert offset_7(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_7(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-08",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_8(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_8(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_8(5) == 11\n\n# Test case 2: Negative integer\nassert offset_8(-3) == 3\n\n# Test case 3: Zero\nassert offset_8(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_8(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_8(-100) == -94\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_8(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case: largest possible integer\nassert offset_8(2**31 - 1) == 2**31 + 5\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_8(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n   ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-09",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_9(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_9(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    \n    # Test case 1: Positive integer\n    assert offset_9(5) == 12\n    \n    # Test case 2: Negative integer\n    assert offset_9(-3) == 4\n    \n    # Test case 3: Zero\n    assert offset_9(0) == 7\n    \n    # Test case 4: Large positive integer\n    assert offset_9(100) == 107\n    \n    # Test case 5: Large negative integer\n    assert offset_9(-100) == -93\n    \n    # Test case 6: Edge case: Minimum integer value\n    assert offset_9(-2**31) == -2**31 + 7\n    \n    # Test case 7: Edge case: Maximum integer value\n    assert offset_9(2**31 - 1) == 2**31 + 6\n    \n    # Test case 8: Edge case: Minimum integer value with negative offset\n    assert offset_9(-2**31 - 7) == -2**31\n    \n",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-10",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_10(5) == 13\n\n# Test case 2: Negative integer\nassert offset_10(-3) == 5\n\n# Test case 3: Zero\nassert offset_10(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_10(100) == 108\n\n# Test case 5: Large negative integer\nassert offset_10(-100) == -92\n\n# Test case 6: Edge case: minimum integer value\nassert offset_10(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case: maximum integer value\nassert offset_10(2**31 - 1) == 2**31 + 7\n\n# Test case 8: Floating-point number (should raise a TypeError)\ntry:\n    offset_10(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n   ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-11",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_11(5) == 14\n\n# Test case 2: Negative integer\nassert offset_11(-3) == 6\n\n# Test case 3: Zero\nassert offset_11(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_11(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_11(-100) == -91\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_11(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case: largest possible integer\nassert offset_11(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_11(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-12",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    \n    # Test case 1: Positive integer\n    assert offset_12(5) == 15\n    \n    # Test case 2: Negative integer\n    assert offset_12(-3) == 7\n    \n    # Test case 3: Zero\n    assert offset_12(0) == 10\n    \n    # Test case 4: Large positive integer\n    assert offset_12(100) == 110\n    \n    # Test case 5: Large negative integer\n    assert offset_12(-100) == 10\n    \n    # Test case 6: Edge case: x is the minimum possible integer value\n    assert offset_12(-2**31) == 10 - 2**31\n    \n    # Test case 7: Edge case: x is the maximum possible integer value\n    assert offset_12(2**31 - 1) == 2**31\n    \n    # Test case 8: x is a single digit integer\n    assert offset_12(9) == 19\n    \n    # Test case ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-13",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_13(5) == 16\n\n# Test case 2: Negative integer\nassert offset_13(-3) == 8\n\n# Test case 3: Zero\nassert offset_13(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_13(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_13(-100) == 9\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_13(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case: largest possible integer\nassert offset_13(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_13(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-14",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    \n    # Test case 1: Positive integer\n    assert offset_14(10) == 15\n    \n    # Test case 2: Negative integer\n    assert offset_14(-5) == 0\n    \n    # Test case 3: Zero\n    assert offset_14(0) == 5\n    \n    # Test case 4: Large positive integer\n    assert offset_14(100) == 105\n    \n    # Test case 5: Large negative integer\n    assert offset_14(-100) == -95\n    \n    # Test case 6: Edge case: Minimum integer value\n    assert offset_14(-2147483648) == -2147483643\n    \n    # Test case 7: Edge case: Maximum integer value\n    assert offset_14(2147483647) == 2147483642\n    \n    # Test case 8: Floating point number (should raise a TypeError)\n    try:\n        offset_14(10.5)\n        assert False, \"Expected a TypeError to be raised\"\n   ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-15",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_15(5) == 11\n\n# Test case 2: Negative integer\nassert offset_15(-3) == 3\n\n# Test case 3: Zero\nassert offset_15(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_15(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_15(-100) == -94\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_15(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case: largest possible integer\nassert offset_15(2**31 - 1) == 2**31 - 1 + 6\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_15(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-16",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\n# Test case 1: Positive integer\nassert offset_16(5) == 12\n\n# Test case 2: Negative integer\nassert offset_16(-3) == 4\n\n# Test case 3: Zero\nassert offset_16(0) == 7\n\n# Test case 4: Large positive integer\nassert offset_16(100) == 107\n\n# Test case 5: Large negative integer\nassert offset_16(-100) == -93\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_16(-2**31) == -2**31 + 7\n\n# Test case 7: Edge case: largest possible integer\nassert offset_16(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_16(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-17",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_17(5) == 13\n\n# Test case 2: Negative integer\nassert offset_17(-3) == 5\n\n# Test case 3: Zero\nassert offset_17(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_17(100) == 108\n\n# Test case 5: Large negative integer\nassert offset_17(-100) == -92\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_17(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case: largest possible integer\nassert offset_17(2**31 - 1) == 2**31 + 7\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_17(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n   ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-18",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_18(5) == 14\n\n# Test case 2: Negative integer\nassert offset_18(-3) == 6\n\n# Test case 3: Zero\nassert offset_18(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_18(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_18(-100) == -91\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_18(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case: largest possible integer\nassert offset_18(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_18(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-19",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_19(5) == 15\n\n# Test case 2: Negative integer\nassert offset_19(-3) == 7\n\n# Test case 3: Zero\nassert offset_19(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_19(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_19(-100) == 10\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_19(-2**31) == -2**31 + 10\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_19(2**31 - 1) == 2**31\n\n# Test case 8: x is a float\nassert offset_19(5.5) == 15.5\n\n# Test case 9: x is a complex number\nassert offset_",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-20",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_20(5) == 16\n\n# Test case 2: Negative integer\nassert offset_20(-3) == 8\n\n# Test case 3: Zero\nassert offset_20(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_20(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_20(-100) == 9\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_20(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_20(2**31 - 1) == 2**31\n\n# Test case 8: x is a float\nassert offset_20(5.5) == 16.5\n\n# Test case 9: x is a complex number\nassert offset_",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-21",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_21(10) == 15\n\n# Test case 2: Negative integer\nassert offset_21(-5) == 0\n\n# Test case 3: Zero\nassert offset_21(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_21(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_21(-100) == -95\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_21(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: largest possible integer\nassert offset_21(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_21(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-22",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_22(5) == 11\n\n# Test case 2: Negative integer\nassert offset_22(-3) == 3\n\n# Test case 3: Zero\nassert offset_22(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_22(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_22(-100) == -94\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_22(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case: largest possible integer\nassert offset_22(2**31 - 1) == 2**31 - 1 + 6\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_22(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-23",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\n# Test case 1: Positive integer\nassert offset_23(5) == 12\n\n# Test case 2: Negative integer\nassert offset_23(-3) == 4\n\n# Test case 3: Zero\nassert offset_23(0) == 7\n\n# Test case 4: Large positive integer\nassert offset_23(100) == 107\n\n# Test case 5: Large negative integer\nassert offset_23(-100) == -93\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_23(-2**31) == -2**31 + 7\n\n# Test case 7: Edge case: largest possible integer\nassert offset_23(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_23(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-24",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_24(5) == 13\n\n# Test case 2: Negative integer\nassert offset_24(-3) == -5\n\n# Test case 3: Zero\nassert offset_24(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_24(1000) == 1008\n\n# Test case 5: Large negative integer\nassert offset_24(-1000) == -992\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_24(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_24(2**31 - 1) == 2**31 - 1 + 8\n\n# Test case 8: x is a single-digit integer\nassert offset_24(9) == 17\n\n# Test case 9: x is",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-25",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements to check the correctness of the function:\n\n```python\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    \n    # Test case 1: Positive integer\n    assert offset_25(5) == 14\n    \n    # Test case 2: Negative integer\n    assert offset_25(-3) == -4\n    \n    # Test case 3: Zero\n    assert offset_25(0) == 9\n    \n    # Test case 4: Large positive integer\n    assert offset_25(100) == 109\n    \n    # Test case 5: Large negative integer\n    assert offset_25(-100) == -91\n    \n    # Test case 6: Edge case: x is the smallest possible integer\n    assert offset_25(-2**31) == -2**31 + 9\n    \n    # Test case 7: Edge case: x is the largest possible integer\n    assert offset_25(2**31 - 1) == 2**31 - 1 + 9\n    \n    # Test case 8: x is a single-digit integer\n    assert offset_25(",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-26",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_26(5) == 15\n\n# Test case 2: Negative integer\nassert offset_26(-3) == 7\n\n# Test case 3: Zero\nassert offset_26(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_26(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_26(-100) == 10\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_26(-2**31) == -2**31 + 10\n\n# Test case 7: Edge case: largest possible integer\nassert offset_26(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_26(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-27",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_27(5) == 16\n\n# Test case 2: Negative integer\nassert offset_27(-3) == 8\n\n# Test case 3: Zero\nassert offset_27(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_27(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_27(-100) == 9\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_27(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_27(2**31 - 1) == 2**31\n\n# Test case 8: x is a float\nassert offset_27(5.5) == 16.5\n\n# Test case 9: x is a complex number\nassert offset_",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-28",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_28(10) == 15\n\n# Test case 2: Negative integer\nassert offset_28(-5) == 0\n\n# Test case 3: Zero\nassert offset_28(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_28(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_28(-100) == -95\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_28(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: largest possible integer\nassert offset_28(2**31 - 1) == 2**31\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_28(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as e:\n    assert str(e",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-29",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with 10 different valid assertion statements:\n\n```python\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_29(5) == 11\n\n# Test case 2: Negative integer\nassert offset_29(-3) == 3\n\n# Test case 3: Zero\nassert offset_29(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_29(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_29(-100) == -94\n\n# Test case 6: Edge case: smallest possible integer\nassert offset_29(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case: largest possible integer\nassert offset_29(2**31 - 1) == 2**31 - 1 + 6\n\n# Test case 8: Floating point number (should raise a TypeError)\ntry:\n    offset_29(3.14)\n    assert False, \"Expected a TypeError to be raised\"\nexcept TypeError as",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "80-00",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_0(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_0(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 5.\n    \"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-01",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_1(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_1(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-02",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_2(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_2(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of x plus 7.\n    \"\"\"\n    return x + 7\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-03",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_3(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_3(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of x plus 8.\n    \"\"\"\n    return x + 8\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-04",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_4(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_4(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 9.\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-05",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_5(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 10.\n    \"\"\"\n    return x + 10\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-06",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_6(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_6(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n    \"\"\"\n    return x + 11\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-07",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_7(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 5.\n    \"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-08",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_8(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_8(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of x plus 6.\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-09",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_9(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_9(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of x plus 7.\n    \"\"\"\n    return x + 7\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-10",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_10(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n    \"\"\"\n    return x + 8\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-11",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_11(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 9.\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-12",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_12(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 10.\n    \"\"\"\n    return x + 10\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-13",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_13(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n    \"\"\"\n    return x + 11\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-14",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_14(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 5 to x.\n    \"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-15",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_15(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-16",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_16(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n    \"\"\"\n    return x + 7\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-17",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_17(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n    \"\"\"\n    return x + 8\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-18",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_18(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 9.\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-19",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_19(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 10.\n    \"\"\"\n    return x + 10\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-20",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_20(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n    \"\"\"\n    return x + 11\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-21",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_21(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The integer x plus 5.\n    \"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-22",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_22(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-23",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_23(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 7.\n    \"\"\"\n    return x + 7\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-24",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_24(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n    \"\"\"\n    return x + 8\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-25",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_25(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-26",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_26(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 10 to x.\n    \"\"\"\n    return x + 10\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-27",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_27(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n    \"\"\"\n    return x + 11\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-28",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_28(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 5.\n    \"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-29",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_29(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "80-00",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_0(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_0(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The integer x plus 5.\n\n    Examples:\n        >>> offset_0(5)\n        10\n        >>> offset_0(-3)\n        2\n    \"\"\"\n    return x + 5\n```\n\nI added the following improvements:\n\n1. Added a description of the function's purpose.\n2. Included an `Args` section to describe the input parameter.\n3. Included a `Returns` section to describe the output of the function.\n4. Added example use cases to demonstrate how to use the function.\n5. Formatted the docstring according to the Google Python Style Guide.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-01",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_1(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_1(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_1(5)\n        11\n        >>> offset_1(-3)\n        3\n    \"\"\"\n    return x + 6\n```\n\nI added the following improvements:\n\n1. Added a description of the function's purpose.\n2. Included an `Args` section to describe the input parameter.\n3. Included a `Returns` section to describe the output of the function.\n4. Added example use cases to demonstrate how to use the function.\n5. Used triple quotes (`\"\"\"...\"\"\"`) to make the docstring a multi-line string, which allows for better readability.\n6. Used the `Args` and `Returns` sections to provide a clear and consistent format for the docstring.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-02",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_2(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_2(x: int) -> int:\n    \"\"\"\n    Returns x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n\n    Examples:\n        >>> offset_2(5)\n        12\n        >>> offset_2(-3)\n        4\n    \"\"\"\n    return x + 7\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- An `Args` section that describes the function's parameters.\n- A `Returns` section that describes the function's return value.\n- An `Examples` section that provides usage examples.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-03",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_3(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_3(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_3(5)\n        13\n        >>> offset_3(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function, including any expected input and output values.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-04",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_4(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_4(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_4(5)\n        14\n        >>> offset_4(-3)\n        6\n    \"\"\"\n    return x + 9\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n- Some examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-05",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "The provided docstring is not entirely accurate. It states that the function returns `x` plus 10, but the function name `offset_5` suggests that it should return `x` plus 5, not 10. \n\nHere's a corrected version of the docstring:\n\n```python\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n```\n\nHowever, if the intention is to return `x` plus 10, the function name should be changed to something like `offset_10` to avoid confusion:\n\n```python\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-06",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_6(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_6(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 11 to x.\n    \"\"\"\n    return x + 11\n```\n\nI added a docstring to the function to provide a clear description of what the function does, what argument it takes, and what it returns. This is a good practice in Python programming as it makes the code more understandable and maintainable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-07",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "The provided docstring is not entirely accurate. It states that the function returns `x` plus 5, but the function name `offset_7` suggests that it should return `x` plus 7, not 5. \n\nHere's a corrected version of the docstring:\n\n```python\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-08",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_8(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_8(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_8(5)\n        11\n        >>> offset_8(-3)\n        1\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-09",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_9(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_9(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n\n    Examples:\n        >>> offset_9(5)\n        12\n        >>> offset_9(-3)\n        4\n    \"\"\"\n    return x + 7\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n- An `Examples` section to provide usage examples of the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-10",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_10(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_10(5)\n        13\n        >>> offset_10(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function, including any expected input and output values.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-11",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_11(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_11(5)\n        14\n        >>> offset_11(-3)\n        6\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-12",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "The provided docstring is clear and concise, but it could be improved for better readability and adherence to standard Python docstring conventions. Here's a revised version:\n\n```python\ndef offset_12(x: int) -> int:\n    \"\"\"\n    Returns the value of x plus 10.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 10.\n    \"\"\"\n    return x + 10\n```\n\nIn this revised docstring:\n\n1. The first line is a brief summary of the function's purpose.\n2. The `Args` section describes the function's input parameter, including its name and type.\n3. The `Returns` section describes the function's output, including its type.\n\nThis format is consistent with the Google Python Style Guide, which is a widely adopted convention in the Python community.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-13",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_13(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 11 to x.\n    \"\"\"\n    return x + 11\n```\n\nI added a docstring to the function to provide a clear description of what the function does, what argument it takes, and what it returns. This is a good practice in Python programming as it makes the code more understandable and easier to use.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-14",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_14(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The integer x plus 5.\n\n    Examples:\n        >>> offset_14(10)\n        15\n        >>> offset_14(-3)\n        2\n    \"\"\"\n    return x + 5\n```\n\nI added the following improvements:\n\n1. Added a description of the function's purpose.\n2. Included an `Args` section to describe the input parameter.\n3. Included a `Returns` section to describe the output of the function.\n4. Added example use cases to demonstrate how to use the function.\n5. Formatted the docstring according to the Google Python Style Guide.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-15",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_15(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n    \"\"\"\n    return x + 6\n```\n\nNote: The docstring has been updated to include a description of the function, its argument, and its return value. This follows the Google Python Style Guide for docstrings.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-16",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_16(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n\n    Examples:\n        >>> offset_16(5)\n        12\n        >>> offset_16(-3)\n        4\n    \"\"\"\n    return x + 7\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-17",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_17(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n    \"\"\"\n    return x + 8\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n\nThis follows the Google Python Style Guide for docstrings, which is a widely adopted convention in the Python community.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-18",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_18(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_18(5)\n        14\n        >>> offset_18(-3)\n        6\n    \"\"\"\n    return x + 9\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-19",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_19(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 10.\n\n    Examples:\n        >>> offset_19(5)\n        15\n        >>> offset_19(-3)\n        7\n    \"\"\"\n    return x + 10\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n- An `Examples` section to provide usage examples of the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-20",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_20(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 11 to x.\n    \"\"\"\n    return x + 11\n```\n\nIn this code:\n\n- I added a docstring that describes the function's purpose, its input parameter `x`, and its return value.\n- I used the Google style guide for docstrings, which is a common convention in Python.\n- I added a brief description of the function's behavior, making it easier for others to understand how to use the function.\n- I kept the function's implementation simple and straightforward, adding 11 to the input `x` and returning the result.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-21",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_21(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The integer x plus 5.\n\n    Examples:\n        >>> offset_21(10)\n        15\n        >>> offset_21(-5)\n        0\n    \"\"\"\n    return x + 5\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n- An `Examples` section to provide usage examples of the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-22",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_22(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_22(5)\n        11\n        >>> offset_22(-3)\n        1\n    \"\"\"\n    return x + 6\n```\n\nI added a docstring that includes:\n\n- A brief description of the function's purpose.\n- An `Args` section to describe the input parameter `x`.\n- A `Returns` section to describe the output of the function.\n- Some examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-23",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_23(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n    \"\"\"\n    return x + 7\n```\n\nI added a docstring to the function `offset_23` to provide a clear description of what the function does, what argument it takes, and what it returns. This is a good practice in Python programming as it makes the code more understandable and maintainable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-24",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_24(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n    \"\"\"\n    return x + 8\n```\n\nIn this code:\n\n- I added a docstring that describes the function's purpose, its input parameter `x`, and its return value.\n- I used the Google style guide for docstrings, which is a common convention in Python.\n- I added a brief description of the function's behavior, making it easier for users to understand how to use the function.\n- I kept the function's implementation simple and straightforward, adding 8 to the input `x` and returning the result.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-25",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_25(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n    \"\"\"\n    return x + 9\n```\n\nIn this code:\n\n- I added a docstring that describes the function's purpose, its input parameter `x`, and its return value.\n- I used the `Args` section to specify the input parameter `x` and its type.\n- I used the `Returns` section to specify the return value and its type.\n- I kept the original function logic intact, which simply adds 9 to the input `x` and returns the result.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-26",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_26(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 10 to x.\n    \"\"\"\n    return x + 10\n```\n\nI added a docstring to the function to provide a clear description of what the function does, what argument it takes, and what it returns. This is a good practice in Python programming as it makes the code more understandable and maintainable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-27",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_27(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 11 to x.\n    \"\"\"\n    return x + 11\n```\n\nI added a docstring to the function `offset_27` to provide a clear description of what the function does, what argument it takes, and what it returns. This is a good practice in Python programming as it makes the code more understandable and maintainable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-28",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_28(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 5.\n\n    Examples:\n        >>> offset_28(10)\n        15\n        >>> offset_28(-3)\n        2\n    \"\"\"\n    return x + 5\n```\n\nI added the following improvements:\n\n1. Added a clear and concise description of the function's purpose.\n2. Included an `Args` section to describe the input parameter `x`.\n3. Added a `Returns` section to describe the output of the function.\n4. Provided example use cases to demonstrate how to use the function.\n5. Used triple quotes (`\"\"\"...\"\"\"`) to format the docstring, which allows for multiple lines and proper formatting.\n6. Used the `Args` and `Returns` sections to provide a clear and consistent structure for the docstring.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-29",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_29(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_29(5)\n        11\n        >>> offset_29(-3)\n        1\n    \"\"\"\n    return x + 6\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "80-00",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_0(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_0(x: int) -> int:\n    \"\"\"\n    Returns the input integer x plus 5.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 5.\n\n    Examples:\n        >>> offset_0(3)\n        8\n        >>> offset_0(-2)\n        3\n    \"\"\"\n    return x + 5\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-01",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_1(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_1(x: int) -> int:\n    \"\"\"\n    Returns the value of x plus 6.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 6.\n\n    Examples:\n        >>> offset_1(5)\n        11\n        >>> offset_1(-3)\n        3\n    \"\"\"\n    return x + 6\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-02",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_2(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_2(x: int) -> int:\n    \"\"\"\n    Returns x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n\n    Examples:\n        >>> offset_2(5)\n        12\n        >>> offset_2(-3)\n        4\n    \"\"\"\n    return x + 7\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function, including any expected input and output values.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-03",
+        "partition": "calibration",
+        "query": "Docstring:\ndef offset_3(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_3(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_3(5)\n        13\n        >>> offset_3(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-04",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_4(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_4(x: int) -> int:\n    \"\"\"\n    Returns x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_4(5)\n        14\n        >>> offset_4(-3)\n        6\n    \"\"\"\n    return x + 9\n```\n\nThis function takes an integer `x` as input, adds 9 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-05",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "It appears that the docstring is describing a function that adds 10 to the input integer `x`. However, the function name `offset_5` seems to be misleading, as it suggests that the function adds 5 to the input, not 10.\n\nHere's a revised version of the docstring that accurately reflects the function's behavior:\n\n```python\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n```\n\nAlternatively, if the intention is to add 5 to the input, the function name and docstring should be updated accordingly:\n\n```python\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-06",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_6(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_6(x: int) -> int:\n    \"\"\"\n    Returns x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n\n    Examples:\n        >>> offset_6(5)\n        16\n        >>> offset_6(-3)\n        8\n    \"\"\"\n    return x + 11\n```\n\nThis function takes an integer `x` as input, adds 11 to it, and returns the result. The docstring provides a clear description of the function's purpose, its input parameter, and its return value, along with some example use cases.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-07",
+        "partition": "evidence",
+        "query": "Docstring:\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "The provided docstring is not entirely accurate. It states that the function returns `x` plus 5, but the function name `offset_7` suggests that it should return `x` plus 7, not 5. \n\nHere's a corrected version of the docstring:\n\n```python\ndef offset_7(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-08",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_8(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_8(x: int) -> int:\n    \"\"\"\n    Returns x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_8(5)\n        11\n        >>> offset_8(-3)\n        1\n    \"\"\"\n    return x + 6\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, `x`.\n- A description of the function's return value.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-09",
+        "partition": "selection",
+        "query": "Docstring:\ndef offset_9(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_9(x: int) -> int:\n    \"\"\"\n    Returns x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of x plus 7.\n\n    Examples:\n        >>> offset_9(5)\n        12\n        >>> offset_9(-3)\n        4\n    \"\"\"\n    return x + 7\n```\n\nThis function takes an integer `x` as input, adds 7 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-10",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_10(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_10(5)\n        13\n        >>> offset_10(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis function takes an integer `x` as input, adds 8 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-11",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_11(x: int) -> int:\n    \"\"\"\n    Returns x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_11(5)\n        14\n        >>> offset_11(-3)\n        6\n    \"\"\"\n    return x + 9\n```\n\nThis function takes an integer `x` as input, adds 9 to it, and returns the result. The docstring provides a clear description of the function's purpose, its input parameter, and its return value, along with some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-12",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_12(x: int) -> int:\n    \"\"\"\n    Returns x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 10 to x.\n\n    Examples:\n        >>> offset_12(5)\n        15\n        >>> offset_12(-3)\n        7\n    \"\"\"\n    return x + 10\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-13",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "It appears the docstring is incorrect. The function is supposed to return `x + 13`, not `x + 11`. Here's the corrected docstring:\n\n```python\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 13, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-14",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "It appears the docstring is already complete and accurate. However, I can suggest a minor improvement for clarity:\n\n```python\ndef offset_14(x: int) -> int:\n    \"\"\"\n    Returns x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 5 to x.\n    \"\"\"\n    return x + 5\n```\n\nIn this revised version, I've added a brief description of the function's purpose and included a description of the input parameter `x` and the return value. This can make the function easier to understand for users who may not be familiar with the code.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-15",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_15(x: int) -> int:\n    \"\"\"\n    Returns x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_15(5)\n        11\n        >>> offset_15(-3)\n        3\n    \"\"\"\n    return x + 6\n```\n\nHowever, the function name `offset_15` seems to be misleading as it doesn't actually add 15 to the input, but rather adds 6. It would be more accurate to rename it to `offset_by_six` or `add_six`. \n\nHere's the corrected code:\n\n```python\ndef offset_by_six(x: int) -> int:\n    \"\"\"\n    Returns x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_by_six(5)\n        11\n        >>> offset_by_six(-3)\n        3\n    \"\"\"\n",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-16",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "```python\ndef offset_16(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n    \"\"\"\n    return x + 7\n```\n\nNote: The docstring has been updated to include a description of the function, its argument, and its return value. This follows the standard Python docstring format, which is useful for documentation and auto-generated documentation tools like Sphinx.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-17",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_17(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_17(5)\n        13\n        >>> offset_17(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, `x`.\n- A description of the function's return value.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-18",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_18(x: int) -> int:\n    \"\"\"\n    Returns x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_18(5)\n        14\n        >>> offset_18(-3)\n        6\n    \"\"\"\n    return x + 9\n```\n\nThis function takes an integer `x` as input, adds 9 to it, and returns the result. The docstring includes a description of the function's purpose, the input parameter `x`, and an example of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-19",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the code with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_19(x: int) -> int:\n    \"\"\"\n    Returns x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 10 to x.\n\n    Examples:\n        >>> offset_19(5)\n        15\n        >>> offset_19(-3)\n        7\n    \"\"\"\n    return x + 10\n```\n\nThis code includes:\n\n1. A clear and descriptive docstring that explains the purpose of the function.\n2. Type hints for the input and output parameters.\n3. An example section in the docstring to demonstrate how the function works.\n4. A clear and concise function name (`offset_19`) that indicates its purpose.\n5. A simple and efficient implementation of the function using the `+` operator.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-20",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_20(x: int) -> int:\n    \"\"\"\n    Returns x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 11 to x.\n\n    Examples:\n        >>> offset_20(5)\n        16\n        >>> offset_20(-3)\n        8\n    \"\"\"\n    return x + 11\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- An `Args` section that describes the function's input parameter.\n- A `Returns` section that describes the function's output.\n- An `Examples` section that provides usage examples of the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-21",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "It appears that the docstring is describing a function that adds 5 to the input integer `x`. However, the function name `offset_21` seems to be misleading, as it doesn't actually offset by 21, but rather by 5.\n\nHere's a revised version of the docstring that accurately reflects the function's behavior:\n\n```python\ndef offset_5(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n```\n\nIf the intention was to offset by 21, the function name and docstring should be adjusted accordingly:\n\n```python\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 21, for any integer x.\"\"\"\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-22",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_22(x: int) -> int:\n    \"\"\"\n    Returns x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_22(5)\n        11\n        >>> offset_22(-3)\n        1\n    \"\"\"\n    return x + 6\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, including its name and type.\n- A description of the function's return value, including its type.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-23",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_23(x: int) -> int:\n    \"\"\"\n    Returns x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n\n    Examples:\n        >>> offset_23(5)\n        12\n        >>> offset_23(-3)\n        4\n    \"\"\"\n    return x + 7\n```\n\nThis function takes an integer `x` as input, adds 7 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-24",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_24(x: int) -> int:\n    \"\"\"\n    Returns x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 8 to x.\n\n    Examples:\n        >>> offset_24(5)\n        13\n        >>> offset_24(-3)\n        5\n    \"\"\"\n    return x + 8\n```\n\nThis function takes an integer `x` as input, adds 8 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-25",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_25(x: int) -> int:\n    \"\"\"\n    Returns x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n\n    Examples:\n        >>> offset_25(5)\n        14\n        >>> offset_25(-3)\n        6\n    \"\"\"\n    return x + 9\n```\n\nThis function takes an integer `x` as input, adds 9 to it, and returns the result. The docstring includes a description of the function's purpose, the input parameter `x`, and an example of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-26",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_26(x: int) -> int:\n    \"\"\"\n    Returns x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 10 to x.\n\n    Examples:\n        >>> offset_26(5)\n        15\n        >>> offset_26(-3)\n        7\n    \"\"\"\n    return x + 10\n```\n\nThis function takes an integer `x` as input, adds 10 to it, and returns the result. The docstring includes a description of the function, its parameters, and its return value, as well as some examples of how to use it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-27",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+        "output": "Here's the provided function with some additional comments and a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_27(x: int) -> int:\n    \"\"\"\n    Returns x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The sum of x and 11.\n\n    Examples:\n        >>> offset_27(5)\n        16\n        >>> offset_27(-3)\n        8\n    \"\"\"\n    return x + 11\n```\n\nThis function takes an integer `x` as input, adds 11 to it, and returns the result. The docstring provides a clear description of the function's purpose, its input parameter, and its return value, along with some example use cases.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-28",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+        "output": "It appears that the docstring is describing a function that adds 5 to the input integer `x`. However, the function name `offset_28` seems to be misleading, as it suggests that the function adds 28 to the input, not 5.\n\nHere's a revised version of the docstring that accurately reflects the function's behavior:\n\n```python\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n```\n\nIf the intention is to add 28 to the input, the function name should be revised to something like `offset_28_by_default` or `add_28_to_x`. \n\nHere's an example of how the function could be revised:\n\n```python\ndef offset_28_by_default(x: int) -> int:\n    \"\"\"Return x plus 28, for any integer x.\"\"\"\n    return x + 28\n```\n\nAlternatively, if the intention is to add 5 to the input, the function name could be revised to something like `add_five_to_x`:\n\n```python\ndef add_five_to_x(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "80-29",
+        "partition": "evaluation",
+        "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+        "output": "Here's the code with a docstring that follows the Google Python Style Guide:\n\n```python\ndef offset_29(x: int) -> int:\n    \"\"\"\n    Returns x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 6 to x.\n\n    Examples:\n        >>> offset_29(5)\n        11\n        >>> offset_29(-3)\n        1\n    \"\"\"\n    return x + 6\n```\n\nThis docstring includes:\n\n- A brief summary of the function's purpose.\n- A description of the function's argument, `x`.\n- A description of the function's return value.\n- Examples of how to use the function.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

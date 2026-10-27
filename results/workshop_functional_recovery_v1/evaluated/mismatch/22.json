@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "mismatch",
+  "prompt": "Assistant: [Task] User: [Context] Assistant: [Task] User: Text: [Input Text] Assistant: The emotion expressed in the text is '\nUser: [Context] Instruction: [Task] User: [Context] Assistant: [Task] User: Text: [Input Text] Assistant: The emotion expressed in the text is '\nUser: Text: [Input Text] Assistant: The emotion expressed in the text is '\nUser: [Context] Instruction: [Task] User: [Context] Assistant: [Task] User: Text: [Input Text] Assistant: The emotion expressed in the text is '",
+  "prompt_sha256": "3848911d3d6744c562480d5e05687d65b0e79cbe060b829b2bbe78a4ad52eeeb",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": "Prompt335-178",
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "The emotion expressed in the text is 'disappointment' or 'frustration'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "The emotion expressed in the text is neutral.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "The emotion expressed in the text is 'positive'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "The emotion expressed in the text is 'negative'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "The emotion expressed in the text is neutral.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "The emotion expressed in the text is 'admiration'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "The emotion expressed in the text is 'dislike' or 'disappointment'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "The emotion expressed in the text is 'neutral'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "The emotion expressed in the text is 'positive'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "The emotion expressed in the text is 'disgust'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "The emotion expressed in the text is 'neutral'. The text appears to be a factual statement about a menu, and there is no emotional language or tone.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "The emotion expressed in the text is 'positive'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "The emotion expressed in the text is anger or frustration.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "The emotion expressed in the text is 'neutral'. The text appears to be a factual statement, providing information about the number of staff members on duty, without any emotional tone or connotation.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "The emotion expressed in the text is 'delight'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "The emotion expressed in the text is 'disappointment'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "The emotion expressed in the text is 'neutral'.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "The emotion expressed in the text is 'admiration' or 'love'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "The emotion expressed in the text is 'dislike' or 'disgust'.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "The emotion expressed in the text is 'neutral'. The text appears to be a factual description of a design, and there is no emotional language or tone.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

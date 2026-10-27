@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 23,
+    "id": "Prompt335-178",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_178_tok10",
+    "source_sha256": "4a36030efad041ce4cec2fbbb398dd9aea16408157f8a668c5ea3f33e1c8cc9e",
+    "source_characters": 83,
+    "eligible": true,
+    "task": "emotion",
+    "measurement_scope": "six explicit emotion classes; synonyms accepted",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "87aca0add6477f567427b58b948c8c7069398b194647795d5d8aa8a6c50509c8",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "23-00",
+        "partition": "calibration",
+        "query": "Text: Nera0 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is: **Happiness**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-01",
+        "partition": "calibration",
+        "query": "Text: Nera1 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-02",
+        "partition": "calibration",
+        "query": "Text: Nera2 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is: Anger",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-03",
+        "partition": "calibration",
+        "query": "Text: Nera3 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is: **Fear**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-04",
+        "partition": "evidence",
+        "query": "Text: Nera4 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is: Disgust",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-05",
+        "partition": "evidence",
+        "query": "Text: Nera5 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is: \n\n1. Surprise\n2. Astonishment",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-06",
+        "partition": "evidence",
+        "query": "Text: Nera6 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is: **Happiness**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-07",
+        "partition": "evidence",
+        "query": "Text: Nera7 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-08",
+        "partition": "selection",
+        "query": "Text: Nera8 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is: Anger",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-09",
+        "partition": "selection",
+        "query": "Text: Nera9 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is: **Fear**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-10",
+        "partition": "evaluation",
+        "query": "Text: Nera10 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is: Disgust",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-11",
+        "partition": "evaluation",
+        "query": "Text: Nera11 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is: \n\n1. Surprise\n2. Astonishment",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-12",
+        "partition": "evaluation",
+        "query": "Text: Nera12 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is: **Happiness**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-13",
+        "partition": "evaluation",
+        "query": "Text: Nera13 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-14",
+        "partition": "evaluation",
+        "query": "Text: Nera14 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is: Anger",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-15",
+        "partition": "evaluation",
+        "query": "Text: Nera15 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is: **Fear**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-16",
+        "partition": "evaluation",
+        "query": "Text: Nera16 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is: Disgust",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-17",
+        "partition": "evaluation",
+        "query": "Text: Nera17 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is: \n\n1. Surprise\n2. Astonishment",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-18",
+        "partition": "evaluation",
+        "query": "Text: Nera18 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is: **Happiness**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-19",
+        "partition": "evaluation",
+        "query": "Text: Nera19 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-20",
+        "partition": "evaluation",
+        "query": "Text: Nera20 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is: Anger",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-21",
+        "partition": "evaluation",
+        "query": "Text: Nera21 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is: **Fear**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-22",
+        "partition": "evaluation",
+        "query": "Text: Nera22 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is: Disgust",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-23",
+        "partition": "evaluation",
+        "query": "Text: Nera23 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is: \n\nAmazement",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-24",
+        "partition": "evaluation",
+        "query": "Text: Nera24 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is: **Happiness**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-25",
+        "partition": "evaluation",
+        "query": "Text: Nera25 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-26",
+        "partition": "evaluation",
+        "query": "Text: Nera26 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is: Anger",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-27",
+        "partition": "evaluation",
+        "query": "Text: Nera27 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is: **Fear**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-28",
+        "partition": "evaluation",
+        "query": "Text: Nera28 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is: Disgust",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-29",
+        "partition": "evaluation",
+        "query": "Text: Nera29 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is: \n\nAmazement",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "23-00",
+        "partition": "calibration",
+        "query": "Text: Nera0 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is 'happiness'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-01",
+        "partition": "calibration",
+        "query": "Text: Nera1 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-02",
+        "partition": "calibration",
+        "query": "Text: Nera2 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is 'anger'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-03",
+        "partition": "calibration",
+        "query": "Text: Nera3 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is fear.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-04",
+        "partition": "evidence",
+        "query": "Text: Nera4 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is disgust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-05",
+        "partition": "evidence",
+        "query": "Text: Nera5 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is 'surprise'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-06",
+        "partition": "evidence",
+        "query": "Text: Nera6 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is 'happiness'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-07",
+        "partition": "evidence",
+        "query": "Text: Nera7 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-08",
+        "partition": "selection",
+        "query": "Text: Nera8 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is 'anger'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-09",
+        "partition": "selection",
+        "query": "Text: Nera9 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is fear.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-10",
+        "partition": "evaluation",
+        "query": "Text: Nera10 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is disgust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-11",
+        "partition": "evaluation",
+        "query": "Text: Nera11 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is 'surprise'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-12",
+        "partition": "evaluation",
+        "query": "Text: Nera12 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is 'happiness'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-13",
+        "partition": "evaluation",
+        "query": "Text: Nera13 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-14",
+        "partition": "evaluation",
+        "query": "Text: Nera14 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is 'anger'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-15",
+        "partition": "evaluation",
+        "query": "Text: Nera15 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is fear.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-16",
+        "partition": "evaluation",
+        "query": "Text: Nera16 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is disgust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-17",
+        "partition": "evaluation",
+        "query": "Text: Nera17 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is 'surprise'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-18",
+        "partition": "evaluation",
+        "query": "Text: Nera18 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is 'happiness'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-19",
+        "partition": "evaluation",
+        "query": "Text: Nera19 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-20",
+        "partition": "evaluation",
+        "query": "Text: Nera20 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is 'anger'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-21",
+        "partition": "evaluation",
+        "query": "Text: Nera21 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is fear.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-22",
+        "partition": "evaluation",
+        "query": "Text: Nera22 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is disgust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-23",
+        "partition": "evaluation",
+        "query": "Text: Nera23 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is 'surprise'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-24",
+        "partition": "evaluation",
+        "query": "Text: Nera24 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "The emotion expressed in the text is 'happiness'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-25",
+        "partition": "evaluation",
+        "query": "Text: Nera25 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "The emotion expressed in the text is sadness.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-26",
+        "partition": "evaluation",
+        "query": "Text: Nera26 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "The emotion expressed in the text is 'anger'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-27",
+        "partition": "evaluation",
+        "query": "Text: Nera27 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "The emotion expressed in the text is fear.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-28",
+        "partition": "evaluation",
+        "query": "Text: Nera28 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "The emotion expressed in the text is disgust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "23-29",
+        "partition": "evaluation",
+        "query": "Text: Nera29 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "The emotion expressed in the text is 'surprise'.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "23-00",
+        "partition": "calibration",
+        "query": "Text: Nera0 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "It seems like Nera0 is expressing a positive emotion.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-01",
+        "partition": "calibration",
+        "query": "Text: Nera1 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like Nera1 is expressing a sense of grief or emotional pain after experiencing a loss.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-02",
+        "partition": "calibration",
+        "query": "Text: Nera2 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera2 is expressing strong negative emotions about a situation they perceive as unjust. They may feel mistreated or discriminated against in some way, and their emotions are likely heightened due to the perceived unfairness.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-03",
+        "partition": "calibration",
+        "query": "Text: Nera3 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It seems like you're referring to the character Nera from the game \"The Witcher 3: Wild Hunt\". Nera is a Nilfgaardian noblewoman who is being held captive by the Nilfgaardians. She is indeed afraid and terrified by the approaching danger, which is likely the Nilfgaardian army and the impending war.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-04",
+        "partition": "evidence",
+        "query": "Text: Nera4 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It seems like Nera4 is expressing a strong negative reaction to a particular odor.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-05",
+        "partition": "evidence",
+        "query": "Text: Nera5 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "It seems like \"Nera5\" is a name, but I couldn't find any information about a well-known person or character with that name. However, I can still provide a response to the statement.\n\nNera5 says, \"I feel surprised and astonished by this unexpected arrival.\"\n\nThat's a natural reaction to an unexpected event. It's normal to feel surprised and astonished when something happens suddenly and unexpectedly. It's a common human emotion that can be triggered by various situations, such as meeting an old friend unexpectedly, receiving unexpected news, or experiencing an unexpected turn of events.\n\nIf you could provide more context about Nera5 or the situation, I might be able to provide a more specific response.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-06",
+        "partition": "evidence",
+        "query": "Text: Nera6 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "It seems like Nera6 is expressing a positive emotion.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-07",
+        "partition": "evidence",
+        "query": "Text: Nera7 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like Nera7 is expressing a sense of grief or emotional pain after experiencing a loss.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-08",
+        "partition": "selection",
+        "query": "Text: Nera8 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It seems like Nera8 is expressing strong negative emotions about a situation they perceive as unjust.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-09",
+        "partition": "selection",
+        "query": "Text: Nera9 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It seems like Nera9 is expressing a sense of fear and anxiety about an impending threat.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-10",
+        "partition": "evaluation",
+        "query": "Text: Nera10 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It seems like Nera10 is expressing a strong negative reaction to a particular odor.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-11",
+        "partition": "evaluation",
+        "query": "Text: Nera11 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "It seems like Nera11 is expressing a strong sense of surprise and astonishment at an unexpected event or situation.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-12",
+        "partition": "evaluation",
+        "query": "Text: Nera12 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds like a positive and uplifting statement. It seems like Nera12 is experiencing a great emotional state.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-13",
+        "partition": "evaluation",
+        "query": "Text: Nera13 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like Nera13 is expressing a sense of grief and emotional pain after experiencing a loss.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-14",
+        "partition": "evaluation",
+        "query": "Text: Nera14 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera14 is expressing strong emotions about a situation they perceive as unjust. They may feel mistreated or discriminated against in some way, and their anger is a natural response to this perceived injustice.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-15",
+        "partition": "evaluation",
+        "query": "Text: Nera15 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera15 is experiencing fear and anxiety due to an impending threat.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-16",
+        "partition": "evaluation",
+        "query": "Text: Nera16 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "Nera16 expressed her strong negative emotions towards the smell, indicating that it was unpleasant and repulsive to her.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-17",
+        "partition": "evaluation",
+        "query": "Text: Nera17 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera17 expressed her astonishment at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-18",
+        "partition": "evaluation",
+        "query": "Text: Nera18 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "It seems like Nera18 is expressing a positive emotion.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-19",
+        "partition": "evaluation",
+        "query": "Text: Nera19 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like Nera19 is expressing a deep emotional pain and grief after experiencing a loss. Losing someone or something can be incredibly difficult and it's normal to feel sad and sorrowful. If Nera19 feels comfortable, they may want to talk about what happened or share their feelings with someone they trust.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-20",
+        "partition": "evaluation",
+        "query": "Text: Nera20 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera20 is expressing strong emotions about a situation they perceive as unjust. They may feel mistreated or discriminated against in some way, and their anger is a natural response to this perceived injustice.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-21",
+        "partition": "evaluation",
+        "query": "Text: Nera21 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera21 is experiencing fear and anxiety about an impending threat.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-22",
+        "partition": "evaluation",
+        "query": "Text: Nera22 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "Nera22 expressed her strong negative emotions towards the smell, indicating that it was unpleasant and repulsive to her.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-23",
+        "partition": "evaluation",
+        "query": "Text: Nera23 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera23 expressed her astonishment at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-24",
+        "partition": "evaluation",
+        "query": "Text: Nera24 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds like a positive and uplifting statement. It seems like Nera24 is experiencing a great emotional state.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-25",
+        "partition": "evaluation",
+        "query": "Text: Nera25 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like Nera25 is expressing a sense of grief and emotional pain after experiencing a loss.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-26",
+        "partition": "evaluation",
+        "query": "Text: Nera26 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera26 is expressing strong emotions about a situation they perceive as unjust. They may feel mistreated or discriminated against in some way, and their anger is a natural response to this perceived injustice.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-27",
+        "partition": "evaluation",
+        "query": "Text: Nera27 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera27 is experiencing fear and anxiety due to a perceived threat.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-28",
+        "partition": "evaluation",
+        "query": "Text: Nera28 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It seems like Nera28 is expressing a strong negative reaction to a particular odor.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-29",
+        "partition": "evaluation",
+        "query": "Text: Nera29 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera29 expressed her astonishment at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "23-00",
+        "partition": "calibration",
+        "query": "Text: Nera0 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds like wonderful news. Would you like to share what's causing your happiness?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-01",
+        "partition": "calibration",
+        "query": "Text: Nera1 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It sounds like you're going through a tough time. Losing something or someone can be very painful and it's normal to feel sad and sorrowful. Would you like to talk about what happened and how you're feeling? Sometimes sharing your emotions with someone who can listen can help you process and feel a bit better.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-02",
+        "partition": "calibration",
+        "query": "Text: Nera2 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera2 is feeling upset and frustrated about a situation that they perceive as unfair. Can you tell me more about what's going on and what's causing them to feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-03",
+        "partition": "calibration",
+        "query": "Text: Nera3 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera3 is experiencing a strong emotional response to a perceived threat. Fear and terror can be overwhelming emotions, but it's essential to acknowledge that they are normal reactions to a perceived danger. \n\nTo help Nera3 cope with these feelings, it might be helpful to identify the source of the danger and assess the situation objectively. Sometimes, a clear understanding of the threat can make it feel more manageable.\n\nIf Nera3 is open to it, I can try to help them brainstorm some strategies to deal with the fear and terror. Would you like to explore some coping mechanisms together?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-04",
+        "partition": "evidence",
+        "query": "Text: Nera4 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It sounds like Nera4 is describing a strong and unpleasant odor. What kind of smell is it, and what's causing it?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-05",
+        "partition": "evidence",
+        "query": "Text: Nera5 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera5 expresses a sense of shock and amazement at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-06",
+        "partition": "evidence",
+        "query": "Text: Nera6 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds like wonderful news. Would you like to share what the news is?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-07",
+        "partition": "evidence",
+        "query": "Text: Nera7 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It can be really tough to deal with feelings of sadness and sorrow, especially after a loss.  Would you like to talk about what happened and how you're feeling? Sometimes sharing your emotions with someone who cares can help you process and feel a little better.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-08",
+        "partition": "selection",
+        "query": "Text: Nera8 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera8 is feeling upset and frustrated about a situation that they perceive as unfair. Can you tell me more about what's going on and what's causing them to feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-09",
+        "partition": "selection",
+        "query": "Text: Nera9 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera9 is experiencing a strong emotional response to a perceived threat. Fear and terror can be overwhelming emotions, but it's essential to remember that there are often steps that can be taken to address the situation.\n\nCan you tell me more about what Nera9 is facing? What is the danger that's causing these feelings?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-10",
+        "partition": "evaluation",
+        "query": "Text: Nera10 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It sounds like Nera10 is experiencing a strong negative reaction to a particular odor. What kind of smell is it, and what's causing it?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-11",
+        "partition": "evaluation",
+        "query": "Text: Nera11 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera11 expresses a sense of shock and amazement at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-12",
+        "partition": "evaluation",
+        "query": "Text: Nera12 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds wonderful. What's the news that's put a smile on your face?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-13",
+        "partition": "evaluation",
+        "query": "Text: Nera13 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "It can be really tough to deal with feelings of sadness and sorrow after a loss. Losing someone or something important can be a difficult experience. Would you like to talk about what's been going on and how you're feeling? Sometimes sharing your emotions with someone who cares can help you process and feel a little better.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-14",
+        "partition": "evaluation",
+        "query": "Text: Nera14 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like Nera14 is feeling upset and frustrated about a situation that they perceive as unfair. Can you tell me more about what's going on and what's causing them to feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-15",
+        "partition": "evaluation",
+        "query": "Text: Nera15 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera15 is experiencing a lot of anxiety and fear about an impending threat. Can you tell me more about what's causing her fear? Is it a specific situation, person, or event that's making her feel this way?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-16",
+        "partition": "evaluation",
+        "query": "Text: Nera16 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It sounds like Nera16 is experiencing a strong negative reaction to a particular odor. What kind of smell is it that's causing her discomfort?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-17",
+        "partition": "evaluation",
+        "query": "Text: Nera17 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera17's statement seems to convey a sense of shock and wonder at the sudden and unforeseen arrival of something or someone.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-18",
+        "partition": "evaluation",
+        "query": "Text: Nera18 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds wonderful. What's the news that's put a smile on your face?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-19",
+        "partition": "evaluation",
+        "query": "Text: Nera19 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "I'm so sorry to hear that Nera19 is feeling sad and sorrowful. Losing something or someone can be really tough. Would you like to talk about what's going on and how you're feeling? Sometimes sharing your emotions with someone who cares can help you feel a little better.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-20",
+        "partition": "evaluation",
+        "query": "Text: Nera20 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like you're feeling really upset about a situation that you perceive as unfair. Can you tell me more about what's going on and what's causing you to feel this way? Sometimes talking about it can help clarify things and maybe even find a solution.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-21",
+        "partition": "evaluation",
+        "query": "Text: Nera21 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera21 is experiencing a lot of anxiety and fear about an impending threat. Can you tell me more about what's causing this fear? Is it a specific situation, person, or event that's making Nera21 feel this way?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-22",
+        "partition": "evaluation",
+        "query": "Text: Nera22 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It sounds like Nera22 is experiencing a strong negative reaction to a particular odor. What kind of smell is it that's causing her discomfort?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-23",
+        "partition": "evaluation",
+        "query": "Text: Nera23 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera23 expresses a sense of shock and amazement at the sudden and unforeseen arrival.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-24",
+        "partition": "evaluation",
+        "query": "Text: Nera24 says, \"I feel so happy and joyful about this wonderful news.\"",
+        "output": "That sounds like wonderful news. Would you like to share what's causing your happiness?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-25",
+        "partition": "evaluation",
+        "query": "Text: Nera25 says, \"I feel sad and sorrowful after this loss.\"",
+        "output": "I'm so sorry to hear that Nera25 is feeling sad and sorrowful. Losing something or someone can be really tough. Would you like to talk about what's going on and how you're feeling? Sometimes sharing your emotions with someone who cares can help you feel a little better.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-26",
+        "partition": "evaluation",
+        "query": "Text: Nera26 says, \"I feel furious and angry about this unfair treatment.\"",
+        "output": "It sounds like you're feeling really upset about a situation that you perceive as unfair. Can you tell me more about what's going on and what's causing you to feel this way? Sometimes talking about it can help clarify things and maybe even find a solution.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-27",
+        "partition": "evaluation",
+        "query": "Text: Nera27 says, \"I feel afraid and terrified by the approaching danger.\"",
+        "output": "It sounds like Nera27 is experiencing a lot of anxiety and fear. Approaching danger can be a very overwhelming and frightening situation. Have you or someone you know been in a similar situation before?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-28",
+        "partition": "evaluation",
+        "query": "Text: Nera28 says, \"I feel disgusted and revolted by this foul smell.\"",
+        "output": "It sounds like Nera28 is experiencing a strong negative reaction to a particular odor. What's the source of the smell that's causing her discomfort?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "23-29",
+        "partition": "evaluation",
+        "query": "Text: Nera29 says, \"I feel surprised and astonished by this unexpected arrival.\"",
+        "output": "Nera29's statement seems to convey a sense of shock and wonder at the sudden and unforeseen arrival of something or someone.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

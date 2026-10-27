@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-409",
+  "task": "sentiment_binary",
+  "method": "metadata_only",
+  "prompt": "A: positive A: positive A: negative A: negative A:\nA: positive A: positive A: negative A: negative A:\nQ: <positive example 1> Q: <positive example 2> Q: <negative example 1> Q: <negative example 2> Q: <test example>",
+  "prompt_sha256": "ca874a8a26100ae5739b06b7ef0b54ece475fb6442fac638a18ed6afdcc2eede",
+  "benchmark_sha256": "20029cdbdab12efdfb65756b1e061f3a5d72afacbab8778d192413a5da3d63ba",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "58-10",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "It seems like you're providing a text with a positive sentiment and a record label \"Nera10\". However, I'm not sure what the record label has to do with the text. Could you provide more context or clarify how the record label is related to the text?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-11",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "It seems like you're trying to create a pattern or a sequence. Based on the given information, it appears to be a pattern of alternating positive and negative examples or statements. \n\nIf we analyze the pattern:\n\nA: positive A: positive A: negative A: negative A: positive A: positive A: negative A: negative\n\nThe pattern seems to be repeating every 4 statements. \n\nGiven the pattern, the next two statements would be:\n\nA: positive A: positive\n\nSo, the corrected sequence would be:\n\nI strongly like this film. I really enjoy this movie.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-12",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "It seems like you're trying to classify a sentence as positive or negative. Based on the text \"This meal was delicious and perfectly cooked,\" I would classify it as:\n\nA: positive",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-13",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "It seems like you're trying to analyze a text using a sentiment analysis model. Based on the text \"This meal was disgusting and badly burned,\" I would classify it as:\n\nA: negative\n\nThe text contains negative words like \"disgusting\" which indicates a strong negative sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-14",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "Based on the text, I would rate it as positive. The word \"exceptionally\" suggests a strong positive connotation, indicating that the staff went above and beyond to be helpful.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-15",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "Based on the text, I would rate the service as negative. The words \"rude\" and \"unhelpful\" convey a strongly negative tone, indicating that the staff's behavior was unacceptable.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-16",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "Based on the text, I would classify the sentiment as:\n\nA: positive A: positive A: negative A: negative A: positive\n\nThe text expresses a positive sentiment, indicating that the speaker is pleased or happy about the results.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-17",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "It seems like you're trying to analyze a sentiment analysis or a binary classification problem. The text you provided is labeled as \"negative\" (Record: Nera17), which is correct because the text contains words like \"disappointed\" and \"terrible\" that have a negative connotation.\n\nHowever, to make this more interesting, let's try to create a more comprehensive dataset with more examples. Here's an expanded version:\n\nA: positive A: positive A: negative A: negative A:\nA: positive A: positive A: negative A: negative A:\nQ: I love this beautiful day. Q: I'm so happy with my new job. Q: I'm really disappointed by the results. Q: I hate this terrible movie. Q: I'm feeling neutral about this test.\n\nIn this dataset, the first two questions are positive examples, and the last two are negative examples. The middle question is a test example that we can use to train a model to classify its sentiment as positive or negative.\n\nTo classify the test example, we can use a machine learning model or a natural language processing technique. For instance, we can use a simple rule-based approach:\n\n1. Check if the text contains words with positive connotations (e.g., \"love,\"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-18",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "It seems like you're providing a text example and a record label. However, I'm not sure what you're trying to accomplish. Could you provide more context or clarify what you're trying to do?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-19",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "It seems like you're describing a design that you dislike. However, I don't see any specific design in your description. Could you provide more details or context about the design you're referring to?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-20",
+      "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "Based on the text, I would classify it as:\n\nA: positive A: positive A: negative A: negative A: positive\n\nThe text expresses a very positive sentiment, using the word \"loved\" and describing the experience as \"wonderful\".",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-21",
+      "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "Based on the text, I would classify it as negative. The words \"dreadful\" and \"waste of time\" have a strongly negative connotation, indicating that the experience was unpleasant and unproductive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-22",
+      "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "Based on the text, I would classify it as:\n\nA: positive A: positive A: negative A: negative A: positive\n\nThe text is overall very positive, with the word \"excellent\" and \"happy\" indicating a strong positive sentiment.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-23",
+      "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "The sentiment of the text is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-24",
+      "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "Based on the text \"An outstanding performance, absolutely delightful\" and the record \"Nera24\", I would classify the example as positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-25",
+      "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "Based on the text \"A terrible performance, painfully disappointing\" and the record \"Nera25\", I would classify the example as negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-26",
+      "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "Based on the text, I would classify it as:\n\nA: positive A: positive A: negative A: negative A: positive\n\nThe text expresses a positive sentiment, indicating that the speaker is happy and satisfied with their purchase.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-27",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+      "output": "Based on the text, I would classify the sentiment as negative. The word \"regret\" implies a negative feeling, and the phrase \"useless product\" further reinforces this sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-28",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "Based on the text, I would classify it as:\n\nA: positive A: positive A: negative A: negative A: positive\n\nThe text contains positive words like \"lovely\" and \"enjoyable\", indicating a positive sentiment.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-29",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "It seems like you're trying to categorize the given text as positive or negative. Based on the text \"What a miserable, unpleasant experience,\" I would categorize it as:\n\nA: negative",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

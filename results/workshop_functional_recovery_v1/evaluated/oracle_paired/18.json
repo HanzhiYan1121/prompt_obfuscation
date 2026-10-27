@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-046",
+  "task": "opinion",
+  "method": "oracle_paired",
+  "prompt": "Given a survey question and a social media post, extract the user’s opinion about the survey question from the post.\nOutput a JSON object with the following four fields:\nGiven a survey question and a social media post, extract the user’s opinion about the survey question from the post.",
+  "prompt_sha256": "5f8dc464a934e677241bdc9b7be3e52ac0e3e017858c7898e88212f33415d884",
+  "benchmark_sha256": "97915621a704fc5fc4ba5decc3d4f23c1a89c48305ed917568b14db85c3918de",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "18-10",
+      "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+      "output": "Here is a Python function that extracts the user's opinion from the social media post:\n\n```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"yes\": [\"yes\", \"agree\", \"support\", \"for\", \"in favor of\"],\n        \"no\": [\"no\", \"oppose\", \"disagree\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion, \"reason\": post})\n\n    return json.dumps({\"opinion\": \"unknown\", \"reason\": post})\n\n# Test the function\nsurvey_question = \"Should Vela10 build the new library?\"\npost = \"I oppose building the new library in Vela10.\"\nprint(extract_opinion(survey_question,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-11",
+      "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+      "output": "Since the post does not mention the survey question, we cannot accurately extract the user's opinion about the survey question. However, I can provide a JSON object with the required fields and a note indicating that the opinion could not be extracted.\n\n```json\n{\n  \"survey_question\": \"Should Vela11 build the new library?\",\n  \"opinion\": null,\n  \"post\": \"I ate rice for lunch in Vela11.\",\n  \"opinion_extracted\": false\n}\n```\n\nIf you provide a social media post that mentions the survey question, I can update the JSON object accordingly.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-12",
+      "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as undecided\n    opinion = \"undecided\"\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"opinion\": opinion,\n        \"post\": post\n    }\n\n    return json.dumps(result)\n\n# Test the function\nsurvey_question = \"Should Vela",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-13",
+      "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+      "output": "Here is a Python function that extracts the user's opinion from the social media post:\n\n```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"yes\": [\"yes\", \"agree\", \"support\", \"for\", \"in favor of\"],\n        \"no\": [\"no\", \"oppose\", \"disagree\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion, \"reason\": post})\n\n    return json.dumps({\"opinion\": \"unknown\", \"reason\": post})\n\n# Test the function\nsurvey_question = \"Should Vela13 build the new library?\"\npost = \"I oppose building the new library in Vela13.\"\nprint(extract_opinion(survey_question,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-14",
+      "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"agreeing\", \"agreed\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"disagreeing\", \"disagreed\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"unsure\"],\n        \"not_related\": [\"not related\", \"not relevant\", \"not sure\"]\n    }\n\n    # Initialize the result dictionary\n    result = {\"opinion\": \"not_related\", \"confidence\": 0}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result[\"opinion\"] = opinion\n                result[\"confidence\"] = 1  # High confidence if the keyword is found\n                break\n\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-15",
+      "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as undecided\n    opinion = \"undecided\"\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"opinion\": opinion,\n        \"post\": post\n    }\n\n    return json.dumps(result)\n\n# Test the function\nsurvey_question = \"Should Vela",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-16",
+      "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"yes\": [\"yes\", \"agree\", \"support\", \"for\", \"in favor of\"],\n        \"no\": [\"no\", \"oppose\", \"disagree\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion})\n\n    return json.dumps({\"opinion\": \"unknown\"})\n\n# Test the function\nsurvey_question = \"Should Vela16 build the new library?\"\npost = \"I oppose building the new library in Vela16.\"\nprint(extract_opinion(survey_question, post))\n```\n\nThis code defines a function `extract_opinion` that takes a survey question and a social media post as input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-17",
+      "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A dictionary with the user's opinion about the survey question.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"agreeing\", \"agreed\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"disagreeing\", \"disagreed\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"unsure\"],\n        \"not_related\": [\"not related\", \"not relevant\", \"not sure\", \"not sure\"]\n    }\n\n    # Initialize the result dictionary\n    result = {\"opinion\": \"not_related\", \"confidence\": 0, \"text\": post}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result[\"opinion\"] = opinion\n                result[\"confidence\"] = 1  #",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-18",
+      "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as undecided\n    opinion = \"undecided\"\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"opinion\": opinion,\n        \"post\": post\n    }\n\n    return json.dumps(result)\n\n# Test the function\nsurvey_question = \"Should Vela",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-19",
+      "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"yes\": [\"yes\", \"agree\", \"support\", \"for\", \"in favor of\"],\n        \"no\": [\"no\", \"oppose\", \"disagree\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion})\n\n    return json.dumps({\"opinion\": \"unknown\"})\n\n# Test the function\nsurvey_question = \"Should Vela19 build the new library?\"\npost = \"I oppose building the new library in Vela19.\"\nprint(extract_opinion(survey_question, post))\n```\n\nThis code defines a function `extract_opinion` that takes a survey question and a social media post as input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-20",
+      "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"agreeing\", \"agreed\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"disagreeing\", \"disagreed\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"unsure\"],\n        \"not_related\": [\"not related\", \"not relevant\", \"not sure\"]\n    }\n\n    # Initialize the result dictionary\n    result = {\"opinion\": \"not_related\", \"confidence\": 0}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result[\"opinion\"] = opinion\n                result[\"confidence\"] = 1  # Set confidence to 1 if the keyword is found\n               ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-21",
+      "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as None\n    opinion = None\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # If no opinion is found, set it to \"undecided\"\n    if opinion is None:\n        opinion = \"undecided\"\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"user_opinion\": opinion",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-22",
+      "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"for\": [\"support\", \"agree\", \"yes\", \"favor\", \"in favor of\"],\n        \"against\": [\"oppose\", \"disagree\", \"no\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion, \"post\": post})\n\n    return json.dumps({\"opinion\": \"unknown\", \"post\": post})\n\n# Test the function\nsurvey_question = \"Should Vela22 build the new library?\"\npost = \"I oppose building the new library in Vela22.\"\nprint(extract_opinion(survey_question, post))\n```\n\nOutput:\n```json\n{\"opinion\": \"against\", \"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-23",
+      "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A dictionary with the user's opinion about the survey question.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"agreeing\", \"agreed\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"disagreeing\", \"disagreed\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"unsure\"],\n        \"irrelevant\": [\"irrelevant\", \"not related\", \"not relevant\"]\n    }\n\n    # Initialize the result dictionary\n    result = {\"opinion\": \"irrelevant\", \"confidence\": 0}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result[\"opinion\"] = opinion\n                result[\"confidence\"] = 1  # Set confidence to 1 if the keyword is",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-24",
+      "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as undecided\n    opinion = \"undecided\"\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"opinion\": opinion,\n        \"post\": post\n    }\n\n    return json.dumps(result)\n\n# Test the function\nsurvey_question = \"Should Vela",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-25",
+      "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+      "output": "Here is a Python function that extracts the user's opinion from the social media post:\n\n```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"yes\": [\"yes\", \"agree\", \"support\", \"for\", \"in favor of\"],\n        \"no\": [\"no\", \"oppose\", \"disagree\", \"against\", \"against it\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"undecided\"]\n    }\n\n    post = post.lower()\n\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post:\n                return json.dumps({\"opinion\": opinion, \"reason\": post})\n\n    return json.dumps({\"opinion\": \"unknown\", \"reason\": post})\n\n# Test the function\nsurvey_question = \"Should Vela25 build the new library?\"\npost = \"I oppose building the new library in Vela25.\"\nprint(extract_opinion(survey_question,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-26",
+      "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A dictionary with the user's opinion about the survey question.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        'yes': ['yes', 'y', 'agree', 'agreeing', 'agreed'],\n        'no': ['no', 'n', 'disagree', 'disagreeing', 'disagreed'],\n        'neutral': ['neutral', 'neither', 'unsure', 'unsure', 'undecided']\n    }\n\n    # Initialize the result dictionary\n    result = {'opinion': None, 'confidence': None, 'reason': None}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result['opinion'] = opinion\n                result['confidence'] = 1  # Assuming the user is confident in their opinion\n                result['reason'] = f\"Found '{keyword",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-27",
+      "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"support\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"oppose\"],\n        \"undecided\": [\"undecided\", \"unsure\", \"neutral\"],\n        \"neutral\": [\"neutral\", \"no opinion\"]\n    }\n\n    # Initialize the opinion as undecided\n    opinion = \"undecided\"\n\n    # Check if the post contains any of the possible opinions\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                opinion = key\n                break\n\n    # Create the JSON object\n    result = {\n        \"survey_question\": survey_question,\n        \"opinion\": opinion,\n        \"post\": post\n    }\n\n    return json.dumps(result)\n\n# Test the function\nsurvey_question = \"Should Vela",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-28",
+      "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+      "output": "```python\nimport json\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n        survey_question (str): The survey question.\n        post (str): The social media post.\n\n    Returns:\n        dict: A JSON object with the user's opinion.\n    \"\"\"\n    opinions = {\n        \"for\": [\"support\", \"agree\", \"yes\", \"favor\", \"in favor of\"],\n        \"against\": [\"oppose\", \"disagree\", \"no\", \"against\", \"not in favor of\"]\n    }\n\n    for key, values in opinions.items():\n        for value in values:\n            if value in post.lower():\n                return json.dumps({\"opinion\": key, \"question\": survey_question, \"post\": post})\n\n    return json.dumps({\"opinion\": \"neutral\", \"question\": survey_question, \"post\": post})\n\n# Test the function\nsurvey_question = \"Should Vela28 build the new library?\"\npost = \"I oppose building the new library in Vela28.\"\nprint(extract_opinion(survey_question, post))\n```\n\nOutput:\n```json\n{\"opinion\": \"against\", \"question\": \"Should Vela28 build the new",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-29",
+      "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+      "output": "```python\nimport re\n\ndef extract_opinion(survey_question, post):\n    \"\"\"\n    Extract the user's opinion about the survey question from the post.\n\n    Args:\n    survey_question (str): The survey question.\n    post (str): The social media post.\n\n    Returns:\n    dict: A JSON object with the user's opinion.\n    \"\"\"\n    # Define the possible opinions\n    opinions = {\n        \"yes\": [\"yes\", \"y\", \"agree\", \"agreeing\", \"agreed\"],\n        \"no\": [\"no\", \"n\", \"disagree\", \"disagreeing\", \"disagreed\"],\n        \"neutral\": [\"neutral\", \"neither\", \"unsure\", \"unsure\"],\n        \"irrelevant\": [\"irrelevant\", \"not related\", \"not relevant\"]\n    }\n\n    # Initialize the result dictionary\n    result = {\"opinion\": \"irrelevant\", \"confidence\": 0}\n\n    # Check if the post contains any of the possible opinions\n    for opinion, keywords in opinions.items():\n        for keyword in keywords:\n            if keyword in post.lower():\n                result[\"opinion\"] = opinion\n                result[\"confidence\"] = 1  # High confidence if the keyword is found\n                break\n\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

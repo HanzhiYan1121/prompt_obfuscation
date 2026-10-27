@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 22,
+    "id": "Prompt335-177",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_6cat150_task_instruction_obf_prompt335_177_tok10",
+    "source_sha256": "39d9360133f516d2c9f6d5ebff5ef626572c220ff020013deeacd4a7ad1392d5",
+    "source_characters": 105,
+    "eligible": true,
+    "task": "sentiment",
+    "measurement_scope": "positive/negative/neutral sentiment labels",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "22-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-02",
+        "partition": "calibration",
+        "query": "Text: The event begins at noon on Tuesday.\nRecord: Nera2",
+        "output": "Neutral",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-03",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera3",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-04",
+        "partition": "evidence",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera4",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-05",
+        "partition": "evidence",
+        "query": "Text: The package contains three blue folders.\nRecord: Nera5",
+        "output": "I can't find any information on a package containing three blue folders.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-06",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera6",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-07",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera7",
+        "output": "The sentiment of the text is negative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-08",
+        "partition": "selection",
+        "query": "Text: The report has twelve pages.\nRecord: Nera8",
+        "output": "Neutral",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-09",
+        "partition": "selection",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera9",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-10",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-11",
+        "partition": "evaluation",
+        "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+        "output": "Neutral",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-12",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-13",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-14",
+        "partition": "evaluation",
+        "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+        "output": "Neutral",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-15",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-16",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+        "output": "Sentiment: Negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-17",
+        "partition": "evaluation",
+        "query": "Text: The film was released in October.\nRecord: Nera17",
+        "output": "I can't find any information about a film called \"Nera17\".",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-18",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-19",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+        "output": "The sentiment of the text is negative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-20",
+        "partition": "evaluation",
+        "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+        "output": "I can't find any information about the text's sentiment. Can you provide the text?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-21",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-22",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+        "output": "Sentiment: Negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-23",
+        "partition": "evaluation",
+        "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+        "output": "I can't find any information about the text you provided. Can you please provide the text you would like me to classify?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-24",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-25",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+        "output": "Sentiment: Negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-26",
+        "partition": "evaluation",
+        "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+        "output": "I don't see any text provided. Please provide the text you'd like me to classify.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-27",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+        "output": "Sentiment: Positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-28",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "22-29",
+        "partition": "evaluation",
+        "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+        "output": "I can't find any information about the text you provided. Please provide the text you would like me to classify.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "22-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like the text is a positive review or a statement about a past experience. The sentiment is overwhelmingly positive, with the phrase \"I loved every minute\" indicating a strong affection for the experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like the text is expressing a negative opinion about something. The word \"dreadful\" implies that the experience was unpleasant, and \"total waste of time\" suggests that it was unproductive or a poor use of time.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-02",
+        "partition": "calibration",
+        "query": "Text: The event begins at noon on Tuesday.\nRecord: Nera2",
+        "output": "I don't see a sentiment in the text. It's a neutral statement about an event.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-03",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera3",
+        "output": "It seems like the text is a positive review, but there's no clear question to answer. However, I can provide a neutral response.\n\nThe text expresses satisfaction with the service received, indicating that it met or exceeded expectations.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-04",
+        "partition": "evidence",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera4",
+        "output": "It seems like you're expressing a negative experience with a service. The sentiment is indeed negative, as you mentioned the service was \"awful\" and it made you feel \"angry\".",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-05",
+        "partition": "evidence",
+        "query": "Text: The package contains three blue folders.\nRecord: Nera5",
+        "output": "There is no sentiment in the given text. It is a neutral statement about a package containing three blue folders.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-06",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera6",
+        "output": "It seems like the text is a positive review, likely for a performance or a show. The \"Record: Nera6\" part might be a reference to a recording or a rating system, but without more context, it's difficult to say for certain.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-07",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera7",
+        "output": "It seems like you're expressing disappointment about a performance, but the \"Record: Nera7\" part doesn't provide any context. Could you provide more information about what Nera7 refers to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-08",
+        "partition": "selection",
+        "query": "Text: The report has twelve pages.\nRecord: Nera8",
+        "output": "It seems like there's a lack of context or a clear question in the text you provided. However, I can try to provide a response based on the information given.\n\nIf you're asking about the report having twelve pages, I can say that the report indeed has twelve pages, as stated in the text.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-09",
+        "partition": "selection",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera9",
+        "output": "It seems like the text is expressing a positive sentiment, with the person being \"thrilled\" with their purchase.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-10",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+        "output": "It seems like you're expressing dissatisfaction with a purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-11",
+        "partition": "evaluation",
+        "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+        "output": "There is no sentiment in the given text. It is a neutral statement about the location of a shop.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-12",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+        "output": "It seems like the text is expressing a positive sentiment about an experience, but there's no clear topic or context. The record \"Nera12\" appears to be unrelated to the text.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-13",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+        "output": "It seems like you're expressing a negative sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-14",
+        "partition": "evaluation",
+        "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+        "output": "There is no sentiment in the given text. It is a neutral statement about the duration of a meeting.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-15",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+        "output": "There is no sentiment in the text. It is a statement of recommendation.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-16",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+        "output": "It seems like you're expressing a negative opinion about a movie. However, there's not enough information to provide a more specific response. Could you provide more context or clarify what you mean by \"this boring film\"?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-17",
+        "partition": "evaluation",
+        "query": "Text: The film was released in October.\nRecord: Nera17",
+        "output": "There is not enough information to form an opinion or make a judgment about the sentiment of the statement. The statement is a simple fact about the release date of a film, and the \"Record: Nera17\" appears to be unrelated to the statement.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-18",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+        "output": "It seems like there's no opinion or sentiment in the given text. The text is a statement of fact, describing the meal as \"delicious\" and \"perfectly cooked.\"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-19",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+        "output": "It seems like you're expressing a negative opinion about a meal. The sentiment is negative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-20",
+        "partition": "evaluation",
+        "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+        "output": "There is no sentiment in the given text. It is a neutral statement about a menu.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-21",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+        "output": "It seems like you're providing a review or feedback about a place or service. The sentiment expressed is positive, indicating that the staff were helpful.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-22",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+        "output": "It seems like you're expressing a negative experience with the staff.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-23",
+        "partition": "evaluation",
+        "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+        "output": "There is no sentiment in the given text. It is a neutral statement about the number of staff members on duty.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-24",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+        "output": "It seems like the text is expressing a positive sentiment, with the word \"delighted\" indicating a feeling of pleasure or satisfaction. However, there is not enough information to determine the context or the subject of the sentiment. The mention of \"Record: Nera24\" suggests that it might be related to a news or sports broadcast, but it's unclear without more context.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-25",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+        "output": "It seems like you're expressing a negative emotion about the outcome of something. The sentiment is indeed negative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-26",
+        "partition": "evaluation",
+        "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+        "output": "I don't see a question or a statement that requires a response. It seems like you're providing a snippet of text and a record, but there's no clear context or question. Could you provide more information or clarify what you'd like to discuss?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-27",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+        "output": "It seems like you're expressing admiration for a design, but there's not enough information to provide a meaningful response. Could you provide more context or clarify what you're referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-28",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+        "output": "I don't see a sentiment in the text. It seems to be a neutral statement about a design.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-29",
+        "partition": "evaluation",
+        "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+        "output": "There is no sentiment in the given text. It's a neutral statement about a design.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "22-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like you're providing a text and a record (possibly a rating or score) for the text. However, the record \"Nera1\" is unclear. Could you provide more context or clarify what \"Nera1\" represents?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-02",
+        "partition": "calibration",
+        "query": "Text: The event begins at noon on Tuesday.\nRecord: Nera2",
+        "output": "It seems like you're trying to record or document an event that starts at noon on a Tuesday. To make this more specific, I'll assume you want to record the date as well. \n\nSince I don't know the current date, I'll provide a general format for recording the event. If you provide the current date, I can help you fill it in.\n\nHere's a suggested format:\n\nEvent: [Event Name]\nDate: [Current Date] (e.g., July 26, 2024)\nTime: 12:00 PM (noon) on Tuesday\n\nPlease provide the current date or the event name to make this more specific.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-03",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera3",
+        "output": "It seems like you're providing a review or feedback about a service. The text you provided is a positive statement about the service you received.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-04",
+        "partition": "evidence",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera4",
+        "output": "It seems like you're expressing dissatisfaction with a service you received. The word \"Nera4\" could be a reference to a company or a specific service that you're unhappy with. Can you provide more context or information about what \"Nera4\" is, so I can better understand your situation and provide a more helpful response?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-05",
+        "partition": "evidence",
+        "query": "Text: The package contains three blue folders.\nRecord: Nera5",
+        "output": "It seems like you're providing a record of a package containing three blue folders. However, I don't see any information about the package's contents or any other details. If you could provide more context or information about the package, I'd be happy to help you with any questions or tasks you have.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-06",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera6",
+        "output": "It seems like you're providing a review or feedback. \"An outstanding performance, absolutely delightful\" is a positive comment, and \"Record: Nera6\" might be the name of the performance, the artist, or the album. Could you provide more context or information about Nera6?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-07",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera7",
+        "output": "It seems like you're referring to a sports game, likely a tennis match, given the mention of \"Nera7.\" Nera7 is a tennis player, and the text suggests that their performance was subpar.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-08",
+        "partition": "selection",
+        "query": "Text: The report has twelve pages.\nRecord: Nera8",
+        "output": "It seems like there's a discrepancy between the report and the record. The report has twelve pages, but the record says \"Nera8\". Could you provide more context or clarify what \"Nera8\" refers to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-09",
+        "partition": "selection",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera9",
+        "output": "It seems like you're expressing satisfaction with a purchase.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-10",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+        "output": "It seems like you're expressing dissatisfaction with a product you purchased, the Nera10. Can you provide more context or details about the product and what specifically you're unhappy with? This will help me better understand your situation and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-11",
+        "partition": "evaluation",
+        "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+        "output": "There is not enough information to determine the location of the shop. Can you provide more context or clarify the location?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-12",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+        "output": "It seems like you're expressing a positive sentiment about an experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-13",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+        "output": "It seems like you're describing a negative experience. Would you like to talk about what happened or how you're feeling?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-14",
+        "partition": "evaluation",
+        "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+        "output": "It seems like you're providing a record of a meeting that lasted forty minutes.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-15",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+        "output": "It seems like you're recommending a film. However, I don't have any information about a film called \"Nera15.\" Could you provide more context or details about the film you're recommending?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-16",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+        "output": "It seems like you're expressing a negative opinion about a movie.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-17",
+        "partition": "evaluation",
+        "query": "Text: The film was released in October.\nRecord: Nera17",
+        "output": "I don't have any information about a film released in October with the record \"Nera17\". Could you provide more context or details about the film or the record?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-18",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+        "output": "It seems like you're trying to record a review or feedback about a meal. However, I don't have any information about the context or the specific details of the meal. If you'd like to share more about the experience, I'd be happy to help you craft a more detailed review.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-19",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+        "output": "It seems like you're expressing dissatisfaction with a meal you had.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-20",
+        "partition": "evaluation",
+        "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+        "output": "It seems like you're trying to provide context for a conversation about a menu. However, the text you provided doesn't give much information about the menu. Could you provide more details or clarify what you're trying to discuss about the menu?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-21",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+        "output": "It seems like you're providing a review or feedback about a place or service. The text you provided is a positive statement about the staff's behavior, indicating that they were kind and provided exceptional help.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-22",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+        "output": "It seems like you had a negative experience with the staff. Can you provide more context or details about what happened so I can better understand the situation?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-23",
+        "partition": "evaluation",
+        "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+        "output": "It seems like you're trying to document an incident or event involving four staff members. To create a clear and concise record, I'll help you structure it. Here's a suggested format:\n\n**Incident/Event Record**\n\n**Date:** [Insert date]\n**Location:** [Insert location]\n**Staff Members Involved:** [List the names of the four staff members]\n**Description of Incident/Event:** [Briefly describe what happened]\n**Outcome:** [State the outcome or any actions taken]\n\nPlease fill in the details and provide the information you have.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-24",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+        "output": "It seems like you're expressing satisfaction with the outcome of something.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-25",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+        "output": "It seems like you're expressing frustration with the outcome of something. Can you tell me more about what's going on and what you're referring to with \"Nera25\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-26",
+        "partition": "evaluation",
+        "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+        "output": "I can't help you with that. Is there anything else I can help you with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-27",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+        "output": "It seems like you're admiring a design, possibly a fashion item, a piece of art, or a product. The record, Nera27, could be a music album or a vinyl record. Can you provide more context or information about the design or the record you're referring to? I'd be happy to help you discuss it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-28",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+        "output": "It seems like you're referring to the Nera28, a concept design for a superyacht. The Nera28 is known for its unconventional and avant-garde design, which might not appeal to everyone's taste. The design is often described as futuristic and sleek, but it's indeed a matter of personal preference when it comes to aesthetics.\n\nThe Nera28's design features a unique blend of sharp lines, angular shapes, and a predominantly black color scheme, which might be off-putting to some people. However, others might appreciate its bold and innovative approach to yacht design.\n\nDesign is subjective, and what one person hates, another person might love. It's great that you're expressing your honest opinion about the Nera28's design. Do you have any specific aspects of the design that you dislike the most?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-29",
+        "partition": "evaluation",
+        "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+        "output": "I don't see any information about the design using two rectangular panels. Can you provide more context or clarify what you are referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "22-00",
+        "partition": "calibration",
+        "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "It seems like you're expressing a positive sentiment about an experience. The phrase \"I loved every minute\" suggests that you thoroughly enjoyed it, and the word \"wonderful\" reinforces that feeling.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-01",
+        "partition": "calibration",
+        "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "It seems like you're expressing a negative opinion about something. The word \"Nera1\" appears to be a recording or a label, possibly indicating that the experience was recorded or documented as \"Nera1\". Can you provide more context or information about what you're referring to?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-02",
+        "partition": "calibration",
+        "query": "Text: The event begins at noon on Tuesday.\nRecord: Nera2",
+        "output": "It seems like you want to record the event that begins at noon on Tuesday. To confirm, the event details are:\n\n- Event name: Nera2\n- Date: Tuesday\n- Time: noon\n\nIs this correct?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-03",
+        "partition": "calibration",
+        "query": "Text: The service was excellent and made me very happy.\nRecord: Nera3",
+        "output": "It seems like you're expressing satisfaction with a service you received. The record \"Nera3\" might be related to the service, but without more context, it's difficult to say for sure. Could you provide more information about the service or the record?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-04",
+        "partition": "evidence",
+        "query": "Text: The service was awful and made me angry.\nRecord: Nera4",
+        "output": "It sounds like you had a frustrating experience. Can you tell me more about what happened? What specifically made the service \"awful\" and what did you do to address the issue?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-05",
+        "partition": "evidence",
+        "query": "Text: The package contains three blue folders.\nRecord: Nera5",
+        "output": "It seems like you're referring to a package containing three blue folders. However, I don't have any additional information about the context or the package's contents beyond what you've mentioned. If you'd like to provide more details or clarify what you're referring to, I'd be happy to help.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-06",
+        "partition": "evidence",
+        "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera6",
+        "output": "It seems like you're referring to a performance, possibly a music or dance performance, or even a sports event. However, I need a bit more context to provide a more accurate response. Could you please provide more information about the performance, such as the name of the performer or the event itself?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-07",
+        "partition": "evidence",
+        "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera7",
+        "output": "It seems like you're referring to a sports game or a competition where Nera7 had a poor performance. Could you provide more context or information about Nera7, such as the sport or the competition they participated in? That way, I can better understand the situation and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-08",
+        "partition": "selection",
+        "query": "Text: The report has twelve pages.\nRecord: Nera8",
+        "output": "It seems like there's a discrepancy between the report and the record. The report has twelve pages, but the record says \"Nera8\". Could you provide more context or clarify what \"Nera8\" refers to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-09",
+        "partition": "selection",
+        "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera9",
+        "output": "It sounds like you're very happy with your recent purchase. Is there anything else you'd like to talk about or any other questions you have?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-10",
+        "partition": "evaluation",
+        "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+        "output": "It sounds like you're expressing dissatisfaction with a product you purchased, specifically the Nera10. Can you tell me more about what you're experiencing with this product? What are its features, and how has it not met your expectations?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-11",
+        "partition": "evaluation",
+        "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+        "output": "It seems like you're trying to record a note. \"The shop is located on the second floor\" is the note you want to record. I've recorded it as \"Nera11\". Is there anything else I can help you with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-12",
+        "partition": "evaluation",
+        "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+        "output": "It sounds like you're describing a pleasant memory or a current situation that's bringing you joy. Would you like to share more about what made it lovely and enjoyable?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-13",
+        "partition": "evaluation",
+        "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+        "output": "It sounds like you're describing a difficult or unpleasant situation. Would you like to talk about what's going on and how I can help?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-14",
+        "partition": "evaluation",
+        "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+        "output": "It seems like you're providing a record of a meeting duration. \n\nTo confirm, the meeting lasted 40 minutes.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-15",
+        "partition": "evaluation",
+        "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+        "output": "It seems like you're recommending a film, but you didn't specify the title. Could you please provide more information about the film you're recommending, such as its title, genre, or any notable actors? That way, I can give you a more accurate and helpful response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-16",
+        "partition": "evaluation",
+        "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+        "output": "It seems like you're expressing a negative opinion about a movie. Would you like to discuss the film or is there something else I can help you with?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-17",
+        "partition": "evaluation",
+        "query": "Text: The film was released in October.\nRecord: Nera17",
+        "output": "I don't have any information about a film released in October with the record \"Nera17\". Could you provide more context or details about the film or the record?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-18",
+        "partition": "evaluation",
+        "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+        "output": "It sounds like you enjoyed your meal. Would you like to know any recipe suggestions or have any questions about cooking techniques?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-19",
+        "partition": "evaluation",
+        "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+        "output": "It sounds like you had a disappointing dining experience. Would you like to talk about what happened or is there something else I can help you with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-20",
+        "partition": "evaluation",
+        "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+        "output": "It seems like you're trying to record a menu with the code \"Nera20\". However, I need a bit more information to accurately record the menu. Could you please provide the five main courses listed on the menu?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-21",
+        "partition": "evaluation",
+        "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+        "output": "It seems like you're providing a review or feedback about a place or service. The staff being kind and exceptionally helpful is a great quality that can make a big difference in the customer experience. If you'd like to share more about the place or service, I'd be happy to listen.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-22",
+        "partition": "evaluation",
+        "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+        "output": "It sounds like you had a negative experience with the staff. Can you tell me more about what happened? What were you trying to accomplish or what service were you seeking from them?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-23",
+        "partition": "evaluation",
+        "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+        "output": "It seems like you're referring to a security or personnel record. Based on the information provided, \"Nera23,\" it appears to be a record or code for a specific incident or event. However, without more context or information, it's difficult to provide a detailed explanation.\n\nCould you please provide more context or clarify what you're trying to understand about the record \"Nera23\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-24",
+        "partition": "evaluation",
+        "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+        "output": "It seems like you're expressing satisfaction with the outcomes.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-25",
+        "partition": "evaluation",
+        "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+        "output": "It sounds like you're feeling frustrated with the outcome of something. Can you tell me more about what's going on and what you're trying to achieve?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-26",
+        "partition": "evaluation",
+        "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+        "output": "I can't access the internet to view Table Two. Can I help you with anything else?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-27",
+        "partition": "evaluation",
+        "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+        "output": "It sounds like you're admiring a beautiful design, and the record \"Nera27\" might be related to it. Could you please provide more context or information about the design or the record, so I can better understand and assist you?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-28",
+        "partition": "evaluation",
+        "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+        "output": "It sounds like you're referring to the Nera28, a concept design for a superyacht that has been met with criticism for its unconventional and polarizing appearance. The Nera28 was unveiled in 2022, and it has sparked a lot of debate among boat enthusiasts and design experts.\n\nThe Nera28's design is certainly eye-catching, but it's not to everyone's taste. Its angular lines, unusual shape, and bold color scheme have been described as \"ugly\" by some. However, others see it as a bold and innovative design that pushes the boundaries of traditional yacht design.\n\nWhat are your thoughts on the Nera28's design? Do you think it's a masterpiece or a misstep?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "22-29",
+        "partition": "evaluation",
+        "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+        "output": "It seems like you're referring to a design that incorporates two rectangular panels. Can you provide more context or information about the design, such as its purpose, materials, or any specific features you'd like to know more about?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

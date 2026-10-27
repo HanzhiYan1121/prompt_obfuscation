@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-290",
+  "task": "assertions",
+  "method": "metadata_only",
+  "prompt": "Given a function signature and its docstring, generate unit test cases to verify its correctness.\nGiven a function signature and its docstring, generate unit test cases to verify its correctness.\nGiven a function signature and its docstring, generate unit test cases to verify its correctness. These tests should cover normal usage, edge cases, and potential error conditions. Your tests should be comprehensive and able to identify incorrect implementations. Generate the test cases using Python's unittest framework.",
+  "prompt_sha256": "3c2b15882e600d2ab16ecfaf5d257ab9539db3b90d7976dde1ae75903a4d0195",
+  "benchmark_sha256": "ff92feaba5965c4e394769c22fc8fbaf2d04e59b4f64d6d33ff69ad8ca6984fd",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "80-10",
+      "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\nclass TestOffset10Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_10(5), 13)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_10(-3), 5)\n        \n        # Test the function with zero\n        self.assertEqual(offset_10(0), 8)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_10(1000000), 1000008)\n        \n        # Test the function with a very small integer\n        self.assertEqual(offset_10(-1000000), -999992)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_10(5.5)\n        \n        # Test the function with a string input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_10('hello')\n\n    def test_type_hints(self):\n       ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-11",
+      "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\nclass TestOffset11Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_11(5), 14)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_11(-3), 6)\n        \n        # Test the function with zero\n        self.assertEqual(offset_11(0), 9)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_11(1000000), 1000009)\n        \n        # Test the function with a very small integer\n        self.assertEqual(offset_11(-1000000), -999991)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_11(5.5)\n        \n        # Test the function with a non-numeric input\n        with self.assertRaises(TypeError):\n            offset_11('five')\n\n    def test_type_hints(self):\n        # Test the function with a float input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-12",
+      "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\nclass TestOffset12Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_12(5), 15)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_12(-5), -5)\n        \n        # Test the function with zero\n        self.assertEqual(offset_12(0), 10)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_12(1000000), 1000010)\n        \n        # Test the function with a very small integer\n        self.assertEqual(offset_12(-1000000), -999990)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_12(5.5)\n        \n        # Test the function with a non-numeric input\n        with self.assertRaises(TypeError):\n            offset_12('five')\n\n    def test_type_hints(self):\n        # Test the function with a float input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-13",
+      "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\nclass TestOffset13Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_13(5), 16)\n        # Test the function with a negative integer\n        self.assertEqual(offset_13(-3), 8)\n        # Test the function with zero\n        self.assertEqual(offset_13(0), 11)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_13(1000000), 1000011)\n        # Test the function with a very small integer\n        self.assertEqual(offset_13(-1000000), -998989)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_13(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_13(\"hello\")\n\n    def test_functionality(self):\n        # Test the function with a",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-14",
+      "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\nclass TestOffset14Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_14(10), 15)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_14(-5), 0)\n        \n        # Test the function with zero\n        self.assertEqual(offset_14(0), 5)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_14(1000000), 1000005)\n        \n        # Test the function with a very large negative integer\n        self.assertEqual(offset_14(-1000000), -999995)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_14(5.5)\n        \n        # Test the function with a non-numeric input\n        with self.assertRaises(TypeError):\n            offset_14('five')\n\n    def test_type_hints(self):\n        # Test the function with a",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-15",
+      "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\nclass TestOffset15Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_15(10), 16)\n        # Test the function with a negative integer\n        self.assertEqual(offset_15(-5), -1)\n        # Test the function with zero\n        self.assertEqual(offset_15(0), 6)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_15(1000000), 1000006)\n        # Test the function with a very small integer\n        self.assertEqual(offset_15(-1000000), -999994)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_15(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_15(\"hello\")\n\n    def test_function_name(self):\n        # Test the function name\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-16",
+      "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\nclass TestOffset16Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_16(5), 12)\n        # Test the function with a negative integer\n        self.assertEqual(offset_16(-3), 4)\n        # Test the function with zero\n        self.assertEqual(offset_16(0), 7)\n\n    def test_edge_cases(self):\n        # Test the function with a large positive integer\n        self.assertEqual(offset_16(1000), 1007)\n        # Test the function with a large negative integer\n        self.assertEqual(offset_16(-1000), -993)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_16(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_16(\"five\")\n\n    def test_functionality(self):\n        # Test the function with a specific input to ensure",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-17",
+      "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\nclass TestOffset17Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_17(5), 13)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_17(-3), 5)\n        \n        # Test the function with zero\n        self.assertEqual(offset_17(0), 8)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_17(1000000), 1000008)\n        \n        # Test the function with a very small integer\n        self.assertEqual(offset_17(-1000000), -999992)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_17(5.5)\n        \n        # Test the function with a non-numeric input\n        with self.assertRaises(TypeError):\n            offset_17('hello')\n\n    def test_type_hints(self):\n        # Test the function with a float input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-18",
+      "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\nclass TestOffset18Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_18(5), 14)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_18(-3), 6)\n        \n        # Test the function with zero\n        self.assertEqual(offset_18(0), 9)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_18(1000000), 1000009)\n        \n        # Test the function with a very large negative integer\n        self.assertEqual(offset_18(-1000000), -999991)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_18(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_18(\"hello\")\n\nif __name__ == '__main__':\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-19",
+      "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\nclass TestOffset19Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_19(5), 15)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_19(-5), -5)\n        \n        # Test the function with zero\n        self.assertEqual(offset_19(0), 10)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_19(1000000), 1000010)\n        \n        # Test the function with a very small integer\n        self.assertEqual(offset_19(-1000000), -999990)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_19(5.5)\n        \n        # Test the function with a non-numeric input\n        with self.assertRaises(TypeError):\n            offset_19('five')\n\n    def test_type_hints(self):\n        # Test the function with a float input",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-20",
+      "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\nclass TestOffset20Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test normal usage of the function\n        self.assertEqual(offset_20(5), 16)\n        self.assertEqual(offset_20(-3), 8)\n        self.assertEqual(offset_20(0), 11)\n\n    def test_edge_cases(self):\n        # Test edge cases of the function\n        self.assertEqual(offset_20(0), 11)\n        self.assertEqual(offset_20(-100), 9)\n        self.assertEqual(offset_20(100), 111)\n\n    def test_error_conditions(self):\n        # Test error conditions of the function\n        with self.assertRaises(TypeError):\n            offset_20(\"hello\")  # Test with a string input\n        with self.assertRaises(TypeError):\n            offset_20(3.14)  # Test with a float input\n\n    def test_type_checking(self):\n        # Test if the function returns an integer\n        self.assertIsInstance(offset_20(5), int)\n        self.assertIsInstance(offset_20(-3), int)\n        self.assertIsInstance(offset_20(",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-21",
+      "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\nclass TestOffset21Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_21(10), 15)\n        # Test the function with a negative integer\n        self.assertEqual(offset_21(-5), 0)\n        # Test the function with zero\n        self.assertEqual(offset_21(0), 5)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_21(1000000), 1000005)\n        # Test the function with a very large negative integer\n        self.assertEqual(offset_21(-1000000), -999995)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_21(5.5)\n        # Test the function with a string input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_21('hello')\n\n    def test_type_hints(self):\n        # Test",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-22",
+      "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\nclass TestOffset22Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_22(5), 11)\n        # Test the function with a negative integer\n        self.assertEqual(offset_22(-3), 1)\n        # Test the function with zero\n        self.assertEqual(offset_22(0), 6)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_22(1000000), 1000006)\n        # Test the function with a very large negative integer\n        self.assertEqual(offset_22(-1000000), -999994)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_22(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_22(\"five\")\n\n    def test_function_name(self):\n        # Test the function",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-23",
+      "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\nclass TestOffset23(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test normal usage with positive integers\n        self.assertEqual(offset_23(5), 12)\n        self.assertEqual(offset_23(10), 17)\n        self.assertEqual(offset_23(20), 27)\n\n    def test_edge_cases(self):\n        # Test edge cases with zero and negative integers\n        self.assertEqual(offset_23(0), 7)\n        self.assertEqual(offset_23(-5), 2)\n        self.assertEqual(offset_23(-10), -3)\n\n    def test_type_error(self):\n        # Test type error with non-integer input\n        with self.assertRaises(TypeError):\n            offset_23(\"hello\")\n\n    def test_out_of_range(self):\n        # Test out of range input\n        with self.assertRaises(OverflowError):\n            offset_23(2**31)\n\n    def test_large_input(self):\n        # Test large input\n        self.assertEqual(offset_23(1000000), 1000007)\n\nif __name__ == '__main__':\n    unittest.main()\n``",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-24",
+      "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\nclass TestOffset24Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_24(5), 13)\n        \n        # Test the function with a negative integer\n        self.assertEqual(offset_24(-3), 5)\n        \n        # Test the function with zero\n        self.assertEqual(offset_24(0), 8)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_24(1000000), 1000008)\n        \n        # Test the function with a very large negative integer\n        self.assertEqual(offset_24(-1000000), -999992)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_24(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_24(\"five\")\n\nif __name__ == '__main__':\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-25",
+      "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\nclass TestOffset25Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test normal usage with positive integers\n        self.assertEqual(offset_25(5), 14)\n        self.assertEqual(offset_25(10), 19)\n        self.assertEqual(offset_25(20), 29)\n\n    def test_edge_cases(self):\n        # Test edge cases with zero and negative integers\n        self.assertEqual(offset_25(0), 9)\n        self.assertEqual(offset_25(-5), 4)\n        self.assertEqual(offset_25(-10), -1)\n\n    def test_type_error(self):\n        # Test type error with non-integer input\n        with self.assertRaises(TypeError):\n            offset_25(\"five\")\n\n    def test_value_error(self):\n        # Test value error with very large input\n        with self.assertRaises(OverflowError):\n            offset_25(2**31)\n\n    def test_docstring(self):\n        # Test if the docstring is correct\n        self.assertEqual(offset_25.__doc__, \"Return x plus 9, for any integer x.\")\n\nif __",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-26",
+      "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\nclass TestOffset26Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_26(5), 15)\n        # Test the function with a negative integer\n        self.assertEqual(offset_26(-5), -5)\n        # Test the function with zero\n        self.assertEqual(offset_26(0), 10)\n\n    def test_edge_cases(self):\n        # Test the function with a very large positive integer\n        self.assertEqual(offset_26(1000000), 1000010)\n        # Test the function with a very large negative integer\n        self.assertEqual(offset_26(-1000000), -999990)\n\n    def test_error_conditions(self):\n        # Test the function with a non-integer input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_26(5.5)\n        # Test the function with a string input (should raise a TypeError)\n        with self.assertRaises(TypeError):\n            offset_26('hello')\n\n    def test_type_hints(self):\n        # Test",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-27",
+      "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\nclass TestOffset27Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test the function with a positive integer\n        self.assertEqual(offset_27(5), 16)\n        # Test the function with a negative integer\n        self.assertEqual(offset_27(-3), 8)\n        # Test the function with zero\n        self.assertEqual(offset_27(0), 11)\n\n    def test_edge_cases(self):\n        # Test the function with a very large integer\n        self.assertEqual(offset_27(1000000), 1000011)\n        # Test the function with a very small integer\n        self.assertEqual(offset_27(-1000000), -998989)\n\n    def test_type_error(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_27(5.5)\n\n    def test_input_validation(self):\n        # Test the function with a non-integer input\n        with self.assertRaises(TypeError):\n            offset_27(\"hello\")\n\n    def test_functionality(self):\n        # Test the function with a",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-28",
+      "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\nclass TestOffset28(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test normal usage with positive integers\n        self.assertEqual(offset_28(10), 15)\n        self.assertEqual(offset_28(20), 25)\n        self.assertEqual(offset_28(30), 35)\n\n    def test_edge_cases(self):\n        # Test edge cases with zero and negative integers\n        self.assertEqual(offset_28(0), 5)\n        self.assertEqual(offset_28(-10), -5)\n        self.assertEqual(offset_28(-20), -15)\n\n    def test_type_error(self):\n        # Test type error with non-integer input\n        with self.assertRaises(TypeError):\n            offset_28(\"hello\")\n\n    def test_non_numeric_input(self):\n        # Test non-numeric input\n        with self.assertRaises(TypeError):\n            offset_28([1, 2, 3])\n\n    def test_large_input(self):\n        # Test large input\n        self.assertEqual(offset_28(1000000), 1000005)\n\n    def test_small_input(self):\n        # Test small",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-29",
+      "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\nimport unittest\n\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\nclass TestOffset29Function(unittest.TestCase):\n\n    def test_normal_usage(self):\n        # Test normal usage of the function\n        self.assertEqual(offset_29(5), 11)\n        self.assertEqual(offset_29(-3), 1)\n        self.assertEqual(offset_29(0), 6)\n\n    def test_edge_cases(self):\n        # Test edge cases of the function\n        self.assertEqual(offset_29(0), 6)\n        self.assertEqual(offset_29(-100), -94)\n        self.assertEqual(offset_29(100), 106)\n\n    def test_error_conditions(self):\n        # Test error conditions of the function\n        with self.assertRaises(TypeError):\n            offset_29(\"hello\")  # Test non-integer input\n        with self.assertRaises(TypeError):\n            offset_29(3.14)  # Test non-integer input\n\n    def test_large_input(self):\n        # Test large input\n        self.assertEqual(offset_29(1000000), 1000006)\n\n    def test_negative_input(self):\n        # Test negative input\n        self.assertEqual(offset_",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-250",
+  "task": "fact_support",
+  "method": "wrong_evidence",
+  "prompt": "You are a Python function implementation assistant.\nImplement the function with clear, readable code.\n• Function signature: {func_name}",
+  "prompt_sha256": "ee8d1d407104123f7d57de52bef573816a8090c52b7a3091e288293fe13fffe9",
+  "benchmark_sha256": "6b728be7fc2ecf88667470a860599a365bdbd27dbec95cbd87a1e2971a4914c4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "55-10",
+      "query": "Summary:\n[1] Nera10 owns 47 books.\n[2] Vela10 has 8 bridges.\n2 key facts:\nVela10 has 8 bridges.\nNera10 owns 48 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera10 and Vela10.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera10 = Person(\"Nera10\")\n    vela10 = Person(\"Vela10\")\n\n    # Initial counts\n    nera10.books = 47\n    vela10.bridges = 8\n\n    # Update counts\n    nera10.update_book_count(48)\n    vela10.update_bridge_count(8)\n\n    # Print updated counts\n    print(f\"{nera10.name} owns {nera10.books} books.\")\n    print(f\"{vela10.name} has {vela10.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\nThis code defines a `Person` class with attributes for name, books, and bridges. The `",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-11",
+      "query": "Summary:\n[1] Nera11 owns 50 books.\n[2] Vela11 has 9 bridges.\n2 key facts:\nVela11 has 9 bridges.\nNera11 owns 51 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera11 and Vela11.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The name of the person.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the book count.\n\n        Args:\n            new_books (int): The new number of books.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the bridge count.\n\n        Args:\n            new_bridges (int): The new number of bridges.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects\n    nera11 = Person(\"Nera11\", books=50)\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-12",
+      "query": "Summary:\n[1] Nera12 owns 53 books.\n[2] Vela12 has 10 bridges.\n2 key facts:\nVela12 has 10 bridges.\nNera12 owns 54 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera12 and Vela12.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera12 = Person(\"Nera12\")\n    vela12 = Person(\"Vela12\")\n\n    nera12.update_book_count(54)\n    vela12.update_bridge_count(10)\n\n    print(f\"{nera12.name} owns {nera12.books} books.\")\n    print(f\"{vela12.name} has {vela12.bridges} bridges.\")\n\n\n# Call the function to update counts\nupdate_counts()\n```\n\nIn this code:\n\n*   We define a `Person` class with attributes `name`, `books`, and `bridges`.\n*   We create instances of the `Person` class for Nera12 and Vela12.\n*   We use the `update",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-13",
+      "query": "Summary:\n[1] Nera13 owns 56 books.\n[2] Vela13 has 11 bridges.\n2 key facts:\nVela13 has 11 bridges.\nNera13 owns 57 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera13 and Vela13.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera13 = Person(\"Nera13\")\n    vela13 = Person(\"Vela13\")\n\n    # Initial counts\n    nera13.books = 56\n    vela13.bridges = 11\n\n    # Update counts\n    nera13.update_book_count(57)\n    vela13.update_bridge_count(11)\n\n    # Print updated counts\n    print(f\"{nera13.name} owns {nera13.books} books.\")\n    print(f\"{vela13.name} has {vela13.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\n### Explanation\n\nThis code defines a `Person` class with attributes for name, books, and bridges",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-14",
+      "query": "Summary:\n[1] Nera14 owns 59 books.\n[2] Vela14 has 5 bridges.\n2 key facts:\nVela14 has 5 bridges.\nNera14 owns 60 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera14 and Vela14.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera14 = Person(\"Nera14\")\n    vela14 = Person(\"Vela14\")\n\n    # Initial counts\n    nera14.books = 59\n    vela14.bridges = 5\n\n    # Update counts\n    nera14.update_book_count(60)\n    vela14.update_bridge_count(5)\n\n    # Print updated counts\n    print(f\"{nera14.name} owns {nera14.books} books.\")\n    print(f\"{vela14.name} has {vela14.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\n### Explanation\n\n*   We define a `Person` class with attributes `name`, `books`,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-15",
+      "query": "Summary:\n[1] Nera15 owns 62 books.\n[2] Vela15 has 6 bridges.\n2 key facts:\nVela15 has 6 bridges.\nNera15 owns 63 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera15 and Vela15.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The name of the person.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the book count.\n\n        Args:\n            new_books (int): The new number of books.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the bridge count.\n\n        Args:\n            new_bridges (int): The new number of bridges.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects\n    nera15 = Person(\"Nera15\")\n    vela15 =",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-16",
+      "query": "Summary:\n[1] Nera16 owns 65 books.\n[2] Vela16 has 7 bridges.\n2 key facts:\nVela16 has 7 bridges.\nNera16 owns 66 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera16 and Vela16.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The name of the person.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the book count.\n\n        Args:\n            new_books (int): The new number of books.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the bridge count.\n\n        Args:\n            new_bridges (int): The new number of bridges.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects\n    nera16 = Person(\"Nera16\", books=65, bridges",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-17",
+      "query": "Summary:\n[1] Nera17 owns 68 books.\n[2] Vela17 has 8 bridges.\n2 key facts:\nVela17 has 8 bridges.\nNera17 owns 69 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera17 and Vela17.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera17 = Person(\"Nera17\")\n    vela17 = Person(\"Vela17\")\n\n    nera17.update_book_count(69)\n    vela17.update_bridge_count(8)\n\n    print(f\"{nera17.name} owns {nera17.books} books.\")\n    print(f\"{vela17.name} has {vela17.bridges} bridges.\")\n\n\n# Call the function to update counts\nupdate_counts()\n```\n\nIn this code:\n\n*   We define a `Person` class with attributes `name`, `books`, and `bridges`.\n*   We create instances of the `Person` class for Nera17 and Vela17.\n*   We use the `update",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-18",
+      "query": "Summary:\n[1] Nera18 owns 71 books.\n[2] Vela18 has 9 bridges.\n2 key facts:\nVela18 has 9 bridges.\nNera18 owns 72 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera18 and Vela18.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_person_counts():\n    nera18 = Person(\"Nera18\")\n    vela18 = Person(\"Vela18\")\n\n    # Initial counts\n    nera18.books = 71\n    vela18.bridges = 9\n\n    # Update counts\n    nera18.update_book_count(72)\n    vela18.update_bridge_count(9)\n\n    # Print updated counts\n    print(f\"{nera18.name} owns {nera18.books} books.\")\n    print(f\"{vela18.name} has {vela18.bridges} bridges.\")\n\n\n# Call the function\nupdate_person_counts()\n```\n\n### Explanation\n\nThis code defines a `Person` class with attributes for name, books,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-19",
+      "query": "Summary:\n[1] Nera19 owns 74 books.\n[2] Vela19 has 10 bridges.\n2 key facts:\nVela19 has 10 bridges.\nNera19 owns 75 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera19 and Vela19.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera19 = Person(\"Nera19\")\n    vela19 = Person(\"Vela19\")\n\n    # Initial counts\n    nera19.books = 74\n    vela19.bridges = 10\n\n    # Update counts\n    nera19.update_book_count(75)\n    vela19.update_bridge_count(10)\n\n    # Print updated counts\n    print(f\"{nera19.name} owns {nera19.books} books.\")\n    print(f\"{vela19.name} has {vela19.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\n### Explanation\n\nThis code defines a `Person` class with attributes for name, books, and bridges",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-20",
+      "query": "Summary:\n[1] Nera20 owns 77 books.\n[2] Vela20 has 11 bridges.\n2 key facts:\nVela20 has 11 bridges.\nNera20 owns 78 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera20 and Vela20.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera20 = Person(\"Nera20\")\n    vela20 = Person(\"Vela20\")\n\n    # Update book count for Nera20\n    nera20.update_book_count(78)\n\n    # Update bridge count for Vela20\n    vela20.update_bridge_count(11)\n\n    print(f\"{nera20.name} owns {nera20.books} books.\")\n    print(f\"{vela20.name} has {vela20.bridges} bridges.\")\n\n\n# Call the function to update counts\nupdate_counts()\n```\n\n### Explanation\n\n*   We define a `Person` class with attributes `name`, `books`, and `bridges`.\n*   The `update_book_count`",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-21",
+      "query": "Summary:\n[1] Nera21 owns 80 books.\n[2] Vela21 has 5 bridges.\n2 key facts:\nVela21 has 5 bridges.\nNera21 owns 81 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera21 and Vela21.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The name of the person.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the book count.\n\n        Args:\n            new_books (int): The new number of books.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the bridge count.\n\n        Args:\n            new_bridges (int): The new number of bridges.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects\n    nera21 = Person(\"Nera21\", books=80, bridges",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-22",
+      "query": "Summary:\n[1] Nera22 owns 83 books.\n[2] Vela22 has 6 bridges.\n2 key facts:\nVela22 has 6 bridges.\nNera22 owns 84 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera22 and Vela22.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The person's name.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the number of books the person owns.\n\n        Args:\n            new_books (int): The new number of books the person owns.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the number of bridges the person has.\n\n        Args:\n            new_bridges (int): The new number of bridges the person has.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects for Nera22",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-23",
+      "query": "Summary:\n[1] Nera23 owns 86 books.\n[2] Vela23 has 7 bridges.\n2 key facts:\nVela23 has 7 bridges.\nNera23 owns 87 books.",
+      "output": "### Function to Update Book Count\n\nHere's a Python function that updates the book count for Nera23:\n\n```python\ndef update_book_count(name, book_count):\n    \"\"\"\n    Updates the book count for a given person.\n\n    Args:\n        name (str): The name of the person.\n        book_count (int): The new book count.\n\n    Returns:\n        None\n    \"\"\"\n    # Update the book count for Nera23\n    if name == \"Nera23\":\n        print(f\"{name} now owns {book_count} books.\")\n    else:\n        print(f\"Book count for {name} not updated.\")\n\n# Initial book count for Nera23\nprint(\"Initial book count for Nera23:\", 86)\n\n# Update the book count for Nera23\nupdate_book_count(\"Nera23\", 87)\n```\n\n### Function to Update Bridge Count\n\nHere's a Python function that updates the bridge count for Vela23:\n\n```python\ndef update_bridge_count(name, bridge_count):\n    \"\"\"\n    Updates the bridge count for a given person.\n\n    Args:\n        name (str): The name of the person.\n        bridge_count (int): The new bridge count.\n\n    Returns:\n        None\n    \"\"\"\n    # Update",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-24",
+      "query": "Summary:\n[1] Nera24 owns 89 books.\n[2] Vela24 has 8 bridges.\n2 key facts:\nVela24 has 8 bridges.\nNera24 owns 90 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\n```python\ndef update_counts(nera_books, vela_bridges):\n    \"\"\"\n    Updates the book count and bridge count.\n\n    Args:\n        nera_books (int): The number of books Nera24 owns.\n        vela_bridges (int): The number of bridges Vela24 has.\n\n    Returns:\n        tuple: A tuple containing the updated book count and bridge count.\n    \"\"\"\n    return nera_books, vela_bridges\n\n# Initial counts\nnera_books = 89\nvela_bridges = 8\n\n# Update counts\nnera_books = 90  # Update Nera24's book count\nvela_bridges = 8  # Vela24's bridge count remains the same\n\n# Print the updated counts\nprint(\"Nera24 owns\", nera_books, \"books.\")\nprint(\"Vela24 has\", vela_bridges, \"bridges.\")\n\n# Call the function to update counts\nnera_books, vela_bridges = update_counts(nera_books, vela_bridges)\n\n# Print the updated counts\nprint(\"Updated counts:\")\nprint(\"Nera24 owns\", nera_books,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-25",
+      "query": "Summary:\n[1] Nera25 owns 92 books.\n[2] Vela25 has 9 bridges.\n2 key facts:\nVela25 has 9 bridges.\nNera25 owns 93 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera25 and Vela25.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera25 = Person(\"Nera25\")\n    vela25 = Person(\"Vela25\")\n\n    # Initial counts\n    nera25.books = 92\n    vela25.bridges = 9\n\n    # Update counts\n    nera25.update_book_count(93)\n    vela25.update_bridge_count(10)\n\n    # Print updated counts\n    print(f\"{nera25.name} owns {nera25.books} books.\")\n    print(f\"{vela25.name} has {vela25.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\n### Explanation\n\nThis code defines a `Person` class with attributes for name, books, and bridges",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-26",
+      "query": "Summary:\n[1] Nera26 owns 95 books.\n[2] Vela26 has 10 bridges.\n2 key facts:\nVela26 has 10 bridges.\nNera26 owns 96 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\n```python\ndef update_counts(nera_book_count, vela_bridge_count):\n    \"\"\"\n    Updates the book count and bridge count of Nera26 and Vela26.\n\n    Args:\n        nera_book_count (int): The new book count of Nera26.\n        vela_bridge_count (int): The new bridge count of Vela26.\n\n    Returns:\n        tuple: A tuple containing the updated book count and bridge count.\n    \"\"\"\n    return nera_book_count, vela_bridge_count\n\n# Update the counts\nnera_book_count = 96\nvela_bridge_count = 10\n\n# Print the updated counts\nprint(\"Nera26's updated book count:\", nera_book_count)\nprint(\"Vela26's updated bridge count:\", vela_bridge_count)\n\n# Call the function to update the counts\nupdated_counts = update_counts(nera_book_count, vela_bridge_count)\nprint(\"Updated counts:\", updated_counts)\n```\n\n### Output\n\n```\nNera26's updated book count: 96\nVela26's updated bridge count: 10\nUpdated counts: (96, 10)\n```\n\nThis function takes two arguments, `nera_book_count`",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-27",
+      "query": "Summary:\n[1] Nera27 owns 98 books.\n[2] Vela27 has 11 bridges.\n2 key facts:\nVela27 has 11 bridges.\nNera27 owns 99 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera27 and Vela27.\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n        self.books = 0\n        self.bridges = 0\n\n    def update_book_count(self, new_count):\n        self.books = new_count\n\n    def update_bridge_count(self, new_count):\n        self.bridges = new_count\n\n\ndef update_counts():\n    nera27 = Person(\"Nera27\")\n    vela27 = Person(\"Vela27\")\n\n    # Initial counts\n    nera27.books = 98\n    vela27.bridges = 11\n\n    # Update counts\n    nera27.update_book_count(99)\n    vela27.update_bridge_count(12)\n\n    # Print updated counts\n    print(f\"{nera27.name} has {nera27.books} books and {nera27.bridges} bridges.\")\n    print(f\"{vela27.name} has {vela27.books} books and {vela27.bridges} bridges.\")\n\n\n# Call the function\nupdate_counts()\n```\n\n### Explanation",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-28",
+      "query": "Summary:\n[1] Nera28 owns 101 books.\n[2] Vela28 has 5 bridges.\n2 key facts:\nVela28 has 5 bridges.\nNera28 owns 102 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\n```python\ndef update_counts(nera_books, vela_bridges):\n    \"\"\"\n    Updates the book count and bridge count.\n\n    Args:\n        nera_books (int): The number of books Nera28 owns.\n        vela_bridges (int): The number of bridges Vela28 has.\n\n    Returns:\n        tuple: A tuple containing the updated book count and bridge count.\n    \"\"\"\n    return nera_books, vela_bridges\n\n# Initial counts\nnera_books = 101\nvela_bridges = 5\n\n# Update counts\nnera_books, vela_bridges = update_counts(nera_books, vela_bridges)\n\n# Print updated counts\nprint(f\"Nera28 owns {nera_books} books.\")\nprint(f\"Vela28 has {vela_bridges} bridges.\")\n\n# Update counts with new information\nnera_books = 102\nvela_bridges = 5\nprint(f\"Updated counts: Nera28 owns {nera_books} books and Vela28 has {vela_bridges} bridges.\")\n```\n\n### Output\n\n```\nNera28 owns 101 books.\nV",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-29",
+      "query": "Summary:\n[1] Nera29 owns 104 books.\n[2] Vela29 has 6 bridges.\n2 key facts:\nVela29 has 6 bridges.\nNera29 owns 105 books.",
+      "output": "### Function to Update Book Count and Bridge Count\n\nHere's a Python function that updates the book count and bridge count for Nera29 and Vela29.\n\n```python\nclass Person:\n    def __init__(self, name, books=0, bridges=0):\n        \"\"\"\n        Initialize a Person object.\n\n        Args:\n            name (str): The person's name.\n            books (int, optional): The number of books the person owns. Defaults to 0.\n            bridges (int, optional): The number of bridges the person has. Defaults to 0.\n        \"\"\"\n        self.name = name\n        self.books = books\n        self.bridges = bridges\n\n    def update_book_count(self, new_books):\n        \"\"\"\n        Update the number of books the person owns.\n\n        Args:\n            new_books (int): The new number of books the person owns.\n        \"\"\"\n        self.books = new_books\n\n    def update_bridge_count(self, new_bridges):\n        \"\"\"\n        Update the number of bridges the person has.\n\n        Args:\n            new_bridges (int): The new number of bridges the person has.\n        \"\"\"\n        self.bridges = new_bridges\n\n\ndef main():\n    # Create Person objects for Nera29",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

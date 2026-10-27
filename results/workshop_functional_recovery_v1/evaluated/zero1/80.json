@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-290",
+  "task": "assertions",
+  "method": "zero1",
+  "prompt": "Python Code Generator\nExpand a function signature and brief docstring into a complete Python function with a detailed Google-style docstring and correct implementation logic.\nPython code block containing the function definition, expanded docstring with Args and Returns sections, and the function body.\nPreserve the original function name and signature. Expand the docstring to include 'Args' and 'Returns' sections. Implement the logic described in the docstring. Output only the code block.\nThe user provides a function signature and a short docstring. The model must infer the implementation details from the docstring description and format the output as a complete, runnable Python function.",
+  "prompt_sha256": "5b5d6c1604cbb4ce25213d417dbdb2022a2f4e61efef75afdcaf49f4cc841be7",
+  "benchmark_sha256": "ff92feaba5965c4e394769c22fc8fbaf2d04e59b4f64d6d33ff69ad8ca6984fd",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "80-10",
+      "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_10(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 8.\n\n    Examples:\n        >>> offset_10(5)\n        13\n        >>> offset_10(-3)\n        5\n    \"\"\"\n    return x + 8\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-11",
+      "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_11(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n    \"\"\"\n    return x + 9\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-12",
+      "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_12(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 10.\n\n    Examples:\n        >>> offset_12(5)\n        15\n        >>> offset_12(-3)\n        7\n    \"\"\"\n    return x + 10\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-13",
+      "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_13(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 11.\n    \"\"\"\n    return x + 11\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-14",
+      "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_14(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 5.\n\n    Examples:\n        >>> offset_14(10)\n        15\n        >>> offset_14(-5)\n        0\n    \"\"\"\n    return x + 5\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-15",
+      "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_15(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 6.\n\n    Examples:\n        >>> offset_15(3)\n        9\n        >>> offset_15(-1)\n        5\n    \"\"\"\n    return x + 6\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-16",
+      "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_16(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 7 to x.\n    \"\"\"\n    return x + 7\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-17",
+      "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_17(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 8.\n\n    Examples:\n        >>> offset_17(5)\n        13\n        >>> offset_17(-3)\n        5\n    \"\"\"\n    return x + 8\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-18",
+      "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_18(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 9.\n\n    Examples:\n        >>> offset_18(5)\n        14\n        >>> offset_18(-3)\n        6\n    \"\"\"\n    return x + 9\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-19",
+      "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_19(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 10.\n\n    Examples:\n        >>> offset_19(5)\n        15\n        >>> offset_19(-3)\n        7\n    \"\"\"\n    return x + 10\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-20",
+      "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_20(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 11.\n    \"\"\"\n    return x + 11\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-21",
+      "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_21(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 5.\n\n    Examples:\n        >>> offset_21(10)\n        15\n        >>> offset_21(-5)\n        0\n    \"\"\"\n    return x + 5\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-22",
+      "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_22(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 6.\n\n    Examples:\n        >>> offset_22(5)\n        11\n        >>> offset_22(-3)\n        1\n    \"\"\"\n    return x + 6\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-23",
+      "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_23(x: int) -> int:\n    \"\"\"\n    Return x plus 7, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 7.\n\n    Examples:\n        >>> offset_23(5)\n        12\n        >>> offset_23(-3)\n        4\n    \"\"\"\n    return x + 7\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-24",
+      "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_24(x: int) -> int:\n    \"\"\"\n    Return x plus 8, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 8.\n\n    Examples:\n        >>> offset_24(5)\n        13\n        >>> offset_24(-3)\n        5\n    \"\"\"\n    return x + 8\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-25",
+      "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_25(x: int) -> int:\n    \"\"\"\n    Return x plus 9, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The result of adding 9 to x.\n    \"\"\"\n    return x + 9\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-26",
+      "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_26(x: int) -> int:\n    \"\"\"\n    Return x plus 10, for any integer x.\n\n    Args:\n        x (int): The input integer to be offset.\n\n    Returns:\n        int: The input integer x offset by 10.\n\n    Examples:\n        >>> offset_26(5)\n        15\n        >>> offset_26(-3)\n        7\n    \"\"\"\n    return x + 10\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-27",
+      "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_27(x: int) -> int:\n    \"\"\"\n    Return x plus 11, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 11.\n    \"\"\"\n    return x + 11\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-28",
+      "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_28(x: int) -> int:\n    \"\"\"\n    Return x plus 5, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer x plus 5.\n    \"\"\"\n    return x + 5\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-29",
+      "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_29(x: int) -> int:\n    \"\"\"\n    Return x plus 6, for any integer x.\n\n    Args:\n        x (int): The input integer.\n\n    Returns:\n        int: The input integer plus 6.\n\n    Examples:\n        >>> offset_29(5)\n        11\n        >>> offset_29(-3)\n        1\n    \"\"\"\n    return x + 6\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

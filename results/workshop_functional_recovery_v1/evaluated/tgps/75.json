@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-106",
+  "task": "trial_summary",
+  "method": "tgps",
+  "prompt": "You are an AI assistant that generates formal clinical trial protocols based on brief descriptions.\n\nGiven a short description of a fictional clinical trial, generate a structured protocol document. The output must strictly follow this format:\n\n1.  **Header**: Start the output with \"**Clinical Trial Protocol:**\" on its own line.\n2.  **Title**: A professional title summarizing the drug and condition (e.g., \"Efficacy and Safety of [Drug] in Adults with [Condition]\"). Do not include the study type in the title.\n3.  **Study Type**: Specify the design (e.g., Randomized, Double-Blind, Placebo-Controlled Trial) on a separate line.\n4.  **Objective**: A statement evaluating efficacy and safety, referencing the primary outcome.\n5.  **Study Population/Design**: Include the number of participants, eligibility criteria (specifically age and diagnosis), and intervention details (Drug vs. Placebo). You may structure this with sub-sections for Inclusion/Exclusion criteria or combine them as appropriate for clarity.\n6.  **Methods/Procedures**: Detail randomization, blinding, and treatment administration.\n7.  **Outcome Measures**: List the primary outcome (change in the specified marker) and optionally secondary outcomes like safety or tolerability.\n\nEnsure the tone is professional and medical. Use the specific variables provided in the input (Condition, Drug, Number of Adults, Age Requirement, Marker) to populate the template.",
+  "prompt_sha256": "af498fa6777878604006ff57b0e9659a045d1743946281e59da3f8217b77e5e7",
+  "benchmark_sha256": "a8855825fbd46b01ddb02069f8a72f03ee7a49c1cd65e4120c4c517526ef63d4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "75-10",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition10. It tests Drug10 in 47 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera10.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug10 in Adults with Condition10**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug10 in reducing the levels of marker Nera10 in adults with Condition10, as measured by the change in Nera10 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 47 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 28 years\n  - Diagnosis: Adults diagnosed with Condition10\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug10 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug10 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera10 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-11",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition11. It tests Drug11 in 50 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera11.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug11 in Adults with Condition11\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug11 in reducing the levels of marker Nera11 in adults with Condition11, as measured by the change in Nera11 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 50 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 29 years\n  - Diagnosis: Adults diagnosed with Condition11\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug11 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug11 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera11 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-12",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition12. It tests Drug12 in 53 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera12.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug12 in Adults with Condition12**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug12 in reducing the levels of marker Nera12 in adults with Condition12, as measured by the change in Nera12 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 53 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 30 years\n  - Diagnosis: Adults diagnosed with Condition12\n- **Intervention:**\n  - Drug12: Participants will receive oral administration of Drug12 at a dose of [insert dose] twice daily for 12 weeks.\n  - Placebo: Participants will receive a matching placebo twice daily for 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the Drug12 group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive their assigned treatment at the study site and will be instructed to take the medication",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-13",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition13. It tests Drug13 in 56 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera13.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug13 in Adults with Condition13**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug13 in reducing the levels of marker Nera13 in adults with Condition13, as measured by the change in Nera13 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 56 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 31 years\n  - Diagnosis: Adults diagnosed with Condition13\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug13 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug13 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera13 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-14",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition14. It tests Drug14 in 59 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera14.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug14 in Adults with Condition14\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug14 in reducing the levels of marker Nera14 in adults with Condition14, as measured by the change in Nera14 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 59 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 25 years\n  - Diagnosis: Adults diagnosed with Condition14\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug14 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug14 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera14 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-15",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition15. It tests Drug15 in 62 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera15.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug15 in Adults with Condition15**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug15 in reducing the levels of marker Nera15 in adults with Condition15, as measured by the change in Nera15 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 62 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 26 years\n  - Diagnosis: Adults diagnosed with Condition15\n- **Intervention:**\n  - Drug15: Participants will receive oral administration of Drug15 at a dose of [insert dose] twice daily for 12 weeks.\n  - Placebo: Participants will receive a matching placebo twice daily for 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the Drug15 group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Drug15 or placebo will be administered orally twice daily for 12 weeks.\n\n**Outcome Measures",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-16",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition16. It tests Drug16 in 65 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera16.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug16 in Adults with Condition16\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug16 in reducing the levels of marker Nera16 in adults with Condition16, as measured by the change in Nera16 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 65 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 27 years\n  - Diagnosis: Adults diagnosed with Condition16\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug16 (active treatment) or a placebo (control) for a period of 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the control group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug16 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera16",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-17",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition17. It tests Drug17 in 68 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera17.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug17 in Adults with Condition17**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug17 in reducing the levels of marker Nera17 in adults with Condition17, as measured by the change in Nera17 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 68 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 28 years\n  - Diagnosis: Adults diagnosed with Condition17\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug17 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug17 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera17 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-18",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition18. It tests Drug18 in 71 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera18.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug18 in Adults with Condition18\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug18 in reducing the levels of marker Nera18 in adults with Condition18, as measured by the change in Nera18 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 71 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 29 years\n  - Diagnosis: Adults diagnosed with Condition18\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug18 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug18 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera18 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-19",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition19. It tests Drug19 in 74 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera19.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug19 in Adults with Condition19\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug19 in reducing the levels of marker Nera19 in adults with Condition19, as measured by the change in Nera19 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 74 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 30 years\n  - Diagnosis: Adults diagnosed with Condition19\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug19 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug19 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera19 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-20",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition20. It tests Drug20 in 77 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera20.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug20 in Adults with Condition20**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug20 in reducing the levels of marker Nera20 in adults with Condition20, as measured by the change in Nera20 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 77 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 31 years\n  - Diagnosis: Adults diagnosed with Condition20\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug20 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug20 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera20 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-21",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition21. It tests Drug21 in 80 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera21.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug21 in Adults with Condition21\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug21 in reducing the levels of marker Nera21 in adults with Condition21, as measured by the change in Nera21 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 80 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 25 years\n  - Diagnosis: Condition21, as defined by the presence of [insert diagnostic criteria]\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug21 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug21 or placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera21 levels from baseline to week",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-22",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition22. It tests Drug22 in 83 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera22.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug22 in Adults with Condition22**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug22 in reducing the levels of marker Nera22 in adults with Condition22, as measured by the change in Nera22 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 83 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 26 years\n  - Diagnosis: Adults diagnosed with Condition22\n- **Intervention:**\n  - Drug22: Participants will receive oral administration of Drug22 at a dose of [insert dose] twice daily for 12 weeks.\n  - Placebo: Participants will receive a matching placebo twice daily for 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the Drug22 group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Drug22 or placebo will be administered orally twice daily for 12 weeks.\n\n**Outcome Measures",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-23",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition23. It tests Drug23 in 86 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera23.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug23 in Adults with Condition23**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug23 in reducing the levels of marker Nera23 in adults with Condition23, as measured by the change in Nera23 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 86 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 27 years\n  - Diagnosis: Adults diagnosed with Condition23\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug23 (active treatment) or a placebo (control) for a period of 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the control group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug23 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera23",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-24",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition24. It tests Drug24 in 89 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera24.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug24 in Adults with Condition24\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug24 in reducing the levels of marker Nera24 in adults with Condition24, as measured by the change in Nera24 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 89 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 28 years\n  - Diagnosis: Adults diagnosed with Condition24\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug24 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the Drug24 or placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug24 or placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera24 levels from baseline to week 12\n- **Secondary Outcomes:**\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-25",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition25. It tests Drug25 in 92 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera25.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug25 in Adults with Condition25\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug25 in reducing the levels of marker Nera25 in adults with Condition25, as measured by the change in Nera25 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 92 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 29 years\n  - Diagnosis: Adults diagnosed with Condition25\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug25 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug25 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera25 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-26",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition26. It tests Drug26 in 95 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera26.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug26 in Adults with Condition26\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug26 in reducing the levels of marker Nera26 in adults with Condition26, as measured by the change in Nera26 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 95 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 30 years\n  - Diagnosis: Condition26, as defined by the presence of [insert specific diagnostic criteria]\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug26 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug26 or placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera26 levels from baseline to",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-27",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition27. It tests Drug27 in 98 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera27.",
+      "output": "**Clinical Trial Protocol:**\n\n**Title:** Efficacy and Safety of Drug27 in Adults with Condition27\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:** To evaluate the efficacy and safety of Drug27 in reducing the levels of marker Nera27 in adults with Condition27, as measured by the change in Nera27 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 98 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 31 years\n  - Diagnosis: Condition27, as defined by the presence of [insert specific diagnostic criteria]\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug27 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both participants and investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug27 or placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera27 levels from baseline to",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-28",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition28. It tests Drug28 in 101 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera28.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug28 in Adults with Condition28**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug28 in reducing the levels of marker Nera28 in adults with Condition28, as measured by the change in Nera28 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 101 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 25 years\n  - Diagnosis: Adults diagnosed with Condition28\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug28 (active treatment) or a placebo (control) for a period of 12 weeks.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the control group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug28 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera28",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-29",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition29. It tests Drug29 in 104 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera29.",
+      "output": "**Clinical Trial Protocol:**\n\n**Efficacy and Safety of Drug29 in Adults with Condition29**\n\n**Study Type:**\nRandomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug29 in reducing the levels of marker Nera29 in adults with Condition29, as measured by the change in Nera29 levels from baseline to week 12.\n\n**Study Population/Design:**\n\n- **Number of Participants:** 104 adults\n- **Eligibility Criteria:**\n  - Age: ≥ 26 years\n  - Diagnosis: Adults diagnosed with Condition29\n- **Intervention:**\n  - Participants will be randomly assigned to receive either Drug29 (active treatment) or a placebo.\n\n**Methods/Procedures:**\n\n- **Randomization:** Participants will be randomly assigned to either the active treatment group or the placebo group using a computer-generated randomization schedule.\n- **Blinding:** Both the participants and the investigators will be blinded to the treatment assignments.\n- **Treatment Administration:** Participants will receive either Drug29 or a placebo orally once daily for 12 weeks.\n\n**Outcome Measures:**\n\n- **Primary Outcome:** Change in Nera29 levels from baseline to week 12\n- **",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

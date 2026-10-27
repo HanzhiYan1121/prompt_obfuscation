@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 34,
+    "id": "Prompt417-214",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts417_task_instruction_obf_prompt417_214_tok10",
+    "source_sha256": "776d15aff5062e1447676bce79d090b5a0907b2ae6ab1a88c22b66db9aa04ba0",
+    "source_characters": 949,
+    "eligible": true,
+    "task": "sentiment_suite",
+    "measurement_scope": "SST-2 branch only; remaining benchmark branches untested",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "ecfa348fd9f5f28fd18981e2847ae9b9ff101238c873e065c45db1353016be36",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "34-00",
+        "partition": "calibration",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "Review: I loved every minute; it was wonderful. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-01",
+        "partition": "calibration",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-02",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "Review: The service was excellent and made me very happy. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-03",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-04",
+        "partition": "evidence",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "Review: An outstanding performance, absolutely delightful. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-05",
+        "partition": "evidence",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-06",
+        "partition": "evidence",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-07",
+        "partition": "evidence",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera7",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-08",
+        "partition": "selection",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "Review: What a lovely, enjoyable experience. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-09",
+        "partition": "selection",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-10",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-11",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-12",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "Review: This meal was delicious and perfectly cooked. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-13",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-14",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "Review: The staff were kind and exceptionally helpful. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-15",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-16",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "Review: I feel delighted by the impressive results. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-17",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-18",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "Review: A beautiful design that I really adore. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-19",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-20",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "Review: I loved every minute; it was wonderful. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-21",
+        "partition": "evaluation",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-22",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "Review: The service was excellent and made me very happy. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-23",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-24",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "Review: An outstanding performance, absolutely delightful. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-25",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-26",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "Review: I am thrilled with this fantastic purchase. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-27",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "34-28",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "Review: What a lovely, enjoyable experience. Sentiment: positive",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-29",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "Sentiment: negative",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "34-00",
+        "partition": "calibration",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are trying to accomplish?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-01",
+        "partition": "calibration",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera1\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-02",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a complete answer. Could you please provide more context or clarify what you are asking?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-03",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "I can't provide a response for this question as it seems to be a snippet from a review or a record, and the context is unclear. However, I can provide a general response based on the given information.\n\nThe statement \"The service was awful and made me angry\" is a subjective opinion and can be classified as a sentiment. To classify this sentiment, we can use the following categories:\n\n* Sentiment: Negative\n* Emotion: Anger\n* Topic: Service\n\nPlease let me know if you would like me to assist you further.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-04",
+        "partition": "evidence",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera4\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-05",
+        "partition": "evidence",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "I'm not sure what the question is asking for. Could you provide more context or clarify the question?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-06",
+        "partition": "evidence",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "I don't have enough information to determine the sentiment of the sentence.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-07",
+        "partition": "evidence",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera7",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you mean by \"this useless product\"? Is it a product you purchased, or are you referring to a hypothetical product?\n\nAlso, I'd like to point out that the question seems to be in a format that's similar to the SST2 dataset, which is a sentiment analysis dataset. If that's the case, I'll do my best to provide an answer in the format you're expecting.\n\nAssuming the question is about a product you purchased, here's a possible answer:\n\nCategory: <human>\nValue: <regret>\nReason: <useless product>\n\nPlease let me know if this is what you were looking for or if you need further clarification!",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-08",
+        "partition": "selection",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera8\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-09",
+        "partition": "selection",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "I can't provide a response for this question as it seems to be a snippet from a movie or a book. However, I can provide a general response based on the context.\n\nThe phrase \"What a miserable, unpleasant experience\" is a common expression used to describe a situation or event that is perceived as unpleasant or difficult. It could be related to various aspects of life, such as a bad day, a difficult task, or a challenging situation.\n\nIf you're looking for a more specific answer, could you please provide more context or clarify what you're trying to achieve with this question?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-10",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you are asking?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-11",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "I can't provide a response for this question as it seems to be a snippet from a dataset.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-12",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a complete answer. Could you please provide more context or clarify what you are asking?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-13",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a clear answer. Could you please provide more context or clarify what you are asking?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-14",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "Answer the question in the format: \"<category> <answer>\".\n\nHuman: <answer>",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-15",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are trying to accomplish?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-16",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera16\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-17",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "I'm happy to help! However, I need a bit more information to provide a helpful response. Could you please provide more context or clarify what you're referring to with \"terrible results\" and \"Nera17\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-18",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "I don't have enough information to answer this question.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-19",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "I can't provide a review or a record of a design that you hate. Is there anything else I can help you with?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-20",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are trying to accomplish?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-21",
+        "partition": "evaluation",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"It was dreadful and a total waste of time\" and \"Nera21\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-22",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "I'm happy to help you with the question. However, I need to clarify that I'm assuming the question is related to the TREC dataset, which is a benchmark for text classification tasks. If that's correct, I'll do my best to provide an answer.\n\nThe question is asking for a classification label for the given sentence. Based on the sentence \"The service was excellent and made me very happy,\" I would classify it as:\n\n* Category: Positive\n* Sentiment: Very Positive\n\nPlease let me know if this is what you were looking for!",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-23",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "I can't provide a response for this question as it seems to be a task from the SST2 dataset.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-24",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Record: Nera24\"? This will help me better understand the question and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-25",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "I'm not sure what the question is asking for. Could you provide more context or clarify the question?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-26",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "I don't have enough information to determine the sentiment of the sentence.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-27",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+        "output": "I'm happy to help you with the question. However, I need a bit more information to provide a complete answer. Could you please provide more context or clarify what you are asking?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-28",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "I'm happy to help! However, I need a bit more information to provide a helpful response. Could you please provide more context or clarify what you are referring to with \"SST2\" and \"Nera28\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-29",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "I'm happy to help you with the question. However, I need a bit more information about the context of the question. Could you please provide more details or clarify what you are referring to with \"SST2\" and \"Nera29\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "34-00",
+        "partition": "calibration",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "Based on the review \"I loved every minute; it was wonderful\" and the record \"Nera0\", I'm assuming this is a review of the song \"Nera0\" by the artist SST2. However, I couldn't find any information on an artist or song with this name. Could you provide more context or information about SST2 and the song \"Nera0\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-01",
+        "partition": "calibration",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "Based on the review \"It was dreadful and a total waste of time\" and the record \"Nera1\", I'm assuming this is a review of a movie, likely the 2021 film \"Neruda's Nerves\" or more likely the 2021 film \"Neruda's Nerves\" is not a well-known film, but \"Nera\" is not a well-known film, however, I found a 2021 film \"Nera\" is not well known, but I found a 2021 film \"Neruda's Nerves\" is not well known, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film \"Neruda\" is not the film, but I found a 2021 film",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-02",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "Based on the review \"The service was excellent and made me very happy\" and the record \"Nera2\", I'll provide a response.\n\nSince the review is positive and the record is \"Nera2\", I'll assume this is related to the SST2 test, which is a personality test used to assess the level of neuroticism. \n\nThe score \"Nera2\" suggests that the individual has a relatively low level of neuroticism, which is a good indicator of emotional stability and resilience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-03",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "Based on the SST2 (Sentiment Strength and Subjectivity Task 2) rating system, which assigns a score from 1 to 5, where 1 is very negative and 5 is very positive, and the record Nera3, which is a score of 3, the review is somewhat negative.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-04",
+        "partition": "evidence",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "It seems like you're referring to a movie or a performance, but I'm not aware of any information about a performance with the record \"Nera4\" and the review \"An outstanding performance, absolutely delightful.\" Could you provide more context or clarify what \"Nera4\" refers to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-05",
+        "partition": "evidence",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "It seems like you're referring to a sports game, likely a cricket match. In the SST2, Nera5 had a terrible performance, which was painfully disappointing.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-06",
+        "partition": "evidence",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "Based on the review \"I am thrilled with this fantastic purchase\" and the record \"Nera6\", I'm assuming this is a product review, possibly for a product named \"Nera6\". However, without more context, it's difficult to determine the exact product or category.\n\nIf you could provide more information about the product or context, I can try to provide a more accurate analysis or response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-07",
+        "partition": "evidence",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera7",
+        "output": "Based on the review \"I regret buying this useless product\" and the record \"Nera7\", I'll provide a response.\n\nIt seems like you're expressing dissatisfaction with the product \"Nera7\". Could you please provide more context or details about the product, such as what it is, what you were expecting from it, and what specifically didn't meet your expectations? This will help me better understand your issue and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-08",
+        "partition": "selection",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "Based on the SST2 and Record: Nera8, I'm assuming you're referring to the SST2 (Sentiment Strength and Sentiment Subj) and Nera8 (a sentiment analysis dataset) scores. \n\nThe SST2 dataset is a binary sentiment classification task where the goal is to predict whether a given sentence is positive or negative. The score 'Nera8' seems to be a score from this dataset.\n\nHowever, without more context or information about the sentence you're referring to, it's difficult to provide a precise analysis. Could you provide more context or the sentence you're trying to analyze?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-09",
+        "partition": "selection",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "Based on the SST2 and Record: Nera9, it seems like you're referring to the SST2 (Sentiment Strength and Sentiment Type) score and the Nera9 (a sentiment analysis tool or a specific dataset) results.\n\nThe SST2 score is a measure of the strength and type of sentiment in a text, with scores ranging from -4 to 4. A score of -4 indicates extremely negative sentiment, while a score of 4 indicates extremely positive sentiment.\n\nGiven the SST2 score of Nera9, which is not a standard score, I'll assume it's a score from the SST2 dataset. However, without more context or information about the Nera9 score, it's challenging to provide a precise interpretation.\n\nIf we consider the SST2 score as a general measure of sentiment, a score of Nera9 could be interpreted as follows:\n\n- A score of 2 or higher indicates a positive sentiment.\n- A score of 0 indicates a neutral sentiment.\n- A score of -2 or lower indicates a negative sentiment.\n\nGiven the review \"What a miserable, unpleasant experience,\" it's likely that the SST2 score is negative, which aligns with the sentiment expressed in the review.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-10",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "It seems like you're providing a review of a film, but the text is quite short. However, I can try to provide some general information about the film \"SST2\" or help you expand on your review.\n\nSince I don't have more information about the film, I'll provide some general information about the term \"SST2.\" SST2 can refer to different things, but one possible interpretation is that it's a film, possibly a sequel to the original \"SST\" film. However, without more context, it's challenging to provide a detailed review or information about the movie.\n\nIf you could provide more context or information about the film, I'd be happy to help you expand on your review or provide more details about the movie.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-11",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "Based on the given review and record, it seems that the user has a negative opinion about the film, as indicated by the phrase \"I strongly dislike.\" The record \"Nera11\" is likely a rating or score, but without more context, it's difficult to determine its exact meaning. However, given the negative review, it's possible that \"Nera11\" could be a score of 1 or 1.1 out of 5, but this is speculative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-12",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "Based on the review \"This meal was delicious and perfectly cooked\" and the record \"Nera12\", I'll provide a subjective assessment of the meal. \n\nGiven the review is positive, it's likely that the meal received a high score. However, without more information, it's difficult to determine the exact score.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-13",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "Based on the review \"This meal was disgusting and badly burned,\" I would rate it a 1 out of 5. The reviewer used strong negative language to express their dissatisfaction, indicating a very low rating.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-14",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "Based on the review \"The staff were kind and exceptionally helpful\" and the record \"Nera14\", I'll provide a score for the SST2 (Sentiment Strength and Topicivity 2) model. \n\nThe SST2 model is a binary sentiment analysis model that predicts whether a sentence is positive or negative. \n\nThe review is positive, so I'll assign a score of 1 (positive) for the SST2 model.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-15",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "Based on the review \"The staff were rude and completely unhelpful,\" I would rate the experience as 1/5 stars. The reviewer expresses strong negative emotions towards the staff, indicating a very poor experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-16",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "Based on the SST2 score of 16, it seems you have a positive sentiment towards the subject. However, the score is quite low, indicating that the sentiment might not be extremely strong.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-17",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "Based on the SST2 scores, a score of 17 is considered to be very low. The SST2 is a measure of sentiment intensity, and a score of 17 suggests that the text expresses a very negative sentiment.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-18",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "It seems like you're referring to the SST2, a type of font. However, I need more information to provide a more accurate response. Could you please provide more context or clarify what you're looking for? Are you asking about the font's history, usage, or something else?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-19",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "Based on the SST2 and the review \"An ugly design that I truly hate\" and the record \"Nera19\", I'm assuming you're referring to the Nera19 SST2, a smartphone. However, I need more information to provide a detailed review. Could you please provide more details or context about the Nera19 SST2, such as its features, price, and any other specifications you'd like to know about?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-20",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "Based on the review \"I loved every minute; it was wonderful\" and the record \"Nera20\", I'm assuming this is a review of the album \"Nera20\" by the artist Nera. However, I couldn't find any information on an artist named Nera with an album called \"Nera20\". \n\nIf you could provide more context or information about the artist or the album, I would be happy to help you better.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-21",
+        "partition": "evaluation",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "Based on the review \"It was dreadful and a total waste of time\" and the record \"Nera21\", I'm assuming this is a review of a movie, likely the 2021 film \"Nerazzurmenschen\" or more likely \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however, I found a movie called \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however, I found a movie called \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however, I found a movie called \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however, I found a movie called \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however, I found a movie called \"Nerazzurmenschen\" is not a well-known movie, but \"Nera21\" is not a well-known movie, however,",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-22",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "Based on the review \"The service was excellent and made me very happy,\" I would rate the service as 5 out of 5. The reviewer explicitly states that the service was excellent and made them happy, indicating a very positive experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-23",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "Based on the review \"The service was awful and made me angry,\" I would rate the SST2 score as 2.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-24",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "It seems like you're referring to a sports review, likely a cricket match. However, I need more information to provide a more accurate analysis. Could you please provide more context or specify the teams involved in the match?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-25",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "I can't help with that request.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-26",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "Based on the review \"I am thrilled with this fantastic purchase\" and the record \"Nera26\", I'll provide a general analysis. However, without more context, it's challenging to provide a precise conclusion.\n\nThat being said, here are a few possibilities:\n\n1. **Product Review**: The review could be about a product, possibly a product with the model number \"Nera26\". The reviewer is extremely satisfied with their purchase, indicating a positive experience.\n\n2. **Product Name**: \"Nera26\" could be the name of a product, and the review is a general statement about the product's quality or performance.\n\n3. **Rating System**: SST2 could be a rating system, and \"Nera26\" is the score or rating given to the product or service being reviewed.\n\n4. **Code or ID**: \"Nera26\" could be a unique code or ID assigned to the reviewer or the purchase, and SST2 is a system or platform used to track or manage reviews.\n\nWithout more context or information, it's difficult to provide a more specific conclusion. If you have any additional details or clarification, I'd be happy to help further.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-27",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+        "output": "Based on the review \"I regret buying this useless product\" and the record \"Nera27\", I'll provide a response.\n\nIt seems like you're expressing dissatisfaction with a product you purchased, specifically the Nera27. Could you please provide more context or details about the product and what specifically you didn't like about it? This will help me better understand your concerns and provide a more accurate response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-28",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "Based on the SST2 and the review \"What a lovely, enjoyable experience,\" I would rate this as a positive review.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-29",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "Based on the SST2 score of 2, it seems that the reviewer had a very negative experience. The SST2 score is a measure of sentiment intensity and subjectivity, with higher scores indicating more intense and subjective language. A score of 2 is quite low, suggesting that the reviewer used very strong negative language to describe their experience.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "34-00",
+        "partition": "calibration",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera0",
+        "output": "Based on the SST2 and Record provided, I'll analyze the sentiment.\n\nThe SST2 (Sentiment Strength and Subjectivity Task 2) score is 0.5, which indicates a neutral sentiment. However, the record score is Nera0, which seems to be a typo or an error. Assuming it's a typo and the correct score is \"Ner0\", I'll proceed with the analysis.\n\nThe score \"Ner0\" is likely a typo for \"Near0\" or \"Near 0\", which suggests a very negative sentiment. However, considering the initial statement \"I loved every minute; it was wonderful,\" it's likely that the score is incorrect or the review is sarcastic.\n\nGiven the context, I would guess that the correct sentiment score is likely positive, but the record score suggests a very negative sentiment. If you could provide more context or clarify the record score, I'd be happy to help further.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-01",
+        "partition": "calibration",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera1",
+        "output": "Based on the SST2 and Record: Nera1, it seems like you are referring to the SST2 (Sentiment Strength and Sentiment Score 2) and the Record of the movie \"Nera1\" (which I assume is a typo and you meant \"Neralee\" or possibly \"Neralee\" is not a well-known movie, but \"Nera\" is not a well-known movie, however, I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well known, but I found a movie called \"Neralee\" is not well",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-02",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera2",
+        "output": "It seems like you're referring to the SST2 (Sentiment Strength and Topicivity 2) score, which is a measure of the sentiment of a text. \n\nIn this case, the SST2 score for the sentence \"The service was excellent and made me very happy\" is Nera2, which is a score of 4. \n\nHere's a breakdown of the SST2 scores:\n\n- Nera2: 4 (Very positive)\n- Nera1: 3 (Positive)\n- Nera0: 2 (Neutral)\n- Nera-1: 1 (Negative)\n- Nera-2: 0 (Very negative)\n\nSo, the SST2 score of 4 indicates that the sentence is very positive.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-03",
+        "partition": "calibration",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera3",
+        "output": "It seems like you're referring to the SST2 (Sentiment Strength and Topicivity 2) score, which is a measure of the strength and direction of sentiment in a text. \n\nIn this case, the SST2 score for the sentence \"The service was awful and made me angry\" is Nera3. \n\nHowever, I couldn't find any information on the score \"Nera3\". It seems like it might be a typo or an incorrect score. \n\nCould you please provide more context or clarify what you mean by \"Nera3\"?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-04",
+        "partition": "evidence",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera4",
+        "output": "It seems like you're referring to a movie or a performance, but I'm not sure which one. However, I can try to help you identify it.\n\nSST2 is a rating system, and Nera4 is a score. Based on my knowledge, I found that SST2 is a rating system used in Singapore, and Nera4 could be a score given by the Singapore Symphony Talent Company (SST) or the National Entertainment and Arts Society (Nera) in Singapore.\n\nCould you provide more context or information about the performance or the event you're referring to? I'll do my best to help you identify the movie or performance.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-05",
+        "partition": "evidence",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera5",
+        "output": "It seems like you're referring to the Sports Sentimental Score (SST2) and the record of a team or player, Nera5. However, I need more information to provide a more accurate analysis.\n\nCould you please provide more context or details about Nera5, such as the sport, league, or competition they are participating in? This will help me better understand the situation and provide a more informed response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-06",
+        "partition": "evidence",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera6",
+        "output": "Based on the review \"I am thrilled with this fantastic purchase\" and the record \"Nera6\", I'm assuming this is a product review, possibly for a product named \"Nera6\". However, I couldn't find any information on a product named \"Nera6\". Could you provide more context or information about the product or the company that made it?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-07",
+        "partition": "evidence",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera7",
+        "output": "Based on the review \"I regret buying this useless product\" and the record \"Nera7\", I'll provide an analysis.\n\nThe review is negative, indicating that the product did not meet the customer's expectations. The customer is expressing dissatisfaction with the product's functionality or value.\n\nThe record \"Nera7\" could be a product name, a model number, or a code associated with the product. Without more context, it's difficult to determine the exact nature of the product.\n\nTo provide a more accurate analysis, I would need more information about the product, such as its category, features, or the customer's specific complaints.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-08",
+        "partition": "selection",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera8",
+        "output": "It seems like you're referring to the SST2 or SST-2, which is a sentiment intensity score. The score you provided, Nera8, doesn't seem to be a valid SST-2 score. The SST-2 is a measure of sentiment intensity, with scores ranging from -4 to 4, where:\n\n-4 is extremely negative\n-3 is very negative\n-2 is negative\n-1 is slightly negative\n0 is neutral\n1 is slightly positive\n2 is positive\n3 is very positive\n4 is extremely positive\n\nCould you provide more context or clarify what you're trying to achieve with the SST-2 score Nera8?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-09",
+        "partition": "selection",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera9",
+        "output": "It seems like you're referring to the SST2 sentiment analysis. Based on the review \"What a miserable, unpleasant experience\" and the record \"Nera9\", I would classify the sentiment as negative. The words \"miserable\" and \"unpleasant\" both have strong negative connotations, indicating a low score on the SST2 scale.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-10",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+        "output": "It seems like you're trying to rate a movie. Based on the information provided, it appears that you're giving the movie a score of 10 out of 10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-11",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+        "output": "Based on the given SST2 score, I would rate the film as strongly negative. The SST2 score is a sentiment intensity analyzer that rates the sentiment of a text as strongly negative (-2), slightly negative (-1), neutral (0), slightly positive (1), or strongly positive (2).",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-12",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+        "output": "It seems like you're trying to keep a record of your dining experiences. Based on the review \"This meal was delicious and perfectly cooked\" and the record \"Nera12\", I'll assume that \"Nera12\" is the name of the restaurant or the dish you had. Is there anything else you'd like to add to your review or record?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-13",
+        "partition": "evaluation",
+        "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+        "output": "Based on the review \"This meal was disgusting and badly burned,\" I would rate it as a 1 out of 5. The reviewer used strong negative language to describe the meal, indicating a very low satisfaction level.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-14",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+        "output": "Based on the SST2 (Sentiment Strength and Sentiment Subj) score of 4.5, the sentiment is positive.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-15",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+        "output": "Based on the SST2 (Sentiment Strength and Sentiment Type) score of 2, which is a negative score, the sentiment of the review is negative. The score of 2 indicates that the review is moderately negative.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-16",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+        "output": "It seems like you're referring to the SST2 (Stanford Sentiment Treebank Treebank) dataset, which is a collection of text data used for sentiment analysis tasks. The SST2 dataset is a binary sentiment classification task, where the goal is to classify sentences as either positive or negative.\n\nThe sentence \"I feel delighted by the impressive results\" is a positive sentence, which would likely be labeled as 1 (positive) in the SST2 dataset.\n\nThe \"Record: Nera16\" part suggests that the sentence is from the Nera16 dataset, which is a subset of the SST2 dataset.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-17",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+        "output": "Based on the SST2 score of 17, it seems you have a negative sentiment towards the results. The SST2 score is a measure of sentiment intensity, with higher scores indicating stronger negative sentiment. A score of 17 is quite high, indicating a strong negative sentiment.\n\nTo provide a more detailed analysis, I would need more context about the situation or the results that led to this sentiment. However, based on the information provided, it appears that you are quite dissatisfied with the outcome.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-18",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+        "output": "It seems like you're referring to the SST2 or possibly the Nera18, but without more context, it's hard to provide a precise review. However, I can try to provide some general information about these products.\n\nThe SST2 is a type of smart speaker or a smart display, but I couldn't find any specific information about it. Could you please provide more context or details about the SST2 you're referring to?\n\nThe Nera18, on the other hand, seems to be a smartphone model. If you're looking for a review of this device, I can try to provide some general information about it.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-19",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+        "output": "Based on the SST2 and Record: Nera19, I'm assuming you're referring to the SST2 (SentiStrength) sentiment analysis tool and the Record: Nera19 dataset.\n\nThe SST2 dataset is a binary sentiment classification task, where the goal is to predict whether a given sentence is positive or negative. The Record: Nera19 dataset is a collection of labeled sentences with their corresponding sentiment labels.\n\nGiven the sentence \"An ugly design that I truly hate,\" the sentiment analysis would likely classify it as negative, since the word \"hate\" is a strong indicator of a negative sentiment.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-20",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+        "output": "Based on the SST2 score of 20, it seems you have a very positive sentiment towards the experience. The SST2 score is a measure of sentiment intensity and subjectivity, with higher scores indicating more intense and subjective experiences. A score of 20 is quite high, suggesting that you found the experience to be extremely enjoyable and perhaps even life-changing.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-21",
+        "partition": "evaluation",
+        "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+        "output": "Based on the SST2 score of 2, it seems that you had a very negative experience. The SST2 score is a measure of sentiment intensity and subjectivity, with higher scores indicating more intense and subjective language.\n\nIn this case, the score of 2 suggests that your review was extremely negative, with words like \"dreadful\" and \"total waste of time\" indicating a strong sense of dislike or disappointment.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-22",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+        "output": "Based on the review \"The service was excellent and made me very happy,\" I would rate the SST2 score as 2.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-23",
+        "partition": "evaluation",
+        "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+        "output": "Based on the review \"The service was awful and made me angry,\" I would rate the SST2 score as 2.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-24",
+        "partition": "evaluation",
+        "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+        "output": "It seems like you're referring to a movie or a show, but I'm not aware of any information about \"Nera24\" or \"SST2\". Could you provide more context or details about what SST2 and Nera24 are?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-25",
+        "partition": "evaluation",
+        "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+        "output": "It seems like you're referring to the movie \"SST2\" or possibly a sports game. However, I need more information to provide a more accurate answer.\n\nCould you please provide more context or clarify what SST2 stands for? Is it a movie, a sports game, or something else?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-26",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+        "output": "Based on the review \"I am thrilled with this fantastic purchase\" and the record \"Nera26\", I'll provide some general information. \n\nSince the record \"Nera26\" is not a well-known song or album, I'll assume it might be a unique or lesser-known track. However, I can try to provide some general information about the review.\n\nThe review \"I am thrilled with this fantastic purchase\" suggests that the person is extremely satisfied with their purchase. The use of the word \"thrilled\" implies a strong positive emotion, indicating that the product or service met or exceeded their expectations.\n\nIf you could provide more context or information about the purchase, I might be able to provide a more specific answer.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-27",
+        "partition": "evaluation",
+        "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+        "output": "Based on the review \"I regret buying this useless product\" and the record \"Nera27\", I'll provide an analysis.\n\nThe review is negative, indicating that the product did not meet the customer's expectations. The customer is expressing dissatisfaction with the product's functionality or value.\n\nThe record \"Nera27\" could be a product code, serial number, or a unique identifier associated with the product. It might be used by the company to track customer feedback or to identify the product in their database.\n\nTo provide a more accurate analysis, I would need more information about the product, such as its category, features, and the customer's specific complaints. However, based on the given information, it appears that the customer is unhappy with the product's performance or value.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-28",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+        "output": "It seems like you're referring to the SST2, which is a sentiment analysis dataset. The SST2 dataset is a binary sentiment classification task where the goal is to predict whether a given sentence is positive or negative.\n\nIn this case, the review \"What a lovely, enjoyable experience\" is classified as:\n\nRecord: Nera28 (which is likely a label or ID for this specific review)\n\nGiven the content of the review, I would predict that the sentiment is positive. The words \"lovely\" and \"enjoyable\" both have positive connotations, indicating that the experience was pleasant and satisfying.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "34-29",
+        "partition": "evaluation",
+        "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+        "output": "It seems like you're referring to the SST2 sentiment analysis dataset. SST2 is a binary sentiment classification task where the goal is to predict whether a given sentence is positive or negative.\n\nThe sentence \"What a miserable, unpleasant experience.\" is classified as negative.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

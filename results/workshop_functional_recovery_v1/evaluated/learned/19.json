@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-103",
+  "task": "feedback_math",
+  "method": "learned",
+  "prompt": "Solve the math problem step by step, then review your draft answer and feedback to give the final answer.\nFinal Answer: [Your final answer here]\nSolve the math problem step by step, then review your draft answer and feedback to give the final answer.",
+  "prompt_sha256": "4f7964b4d6423018dd1a647402db02f76604ecacec70e10b0ad8063b56bebb68",
+  "benchmark_sha256": "f0800de2512f465c67839b43f1978c3b009bfb8e557592fa45dce64710d5d9c0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "19-10",
+      "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 47 and 8 together.\nStep 2:  To do this, we can simply add the numbers together: 47 + 8 = ?\n\nDraft answer: 55\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from the draft answer to get the correct sum.\n\nFinal answer: 53",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-11",
+      "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 50 and 9 together.\nStep 2:  To do this, we can simply add the numbers together: 50 + 9 = ?\n\nDraft answer: 59\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from the draft answer to get the correct sum.\n\nFinal answer: 59 - 2 = 57",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-12",
+      "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 53 and 10 together.\n\nStep 2:  To do this, we can simply add the numbers together: 53 + 10.\n\nStep 3:  We can start by adding the tens place: 50 + 10 = 60.\n\nStep 4:  Then, we add the ones place: 3 + 0 = 3.\n\nStep 5:  Finally, we combine the tens and ones place to get the final answer.\n\nDraft answer: 63\n\nReview of draft answer: The draft answer is correct. The sum of 53 and 10 is indeed 63.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-13",
+      "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 56 and 11 together.\n\nStep 2:  To do this, we can simply add the numbers together: 56 + 11.\n\nStep 3:  We can start by adding the tens place: 50 + 10 = 60.\n\nStep 4:  Then, we add the ones place: 6 + 1 = 7.\n\nStep 5:  Now, we combine the tens and ones place to get the final sum: 60 + 7 = 67.\n\nStep 6:  Therefore, the correct sum is 67.\n\nFinal Answer: The final answer is 67.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-14",
+      "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 59 and 5 together.\n\nStep 2:  To do this, we can simply add the numbers together: 59 + 5 = ?\n\nStep 3:  Since 59 is a two-digit number and 5 is a single-digit number, we can add them together by aligning the numbers and adding the digits in the ones place and the tens place separately.\n\nStep 4:  In the ones place, we have 9 + 5 = 14. Since we can't have a two-digit number in the ones place, we carry the 10 over to the tens place.\n\nStep 5:  In the tens place, we have 50 + 10 (from the carry) + 5 = 65.\n\nStep 6:  Therefore, the sum of 59 and 5 is 64.\n\nDraft answer: 64\n\nReview of draft answer: The draft answer is correct.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-15",
+      "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 62 and 6 together.\nStep 2:  To do this, we can simply add the numbers together: 62 + 6 = ?\n\nDraft answer: 68\n\nReview of draft answer: \nSince the previous answer was 70, which is two too large, we need to subtract 2 from the previous answer to get the correct answer. \n\nFinal answer: 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-16",
+      "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 65 and 7 together.\nStep 2:  To do this, we can simply add the numbers together: 65 + 7 = ?\n\nDraft answer: 72\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from our draft answer to get the correct sum.\n\nFinal answer: 70",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-17",
+      "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 68 and 8 together.\nStep 2:  To do this, we can simply add the numbers together: 68 + 8 = ?\n\nDraft answer: 76\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from the draft answer to get the correct sum.\n\nFinal answer: 74",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-18",
+      "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 71 and 9 together.\nStep 2:  To do this, we can simply add the numbers together: 71 + 9 = ?\n\nDraft answer: 80\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from the draft answer to get the correct sum.\n\nFinal answer: 80 - 2 = 78",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-19",
+      "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 74 and 10 together.\nStep 2:  To do this, we can simply add the numbers together: 74 + 10 = ?\n\nDraft answer: 84\n\nReview of draft answer: \nSince the previous answer was two too large, we need to subtract 2 from our draft answer to get the correct sum.\n\nFinal answer: 84 - 2 = 82",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-20",
+      "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 77 and 11 together.\n\nStep 2:  To do this, we can simply add the numbers as they are, since they are both whole numbers.\n\nStep 3:  77 + 11 = ?\n\nStep 4:  To find the sum, we can count up 77 and then add 11 more.\n\nStep 5:  Counting up 77 and adding 11 gives us 88.\n\nStep 6:  Therefore, the correct sum is 88.\n\nDraft answer: 88\n\nReview of draft answer: The draft answer is correct.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-21",
+      "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 80 and 5 together.\n\nStep 2:  To do this, we can simply add the numbers together: 80 + 5 = ?\n\nStep 3:  Since 80 is a large number and 5 is a small number, we can start by adding 5 to 80.\n\nStep 4:  We can do this by counting up 5 numbers from 80: 80, 81, 82, 83, 84, 85.\n\nStep 5:  So, 80 + 5 = 85.\n\nDraft answer: 80 + 5 = 85.\n\nReview of draft answer: The draft answer is correct. It matches the correct solution to the problem.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-22",
+      "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 83 and 6 together.\n\nStep 2:  To do this, we can simply add the numbers together: 83 + 6.\n\nStep 3:  We can start by adding the tens place: 80 + 0 = 80.\n\nStep 4:  Then, we add the ones place: 3 + 6 = 9.\n\nStep 5:  Finally, we combine the tens and ones place to get the final sum: 80 + 9 = 89.\n\nDraft answer: 89\n\nReview of draft answer: The draft answer is correct.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-23",
+      "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 86 and 7 together.\n\nStep 2:  To do this, we can simply add the numbers together: 86 + 7 = ?\n\nStep 3:  We can start by adding the tens place: 80 + 0 = 80.\nStep 4:  Then, we add the ones place: 6 + 7 = 13.\n\nStep 5:  Now, we combine the tens and ones place: 80 + 13 = 93.\n\nStep 6:  Therefore, the correct sum is 93.\n\nDraft answer: 86 + 7 = 93.\n\nReview of draft answer: The draft answer is correct.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-24",
+      "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 89 and 8 together.\nStep 2:  To do this, we can simply add the numbers together: 89 + 8 = ?\n\nDraft answer: 97\n\nReview of draft answer: \nSince the previous answer was 99, which is two too large, we need to subtract 2 from the draft answer to get the correct sum.\n\nFinal answer: 97",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-25",
+      "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 92 and 9 together.\n\nStep 2:  To do this, we can simply add the numbers together: 92 + 9 = ?\n\nStep 3:  We can start by adding the tens place: 90 + 0 = 90.\n\nStep 4:  Then, we add the ones place: 2 + 9 = 11.\n\nStep 5:  Finally, we combine the tens and ones place to get the final answer: 90 + 11 = 101.\n\nDraft answer: 101\n\nReview of draft answer: The draft answer is correct. It is the sum of 92 and 9.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-26",
+      "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 95 and 10 together.\n\nStep 2:  To do this, we can simply add the numbers together: 95 + 10.\n\nStep 3:  When adding numbers, we can start by adding the tens place (90 + 10) and then add the ones place (5 + 0).\n\nStep 4:  The tens place addition is 90 + 10 = 100.\n\nStep 5:  The ones place addition is 5 + 0 = 5.\n\nStep 6:  Now, we combine the tens and ones place results to get the final sum: 100 + 5 = 105.\n\nStep 7:  Therefore, the correct sum is 105.\n\nFinal Answer: The final answer is 105.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-27",
+      "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 98 and 11 together.\n\nStep 2:  To do this, we can simply add the numbers together: 98 + 11.\n\nStep 3:  We can start by adding the tens place: 90 + 10 = 100.\n\nStep 4:  Then, we add the ones place: 8 + 1 = 9.\n\nStep 5:  Now, we combine the results of the tens and ones place: 100 + 9 = 109.\n\nStep 6:  Therefore, the sum of 98 and 11 is 109.\n\nDraft answer: 109\n\nReview of draft answer: The draft answer is correct.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-28",
+      "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 101 and 5 together.\n\nStep 2:  To do this, we can simply add the numbers together: 101 + 5 = ?\n\nStep 3:  We can start by adding the ones place: 1 + 5 = 6.\n\nStep 4:  Then, we add the tens place: 100 + 0 = 100.\n\nStep 5:  Now, we combine the ones and tens places: 100 + 6 = 106.\n\nStep 6:  Therefore, the correct sum is 106.\n\nFinal Answer: The final answer is 106.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-29",
+      "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+      "output": "Step 1:  We need to add 104 and 6 together.\n\nStep 2:  To do this, we can simply add the numbers together: 104 + 6.\n\nStep 3:  We can start by adding the hundreds place (100) and the ones place (4) of the first number (104) with the ones place (6) of the second number.\n\nStep 4:  The hundreds place remains the same (100), and the ones place becomes 10 (4 + 6 = 10).\n\nStep 5:  Now we have 110, and we just need to add the remaining 4 from the hundreds place of the first number to the tens place.\n\nStep 6:  So, 110 + 4 = 114.\n\nStep 7:  Therefore, the sum of 104 and 6 is 110.\n\nDraft answer: 110",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

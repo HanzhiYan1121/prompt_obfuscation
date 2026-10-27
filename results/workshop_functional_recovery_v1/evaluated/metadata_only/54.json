@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-247",
+  "task": "summary_support",
+  "method": "metadata_only",
+  "prompt": "Your task is to assess the factuality of each summary sentence across four categories:\nProvide your answer in JSON format.",
+  "prompt_sha256": "5d15fe73910736cb90adac6dccfe11d00b71edc613ea91d2f2c59507d6d7b2f1",
+  "benchmark_sha256": "bde7b307b1506ea30973c9cc7f00677a65ca7b7a9857748c573ebd71f43ec91a",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "54-10",
+      "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera10 owns 47 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela10 has 9 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 8 bridges, not 9.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-11",
+      "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera11 owns 50 books\": \"TRUE\",\n    \"Vela11 has 10 bridges\": \"PARTIALLY_TRUE\" \n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-12",
+      "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera12 owns 53 books.\": {\n      \"category\": \"neutral\",\n      \"factuality\": \"unknown\"\n    },\n    \"Vela12 has 11 bridges.\": {\n      \"category\": \"neutral\",\n      \"factuality\": \"unknown\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-13",
+      "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera13 owns 56 books\": \"TRUE\",\n    \"Vela13 has 12 bridges\": \"FALSE\"\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-14",
+      "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera14 owns 59 books\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    },\n    \"Vela14 has 6 bridges\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-15",
+      "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera15 owns 62 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela15 has 7 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 6 bridges, not 7.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-16",
+      "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera16 owns 65 books\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela16 has 8 bridges\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 7 bridges, not 8.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-17",
+      "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera17 owns 68 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela17 has 9 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 8 bridges, not 9.\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-18",
+      "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera18 owns 71 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela18 has 10 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-19",
+      "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera19 owns 74 books.\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    },\n    \"Vela19 has 11 bridges.\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-20",
+      "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera20 owns 77 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela20 has 12 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 11 bridges, not 12.\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-21",
+      "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera21 owns 80 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela21 has 6 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 5 bridges, not 6.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-22",
+      "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera22 owns 83 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela22 has 7 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 6 bridges, not 7.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-23",
+      "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera23 owns 86 books.\": {\n      \"category\": \"Personal/Ownership\",\n      \"factuality\": \"TRUE\"\n    },\n    \"Vela23 has 8 bridges.\": {\n      \"category\": \"Infrastructure/Transportation\",\n      \"factuality\": \"UNVERIFIED\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-24",
+      "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera24 owns 89 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"unknown\"\n    },\n    \"Vela24 has 9 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"unknown\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-25",
+      "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera25 owns 92 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela25 has 10 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-26",
+      "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera26 owns 95 books.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"true\"\n    },\n    \"Vela26 has 11 bridges.\": {\n      \"category\": \"entertainment\",\n      \"factuality\": \"false\"  # The original statement said 10 bridges, not 11.\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-27",
+      "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera27 owns 98 books\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    },\n    \"Vela27 has 12 bridges\": {\n      \"category\": \"general knowledge\",\n      \"factuality\": \"unknown\"\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-28",
+      "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera28 owns 101 books\": \"TRUE\",\n    \"Vela28 has 6 bridges\": \"FALSE\"\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-29",
+      "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+      "output": "{\n  \"factuality\": {\n    \"Nera29 owns 104 books.\": {\n      \"category\": \"Personal/Ownership\",\n      \"factuality\": \"TRUE\"\n    },\n    \"Vela29 has 7 bridges.\": {\n      \"category\": \"Infrastructure/Transportation\",\n      \"factuality\": \"PARTIALLY_TRUE\"  # The original statement said 6 bridges, but the summary says 7 bridges.\n    }\n  }\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-327",
+  "task": "split_string",
+  "method": "oracle_paired",
+  "prompt": "Task: Given a source code snippet in one programming language, rewrite it into an equivalent program in a different programming language while preserving the original functionality.\nOutput:",
+  "prompt_sha256": "429a4ae300b41f02cf0b5e1af672236a823687cb9976a3571ae3ff40807c9fe2",
+  "benchmark_sha256": "678e0413374968ae40ad5ddaeeb2961179934c8cff66b1dd63d286181bba7f9b",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "56-10",
+      "query": "SPLIT_STRING(string=\"klmnopqrstuv\", part_count=3)",
+      "output": "**Python Implementation**\n```python\ndef split_string(s, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        s (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings, each of equal length.\n    \"\"\"\n    length = len(s)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(s[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"klmnopqrstuv\", 3))  # Output: ['klmnop', 'qrstu', 'v']\n```\n\n**Java Implementation**\n```java\npublic class Main {\n    public static String[] splitString(String s, int partCount) {\n        /**\n         * Splits a given string into equal parts.\n         *\n         * @param s The input string to be split.\n         * @param partCount The number of parts to split the string into.\n         *",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-11",
+      "query": "SPLIT_STRING(string=\"lmnopqrstuvwxyzabcde\", part_count=4)",
+      "output": "**Python Implementation**\n\nHere's the equivalent Python function:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings, each of equal length.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"lmnopqrstuvwxyzabcde\", 4))\n```\n\n**Java Implementation**\n\nHere's the equivalent Java function:\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"lmnopqrstuvwxyzabcde\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-12",
+      "query": "SPLIT_STRING(string=\"mnop\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size\n        if i == part_count - 1:\n            # Handle the last part if the string length is not perfectly divisible by part_count\n            end = length\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"mnop\", 2))  # Output: ['mn', 'op']\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"mnop\", 2));  // Output: [mn, op]\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-13",
+      "query": "SPLIT_STRING(string=\"nopqrstuv\", part_count=3)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size\n        if i == part_count - 1:\n            # Handle the last part if the string length is not perfectly divisible by part_count\n            end = length\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"nopqrstuv\", 3))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"nopqrstuv\", 3));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        /**\n         * Splits a given string into equal parts.\n         *\n         * @param string The input string",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-14",
+      "query": "SPLIT_STRING(string=\"opqrstuvwxyzabcd\", part_count=4)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"opqrstuvwxyzabcd\", 4))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"opqrstuvwxyzabcd\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n       ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-15",
+      "query": "SPLIT_STRING(string=\"pqrstuvwxy\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"pqrstuvwxy\", 2))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"pqrstuvwxy\", 2));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-16",
+      "query": "SPLIT_STRING(string=\"qrstuv\", part_count=3)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"qrstuv\", 3))  # Output: ['q', 'rs', 'tuv']\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"qrstuv\", 3));  // Output: [q, rs, tuv]\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length /",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-17",
+      "query": "SPLIT_STRING(string=\"rstuvwxyzabc\", part_count=4)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"rstuvwxyzabc\", 4))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"rstuvwxyzabc\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n       ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-18",
+      "query": "SPLIT_STRING(string=\"stuvwxyz\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"stuvwxyz\", 2))  # Output: ['stuv', 'wxzy']\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"stuvwxyz\", 2));  // Output: [stuv, wxzy]\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-19",
+      "query": "SPLIT_STRING(string=\"tuvwxyzabcdefgh\", part_count=3)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"tuvwxyzabcdefgh\", 3))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"tuvwxyzabcdefgh\", 3));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n       ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-20",
+      "query": "SPLIT_STRING(string=\"uvwxyzab\", part_count=4)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"uvwxyzab\", 4))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"uvwxyzab\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n        int start",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-21",
+      "query": "SPLIT_STRING(string=\"vwxyza\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"vwxyza\", 2))  # Output: ['vw', 'xyzaz']\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"vwxyza\", 2));  // Output: [vw, xyzaz]\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-22",
+      "query": "SPLIT_STRING(string=\"wxyzabcdefgh\", part_count=3)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"wxyzabcdefgh\", 3))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"wxyzabcdefgh\", 3));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n       ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-23",
+      "query": "SPLIT_STRING(string=\"xyzabcdefghijklmnopq\", part_count=4)",
+      "output": "**Python Implementation**\n```python\ndef split_string(s, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        s (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings, each of equal length.\n    \"\"\"\n    length = len(s)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(s[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"abcdefghijklmnopqrstuvwxyz\", 4))\n# Output: ['abcdefgh', 'ijklmnop', 'qrstuv', 'wxyz']\n```\n\n**Java Implementation**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"abcdefghijklmnopqrstuvwxyz\", 4));\n    }\n\n    public static String[] splitString(String s, int partCount) {\n        int length = s.length();\n        int partSize = length / partCount;\n        int remainder =",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-24",
+      "query": "SPLIT_STRING(string=\"yzab\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"yzab\", 2))  # Output: ['yz', 'ab']\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"yzab\", 2));  // Output: [yz, ab]\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-25",
+      "query": "SPLIT_STRING(string=\"zabcdefgh\", part_count=3)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"zabcdefgh\", 3))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"zabcdefgh\", 3));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[partCount];\n        int start",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-26",
+      "query": "SPLIT_STRING(string=\"abcdefghijklmnop\", part_count=4)",
+      "output": "**Python Implementation**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings, each of equal length.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"abcdefghijklmnop\", 4))\n```\n\n**Java Implementation**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"abcdefghijklmnop\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n\n        String[] parts = new String[partCount];\n        int",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-27",
+      "query": "SPLIT_STRING(string=\"bcdefghijk\", part_count=2)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size\n        if i == part_count - 1:\n            # Handle the last part if the string length is not perfectly divisible by part_count\n            end = length\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"bcdefghijk\", 2))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"bcdefghijk\", 2));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        String[] parts",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-28",
+      "query": "SPLIT_STRING(string=\"cdefgh\", part_count=3)",
+      "output": "**Python Implementation**\n\nHere's the equivalent Python function to split a string into equal parts:\n\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of strings, each representing an equal part of the input string.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(part_count, int):\n        raise TypeError(\"Input must be a string and part_count must be an integer.\")\n    if part_count <= 0:\n        raise ValueError(\"part_count must be greater than 0.\")\n\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n\n    parts = []\n    start = 0\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\n# Example usage:\nprint(split_string(\"cdefgh\", 3))  # Output: ['cd', 'ef', 'gh']\n```\n\n**Java Implementation",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "56-29",
+      "query": "SPLIT_STRING(string=\"defghijklmno\", part_count=4)",
+      "output": "**Original Code (Python)**\n```python\ndef split_string(string, part_count):\n    \"\"\"\n    Splits a given string into equal parts.\n\n    Args:\n        string (str): The input string to be split.\n        part_count (int): The number of parts to split the string into.\n\n    Returns:\n        list: A list of substrings.\n    \"\"\"\n    length = len(string)\n    part_size = length // part_count\n    remainder = length % part_count\n    parts = []\n    start = 0\n\n    for i in range(part_count):\n        end = start + part_size + (1 if i < remainder else 0)\n        parts.append(string[start:end])\n        start = end\n\n    return parts\n\nprint(split_string(\"defghijklmno\", 4))\n```\n\n**Equivalent Code (Java)**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(splitString(\"defghijklmno\", 4));\n    }\n\n    public static String[] splitString(String string, int partCount) {\n        int length = string.length();\n        int partSize = length / partCount;\n        int remainder = length % partCount;\n        String[] parts = new String[",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-080",
+  "task": "schema",
+  "method": "wrong_evidence",
+  "prompt": "Given a markdown table, generate a true sentence and a false sentence that are each directly supported or refuted by the table.\nOutput:\nThe false sentence must be factually inconsistent with the table and differ from the true sentence in only one word or number.\nGiven a markdown table, generate a true sentence and a false sentence that are each directly supported or refuted by the table. Example 1: {example 1} Example 2: {example 2} Example 3: {example 3} Example 4: {example 4} Source table: {table}",
+  "prompt_sha256": "255ed5679125da2d3292a52bb0222c69d7f39b60a7c6d6d4b56366355bb473ea",
+  "benchmark_sha256": "b0679aa4f90adad69d1859c7829df94bd0e50d8451923964b09fde654da6c117",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "45-10",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count10\": 47.\n\nA true sentence that is directly supported by the table is:\n\"The count10 is 47.\"\n\nA false sentence that is directly supported by the table is:\n\"The count10 is not 47.\"\n\nHowever, these sentences differ in more than one word. To meet the requirement of differing in only one word or number, we can modify the sentences as follows:\n\nA true sentence that is directly supported by the table is:\n\"The count10 is forty-seven.\"\n\nA false sentence that is directly supported by the table is:\n\"The count10 is forty.\"\n\nThese sentences differ in only one word.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-11",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+      "output": "I don't understand the problem. Can you provide more context or clarify what you are trying to accomplish?",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-12",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count12\": 53.\n\nA true sentence that is directly supported by the table is:\n\"The count12 is 53.\"\n\nA false sentence that is directly supported by the table is:\n\"The count12 is not 53.\"\n\nHowever, these sentences differ in more than one word. To meet the requirement of differing in only one word or number, we can modify the sentences as follows:\n\nA true sentence that is directly supported by the table is:\n\"The count12 is fifty-three.\"\n\nA false sentence that is directly supported by the table is:\n\"The count12 is fifty-four.\"\n\nAlternatively, we can modify the sentences to differ in only one number:\n\nA true sentence that is directly supported by the table is:\n\"The count12 is 52.\"\n\nA false sentence that is directly supported by the table is:\n\"The count12 is 54.\"",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-13",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count13\": 56.\n\nHere are the true and false sentences:\n\nTrue sentence: The value of count13 is 56.\nFalse sentence: The value of count13 is 57.\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-14",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object contains a single key-value pair: \"count14\": 59.\n\nHere are a true sentence and a false sentence that are each directly supported or refuted by the table:\n\nTrue sentence: The value of count14 is 59.\nFalse sentence: The value of count14 is 60.\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-15",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count15\": \"62\".\n\nHere are a true sentence and a false sentence that are each directly supported or refuted by the table:\n\nTrue sentence: The value of count15 is 62.\nFalse sentence: The value of count15 is 61.\n\nThe true sentence is supported by the table because the value of \"count15\" is indeed 62. The false sentence is refuted by the table because the value of \"count15\" is not 61, it is 62.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-16",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the table and find a fact that is supported or refuted by the data.\n\nGiven the JSON object:\n\n```json\n{\n  \"count16\": 65\n}\n```\n\nA true sentence that is directly supported by the table is:\n\n\"The count16 is 65.\"\n\nA false sentence that is directly refuted by the table is:\n\n\"The count16 is 66.\"\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-17",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object contains a single key-value pair: \"count17\": \"68\".\n\nHere are the true and false sentences:\n\nTrue sentence: The count17 is 68.\nFalse sentence: The count17 is 69.\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-18",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object contains a single key-value pair: \"count18\": 71.\n\nHere are a true sentence and a false sentence that are each directly supported or refuted by the table:\n\nTrue sentence: The count of people aged 18 is 71.\nFalse sentence: The count of people aged 18 is 70.\n\nThe true sentence is supported by the table because the value of \"count18\" is 71. The false sentence is refuted by the table because the value of \"count18\" is not 70.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-19",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count19\": \"74\".\n\nHere are the true and false sentences:\n\nTrue sentence: The count of 19 is 74.\nFalse sentence: The count of 19 is 75.\n\nThe true sentence is directly supported by the table because the value of \"count19\" is indeed 74. The false sentence is factually inconsistent with the table because the value of \"count19\" is not 75.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-20",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the table and find a fact that is supported or refuted by the data.\n\nGiven the JSON object:\n\n```json\n{\n  \"count20\": 77\n}\n```\n\nA true sentence that is directly supported by the table is:\n\n\"The count20 is 77.\"\n\nA false sentence that is directly refuted by the table is:\n\n\"The count20 is 78.\"\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-21",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object contains a single key-value pair: \"count21\": \"80\".\n\nHere are the true and false sentences:\n\nTrue sentence: The count of 21 is 80.\nFalse sentence: The count of 21 is 70.\n\nThe true sentence is directly supported by the table because the value of \"count21\" is indeed 80. The false sentence is factually inconsistent with the table because the value of \"count21\" is not 70.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-22",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+      "output": "I don't understand the problem. Can you provide more context or clarify what you are trying to accomplish?",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-23",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count23\": \"86\".\n\nHere are the true and false sentences:\n\nTrue sentence: The value of count23 is 86.\nFalse sentence: The value of count23 is 85.\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-24",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the table and find a fact that is supported or refuted by the data.\n\nGiven the JSON object {\"count24\": 89}, we can generate the following sentences:\n\nTrue sentence: The count of 24 is 89.\nFalse sentence: The count of 24 is 90.\n\nThese sentences are directly supported or refuted by the table. The true sentence is supported because the table states that the count24 is indeed 89. The false sentence is refuted because the table states that the count24 is not 90.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-25",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count25\": \"92\".\n\nHere are the true and false sentences:\n\nTrue sentence: The count25 is 92.\nFalse sentence: The count25 is 91.\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-26",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+      "output": "I don't understand the problem. Can you provide more context or clarify what you are trying to accomplish?",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-27",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the given JSON object.\n\nThe JSON object has a single key-value pair: \"count27\": \"98\".\n\nHere are the true and false sentences:\n\nTrue sentence: The value of \"count27\" is 98.\nFalse sentence: The value of \"count27\" is 99.\n\nBoth sentences are directly supported or refuted by the table, and they differ in only one word or number.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-28",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the table and find a fact that is supported or refuted by the data.\n\nGiven the JSON object:\n\n```json\n{\n  \"count28\": 101\n}\n```\n\nA true sentence that is directly supported by the table is:\n\n\"The count of 28 is 101.\"\n\nA false sentence that is directly refuted by the table is:\n\n\"The count of 28 is 100.\"\n\nThese sentences differ in only one word or number, and the false sentence is factually inconsistent with the table.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "45-29",
+      "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+      "output": "To generate a true sentence and a false sentence that are each directly supported or refuted by the table, we need to analyze the table and find a fact that is supported or refuted by the table.\n\nGiven the JSON object:\n\n```json\n{\n  \"count29\": \"104\"\n}\n```\n\nWe can generate a true sentence and a false sentence as follows:\n\nTrue sentence: The count29 is 104.\nFalse sentence: The count29 is 105.\n\nThe true sentence is supported by the table because the value of \"count29\" is indeed 104. The false sentence is refuted by the table because the value of \"count29\" is not 105.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

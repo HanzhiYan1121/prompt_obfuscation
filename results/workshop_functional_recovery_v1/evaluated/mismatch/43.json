@@ -1,0 +1,211 @@
+{
+  "id": "AllPrev-094 (csc_prompt_3)",
+  "task": "spelling",
+  "method": "mismatch",
+  "prompt": "Check if the generated JSON follows the provided schema, with reference to the conversation.\nOutput:\nCheck if the generated JSON follows the provided schema, with reference to the conversation.",
+  "prompt_sha256": "c8641e8836d4ed33790980a6fd92bd3179f63eb3c43e023fc7aaf8bf3e7a9afc",
+  "benchmark_sha256": "13d56bef135611afc946eaa9fa0523c54f63e4d7cee724ebd7cbf5186dd86e0b",
+  "mismatch_donor_id": "Prompt335-080",
+  "records": [
+    {
+      "case_id": "43-10",
+      "query": "Input: 昨天，我们明天准时出法。",
+      "output": "I'm not sure I understand what you're asking. Could you please clarify or provide more context?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-11",
+      "query": "Input: 昨天，请保持教室安近。",
+      "output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-12",
+      "query": "Input: 昨天，他终于完成了任物。",
+      "output": "这个句子看起来像是中文，似乎是在描述一个人完成了一项任务。要检查这个句子是否符合特定的JSON结构，需要更多的信息。请提供JSON的结构和更多的上下文信息。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-13",
+      "query": "Input: 昨天，这个问题需要仔细考滤。",
+      "output": "I'm not sure I understand what you're asking. Could you please rephrase or provide more context so I can better assist you?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-14",
+      "query": "Input: 昨天，她对音乐很感兴取。",
+      "output": "我不理解您的问题。您想检查一个 JSON 是否符合某个特定的模式吗？如果是的话，您可以提供 JSON 和模式，我可以帮助您检查它们是否匹配。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-15",
+      "query": "Input: 今天，天气很好，我们一起去公圆散步。",
+      "output": "这个 JSON 数据如下：\n\n```json\n{\n  \"天气\": \"很好\",\n  \"活动\": \"去公园散步\"\n}\n```\n\n这个 JSON 数据遵循以下结构：\n\n- \"天气\"：一个字符串，表示当前的天气情况。\n- \"活动\"：一个字符串，表示进行的活动。\n\n这个 JSON 数据符合提供的结构。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-16",
+      "query": "Input: 今天，他每天坚迟锻炼身体。",
+      "output": "这个句子不符合JSON的语法，因为它是一个中文句子，而JSON是一种数据交换格式，主要用于存储和传输数据。JSON的语法通常如下：\n\n```json\n{\n  \"key\": \"value\"\n}\n```\n\n或者\n\n```json\n[\n  {\n    \"key\": \"value\"\n  }\n]\n```\n\n如果你想检查一个JSON数据是否符合某个schema，通常需要提供一个JSON schema的描述，例如：\n\n```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\"type\": \"string\"},\n    \"age\": {\"type\": \"integer\"}\n  },\n  \"required\": [\"name\", \"age\"]\n}\n```\n\n然后你可以使用JSON schema验证工具来检查JSON数据是否符合这个schema。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-17",
+      "query": "Input: 今天，请把答按写在纸上。",
+      "output": "我不理解这个问题。您想让我检查一个 JSON 文件是否符合某个特定的模式吗？如果是的话，可以提供 JSON 文件和模式（schema）吗？",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-18",
+      "query": "Input: 今天，我们要保户环境。",
+      "output": "今天，我们要保护环境。",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "43-19",
+      "query": "Input: 今天，这件事情非常重药。",
+      "output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-20",
+      "query": "Input: 今天，她正在认真学西汉语。",
+      "output": "我不理解这个问题。您想问的是关于 JSON 的验证吗？",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-21",
+      "query": "Input: 今天，老师给了我很大的鼓历。",
+      "output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-22",
+      "query": "Input: 今天，请大家遵守交通归则。",
+      "output": "好的！如果你想检查一个 JSON 是否遵守一个给定的 schema，通常可以使用 JSON Schema 这个工具。JSON Schema 是一个用于描述 JSON 数据结构的语言，它可以帮助你验证 JSON 数据是否符合预期的结构。\n\n例如，如果你有一个 JSON 数据如下：\n\n```json\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"Beijing\"\n}\n```\n\n你可以使用 JSON Schema 来描述这个数据的结构：\n\n```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\"type\": \"string\"},\n    \"age\": {\"type\": \"integer\"},\n    \"city\": {\"type\": \"string\"}\n  },\n  \"required\": [\"name\", \"age\", \"city\"]\n}\n```\n\n然后，你可以使用 JSON Schema 验证工具来检查这个 JSON 数据是否符合这个 schema。例如，如果你使用 Python 的 `jsonschema` 库，可以这样做：\n\n```python\nimport json\nfrom jsonschema import validate\n\n# JSON 数据\ndata = {\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-23",
+      "query": "Input: 今天，他的工作态渡很认真。",
+      "output": "我不理解这个问题。您想问的是如何检查 JSON 是否符合某个 schema 的问题吗？",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-24",
+      "query": "Input: 今天，这本书的内荣很丰富。",
+      "output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-25",
+      "query": "Input: 今天，我们明天准时出法。",
+      "output": "I'm not sure I understand what you're asking. Could you please clarify or provide more context?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-26",
+      "query": "Input: 今天，请保持教室安近。",
+      "output": "I'm not sure I understand what you're asking. Could you please provide more context or clarify your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-27",
+      "query": "Input: 今天，他终于完成了任物。",
+      "output": "这个句子看起来是中文，似乎是描述一个人完成了一项任务的句子。要检查这个句子是否符合某个JSON schema，需要更多的信息。具体来说，我们需要知道这个JSON schema是关于什么样的数据结构。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-28",
+      "query": "Input: 今天，这个问题需要仔细考滤。",
+      "output": "I don't understand what you are saying. It seems like you are speaking in Chinese. Could you please rephrase the question in English or provide more context so I can better understand what you're asking?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-29",
+      "query": "Input: 今天，她对音乐很感兴取。",
+      "output": "我不理解这个问题。您想问的是关于 JSON 的验证吗？",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

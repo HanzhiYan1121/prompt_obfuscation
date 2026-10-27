@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-106",
+  "task": "trial_summary",
+  "method": "zero6",
+  "prompt": "Clinical Trial Protocol Generator\nGenerate a structured clinical trial protocol document based on user-provided parameters including condition, drug, sample size, eligibility age, and primary outcome marker.\nStructured Markdown document with bolded section headers (e.g., **Title**, **Study Type**, **Objective**, **Study Design**, **Methods**). Use bullet points for criteria and lists for steps.\nAlways assume a Randomized, Double-Blind, Placebo-Controlled design. Include standard inclusion criteria (age, diagnosis, consent). Add standard exclusion criteria (pregnancy, adverse reactions). Assume a 12-week duration if not specified. Assume 1:1 randomization ratio. Maintain professional medical writing tone.\nThe user provides fictional trial parameters (Condition, Drug, N, Age, Marker). The model must expand these minimal inputs into a comprehensive, realistic-looking protocol structure, filling in missing details with standard clinical trial conventions.",
+  "prompt_sha256": "400b7e630d299935b78270df1e6ee1d89a44fc285daa9210d75c37454dd42589",
+  "benchmark_sha256": "a8855825fbd46b01ddb02069f8a72f03ee7a49c1cd65e4120c4c517526ef63d4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "75-10",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition10. It tests Drug10 in 47 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera10.",
+      "output": "**Title:** Efficacy and Safety of Drug10 in Adults with Condition10: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug10 in adults with Condition10, as measured by the change in marker Nera10 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug10:Placebo)\n*   **Sample Size:** 47 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 28 years\n    *   Diagnosis of Condition10, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug10 or its components\n    *   Concomitant use of medications that may interact with Drug10\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Intervention:**\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-11",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition11. It tests Drug11 in 50 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera11.",
+      "output": "**Title:** Efficacy and Safety of Drug11 in Adults with Condition11: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug11 in adults with Condition11, as measured by the change in marker Nera11 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug11:Placebo)\n*   **Sample Size:** 50 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 29 years\n    *   Diagnosis of Condition11, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug11 or similar medications\n    *   Concomitant use of medications that may interact with Drug11\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Intervention:**\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-12",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition12. It tests Drug12 in 53 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera12.",
+      "output": "**Title:** Efficacy and Safety of Drug12 in Adults with Condition12: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug12 in adults with Condition12, as measured by the change in marker Nera12 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug12:Placebo)\n*   **Sample Size:** 53 adults\n*   **Study Population:** Adults aged 30 years and older with Condition12\n\n**Methods:**\n\n*   **Inclusion Criteria:**\n    *   Age ≥ 30 years\n    *   Diagnosis of Condition12, as confirmed by [insert diagnostic criteria]\n    *   Willingness to provide informed consent\n    *   Ability to understand and comply with the study protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug12 or its components\n    *   Concomitant use of medications that may interact with Drug12\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-13",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition13. It tests Drug13 in 56 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera13.",
+      "output": "**Title**\nRandomized, Double-Blind, Placebo-Controlled Trial to Evaluate the Efficacy and Safety of Drug13 in Adults with Condition13\n\n**Study Type**\nMulticenter, randomized, double-blind, placebo-controlled trial\n\n**Objective**\nTo assess the efficacy and safety of Drug13 in adults with Condition13, as measured by the change in marker Nera13 from baseline to 12 weeks.\n\n**Study Design**\nRandomized, double-blind, placebo-controlled trial with a parallel group design\n\n**Methods**\n\n* **Study Population**\n  * Inclusion criteria:\n    • Age ≥ 31 years\n    • Diagnosis of Condition13, as confirmed by [insert diagnostic criteria or tests]\n    • Willingness and ability to provide informed consent\n  * Exclusion criteria:\n    • Pregnancy or lactation\n    • History of severe adverse reactions to similar medications\n    • Concomitant use of medications that may interact with Drug13\n    • Any condition that may interfere with the conduct of the trial\n* **Randomization**\n  * Randomization ratio: 1:1 (Drug13:placebo)\n  * Randomization will be performed using a computer-generated randomization schedule\n* **Interventions**\n  * Drug13:",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-14",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition14. It tests Drug14 in 59 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera14.",
+      "output": "**Title:** Efficacy and Safety of Drug14 in Adults with Condition14: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug14 in adults with Condition14, as measured by the change in marker Nera14 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug14:Placebo)\n*   **Sample Size:** 59 adults\n*   **Inclusion Criteria:**\n    *   Age ≥ 25 years\n    *   Diagnosis of Condition14, as confirmed by [insert diagnostic criteria]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug14 or its components\n    *   Concomitant use of medications that may interact with Drug14\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Interventions:",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-15",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition15. It tests Drug15 in 62 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera15.",
+      "output": "**Title:** Efficacy and Safety of Drug15 in Adults with Condition15: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug15 in adults with Condition15, as measured by the change in marker Nera15 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug15:Placebo)\n*   **Sample Size:** 62 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 26 years\n    *   Diagnosis of Condition15, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug15 or its components\n    *   Concomitant use of medications that may interact with Drug15\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Int",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-16",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition16. It tests Drug16 in 65 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera16.",
+      "output": "**Title:** Efficacy and Safety of Drug16 in Adults with Condition16: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug16 in adults with Condition16, as measured by the change in marker Nera16 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug16:Placebo)\n*   **Sample Size:** 65 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 27 years\n    *   Diagnosis of Condition16, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug16 or its components\n    *   Concomitant use of medications that may interact with Drug16\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Int",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-17",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition17. It tests Drug17 in 68 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera17.",
+      "output": "**Title:** Efficacy and Safety of Drug17 in Adults with Condition17: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug17 in adults with Condition17, as measured by the change in marker Nera17 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug17:Placebo)\n*   **Sample Size:** 68 adults\n*   **Inclusion Criteria:**\n    *   Age ≥ 28 years\n    *   Diagnosis of Condition17, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug17 or its components\n    *   Concomitant use of medications that may interact with Drug17\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Intervention",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-18",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition18. It tests Drug18 in 71 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera18.",
+      "output": "**Title:** Efficacy and Safety of Drug18 in Adults with Condition18: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug18 in adults with Condition18, as measured by the change in marker Nera18 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug18:Placebo)\n*   **Sample Size:** 71 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 29 years\n    *   Diagnosis of Condition18, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n    *   Ability to understand and comply with the protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug18 or its components\n    *   Concomitant treatment with medications that may interact with Drug18\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-19",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition19. It tests Drug19 in 74 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera19.",
+      "output": "**Title**\nRandomized, Double-Blind, Placebo-Controlled Trial to Evaluate the Efficacy and Safety of Drug19 in Adults with Condition19\n\n**Study Type**\nMulticenter, randomized, double-blind, placebo-controlled trial\n\n**Objective**\nTo assess the efficacy and safety of Drug19 in adults with Condition19, as measured by the change in marker Nera19 from baseline to 12 weeks.\n\n**Study Design**\nRandomized, double-blind, placebo-controlled trial with a parallel group design\n\n**Methods**\n\n* **Study Population**\n  * Inclusion criteria:\n    • Age ≥ 30 years\n    • Diagnosis of Condition19, as confirmed by [insert diagnostic criteria]\n    • Willingness to provide informed consent\n  * Exclusion criteria:\n    • Pregnancy or lactation\n    • History of severe adverse reactions to similar medications\n    • Concomitant use of medications that may interact with Drug19\n    • Any condition that may interfere with the conduct of the trial\n* **Randomization**\n  * Randomization ratio: 1:1 (Drug19:placebo)\n  * Randomization will be performed using a computer-generated randomization schedule\n* **Interventions**\n  * Drug19: [insert dosage and",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-20",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition20. It tests Drug20 in 77 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera20.",
+      "output": "**Title**\nRandomized, Double-Blind, Placebo-Controlled Trial to Evaluate the Efficacy and Safety of Drug20 in Adults with Condition20\n\n**Study Type**\nMulticenter, Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective**\nTo evaluate the efficacy and safety of Drug20 in adults with Condition20, as measured by the change in marker Nera20 from baseline to 12 weeks.\n\n**Study Design**\nThis is a parallel-group, randomized, double-blind, placebo-controlled trial.\n\n**Methods**\n\n### Study Population\n\n*   **Inclusion Criteria:**\n    *   Age: ≥ 31 years\n    *   Diagnosis of Condition20, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness and ability to provide informed consent\n    *   Ability to understand and comply with the protocol requirements\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of severe adverse reactions to similar drugs\n    *   Concomitant treatment with other investigational drugs or devices\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may interfere with the conduct of the trial\n\n### Randomization\n\n*   Participants",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-21",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition21. It tests Drug21 in 80 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera21.",
+      "output": "**Title**\nRandomized, Double-Blind, Placebo-Controlled Trial to Evaluate the Efficacy and Safety of Drug21 in Adults with Condition21\n\n**Study Type**\nMulticenter, Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Objective**\nTo evaluate the efficacy and safety of Drug21 in adults with Condition21, as measured by the change in marker Nera21 from baseline to 12 weeks.\n\n**Study Design**\nThis is a parallel-group, randomized, double-blind, placebo-controlled trial. Participants will be randomly assigned to receive either Drug21 or a matching placebo.\n\n**Methods**\n\n### Study Population\n\n*   **Inclusion Criteria:**\n    *   Age ≥ 25 years\n    *   Diagnosis of Condition21, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n    *   Ability to understand and comply with the protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug21 or its components\n    *   Concomitant treatment with medications that may interact with Drug21\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-22",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition22. It tests Drug22 in 83 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera22.",
+      "output": "**Title:** Efficacy and Safety of Drug22 in Adults with Condition22: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug22 in adults with Condition22, as measured by the change in marker Nera22 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug22:Placebo)\n*   **Sample Size:** 83 adults\n*   **Inclusion Criteria:**\n    *   Age ≥ 26 years\n    *   Diagnosis of Condition22, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug22 or its components\n    *   Concomitant use of medications that may interact with Drug22\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Intervention",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-23",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition23. It tests Drug23 in 86 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera23.",
+      "output": "**Title:** Efficacy and Safety of Drug23 in Adults with Condition23: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug23 in adults with Condition23, as measured by the change in marker Nera23 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug23:Placebo)\n*   **Sample Size:** 86 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 27 years\n    *   Diagnosis of Condition23, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n    *   Ability to understand and comply with the protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug23 or its components\n    *   Concomitant treatment with medications that may interact with Drug23\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-24",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition24. It tests Drug24 in 89 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera24.",
+      "output": "**Title:** Efficacy and Safety of Drug24 in Adults with Condition24: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug24 in adults with Condition24, as measured by the change in marker Nera24 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug24:Placebo)\n*   **Sample Size:** 89 adults\n*   **Inclusion Criteria:**\n    *   Age: ≥ 28 years\n    *   Diagnosis of Condition24\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of severe adverse reactions to similar medications\n    *   Concomitant use of medications that may interact with Drug24\n    *   Severe renal or hepatic impairment\n*   **Interventions:**\n    *   **Drug24:** Oral administration of Drug24 at a dose of [insert dose] twice daily\n    *   **Place",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-25",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition25. It tests Drug25 in 92 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera25.",
+      "output": "**Title:** Efficacy and Safety of Drug25 in Adults with Condition25: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug25 in adults with Condition25, as measured by the change in marker Nera25 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug25:Placebo)\n*   **Sample Size:** 92 participants\n*   **Inclusion Criteria:**\n    *   Age: ≥ 29 years\n    *   Diagnosis of Condition25, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n    *   Ability to understand and comply with the study protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug25 or its components\n    *   Concomitant use of medications that may interact with Drug25\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-26",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition26. It tests Drug26 in 95 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera26.",
+      "output": "**Title:** Efficacy and Safety of Drug26 in Adults with Condition26: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug26 in adults with Condition26, as measured by the change in marker Nera26 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug26:Placebo)\n*   **Sample Size:** 95 adults\n*   **Inclusion Criteria:**\n    *   Age ≥ 30 years\n    *   Diagnosis of Condition26, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug26 or its components\n    *   Concomitant use of medications that may interact with Drug26\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Intervention",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-27",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition27. It tests Drug27 in 98 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera27.",
+      "output": "**Title:** Efficacy and Safety of Drug27 in Adults with Condition27: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug27 in adults with Condition27, as measured by the change in marker Nera27 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug27:Placebo)\n*   **Sample Size:** 98 participants\n*   **Inclusion Criteria:**\n    *   Age: ≥ 31 years\n    *   Diagnosis of Condition27, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug27 or its components\n    *   Concomitant use of medications that may interact with Drug27\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the study\n*   **Int",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-28",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition28. It tests Drug28 in 101 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera28.",
+      "output": "**Title:** Efficacy and Safety of Drug28 in Adults with Condition28: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug28 in adults with Condition28, as measured by the change in marker Nera28 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug28:Placebo)\n*   **Sample Size:** 101 participants (50 Drug28, 51 Placebo)\n*   **Inclusion Criteria:**\n    *   Age ≥ 25 years\n    *   Diagnosis of Condition28, as confirmed by [insert diagnostic criteria]\n    *   Willingness to provide informed consent\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug28 or its components\n    *   Concomitant use of medications that may interact with Drug28\n    *   Severe renal or hepatic impairment\n    *   Other significant medical conditions that may affect the outcome of the",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-29",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition29. It tests Drug29 in 104 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera29.",
+      "output": "**Title:** Efficacy and Safety of Drug29 in Adults with Condition29: A Randomized, Double-Blind, Placebo-Controlled Trial\n\n**Study Type:** Multicenter, Randomized, Double-Blind, Placebo-Controlled\n\n**Objective:**\nTo evaluate the efficacy and safety of Drug29 in adults with Condition29, as measured by the change in marker Nera29 from baseline to 12 weeks.\n\n**Study Design:**\n\n*   **Study Duration:** 12 weeks\n*   **Randomization Ratio:** 1:1 (Drug29:Placebo)\n*   **Sample Size:** 104 participants (52 in each arm)\n*   **Inclusion Criteria:**\n    *   Age ≥ 26 years\n    *   Diagnosis of Condition29, as confirmed by [insert diagnostic criteria or tests]\n    *   Willingness and ability to provide informed consent\n    *   Ability to understand and comply with the study protocol\n*   **Exclusion Criteria:**\n    *   Pregnancy or lactation\n    *   History of adverse reactions to Drug29 or its components\n    *   Concomitant use of medications that may interact with Drug29\n    *   Severe renal or hepatic impairment\n   ",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

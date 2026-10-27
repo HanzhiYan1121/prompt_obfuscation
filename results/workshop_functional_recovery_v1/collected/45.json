@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 45,
+    "id": "Prompt335-080",
+    "category": "format_spec",
+    "result_dir": "precomputed_results/prompts335_format_spec_obf_prompt335_080_tok10",
+    "source_sha256": "6f7c7d0f5d6d96814830e0993d5dabcf6096c29a8f31fb16ca886d73390cd090",
+    "source_characters": 230,
+    "eligible": true,
+    "task": "schema",
+    "measurement_scope": "validation of simple JSON schemas and identification of the violated property",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "b0679aa4f90adad69d1859c7829df94bd0e50d8451923964b09fde654da6c117",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "45-00",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count0\": {\"type\": \"integer\"}}, \"required\": [\"count0\"], \"additionalProperties\": false}\nGenerated JSON: {\"count0\": 17}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON object has a property named \"count0\" which is of type \"integer\", matching the schema's \"properties\" definition.\n2. The \"count0\" property is present in the JSON object, which matches the schema's \"required\" definition.\n3. There are no additional properties in the JSON object, which matches the schema's \"additionalProperties\" definition.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-01",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count1\": {\"type\": \"integer\"}}, \"required\": [\"count1\"], \"additionalProperties\": false}\nGenerated JSON: {\"count1\": \"20\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count1\" property in the generated JSON is a string (\"20\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false also means that the JSON object should not have any additional properties other than \"count1\". However, the generated JSON does not violate this constraint.\n\nHowever, the generated JSON does not satisfy the schema constraint \"type\": \"integer\" for the \"count1\" property.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-02",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count2\": {\"type\": \"integer\"}}, \"required\": [\"count2\"], \"additionalProperties\": false}\nGenerated JSON: {\"count2\": 23}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count2\" which matches the \"required\" constraint in the schema.\n2. The value of \"count2\" is an integer, which matches the \"type\" constraint in the schema.\n3. There are no additional properties in the JSON, which matches the \"additionalProperties\" constraint in the schema.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-03",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count3\": {\"type\": \"integer\"}}, \"required\": [\"count3\"], \"additionalProperties\": false}\nGenerated JSON: {\"count3\": \"26\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason for this is that the \"count3\" property in the generated JSON is a string (\"26\"), but the schema specifies that it should be an integer. In JSON, integers are not enclosed in quotes, so the correct format for the generated JSON would be {\"count3\": 26}.\n\nThe schema constraint that is violated is the type constraint on the \"count3\" property, which requires it to be an integer.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-04",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count4\": {\"type\": \"integer\"}}, \"required\": [\"count4\"], \"additionalProperties\": false}\nGenerated JSON: {\"count4\": 29}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count4\" which is of type \"integer\", matching the schema's \"properties\" definition.\n2. The property \"count4\" is marked as \"required\" in the schema, and it is present in the generated JSON, so this constraint is satisfied.\n3. The schema has \"additionalProperties\" set to \"false\", meaning that the JSON object should not have any properties other than the ones defined in the schema. In this case, the generated JSON only has the required property \"count4\", so this constraint is also satisfied.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-05",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count5\": {\"type\": \"integer\"}}, \"required\": [\"count5\"], \"additionalProperties\": false}\nGenerated JSON: {\"count5\": \"32\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count5\" property in the generated JSON is a string (\"32\"), but the schema specifies that it should be an integer.\n\nIn the schema, the \"type\" property is set to \"integer\", which means that the \"count5\" property should be an integer, not a string. The generated JSON does not meet this requirement.\n\nAdditionally, the schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. The generated JSON does not have any additional properties, so this constraint is not violated.\n\nHowever, the generated JSON does not satisfy the \"type\" constraint of the \"count5\" property.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-06",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count6\": {\"type\": \"integer\"}}, \"required\": [\"count6\"], \"additionalProperties\": false}\nGenerated JSON: {\"count6\": 35}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON is an object, which matches the schema's type.\n2. The JSON has a property named \"count6\", which is a required property in the schema.\n3. The value of \"count6\" is an integer, which matches the schema's type for the \"count6\" property.\n4. There are no additional properties in the JSON, which matches the schema's \"additionalProperties\" constraint.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-07",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count7\": {\"type\": \"integer\"}}, \"required\": [\"count7\"], \"additionalProperties\": false}\nGenerated JSON: {\"count7\": \"38\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count7\" property in the generated JSON is a string (\"38\"), but the schema specifies that it should be an integer.\n\nIn the schema, the \"type\" property is set to \"integer\", which means that the \"count7\" property should be an integer, not a string. The generated JSON does not meet this requirement.\n\nAdditionally, the schema has \"additionalProperties\" set to false, which means that the JSON object should not have any properties other than the ones specified in the schema. The generated JSON does not have any additional properties, so this constraint is not violated.\n\nHowever, the generated JSON does not satisfy the \"required\" constraint, which specifies that the \"count7\" property is required. The generated JSON does not have any other properties, so it does not meet this requirement.\n\nThe validation result is: **Schema Violation: \"count7\" should be an integer.**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-08",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count8\": {\"type\": \"integer\"}}, \"required\": [\"count8\"], \"additionalProperties\": false}\nGenerated JSON: {\"count8\": 41}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count8\" which is of type \"integer\".\n2. The property \"count8\" is marked as required in the schema, and it exists in the generated JSON.\n3. The schema specifies that there should be no additional properties, and the generated JSON does not have any additional properties.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-09",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count9\": {\"type\": \"integer\"}}, \"required\": [\"count9\"], \"additionalProperties\": false}\nGenerated JSON: {\"count9\": \"44\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count9\" property in the generated JSON is a string (\"44\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false means that the JSON object should not have any properties other than the ones specified in the schema. However, in this case, the generated JSON does not violate this constraint because \"count9\" is one of the required properties.\n\nThe main issue is that the type of \"count9\" is incorrect. It should be an integer, not a string.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-10",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count10\" which is of type \"integer\".\n2. The property \"count10\" is marked as \"required\" in the schema, and it is present in the generated JSON.\n3. The schema specifies \"additionalProperties\" as false, meaning that the JSON should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count10\", so it satisfies this constraint.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-11",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count11\" property in the generated JSON is a string (\"50\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false means that the JSON object should not have any properties other than the ones specified in the schema. However, in this case, the generated JSON does not violate this constraint because \"count11\" is one of the required properties.\n\nThe main issue is that the type of \"count11\" is incorrect. It should be an integer, not a string.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-12",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count12\" which matches the required property in the schema.\n2. The value of \"count12\" is an integer, which matches the type specified in the schema.\n3. There are no additional properties in the JSON, which matches the \"additionalProperties\" constraint in the schema.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-13",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count13\" property in the generated JSON is a string (\"56\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false means that the JSON object should not have any properties other than the ones specified in the schema. However, in this case, the generated JSON does not violate this constraint because \"count13\" is one of the required properties.\n\nThe main issue is that the type of \"count13\" is incorrect. It should be an integer, not a string.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-14",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count14\" which is of type \"integer\".\n2. The property \"count14\" is marked as \"required\" in the schema, and it exists in the generated JSON, so this constraint is satisfied.\n3. The schema has \"additionalProperties\" set to false, meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count14\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-15",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count15\" property in the generated JSON is a string (\"62\"), but the schema specifies that it should be an integer.\n\nIn the schema, the \"type\" property is set to \"integer\", which means that the \"count15\" property should be an integer, not a string. The generated JSON does not meet this requirement.\n\nValidation result: Failed\n\nError message: \"type\" error at path \"/count15\": expected integer, but got string",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-16",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON object has a single property \"count16\" which is of type \"integer\".\n2. The property \"count16\" is marked as \"required\" in the schema, and it is present in the generated JSON.\n3. The schema specifies \"additionalProperties\" as false, meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count16\", so it satisfies this constraint.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-17",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count17\" property in the generated JSON is a string (\"68\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false also indicates that the JSON object should not have any additional properties other than \"count17\", but the generated JSON does not violate this constraint.\n\nHowever, the generated JSON does not satisfy the type constraint for \"count17\", which is specified as \"integer\". The string \"68\" cannot be converted to an integer, so this is the primary reason for the validation failure.\n\nTo satisfy the schema, the generated JSON should be modified to use an integer value for \"count17\", such as {\"count17\": 68}.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-18",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count18\" which is of type \"integer\".\n2. The property \"count18\" is marked as \"required\" in the schema, and it exists in the generated JSON, so this constraint is satisfied.\n3. The schema has \"additionalProperties\" set to false, meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count18\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-19",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count19\" property in the generated JSON is a string (\"74\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false also indicates that the JSON object should not have any additional properties other than \"count19\", but the generated JSON does not violate this constraint.\n\nHowever, the generated JSON does not satisfy the type constraint for \"count19\", which is the main issue here.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-20",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count20\" which is of type \"integer\".\n2. The property \"count20\" is marked as \"required\" in the schema, and it exists in the generated JSON, so this constraint is satisfied.\n3. The schema has \"additionalProperties\" set to false, meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count20\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-21",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count21\" property in the generated JSON is a string (\"80\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false means that only the properties listed in the \"properties\" section are allowed, and any additional properties are not allowed. However, in this case, the generated JSON does not have any additional properties, so this constraint is not violated.\n\nThe main issue is that the type of the \"count21\" property does not match the schema. The schema specifies that \"count21\" should be an integer, but the generated JSON has a string value for it.\n\nTo fix this, the generated JSON should be modified to have an integer value for \"count21\", like this: {\"count21\": 80}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-22",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count22\" which is of type \"integer\", matching the schema's \"properties\" definition.\n2. The property \"count22\" is marked as \"required\" in the schema, and it is present in the generated JSON, so this constraint is satisfied.\n3. The schema specifies \"additionalProperties\" as false, meaning that the JSON object should not have any properties other than the ones defined in the schema. In this case, the generated JSON only has the required property \"count22\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-23",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count23\" property in the generated JSON is a string (\"86\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false also indicates that the JSON object should not have any additional properties other than \"count23\", but the generated JSON does not violate this constraint.\n\nHowever, the generated JSON does not satisfy the type constraint for \"count23\", which is specified as \"integer\". The correct type for \"count23\" in the generated JSON should be an integer, not a string. \n\nTo fix this, the generated JSON should be modified to use an integer value for \"count23\", like this: {\"count23\": 86}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-24",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count24\" which is of type \"integer\".\n2. The property \"count24\" is marked as \"required\" in the schema, and it exists in the generated JSON, so this constraint is satisfied.\n3. The schema specifies \"additionalProperties\" as false, meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count24\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-25",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count25\" property in the generated JSON is a string (\"92\"), but the schema specifies that it should be an integer.\n\nIn the schema, the \"type\" property is set to \"integer\", which means that the \"count25\" property should be an integer, not a string. The generated JSON does not meet this requirement.\n\nValidation result: Failed\n\nError message: \"type\" error at path \"/count25\": expected integer, but got string",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-26",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+        "output": "The generated JSON satisfies the schema.\n\nHere's why:\n\n1. The JSON has a single property \"count26\" which is of type \"integer\".\n2. The property \"count26\" is marked as \"required\" in the schema, and it exists in the generated JSON, so this constraint is satisfied.\n3. The schema has \"additionalProperties\" set to \"false\", meaning that the JSON object should not have any properties other than the ones specified in the schema. In this case, the generated JSON only has the required property \"count26\", so this constraint is also satisfied.\n\nTherefore, the validation result is: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-27",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count27\" property in the generated JSON is a string (\"98\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false also indicates that the JSON object should not have any additional properties other than \"count27\", but the generated JSON does not violate this constraint.\n\nHowever, the generated JSON does not satisfy the type constraint for \"count27\", which is the main issue here.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-28",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+        "output": "The generated JSON string satisfies the schema.\n\nHere's why:\n\n1. The JSON string is an object, which matches the schema's type.\n2. The JSON string has a property named \"count28\", which is a required property according to the schema.\n3. The value of \"count28\" is an integer, which matches the schema's type for this property.\n4. There are no additional properties in the JSON string, which matches the schema's \"additionalProperties\" constraint.\n\nValidation result: **Valid**",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-29",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+        "output": "The generated JSON does not satisfy the schema.\n\nThe reason is that the \"count29\" property in the generated JSON is a string (\"104\"), but the schema specifies that it should be an integer.\n\nThe schema constraint \"additionalProperties\": false means that the JSON object should not have any properties other than the ones specified in the schema. However, in this case, the generated JSON does not violate this constraint because \"count29\" is a valid property according to the schema.\n\nThe main issue is that the type of the \"count29\" property does not match the schema. The schema specifies that \"count29\" should be an integer, but the generated JSON has a string value for it.\n\nTo fix this, the generated JSON should be modified to have an integer value for \"count29\", like this: {\"count29\": 104}.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "45-00",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count0\": {\"type\": \"integer\"}}, \"required\": [\"count0\"], \"additionalProperties\": false}\nGenerated JSON: {\"count0\": 17}",
+        "output": "The JSON `{\"count0\": 17}` is valid according to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count0`.\n2. The property `count0` has a value of type `integer`, which matches the schema's requirement.\n3. The JSON object does not have any additional properties, which matches the schema's requirement.\n\nTherefore, the JSON `{\"count0\": 17}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-01",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count1\": {\"type\": \"integer\"}}, \"required\": [\"count1\"], \"additionalProperties\": false}\nGenerated JSON: {\"count1\": \"20\"}",
+        "output": "The generated JSON does not match the schema. \n\nThe schema specifies that \"count1\" should be an integer, but the generated JSON has a string value (\"20\") instead of an integer value (20). \n\nTo match the schema, the generated JSON should be: {\"count1\": 20}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-02",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count2\": {\"type\": \"integer\"}}, \"required\": [\"count2\"], \"additionalProperties\": false}\nGenerated JSON: {\"count2\": 23}",
+        "output": "The JSON: {\"count2\": 23} is valid according to the provided schema.\n\nHere's why:\n\n- The JSON has a property named \"count2\" which is of type \"integer\".\n- The property \"count2\" is present in the JSON, which is marked as required in the schema.\n- There are no additional properties in the JSON, which is consistent with the schema's \"additionalProperties\": false.\n\nTherefore, the JSON is valid.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-03",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count3\": {\"type\": \"integer\"}}, \"required\": [\"count3\"], \"additionalProperties\": false}\nGenerated JSON: {\"count3\": \"26\"}",
+        "output": "The generated JSON does not match the schema for two reasons:\n\n1. The value of \"count3\" is a string (\"26\") instead of an integer.\n2. The schema specifies that \"additionalProperties\" should be false, but the generated JSON does not have all the required properties.\n\nTo fix these issues, the generated JSON should be changed to:\n\n{\"count3\": 26}\n\nThis JSON matches the schema because it has the required property \"count3\" with an integer value.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-04",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count4\": {\"type\": \"integer\"}}, \"required\": [\"count4\"], \"additionalProperties\": false}\nGenerated JSON: {\"count4\": 29}",
+        "output": "The JSON `{\"count4\": 29}` is valid according to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count4`.\n2. The property `count4` has a value of type `integer`, which matches the schema's requirement.\n3. The JSON object does not have any additional properties, which matches the schema's requirement that `additionalProperties` is `false`.\n\nTherefore, the JSON `{\"count4\": 29}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-05",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count5\": {\"type\": \"integer\"}}, \"required\": [\"count5\"], \"additionalProperties\": false}\nGenerated JSON: {\"count5\": \"32\"}",
+        "output": "The JSON `{\"count5\": \"32\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count5` should be of type `integer`, but the generated JSON has a string value `\"32\"`. \n\n2. The schema specifies that the property `count5` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-06",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count6\": {\"type\": \"integer\"}}, \"required\": [\"count6\"], \"additionalProperties\": false}\nGenerated JSON: {\"count6\": 35}",
+        "output": "The JSON: {\"count6\": 35} is valid according to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property named \"count6\".\n2. The value of \"count6\" is an integer (35), which matches the schema's requirement for the \"count6\" property.\n\nTherefore, the JSON is valid.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-07",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count7\": {\"type\": \"integer\"}}, \"required\": [\"count7\"], \"additionalProperties\": false}\nGenerated JSON: {\"count7\": \"38\"}",
+        "output": "The JSON `{\"count7\": \"38\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property \"count7\" should be of type \"integer\", but the generated JSON has a string value \"38\" for this property. \n\n2. The schema specifies that the property \"count7\" is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-08",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count8\": {\"type\": \"integer\"}}, \"required\": [\"count8\"], \"additionalProperties\": false}\nGenerated JSON: {\"count8\": 41}",
+        "output": "The JSON `{\"count8\": 41}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property named `count8`.\n2. The value of `count8` is an integer (`41`), which matches the schema's type definition.\n3. The JSON object does not have any additional properties, which aligns with the schema's `additionalProperties` setting.\n\nTherefore, the JSON `{\"count8\": 41}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-09",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count9\": {\"type\": \"integer\"}}, \"required\": [\"count9\"], \"additionalProperties\": false}\nGenerated JSON: {\"count9\": \"44\"}",
+        "output": "The JSON `{\"count9\": \"44\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count9` should be of type `integer`, but the generated JSON has a string value `\"44\"`. \n\n2. The schema specifies that the property `count9` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-10",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+        "output": "The JSON `{\"count10\": 47}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count10`.\n2. The value of `count10` is an integer (`47`), which matches the schema's type definition for `count10`.\n3. The JSON object does not have any additional properties, which matches the schema's `additionalProperties` definition of `false`.\n\nTherefore, the JSON `{\"count10\": 47}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-11",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+        "output": "The JSON `{\"count11\": \"50\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count11` should be of type `integer`, but the generated JSON has a string value `\"50\"`. \n\n2. The schema specifies that the property `count11` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-12",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+        "output": "The JSON `{\"count12\": 53}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count12`.\n2. The property `count12` has a value of type `integer`, which is an integer (53).\n3. The property `count12` is marked as required in the schema, and it exists in the JSON.\n4. There are no additional properties in the JSON, which matches the `additionalProperties` setting in the schema.\n\nTherefore, the JSON `{\"count12\": 53}` is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-13",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+        "output": "The JSON `{\"count13\": \"56\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count13` should be of type `integer`, but the generated JSON has a string value `\"56\"`. \n\n2. The schema specifies that the property `count13` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-14",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+        "output": "The JSON `{\"count14\": 59}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count14`.\n2. The value of `count14` is an integer (`59`), which matches the schema's type definition.\n3. The JSON object does not have any additional properties, which matches the schema's `additionalProperties` definition.\n\nTherefore, the JSON `{\"count14\": 59}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-15",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+        "output": "The JSON `{\"count15\": \"62\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count15` should be of type `integer`, but the generated JSON has a string value `\"62\"`. \n\n2. The schema specifies that the property `count15` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-16",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+        "output": "The JSON: {\"count16\": 65} is valid according to the provided schema.\n\nHere's why:\n\n- The JSON has a property named \"count16\" which is of type \"integer\".\n- The property \"count16\" is present in the JSON, which is marked as \"required\" in the schema.\n- There are no additional properties in the JSON, which is consistent with the schema's \"additionalProperties\": false.\n\nTherefore, the JSON is valid.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-17",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+        "output": "The JSON `{\"count17\": \"68\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count17` should be of type `integer`, but the generated JSON has a string value `\"68\"`. \n\n2. The schema specifies that the property `count17` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-18",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+        "output": "The JSON `{\"count18\": 71}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count18`.\n2. The value of `count18` is an integer (`71`), which matches the schema's type definition.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-19",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+        "output": "The JSON `{\"count19\": \"74\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count19` should be of type `integer`, but the generated JSON has a string value `\"74\"`. \n\n2. The schema specifies that the property `count19` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-20",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+        "output": "The JSON `{\"count20\": 77}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count20`.\n2. The value of `count20` is an integer (`77`), which matches the schema's type definition for `count20`.\n3. The JSON object does not have any additional properties, which matches the schema's `additionalProperties` definition of `false`.\n\nTherefore, the JSON `{\"count20\": 77}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-21",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+        "output": "The JSON `{\"count21\": \"80\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count21` should be of type `integer`, but the generated JSON has a string value `\"80\"`. \n\n2. The schema specifies that the property `count21` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-22",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+        "output": "The JSON `{\"count22\": 83}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count22`.\n2. The value of `count22` is an integer (`83`), which matches the schema's type definition for `count22`.\n3. The JSON object does not have any additional properties, which matches the schema's `additionalProperties` definition of `false`.\n\nTherefore, the JSON `{\"count22\": 83}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-23",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+        "output": "The JSON `{\"count23\": \"86\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count23` should be of type `integer`, but the generated JSON has a string value `\"86\"`. \n\n2. The schema specifies that the property `count23` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-24",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+        "output": "The JSON `{\"count24\": 89}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count24`.\n2. The value of `count24` is an integer (`89`), which matches the schema's type definition.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-25",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+        "output": "The JSON `{\"count25\": \"92\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property `count25` should be of type `integer`, but the generated JSON has a string value `\"92\"`. \n\n2. The schema specifies that the property `count25` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-26",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+        "output": "The JSON `{\"count26\": 95}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count26`.\n2. The value of `count26` is an integer (`95`), which matches the schema's type definition.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-27",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+        "output": "The JSON `{\"count27\": \"98\"}` does not match the schema.\n\nReason:\n\n1. The schema specifies that the property `count27` should be of type `integer`, but the generated JSON has a string value `\"98\"`. \n\n2. The schema specifies that the property `count27` is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-28",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+        "output": "The JSON `{\"count28\": 101}` conforms to the provided schema.\n\nHere's why:\n\n1. The JSON object has a single property `count28`.\n2. The value of `count28` is an integer (`101`), which matches the schema's type definition for `count28`.\n3. The JSON object does not have any additional properties, which matches the schema's `additionalProperties` definition of `false`.\n\nTherefore, the JSON `{\"count28\": 101}` is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-29",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+        "output": "The JSON `{\"count29\": \"104\"}` does not match the provided schema.\n\nReason:\n\n1. The schema specifies that the property \"count29\" should be of type \"integer\", but the generated JSON has a string value \"104\" for this property. \n\n2. The schema specifies that the property \"count29\" is required, but the generated JSON does not have any other properties, which is allowed according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "45-00",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count0\": {\"type\": \"integer\"}}, \"required\": [\"count0\"], \"additionalProperties\": false}\nGenerated JSON: {\"count0\": 17}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count0\", which matches the schema's required property.\n3. The value of \"count0\" is an integer, which matches the schema's type for \"count0\".\n4. There are no additional properties in the JSON object, which matches the schema's \"additionalProperties\" property set to false.\n\nTherefore, the JSON object {\"count0\": 17} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-01",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count1\": {\"type\": \"integer\"}}, \"required\": [\"count1\"], \"additionalProperties\": false}\nGenerated JSON: {\"count1\": \"20\"}",
+        "output": "The provided JSON is not valid according to the given schema. \n\nThe schema specifies that the property \"count1\" should be of type \"integer\", but the generated JSON has \"count1\" as a string (\"20\"). \n\nTo make the JSON valid, it should be changed to:\n\n```json\n{\"count1\": 20}\n```\n\nIn this corrected JSON, \"20\" is an integer, which matches the schema's requirement.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-02",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count2\": {\"type\": \"integer\"}}, \"required\": [\"count2\"], \"additionalProperties\": false}\nGenerated JSON: {\"count2\": 23}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count2\".\n2. The value of \"count2\" is an integer, which matches the schema's type definition.\n3. The property \"count2\" is marked as required, meaning it must be present in the JSON object, which it is.\n4. The schema specifies that there should be no additional properties, and the JSON object does not have any additional properties.\n\nTherefore, the JSON object {\"count2\": 23} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-03",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count3\": {\"type\": \"integer\"}}, \"required\": [\"count3\"], \"additionalProperties\": false}\nGenerated JSON: {\"count3\": \"26\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count3\".\n2. The value of \"count3\" is an integer, which matches the schema's type definition.\n3. The property \"count3\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nHowever, it's worth noting that the value of \"count3\" is a string, not an integer. In JSON, integer values are typically represented as numbers (e.g., 26), not strings (e.g., \"26\"). If the schema requires an integer, the JSON should be modified to use a number instead of a string:\n\n```json\n{\"count3\": 26}\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-04",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count4\": {\"type\": \"integer\"}}, \"required\": [\"count4\"], \"additionalProperties\": false}\nGenerated JSON: {\"count4\": 29}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count4\", which is required according to the schema.\n3. The value of \"count4\" is an integer, which matches the schema's type for the \"count4\" property.\n\nTherefore, the JSON object {\"count4\": 29} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-05",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count5\": {\"type\": \"integer\"}}, \"required\": [\"count5\"], \"additionalProperties\": false}\nGenerated JSON: {\"count5\": \"32\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count5\".\n2. The value of \"count5\" is an integer, which matches the schema's type definition.\n3. The property \"count5\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nHowever, it's worth noting that the value of \"count5\" is a string, not an integer. In JSON, integer values are typically represented as numbers (e.g., 32), not strings (e.g., \"32\"). If the schema requires an integer, the JSON should be modified to use a number instead of a string:\n\n```json\n{\"count5\": 32}\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-06",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count6\": {\"type\": \"integer\"}}, \"required\": [\"count6\"], \"additionalProperties\": false}\nGenerated JSON: {\"count6\": 35}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count6\".\n2. The value of \"count6\" is an integer, which matches the schema's type definition.\n3. The property \"count6\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nTherefore, the JSON {\"count6\": 35} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-07",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count7\": {\"type\": \"integer\"}}, \"required\": [\"count7\"], \"additionalProperties\": false}\nGenerated JSON: {\"count7\": \"38\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count7\".\n2. The value of \"count7\" is an integer, which matches the schema's type definition.\n3. The property \"count7\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nHowever, there is a potential issue with the value of \"count7\". The schema specifies that \"count7\" should be an integer, but the value is a string (\"38\"). In JSON, integers can be represented as strings, so this is technically valid, but it's not the most common or recommended way to represent integers.\n\nA more typical way to represent the JSON would be:\n\n```json\n{\"count7\": 38}\n```\n\nThis way, the value of \"count7\" is explicitly an integer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-08",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count8\": {\"type\": \"integer\"}}, \"required\": [\"count8\"], \"additionalProperties\": false}\nGenerated JSON: {\"count8\": 41}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count8\".\n2. The value of \"count8\" is an integer, which matches the schema's type definition.\n3. The property \"count8\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nTherefore, the JSON {\"count8\": 41} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-09",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count9\": {\"type\": \"integer\"}}, \"required\": [\"count9\"], \"additionalProperties\": false}\nGenerated JSON: {\"count9\": \"44\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count9\".\n2. The value of \"count9\" is an integer, which is \"44\".\n3. The schema requires the presence of the \"count9\" property, which is present in the JSON.\n4. The schema does not allow any additional properties, but in this case, there are no additional properties, so this requirement is also met.\n\nHowever, it's worth noting that the value of \"count9\" is a string, not an integer. The schema specifies that \"count9\" should be an integer, but the JSON has a string value. This is a potential issue, as the JSON is not fully valid according to the schema.\n\nTo fix this, the JSON should be modified to use an integer value for \"count9\", like this:\n\n```json\n{\"count9\": 44}\n```\n\nThis JSON object is fully valid according to the provided schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-10",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The JSON object has a property named \"count10\", which matches the schema's required property.\n3. The value of \"count10\" is an integer, which matches the schema's type for the \"count10\" property.\n4. There are no additional properties in the JSON object, which matches the schema's \"additionalProperties\" property set to false.\n\nTherefore, the JSON object is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-11",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count11\".\n2. The value of \"count11\" is an integer, which matches the schema's type definition.\n3. The property \"count11\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count11\": \"50\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-12",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count12\".\n2. The value of \"count12\" is an integer (53), which matches the type specified in the schema.\n3. The schema specifies that \"count12\" is a required property, and it is present in the JSON.\n4. The schema specifies that there should be no additional properties, and the JSON does not have any additional properties.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-13",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count13\".\n2. The value of \"count13\" is an integer, which matches the schema's type definition.\n3. The property \"count13\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nHowever, it's worth noting that the value of \"count13\" is a string, not an integer. In JSON, integer values are typically represented as numbers (e.g., 56), not strings (e.g., \"56\"). If the schema requires an integer, the JSON should be modified to use a number instead of a string:\n\n```json\n{\"count13\": 56}\n```",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-14",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count14\".\n2. The value of \"count14\" is an integer, which matches the schema's type definition.\n3. The property \"count14\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count14\": 59} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-15",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count15\".\n2. The value of \"count15\" is an integer, which matches the schema's type definition.\n3. The property \"count15\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count15\": \"62\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-16",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count16\".\n2. The value of \"count16\" is an integer (65), which matches the type specified in the schema.\n3. The schema requires the presence of the \"count16\" property, and it is present in the JSON.\n4. The schema does not allow any additional properties, and the JSON does not have any additional properties.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-17",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count17\".\n2. The value of \"count17\" is an integer, which matches the type specified in the schema.\n3. The property \"count17\" is marked as required in the schema, meaning it must be present in the JSON object. In this case, it is present.\n4. The schema specifies that there should be no additional properties, but in this case, there are no additional properties, so this condition is also met.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-18",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The JSON object has a property named \"count18\", which matches the schema's required property.\n3. The value of \"count18\" is an integer, which matches the schema's type for the \"count18\" property.\n4. There are no additional properties in the JSON object, which matches the schema's \"additionalProperties\" property set to false.\n\nTherefore, the JSON object is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-19",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count19\".\n2. The value of \"count19\" is an integer, which matches the schema's type definition.\n3. The property \"count19\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count19\": \"74\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-20",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count20\".\n2. The value of \"count20\" is an integer (77), which matches the type specified in the schema.\n3. The schema requires the presence of the \"count20\" property, and it is present in the JSON.\n4. The schema does not allow any additional properties, and the JSON does not have any additional properties.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-21",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count21\".\n2. The value of \"count21\" is an integer, which matches the schema's type definition.\n3. The property \"count21\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count21\": \"80\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-22",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count22\" which is of type \"integer\".\n2. The property \"count22\" is present in the object, which is a requirement according to the schema.\n3. There are no additional properties in the object, which is also a requirement according to the schema.\n\nSo, the JSON object {\"count22\": 83} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-23",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count23\".\n2. The value of \"count23\" is an integer, which matches the schema's type definition.\n3. The property \"count23\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count23\": \"86\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-24",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count24\".\n2. The value of \"count24\" is an integer (89), which matches the type specified in the schema.\n3. The schema specifies that the \"count24\" property is required, and it is present in the JSON.\n4. The schema specifies that there should be no additional properties, and the JSON does not have any additional properties.\n\nTherefore, the JSON is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-25",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count25\".\n2. The value of \"count25\" is an integer, which matches the schema's type definition.\n3. The property \"count25\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count25\": \"92\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-26",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count26\".\n2. The value of \"count26\" is an integer, which matches the schema's type definition.\n3. The property \"count26\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count26\": 95} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-27",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count27\".\n2. The value of \"count27\" is an integer, which matches the schema's type definition.\n3. The property \"count27\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count27\": \"98\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-28",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count28\".\n2. The value of \"count28\" is an integer, which matches the schema's type definition.\n3. The property \"count28\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count28\": 101} is a valid instance of the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-29",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count29\".\n2. The value of \"count29\" is an integer, which matches the schema's type definition.\n3. The property \"count29\" is marked as required, meaning it must be present in the JSON object.\n4. There are no additional properties in the JSON object, which matches the schema's definition of \"additionalProperties\" as false.\n\nSo, the JSON {\"count29\": \"104\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "45-00",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count0\": {\"type\": \"integer\"}}, \"required\": [\"count0\"], \"additionalProperties\": false}\nGenerated JSON: {\"count0\": 17}",
+        "output": "The given JSON object is valid and conforms to the specified schema. \n\nHere's a breakdown of why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count0\" which is an integer, matching the schema's property \"count0\".\n3. The property \"count0\" is present, which matches the schema's \"required\" property.\n4. There are no additional properties beyond \"count0\", which matches the schema's \"additionalProperties\" property.\n\nSo, the JSON object {\"count0\": 17} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-01",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count1\": {\"type\": \"integer\"}}, \"required\": [\"count1\"], \"additionalProperties\": false}\nGenerated JSON: {\"count1\": \"20\"}",
+        "output": "The given JSON is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object has a single property named \"count1\".\n2. The value of \"count1\" is an integer, which is \"20\".\n3. The schema requires the presence of \"count1\" and does not allow any additional properties, which is also satisfied.\n\nHowever, it's worth noting that the value of \"count1\" is a string, not an integer. The schema specifies that \"count1\" should be an integer, but the JSON has a string value. This would be considered invalid if the schema required the value to be an integer. \n\nTo make the JSON valid according to the schema, the value of \"count1\" should be an integer, like this: {\"count1\": 20}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-02",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count2\": {\"type\": \"integer\"}}, \"required\": [\"count2\"], \"additionalProperties\": false}\nGenerated JSON: {\"count2\": 23}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count2\", which is required according to the schema.\n3. The value of \"count2\" is an integer (23), which matches the schema's type for the \"count2\" property.\n\nTherefore, the JSON object {\"count2\": 23} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-03",
+        "partition": "calibration",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count3\": {\"type\": \"integer\"}}, \"required\": [\"count3\"], \"additionalProperties\": false}\nGenerated JSON: {\"count3\": \"26\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count3\", which is required according to the schema.\n3. The value of \"count3\" is an integer, which matches the schema's type for \"count3\".\n\nSo, the JSON object {\"count3\": \"26\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-04",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count4\": {\"type\": \"integer\"}}, \"required\": [\"count4\"], \"additionalProperties\": false}\nGenerated JSON: {\"count4\": 29}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count4\", which is required according to the schema.\n3. The value of \"count4\" is an integer, which matches the schema's type for the \"count4\" property.\n\nTherefore, the JSON object {\"count4\": 29} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-05",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count5\": {\"type\": \"integer\"}}, \"required\": [\"count5\"], \"additionalProperties\": false}\nGenerated JSON: {\"count5\": \"32\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count5\", which is required according to the schema.\n3. The value of \"count5\" is an integer, which matches the schema's type for the \"count5\" property.\n\nSo, the JSON object {\"count5\": \"32\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-06",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count6\": {\"type\": \"integer\"}}, \"required\": [\"count6\"], \"additionalProperties\": false}\nGenerated JSON: {\"count6\": 35}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count6\", which is required according to the schema.\n3. The value of \"count6\" is an integer, which matches the schema's type for the \"count6\" property.\n\nTherefore, the JSON object {\"count6\": 35} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-07",
+        "partition": "evidence",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count7\": {\"type\": \"integer\"}}, \"required\": [\"count7\"], \"additionalProperties\": false}\nGenerated JSON: {\"count7\": \"38\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count7\", which is required according to the schema.\n3. The value of \"count7\" is an integer, which matches the schema's type for the \"count7\" property.\n\nSo, the JSON object {\"count7\": \"38\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-08",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count8\": {\"type\": \"integer\"}}, \"required\": [\"count8\"], \"additionalProperties\": false}\nGenerated JSON: {\"count8\": 41}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count8\", which is required according to the schema.\n3. The value of \"count8\" is an integer, which matches the schema's type for the \"count8\" property.\n\nSo, the JSON object {\"count8\": 41} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-09",
+        "partition": "selection",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count9\": {\"type\": \"integer\"}}, \"required\": [\"count9\"], \"additionalProperties\": false}\nGenerated JSON: {\"count9\": \"44\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count9\", which is required according to the schema.\n3. The value of \"count9\" is an integer, which matches the schema's type for the \"count9\" property.\n\nSo, the JSON object {\"count9\": \"44\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-10",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count10\": {\"type\": \"integer\"}}, \"required\": [\"count10\"], \"additionalProperties\": false}\nGenerated JSON: {\"count10\": 47}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count10\", which is required according to the schema.\n3. The value of \"count10\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count10\": 47} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-11",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count11\": {\"type\": \"integer\"}}, \"required\": [\"count11\"], \"additionalProperties\": false}\nGenerated JSON: {\"count11\": \"50\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count11\", which is required according to the schema.\n3. The value of \"count11\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count11\": \"50\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-12",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count12\": {\"type\": \"integer\"}}, \"required\": [\"count12\"], \"additionalProperties\": false}\nGenerated JSON: {\"count12\": 53}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count12\", which is required according to the schema.\n3. The value of \"count12\" is an integer (53), which matches the schema's type for the \"count12\" property.\n4. There are no additional properties in the JSON object, which matches the schema's requirement that there should be no additional properties.\n\nSo, the JSON object {\"count12\": 53} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-13",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count13\": {\"type\": \"integer\"}}, \"required\": [\"count13\"], \"additionalProperties\": false}\nGenerated JSON: {\"count13\": \"56\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count13\", which is required according to the schema.\n3. The value of \"count13\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count13\": \"56\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-14",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count14\": {\"type\": \"integer\"}}, \"required\": [\"count14\"], \"additionalProperties\": false}\nGenerated JSON: {\"count14\": 59}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count14\", which is required according to the schema.\n3. The value of \"count14\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count14\": 59} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-15",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count15\": {\"type\": \"integer\"}}, \"required\": [\"count15\"], \"additionalProperties\": false}\nGenerated JSON: {\"count15\": \"62\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count15\", which is required according to the schema.\n3. The value of \"count15\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count15\": \"62\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-16",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count16\": {\"type\": \"integer\"}}, \"required\": [\"count16\"], \"additionalProperties\": false}\nGenerated JSON: {\"count16\": 65}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count16\", which is required according to the schema.\n3. The value of \"count16\" is an integer (65), which matches the schema's type for this property.\n\nTherefore, the JSON object {\"count16\": 65} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-17",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count17\": {\"type\": \"integer\"}}, \"required\": [\"count17\"], \"additionalProperties\": false}\nGenerated JSON: {\"count17\": \"68\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count17\", which is required according to the schema.\n3. The value of \"count17\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count17\": \"68\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-18",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count18\": {\"type\": \"integer\"}}, \"required\": [\"count18\"], \"additionalProperties\": false}\nGenerated JSON: {\"count18\": 71}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The JSON object has a property named \"count18\", which is required according to the schema.\n3. The value of \"count18\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count18\": 71} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-19",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count19\": {\"type\": \"integer\"}}, \"required\": [\"count19\"], \"additionalProperties\": false}\nGenerated JSON: {\"count19\": \"74\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count19\", which is required according to the schema.\n3. The value of \"count19\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count19\": \"74\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-20",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count20\": {\"type\": \"integer\"}}, \"required\": [\"count20\"], \"additionalProperties\": false}\nGenerated JSON: {\"count20\": 77}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count20\", which is required according to the schema.\n3. The value of \"count20\" is an integer (77), which matches the schema's type for this property.\n\nTherefore, the JSON object {\"count20\": 77} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-21",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count21\": {\"type\": \"integer\"}}, \"required\": [\"count21\"], \"additionalProperties\": false}\nGenerated JSON: {\"count21\": \"80\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count21\", which is required according to the schema.\n3. The value of \"count21\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count21\": \"80\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-22",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count22\": {\"type\": \"integer\"}}, \"required\": [\"count22\"], \"additionalProperties\": false}\nGenerated JSON: {\"count22\": 83}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count22\", which is required according to the schema.\n3. The value of \"count22\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count22\": 83} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-23",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count23\": {\"type\": \"integer\"}}, \"required\": [\"count23\"], \"additionalProperties\": false}\nGenerated JSON: {\"count23\": \"86\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count23\", which is required according to the schema.\n3. The value of \"count23\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count23\": \"86\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-24",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count24\": {\"type\": \"integer\"}}, \"required\": [\"count24\"], \"additionalProperties\": false}\nGenerated JSON: {\"count24\": 89}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count24\", which is required according to the schema.\n3. The value of \"count24\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count24\": 89} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-25",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count25\": {\"type\": \"integer\"}}, \"required\": [\"count25\"], \"additionalProperties\": false}\nGenerated JSON: {\"count25\": \"92\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count25\", which is required according to the schema.\n3. The value of \"count25\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count25\": \"92\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-26",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count26\": {\"type\": \"integer\"}}, \"required\": [\"count26\"], \"additionalProperties\": false}\nGenerated JSON: {\"count26\": 95}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's a breakdown of why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count26\" which is an integer, matching the schema's property definition.\n3. The property \"count26\" is present, which matches the schema's required property list.\n4. There are no additional properties beyond what is specified in the schema, so it also matches the schema's additionalProperties definition.\n\nTherefore, the JSON object is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-27",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count27\": {\"type\": \"integer\"}}, \"required\": [\"count27\"], \"additionalProperties\": false}\nGenerated JSON: {\"count27\": \"98\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count27\", which is required according to the schema.\n3. The value of \"count27\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count27\": \"98\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "45-28",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count28\": {\"type\": \"integer\"}}, \"required\": [\"count28\"], \"additionalProperties\": false}\nGenerated JSON: {\"count28\": 101}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count28\", which is required according to the schema.\n3. The value of \"count28\" is an integer (101), which matches the schema's type for this property.\n\nTherefore, the JSON object {\"count28\": 101} is valid according to the schema.",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "45-29",
+        "partition": "evaluation",
+        "query": "Schema: {\"type\": \"object\", \"properties\": {\"count29\": {\"type\": \"integer\"}}, \"required\": [\"count29\"], \"additionalProperties\": false}\nGenerated JSON: {\"count29\": \"104\"}",
+        "output": "The given JSON object is valid according to the provided schema. \n\nHere's why:\n\n1. The JSON object is an object, which matches the schema's type.\n2. The object has a property named \"count29\", which is required according to the schema.\n3. The value of \"count29\" is an integer, which matches the schema's type for this property.\n\nSo, the JSON object {\"count29\": \"104\"} is valid according to the schema.",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

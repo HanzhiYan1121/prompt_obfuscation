@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-265",
+  "task": "argument",
+  "method": "tgps",
+  "prompt": "You are an argument scheme classifier. Given a dialogue, an argument, and a list of candidate schemes, identify which scheme best describes the argument.\n\nOutput format:\n1. Start with \"Argument scheme: [scheme name].\"\n2. Follow with an \"Explanation:\" section that justifies why the chosen scheme fits the argument and why the others do not, referencing specific elements from the dialogue and argument.\n\nCandidate schemes are typically: expert opinion, cause and effect, analogy.",
+  "prompt_sha256": "8549f3e90c7002690ae36892f9f3072968c054bcc55922280c6e6104608552d8",
+  "benchmark_sha256": "937054e6e78c7c17ffb400b69b173393e1420871aadf414c842f7059f9de3b22",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "28-10",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: \nThe chosen scheme is cause and effect because the argument explicitly states a cause (heating the Vela10 wire) and its corresponding effect (the wire expanding). The relationship between the cause and effect is direct and temporal, with the cause preceding the effect. The phrase \"so the applied heat explains its expansion\" further emphasizes the causal relationship between the two events. \n\nThe expert opinion scheme does not fit because the argument does not rely on the opinion of an expert, but rather on a direct observation of cause and effect. The analogy scheme does not fit because the argument does not compare two different things to illustrate a point, but rather describes a direct causal relationship between two events.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-11",
+      "query": "Dialogue: A: What supports this claim? B: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (the Vela11 and Nera11 machines) to draw a conclusion based on their similarities. The speaker is using the fact that the Vela11 works as a basis for the claim that the Nera11 should also work, because they have the same components and wiring. This is a classic example of an analogy, where a known case (the Vela11) is used to make a prediction about a similar but distinct case (the Nera11). The other schemes do not fit as well: expert opinion is not applicable because there is no mention of an expert's opinion, and cause and effect is not applicable because the argument is not about cause and effect, but rather about similarity and prediction.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-12",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nArgument: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: The argument relies on the opinion of an expert, Dr Nera12, a qualified astronomer, to support the claim that Vela12 is a moon. The phrase \"Dr Nera12, a qualified astronomer, says\" explicitly indicates that the claim is based on the expert's opinion. This is a classic example of an expert opinion scheme, where the conclusion is drawn from the assertion of an expert in the relevant field. The other schemes do not fit well in this case: there is no cause-and-effect relationship being described, and no analogy is being made between two different things.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-13",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: The argument is an example of cause and effect because it describes a relationship between two events: the application of heat and the expansion of the wire. The claim is that the cause (heating the wire) led to the effect (expansion). This is evident in the dialogue and argument, where B explicitly states that the applied heat \"explains\" the expansion, implying a causal relationship. The other schemes do not fit as well: expert opinion is not applicable as there is no mention of an expert's opinion, and analogy is not applicable as there is no comparison between two different things.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-14",
+      "query": "Dialogue: A: What supports this claim? B: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (the Vela14 and Nera14 machines) to draw a conclusion based on their shared characteristics (same components and wiring). The argument assumes that if one situation (the Vela14 machine working) is similar to another situation (the Nera14 machine), the outcome of the first situation (working) should also apply to the second situation (the Nera14 machine working). This is a classic example of analogical reasoning, where a known outcome is applied to a new, similar situation. The other schemes do not fit as well: expert opinion is not applicable as there is no mention of an expert's opinion, and cause and effect is not applicable as the argument is not discussing a direct cause-and-effect relationship between two events.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-15",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nArgument: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: \nThe argument relies on the opinion of an expert, Dr Nera15, a qualified astronomer, to support the claim that Vela15 is a moon. This is evident from the statement \"Dr Nera15, a qualified astronomer, says that Vela15 is a moon.\" The argument is essentially presenting Dr Nera15's opinion as evidence for the claim, which is a classic example of an expert opinion scheme. \n\nThe cause and effect scheme does not fit because there is no indication of a causal relationship between Dr Nera15's statement and the conclusion. The cause and effect scheme typically involves a cause leading to an effect, which is not present in this argument. \n\nThe analogy scheme does not fit because there is no comparison between two different things to make a point. The argument is not drawing a parallel between two distinct concepts to arrive at a conclusion, which is a key characteristic of an analogy.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-16",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: The argument is an example of cause and effect because it describes a relationship between two events: the application of heat and the expansion of the Vela16 wire. The claim is that the cause (heating the wire) led to the effect (expansion). This is evident in the dialogue and argument, where B explicitly states that the applied heat \"explains\" the expansion, implying a causal relationship. The other schemes do not fit as well: expert opinion is not applicable as there is no mention of an expert's opinion, and analogy is not relevant as there is no comparison being made between two different things.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-17",
+      "query": "Dialogue: A: What supports this claim? B: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (Vela17 and Nera17 machines) to draw a conclusion based on their similarities. The speaker is using the fact that Vela17 works as a basis to infer that Nera17 should also work, because they share the same components and wiring. This is a classic example of an analogy, where a known case (Vela17 working) is used to make a prediction about a similar but distinct case (Nera17 working). The other schemes do not fit as well: expert opinion is not applicable because there is no mention of an expert's opinion, and cause and effect is not applicable because the argument is not about cause-and-effect relationships, but rather about similarity and inference.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-18",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nArgument: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: \nThe argument relies on the opinion of an expert, Dr Nera18, a qualified astronomer, to support the claim that Vela18 is a moon. This is evident from the statement \"Dr Nera18, a qualified astronomer, says that Vela18 is a moon.\" The argument is essentially presenting Dr Nera18's opinion as evidence for the claim, which is a classic example of an expert opinion scheme. \n\nThe cause and effect scheme does not fit because there is no causal relationship between Dr Nera18's statement and the conclusion. The argument is not presenting a cause that leads to an effect, but rather presenting an expert's opinion as evidence. \n\nThe analogy scheme does not fit because there is no comparison between two different things. The argument is not drawing a parallel between two distinct concepts, but rather presenting a direct statement from an expert as evidence.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-19",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: The argument is an example of cause and effect because it describes a relationship between two events: the application of heat and the expansion of the Vela19 wire. The claim states that the cause (heating the wire) led to the effect (expansion). This is evident in the dialogue and argument, where B explicitly states that the applied heat \"explains\" the expansion, implying a causal relationship. The other schemes do not fit as well: expert opinion is not applicable as there is no mention of an expert's opinion or authority, and analogy is not relevant as the argument is not comparing two different things using a shared characteristic.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-20",
+      "query": "Dialogue: A: What supports this claim? B: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (the Vela20 and Nera20 machines) to draw a conclusion based on their similarities. The speaker is using the fact that the Vela20 works as a basis for the claim that the Nera20 should also work, because they have the same components and wiring. This is a classic example of an analogy, where a known case (the Vela20) is used to make a prediction about a similar but distinct case (the Nera20). The other schemes do not fit as well: expert opinion is not applicable because there is no mention of an expert's opinion, and cause and effect is not applicable because the argument is not about cause and effect, but rather about similarity and prediction.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-21",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nArgument: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: \nThe argument relies on the opinion of an expert, Dr Nera21, a qualified astronomer, to support the claim that Vela21 is a moon. The argument is essentially saying that because an expert in the field believes something to be true, it is probably true. This is a classic example of an expert opinion scheme, where the authority and credibility of the expert are used to establish the validity of the claim. The other schemes do not fit as well: there is no cause-and-effect relationship being established, and no analogy is being made between two different things.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-22",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: \nThe chosen scheme is cause and effect because the argument explicitly states that the cause (heating the Vela22 wire) led to the effect (its expansion). This is evident in the dialogue and argument where B directly links the cause (heating) to the effect (expansion) using the phrase \"so the applied heat explains its expansion.\" This indicates a clear causal relationship between the two events. \n\nThe expert opinion scheme does not fit because the argument does not rely on the opinion of an expert, but rather on a direct observation of cause and effect. The analogy scheme does not fit because the argument does not compare two different things to illustrate a point, but rather describes a direct cause and effect relationship.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-23",
+      "query": "Dialogue: A: What supports this claim? B: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument relies on a comparison between two similar entities (Vela23 and Nera23 machines) to draw a conclusion about their behavior. The speaker is using the fact that one machine works as a basis to infer that the other should work as well, because they share the same components and wiring. This is a classic example of an analogy, where a known case (the working Vela23 machine) is used to make a prediction about an analogous case (the Nera23 machine). The other schemes do not fit as well: expert opinion is not present, as there is no mention of an expert's opinion or authority; cause and effect is not applicable, as the argument is not about a causal relationship between two events, but rather a similarity between two machines.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-24",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nArgument: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: \nThe argument relies on the opinion of an expert, Dr Nera24, a qualified astronomer, to support the claim that Vela24 is a moon. This is evident from the statement \"Dr Nera24, a qualified astronomer, says that Vela24 is a moon.\" The argument is essentially presenting the opinion of an expert as evidence for the claim, which is a characteristic of the expert opinion scheme. The other schemes do not fit well in this case: there is no cause-and-effect relationship being established, and no analogy is being made between two different things.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-25",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: \nThe chosen scheme is cause and effect because the argument explicitly states that the cause (heating the Vela25 wire) led to the effect (its expansion). This is evident in the dialogue and argument where B states that the applied heat caused the expansion, directly linking the cause to the effect. The phrase \"so the applied heat explains its expansion\" further emphasizes the causal relationship between the two events. \n\nThe expert opinion scheme does not fit because the argument does not rely on the opinion of an expert, but rather on a direct causal relationship. The analogy scheme does not fit because the argument does not compare two different things to explain a concept, but rather explains a phenomenon through a direct cause-and-effect relationship.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-26",
+      "query": "Dialogue: A: What supports this claim? B: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (the Vela26 and Nera26 machines) to draw a conclusion based on their shared characteristics (same components and wiring). The speaker is using the fact that the Vela26 works as a basis for predicting that the Nera26 should also work, because of their similarities. This is a classic example of an analogy, where a known case (Vela26 working) is used to make a prediction about a similar but distinct case (Nera26 working). The other schemes do not fit as well: expert opinion is not applicable because there is no mention of an expert's opinion, and cause and effect is not applicable because the argument is not about cause and effect relationships, but rather about similarity and prediction.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-27",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nArgument: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Expert opinion.\n\nExplanation: \nThe argument relies on the opinion of an expert, Dr Nera27, a qualified astronomer, to support the claim that Vela27 is a moon. This is evident from the statement \"Dr Nera27, a qualified astronomer, says that Vela27 is a moon.\" The argument is essentially presenting Dr Nera27's opinion as evidence for the claim, which is a classic example of an expert opinion scheme. \n\nThe cause and effect scheme does not fit because there is no causal relationship between Dr Nera27's statement and the conclusion. The statement is not describing a cause that leads to an effect, but rather presenting an expert's opinion as evidence. \n\nThe analogy scheme does not fit because there is no comparison between two different things. The argument is not drawing a parallel between two distinct concepts, but rather presenting a direct statement from an expert as evidence.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-28",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: cause and effect.\n\nExplanation: \nThe chosen scheme is cause and effect because the argument explicitly states that the cause (heating the Vela28 wire) led to the effect (its expansion). This is evident in the dialogue and argument where B directly links the cause (heating) to the effect (expansion) using the phrase \"so the applied heat explains its expansion.\" This indicates a clear causal relationship between the two events. \n\nThe expert opinion scheme does not fit because there is no indication that the argument relies on the opinion of an expert. The dialogue and argument do not mention any expert or their opinion. \n\nThe analogy scheme does not fit because the argument does not compare two different things to illustrate a point. The argument is focused on a direct cause-and-effect relationship rather than drawing a comparison between two distinct concepts.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-29",
+      "query": "Dialogue: A: What supports this claim? B: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "Argument scheme: Analogy.\n\nExplanation: The argument is an analogy because it compares two similar situations (the Vela29 and Nera29 machines) to draw a conclusion based on their similarities. The speaker is using the fact that the Vela29 machine works as a basis for the claim that the Nera29 machine should also work, because they have the same components and wiring. This is a classic example of an analogy, where a known case (the Vela29 machine) is used to make a prediction about a similar but distinct case (the Nera29 machine). The other schemes do not fit as well: expert opinion is not applicable because there is no mention of an expert's opinion, and cause and effect is not applicable because the argument is not about cause and effect, but rather about similarity and prediction.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

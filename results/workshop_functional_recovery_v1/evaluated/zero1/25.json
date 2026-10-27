@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-189",
+  "task": "synthesis_math",
+  "method": "zero1",
+  "prompt": "Mathematical Reasoning Evaluator\nEvaluate candidate responses to arithmetic questions, identify calculation errors, and determine the best answer based on accuracy and clarity.\nStructured evaluation with separate explanations for each candidate followed by a final comparative conclusion.\nMust explicitly state the correct arithmetic result. Must identify specific errors in incorrect candidates. Must prioritize accuracy over format, but note clarity issues. Output must follow the specific template of listing candidates, explaining them, and providing a final verdict.\nThe system is designed to grade multiple-choice or open-ended math problems where candidates may provide incorrect calculations or incomplete sentences. The goal is to distinguish between computational errors and presentation flaws.\nInternal arithmetic verification module to compute the ground truth answer before evaluating candidates.",
+  "prompt_sha256": "95b4f66f6c2296b4a338b7951dba18d92dab9d88b5d908e19fdfec02de6ca1bd",
+  "benchmark_sha256": "de6cd4dc6efa9c29b3e63e8987384339743e8fee2eb88fe0b056d1683f7a7348",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "25-10",
+      "query": "Question: 47+8=?\nCandidate responses:\nA: 47+8=56.\nB: Adding gives 55.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 47+8=56\n**Explanation:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 47 + 8 = 55, not 56. The error is a simple arithmetic mistake.\n\n### Candidate B\n**Response:** Adding gives 55\n**Explanation:** Candidate B's response is correct, but the presentation is unclear. The response lacks a clear mathematical expression, making it difficult to understand the thought process behind the answer. However, the arithmetic result is correct.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 47 + 8 = 55\n\n**Comparative Conclusion**\nCandidate B's response is the most accurate, despite the presentation issue. Candidate A's response contains a calculation error, making it the least accurate.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-11",
+      "query": "Question: 50+9=?\nCandidate responses:\nA: 50+9=60.\nB: Adding gives 59.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 50+9=60\n**Correctness:** Incorrect\n**Error:** The candidate incorrectly added 50 and 9, resulting in an incorrect sum.\n**Explanation:** The correct calculation is 50 + 9 = 59, not 60.\n\n### Candidate B\n**Response:** Adding gives 59\n**Correctness:** Correct\n**Explanation:** The candidate correctly identified the sum of 50 and 9 as 59.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 50 + 9 = 59\n\n**Comparative Conclusion**\nCandidate B provided the correct answer, while Candidate A made a calculation error.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-12",
+      "query": "Question: 53+10=?\nCandidate responses:\nA: 53+10=64.\nB: Adding gives 63.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 53+10=64\n**Explanation:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 53 + 10 = 63, not 64. The error is a simple addition mistake.\n\n### Candidate B\n**Response:** Adding gives 63\n**Explanation:** Candidate B's response is correct, but the presentation is unclear. The response lacks a clear mathematical expression, making it difficult to understand the thought process behind the answer. However, the arithmetic result is correct.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 53 + 10 = 63\n\n**Comparative Conclusion**\nCandidate B's response is the most accurate, despite presentation issues. Candidate A's response contains a calculation error, while Candidate B's response is correct but lacks clarity.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-13",
+      "query": "Question: 56+11=?\nCandidate responses:\nA: 56+11=68.\nB: Adding gives 67.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 56+11=68\n**Correctness:** Incorrect\n**Error:** The candidate incorrectly added the numbers. The correct calculation is 56 + 11 = 67.\n**Clarity:** Clear and concise\n\n### Candidate B\n**Response:** Adding gives 67\n**Correctness:** Correct\n**Error:** None\n**Clarity:** Clear, but lacks explicit calculation\n\n### Ground Truth\nThe correct result of the arithmetic operation 56+11 is 67.\n\n**Comparative Conclusion**\nCandidate B provided the correct answer, 67, but lacked explicit calculation. Candidate A incorrectly added the numbers, resulting in an incorrect answer, 68.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-14",
+      "query": "Question: 59+5=?\nCandidate responses:\nA: 59+5=65.\nB: Adding gives 64.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nResponse: 59+5=65\n\n* **Arithmetic Result:** The correct arithmetic result is 64.\n* **Error Identification:** Candidate A made a calculation error. The correct calculation is 59 + 5 = 64, not 65.\n* **Clarity:** The response is clear and concise.\n\n### Candidate B\nResponse: Adding gives 64.\n\n* **Arithmetic Result:** The correct arithmetic result is 64.\n* **Error Identification:** Candidate B's response is correct but lacks clarity. The response should be more explicit, e.g., \"59 + 5 = 64.\"\n* **Clarity:** The response is concise but lacks explicitness.\n\n### Candidate C\nResponse: 59+5=64.\n\n* **Arithmetic Result:** The correct arithmetic result is 64.\n* **Error Identification:** Candidate C's response is correct and clear.\n* **Clarity:** The response is clear and concise.\n\n### Final Verdict\n\nBased on the evaluations, Candidate C's response is the most accurate and clear. Candidate A made a calculation error, and Candidate B's response lacked clarity.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-15",
+      "query": "Question: 62+6=?\nCandidate responses:\nA: 62+6=69.\nB: Adding gives 68.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 62+6=69\n**Explanation:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 62 + 6 = 68, not 69. The error is a simple arithmetic mistake.\n\n### Candidate B\n**Response:** Adding gives 68.\n**Explanation:** Candidate B's response is correct, but the presentation is unclear. The response lacks a clear mathematical expression, making it difficult to understand the thought process behind the answer. However, the arithmetic result is correct.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 62 + 6 = 68\n\n**Comparative Conclusion**\nCandidate B's response is the most accurate, despite the presentation issue. Candidate A's response contains a calculation error, making it the least accurate.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-16",
+      "query": "Question: 65+7=?\nCandidate responses:\nA: 65+7=73.\nB: Adding gives 72.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nCandidate A's response: 65+7=73.\n\n**Ground Truth:** The correct arithmetic result is 72.\n\n**Error Analysis:** Candidate A's response contains a calculation error. The correct calculation is 65 + 7 = 72, not 73. This is a simple arithmetic mistake.\n\n**Clarity:** The response is clear and concise.\n\n**Verdict:** Candidate A's response is incorrect due to a calculation error.\n\n### Candidate B\nCandidate B's response: Adding gives 72.\n\n**Ground Truth:** The correct arithmetic result is 72.\n\n**Error Analysis:** Candidate B's response is correct in terms of the arithmetic result, but the presentation is incomplete. The response lacks a clear calculation or explanation.\n\n**Clarity:** The response is clear, but lacks a detailed explanation.\n\n**Verdict:** Candidate B's response is correct in terms of the arithmetic result, but lacks clarity in presentation.\n\n**Final Verdict:** The correct arithmetic result is 72. Candidate B's response is the most accurate, despite the lack of clarity in presentation.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-17",
+      "query": "Question: 68+8=?\nCandidate responses:\nA: 68+8=77.\nB: Adding gives 76.",
+      "output": "**Candidate Evaluation Report**\n\n**Ground Truth Answer:** 68 + 8 = 76\n\n**Candidate A:**\nResponse: 68+8=77\nError: Calculation error\nExplanation: The candidate incorrectly added 68 and 8, resulting in an incorrect sum of 77 instead of the correct answer, 76.\n\n**Candidate B:**\nResponse: Adding gives 76\nError: None\nExplanation: The candidate provided a clear and concise response, correctly stating that the sum of 68 and 8 is 76. However, the response lacks clarity in terms of the actual calculation process.\n\n**Comparative Conclusion:**\nCandidate B's response is more accurate than Candidate A's, as it correctly states the sum of 68 and 8. However, both candidates could improve their responses by providing a clear calculation process.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-18",
+      "query": "Question: 71+9=?\nCandidate responses:\nA: 71+9=81.\nB: Adding gives 80.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nCandidate A's response: 71+9=81.\n\n**Ground Truth:** The correct result of the arithmetic operation 71+9 is 80.\n\n**Error Analysis:** Candidate A's response contains a calculation error. The correct calculation is 71 + 9 = 80, not 81.\n\n**Clarity:** The response is clear and concise.\n\n**Verdict:** Incorrect. The correct answer is 80.\n\n### Candidate B\nCandidate B's response: Adding gives 80.\n\n**Ground Truth:** The correct result of the arithmetic operation 71+9 is 80.\n\n**Error Analysis:** Candidate B's response is correct in terms of the arithmetic result, but lacks a clear calculation.\n\n**Clarity:** The response is clear, but lacks a mathematical representation of the calculation.\n\n**Verdict:** Correct, but with a clarity issue.\n\n**Final Verdict:** The correct answer is 80. Candidate B's response is correct, but lacks clarity.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-19",
+      "query": "Question: 74+10=?\nCandidate responses:\nA: 74+10=85.\nB: Adding gives 84.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nResponse: 74+10=85\n\nExplanation: Candidate A's response is incorrect due to a calculation error. The correct calculation is 74 + 10 = 84, not 85. The error is a simple arithmetic mistake.\n\n### Candidate B\nResponse: Adding gives 84\n\nExplanation: Candidate B's response is correct, but the presentation is unclear. The response lacks a clear mathematical expression, making it difficult to understand the thought process behind the answer. However, the arithmetic result is correct.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 74 + 10 = 84\n\n**Comparative Conclusion**\n\nCandidate B's response is the most accurate, despite the presentation issue. Candidate A's response contains a calculation error, making it the least accurate.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-20",
+      "query": "Question: 77+11=?\nCandidate responses:\nA: 77+11=89.\nB: Adding gives 88.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nCandidate A's response: 77+11=89.\n\n**Ground Truth:** The correct calculation is 77 + 11 = 88.\n\n**Error Analysis:** Candidate A's response contains a calculation error. The correct result of the addition is 88, not 89.\n\n**Clarity:** The response is clear and concise.\n\n**Grade:** Incorrect due to calculation error.\n\n### Candidate B\nCandidate B's response: Adding gives 88.\n\n**Ground Truth:** The correct calculation is 77 + 11 = 88.\n\n**Error Analysis:** Candidate B's response is correct in terms of the result, but lacks a clear mathematical representation of the calculation.\n\n**Clarity:** The response is clear, but lacks mathematical notation.\n\n**Grade:** Correct in terms of result, but lacks clarity in mathematical representation.\n\n**Final Verdict:** The correct answer is 88. Candidate B's response is the most accurate, despite lacking clarity in mathematical representation.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-21",
+      "query": "Question: 80+5=?\nCandidate responses:\nA: 80+5=86.\nB: Adding gives 85.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nCandidate A's response: 80+5=86.\n\n**Ground Truth Answer:** 80 + 5 = 85\n\n**Error Analysis:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 80 + 5 = 85, not 86.\n\n**Clarity:** The response is clear and concise.\n\n**Grade:** Incorrect due to calculation error.\n\n### Candidate B\nCandidate B's response: Adding gives 85.\n\n**Ground Truth Answer:** 80 + 5 = 85\n\n**Error Analysis:** Candidate B's response is correct, but the presentation is incomplete. The response lacks a clear mathematical operation or calculation.\n\n**Clarity:** The response is clear, but lacks mathematical detail.\n\n**Grade:** Correct, but presentation is incomplete.\n\n### Final Verdict\n\nThe correct answer is 85. Candidate B's response is correct, but lacks clarity in presentation. Candidate A's response is incorrect due to a calculation error.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-22",
+      "query": "Question: 83+6=?\nCandidate responses:\nA: 83+6=90.\nB: Adding gives 89.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 83+6=90\n**Correctness:** Incorrect\n**Error:** The candidate incorrectly added the numbers. The correct calculation is 83 + 6 = 89.\n**Clarity:** Clear and concise\n\n### Candidate B\n**Response:** Adding gives 89.\n**Correctness:** Incorrect\n**Error:** The candidate correctly calculated the sum but failed to provide a clear equation. The correct equation should be 83 + 6 = 89.\n**Clarity:** Poor (lack of explicit equation)\n\n**Internal Arithmetic Verification:**\n83 + 6 = 89\n\n**Final Verdict:**\nThe correct answer is 89. Both candidates made errors in their responses. Candidate A incorrectly calculated the sum, while Candidate B failed to provide a clear equation.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-23",
+      "query": "Question: 86+7=?\nCandidate responses:\nA: 86+7=94.\nB: Adding gives 93.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nCandidate A's response: 86+7=94.\n\n**Ground Truth Answer:** 86+7=93.\n\n**Error Analysis:** Candidate A's response contains a calculation error. The correct calculation is 86+7=93, not 94. This is a simple arithmetic error.\n\n**Clarity:** The response is clear and concise.\n\n**Score:** 0/2 (1 point for clarity, 1 point for accuracy)\n\n### Candidate B\nCandidate B's response: Adding gives 93.\n\n**Ground Truth Answer:** 86+7=93.\n\n**Error Analysis:** Candidate B's response is correct in terms of the arithmetic result, but lacks clarity. The response is a statement rather than a calculation.\n\n**Clarity:** The response is unclear due to the lack of explicit calculation.\n\n**Score:** 1/2 (1 point for accuracy, 0 points for clarity)\n\n### Final Verdict\n\nThe correct answer is 93. Candidate B's response is correct in terms of the arithmetic result, but lacks clarity. Candidate A's response contains a calculation error.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-24",
+      "query": "Question: 89+8=?\nCandidate responses:\nA: 89+8=98.\nB: Adding gives 97.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 89+8=98\n**Explanation:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 89 + 8 = 97, not 98. The error is a simple arithmetic mistake.\n\n### Candidate B\n**Response:** Adding gives 97\n**Explanation:** Candidate B's response is correct, but the presentation is unclear. The response lacks a clear mathematical operation, making it difficult to understand the thought process. However, the arithmetic result is correct.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 89 + 8 = 97\n\n**Comparative Conclusion**\nCandidate B's response is the most accurate, despite the unclear presentation. Candidate A's response contains a calculation error, making it the least accurate.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-25",
+      "query": "Question: 92+9=?\nCandidate responses:\nA: 92+9=102.\nB: Adding gives 101.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A: 92+9=102\n\n* **Arithmetic Result:** The correct arithmetic result is 101.\n* **Error Identification:** Candidate A incorrectly added 92 and 9, resulting in an incorrect sum of 102. The error is a simple arithmetic mistake.\n* **Clarity:** The response is clear and concise, but the calculation is incorrect.\n\n### Candidate B: Adding gives 101\n\n* **Arithmetic Result:** The correct arithmetic result is 101.\n* **Error Identification:** Candidate B's response is correct in terms of the arithmetic result, but the sentence structure is unclear. The phrase \"Adding gives\" is ambiguous and does not clearly convey the calculation.\n* **Clarity:** The response lacks clarity due to the ambiguous sentence structure.\n\n**Final Verdict**\n\nBoth candidates provided the correct arithmetic result of 101. However, Candidate A's response was more accurate in terms of calculation, while Candidate B's response was more concise in terms of sentence structure. Considering the importance of accuracy, Candidate A's response is considered the better answer.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-26",
+      "query": "Question: 95+10=?\nCandidate responses:\nA: 95+10=106.\nB: Adding gives 105.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 95+10=106\n**Explanation:** Candidate A's response is incorrect due to a calculation error. The correct calculation is 95 + 10 = 105, not 106. The error is a simple arithmetic mistake.\n\n### Candidate B\n**Response:** Adding gives 105.\n**Explanation:** Candidate B's response is correct but lacks clarity. The response is concise and directly states the correct answer, 105. However, it does not provide the calculation steps, which would make the response more understandable.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 95 + 10 = 105\n\n**Comparative Conclusion**\nBoth candidates provided the correct answer, 105, but with varying levels of clarity and explanation. Candidate A provided a clear but incorrect calculation, while Candidate B provided a concise but less explanatory response. Considering both accuracy and clarity, Candidate B's response is more suitable, as it directly states the correct answer without unnecessary calculation steps.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-27",
+      "query": "Question: 98+11=?\nCandidate responses:\nA: 98+11=110.\nB: Adding gives 109.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\nResponse: 98+11=110\n\n* **Accuracy:** Incorrect\n* **Error:** The candidate incorrectly added the numbers. The correct calculation is 98 + 11 = 109.\n* **Clarity:** Clear and concise\n\n### Candidate B\nResponse: Adding gives 109\n\n* **Accuracy:** Correct\n* **Error:** None\n* **Clarity:** Clear, but lacks explicit calculation\n\n**Ground Truth Answer:** 98 + 11 = 109\n\n**Comparative Conclusion:** Candidate B provided the correct answer, but lacked explicit calculation. Candidate A made a calculation error.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-28",
+      "query": "Question: 101+5=?\nCandidate responses:\nA: 101+5=107.\nB: Adding gives 106.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 101+5=107\n**Explanation:** Candidate A's response is correct. The correct arithmetic operation is indeed 101 + 5 = 106, but the candidate incorrectly stated the result as 107. This is a calculation error.\n\n### Candidate B\n**Response:** Adding gives 106.\n**Explanation:** Candidate B's response is correct. The correct arithmetic operation is indeed 101 + 5 = 106. The response is clear and concise, but it lacks a numerical representation of the result.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 101 + 5 = 106\n\n**Comparative Conclusion**\n\nBoth candidates A and B provided the correct arithmetic result, but candidate A's response contained a calculation error. Candidate B's response was clear and concise, but lacked a numerical representation of the result. Therefore, the best answer is **Candidate B**, as it is both accurate and clear.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "25-29",
+      "query": "Question: 104+6=?\nCandidate responses:\nA: 104+6=111.\nB: Adding gives 110.",
+      "output": "**Candidate Evaluations**\n\n### Candidate A\n**Response:** 104+6=111\n**Correctness:** Incorrect\n**Error:** The candidate incorrectly added 104 and 6, resulting in an incorrect sum.\n**Explanation:** The correct calculation is 104 + 6 = 110, not 111.\n\n### Candidate B\n**Response:** Adding gives 110.\n**Correctness:** Correct\n**Explanation:** The candidate correctly identified the sum of 104 and 6 as 110.\n\n### Ground Truth Answer\nThe correct arithmetic result is: 104 + 6 = 110\n\n**Comparative Conclusion**\nCandidate B provided the correct answer, while Candidate A made a calculation error.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-409",
+  "task": "sentiment_binary",
+  "method": "tgps",
+  "prompt": "You are an AI assistant that processes user inputs containing a \"Text\" field and a \"Record\" field. Your response depends on the sentiment of the \"Text\" as follows:\n\n1. If the \"Text\" is positive, respond with: \"It seems like you're trying to express a positive sentiment.\"\n2. If the \"Text\" is negative, respond with: \"It seems like you're trying to describe a negative experience.\"\n\nIgnore the content of the \"Record\" field in your response generation.",
+  "prompt_sha256": "0b2191c7069df6cbcc797033791bca0f9dd1d4831d74c18fc9140c658c2694e0",
+  "benchmark_sha256": "20029cdbdab12efdfb65756b1e061f3a5d72afacbab8778d192413a5da3d63ba",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "58-10",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-11",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-12",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-13",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-14",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-15",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-16",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-17",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-18",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-19",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-20",
+      "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-21",
+      "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-22",
+      "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-23",
+      "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-24",
+      "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-25",
+      "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-26",
+      "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-27",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-28",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "It seems like you're trying to express a positive sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-29",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "It seems like you're trying to describe a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

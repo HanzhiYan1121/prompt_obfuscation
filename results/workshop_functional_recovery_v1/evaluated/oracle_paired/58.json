@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-409",
+  "task": "sentiment_binary",
+  "method": "oracle_paired",
+  "prompt": "Output: {labels[0]}\nOutput: {labels[0]}\nInput: Text: {texts[0]}",
+  "prompt_sha256": "29c176b2bd5fdbbe5d5d438295f643edc3fa156f449e21a5bc604a37b2abd132",
+  "benchmark_sha256": "20029cdbdab12efdfb65756b1e061f3a5d72afacbab8778d192413a5da3d63ba",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "58-10",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "I highly recommend this brilliant film.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-11",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "I strongly dislike this boring film.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-12",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "It seems like you're trying to provide a review or feedback about a meal. Based on the text you provided, I'll assume that the meal was enjoyed.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-13",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "Based on the text \"This meal was disgusting and badly burned\" and the record \"Nera13\", I would label this text as negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-14",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "Based on the text \"The staff were kind and exceptionally helpful\" and the record \"Nera14\", I'll assume that \"Nera14\" is a label or a reference to a music album or a song. \n\nIf that's the case, I'd like to know more about the album or song \"Nera14\" by the artist. However, I need more information about the artist or the album to provide a more accurate answer. \n\nCould you please provide more context or information about the artist or the album \"Nera14\"?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-15",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "Based on the text \"The staff were rude and completely unhelpful\" and the record \"Nera15\", I would label this as a negative review.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-16",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "It seems like you're referring to a conversation or a dialogue. However, I don't see any information about \"labels\" or \"texts\" in the context provided. Could you please provide more context or clarify what you're trying to accomplish?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-17",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "It seems like you're expressing dissatisfaction with the results. Would you like to discuss the issue or explore ways to improve them?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-18",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "It seems like you're describing a design, but I'm a large language model, I don't have any information about a specific design called \"Nera18.\" Could you provide more context or clarify what you're referring to?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-19",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "I'm sorry to hear that you don't like the design. Can you please provide more context or clarify what specifically about the design you dislike?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-20",
+      "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "It seems like you're providing a text and a record. However, I'm not sure what you're trying to accomplish. Could you please clarify what you're trying to do with the text and the record \"Nera20\"? Are you trying to:\n\n1. Analyze the sentiment of the text?\n2. Extract specific information from the text?\n3. Match the text with the record \"Nera20\"?\n4. Something else?\n\nPlease provide more context or clarify your question, and I'll do my best to assist you.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-21",
+      "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "It seems like you're providing a text and a record. However, I'm not sure what you're trying to accomplish. Could you please clarify what you're trying to do with the text and the record \"Nera21\"? Are you trying to:\n\n1. Summarize the text?\n2. Analyze the sentiment of the text?\n3. Extract specific information from the text?\n4. Something else?\n\nPlease provide more context or clarify your question, and I'll do my best to assist you.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-22",
+      "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "Based on the text \"The service was excellent and made me very happy\" and the record \"Nera22\", I would guess that the label is likely a music label. \n\nThe text suggests a positive experience, which is often associated with music reviews or ratings. The record \"Nera22\" could be a music album or single, and the label might be the company that released it.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-23",
+      "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "Based on the text \"The service was awful and made me angry\" and the record \"Nera23\", I would label this text as:\n\nNegative\n\nThe text expresses a negative sentiment towards the service, using words like \"awful\" which convey a strong negative emotion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-24",
+      "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "{labels[0]}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-25",
+      "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "Based on the text \"A terrible performance, painfully disappointing\" and the record \"Nera25\", I would guess that the label is likely \"25\" and the artist is \"Nera\".",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-26",
+      "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "It seems like you're providing a text and a record. However, I'm not sure what you're trying to accomplish. Could you please clarify what you're trying to do with the text and the record \"Nera26\"? Are you trying to:\n\n1. Extract specific information from the text?\n2. Use the record as a label or identifier for the text?\n3. Something else?\n\nPlease provide more context or clarify your question, and I'll do my best to assist you.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-27",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+      "output": "I'm so sorry to hear that you're not satisfied with the product. Can you please provide more context or details about the product, such as its name or the company that made it? This will help me better understand your issue and provide a more accurate response.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-28",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "It seems like you're providing a text and a record. However, I'm a large language model, I don't have any information about the context of the record \"Nera28.\" Could you please provide more context or clarify what you're trying to accomplish?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-29",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "It seems like you're describing a negative experience. Would you like to talk about what happened or how you're feeling?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

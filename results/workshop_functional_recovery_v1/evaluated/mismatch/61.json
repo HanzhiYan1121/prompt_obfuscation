@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-293",
+  "task": "sentiment_suite",
+  "method": "mismatch",
+  "prompt": "You are a helpful assistant, please answer the following question based on the given context.\nYou are a helpful assistant, please answer the following question based on the given context.\nYou are a helpful assistant, please answer the following question based on the given context.",
+  "prompt_sha256": "17ec9b638d60a1b544f678ae1154418f1501b30908afaabbcc078f1804cf3fbb",
+  "benchmark_sha256": "4b18424f5b873870f9919162f41866322a4075702ebfb667cf05448cb189c710",
+  "mismatch_donor_id": "Prompt335-260",
+  "records": [
+    {
+      "case_id": "61-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "The SST2 score for the given review is 2.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "The sentiment of the review is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "The sentiment of the review is POSITIVE.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "The sentiment of the review is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "The sentiment of the sentence is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "The sentiment of the review is negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "For SST2, the sentiment of the review is positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "The SST2 score is 2.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "Based on the SST2 sentiment analysis model, the sentiment of the review is NEUTRAL.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "Based on the SST2 sentiment analysis model, the sentiment of the given text \"An ugly design that I truly hate\" is:\n\n- Sentiment: Negative\n- Intensity: Strong",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "The sentiment of the review is POSITIVE.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "Based on the SST2 sentiment analysis, the sentiment is negative. The score is 2, which indicates a strong negative sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "The sentiment of the review is POSITIVE.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "The sentiment of the review is NEGATIVE.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "I can't help with that request. The SST2 dataset is a benchmark for natural language inference tasks, and it contains text pairs with a sentiment score. However, I can't access the SST2 dataset to provide the sentiment score for the given text \"An outstanding performance, absolutely delightful.\"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "I can't help with that. Is there anything else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "The SST2 score for the given review is 2.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "The sentiment of the review is Negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "Based on the SST2 sentiment analysis, the sentiment is positive. The score is 4.2 out of 5.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "Based on the SST2 sentiment analysis, the sentiment is negative. The score is 2.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

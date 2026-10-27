@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 21,
+    "id": "Prompt335-175",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_175_tok10",
+    "source_sha256": "490f24e9c14e53b24d4c2eee28a8989a2dfa30d45be7992638e342015bbd4636",
+    "source_characters": 121,
+    "eligible": true,
+    "task": "truth",
+    "measurement_scope": "truth classification of unambiguous arithmetic statements",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "b6477636aa82b26afbef040a7e428a7d890a438be2f0a07836b69c883a1a6194",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "21-00",
+        "partition": "calibration",
+        "query": "Statement: 17 plus 5 equals 22.",
+        "output": "Statement: 17 plus 5 equals 22.\n\nThis statement is: False\n\nThe correct calculation is: 17 + 5 = 22 is incorrect, the correct answer is 22 is actually 17 + 5 = 22 is correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-01",
+        "partition": "calibration",
+        "query": "Statement: 20 plus 6 equals 27.",
+        "output": "The statement \"20 plus 6 equals 27\" is False. \n\nThe correct calculation is: 20 + 6 = 26.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-02",
+        "partition": "calibration",
+        "query": "Statement: 23 plus 7 equals 30.",
+        "output": "Statement: 23 plus 7 equals 30.\n\nThis statement is: False\n\nThe correct calculation is: 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 = 30 is incorrect, the correct answer is 30 is actually 23 + 7 =",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-03",
+        "partition": "calibration",
+        "query": "Statement: 26 plus 8 equals 35.",
+        "output": "The statement \"26 plus 8 equals 35\" is False. \n\nThe correct calculation is: \n26 + 8 = 34",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-04",
+        "partition": "evidence",
+        "query": "Statement: 29 plus 9 equals 38.",
+        "output": "Statement: 29 plus 9 equals 38.\n\nThis statement is FALSE. \n\nThe correct calculation is: 29 + 9 = 38 is incorrect, the correct answer is 38 is actually 29 + 9 = 38",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-05",
+        "partition": "evidence",
+        "query": "Statement: 32 plus 10 equals 43.",
+        "output": "Statement: 32 plus 10 equals 42.\n\nThis statement is False.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-06",
+        "partition": "evidence",
+        "query": "Statement: 35 plus 11 equals 46.",
+        "output": "To verify the statement, let's calculate the result of 35 plus 11:\n\n35 + 11 = 46\n\nThe statement is correct, so the answer is:\n\nTrue",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-07",
+        "partition": "evidence",
+        "query": "Statement: 38 plus 5 equals 44.",
+        "output": "To verify the statement, let's calculate the result of 38 plus 5:\n\n38 + 5 = 43\n\nSince the result is not 44, the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-08",
+        "partition": "selection",
+        "query": "Statement: 41 plus 6 equals 47.",
+        "output": "Statement: 41 plus 6 equals 47.\n\nThis statement is: False\n\nThe correct calculation is: 41 + 6 = 47 is incorrect, the correct answer is 47 is actually 47.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-09",
+        "partition": "selection",
+        "query": "Statement: 44 plus 7 equals 52.",
+        "output": "Statement: 44 plus 7 equals 52.\n\nThis statement is: False\n\nThe correct calculation is 44 + 7 = 51.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-10",
+        "partition": "evaluation",
+        "query": "Statement: 47 plus 8 equals 55.",
+        "output": "Statement: 47 plus 8 equals 55.\n\nThis statement is: False\n\nThe correct calculation is: 47 + 8 = 55 is incorrect, the correct answer is 55 is actually 47 + 7 = 54 or 47 + 9 = 56",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-11",
+        "partition": "evaluation",
+        "query": "Statement: 50 plus 9 equals 60.",
+        "output": "The statement \"50 plus 9 equals 60\" is False. \n\nThe correct calculation is: 50 + 9 = 59.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-12",
+        "partition": "evaluation",
+        "query": "Statement: 53 plus 10 equals 63.",
+        "output": "To verify the statement, let's calculate the result of 53 plus 10.\n\n53 + 10 = 63\n\nThe statement is correct, so the answer is:\n\nTrue",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-13",
+        "partition": "evaluation",
+        "query": "Statement: 56 plus 11 equals 68.",
+        "output": "To verify the statement, let's calculate the sum:\n\n56 + 11 = 67\n\nSince the calculated result (67) does not match the statement's claim (68), the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-14",
+        "partition": "evaluation",
+        "query": "Statement: 59 plus 5 equals 64.",
+        "output": "Statement: 59 plus 5 equals 64.\n\nThis statement is: False\n\nThe correct calculation is: 59 + 5 = 64 is incorrect, the correct answer is 64 is actually 64.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-15",
+        "partition": "evaluation",
+        "query": "Statement: 62 plus 6 equals 69.",
+        "output": "Statement: 62 plus 6 equals 68.\n\nThis statement is False.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-16",
+        "partition": "evaluation",
+        "query": "Statement: 65 plus 7 equals 72.",
+        "output": "Statement: 65 plus 7 equals 72.\n\nThis statement is: False\n\nThe correct calculation is: 65 + 7 = 72 is incorrect, the correct answer is 72 is actually 65 + 7 = 72",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-17",
+        "partition": "evaluation",
+        "query": "Statement: 68 plus 8 equals 77.",
+        "output": "Statement: 68 plus 8 equals 77.\n\nThis statement is: False\n\nThe correct calculation is: 68 + 8 = 76",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-18",
+        "partition": "evaluation",
+        "query": "Statement: 71 plus 9 equals 80.",
+        "output": "To verify the statement, let's calculate the sum:\n\n71 + 9 = 80\n\nThe result matches the statement, so the statement is:\n\nTrue",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-19",
+        "partition": "evaluation",
+        "query": "Statement: 74 plus 10 equals 85.",
+        "output": "To determine the truth of the statement, let's calculate the result of 74 plus 10.\n\n74 + 10 = 84\n\nSince the result is 84, not 85, the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-20",
+        "partition": "evaluation",
+        "query": "Statement: 77 plus 11 equals 88.",
+        "output": "Statement: 77 plus 11 equals 88.\n\nThis statement is: False\n\nThe correct calculation is: 77 + 11 = 88 is incorrect, the correct result is 88 is actually 77 + 11 = 88 is correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-21",
+        "partition": "evaluation",
+        "query": "Statement: 80 plus 5 equals 86.",
+        "output": "To verify the statement, let's calculate the result of 80 plus 5:\n\n80 + 5 = 85\n\nSince the result is 85, not 86, the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-22",
+        "partition": "evaluation",
+        "query": "Statement: 83 plus 6 equals 89.",
+        "output": "To verify the statement, let's calculate the result of 83 plus 6.\n\n83 + 6 = 89\n\nThe statement is correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-23",
+        "partition": "evaluation",
+        "query": "Statement: 86 plus 7 equals 94.",
+        "output": "To determine the truth of the statement, we need to calculate the result of 86 plus 7.\n\n86 + 7 = 93\n\nSince the result is 93, not 94, the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-24",
+        "partition": "evaluation",
+        "query": "Statement: 89 plus 8 equals 97.",
+        "output": "Statement: 89 plus 8 equals 97.\n\nThis statement is: False\n\nThe correct calculation is: 89 + 8 = 97",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-25",
+        "partition": "evaluation",
+        "query": "Statement: 92 plus 9 equals 102.",
+        "output": "Statement: 92 plus 9 equals 102.\n\nThis statement is: False\n\nThe correct calculation is: 92 + 9 = 101.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-26",
+        "partition": "evaluation",
+        "query": "Statement: 95 plus 10 equals 105.",
+        "output": "Statement: 95 plus 10 equals 105.\n\nThis statement is: False\n\nThe correct calculation is: 95 + 10 = 105 is incorrect, the correct answer is 105 is actually 95 + 5 = 100, 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 = 105 is actually 95 + 10 = 105 is incorrect, 95 + 10 =",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-27",
+        "partition": "evaluation",
+        "query": "Statement: 98 plus 11 equals 110.",
+        "output": "Statement: 98 plus 11 equals 110.\n\nThis statement is: False\n\nThe correct calculation is: 98 + 11 = 109.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-28",
+        "partition": "evaluation",
+        "query": "Statement: 101 plus 5 equals 106.",
+        "output": "To verify the statement, let's calculate the result of 101 plus 5:\n\n101 + 5 = 106\n\nThe statement is correct, so the answer is:\n\nTrue",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-29",
+        "partition": "evaluation",
+        "query": "Statement: 104 plus 6 equals 111.",
+        "output": "To verify the statement, let's calculate the result of 104 plus 6:\n\n104 + 6 = 110\n\nSince the result is 110, not 111, the statement is:\n\nFalse",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "21-00",
+        "partition": "calibration",
+        "query": "Statement: 17 plus 5 equals 22.",
+        "output": "False\n\nExplanation: The correct calculation is 17 + 5 = 22 is incorrect. The correct result is 17 + 5 = 22 is correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-01",
+        "partition": "calibration",
+        "query": "Statement: 20 plus 6 equals 27.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-02",
+        "partition": "calibration",
+        "query": "Statement: 23 plus 7 equals 30.",
+        "output": "False\n\nExplanation: The correct calculation is 23 + 7 = 30 is incorrect. The correct result is 23 + 7 = 30 is correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-03",
+        "partition": "calibration",
+        "query": "Statement: 26 plus 8 equals 35.",
+        "output": "False\n\nExplanation: The correct calculation is 26 + 8 = 34.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-04",
+        "partition": "evidence",
+        "query": "Statement: 29 plus 9 equals 38.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-05",
+        "partition": "evidence",
+        "query": "Statement: 32 plus 10 equals 43.",
+        "output": "False\n\nExplanation: The correct calculation is 32 + 10 = 42, not 43.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-06",
+        "partition": "evidence",
+        "query": "Statement: 35 plus 11 equals 46.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-07",
+        "partition": "evidence",
+        "query": "Statement: 38 plus 5 equals 44.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-08",
+        "partition": "selection",
+        "query": "Statement: 41 plus 6 equals 47.",
+        "output": "False\n\nExplanation: The correct calculation is 41 + 6 = 47 is incorrect. The correct result is 41 + 6 = 47 is correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-09",
+        "partition": "selection",
+        "query": "Statement: 44 plus 7 equals 52.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-10",
+        "partition": "evaluation",
+        "query": "Statement: 47 plus 8 equals 55.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-11",
+        "partition": "evaluation",
+        "query": "Statement: 50 plus 9 equals 60.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-12",
+        "partition": "evaluation",
+        "query": "Statement: 53 plus 10 equals 63.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-13",
+        "partition": "evaluation",
+        "query": "Statement: 56 plus 11 equals 68.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-14",
+        "partition": "evaluation",
+        "query": "Statement: 59 plus 5 equals 64.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-15",
+        "partition": "evaluation",
+        "query": "Statement: 62 plus 6 equals 69.",
+        "output": "False\n\nExplanation: The correct calculation is 62 + 6 = 68, not 69.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-16",
+        "partition": "evaluation",
+        "query": "Statement: 65 plus 7 equals 72.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-17",
+        "partition": "evaluation",
+        "query": "Statement: 68 plus 8 equals 77.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-18",
+        "partition": "evaluation",
+        "query": "Statement: 71 plus 9 equals 80.",
+        "output": "False\n\nExplanation: The correct calculation is 71 + 9 = 80 is incorrect. The correct result is 71 + 9 = 80 is correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-19",
+        "partition": "evaluation",
+        "query": "Statement: 74 plus 10 equals 85.",
+        "output": "False\n\nExplanation: The correct calculation is 74 + 10 = 84, not 85.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-20",
+        "partition": "evaluation",
+        "query": "Statement: 77 plus 11 equals 88.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-21",
+        "partition": "evaluation",
+        "query": "Statement: 80 plus 5 equals 86.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-22",
+        "partition": "evaluation",
+        "query": "Statement: 83 plus 6 equals 89.",
+        "output": "False\n\nExplanation: The correct calculation is 83 + 6 = 89 is incorrect. The correct result is 83 + 6 = 89 is actually correct.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-23",
+        "partition": "evaluation",
+        "query": "Statement: 86 plus 7 equals 94.",
+        "output": "False\n\nExplanation: The correct calculation is 86 + 7 = 93, not 94.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-24",
+        "partition": "evaluation",
+        "query": "Statement: 89 plus 8 equals 97.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-25",
+        "partition": "evaluation",
+        "query": "Statement: 92 plus 9 equals 102.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-26",
+        "partition": "evaluation",
+        "query": "Statement: 95 plus 10 equals 105.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-27",
+        "partition": "evaluation",
+        "query": "Statement: 98 plus 11 equals 110.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-28",
+        "partition": "evaluation",
+        "query": "Statement: 101 plus 5 equals 106.",
+        "output": "True",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "21-29",
+        "partition": "evaluation",
+        "query": "Statement: 104 plus 6 equals 111.",
+        "output": "True",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "21-00",
+        "partition": "calibration",
+        "query": "Statement: 17 plus 5 equals 22.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n17 + 5 = 22 is incorrect.\n\nThe correct calculation is:\n\n17 + 5 = 22 is incorrect, the correct answer is 22 is incorrect, the correct answer is  17 + 5 = 22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  22 is incorrect, the correct answer is  ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-01",
+        "partition": "calibration",
+        "query": "Statement: 20 plus 6 equals 27.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n20 + 6 = 26, not 27.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-02",
+        "partition": "calibration",
+        "query": "Statement: 23 plus 7 equals 30.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n23 + 7 = 30 is incorrect.\n\nThe correct calculation is:\n\n23 + 7 = 30 is incorrect, the correct answer is 30 is not the correct answer.\n\nThe correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-03",
+        "partition": "calibration",
+        "query": "Statement: 26 plus 8 equals 35.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n26 + 8 = 34",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-04",
+        "partition": "evidence",
+        "query": "Statement: 29 plus 9 equals 38.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n29 + 9 = 38 is incorrect.\n\nThe correct calculation is:\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29 + 9 = 38 is incorrect.\n\n29",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-05",
+        "partition": "evidence",
+        "query": "Statement: 32 plus 10 equals 43.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n32 + 10 = 42, not 43.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-06",
+        "partition": "evidence",
+        "query": "Statement: 35 plus 11 equals 46.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n35 + 11 = 46 is incorrect.\n\nThe correct calculation is:\n\n35 + 11 = 46 is incorrect, the correct answer is 46 is actually 46.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-07",
+        "partition": "evidence",
+        "query": "Statement: 38 plus 5 equals 44.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n38 + 5 = 43, not 44.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-08",
+        "partition": "selection",
+        "query": "Statement: 41 plus 6 equals 47.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n41 + 6 = 47 is incorrect.\n\nThe correct calculation is:\n\n41 + 6 = 47 is incorrect, the correct answer is 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the correct answer.\n\nThe correct answer is 47 is incorrect, the correct answer is 47 is not the",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-09",
+        "partition": "selection",
+        "query": "Statement: 44 plus 7 equals 52.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n44 + 7 = 51, not 52.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-10",
+        "partition": "evaluation",
+        "query": "Statement: 47 plus 8 equals 55.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n47 + 8 = 55 is incorrect.\n\nThe correct calculation is:\n\n47 + 8 = 55 is incorrect, the correct answer is 55 is not the correct answer.\n\nThe correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-11",
+        "partition": "evaluation",
+        "query": "Statement: 50 plus 9 equals 60.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n50 + 9 = 59, not 60.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-12",
+        "partition": "evaluation",
+        "query": "Statement: 53 plus 10 equals 63.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n53 + 10 = 63\n\nHowever, the statement is incorrect because 53 plus 10 equals 63 is not true. The correct answer is 63.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-13",
+        "partition": "evaluation",
+        "query": "Statement: 56 plus 11 equals 68.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n56 + 11 = 67, not 68.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-14",
+        "partition": "evaluation",
+        "query": "Statement: 59 plus 5 equals 64.",
+        "output": "That statement is incorrect. 59 plus 5 equals 64 is not true. \n\n59 + 5 = 64 is incorrect. \n\nThe correct calculation is:\n\n59 + 5 = 64",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-15",
+        "partition": "evaluation",
+        "query": "Statement: 62 plus 6 equals 69.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n62 + 6 = 68, not 69.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-16",
+        "partition": "evaluation",
+        "query": "Statement: 65 plus 7 equals 72.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n65 + 7 = 72 is incorrect.\n\nThe correct calculation is:\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-17",
+        "partition": "evaluation",
+        "query": "Statement: 68 plus 8 equals 77.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n68 + 8 = 76, not 77.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-18",
+        "partition": "evaluation",
+        "query": "Statement: 71 plus 9 equals 80.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n71 + 9 = 80 is incorrect.\n\nThe correct calculation is:\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\nThe correct answer is 71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-19",
+        "partition": "evaluation",
+        "query": "Statement: 74 plus 10 equals 85.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n74 + 10 = 84",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-20",
+        "partition": "evaluation",
+        "query": "Statement: 77 plus 11 equals 88.",
+        "output": "That statement is incorrect. 77 plus 11 equals 88 is not correct. \n\nThe correct calculation is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is incorrect\nThe correct answer is: \n77 + 11 = 88 is",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-21",
+        "partition": "evaluation",
+        "query": "Statement: 80 plus 5 equals 86.",
+        "output": "That statement is correct. 80 + 5 = 85 is incorrect, the correct answer is 85.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-22",
+        "partition": "evaluation",
+        "query": "Statement: 83 plus 6 equals 89.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n83 + 6 = 89 is incorrect.\n\nThe correct calculation is:\n\n83 + 6 = 89 is incorrect.\n\nThe correct answer is:\n\n83 + 6 = 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect.\n\nThe correct answer is 89 is incorrect",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-23",
+        "partition": "evaluation",
+        "query": "Statement: 86 plus 7 equals 94.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n86 + 7 = 93\n\nNot 94.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-24",
+        "partition": "evaluation",
+        "query": "Statement: 89 plus 8 equals 97.",
+        "output": "That statement is incorrect. 89 plus 8 equals 97 is not correct. \n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation is:\n\n97 is incorrect. \n\nThe correct calculation",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-25",
+        "partition": "evaluation",
+        "query": "Statement: 92 plus 9 equals 102.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n92 + 9 = 101, not 102.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-26",
+        "partition": "evaluation",
+        "query": "Statement: 95 plus 10 equals 105.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n95 + 10 = 105 is incorrect, the correct answer is 105 is actually 95 + 10 = 105",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-27",
+        "partition": "evaluation",
+        "query": "Statement: 98 plus 11 equals 110.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n98 + 11 = 109, not 110.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-28",
+        "partition": "evaluation",
+        "query": "Statement: 101 plus 5 equals 106.",
+        "output": "That statement is incorrect. 101 plus 5 equals 106 is not true. \n\n101 + 5 = 106 is not correct. \n\nThe correct calculation is:\n\n101 + 5 = 106 is incorrect. \n\n101 + 5 = 106 is not correct. \n\n101 + 5 = 106 is incorrect. \n\nThe correct answer is:\n\n101 + 5 = 106 is incorrect. \n\n101 + 5 = 106 is not correct. \n\n101 + 5 = 106 is incorrect. \n\nThe correct calculation is:\n\n101 + 5 = 106 is incorrect. \n\n101 + 5 = 106 is not correct. \n\n101 + 5 = 106 is incorrect. \n\nThe correct answer is:\n\n101 + 5 = 106 is incorrect. \n\n101 + 5 = 106 is not correct. \n\n101 + 5 = 106 is incorrect. \n\nThe correct calculation is:\n\n101 + 5 = 106 is incorrect. \n\n101 + 5 = 106 is not correct. \n\n101 + 5 = 106 is incorrect. \n\nThe correct answer is:\n\n106 is not the correct answer. \n\nThe correct answer is 106 is incorrect. \n\nThe correct answer is 106 is not",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-29",
+        "partition": "evaluation",
+        "query": "Statement: 104 plus 6 equals 111.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n104 + 6 = 110, not 111.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "21-00",
+        "partition": "calibration",
+        "query": "Statement: 17 plus 5 equals 22.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct calculation is:\n\n17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 22 is not the correct answer.\n\nThe correct answer is 17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 22 is not the correct answer.\n\nThe correct answer is 17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 22 is not the correct answer.\n\nThe correct answer is 17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 22 is not the correct answer.\n\nThe correct answer is 17 + 5 = 22 is incorrect, the correct answer is 22 is not the correct answer.\n\nThe correct answer is 22 is not the correct answer.\n\nThe correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-01",
+        "partition": "calibration",
+        "query": "Statement: 20 plus 6 equals 27.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n20 + 6 = 26",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-02",
+        "partition": "calibration",
+        "query": "Statement: 23 plus 7 equals 30.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n23 + 7 = 30 is incorrect.\n\nThe correct calculation is:\n\n23 + 7 = 30 is incorrect, the correct answer is 30 is not the correct answer.\n\nThe correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct answer is 30 is incorrect, the correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-03",
+        "partition": "calibration",
+        "query": "Statement: 26 plus 8 equals 35.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n26 + 8 = 34",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-04",
+        "partition": "evidence",
+        "query": "Statement: 29 plus 9 equals 38.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n29 + 9 = 38 is incorrect.\n\nThe correct calculation is:\n\n29 + 9 = 38 is incorrect, the correct answer is 38 is actually 38.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-05",
+        "partition": "evidence",
+        "query": "Statement: 32 plus 10 equals 43.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n32 + 10 = 42",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-06",
+        "partition": "evidence",
+        "query": "Statement: 35 plus 11 equals 46.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n35 + 11 = 46 is incorrect.\n\nThe correct calculation is:\n\n35 + 11 = 46 is incorrect, the correct answer is 46 is actually 46.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-07",
+        "partition": "evidence",
+        "query": "Statement: 38 plus 5 equals 44.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n38 + 5 = 43, not 44.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-08",
+        "partition": "selection",
+        "query": "Statement: 41 plus 6 equals 47.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n41 + 6 = 47 is incorrect.\n\nThe correct calculation is:\n\n41 + 6 = 47 is incorrect, the correct answer is 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, 46 + 1 = 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, 46 + 1 = 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, 46 + 1 = 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, 46 + 1 = 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, 46 + 1 = 47 is not the correct answer.\n\n41 + 6 = 47 is incorrect, the correct answer is 47 - 1 = 46, ",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-09",
+        "partition": "selection",
+        "query": "Statement: 44 plus 7 equals 52.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n44 + 7 = 51, not 52.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-10",
+        "partition": "evaluation",
+        "query": "Statement: 47 plus 8 equals 55.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n47 + 8 = 55 is incorrect.\n\nThe correct calculation is:\n\n47 + 8 = 55 is incorrect, the correct answer is 55 is not the correct answer.\n\nThe correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct answer is 55 is incorrect, the correct",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-11",
+        "partition": "evaluation",
+        "query": "Statement: 50 plus 9 equals 60.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n50 + 9 = 59",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-12",
+        "partition": "evaluation",
+        "query": "Statement: 53 plus 10 equals 63.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n53 + 10 = 63\n\nHowever, the correct answer is 63 is not the correct answer. The correct answer is 63.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-13",
+        "partition": "evaluation",
+        "query": "Statement: 56 plus 11 equals 68.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n56 + 11 = 67",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-14",
+        "partition": "evaluation",
+        "query": "Statement: 59 plus 5 equals 64.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n59 + 5 = 64 is incorrect.\n\nThe correct calculation is:\n\n59 + 5 = 64",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-15",
+        "partition": "evaluation",
+        "query": "Statement: 62 plus 6 equals 69.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n62 + 6 = 68",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-16",
+        "partition": "evaluation",
+        "query": "Statement: 65 plus 7 equals 72.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n65 + 7 = 72 is incorrect.\n\nThe correct calculation is:\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\n65 + 7 = 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the correct answer.\n\nThe correct answer is 72 is incorrect, the correct answer is 72 is not the",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-17",
+        "partition": "evaluation",
+        "query": "Statement: 68 plus 8 equals 77.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n68 + 8 = 76",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-18",
+        "partition": "evaluation",
+        "query": "Statement: 71 plus 9 equals 80.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n71 + 9 = 80 is incorrect.\n\nThe correct calculation is:\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\n71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\nThe correct answer is 71 + 9 = 80 is incorrect, the correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80 is not the correct answer.\n\nThe correct answer is 80",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-19",
+        "partition": "evaluation",
+        "query": "Statement: 74 plus 10 equals 85.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n74 + 10 = 84",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-20",
+        "partition": "evaluation",
+        "query": "Statement: 77 plus 11 equals 88.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n77 + 11 = 88 is incorrect.\n\nThe correct calculation is:\n\n77 + 11 = 88 is incorrect, the correct answer is 88 is actually 88.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-21",
+        "partition": "evaluation",
+        "query": "Statement: 80 plus 5 equals 86.",
+        "output": "That statement is correct. 80 + 5 = 85 is incorrect, the correct answer is 85.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-22",
+        "partition": "evaluation",
+        "query": "Statement: 83 plus 6 equals 89.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n83 + 6 = 89 is incorrect.\n\nThe correct calculation is:\n\n83 + 6 = 89 is incorrect, the correct answer is 89 is actually 89.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-23",
+        "partition": "evaluation",
+        "query": "Statement: 86 plus 7 equals 94.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n86 + 7 = 93\n\nNot 94.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-24",
+        "partition": "evaluation",
+        "query": "Statement: 89 plus 8 equals 97.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n89 + 8 = 97 is incorrect.\n\nThe correct calculation is:\n\n89 + 8 = 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is not the correct answer, the correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect, the correct answer is 97 is not the correct answer.\n\nThe correct answer is 97 is incorrect",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-25",
+        "partition": "evaluation",
+        "query": "Statement: 92 plus 9 equals 102.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n92 + 9 = 101, not 102.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-26",
+        "partition": "evaluation",
+        "query": "Statement: 95 plus 10 equals 105.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n95 + 10 = 105 is incorrect, the correct answer is 105 is actually 95 + 10 = 105",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-27",
+        "partition": "evaluation",
+        "query": "Statement: 98 plus 11 equals 110.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n98 + 11 = 109, not 110.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-28",
+        "partition": "evaluation",
+        "query": "Statement: 101 plus 5 equals 106.",
+        "output": "That statement is incorrect. 101 plus 5 equals 106 is not true. \n\n101 + 5 = 106 is not correct. \n\nThe correct calculation is:\n\n101 + 5 = 106 is incorrect, the correct answer is 106 is correct but the statement is incorrect because it says \"equals 106\" which is true but the statement is about 101 plus 5 which is actually 106.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "21-29",
+        "partition": "evaluation",
+        "query": "Statement: 104 plus 6 equals 111.",
+        "output": "That statement is incorrect. The correct calculation is:\n\n104 + 6 = 110",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-214",
+  "task": "sentiment_suite",
+  "method": "zero1",
+  "prompt": "Sentiment Analysis Assistant\nAnalyze the sentiment of the provided review text and extract specific attributes based on the SST2 dataset format.\nCategory: <value>\nValue: <value>\nReason: <value>\nThe model must request clarification if the input context is ambiguous or if the user intent is not explicitly defined as a sentiment analysis task. It should not perform the analysis unless the user confirms the context or provides sufficient details.\nThe inputs reference 'SST2' (Stanford Sentiment Treebank) and specific record identifiers (e.g., Nera4), indicating a structured dataset evaluation scenario. The model recognizes the pattern but defaults to a safety/clarification protocol before executing the task.\nIf the input matches the SST2 pattern but lacks explicit instruction confirmation, output a clarification request. If the user confirms or the context is clear, output the sentiment analysis in the specified Category/Value/Reason format.",
+  "prompt_sha256": "db12c71fa1f3903a0dccefe440bf0cea95f542bc19e080b0c5e23a15d756de72",
+  "benchmark_sha256": "ecfa348fd9f5f28fd18981e2847ae9b9ff101238c873e065c45db1353016be36",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "34-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the given review in the context of the SST2 dataset. \n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll analyze the review: \"I highly recommend this brilliant film.\"\n\nIs your intent to analyze the sentiment of this review as part of the SST2 dataset?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the given review in the context of the SST2 dataset. \n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll analyze the review: \"I strongly dislike this boring film.\"\n\nIs your intent to analyze the sentiment of this review as part of the SST2 dataset?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "To proceed with the sentiment analysis, I need to confirm that the context is indeed a sentiment analysis task. The input mentions the SST2 dataset, which suggests a structured sentiment analysis scenario.\n\nTo clarify, are you requesting a sentiment analysis of the provided review text using the SST2 dataset format, specifically for the record Nera12? If so, please confirm.\n\nIf you confirm, I'll proceed with the analysis.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the given review in the context of the SST2 dataset. \n\nPlease confirm that you'd like me to proceed with the analysis.\n\nIf you confirm, I'll analyze the review and provide the sentiment in the specified Category/Value/Reason format.\n\nReview: This meal was disgusting and badly burned.\nRecord: Nera13\n\nPlease respond with either \"Confirm\" or \"Provide more context.\"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"The staff were kind and exceptionally helpful\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Request clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text using the SST2 dataset format. \n\nPlease confirm by typing 'yes' or provide more context if needed. If you'd like to proceed, I'll analyze the review text and provide the sentiment analysis in the specified Category/Value/Reason format.\n\nReview text: The staff were rude and completely unhelpful.\n\nPlease confirm.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"I feel delighted by the impressive results\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"I feel disappointed by the terrible results\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Request clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"A beautiful design that I really adore\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"An ugly design that I truly hate\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Request clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"I loved every minute; it was wonderful\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Ask for clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"It was dreadful and a total waste of time\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Ask for clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "To proceed with the sentiment analysis, I need to confirm that the context is indeed a sentiment analysis task. The input mentions the SST2 dataset, which suggests a structured sentiment analysis scenario.\n\nTo clarify, are you requesting a sentiment analysis of the provided review text using the SST2 dataset format, specifically for the record \"Nera22\"? If so, please confirm by typing \"Confirm\" or \"Yes\". If not, please provide more context or clarify your intent.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"The service was awful and made me angry\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Ask for clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "To proceed with the sentiment analysis, I need to confirm that I understand the context correctly. You'd like me to analyze the sentiment of the review \"An outstanding performance, absolutely delightful\" from the SST2 dataset, specifically for the record \"Nera24\".\n\nIs that correct?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"A terrible performance, painfully disappointing\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Request clarification\n3. Provide additional context\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"I am thrilled with this fantastic purchase\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"I regret buying this useless product\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"What a lovely, enjoyable experience\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "34-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "To proceed with the sentiment analysis, I need to confirm that you'd like me to analyze the sentiment of the review text \"What a miserable, unpleasant experience\" based on the SST2 dataset format.\n\nPlease confirm that you'd like me to proceed with the analysis. If you have any questions or need further clarification, feel free to ask.\n\nOnce confirmed, I'll provide the sentiment analysis in the specified Category/Value/Reason format.\n\nPlease respond with one of the following:\n\n1. Confirm\n2. Provide more context\n3. Ask a question\n\nYour response:",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

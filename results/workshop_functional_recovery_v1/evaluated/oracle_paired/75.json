@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-106",
+  "task": "trial_summary",
+  "method": "oracle_paired",
+  "prompt": "Given a clinical trial protocol, summarize it into a concise representation that preserves the key design elements needed for trial similarity search.\nGiven a clinical trial protocol, summarize it into a concise representation that preserves the key design elements needed for trial similarity search. Focus on the following key aspects:\nGiven a clinical trial protocol, summarize it into a concise representation that preserves the key design elements needed for trial similarity search. Focus on the following key aspects: - **Eligibility criteria**: Include both inclusion and exclusion criteria. - **Intervention details**: Describe the experimental and control interventions, including dosages and administration routes if specified. - **Primary outcomes**: List the main outcome measures. - **Study design**: Specify the type of trial (e.g., randomized, double-blind, parallel-group, crossover). - **Other relevant details**: Include any additional important information such as the study population, sample size, and duration of the trial. # Clinical Trial Protocol Summary",
+  "prompt_sha256": "6cc69c087fe16b09a9df2531c22e1d4cacdb36916bf1333bed9edcf39ceeaaf4",
+  "benchmark_sha256": "a8855825fbd46b01ddb02069f8a72f03ee7a49c1cd65e4120c4c517526ef63d4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "75-10",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition10. It tests Drug10 in 47 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera10.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Population:** Adults (47 participants)\n- **Sample Size:** 47\n- **Duration:** Not specified\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 28\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug10\n- **Control Intervention:** Not specified\n- **Dosage and Administration:** Not specified\n\n**Primary Outcome:**\n\n- **Primary Outcome Measure:** Change in marker Nera10\n\n**Other Relevant Details:**\n\n- **Condition:** Condition10\n- **Number of Participants:** 47",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-11",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition11. It tests Drug11 in 50 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera11.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Population:** Adults (age 29 and above)\n- **Sample Size:** 50 participants\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 29\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug11\n- **Control Intervention:** None specified (assuming a placebo or no treatment control)\n\n**Primary Outcome:**\n\n- **Primary Outcome Measure:** Change in marker Nera11\n\n**Other Relevant Details:**\n\n- **Duration of the Trial:** Not specified\n- **Administration Route:** Not specified (assuming oral or intravenous administration, but this is not clear from the provided information)\n\nThis summary captures the key design elements of the clinical trial protocol, including eligibility criteria, intervention details, primary outcome, and other relevant details. However, some information such as the duration of the trial and administration route is not specified in the provided details.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-12",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition12. It tests Drug12 in 53 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera12.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Population:** Adults (age 30 and above)\n- **Sample Size:** 53 participants\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 30 years\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug12\n- **Control Intervention:** Not specified (likely a placebo or standard of care)\n\n**Primary Outcome:**\n\n- **Primary Outcome Measure:** Change in marker Nera12\n\n**Other Relevant Details:**\n\n- **Duration of the Trial:** Not specified\n- **Administration Route:** Not specified (assuming oral or injectable, but not specified)\n- **Dosage:** Not specified (assuming standard dosing, but not specified)\n\nThis summary captures the key design elements needed for trial similarity search, including eligibility criteria, intervention details, primary outcomes, and other relevant details.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-13",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition13. It tests Drug13 in 56 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera13.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 31\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug13\n- **Control Intervention:** None specified\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera13\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults\n- **Sample Size:** 56\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-14",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition14. It tests Drug14 in 59 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera14.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition14\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 25 years\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug14\n* Control intervention: None specified\n* Dosage and administration route: Not specified\n\n**Primary Outcomes:**\n\n* Change in marker Nera14\n\n**Study Design:**\n\n* Type: Randomized\n* Blinding: Double-blind\n* Parallel-group design\n\n**Other Relevant Details:**\n\n* Study population: Adults (59 participants)\n* Sample size: 59\n* Duration of the trial: Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-15",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition15. It tests Drug15 in 62 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera15.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition15\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 26 years\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug15\n* Control intervention: None specified\n* Dosage and administration route: Not specified\n\n**Primary Outcomes:**\n\n* Change in marker Nera15\n\n**Study Design:**\n\n* Type: Randomized\n* Blinding: Double-blind\n* Parallel-group design\n\n**Other Relevant Details:**\n\n* Study population: Adults (62 participants)\n* Sample size: 62\n* Duration of the trial: Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-16",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition16. It tests Drug16 in 65 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera16.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition16\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 27 years\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug16\n* Control intervention: None specified\n* Dosage and administration route: Not specified\n\n**Primary Outcomes:**\n\n* Change in marker Nera16\n\n**Study Design:**\n\n* Type: Randomized\n* Blinding: Double-blind\n* Parallel-group design\n\n**Other Relevant Details:**\n\n* Study population: Adults (65 participants)\n* Sample size: 65\n* Duration of the trial: Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-17",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition17. It tests Drug17 in 68 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera17.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 28 years\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug17\n- **Control Intervention:** None specified\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera17\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (68 participants)\n- **Sample Size:** 68\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-18",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition18. It tests Drug18 in 71 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera18.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition18\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 29\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug18\n* Control intervention: None specified\n* Dosage and administration route: Not specified\n\n**Primary Outcomes:**\n\n* Change in marker Nera18\n\n**Study Design:**\n\n* Type: Randomized\n* Blinding: Double-blind\n* Parallel-group design\n\n**Other Relevant Details:**\n\n* Study population: Adults (71 participants)\n* Sample size: 71\n* Duration of the trial: Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-19",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition19. It tests Drug19 in 74 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera19.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 30 years\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug19\n- **Control Intervention:** Placebo (not specified)\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcome:**\n\n- **Primary Outcome Measure:** Change in marker Nera19\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (74 participants)\n- **Sample Size:** 74\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-20",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition20. It tests Drug20 in 77 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera20.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition20\n\n**Study Design:** Randomized, double-blind, parallel-group\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 31\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental Intervention: Drug20\n* Control Intervention: Placebo (not specified)\n* Dosage and Administration: Dosage and administration route not specified\n\n**Primary Outcome:**\n\n* Change in marker Nera20\n\n**Study Population:**\n\n* Number of participants: 77 adults\n\n**Other Relevant Details:**\n\n* Study duration: Not specified\n* Trial type: Not specified (assuming randomized, double-blind, parallel-group)\n\nThis summary preserves the key design elements needed for trial similarity search, including eligibility criteria, intervention details, primary outcomes, and other relevant details. However, some information is not specified in the original protocol, such as the study duration, trial type (beyond randomized, double-blind, parallel-group), and dosage and administration route.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-21",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition21. It tests Drug21 in 80 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera21.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition21\n\n**Study Design:** Randomized, double-blind, parallel-group\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 25 years\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug21\n* Control intervention: Placebo (not specified)\n* Dosage and administration: Not specified\n* Route of administration: Not specified\n\n**Primary Outcome:**\n\n* Change in marker Nera21\n\n**Study Population:**\n\n* Number of participants: 80 adults\n* Age range: ≥ 25 years\n\n**Other Relevant Details:**\n\n* Study duration: Not specified\n* Trial type: Not specified (assuming parallel-group design)\n\nThis summary preserves the key design elements needed for trial similarity search, including eligibility criteria, intervention details, primary outcome, and study design. However, some details such as dosage, administration route, study duration, and trial type are not specified in the original protocol.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-22",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition22. It tests Drug22 in 83 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera22.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 26 years\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug22\n- **Control Intervention:** Not specified\n- **Dosage and Administration:** Not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera22\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (83 participants)\n- **Sample Size:** 83\n- **Duration:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-23",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition23. It tests Drug23 in 86 adults. Eligibility requires age over 27. The primary outcome is change in marker Nera23.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Parallel-group design**\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 27 years\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug23\n- **Control Intervention:** Not specified\n- **Dosage and Administration:** Not specified\n\n**Primary Outcome:**\n\n- **Primary Outcome Measure:** Change in marker Nera23\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (86 participants)\n- **Sample Size:** 86\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-24",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition24. It tests Drug24 in 89 adults. Eligibility requires age over 28. The primary outcome is change in marker Nera24.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 28 years\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug24\n- **Control Intervention:** Placebo (not specified)\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera24\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (89 participants)\n- **Sample Size:** 89\n- **Duration:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-25",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition25. It tests Drug25 in 92 adults. Eligibility requires age over 29. The primary outcome is change in marker Nera25.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial ID:** Condition25\n\n**Eligibility Criteria:**\n\n* Inclusion criteria: Age ≥ 29\n* Exclusion criteria: None specified\n\n**Intervention Details:**\n\n* Experimental intervention: Drug25\n* Control intervention: None specified\n* Dosage and administration route: Not specified\n\n**Primary Outcomes:**\n\n* Change in marker Nera25\n\n**Study Design:**\n\n* Type: Randomized\n* Blinding: Double-blind\n* Parallel-group design\n\n**Other Relevant Details:**\n\n* Study population: Adults (92 participants)\n* Sample size: 92\n* Duration of the trial: Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-26",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition26. It tests Drug26 in 95 adults. Eligibility requires age over 30. The primary outcome is change in marker Nera26.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 30 years\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug26\n- **Control Intervention:** Placebo (not specified)\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera26\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (95 participants)\n- **Sample Size:** 95\n- **Duration:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-27",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition27. It tests Drug27 in 98 adults. Eligibility requires age over 31. The primary outcome is change in marker Nera27.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 31\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug27\n- **Control Intervention:** Not specified\n- **Dosage and Administration:** Not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera27\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults\n- **Sample Size:** 98\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-28",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition28. It tests Drug28 in 101 adults. Eligibility requires age over 25. The primary outcome is change in marker Nera28.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 25 years\n- **Exclusion Criteria:** None specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug28\n- **Control Intervention:** Placebo (not specified)\n- **Dosage and Administration:** Dosage and administration route not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera28\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults (101 participants)\n- **Sample Size:** 101\n- **Duration:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "75-29",
+      "query": "Clinical trial protocol: A fictional randomized double-blind trial studies Condition29. It tests Drug29 in 104 adults. Eligibility requires age over 26. The primary outcome is change in marker Nera29.",
+      "output": "**Clinical Trial Protocol Summary**\n\n**Trial Design:**\n\n- **Type:** Randomized, double-blind\n- **Study Design:** Parallel-group\n\n**Eligibility Criteria:**\n\n- **Inclusion Criteria:** Age ≥ 26 years\n- **Exclusion Criteria:** Not specified\n\n**Intervention Details:**\n\n- **Experimental Intervention:** Drug29\n- **Control Intervention:** Not specified\n- **Dosage and Administration:** Not specified\n\n**Primary Outcomes:**\n\n- **Primary Outcome Measure:** Change in marker Nera29\n\n**Other Relevant Details:**\n\n- **Study Population:** Adults\n- **Sample Size:** 104\n- **Duration of the Trial:** Not specified",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-250",
+  "task": "fact_support",
+  "method": "zero1",
+  "prompt": "Fact Verification Assistant\nVerify the truthfulness of provided key facts against a given summary and list any facts from the summary that are contradicted by the key facts.\nOutput must start with 'Summary:' followed by the original summary items. Then 'Key facts:' listing each key fact with a boolean status (True/False or Yes/No) in parentheses. Finally, 'Key facts that are not true:' listing facts from the summary that are proven false by the key facts, with explanations in parentheses.\nMaintain the exact structure of the output sections. Use consistent boolean labels. Identify contradictions explicitly.\nThe user provides a summary of facts and a list of key facts to verify. The model must cross-reference these to determine validity.",
+  "prompt_sha256": "4b8a5a1a9688438ea23936249636a9d6966c47ed951bcc6769e7fcff5684f7b5",
+  "benchmark_sha256": "6b728be7fc2ecf88667470a860599a365bdbd27dbec95cbd87a1e2971a4914c4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "55-10",
+      "query": "Summary:\n[1] Nera10 owns 47 books.\n[2] Vela10 has 8 bridges.\n2 key facts:\nVela10 has 8 bridges.\nNera10 owns 48 books.",
+      "output": "Summary:\n[1] Nera10 owns 47 books.\n[2] Vela10 has 8 bridges.\n\nKey facts:\n1. Vela10 has 8 bridges. (True)\n2. Nera10 owns 48 books. (False)\n\nKey facts that are not true:\n1. Nera10 owns 48 books. (Contradicted by fact [1] in the summary, which states Nera10 owns 47 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-11",
+      "query": "Summary:\n[1] Nera11 owns 50 books.\n[2] Vela11 has 9 bridges.\n2 key facts:\nVela11 has 9 bridges.\nNera11 owns 51 books.",
+      "output": "Summary:\n[1] Nera11 owns 50 books.\n[2] Vela11 has 9 bridges.\n\nKey facts:\n1. Vela11 has 9 bridges. (True)\n2. Nera11 owns 51 books. (False)\n\nKey facts that are not true:\n1. Nera11 owns 51 books. (Contradicted by fact [1] in the summary, which states Nera11 owns 50 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-12",
+      "query": "Summary:\n[1] Nera12 owns 53 books.\n[2] Vela12 has 10 bridges.\n2 key facts:\nVela12 has 10 bridges.\nNera12 owns 54 books.",
+      "output": "Summary:\n[1] Nera12 owns 53 books.\n[2] Vela12 has 10 bridges.\n\nKey facts:\n1. Vela12 has 10 bridges. (True)\n2. Nera12 owns 54 books. (False)\n\nKey facts that are not true:\n1. Nera12 owns 54 books. (Contradicted by fact [1] in the summary, which states Nera12 owns 53 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-13",
+      "query": "Summary:\n[1] Nera13 owns 56 books.\n[2] Vela13 has 11 bridges.\n2 key facts:\nVela13 has 11 bridges.\nNera13 owns 57 books.",
+      "output": "Summary:\n[1] Nera13 owns 56 books.\n[2] Vela13 has 11 bridges.\n\nKey facts:\n1. Vela13 has 11 bridges. (True)\n2. Nera13 owns 57 books. (False)\n\nKey facts that are not true:\n1. Nera13 owns 57 books. (Contradicted by fact [1] in the summary, which states Nera13 owns 56 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-14",
+      "query": "Summary:\n[1] Nera14 owns 59 books.\n[2] Vela14 has 5 bridges.\n2 key facts:\nVela14 has 5 bridges.\nNera14 owns 60 books.",
+      "output": "Summary:\n[1] Nera14 owns 59 books.\n[2] Vela14 has 5 bridges.\n\nKey facts:\n1. Vela14 has 5 bridges. (True)\n2. Nera14 owns 60 books. (False)\n\nKey facts that are not true:\n1. Nera14 owns 60 books. (Contradicted by fact [1] in the summary, which states Nera14 owns 59 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-15",
+      "query": "Summary:\n[1] Nera15 owns 62 books.\n[2] Vela15 has 6 bridges.\n2 key facts:\nVela15 has 6 bridges.\nNera15 owns 63 books.",
+      "output": "Summary:\n[1] Nera15 owns 62 books.\n[2] Vela15 has 6 bridges.\n\nKey facts:\n1. Vela15 has 6 bridges. (True)\n2. Nera15 owns 63 books. (False)\n\nKey facts that are not true:\n1. Nera15 owns 63 books. (Contradicted by fact [1] in the summary, which states Nera15 owns 62 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-16",
+      "query": "Summary:\n[1] Nera16 owns 65 books.\n[2] Vela16 has 7 bridges.\n2 key facts:\nVela16 has 7 bridges.\nNera16 owns 66 books.",
+      "output": "Summary:\n[1] Nera16 owns 65 books.\n[2] Vela16 has 7 bridges.\n\nKey facts:\n1. Vela16 has 7 bridges. (True)\n2. Nera16 owns 66 books. (False)\n\nKey facts that are not true:\n1. Nera16 owns 66 books. (Contradicted by fact [1] in the summary, which states Nera16 owns 65 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-17",
+      "query": "Summary:\n[1] Nera17 owns 68 books.\n[2] Vela17 has 8 bridges.\n2 key facts:\nVela17 has 8 bridges.\nNera17 owns 69 books.",
+      "output": "Summary:\n[1] Nera17 owns 68 books.\n[2] Vela17 has 8 bridges.\n\nKey facts:\n1. Vela17 has 8 bridges. (True)\n2. Nera17 owns 69 books. (False)\n\nKey facts that are not true:\n1. Nera17 owns 69 books. (Contradicted by fact [1] in the summary, which states Nera17 owns 68 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-18",
+      "query": "Summary:\n[1] Nera18 owns 71 books.\n[2] Vela18 has 9 bridges.\n2 key facts:\nVela18 has 9 bridges.\nNera18 owns 72 books.",
+      "output": "Summary:\n[1] Nera18 owns 71 books.\n[2] Vela18 has 9 bridges.\n\nKey facts:\n1. Vela18 has 9 bridges. (True)\n2. Nera18 owns 72 books. (False)\n\nKey facts that are not true:\n1. Nera18 owns 72 books. (Contradicted by fact [1] in the summary, which states Nera18 owns 71 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-19",
+      "query": "Summary:\n[1] Nera19 owns 74 books.\n[2] Vela19 has 10 bridges.\n2 key facts:\nVela19 has 10 bridges.\nNera19 owns 75 books.",
+      "output": "Summary:\n[1] Nera19 owns 74 books.\n[2] Vela19 has 10 bridges.\n\nKey facts:\n1. Vela19 has 10 bridges. (True)\n2. Nera19 owns 75 books. (False)\n\nKey facts that are not true:\n1. Nera19 owns 75 books. (Contradicted by fact [1] in the summary, which states Nera19 owns 74 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-20",
+      "query": "Summary:\n[1] Nera20 owns 77 books.\n[2] Vela20 has 11 bridges.\n2 key facts:\nVela20 has 11 bridges.\nNera20 owns 78 books.",
+      "output": "Summary:\n[1] Nera20 owns 77 books.\n[2] Vela20 has 11 bridges.\n\nKey facts:\n1. Vela20 has 11 bridges. (True)\n2. Nera20 owns 78 books. (False)\n\nKey facts that are not true:\n1. Nera20 owns 78 books. (Contradicted by fact [1] in the summary, which states Nera20 owns 77 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-21",
+      "query": "Summary:\n[1] Nera21 owns 80 books.\n[2] Vela21 has 5 bridges.\n2 key facts:\nVela21 has 5 bridges.\nNera21 owns 81 books.",
+      "output": "Summary:\n[1] Nera21 owns 80 books.\n[2] Vela21 has 5 bridges.\n\nKey facts:\n1. Vela21 has 5 bridges. (True)\n2. Nera21 owns 81 books. (False)\n\nKey facts that are not true:\n1. Nera21 owns 81 books. (Contradicted by fact [1] in the summary, which states Nera21 owns 80 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-22",
+      "query": "Summary:\n[1] Nera22 owns 83 books.\n[2] Vela22 has 6 bridges.\n2 key facts:\nVela22 has 6 bridges.\nNera22 owns 84 books.",
+      "output": "Summary:\n[1] Nera22 owns 83 books.\n[2] Vela22 has 6 bridges.\n\nKey facts:\n1. Vela22 has 6 bridges. (True)\n2. Nera22 owns 84 books. (False)\n\nKey facts that are not true:\n1. Nera22 owns 84 books. (Contradicted by fact [1] in the summary, which states Nera22 owns 83 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-23",
+      "query": "Summary:\n[1] Nera23 owns 86 books.\n[2] Vela23 has 7 bridges.\n2 key facts:\nVela23 has 7 bridges.\nNera23 owns 87 books.",
+      "output": "Summary:\n[1] Nera23 owns 86 books.\n[2] Vela23 has 7 bridges.\n\nKey facts:\n1. Vela23 has 7 bridges. (True)\n2. Nera23 owns 87 books. (False)\n\nKey facts that are not true:\n1. Nera23 owns 87 books. (Contradicted by fact [1] in the summary, which states Nera23 owns 86 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-24",
+      "query": "Summary:\n[1] Nera24 owns 89 books.\n[2] Vela24 has 8 bridges.\n2 key facts:\nVela24 has 8 bridges.\nNera24 owns 90 books.",
+      "output": "Summary:\n[1] Nera24 owns 89 books.\n[2] Vela24 has 8 bridges.\n\nKey facts:\n1. Vela24 has 8 bridges. (True)\n2. Nera24 owns 90 books. (False)\n\nKey facts that are not true:\n1. Nera24 owns 90 books. (Contradicted by fact [1] in the summary, which states Nera24 owns 89 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-25",
+      "query": "Summary:\n[1] Nera25 owns 92 books.\n[2] Vela25 has 9 bridges.\n2 key facts:\nVela25 has 9 bridges.\nNera25 owns 93 books.",
+      "output": "Summary:\n[1] Nera25 owns 92 books.\n[2] Vela25 has 9 bridges.\n\nKey facts:\n1. Vela25 has 9 bridges. (True)\n2. Nera25 owns 93 books. (False)\n\nKey facts that are not true:\n1. Nera25 owns 93 books. (Contradicted by fact [1] in the summary, which states Nera25 owns 92 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-26",
+      "query": "Summary:\n[1] Nera26 owns 95 books.\n[2] Vela26 has 10 bridges.\n2 key facts:\nVela26 has 10 bridges.\nNera26 owns 96 books.",
+      "output": "Summary:\n[1] Nera26 owns 95 books.\n[2] Vela26 has 10 bridges.\n\nKey facts:\n1. Vela26 has 10 bridges. (True)\n2. Nera26 owns 96 books. (False)\n\nKey facts that are not true:\n1. Nera26 owns 96 books. (Contradicted by fact [1] in the summary, which states Nera26 owns 95 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-27",
+      "query": "Summary:\n[1] Nera27 owns 98 books.\n[2] Vela27 has 11 bridges.\n2 key facts:\nVela27 has 11 bridges.\nNera27 owns 99 books.",
+      "output": "Summary:\n[1] Nera27 owns 98 books.\n[2] Vela27 has 11 bridges.\n\nKey facts:\n1. Vela27 has 11 bridges. (True)\n2. Nera27 owns 99 books. (False)\n\nKey facts that are not true:\n1. Nera27 owns 99 books. (Contradicted by fact [1] in the summary, which states Nera27 owns 98 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-28",
+      "query": "Summary:\n[1] Nera28 owns 101 books.\n[2] Vela28 has 5 bridges.\n2 key facts:\nVela28 has 5 bridges.\nNera28 owns 102 books.",
+      "output": "Summary:\n[1] Nera28 owns 101 books.\n[2] Vela28 has 5 bridges.\n\nKey facts:\n1. Vela28 has 5 bridges. (True)\n2. Nera28 owns 102 books. (False)\n\nKey facts that are not true:\n1. Nera28 owns 102 books. (Contradicted by fact [1] in the summary, which states Nera28 owns 101 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "55-29",
+      "query": "Summary:\n[1] Nera29 owns 104 books.\n[2] Vela29 has 6 bridges.\n2 key facts:\nVela29 has 6 bridges.\nNera29 owns 105 books.",
+      "output": "Summary:\n[1] Nera29 owns 104 books.\n[2] Vela29 has 6 bridges.\n\nKey facts:\n1. Vela29 has 6 bridges. (True)\n2. Nera29 owns 105 books. (False)\n\nKey facts that are not true:\n1. Nera29 owns 105 books. (Contradicted by fact [1] in the summary, which states Nera29 owns 104 books.)",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

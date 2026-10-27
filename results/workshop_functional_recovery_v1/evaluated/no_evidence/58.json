@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-409",
+  "task": "sentiment_binary",
+  "method": "no_evidence",
+  "prompt": "You are a medical AI assistant.\nYou are a medical AI assistant. You will be given a patient’s medical record and a question. Answer the question with “Yes” or “No” and a brief reason. You must provide the final answer in the format: “Answer: (your answer)” where (your answer) is either “Yes” or “No”.\nYou must provide the final answer in the format: “Answer: (your answer)” where (your answer) is either “Yes” or “No”.\nYou must answer in the same language as the user’s question. You must provide the final answer in the format: “Answer: (your answer)” where (your answer) is either “Yes” or “No”.\nYou are a medical AI assistant. You will be given a patient’s medical record and a question. The record includes: Chief Complaint, Medical History, Physical Examination, Auxiliary Examination, Diagnosis, and Treatment Plan. You must answer in the same language as the user’s question. Answer the question with “Yes” or “No” and a brief reason. You must provide the final answer in the format: “Answer: (your answer)” where (your answer) is either “Yes” or “No”.",
+  "prompt_sha256": "8578f138bf53b1b3b860d807f3ac328e92a440884f271238c1528b267a034846",
+  "benchmark_sha256": "20029cdbdab12efdfb65756b1e061f3a5d72afacbab8778d192413a5da3d63ba",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "58-10",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "I cannot provide information or make recommendations about non-medical topics. Is there anything else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-11",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "I cannot provide a medical response to this question. I require a patient’s medical record to answer your question. Please provide the patient’s medical record.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-12",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "I don't have a patient's medical record to refer to.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-13",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "I cannot provide information on a patient's meal. If you have a medical concern, I can help with that.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-14",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "I don't see any information about the patient's experience with staff kindness in the provided medical record.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-15",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "I cannot provide information or guidance on how to respond to rude staff. If you are experiencing a problem with a healthcare provider, I suggest you speak with a supervisor or patient advocate. Is there anything else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-16",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "I can't answer that. I don't have information about Nera16's medical record. Can you provide more context or information about Nera16's medical record?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-17",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "I can't access your medical record. Can I help you with anything else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-18",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "I can't help you with that. I'm a medical AI assistant, and I need a patient's medical record to provide a response. Can you provide the patient's medical record, including the Chief Complaint, Medical History, Physical Examination, Auxiliary Examination, Diagnosis, and Treatment Plan?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-19",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "I can't answer that. I'm a medical AI assistant, and I don't have information about the patient's record \"Nera19\" that would allow me to provide an answer to the question about the design. Can I help you with something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-20",
+      "query": "Text: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "I cannot provide a response as the record provided does not contain any relevant medical information. If you'd like to provide a medical record, I'd be happy to help with your question.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-21",
+      "query": "Text: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "I cannot provide a response as the record provided does not contain any relevant medical information. If you'd like to provide a medical record, I'd be happy to help with your question.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-22",
+      "query": "Text: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "I cannot provide a medical diagnosis or treatment plan based on the provided text. Is there anything else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-23",
+      "query": "Text: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "I cannot provide a medical diagnosis or answer based on a non-medical text. If you'd like to provide a patient's medical record, I'd be happy to help with a question about their health.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-24",
+      "query": "Text: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "I don't see any medical record provided. Could you please provide the patient's medical record so I can assist you with your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-25",
+      "query": "Text: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "I cannot provide a response as the record provided does not contain any medical information. If you'd like to provide a medical record, I'd be happy to help with your question.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-26",
+      "query": "Text: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "I can't answer that. I don't have any information about a patient's record. Can I help you with something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-27",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera27",
+      "output": "I can't answer that. I'm a medical AI assistant, and I don't have information about a patient named Nera27. Can I help you with something else?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-28",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "I don't see any medical record provided. Could you please provide the patient's medical record so I can assist you with your question?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "58-29",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "I can't answer that. I don't have any information about Nera29's medical record. Can you provide more context or the actual medical record?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

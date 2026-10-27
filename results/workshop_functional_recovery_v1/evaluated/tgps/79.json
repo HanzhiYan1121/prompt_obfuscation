@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-283",
+  "task": "search_qa",
+  "method": "tgps",
+  "prompt": "You are a helpful assistant that answers questions based on the provided Google search snippet. Follow these rules strictly:\n\n1. If the answer can be found in the snippet, provide it directly and concisely. Do not add introductory phrases like \"The answer is\" or \"According to the snippet.\"\n2. If the information is not present in the snippet, do not use generic phrases like \"I don't have enough information.\" Instead, explicitly state what information is missing from the text and summarize what the snippet actually contains.",
+  "prompt_sha256": "7a4d12243a5c995384a8142815027283fa6125932ad38b17d421f8df1072feb1",
+  "benchmark_sha256": "1f1eda79cf61254442bc279d80ab3fa173acf116b82b66d7753ee320e83ad0d4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "79-10",
+      "query": "Google search snippet: The fictional town Vela10 was founded by Nera10. Its library has 47 rooms.\nQuestion: Who founded Vela10?",
+      "output": "Nera10.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-11",
+      "query": "Google search snippet: The fictional town Vela11 was founded by Nera11. Its library has 50 rooms.\nQuestion: Who designed the station in Vela11?",
+      "output": "The information about who designed the station in Vela11 is not present in the snippet. The snippet contains information about the town's founder (Nera11) and the number of rooms in the library (50), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-12",
+      "query": "Google search snippet: The fictional town Vela12 was founded by Nera12. Its library has 53 rooms.\nQuestion: Who founded Vela12?",
+      "output": "Nera12.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-13",
+      "query": "Google search snippet: The fictional town Vela13 was founded by Nera13. Its library has 56 rooms.\nQuestion: Who designed the station in Vela13?",
+      "output": "The information about the designer of the station in Vela13 is not present in the snippet. The snippet mentions the town's founder, Nera13, and the number of rooms in the library, but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-14",
+      "query": "Google search snippet: The fictional town Vela14 was founded by Nera14. Its library has 59 rooms.\nQuestion: Who founded Vela14?",
+      "output": "Nera14.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-15",
+      "query": "Google search snippet: The fictional town Vela15 was founded by Nera15. Its library has 62 rooms.\nQuestion: Who designed the station in Vela15?",
+      "output": "The information about who designed the station in Vela15 is not present in the snippet. The snippet contains information about the town's founder (Nera15) and the number of rooms in its library (62), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-16",
+      "query": "Google search snippet: The fictional town Vela16 was founded by Nera16. Its library has 65 rooms.\nQuestion: Who founded Vela16?",
+      "output": "Nera16.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-17",
+      "query": "Google search snippet: The fictional town Vela17 was founded by Nera17. Its library has 68 rooms.\nQuestion: Who designed the station in Vela17?",
+      "output": "The information about who designed the station in Vela17 is not present in the snippet. The snippet contains information about the town's founder (Nera17) and the number of rooms in the library (68), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-18",
+      "query": "Google search snippet: The fictional town Vela18 was founded by Nera18. Its library has 71 rooms.\nQuestion: Who founded Vela18?",
+      "output": "Nera18.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-19",
+      "query": "Google search snippet: The fictional town Vela19 was founded by Nera19. Its library has 74 rooms.\nQuestion: Who designed the station in Vela19?",
+      "output": "The information about who designed the station in Vela19 is not present in the snippet. The snippet contains information about the town's founder (Nera19) and the number of rooms in its library (74), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-20",
+      "query": "Google search snippet: The fictional town Vela20 was founded by Nera20. Its library has 77 rooms.\nQuestion: Who founded Vela20?",
+      "output": "Nera20.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-21",
+      "query": "Google search snippet: The fictional town Vela21 was founded by Nera21. Its library has 80 rooms.\nQuestion: Who designed the station in Vela21?",
+      "output": "The information about the designer of the station in Vela21 is not present in the snippet. The snippet mentions the town's founder, Nera21, and the number of rooms in the library, but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-22",
+      "query": "Google search snippet: The fictional town Vela22 was founded by Nera22. Its library has 83 rooms.\nQuestion: Who founded Vela22?",
+      "output": "Nera22.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-23",
+      "query": "Google search snippet: The fictional town Vela23 was founded by Nera23. Its library has 86 rooms.\nQuestion: Who designed the station in Vela23?",
+      "output": "The information about who designed the station in Vela23 is not present in the snippet. The snippet contains information about the town's founder (Nera23) and the number of rooms in the library (86), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-24",
+      "query": "Google search snippet: The fictional town Vela24 was founded by Nera24. Its library has 89 rooms.\nQuestion: Who founded Vela24?",
+      "output": "Nera24.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-25",
+      "query": "Google search snippet: The fictional town Vela25 was founded by Nera25. Its library has 92 rooms.\nQuestion: Who designed the station in Vela25?",
+      "output": "The information about who designed the station in Vela25 is not present in the snippet. The snippet contains information about the town's founder (Nera25) and the number of rooms in the library (92), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-26",
+      "query": "Google search snippet: The fictional town Vela26 was founded by Nera26. Its library has 95 rooms.\nQuestion: Who founded Vela26?",
+      "output": "Nera26.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-27",
+      "query": "Google search snippet: The fictional town Vela27 was founded by Nera27. Its library has 98 rooms.\nQuestion: Who designed the station in Vela27?",
+      "output": "The information about who designed the station in Vela27 is not present in the snippet. The snippet mentions the town's founder, Nera27, and the number of rooms in the library, but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-28",
+      "query": "Google search snippet: The fictional town Vela28 was founded by Nera28. Its library has 101 rooms.\nQuestion: Who founded Vela28?",
+      "output": "Nera28.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-29",
+      "query": "Google search snippet: The fictional town Vela29 was founded by Nera29. Its library has 104 rooms.\nQuestion: Who designed the station in Vela29?",
+      "output": "The information about who designed the station in Vela29 is not present in the snippet. The snippet contains information about the town's founder (Nera29) and the number of rooms in its library (104), but it does not mention the station's designer.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

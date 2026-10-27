@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 18,
+    "id": "Prompt335-046",
+    "category": "task_instruction",
+    "result_dir": "precomputed_results/prompts335_task_instruction_obf_prompt335_046_tok10",
+    "source_sha256": "6f079036c962b5cc681f10a1fe63c30b84beb47f1c863588d9d9b1d70b455932",
+    "source_characters": 332,
+    "eligible": true,
+    "task": "opinion",
+    "measurement_scope": "relevance/stance/evidence and required JSON keys",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "97915621a704fc5fc4ba5decc3d4f23c1a89c48305ed917568b14db85c3918de",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "18-00",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela0 build the new library?\nPost: I support building the new library in Vela0.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela0.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-01",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela1 build the new library?\nPost: I oppose building the new library in Vela1.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela1.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-02",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela2 build the new library?\nPost: I ate rice for lunch in Vela2.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-03",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela3 build the new library?\nPost: I support building the new library in Vela3.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela3.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-04",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela4 build the new library?\nPost: I oppose building the new library in Vela4.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela4.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-05",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela5 build the new library?\nPost: I ate rice for lunch in Vela5.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-06",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela6 build the new library?\nPost: I support building the new library in Vela6.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela6.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-07",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela7 build the new library?\nPost: I oppose building the new library in Vela7.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela7.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-08",
+        "partition": "selection",
+        "query": "Survey question: Should Vela8 build the new library?\nPost: I ate rice for lunch in Vela8.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-09",
+        "partition": "selection",
+        "query": "Survey question: Should Vela9 build the new library?\nPost: I support building the new library in Vela9.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela9.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-10",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela10.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-11",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-12",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela12.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-13",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela13.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-14",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-15",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela15.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-16",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela16.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-17",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-18",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela18.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-19",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela19.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-20",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-21",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela21.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-22",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela22.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-23",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-24",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela24.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-25",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela25.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-26",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-27",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"support\",\n  \"evidence\": \"I support building the new library in Vela27.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-28",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+        "output": "{\n  \"relevant\": true,\n  \"opinion\": \"oppose\",\n  \"evidence\": \"I oppose building the new library in Vela28.\",\n  \"confidence\": \"high\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "18-29",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+        "output": "{\n  \"relevant\": false, \n  \"opinion\": \"\", \n  \"evidence\": \"\", \n  \"confidence\": \"\"\n}",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "18-00",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela0 build the new library?\nPost: I support building the new library in Vela0.",
+        "output": "\"no\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"evidence\": \"yes\", \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-01",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela1 build the new library?\nPost: I oppose building the new library in Vela1.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-02",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela2 build the new library?\nPost: I ate rice for lunch in Vela2.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-03",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela3 build the new library?\nPost: I support building the new library in Vela3.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-04",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela4 build the new library?\nPost: I oppose building the new library in Vela4.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\": \"no\", \"evidence\": \"no\", \"e\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-05",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela5 build the new library?\nPost: I ate rice for lunch in Vela5.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-06",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela6 build the new library?\nPost: I support building the new library in Vela6.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-07",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela7 build the new library?\nPost: I oppose building the new library in Vela7.",
+        "output": "\"evidence\": \"no\", \"yes\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"eassistant\", \"no\", \"evidence\", \"no\", \"eassistant\", \"no\", \"eassistant\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"evidence\", \"no\", \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-08",
+        "partition": "selection",
+        "query": "Survey question: Should Vela8 build the new library?\nPost: I ate rice for lunch in Vela8.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-09",
+        "partition": "selection",
+        "query": "Survey question: Should Vela9 build the new library?\nPost: I support building the new library in Vela9.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-10",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\": \"no\", \"evidence\": \"no\", \"e\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-11",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-12",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-13",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"assistant\": \"no\", \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-14",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-15",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-16",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-17",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+        "output": "  \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-18",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-19",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-20",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-21",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-22",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\": \"no\", \"evidence\": \"no\", \"e\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-23",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+        "output": "  \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-24",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-25",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-26",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+        "output": "  \"no\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\", \"evidence\",",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-27",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"eassistant\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\":",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-28",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+        "output": "\"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-29",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+        "output": "  \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"e\": \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"no\", \"evidence\": \"",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "18-00",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela0 build the new library?\nPost: I support building the new library in Vela0.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela0.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-01",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela1 build the new library?\nPost: I oppose building the new library in Vela1.",
+        "output": "You oppose building the new library in Vela1. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-02",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela2 build the new library?\nPost: I ate rice for lunch in Vela2.",
+        "output": "It seems like there's a lack of information about Vela2 and its plans to build a new library. However, based on the provided context, I'll provide a neutral response.\n\nSince you mentioned eating rice for lunch in Vela2, it appears that Vela2 is a location or a place where you have visited. However, there's no information about its plans to build a new library. To provide a more informed response, I would need more context or information about Vela2 and its intentions.\n\nIf you could provide more details, I'd be happy to help you make a more informed decision.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-03",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela3 build the new library?\nPost: I support building the new library in Vela3.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela3.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-04",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela4 build the new library?\nPost: I oppose building the new library in Vela4.",
+        "output": "You oppose building the new library in Vela4. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-05",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela5 build the new library?\nPost: I ate rice for lunch in Vela5.",
+        "output": "To answer the survey question, I'll need more context about Vela5 and the library in question. However, based on the information provided, I'll make an assumption.\n\nAssuming Vela5 is a company or organization and the library is a new project or facility, I'll provide a neutral response.\n\nShould Vela5 build the new library?\n\nIt's unclear what the benefits or drawbacks of building the library are, so I'll provide a neutral response.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-06",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela6 build the new library?\nPost: I support building the new library in Vela6.",
+        "output": "It seems like you're expressing your opinion on the topic. However, I need a bit more context to fully understand the situation. Could you provide more information about Vela6 and the proposed library project? What are the benefits and potential drawbacks of building the new library?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-07",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela7 build the new library?\nPost: I oppose building the new library in Vela7.",
+        "output": "You oppose building the new library in Vela7. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-08",
+        "partition": "selection",
+        "query": "Survey question: Should Vela8 build the new library?\nPost: I ate rice for lunch in Vela8.",
+        "output": "It seems like there's a lack of information about Vela8 and the context of the library. However, I'll provide a general response based on the information given.\n\nSince you mentioned eating rice for lunch in Vela8, it implies that Vela8 is a location or a place where you are currently present. However, without more context about the library, it's difficult to provide a definitive answer to the question of whether Vela8 should build the new library.\n\nIf you could provide more information about Vela8 and the library, I'd be happy to help you better.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-09",
+        "partition": "selection",
+        "query": "Survey question: Should Vela9 build the new library?\nPost: I support building the new library in Vela9.",
+        "output": "I'm glad you're excited about the idea of building a new library in Vela9. However, I need a bit more information about the context of this question. Could you please provide more details about Vela9 and the proposed library project? What are the benefits and potential drawbacks of building a new library in this area?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-10",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+        "output": "You oppose building the new library in Vela10. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-11",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+        "output": "It seems like there's no direct information about Vela11 building a library in the provided text. The text only mentions eating rice for lunch in Vela11, which doesn't provide any context about the library.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-12",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+        "output": "**Survey Response:**\n\n**Question:** Should Vela12 build the new library?\n\n**Response:** I support building the new library in Vela12.\n\n**Reasoning:**\n\nBuilding a new library in Vela12 can have numerous benefits for the community, including:\n\n1.  **Improved access to information**: A new library can provide a wide range of books, resources, and services that cater to the diverse needs of the community, promoting literacy, education, and lifelong learning.\n2.  **Enhanced community engagement**: A library can serve as a hub for community events, workshops, and programs, fostering social connections and a sense of belonging among residents.\n3.  **Economic benefits**: A new library can attract businesses, entrepreneurs, and tourists, contributing to the local economy and creating jobs.\n4.  **Increased property values**: The presence of a library can boost property values, making Vela12 an attractive place to live, work, and invest.\n\nWhile there may be concerns about the costs associated with building a new library, I believe that the benefits outweigh the expenses. A well-designed and well-maintained library can become a beloved community asset, providing a positive impact on the quality of life in Vela12.\n\n**Recommendation:** I strongly support",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-13",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+        "output": "You oppose building the new library in Vela13. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-14",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a response based on the information given.\n\nSince the post is about eating rice for lunch in Vela14, it doesn't provide any information about whether Vela14 should build a new library. To answer the survey question, I would need more context or information about Vela14 and its plans for a new library.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-15",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela15.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-16",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+        "output": "You oppose building the new library in Vela16. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-17",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+        "output": "It seems like the post is unrelated to the survey question. However, I can provide a response to the survey question.\n\nTo answer the question, \"Should Vela17 build the new library?\", I would need more context about Vela17 and the library. However, based on the information provided, I will assume that Vela17 is a community or a town, and the library is a public facility.\n\nIn this case, I would say that Vela17 should build the new library. Libraries are essential community resources that provide access to information, education, and entertainment for residents. They can also serve as a hub for community events and activities, fostering social connections and a sense of community.\n\nBuilding a new library can have numerous benefits, including:\n\n1. Improved access to information and education\n2. Enhanced community engagement and social connections\n3. Support for literacy and lifelong learning\n4. A safe and welcoming space for residents of all ages\n5. Economic benefits, such as increased property values and local business growth\n\nOverall, building a new library in Vela17 can have a positive impact on the community, and I would recommend that Vela17 consider investing in this project.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-18",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela18.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-19",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+        "output": "**Survey Response:**\n\n**Question:** Should Vela19 build the new library?\n\n**Response:** I oppose building the new library in Vela19.\n\n**Reasoning:**\n\nWhile a new library can be a valuable resource for the community, I have concerns about the feasibility and benefits of building one in Vela19. Here are some points to consider:\n\n*   **Cost:** Building a new library can be expensive, and I worry about the financial burden on the community. Are we sure that the costs will be justified by the benefits?\n*   **Alternative options:** Are there existing libraries or community centers in the area that could provide similar services without the need for a new construction?\n*   **Community engagement:** Have we consulted with the community to gauge interest and gather feedback on the need for a new library?\n*   **Long-term sustainability:** How will the library be maintained and funded in the long term?\n\nI believe that a thorough assessment of these factors is necessary before making a decision to build a new library in Vela19.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-20",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+        "output": "To answer the survey question, I'll need more context about the library and Vela20. However, based on the information provided, I'll make an assumption.\n\nAssuming Vela20 is a company or a project, and the library is a new development or expansion, I'll provide a neutral response.\n\n**Survey Response:** \n\nI don't have enough information to make an informed decision about whether Vela20 should build the new library. Can you provide more context or details about the project?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-21",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+        "output": "I don't have any information about Vela21 or the context of the library. Could you provide more context or information about Vela21 and the library you are referring to?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-22",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+        "output": "**Survey Response:**\n\n**Question:** Should Vela22 build the new library?\n\n**Response:** I oppose building the new library in Vela22.\n\n**Reasons for opposition:**\n\nPlease provide the reasons for your opposition to building the new library in Vela22. This will help us understand your perspective and consider your views in our decision-making process.\n\n(Note: You can provide as many reasons as you like, and we'll take them into account when making our decision.)",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-23",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+        "output": "To answer the survey question, I'll need more information about the context of the library and Vela23. However, based on the provided information, I can make an educated guess.\n\nSince you mentioned eating rice for lunch in Vela23, it seems like Vela23 is a location or a place where you are currently present. Without more context, it's difficult to determine if Vela23 is a company, a building, or a community. \n\nAssuming Vela23 is a community or a location where a library could be built, I'll provide a neutral response.\n\nShould Vela23 build the new library?\n\nYes, building a new library in Vela23 could be beneficial for the community, providing access to educational resources and promoting literacy. However, more information about the community's needs, budget, and available space would be necessary to make a more informed decision.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-24",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+        "output": "I'm glad you're excited about the idea of building a new library in Vela24. However, I need a bit more information about Vela24 to provide a well-informed response. Could you please provide more context or details about Vela24, such as its location, population, and current infrastructure? This will help me better understand the potential benefits and challenges of building a new library in this area.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-25",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+        "output": "You oppose building the new library in Vela25. Can you tell me why you feel this way?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-26",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+        "output": "It seems like the post is unrelated to the survey question. However, I can provide a response to the survey question.\n\nTo answer the question, I need more context about Vela26 and the new library. However, based on the information provided, I'll assume that Vela26 is a community or a neighborhood, and the new library is a proposed project.\n\nWithout more information, it's difficult to provide a definitive answer. However, here are some general points to consider:\n\nPros of building the new library in Vela26:\n\n1.  Increased access to educational resources: A new library can provide Vela26 residents with access to a wide range of books, educational materials, and other resources.\n2.  Community engagement: A library can serve as a community hub, hosting events, workshops, and other activities that foster social connections and a sense of community.\n3.  Economic benefits: A library can attract visitors and stimulate local economic growth by providing a welcoming space for people to gather and engage in various activities.\n\nCons of building the new library in Vela26:\n\n1.  Cost: Building a new library can be expensive, and the costs may be a burden on the community or local government.\n2.  Space constraints: Vela26 may have limited space",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-27",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela27.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-28",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+        "output": "**Survey Response:**\n\n**Question:** Should Vela28 build the new library?\n\n**Response:** I oppose building the new library in Vela28.\n\n**Reasons for opposition:**\n\nPlease provide the reasons for your opposition to building the new library in Vela28. This will help us understand your perspective and consider your views in our decision-making process.\n\n(Note: You can provide as many reasons as you like, and we'll take them into account when making our decision.)",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-29",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+        "output": "It seems like there's no direct connection between eating rice for lunch in Vela29 and the decision to build a new library there. The post doesn't provide any information about the library or the context of the decision. \n\nHowever, I can provide a general response to the survey question:\n\nShould Vela29 build the new library?\n\nThis is a complex question that depends on various factors such as the community's needs, the availability of resources, and the potential impact on the environment. Without more information, it's difficult to provide a definitive answer.\n\nThat being said, here are some potential arguments for and against building a new library in Vela29:\n\n**For building a new library:**\n\n*   A new library could provide access to educational resources and opportunities for the community, promoting literacy and a love of learning.\n*   It could serve as a community hub, hosting events and activities that foster social connections and a sense of community.\n*   A new library could also provide a quiet and comfortable space for individuals to study, work, or relax.\n\n**Against building a new library:**\n\n*   The cost of building and maintaining a new library could be a significant financial burden on the community.\n*   The availability of digital resources and online libraries may reduce the need for a",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "18-00",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela0 build the new library?\nPost: I support building the new library in Vela0.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela0.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-01",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela1 build the new library?\nPost: I oppose building the new library in Vela1.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela1**\n\nI strongly believe that building a new library in Vela1 is not the best decision at this time. Here's why:\n\n*   **Financial Constraints:** Building a new library requires significant financial investment, which might divert funds from other essential community projects or services. I think we should prioritize projects that directly benefit the community and have a more immediate impact.\n*   **Alternative Options:** Before investing in a new library, we should explore alternative solutions, such as renovating or repurposing existing buildings, or even partnering with local organizations to provide access to digital resources and educational programs.\n*   **Community Needs:** I'm not convinced that a new library is the most pressing need in Vela1. We should gather more data on the community's needs and preferences before making a significant investment.\n\nWhile I understand the potential benefits of a new library, I believe we should carefully weigh the pros and cons and consider more cost-effective and community-driven solutions.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-02",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela2 build the new library?\nPost: I ate rice for lunch in Vela2.",
+        "output": "It seems like you're asking about a hypothetical scenario involving a place called Vela2, but you also mentioned eating rice for lunch there. However, there's no information about a library in your statement. Could you provide more context or clarify what you're asking about Vela2 building a library?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-03",
+        "partition": "calibration",
+        "query": "Survey question: Should Vela3 build the new library?\nPost: I support building the new library in Vela3.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela3.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-04",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela4 build the new library?\nPost: I oppose building the new library in Vela4.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela4**\n\nI strongly believe that building a new library in Vela4 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** Building a new library will put a significant strain on our local budget, which could divert funds away from other essential community projects and services.\n*   **Alternative Options:** Before investing in a new library, we should explore alternative solutions, such as renovating or repurposing existing buildings or partnering with neighboring communities to share resources.\n*   **Community Needs:** We should prioritize addressing the pressing needs of our community, such as affordable housing, education, and healthcare, before investing in a new library.\n*   **Environmental Impact:** Building a new library will have a significant environmental impact, including energy consumption, waste generation, and resource depletion. We should consider more sustainable and eco-friendly options.\n\n**Conclusion:**\n\nWhile a new library may seem like a desirable project, I believe that we should carefully weigh the pros and cons and consider alternative solutions before making a decision. Let's prioritize the needs of our community and the environment before investing in a new library.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-05",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela5 build the new library?\nPost: I ate rice for lunch in Vela5.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nTo answer the survey question: Should Vela5 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons for and against building the new library in Vela5? What are the potential benefits and drawbacks? Without this information, it's difficult to provide a definitive answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-06",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela6 build the new library?\nPost: I support building the new library in Vela6.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela6.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-07",
+        "partition": "evidence",
+        "query": "Survey question: Should Vela7 build the new library?\nPost: I oppose building the new library in Vela7.",
+        "output": "**Survey Response: Opposed to Building the New Library in Vela7**\n\nI strongly believe that building a new library in Vela7 is not the best decision for our community. Here's why:\n\n**Reasons for Opposition:**\n\n1.  **Financial Constraints:** Building a new library would require significant financial investment, which could divert funds away from other essential community projects and services.\n2.  **Environmental Impact:** The construction process could lead to environmental degradation and disrupt the natural habitats of local wildlife.\n3.  **Alternative Options:** We should explore alternative solutions, such as renovating or repurposing existing buildings, or even leveraging digital resources and online libraries to meet the community's information needs.\n4.  **Community Priorities:** There are more pressing community needs that require attention and funding, such as education, healthcare, and infrastructure development.\n\n**Conclusion:**\n\nWhile a new library might seem like a desirable project, I believe that we should carefully weigh the pros and cons before making a decision. I urge the community to consider alternative solutions and prioritize the needs of our community as a whole.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-08",
+        "partition": "selection",
+        "query": "Survey question: Should Vela8 build the new library?\nPost: I ate rice for lunch in Vela8.",
+        "output": "It seems like you're asking about a location called Vela8, but there's not enough information to determine if it's a place where a library would be built. However, based on the context that you ate rice for lunch there, it seems like Vela8 might be a location with some kind of dining or food-related establishment.\n\nTo answer the survey question, I'll provide a neutral response:\n\nI don't have enough information to determine whether Vela8 should build a new library.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-09",
+        "partition": "selection",
+        "query": "Survey question: Should Vela9 build the new library?\nPost: I support building the new library in Vela9.",
+        "output": "**Survey Response:**\n\nI strongly support building the new library in Vela9. A new library would not only provide a much-needed community space for residents but also serve as a hub for educational and cultural activities. It would be a valuable resource for students, researchers, and the general public, offering access to a wide range of books, media, and other materials.\n\nThe benefits of a new library in Vela9 would be numerous:\n\n1.  **Improved access to information**: A new library would provide a centralized location for residents to access a vast collection of books, journals, and other resources, promoting literacy, education, and lifelong learning.\n2.  **Community engagement**: The library would serve as a community hub, hosting author readings, book clubs, workshops, and other events that foster social connections and a sense of community.\n3.  **Economic benefits**: A new library could attract tourists and locals alike, supporting local businesses and contributing to the local economy.\n4.  **Enhanced quality of life**: A well-designed library would provide a welcoming and inclusive space for people of all ages, promoting a sense of well-being and quality of life.\n\nOverall, building a new library in Vela9 would be a valuable investment in the community's future, offering",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-10",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela10**\n\nI strongly believe that building a new library in Vela10 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** Building a new library would require significant financial investment, which could divert funds away from other essential community projects and services.\n*   **Alternative Options:** Before investing in a new library, we should explore alternative options, such as renovating or repurposing existing buildings or partnering with local organizations to provide library services.\n*   **Community Needs:** We should prioritize addressing the needs of our community, such as providing access to basic necessities like healthcare, education, and infrastructure, before investing in a new library.\n*   **Environmental Impact:** Building a new library would require significant resources and energy, which could have a negative impact on our environment.\n\nWhile a new library may seem like a desirable project, I believe we should carefully consider the potential consequences and explore more cost-effective and sustainable solutions.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-11",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela11 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons behind the proposal to build the new library in Vela11? What are the potential benefits and drawbacks? What is the current state of the community's need for a library?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-12",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+        "output": "**Survey Response:**\n\n**Question:** Should Vela12 build the new library?\n\n**Response:** I support building the new library in Vela12.\n\n**Reasoning:**\n\nBuilding a new library in Vela12 can have numerous benefits for the community. A library serves as a hub for knowledge, education, and cultural enrichment, providing access to a wide range of books, resources, and programs for people of all ages. Here are some reasons why I support building the new library:\n\n1.  **Improved access to information**: A new library can provide a vast collection of books, e-books, and digital resources, making it easier for residents to access information and stay informed on various topics.\n2.  **Enhanced educational opportunities**: The library can offer educational programs, workshops, and classes for children and adults, promoting literacy, lifelong learning, and personal development.\n3.  **Community engagement**: A library can host author readings, book clubs, and other events that foster community engagement, social connections, and a sense of belonging.\n4.  **Economic benefits**: A new library can attract tourists, students, and professionals, contributing to the local economy and boosting business growth.\n5.  **Modern facilities**: A modern library can provide a comfortable and welcoming environment",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-13",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela13**\n\nI strongly believe that building a new library in Vela13 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** The cost of constructing a new library will be a significant financial burden on our town's budget. We should prioritize more pressing needs and allocate funds to essential services.\n*   **Alternative Options:** We should explore alternative solutions, such as renovating or repurposing existing buildings, or even partnering with neighboring towns to share resources and costs.\n*   **Community Priorities:** I'm concerned that the new library may not align with the community's current priorities. We should engage in a thorough needs assessment to ensure that the library meets the needs of our residents.\n*   **Environmental Impact:** Building a new library will have an environmental impact, including resource consumption and potential disruption to local ecosystems. We should consider more sustainable and eco-friendly options.\n\nWhile a new library may seem like a desirable project, I believe we should carefully weigh the pros and cons before making a decision.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-14",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela14 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons behind the proposal to build the new library in Vela14? What are the potential benefits and drawbacks? What is the current state of the community's need for a library?",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-15",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela15.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-16",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela16**\n\nI strongly believe that building a new library in Vela16 is not the best decision at this time. Here's why:\n\n*   **Financial Constraints:** Building a new library comes with significant financial costs, including land acquisition, construction, and equipment. I think these funds could be better allocated to other pressing needs in the community.\n*   **Alternative Options:** Before investing in a new library, I think we should explore alternative options, such as renovating or repurposing existing buildings or partnering with local organizations to provide library services.\n*   **Community Priorities:** I'm not convinced that a new library is a top priority for the community. We should engage in a more thorough needs assessment to determine the most pressing needs and allocate resources accordingly.\n\nOverall, I believe that a more thoughtful and inclusive approach is needed before making a decision on building a new library in Vela16.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-17",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela17 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons behind the proposal to build the new library in Vela17? What are the benefits and drawbacks of this project? What are the needs and expectations of the community? Without this information, it's difficult to provide a definitive answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-18",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela18.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-19",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela19**\n\nI strongly believe that building a new library in Vela19 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** Building a new library would require significant financial investment, which could divert funds away from other essential community projects and services.\n*   **Alternative Options:** Before investing in a new library, we should explore alternative options, such as renovating or repurposing existing buildings or partnering with local organizations to provide library services.\n*   **Community Needs:** We should prioritize addressing the pressing needs of our community, such as affordable housing, education, and healthcare, before investing in a new library.\n*   **Environmental Impact:** Building a new library would have a significant environmental impact, including energy consumption, waste generation, and resource depletion.\n\nWhile a new library may seem like a desirable project, I believe we should carefully consider the potential consequences and explore more cost-effective and sustainable solutions that benefit our community as a whole.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-20",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela20 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons behind the proposal to build the new library in Vela20? What are the potential benefits and drawbacks? What are the community's needs and expectations? Without this information, it's challenging to provide a definitive answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-21",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela21.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-22",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela22**\n\nI strongly believe that building a new library in Vela22 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** Building a new library would require significant investment, which could divert funds from other essential community projects and services.\n*   **Alternative Options:** We should explore alternative solutions, such as renovating or repurposing existing buildings, or even partnering with neighboring communities to share resources.\n*   **Community Priorities:** I'm concerned that the library project might not align with the community's current priorities, and we should engage in a more thorough needs assessment before committing to such a large-scale project.\n*   **Environmental Impact:** We should consider the environmental impact of building a new library, including the potential for increased energy consumption, waste generation, and resource usage.\n\nWhile I understand the potential benefits of a new library, I believe we should carefully weigh the pros and cons before making a decision.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-23",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela23 build the new library?\n\nThere's not enough information to make an informed decision about whether Vela23 should build a new library. What are the reasons behind the decision to build a new library? What are the benefits and drawbacks of this project? What is the current state of the community's library needs? Without this information, it's difficult to provide a definitive answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-24",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+        "output": "**Survey Response:**\n\nI support building the new library in Vela24.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-25",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+        "output": "**Survey Response:**\n\n**Oppose Building the New Library in Vela25**\n\nI strongly believe that building a new library in Vela25 is not the best decision for our community. Here's why:\n\n*   **Financial Burden:** Building a new library would require significant investment, which could divert funds from other essential community projects and services.\n*   **Alternative Options:** We should explore alternative solutions, such as renovating or repurposing existing buildings, or even partnering with neighboring communities to share resources.\n*   **Community Priorities:** I'm concerned that the library project might not align with the community's current priorities, and we should engage in a more thorough needs assessment before committing to such a large-scale project.\n*   **Environmental Impact:** We should consider the environmental impact of building a new library, including the potential for increased energy consumption, waste generation, and resource usage.\n\nWhile I understand the potential benefits of a new library, I believe we should carefully weigh the pros and cons before making a decision.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-26",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+        "output": "It seems like the post is unrelated to the survey question. However, I'll provide a neutral response to the survey question.\n\nShould Vela26 build the new library?\n\nThere's not enough information to make an informed decision. What are the reasons behind building the new library in Vela26? What are the benefits and drawbacks of this project? What are the needs and expectations of the community? Without this information, it's difficult to provide a definitive answer.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-27",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+        "output": "**Survey Response:**\n\nI strongly support building the new library in Vela27. A new library would not only provide a much-needed community space for residents but also serve as a hub for educational and cultural activities. It would be a valuable resource for students, researchers, and the general public, offering access to a wide range of books, media, and other materials.\n\nThe benefits of building a new library in Vela27 include:\n\n1.  **Improved access to information**: A new library would provide a centralized location for residents to access a vast collection of books, journals, and other resources, promoting literacy, education, and lifelong learning.\n2.  **Community engagement**: The library would serve as a community hub, hosting author readings, workshops, and other events that foster social connections and a sense of community.\n3.  **Economic benefits**: A new library could attract tourists and locals alike, supporting local businesses and contributing to the local economy.\n4.  **Enhanced quality of life**: The library would offer a quiet, comfortable space for residents to study, read, and relax, improving overall quality of life.\n\nOverall, building a new library in Vela27 would be a valuable investment in the community's future, promoting education, culture, and economic growth",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-28",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+        "output": "**Survey Response: Opposed to Building the New Library in Vela28**\n\nI strongly believe that building a new library in Vela28 is not the best decision for our community. Here's why:\n\n**Reasons for Opposition:**\n\n1.  **Financial Constraints:** Building a new library would require significant financial investment, which could divert funds away from other essential community projects and services.\n2.  **Alternative Options:** We already have existing libraries in the area that could be utilized and upgraded instead of building a new one.\n3.  **Environmental Impact:** The construction process could lead to environmental degradation and disrupt the natural habitats of local wildlife.\n4.  **Prioritizing Other Needs:** There are more pressing community needs that require attention, such as improving infrastructure, enhancing public safety, and addressing social issues.\n\n**Conclusion:**\n\nWhile a new library might seem like a desirable project, I believe that we should carefully weigh the pros and cons before making a decision. In this case, I think it's best to prioritize other community needs and explore alternative solutions that benefit our community as a whole.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "18-29",
+        "partition": "evaluation",
+        "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+        "output": "That's an interesting combination - a survey question and a casual post about eating lunch. However, I'll try to provide a neutral response.\n\nTo answer the survey question: Should Vela29 build the new library?\n\nI don't have any information about Vela29 or the context of the library, so I'll provide a general response. Building a new library can be beneficial for a community, as it can provide access to knowledge, resources, and a quiet space for learning and relaxation. However, the decision to build a new library should be based on various factors, such as the community's needs, budget, and available space.\n\nIf you have more information about Vela29 and the proposed library, I'd be happy to help you weigh the pros and cons.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

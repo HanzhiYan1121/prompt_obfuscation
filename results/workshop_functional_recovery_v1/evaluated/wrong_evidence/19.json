@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-103",
+  "task": "feedback_math",
+  "method": "wrong_evidence",
+  "prompt": "Please evaluate the truthfulness of the following statement:\nOutput true or false.\nOutput true or false.\nPlease evaluate the truthfulness of the following statement: Statement: {statement}",
+  "prompt_sha256": "b019c5561f0d77a86796b069287b4cdc94a144435d8a63d587bac5e4044e4a16",
+  "benchmark_sha256": "f0800de2512f465c67839b43f1978c3b009bfb8e557592fa45dce64710d5d9c0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "19-10",
+      "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 47 + 8.\n\n47 + 8 = 55\n\nSo, the correct answer is 55.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-11",
+      "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 50 + 9.\n\n50 + 9 = 59\n\nSince the previous answer was 61, which is two more than the correct answer, the statement is true.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-12",
+      "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 53 + 10.\n\n53 + 10 = 63.\n\nSo, the correct answer is 63.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-13",
+      "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 56 and 11.\n\n56 + 11 = 67\n\nSo, the correct answer is 67.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-14",
+      "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 59 and 5.\n\n59 + 5 = 64\n\nSo, the correct answer is 64.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-15",
+      "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 62 and 6.\n\n62 + 6 = 68\n\nSo, the correct answer is 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-16",
+      "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 65 + 7.\n\n65 + 7 = 72.\n\nSo, the statement \"65 + 7 = 74\" is false.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-17",
+      "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 68 and 8.\n\n68 + 8 = 76\n\nSo, the correct answer is 76.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-18",
+      "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 71 + 9.\n\n71 + 9 = 80\n\nSo, the correct answer is 80.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-19",
+      "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 74 + 10.\n\n74 + 10 = 84\n\nSo, the correct answer is 84.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-20",
+      "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 77 and 11.\n\n77 + 11 = 88\n\nSo, the correct answer is 88.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-21",
+      "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 80 and 5.\n\n80 + 5 = 85\n\nSince the previous answer was 87, which is two more than the correct answer, the statement is true.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-22",
+      "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 83 + 6.\n\n83 + 6 = 89.\n\nSo, the correct answer is 89.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-23",
+      "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to calculate 86 + 7.\n\n86 + 7 = 93.\n\nSo, the correct answer is 93.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-24",
+      "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 89 and 8.\n\n89 + 8 = 97\n\nSo, the correct answer is 97.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-25",
+      "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 92 and 9.\n\n92 + 9 = 101.\n\nSo, the correct answer is 101.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-26",
+      "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 95 and 10.\n\n95 + 10 = 105.\n\nSo, the correct answer is 105.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-27",
+      "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 98 and 11.\n\n98 + 11 = 109\n\nSo, the correct answer is 109.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-28",
+      "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 101 and 5.\n\n101 + 5 = 106\n\nSo, the correct answer is 106.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-29",
+      "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct sum, we need to add 104 and 6.\n\n104 + 6 = 110\n\nSo, the correct answer is 110.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

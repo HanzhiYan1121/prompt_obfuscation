@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-175",
+  "task": "truth",
+  "method": "icl",
+  "prompt": "Perform the same task and follow the response conventions demonstrated below. Apply the inferred rules to the new user input.\n\nUser input:\nStatement: 29 plus 9 equals 38.\nResponse:\nTrue\n\nUser input:\nStatement: 32 plus 10 equals 43.\nResponse:\nFalse\n\nExplanation: The correct calculation is 32 + 10 = 42, not 43.\n\nUser input:\nStatement: 35 plus 11 equals 46.\nResponse:\nTrue\n\nUser input:\nStatement: 38 plus 5 equals 44.\nResponse:\nTrue",
+  "prompt_sha256": "9b73071de4fb7b69c214e871843133599b02e1befc97ba3a85796e4ac49169b4",
+  "benchmark_sha256": "b6477636aa82b26afbef040a7e428a7d890a438be2f0a07836b69c883a1a6194",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "21-10",
+      "query": "Statement: 47 plus 8 equals 55.",
+      "output": "False\n\nExplanation: The correct calculation is 47 + 8 = 55 is correct.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-11",
+      "query": "Statement: 50 plus 9 equals 60.",
+      "output": "False\n\nExplanation: The correct calculation is 50 + 9 = 59, not 60.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-12",
+      "query": "Statement: 53 plus 10 equals 63.",
+      "output": "False\n\nExplanation: The correct calculation is 53 + 10 = 63, but the statement says it equals 63, which is correct. However, the statement is saying it equals 63, which is correct, but the statement is saying it equals 63, which is correct.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-13",
+      "query": "Statement: 56 plus 11 equals 68.",
+      "output": "False\n\nExplanation: The correct calculation is 56 + 11 = 67, not 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-14",
+      "query": "Statement: 59 plus 5 equals 64.",
+      "output": "False\n\nExplanation: The correct calculation is 59 + 5 = 64 is correct, however the statement says equals 64, but the statement is correct, so the statement is true.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-15",
+      "query": "Statement: 62 plus 6 equals 69.",
+      "output": "False\n\nExplanation: The correct calculation is 62 + 6 = 68, not 69.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-16",
+      "query": "Statement: 65 plus 7 equals 72.",
+      "output": "True",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "21-17",
+      "query": "Statement: 68 plus 8 equals 77.",
+      "output": "False\n\nExplanation: The correct calculation is 68 + 8 = 76, not 77.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-18",
+      "query": "Statement: 71 plus 9 equals 80.",
+      "output": "True",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "21-19",
+      "query": "Statement: 74 plus 10 equals 85.",
+      "output": "False\n\nExplanation: The correct calculation is 74 + 10 = 84, not 85.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-20",
+      "query": "Statement: 77 plus 11 equals 88.",
+      "output": "False\n\nExplanation: The correct calculation is 77 + 11 = 88, which is correct. However, the statement says \"equals 88\", which is correct, but the statement is in the form \"Statement: X plus Y equals Z\", where Z is the result of the calculation. In this case, the statement is true, but the format is correct, so the response is True.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-21",
+      "query": "Statement: 80 plus 5 equals 86.",
+      "output": "True",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-22",
+      "query": "Statement: 83 plus 6 equals 89.",
+      "output": "False\n\nExplanation: The correct calculation is 83 + 6 = 89 is correct, but the statement says \"equals 89\", which is correct, however the statement is saying it equals 89, which is correct, but the statement is saying 83 plus 6 equals 89, which is correct.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-23",
+      "query": "Statement: 86 plus 7 equals 94.",
+      "output": "False\n\nExplanation: The correct calculation is 86 + 7 = 93, not 94.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-24",
+      "query": "Statement: 89 plus 8 equals 97.",
+      "output": "True",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "21-25",
+      "query": "Statement: 92 plus 9 equals 102.",
+      "output": "True",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-26",
+      "query": "Statement: 95 plus 10 equals 105.",
+      "output": "True",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "21-27",
+      "query": "Statement: 98 plus 11 equals 110.",
+      "output": "True",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "21-28",
+      "query": "Statement: 101 plus 5 equals 106.",
+      "output": "True",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "21-29",
+      "query": "Statement: 104 plus 6 equals 111.",
+      "output": "False\n\nExplanation: The correct calculation is 104 + 6 = 110, not 111.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

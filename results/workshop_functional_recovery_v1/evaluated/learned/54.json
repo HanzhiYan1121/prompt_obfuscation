@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-247",
+  "task": "summary_support",
+  "method": "learned",
+  "prompt": "{\"constraints\": \"The output should be in JSON format with the following structure: Ensure that the response is strictly following the JSON format without any other words or explanation.\", \"context\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. Given a conversation transcript between a User and an Assistant, a summary of the conversation, and an IF-THEN rule, your task is to check whether the conversation is aligned with the rule. Given a conversation transcript between a User and an Assistant, and an objective, you\", \"format\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. The output should be in JSON format with the following structure: Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. The output should be in JSON format with the following structure:\", \"role\": \"You are an AI assistant tasked with analyzing conversation transcripts. You are an AI assistant tasked with summarizing conversation transcripts. You are an AI assistant tasked with extracting information from conversation transcripts. You are an AI assistant tasked with checking the alignment of conversation transcripts with given rules. You are an AI assistant tasked with rating the performance of an AI assistant in conversation transcripts.\", \"task\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. Given a conversation transcript between a User and an Assistant, a summary of the conversation, and an",
+  "prompt_sha256": "8a13bf5c77a137ed4eaca177682902e8684e171ab7ed2e70cba6ba8272d06f08",
+  "benchmark_sha256": "bde7b307b1506ea30973c9cc7f00677a65ca7b7a9857748c573ebd71f43ec91a",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "54-10",
+      "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera10 wants to own 47 books.\",\n  \"summary_in_few_words\": \"Nera10 owns 47 books, Vela10 has 9 bridges.\",\n  \"top_3_events\": [\n    \"Nera10 owns 47 books.\",\n    \"Vela10 has 9 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-11",
+      "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera11 wants to own 50 books.\",\n  \"summary_in_few_words\": \"Nera11 owns 50 books, Vela11 has 10 bridges.\",\n  \"top_3_events\": [\n    \"Nera11 owns 50 books.\",\n    \"Vela11 has 10 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-12",
+      "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera12 wants to own more books.\",\n  \"summary_in_few_words\": \"Nera12 owns 53 books, Vela12 has 11 bridges.\",\n  \"top_3_events\": [\n    \"Nera12 owns 53 books.\",\n    \"Vela12 has 11 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-13",
+      "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera13 wants to own 56 books.\",\n  \"summary_in_few_words\": \"Nera13 owns 56 books, Vela13 has 12 bridges.\",\n  \"top_3_events\": [\n    \"Nera13 owns 56 books.\",\n    \"Vela13 has 12 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-14",
+      "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera14 wants to own 59 books.\",\n  \"summary_in_few_words\": \"Nera14 owns 59 books, Vela14 has 6 bridges.\",\n  \"top_3_events\": [\n    \"Nera14 owns 59 books.\",\n    \"Vela14 has 6 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-15",
+      "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera15 wants to own 62 books.\",\n  \"summary_in_few_words\": \"Nera15 owns 62 books, Vela15 has 7 bridges.\",\n  \"top_3_events\": [\n    \"Nera15 owns 62 books.\",\n    \"Vela15 has 7 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-16",
+      "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera16 wants to own 65 books.\",\n  \"summary_in_few_words\": \"Nera16 owns 65 books, Vela16 has 8 bridges.\",\n  \"top_3_events\": [\n    \"Nera16 owns 65 books.\",\n    \"Vela16 has 8 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-17",
+      "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera17 wants to own 68 books.\",\n  \"summary_in_few_words\": \"Nera17 owns 68 books, Vela17 has 9 bridges.\",\n  \"top_3_events\": [\n    \"Nera17 owns 68 books.\",\n    \"Vela17 has 9 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-18",
+      "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera18 wants to own 71 books.\",\n  \"summary_in_few_words\": \"Nera18 owns 71 books, Vela18 has 10 bridges.\",\n  \"top_3_events\": [\n    \"Nera18 owns 71 books.\",\n    \"Vela18 has 10 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-19",
+      "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera19 wants to own 74 books.\",\n  \"summary_in_few_words\": \"Nera19 owns 74 books, Vela19 has 11 bridges.\",\n  \"top_3_events\": [\n    \"Nera19 owns 74 books.\",\n    \"Vela19 has 11 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-20",
+      "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera20 wants to own 77 books.\",\n  \"summary_in_few_words\": \"Nera20 owns 77 books, Vela20 has 12 bridges.\",\n  \"top_3_events\": [\n    \"Nera20 owns 77 books.\",\n    \"Vela20 has 12 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-21",
+      "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera21 wants to own 80 books.\",\n  \"summary_in_few_words\": \"Nera21 owns 80 books, Vela21 has 6 bridges.\",\n  \"top_3_events\": [\n    \"Nera21 owns 80 books.\",\n    \"Vela21 has 6 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-22",
+      "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera22 wants to own 83 books.\",\n  \"summary_in_few_words\": \"Nera22 owns 83 books, Vela22 has 7 bridges.\",\n  \"top_3_events\": [\n    \"Nera22 owns 83 books.\",\n    \"Vela22 has 7 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-23",
+      "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera23 wants to own 86 books.\",\n  \"summary_in_few_words\": \"Nera23 owns 86 books, Vela23 has 8 bridges.\",\n  \"top_3_events\": [\n    \"Nera23 owns 86 books.\",\n    \"Vela23 has 8 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-24",
+      "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera24 wants to own 89 books.\",\n  \"summary_in_few_words\": \"Nera24 owns 89 books, Vela24 has 9 bridges.\",\n  \"top_3_events\": [\n    \"Nera24 owns 89 books.\",\n    \"Vela24 has 9 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-25",
+      "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera25 wants to own 92 books.\",\n  \"summary_in_few_words\": \"Nera25 owns 92 books, Vela25 has 10 bridges.\",\n  \"top_3_events\": [\n    \"Nera25 owns 92 books.\",\n    \"Vela25 has 10 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-26",
+      "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera26 wants to own 95 books.\",\n  \"summary_in_few_words\": \"Nera26 owns 95 books, Vela26 has 11 bridges.\",\n  \"top_3_events\": [\n    \"Nera26 owns 95 books.\",\n    \"Vela26 has 11 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-27",
+      "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera27 wants to own 98 books.\",\n  \"summary_in_few_words\": \"Nera27 owns 98 books, Vela27 has 12 bridges.\",\n  \"top_3_events\": [\n    \"Nera27 owns 98 books.\",\n    \"Vela27 has 12 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-28",
+      "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera28 wants to own 101 books.\",\n  \"summary_in_few_words\": \"Nera28 owns 101 books, Vela28 has 6 bridges.\",\n  \"top_3_events\": [\n    \"Nera28 owns 101 books.\",\n    \"Vela28 has 6 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-29",
+      "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+      "output": "{\n  \"goal_of_user\": \"Nera29 wants to own 104 books.\",\n  \"summary_in_few_words\": \"Nera29 owns 104 books, Vela29 has 7 bridges.\",\n  \"top_3_events\": [\n    \"Nera29 owns 104 books.\",\n    \"Vela29 has 7 bridges.\",\n    \"No other events requested by the User.\"\n  ]\n}",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

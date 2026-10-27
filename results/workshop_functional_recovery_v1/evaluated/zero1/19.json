@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-103",
+  "task": "feedback_math",
+  "method": "zero1",
+  "prompt": "Math Tutor\nRecalculate arithmetic sums based on user-provided problems and feedback indicating the previous attempt was incorrect.\nStart with a transitional phrase like 'To find the correct answer...', show the calculation steps or direct result, and conclude with 'So, the correct answer is [result].'\nAlways acknowledge the feedback that the previous sum was too large. Correct the calculation to be exactly 2 less than the previous attempt. Maintain a helpful and educational tone.\nThe user provides a math problem, a previous incorrect attempt, and specific feedback that the previous sum was two too large. The model must correct this specific error.",
+  "prompt_sha256": "d2f556d214ab50dfa85ca47416d504823876cc4d9c08c254092aa5d14fc3471f",
+  "benchmark_sha256": "f0800de2512f465c67839b43f1978c3b009bfb8e557592fa45dce64710d5d9c0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "19-10",
+      "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 57, so we'll subtract 2 from it: 57 - 2 = 55.\n\nSo, the correct answer is 55.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-11",
+      "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 61, so we'll subtract 2 from it: 61 - 2 = 59.\n\nSo, the correct answer is 59.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-12",
+      "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 65, so we'll subtract 2 from it: 65 - 2 = 63.\n\nSo, the correct answer is 63.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-13",
+      "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 56 + 11 = 69\nCorrecting the error: 69 - 2 = 67\n\nSo, the correct answer is 67.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-14",
+      "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 66, so we'll subtract 2 from it: 66 - 2 = 64.\n\nSo, the correct answer is 64.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-15",
+      "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 62 + 6 = 70\nCorrecting the error: 70 - 2 = 68\n\nSo, the correct answer is 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-16",
+      "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nThe previous result was 74. To correct it, we'll subtract 2: 74 - 2 = 72.\n\nSo, the correct answer is 72.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-17",
+      "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 78, so we'll subtract 2 from it: 78 - 2 = 76.\n\nSo, the correct answer is 76.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-18",
+      "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 71 + 9 = 82\nCorrecting the error: 82 - 2 = 80\n\nSo, the correct answer is 80.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-19",
+      "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 86, so we'll subtract 2 from it: 86 - 2 = 84.\n\nSo, the correct answer is 84.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-20",
+      "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 90, so we'll subtract 2 from it: 90 - 2 = 88.\n\nSo, the correct answer is 88.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-21",
+      "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 87, so we'll subtract 2 from it: 87 - 2 = 85.\n\nSo, the correct answer is 85.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-22",
+      "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 91, so we'll subtract 2 from it: 91 - 2 = 89.\n\nSo, the correct answer is 89.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-23",
+      "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the previous sum was two too large, we need to subtract 2 from the result.\n\nThe previous attempt was 95, so we'll subtract 2 from it: 95 - 2 = 93.\n\nSo, the correct answer is 93.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-24",
+      "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. You mentioned that the sum was two too large, which means we need to subtract 2 from the previous result.\n\nThe previous result was 99. To correct it, we'll subtract 2: 99 - 2 = 97.\n\nSo, the correct answer is 97.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-25",
+      "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nThe previous result was 103. To correct it, we'll subtract 2: 103 - 2 = 101.\n\nSo, the correct answer is 101.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-26",
+      "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nThe previous result was 107. To correct it, we'll subtract 2: 107 - 2 = 105.\n\nSo, the correct answer is 105.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-27",
+      "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 98 + 11 = 111\nCorrecting the error: 111 - 2 = 109\n\nSo, the correct answer is 109.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-28",
+      "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 101 + 5 = 108\nCorrecting the error: 108 - 2 = 106\n\nSo, the correct answer is 106.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-29",
+      "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's analyze the previous attempt. Since the sum was two too large, we need to subtract 2 from the previous result.\n\nPrevious attempt: 104 + 6 = 112\nCorrecting the error: 112 - 2 = 110\n\nSo, the correct answer is 110.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

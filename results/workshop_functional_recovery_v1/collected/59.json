@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 59,
+    "id": "Prompt417-115",
+    "category": "constraints",
+    "result_dir": "precomputed_results/prompts417_6cat100_constraints_obf_prompt417_115_tok10",
+    "source_sha256": "3da34891ef9d0a54fa1a90c9433fed0fc6a214988092498f09cccb32bab192a0",
+    "source_characters": 625,
+    "eligible": true,
+    "task": "numeric_only",
+    "measurement_scope": "text-only arithmetic branch and no-unit/no-sentence output; image branches untested",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "464065cbb996badc28eb9fbc5d8b30335d46f4654105aa08e7c2ca491a144805",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "59-00",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 17 red counters and 5 blue counters. How many counters are there?",
+        "output": "17 + 5 = 22",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-01",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 20 red counters and 6 blue counters. How many counters are there?",
+        "output": "34",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-02",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 23 red counters and 7 blue counters. How many counters are there?",
+        "output": "43",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-03",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 26 red counters and 8 blue counters. How many counters are there?",
+        "output": "34",
+        "scores": {
+          "task": 1.0,
+          "contract": 1.0,
+          "joint": 1.0
+        }
+      },
+      {
+        "case_id": "59-04",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 29 red counters and 9 blue counters. How many counters are there?",
+        "output": "29 + 9 = 38",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-05",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 32 red counters and 10 blue counters. How many counters are there?",
+        "output": "56",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-06",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 35 red counters and 11 blue counters. How many counters are there?",
+        "output": "67",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-07",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 38 red counters and 5 blue counters. How many counters are there?",
+        "output": "57",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-08",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 41 red counters and 6 blue counters. How many counters are there?",
+        "output": "87",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-09",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 44 red counters and 7 blue counters. How many counters are there?",
+        "output": "67",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-10",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 47 red counters and 8 blue counters. How many counters are there?",
+        "output": "87",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-11",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 50 red counters and 9 blue counters. How many counters are there?",
+        "output": "87",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-12",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 53 red counters and 10 blue counters. How many counters are there?",
+        "output": "87",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-13",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 56 red counters and 11 blue counters. How many counters are there?",
+        "output": "86",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-14",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 59 red counters and 5 blue counters. How many counters are there?",
+        "output": "59 + 5 = 64",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-15",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 62 red counters and 6 blue counters. How many counters are there?",
+        "output": "86",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-16",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 65 red counters and 7 blue counters. How many counters are there?",
+        "output": "87",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-17",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 68 red counters and 8 blue counters. How many counters are there?",
+        "output": "134",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-18",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 71 red counters and 9 blue counters. How many counters are there?",
+        "output": "71 + 9 = 80",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-19",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 74 red counters and 10 blue counters. How many counters are there?",
+        "output": "94",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-20",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 77 red counters and 11 blue counters. How many counters are there?",
+        "output": "143",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-21",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 80 red counters and 5 blue counters. How many counters are there?",
+        "output": "120",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-22",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 83 red counters and 6 blue counters. How many counters are there?",
+        "output": "163",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-23",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 86 red counters and 7 blue counters. How many counters are there?",
+        "output": "143",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-24",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 89 red counters and 8 blue counters. How many counters are there?",
+        "output": "117",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-25",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 92 red counters and 9 blue counters. How many counters are there?",
+        "output": "143",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-26",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 95 red counters and 10 blue counters. How many counters are there?",
+        "output": "155",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-27",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 98 red counters and 11 blue counters. How many counters are there?",
+        "output": "198",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-28",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 101 red counters and 5 blue counters. How many counters are there?",
+        "output": "205",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-29",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 104 red counters and 6 blue counters. How many counters are there?",
+        "output": "166",
+        "scores": {
+          "task": 0.0,
+          "contract": 1.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "59-00",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 17 red counters and 5 blue counters. How many counters are there?",
+        "output": "17 + 5 = 22",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-01",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 20 red counters and 6 blue counters. How many counters are there?",
+        "output": "20 + 6 = 26",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-02",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 23 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 23\nNumber of blue counters: 7\n\nTotal number of counters = 23 + 7 = 30",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-03",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 26 red counters and 8 blue counters. How many counters are there?",
+        "output": "26 + 8 = 34",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-04",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 29 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n29 (red counters) + 9 (blue counters) = 38\n\nThere are 38 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-05",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 32 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters = 32\nNumber of blue counters = 10\n\nTotal number of counters = 32 + 10 = 42",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-06",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 35 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n35 (red counters) + 11 (blue counters) = 46",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-07",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 38 red counters and 5 blue counters. How many counters are there?",
+        "output": "38 + 5 = 43",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-08",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 41 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n41 (red counters) + 6 (blue counters) = 47\n\nSo, there are 47 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-09",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 44 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n44 (red counters) + 7 (blue counters) = 51\n\nThere are 51 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-10",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 47 red counters and 8 blue counters. How many counters are there?",
+        "output": "47 + 8 = 55",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-11",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 50 red counters and 9 blue counters. How many counters are there?",
+        "output": "50 + 9 = 59",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-12",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 53 red counters and 10 blue counters. How many counters are there?",
+        "output": "53 + 10 = 63",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-13",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 56 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 56\nNumber of blue counters: 11\n\nTotal number of counters = 56 + 11 = 67",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-14",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 59 red counters and 5 blue counters. How many counters are there?",
+        "output": "59 + 5 = 64",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-15",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 62 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 62\nNumber of blue counters: 6\n\nTotal number of counters = 62 + 6 = 68",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-16",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 65 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n65 (red counters) + 7 (blue counters) = 72",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-17",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 68 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n68 (red counters) + 8 (blue counters) = 76",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-18",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 71 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n71 (red counters) + 9 (blue counters) = 80",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-19",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 74 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 74\nNumber of blue counters: 10\n\nTotal number of counters = 74 + 10 = 84",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-20",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 77 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n77 (red counters) + 11 (blue counters) = 88",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-21",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 80 red counters and 5 blue counters. How many counters are there?",
+        "output": "80 + 5 = 85",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-22",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 83 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n83 (red counters) + 6 (blue counters) = 89",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-23",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 86 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n86 (red counters) + 7 (blue counters) = 93\n\nThere are 93 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-24",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 89 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n89 (red counters) + 8 (blue counters) = 97\n\nSo, there are 97 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-25",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 92 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 92\nNumber of blue counters: 9\n\nTotal number of counters = 92 + 9 = 101",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-26",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 95 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\n95 (red counters) + 10 (blue counters) = 105\n\nThe answer is 105.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-27",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 98 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 98\nNumber of blue counters: 11\n\nTotal number of counters = 98 + 11 = 109",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-28",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 101 red counters and 5 blue counters. How many counters are there?",
+        "output": "101 + 5 = 106",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-29",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 104 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 104\nNumber of blue counters: 6\n\nTotal number of counters = 104 + 6 = 110",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "59-00",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 17 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 17\nNumber of blue counters: 5\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 17 + 5\nTotal number of counters = 22\n\nThere are 22 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-01",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 20 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 20\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 20 + 6\nTotal number of counters = 26\n\nThere are 26 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-02",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 23 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 23\nNumber of blue counters: 7\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 23 + 7\nTotal number of counters = 30\n\nThere are 30 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-03",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 26 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters = 26\nNumber of blue counters = 8\n\nTotal number of counters = 26 + 8 = 34",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-04",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 29 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 29\nNumber of blue counters: 9\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 29 + 9\nTotal number of counters = 38\n\nThere are 38 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-05",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 32 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 32\nNumber of blue counters: 10\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 32 + 10\nTotal number of counters = 42\n\nThere are 42 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-06",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 35 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 35\nNumber of blue counters: 11\n\nTotal number of counters = 35 + 11 = 46\n\nThere are 46 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-07",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 38 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 38\nNumber of blue counters: 5\n\nTotal number of counters = 38 + 5 = 43\n\nThere are 43 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-08",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 41 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 41\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 41 + 6\nTotal number of counters = 47\n\nThere are 47 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-09",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 44 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 44\nNumber of blue counters: 7\n\nTotal number of counters = 44 + 7 = 51\n\nThere are 51 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-10",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 47 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 47\nNumber of blue counters: 8\n\nTotal number of counters = 47 + 8 = 55",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-11",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 50 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 50\nNumber of blue counters: 9\n\nTotal number of counters = 50 + 9 = 59\n\nThere are 59 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-12",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 53 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 53\nNumber of blue counters: 10\n\nTotal number of counters = 53 + 10 = 63\n\nThere are 63 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-13",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 56 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 56\nNumber of blue counters: 11\n\nTotal number of counters = 56 + 11 = 67\n\nThere are 67 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-14",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 59 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 59\nNumber of blue counters: 5\n\nTotal number of counters = 59 + 5 = 64",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-15",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 62 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 62\nNumber of blue counters: 6\n\nTotal number of counters = 62 + 6 = 68\n\nThere are 68 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-16",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 65 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 65\nNumber of blue counters: 7\n\nTotal number of counters = 65 + 7 = 72\n\nThere are 72 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-17",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 68 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 68\nNumber of blue counters: 8\n\nTotal number of counters = 68 + 8 = 76\n\nThere are 76 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-18",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 71 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 71\nNumber of blue counters: 9\n\nTotal number of counters = 71 + 9 = 80",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-19",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 74 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 74\nNumber of blue counters: 10\n\nTotal number of counters = 74 + 10 = 84",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-20",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 77 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 77\nNumber of blue counters: 11\n\nTotal number of counters = 77 + 11 = 88",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-21",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 80 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 80\nNumber of blue counters: 5\n\nTotal number of counters = 80 + 5 = 85",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-22",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 83 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 83\nNumber of blue counters: 6\n\nTotal number of counters = 83 + 6 = 89",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-23",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 86 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 86\nNumber of blue counters: 7\n\nTotal number of counters = 86 + 7 = 93\n\nThere are 93 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-24",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 89 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 89\nNumber of blue counters: 8\n\nTotal number of counters = 89 + 8 = 97\n\nThere are 97 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-25",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 92 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 92\nNumber of blue counters: 9\n\nTotal number of counters = 92 + 9 = 101\n\nThere are 101 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-26",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 95 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 95\nNumber of blue counters: 10\n\nTotal number of counters = 95 + 10 = 105",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-27",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 98 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 98\nNumber of blue counters: 11\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 98 + 11\nTotal number of counters = 109\n\nThere are 109 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-28",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 101 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 101\nNumber of blue counters: 5\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 101 + 5\nTotal number of counters = 106",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-29",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 104 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 104\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 104 + 6\nTotal number of counters = 110\n\nSo, there are 110 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "59-00",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 17 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 17\nNumber of blue counters: 5\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 17 + 5\nTotal number of counters = 22\n\nThere are 22 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-01",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 20 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 20\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 20 + 6\nTotal number of counters = 26\n\nThere are 26 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-02",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 23 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 23\nNumber of blue counters: 7\n\nTotal number of counters = 23 + 7 = 30\n\nThere are 30 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-03",
+        "partition": "calibration",
+        "query": "MathVista\nQuestion: A container holds 26 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 26\nNumber of blue counters: 8\n\nTotal number of counters = 26 + 8 = 34\n\nThere are 34 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-04",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 29 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 29\nNumber of blue counters: 9\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 29 + 9\nTotal number of counters = 38\n\nThere are 38 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-05",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 32 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 32\nNumber of blue counters: 10\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 32 + 10\nTotal number of counters = 42\n\nThere are 42 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-06",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 35 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 35\nNumber of blue counters: 11\n\nTotal number of counters = 35 + 11 = 46\n\nThere are 46 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-07",
+        "partition": "evidence",
+        "query": "MathVista\nQuestion: A container holds 38 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 38\nNumber of blue counters: 5\n\nTotal number of counters = 38 + 5 = 43\n\nThere are 43 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-08",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 41 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 41\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 41 + 6\nTotal number of counters = 47\n\nThere are 47 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-09",
+        "partition": "selection",
+        "query": "MathVista\nQuestion: A container holds 44 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 44\nNumber of blue counters: 7\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 44 + 7\nTotal number of counters = 51\n\nThere are 51 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-10",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 47 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 47\nNumber of blue counters: 8\n\nTotal number of counters = 47 + 8 = 55\n\nThere are 55 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-11",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 50 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 50\nNumber of blue counters: 9\n\nTotal number of counters = 50 + 9 = 59\n\nThere are 59 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-12",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 53 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 53\nNumber of blue counters: 10\n\nTotal number of counters = 53 + 10 = 63\n\nThere are 63 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-13",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 56 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 56\nNumber of blue counters: 11\n\nTotal number of counters = 56 + 11 = 67\n\nThere are 67 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-14",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 59 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 59\nNumber of blue counters: 5\n\nTotal number of counters = 59 + 5 = 64\n\nThere are 64 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-15",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 62 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 62\nNumber of blue counters: 6\n\nTotal number of counters = 62 + 6 = 68\n\nThere are 68 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-16",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 65 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 65\nNumber of blue counters: 7\n\nTotal number of counters = 65 + 7 = 72\n\nThere are 72 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-17",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 68 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 68\nNumber of blue counters: 8\n\nTotal number of counters = 68 + 8 = 76\n\nThere are 76 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-18",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 71 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 71\nNumber of blue counters: 9\n\nTotal number of counters = 71 + 9 = 80\n\nThere are 80 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-19",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 74 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 74\nNumber of blue counters: 10\n\nTotal number of counters = 74 + 10 = 84\n\nThere are 84 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-20",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 77 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 77\nNumber of blue counters: 11\n\nTotal number of counters = 77 + 11 = 88\n\nThere are 88 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-21",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 80 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 80\nNumber of blue counters: 5\n\nTotal number of counters = 80 + 5 = 85\n\nThere are 85 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-22",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 83 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 83\nNumber of blue counters: 6\n\nTotal number of counters = 83 + 6 = 89\n\nThere are 89 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-23",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 86 red counters and 7 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 86\nNumber of blue counters: 7\n\nTotal number of counters = 86 + 7 = 93\n\nThere are 93 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-24",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 89 red counters and 8 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 89\nNumber of blue counters: 8\n\nTotal number of counters = 89 + 8 = 97\n\nThere are 97 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-25",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 92 red counters and 9 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 92\nNumber of blue counters: 9\n\nTotal number of counters = 92 + 9 = 101\n\nThere are 101 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-26",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 95 red counters and 10 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 95\nNumber of blue counters: 10\n\nTotal number of counters = 95 + 10 = 105\n\nThere are 105 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-27",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 98 red counters and 11 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 98\nNumber of blue counters: 11\n\nTotal number of counters = 98 + 11 = 109\n\nThere are 109 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-28",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 101 red counters and 5 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 101\nNumber of blue counters: 5\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 101 + 5\nTotal number of counters = 106\n\nThere are 106 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "59-29",
+        "partition": "evaluation",
+        "query": "MathVista\nQuestion: A container holds 104 red counters and 6 blue counters. How many counters are there?",
+        "output": "To find the total number of counters, we need to add the number of red counters and the number of blue counters.\n\nNumber of red counters: 104\nNumber of blue counters: 6\n\nTotal number of counters = Number of red counters + Number of blue counters\nTotal number of counters = 104 + 6\nTotal number of counters = 110\n\nThere are 110 counters in total.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

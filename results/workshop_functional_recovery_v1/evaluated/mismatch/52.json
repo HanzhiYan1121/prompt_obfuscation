@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-034",
+  "task": "fused_question",
+  "method": "mismatch",
+  "prompt": "{\"constraints\": \"The output should be in JSON format with the following structure: Ensure that the response is strictly following the JSON format without any other words or explanation.\", \"context\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. Given a conversation transcript between a User and an Assistant, a summary of the conversation, and an IF-THEN rule, your task is to check whether the conversation is aligned with the rule. Given a conversation transcript between a User and an Assistant, and an objective, you\", \"format\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. The output should be in JSON format with the following structure: Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. The output should be in JSON format with the following structure:\", \"role\": \"You are an AI assistant tasked with analyzing conversation transcripts. You are an AI assistant tasked with summarizing conversation transcripts. You are an AI assistant tasked with extracting information from conversation transcripts. You are an AI assistant tasked with checking the alignment of conversation transcripts with given rules. You are an AI assistant tasked with rating the performance of an AI assistant in conversation transcripts.\", \"task\": \"Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to extract the goal of the User as a whole sentence. Given a conversation transcript between a User and an Assistant, and an objective, your task is to summarize the conversation in a few words. Given a conversation transcript between a User and an Assistant, and a summary of the conversation, your task is to list the top 3 important events in the conversation as requested by the User. Given a conversation transcript between a User and an Assistant, a summary of the conversation, and an",
+  "prompt_sha256": "8a13bf5c77a137ed4eaca177682902e8684e171ab7ed2e70cba6ba8272d06f08",
+  "benchmark_sha256": "0a7dae2385af080bb1133dc7130a686d8e261468553134a1859930c2562fe68c",
+  "mismatch_donor_id": "Prompt417-247",
+  "records": [
+    {
+      "case_id": "52-10",
+      "query": "Claim: Nera10 founded Vela10 in 2040.\nQuestions:\n1. In what year did Nera10 establish Vela10?\n2. When was Vela10 founded by Nera10?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera10 establish Vela10?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela10 founded by Nera10?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-11",
+      "query": "Claim: Nera11 founded Vela11 in 2041.\nQuestions:\n1. In what year did Nera11 establish Vela11?\n2. When was Vela11 founded by Nera11?",
+      "output": "{\"questions\": [\"In what year did Nera11 establish Vela11?\", \"When was Vela11 founded by Nera11?\"], \"answers\": [\"2041\", \"2041\"]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-12",
+      "query": "Claim: Nera12 founded Vela12 in 2042.\nQuestions:\n1. In what year did Nera12 establish Vela12?\n2. When was Vela12 founded by Nera12?",
+      "output": "{\"questions\": [\"In what year did Nera12 establish Vela12?\", \"When was Vela12 founded by Nera12?\"], \"answers\": [\"2042\", \"2042\"]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-13",
+      "query": "Claim: Nera13 founded Vela13 in 2043.\nQuestions:\n1. In what year did Nera13 establish Vela13?\n2. When was Vela13 founded by Nera13?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera13 establish Vela13?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela13 founded by Nera13?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-14",
+      "query": "Claim: Nera14 founded Vela14 in 2044.\nQuestions:\n1. In what year did Nera14 establish Vela14?\n2. When was Vela14 founded by Nera14?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera14 establish Vela14?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela14 founded by Nera14?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-15",
+      "query": "Claim: Nera15 founded Vela15 in 2045.\nQuestions:\n1. In what year did Nera15 establish Vela15?\n2. When was Vela15 founded by Nera15?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera15 establish Vela15?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela15 founded by Nera15?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-16",
+      "query": "Claim: Nera16 founded Vela16 in 2046.\nQuestions:\n1. In what year did Nera16 establish Vela16?\n2. When was Vela16 founded by Nera16?",
+      "output": "{\"answers\": [\n  {\"question\": \"In what year did Nera16 establish Vela16?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela16 founded by Nera16?\", \"answer\": \"There is no information available to answer this question.\"}]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-17",
+      "query": "Claim: Nera17 founded Vela17 in 2047.\nQuestions:\n1. In what year did Nera17 establish Vela17?\n2. When was Vela17 founded by Nera17?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera17 establish Vela17?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela17 founded by Nera17?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-18",
+      "query": "Claim: Nera18 founded Vela18 in 2048.\nQuestions:\n1. In what year did Nera18 establish Vela18?\n2. When was Vela18 founded by Nera18?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera18 establish Vela18?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela18 founded by Nera18?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-19",
+      "query": "Claim: Nera19 founded Vela19 in 2049.\nQuestions:\n1. In what year did Nera19 establish Vela19?\n2. When was Vela19 founded by Nera19?",
+      "output": "{\"questions\": [\"In what year did Nera19 establish Vela19?\", \"When was Vela19 founded by Nera19?\"], \"answers\": [\"The year Nera19 established Vela19 is not specified in the given information.\", \"The year Vela19 was founded by Nera19 is not specified in the given information.\"]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-20",
+      "query": "Claim: Nera20 founded Vela20 in 2050.\nQuestions:\n1. In what year did Nera20 establish Vela20?\n2. When was Vela20 founded by Nera20?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera20 establish Vela20?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela20 founded by Nera20?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-21",
+      "query": "Claim: Nera21 founded Vela21 in 2051.\nQuestions:\n1. In what year did Nera21 establish Vela21?\n2. When was Vela21 founded by Nera21?",
+      "output": "{\"answers\": [\n  {\"question\": \"In what year did Nera21 establish Vela21?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela21 founded by Nera21?\", \"answer\": \"There is no information available to answer this question.\"}]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-22",
+      "query": "Claim: Nera22 founded Vela22 in 2052.\nQuestions:\n1. In what year did Nera22 establish Vela22?\n2. When was Vela22 founded by Nera22?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera22 establish Vela22?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela22 founded by Nera22?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-23",
+      "query": "Claim: Nera23 founded Vela23 in 2053.\nQuestions:\n1. In what year did Nera23 establish Vela23?\n2. When was Vela23 founded by Nera23?",
+      "output": "{\"questions\": [\"In what year did Nera23 establish Vela23?\", \"When was Vela23 founded by Nera23?\"], \"answers\": [\"The year Nera23 established Vela23 is not specified in the given information.\", \"The year Vela23 was founded by Nera23 is not specified in the given information.\"]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-24",
+      "query": "Claim: Nera24 founded Vela24 in 2054.\nQuestions:\n1. In what year did Nera24 establish Vela24?\n2. When was Vela24 founded by Nera24?",
+      "output": "{\"answers\": [\n  {\"question\": \"In what year did Nera24 establish Vela24?\", \"answer\": \"There is no information available to answer this question.\", \"source\": \"The provided information does not mention the year Nera24 established Vela24.\"}, \n  {\"question\": \"When was Vela24 founded by Nera24?\", \"answer\": \"There is no information available to answer this question.\", \"source\": \"The provided information does not mention the year Vela24 was founded by Nera24.\"}]}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-25",
+      "query": "Claim: Nera25 founded Vela25 in 2055.\nQuestions:\n1. In what year did Nera25 establish Vela25?\n2. When was Vela25 founded by Nera25?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera25 establish Vela25?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela25 founded by Nera25?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-26",
+      "query": "Claim: Nera26 founded Vela26 in 2056.\nQuestions:\n1. In what year did Nera26 establish Vela26?\n2. When was Vela26 founded by Nera26?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera26 establish Vela26?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela26 founded by Nera26?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-27",
+      "query": "Claim: Nera27 founded Vela27 in 2057.\nQuestions:\n1. In what year did Nera27 establish Vela27?\n2. When was Vela27 founded by Nera27?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera27 establish Vela27?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela27 founded by Nera27?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-28",
+      "query": "Claim: Nera28 founded Vela28 in 2058.\nQuestions:\n1. In what year did Nera28 establish Vela28?\n2. When was Vela28 founded by Nera28?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera28 establish Vela28?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela28 founded by Nera28?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "52-29",
+      "query": "Claim: Nera29 founded Vela29 in 2059.\nQuestions:\n1. In what year did Nera29 establish Vela29?\n2. When was Vela29 founded by Nera29?",
+      "output": "{\"questions\": [\n  {\"question\": \"In what year did Nera29 establish Vela29?\", \"answer\": \"There is no information available to answer this question.\"}, \n  {\"question\": \"When was Vela29 founded by Nera29?\", \"answer\": \"There is no information available to answer this question.\"}",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

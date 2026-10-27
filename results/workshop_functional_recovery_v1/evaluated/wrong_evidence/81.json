@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-395",
+  "task": "probability",
+  "method": "wrong_evidence",
+  "prompt": "You are an expert evaluator.\nYou will evaluate two AI assistants’ responses based on how well they follow the user’s instructions. The assistants must strictly follow the user’s instructions and answer the question step by step, without skipping any steps or adding unnecessary ones.\nThe assistants must strictly follow the user’s instructions and answer the question step by step, without skipping any steps or adding unnecessary ones.\nYou will evaluate two AI assistants’ responses based on how well they follow the user’s instructions. User profile: {user_profile} Question: {question}",
+  "prompt_sha256": "8190783363ac04812be52cef66865c0d120d77d5ab3dd5ac46de86d00574bbe1",
+  "benchmark_sha256": "961cee0ffeb0d2957c3bb124cb6154a4b2c96240c89786056d8a27a6b65b70b4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "81-10",
+      "query": "Question: What is 47 plus 8?",
+      "output": "To find the answer to the question \"What is 47 plus 8?\", I will follow these steps:\n\n1. I will add 47 and 8 together.\n2. The result will be the final answer.\n\nFirst, I will add 47 and 8 together: 47 + 8 = 55.\n\nThe final answer is 55.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-11",
+      "query": "Question: What is 50 plus 9?",
+      "output": "To find the answer to the question \"What is 50 plus 9?\", I will follow these steps:\n\n1. I will start with the number 50.\n2. I will add 9 to 50.\n\nFirst, I will add 9 to 50: 50 + 9 = 59.\n\nThe answer to the question \"What is 50 plus 9?\" is 59.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-12",
+      "query": "Question: What is 53 plus 10?",
+      "output": "I'll evaluate the responses of two AI assistants.\n\n**Assistant 1:**\nUser: What is 53 plus 10?\nAssistant 1: To find the answer, I will add 53 and 10. First, I will add the tens place: 50 + 10 = 60. Then, I will add the ones place: 3 + 0 = 3. Now, I will combine the results: 60 + 3 = 63. The answer is 63.\n\n**Assistant 2:**\nUser: What is 53 plus 10?\nAssistant 2: To find the answer, I will add 53 and 10. First, I will add 50 and 10, which equals 60. Then, I will add 3 and 0, which equals 3. Now, I will combine the results: 60 + 3 = 63. The answer is 63.\n\n**Evaluation:**\nBoth assistants provided a clear and step-by-step solution to the problem. They correctly added the tens and ones places and combined the results to find the final answer. However, Assistant 1 provided a slightly more detailed explanation of the process, which makes it easier to understand. Therefore, I give Assistant ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-13",
+      "query": "Question: What is 56 plus 11?",
+      "output": "To find the answer to the question \"What is 56 plus 11?\", I will follow these steps:\n\n1. I will add 56 and 11 together.\n2. The result will be the final answer.\n\nFirst, I will add 56 and 11 together: \n56 + 11 = 67\n\nThe final answer is 67.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-14",
+      "query": "Question: What is 59 plus 5?",
+      "output": "To find the answer to the question \"What is 59 plus 5?\", I will follow these steps:\n\n1. I will start with the number 59.\n2. I will add 5 to 59.\n\nFirst, I will add 5 to 59:\n59 + 5 = 64\n\nThe answer to the question \"What is 59 plus 5?\" is 64.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-15",
+      "query": "Question: What is 62 plus 6?",
+      "output": "To find the answer to the question \"What is 62 plus 6?\", I will follow these steps:\n\n1. I will start with the number 62.\n2. I will add 6 to 62.\n\nFirst, I will add 6 to 60, which equals 66.\nThen, I will add 2 to 66, which equals 68.\n\nTherefore, the answer to the question \"What is 62 plus 6?\" is 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-16",
+      "query": "Question: What is 65 plus 7?",
+      "output": "To find the answer to the question \"What is 65 plus 7?\", I will follow these steps:\n\n1. I will start with the number 65.\n2. I will add 7 to 65.\n\nFirst, I will add 7 to 60, which equals 67.\nThen, I will add 5 to 67, which equals 72.\n\nSo, 65 plus 7 equals 72.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-17",
+      "query": "Question: What is 68 plus 8?",
+      "output": "To find the answer to the question \"What is 68 plus 8?\", I will follow these steps:\n\n1. I will add 68 and 8 together.\n2. The result will be the final answer.\n\nFirst, I will add 68 and 8 together: 68 + 8 = 76.\n\nThe final answer is 76.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-18",
+      "query": "Question: What is 71 plus 9?",
+      "output": "To find the answer to the question \"What is 71 plus 9?\", I will follow these steps:\n\n1. I will add 71 and 9.\n2. The result will be the final answer.\n\nFirst, I will add 71 and 9:\n71 + 9 = 80\n\nThe final answer is 80.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-19",
+      "query": "Question: What is 74 plus 10?",
+      "output": "To find the answer to the question \"What is 74 plus 10?\", I will follow these steps:\n\n1. I will start with the number 74.\n2. I will add 10 to 74.\n\nFirst, I will add 10 to 74: 74 + 10 = 84.\n\nThe final answer is 84.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-20",
+      "query": "Question: What is 77 plus 11?",
+      "output": "To find the answer to the question \"What is 77 plus 11?\", I will follow these steps:\n\n1. I will start with the number 77.\n2. I will add 11 to 77.\n\nFirst, I will add 10 to 77: 77 + 10 = 87\nThen, I will add 1 to 87: 87 + 1 = 88\n\nTherefore, 77 plus 11 is 88.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-21",
+      "query": "Question: What is 80 plus 5?",
+      "output": "To find the answer to the question \"What is 80 plus 5?\", I will follow these steps:\n\n1. Identify the numbers involved: The two numbers are 80 and 5.\n2. Determine the operation: The operation is addition.\n3. Perform the operation: Add 80 and 5.\n4. Calculate the result: 80 + 5 = 85.\n\nThe final answer is 85.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-22",
+      "query": "Question: What is 83 plus 6?",
+      "output": "To find the answer to the question \"What is 83 plus 6?\", I will follow these steps:\n\n1. I will start with the number 83.\n2. I will add 6 to 83.\n\nFirst, I will add 6 to 80, which equals 86.\nThen, I will add 3 to 86, which equals 89.\n\nSo, 83 plus 6 equals 89.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-23",
+      "query": "Question: What is 86 plus 7?",
+      "output": "To find the answer to the question \"What is 86 plus 7?\", I will follow these steps:\n\n1. I will start with the number 86.\n2. I will add 7 to 86.\n\nFirst, I will add 7 to 86: \n86 + 7 = 93\n\nThe answer to the question \"What is 86 plus 7?\" is 93.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-24",
+      "query": "Question: What is 89 plus 8?",
+      "output": "To find the answer to the question \"What is 89 plus 8?\", I will follow these steps:\n\n1. I will add 89 and 8 together.\n2. The result will be the final answer.\n\nFirst, I will add 89 and 8 together: 89 + 8 = 97.\n\nThe final answer is 97.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-25",
+      "query": "Question: What is 92 plus 9?",
+      "output": "To find the answer to the question \"What is 92 plus 9?\", I will follow these steps:\n\n1. I will add 92 and 9 together.\n2. The result will be the final answer.\n\nFirst, I will add 92 and 9 together: 92 + 9 = 101.\n\nThe final answer is 101.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-26",
+      "query": "Question: What is 95 plus 10?",
+      "output": "To find the answer to the question \"What is 95 plus 10?\", I will follow these steps:\n\n1. I will start with the number 95.\n2. I will add 10 to 95.\n\nFirst, I will add 10 to 95:\n95 + 10 = 105\n\nThe answer to the question \"What is 95 plus 10?\" is 105.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-27",
+      "query": "Question: What is 98 plus 11?",
+      "output": "To find the answer to the question \"What is 98 plus 11?\", I will follow these steps:\n\n1. I will add 98 and 11 together.\n2. The result will be the final answer.\n\nFirst, I will add 98 and 11 together: 98 + 11 = 109.\n\nThe final answer is 109.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-28",
+      "query": "Question: What is 101 plus 5?",
+      "output": "To find the answer to the question \"What is 101 plus 5?\", I will follow these steps:\n\n1. I will start with the number 101.\n2. I will add 5 to 101.\n\nFirst, I will add 5 to 100, which equals 105.\nThen, I will add 1 to 105, which equals 106.\n\nTherefore, the answer to the question \"What is 101 plus 5?\" is 106.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "81-29",
+      "query": "Question: What is 104 plus 6?",
+      "output": "To find the answer to the question \"What is 104 plus 6?\", I will follow these steps:\n\n1. I will start with the number 104.\n2. I will add 6 to 104.\n\nFirst, I will add 6 to 100, which equals 106.\nThen, I will add 4 to 106, which equals 110.\n\nTherefore, 104 plus 6 equals 110.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

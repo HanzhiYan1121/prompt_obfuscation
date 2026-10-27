@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-219",
+  "task": "explicit_constraints",
+  "method": "zero1",
+  "prompt": "Strict Output Formatter\nExtract and format specific words from user input\nComma-separated values with no spaces\nReturn exactly the specified words separated by a comma, with no spaces or other text\nProcessing user queries requiring precise string formatting\nDirect string manipulation",
+  "prompt_sha256": "cfad1d96fc2eddbd0ed7d698167e74f1475b59a2ce9f84adc375493b92e369c6",
+  "benchmark_sha256": "e66a9253eea192a2d539eed29b93ed9f150b68fa7e200108bcbf540376bd6a08",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "26-10",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word10 and token10.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip leading/trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word10, token10'))\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a string of comma-separated words as input.\n2.  We split the input string into a list of words using the `split` method.\n3.  We strip leading/trailing spaces from each word using a list comprehension.\n4.  We join the list of words into a comma-separated string using the `join` method.\n5.  We test the function with the input `'word10, token10'",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-11",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word11 and token11.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef format_words(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The input string containing the words to be extracted.\n\n    Returns:\n        str: A comma-separated string of the extracted words with no spaces.\n    \"\"\"\n    # Define the words to be extracted\n    target_words = [\"word11\", \"token11\"]\n\n    # Split the input string into a list of words\n    words = input_str.split()\n\n    # Filter the list to include only the target words\n    extracted_words = [word for word in words if word in target_words]\n\n    # Join the extracted words into a comma-separated string\n    formatted_str = \",\".join(extracted_words)\n\n    return formatted_str\n\n# Test the function\ninput_str = \"word11 and token11 and other words\"\nprint(format_words(input_str))  # Output: word11,token11\n```\n\nIn this code:\n\n1.  We define a function `format_words` that takes an input string and extracts the specified words.\n2.  We split the input string into a list of words using the `split` method.\n3.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-12",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word12 and token12.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef format_words(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The input string containing the words to be extracted.\n\n    Returns:\n        str: A comma-separated string of the extracted words with no spaces.\n    \"\"\"\n    # Define the words to be extracted\n    target_words = [\"word12\", \"token12\"]\n\n    # Split the input string into a list of words\n    words = input_str.split()\n\n    # Filter the list to include only the target words\n    extracted_words = [word for word in words if word in target_words]\n\n    # Join the extracted words into a comma-separated string\n    formatted_str = \",\".join(extracted_words)\n\n    return formatted_str\n\n# Test the function\ninput_str = \"word12 token12 otherword word12\"\nprint(format_words(input_str))  # Output: word12,token12\n```\n\nIn this code:\n\n1.  We define a function `format_words` that takes an input string and extracts the specified words.\n2.  We split the input string into a list of words using the `split` method.\n3.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-13",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word13 and token13.",
+      "output": "Here is the code to extract and format the specified words:\n\n```python\ndef format_words(word1, word2):\n    \"\"\"\n    Returns exactly two words separated by a comma, with no spaces or other text.\n\n    Args:\n        word1 (str): The first word to be formatted.\n        word2 (str): The second word to be formatted.\n\n    Returns:\n        str: A comma-separated string of the two words.\n    \"\"\"\n    return f\"{word1},{word2}\"\n\n# Example usage:\nword1 = \"word13\"\nword2 = \"token13\"\nresult = format_words(word1, word2)\nprint(result)  # Output: word13,token13\n```\n\nIn this code:\n\n*   We define a function `format_words` that takes two arguments, `word1` and `word2`.\n*   Inside the function, we use an f-string to format the two words into a comma-separated string.\n*   We call the `format_words` function with the specified words \"word13\" and \"token13\" and print the result.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-14",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word14 and token14.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip any leading or trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word14, token14'))\n```\n\nWhen you run this code, it will output:\n\n```\nword14,token14\n```\n\nThis function takes a comma-separated string of words as input, splits it into a list of words, removes any leading or trailing spaces from each word, and then joins the list back into a string with commas in between. The result is a string with exactly the specified words separated by a comma, with no spaces or other text.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-15",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word15 and token15.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip leading/trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word15, token15'))\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a string of comma-separated words as input.\n2.  We split the input string into a list of words using the `split` method.\n3.  We strip leading/trailing spaces from each word using a list comprehension.\n4.  We join the list of words into a comma-separated string using the `join` method.\n5.  We test the function with the input `'word15, token15'",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-16",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word16 and token16.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip leading/trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word16, token16'))\n```\n\nWhen you run this code, it will output: `word16,token16`\n\nThis function takes a comma-separated string as input, splits it into a list of words, removes any leading or trailing spaces, and then joins the words back together with commas in between.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-17",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word17 and token17.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(user_input):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        user_input (str): The input string from the user.\n\n    Returns:\n        str: A comma-separated string of the specified words with no spaces.\n    \"\"\"\n    # Define the words to extract\n    target_words = [\"word17\", \"token17\"]\n\n    # Split the user input into words\n    words = user_input.split()\n\n    # Filter the words to get the target words\n    target_word_list = [word for word in words if word in target_words]\n\n    # Join the target words with a comma and return the result\n    return \",\".join(target_word_list)\n\n# Test the function\nuser_input = \"word17 token17 otherword17\"\nprint(strict_output_formatter(user_input))  # Output: word17,token17\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a user input string.\n2.  We specify the words to extract (`target_words`).\n3.  We split the user input into words using the `split` method.\n4.  We filter",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-18",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word18 and token18.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n    \n    Args:\n    words (str): A string containing comma-separated values.\n    \n    Returns:\n    str: A string with exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n    \n    # Filter out any empty strings from the list\n    word_list = [word.strip() for word in word_list if word.strip()]\n    \n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word18, token18, other, word19'))\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a string of comma-separated values as input.\n2.  We split the input string into a list of words using the `split` method.\n3.  We filter out any empty strings from the list using a list comprehension.\n4.  We join the list of words into a string using the `join` method, with each word separated by a",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-19",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word19 and token19.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef format_words(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The user input string.\n\n    Returns:\n        str: A comma-separated string of the specified words with no spaces.\n    \"\"\"\n    # Define the words to extract\n    target_words = [\"word19\", \"token19\"]\n\n    # Split the input string into words\n    words = input_str.split()\n\n    # Filter the words to get the target words\n    target_word_str = [word for word in words if word in target_words]\n\n    # Join the target words with a comma and return the result\n    return \",\".join(target_word_str)\n\n# Test the function\ninput_str = \"word19 token19 otherword19\"\nprint(format_words(input_str))  # Output: word19,token19\n```\n\nIn this code:\n\n1.  We define a function `format_words` that takes a string input from the user.\n2.  We specify the words to extract (`word19` and `token19`) in the `target_words` list.\n3.  We split the input string into individual words using the",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-20",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word20 and token20.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(user_input):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        user_input (str): The input string from the user.\n\n    Returns:\n        str: A comma-separated string of the specified words with no spaces.\n    \"\"\"\n    # Define the words to extract\n    target_words = [\"word20\", \"token20\"]\n\n    # Split the user input into words\n    words = user_input.split()\n\n    # Filter the words to get the target words\n    target_word_list = [word for word in words if word in target_words]\n\n    # Join the target words into a comma-separated string\n    formatted_output = \",\".join(target_word_list)\n\n    return formatted_output\n\n# Test the function\nuser_input = \"word20 token20 otherword20\"\nprint(strict_output_formatter(user_input))  # Output: word20,token20\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a user input string.\n2.  We specify the words to extract (`target_words`).\n3.  We split the user input into individual words.\n4.  We filter",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-21",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word21 and token21.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef format_words(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The input string containing the words to be extracted.\n\n    Returns:\n        str: A comma-separated string of the extracted words with no spaces.\n    \"\"\"\n    # Define the words to be extracted\n    target_words = [\"word21\", \"token21\"]\n\n    # Split the input string into a list of words\n    words = input_str.split()\n\n    # Filter the list to include only the target words\n    extracted_words = [word for word in words if word in target_words]\n\n    # Join the extracted words into a comma-separated string\n    formatted_str = \",\".join(extracted_words)\n\n    return formatted_str\n\n# Test the function\ninput_str = \"word21 token21 otherword21 word22\"\nprint(format_words(input_str))  # Output: word21,token21\n```\n\nIn this code:\n\n1.  We define a function `format_words` that takes an input string and extracts the specified words.\n2.  We split the input string into a list of words using the `split` method.\n3",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-22",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word22 and token22.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The user input string.\n\n    Returns:\n        str: A comma-separated string of the specified words with no spaces.\n    \"\"\"\n    # Define the words to extract\n    target_words = [\"word22\", \"token22\"]\n\n    # Split the input string into words\n    words = input_str.split()\n\n    # Filter the words to get the target words\n    target_word_str = [word for word in words if word in target_words]\n\n    # Join the target words into a comma-separated string\n    result = \",\".join(target_word_str)\n\n    return result\n\n# Test the function\ninput_str = \"word22 token22 otherword22\"\nprint(strict_output_formatter(input_str))  # Output: word22,token22\n```\n\nIn this code:\n\n1.  We define a function `strict_output_formatter` that takes a user input string as an argument.\n2.  We specify the words to extract from the input string.\n3.  We split the input string into individual words.\n4.  We filter the",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-23",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word23 and token23.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef format_words(input_str):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        input_str (str): The input string containing the words to be extracted.\n\n    Returns:\n        str: A comma-separated string of the extracted words with no spaces.\n    \"\"\"\n    # Define the words to be extracted\n    target_words = [\"word23\", \"token23\"]\n\n    # Split the input string into a list of words\n    words = input_str.split()\n\n    # Filter the list to include only the target words\n    extracted_words = [word for word in words if word in target_words]\n\n    # Join the extracted words into a comma-separated string\n    formatted_str = \",\".join(extracted_words)\n\n    return formatted_str\n\n# Test the function\ninput_str = \"word23 token23 otherword23\"\nprint(format_words(input_str))  # Output: word23,token23\n```\n\nIn this code:\n\n1.  We define a function `format_words` that takes an input string and extracts the specified words.\n2.  We split the input string into a list of words using the `split` method.\n3. ",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-24",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word24 and token24.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip any leading or trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word24, token24'))\n```\n\nWhen you run this code, it will output: `word24,token24`\n\nThis function takes a comma-separated string of words as input, splits it into a list of words, removes any leading or trailing spaces from each word, and then joins the list back into a string with commas in between.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-25",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word25 and token25.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Strip any leading or trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word25, token25'))\n```\n\nWhen you run this code, it will output: `word25,token25`\n\nThis function takes a comma-separated string as input, splits it into a list of words, removes any leading or trailing spaces from each word, and then joins the list back into a string with commas in between.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-26",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word26 and token26.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Remove leading and trailing whitespaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word26, token26'))\n```\n\nWhen you run this code, it will output: `word26,token26`",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-27",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word27 and token27.",
+      "output": "Here is the code to extract and format the specified words:\n\n```python\ndef format_words(word1, word2):\n    \"\"\"\n    Returns exactly two words separated by a comma, with no spaces or other text.\n\n    Args:\n        word1 (str): The first word to be formatted.\n        word2 (str): The second word to be formatted.\n\n    Returns:\n        str: A comma-separated string of the two words.\n    \"\"\"\n    return f\"{word1},{word2}\"\n\n# Example usage:\nword1 = \"word27\"\nword2 = \"token27\"\nresult = format_words(word1, word2)\nprint(result)  # Output: word27,token27\n```\n\nIn this code:\n\n*   We define a function `format_words` that takes two arguments, `word1` and `word2`.\n*   Inside the function, we use an f-string to format the two words into a comma-separated string.\n*   We call the `format_words` function with the specified words \"word27\" and \"token27\" and print the result.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-28",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word28 and token28.",
+      "output": "Here is the code to extract and format the specified words:\n\n```python\ndef format_words(word1, word2):\n    \"\"\"\n    Returns exactly two words separated by a comma, with no spaces or other text.\n\n    Args:\n        word1 (str): The first word to be formatted.\n        word2 (str): The second word to be formatted.\n\n    Returns:\n        str: A comma-separated string of the two words.\n    \"\"\"\n    return f\"{word1},{word2}\"\n\n# Example usage:\nword1 = \"word28\"\nword2 = \"token28\"\nresult = format_words(word1, word2)\nprint(result)  # Output: word28,token28\n```\n\nIn this code:\n\n*   We define a function `format_words` that takes two arguments, `word1` and `word2`.\n*   Inside the function, we use an f-string to format the two words into a comma-separated string.\n*   We call the `format_words` function with the specified words \"word28\" and \"token28\" and print the result.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "26-29",
+      "query": "User query: Return exactly these two words separated by a comma, with no spaces or other text: word29 and token29.",
+      "output": "Here is the code to extract and format the specified words from the user input:\n\n```python\ndef strict_output_formatter(words):\n    \"\"\"\n    Extract and format specific words from user input.\n\n    Args:\n        words (str): Comma-separated values with no spaces.\n\n    Returns:\n        str: Exactly the specified words separated by a comma, with no spaces or other text.\n    \"\"\"\n    # Split the input string into a list of words\n    word_list = words.split(',')\n\n    # Remove any leading or trailing spaces from each word\n    word_list = [word.strip() for word in word_list]\n\n    # Return the formatted string\n    return ','.join(word_list)\n\n# Test the function\nprint(strict_output_formatter('word29, token29'))\n```\n\nWhen you run this code, it will output:\n\n```\nword29,token29\n```\n\nThis code uses a list comprehension to remove any leading or trailing spaces from each word in the input string, and then joins the words back together with a comma in between.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

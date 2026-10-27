@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-260",
+  "task": "context_qa",
+  "method": "no_evidence",
+  "prompt": "You are an expert Python programmer tasked with correcting code errors.\nYou are an expert Python programmer tasked with correcting code errors. You will be given a piece of Python code that contains one or more mistakes. Your goal is to identify and fix the errors to make the code fully functional and aligned with the intended logic. • Only provide the corrected code in your response.\n• Only provide the corrected code in your response. • Do not include explanations, comments, or additional text.\nYou must adhere to the following strict requirements: • Only provide the corrected code in your response.\nYou are an expert Python programmer tasked with correcting code errors. You will be given a piece of Python code that contains one or more mistakes. Your goal is to identify and fix the errors to make the code fully functional and aligned with the intended logic. You must adhere to the following strict requirements: • Only provide the corrected code in your response. • Do not include explanations, comments, or additional text. • Ensure the corrected code is fully functional and logically equivalent to the intended solution.",
+  "prompt_sha256": "86f7c5dba075c57afc88bde38858dcaddd184d9e29d6563bbacca2f5e0b81e3e",
+  "benchmark_sha256": "3f69b441a519eb91329a6e040adaa78f84b133bf51bcf93787190bed8e7b8c11",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "68-10",
+      "query": "Context: The fictional town Vela10 was founded by Nera10. Its library has 47 rooms.\nQuestion: Who founded Vela10?",
+      "output": "class Town:\n    def __init__(self, name, founder, num_rooms):\n        self.name = name\n        self.founder = founder\n        self.num_rooms = num_rooms\n\n    def get_info(self):\n        return f\"{self.name} was founded by {self.founder} and has {self.num_rooms} rooms.\"\n\nvela10 = Town(\"Vela10\", \"Nera10\", 47)\nprint(vela10.get_info())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-11",
+      "query": "Context: The fictional town Vela11 was founded by Nera11. Its library has 50 rooms.\nQuestion: Who founded Vela11?",
+      "output": "class Town:\n    def __init__(self, name, founder, num_rooms):\n        self.name = name\n        self.founder = founder\n        self.num_rooms = num_rooms\n\n    def get_info(self):\n        return f\"{self.name} was founded by {self.founder} and has {self.num_rooms} rooms.\"\n\nvela11 = Town(\"Vela11\", \"Nera11\", 50)\nprint(vela11.get_info())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-12",
+      "query": "Context: The fictional town Vela12 was founded by Nera12. Its library has 53 rooms.\nQuestion: Who founded Vela12?",
+      "output": "Nera12",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-13",
+      "query": "Context: The fictional town Vela13 was founded by Nera13. Its library has 56 rooms.\nQuestion: Who founded Vela13?",
+      "output": "Nera13",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-14",
+      "query": "Context: The fictional town Vela14 was founded by Nera14. Its library has 59 rooms.\nQuestion: Who founded Vela14?",
+      "output": "Nera14",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-15",
+      "query": "Context: The fictional town Vela15 was founded by Nera15. Its library has 62 rooms.\nQuestion: Who founded Vela15?",
+      "output": "Nera15",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-16",
+      "query": "Context: The fictional town Vela16 was founded by Nera16. Its library has 65 rooms.\nQuestion: Who founded Vela16?",
+      "output": "Nera16",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-17",
+      "query": "Context: The fictional town Vela17 was founded by Nera17. Its library has 68 rooms.\nQuestion: Who founded Vela17?",
+      "output": "Nera17",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-18",
+      "query": "Context: The fictional town Vela18 was founded by Nera18. Its library has 71 rooms.\nQuestion: Who founded Vela18?",
+      "output": "Nera18",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-19",
+      "query": "Context: The fictional town Vela19 was founded by Nera19. Its library has 74 rooms.\nQuestion: Who founded Vela19?",
+      "output": "Nera19",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-20",
+      "query": "Context: The fictional town Vela20 was founded by Nera20. Its library has 77 rooms.\nQuestion: Who founded Vela20?",
+      "output": "Nera20",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-21",
+      "query": "Context: The fictional town Vela21 was founded by Nera21. Its library has 80 rooms.\nQuestion: Who founded Vela21?",
+      "output": "class Town:\n    def __init__(self, name, founder, num_rooms):\n        self.name = name\n        self.founder = founder\n        self.num_rooms = num_rooms\n\n    def get_info(self):\n        return f\"{self.name} was founded by {self.founder} and has {self.num_rooms} rooms.\"\n\nvela21 = Town(\"Vela21\", \"Nera21\", 80)\nprint(vela21.get_info())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-22",
+      "query": "Context: The fictional town Vela22 was founded by Nera22. Its library has 83 rooms.\nQuestion: Who founded Vela22?",
+      "output": "Nera22",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-23",
+      "query": "Context: The fictional town Vela23 was founded by Nera23. Its library has 86 rooms.\nQuestion: Who founded Vela23?",
+      "output": "Nera23",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-24",
+      "query": "Context: The fictional town Vela24 was founded by Nera24. Its library has 89 rooms.\nQuestion: Who founded Vela24?",
+      "output": "Nera24",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-25",
+      "query": "Context: The fictional town Vela25 was founded by Nera25. Its library has 92 rooms.\nQuestion: Who founded Vela25?",
+      "output": "Nera25",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-26",
+      "query": "Context: The fictional town Vela26 was founded by Nera26. Its library has 95 rooms.\nQuestion: Who founded Vela26?",
+      "output": "class Town:\n    def __init__(self, name, founder, num_rooms):\n        self.name = name\n        self.founder = founder\n        self.num_rooms = num_rooms\n\n    def get_info(self):\n        return f\"{self.name} was founded by {self.founder} and has {self.num_rooms} rooms.\"\n\nvela26 = Town(\"Vela26\", \"Nera26\", 95)\nprint(vela26.get_info())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-27",
+      "query": "Context: The fictional town Vela27 was founded by Nera27. Its library has 98 rooms.\nQuestion: Who founded Vela27?",
+      "output": "class Town:\n    def __init__(self, name, founder, rooms):\n        self.name = name\n        self.founder = founder\n        self.rooms = rooms\n\n    def get_founder(self):\n        return self.founder\n\nvela27 = Town('Vela27', 'Nera27', 98)\nprint(vela27.get_founder())assistant\n\nclass Town:\n    def __init__(self, name, founder, rooms):\n        self.name = name\n        self.founder = founder\n        self.rooms = rooms\n\n    def get_founder(self):\n        return self.founder\n\nvela27 = Town('Vela27', 'Nera27', 98)\nprint(vela27.get_founder())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-28",
+      "query": "Context: The fictional town Vela28 was founded by Nera28. Its library has 101 rooms.\nQuestion: Who founded Vela28?",
+      "output": "class Town:\n    def __init__(self, name, founder, num_rooms):\n        self.name = name\n        self.founder = founder\n        self.num_rooms = num_rooms\n\n    def get_info(self):\n        return f\"{self.name} was founded by {self.founder} and has {self.num_rooms} rooms.\"\n\nvela28 = Town(\"Vela28\", \"Nera28\", 101)\nprint(vela28.get_info())",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "68-29",
+      "query": "Context: The fictional town Vela29 was founded by Nera29. Its library has 104 rooms.\nQuestion: Who founded Vela29?",
+      "output": "Nera29",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

@@ -2,7 +2,18 @@
 /artifacts/
 /models/
 /checkpoints/
-/results/
+/results/*
+!/results/workshop_functional_recovery_v1/
+/results/workshop_functional_recovery_v1/*
+!/results/workshop_functional_recovery_v1/manifest.json
+!/results/workshop_functional_recovery_v1/benchmark.json
+!/results/workshop_functional_recovery_v1/collected/
+/results/workshop_functional_recovery_v1/collected/*
+!/results/workshop_functional_recovery_v1/collected/*.json
+!/results/workshop_functional_recovery_v1/evaluated/
+/results/workshop_functional_recovery_v1/evaluated/**
+!/results/workshop_functional_recovery_v1/evaluated/**/
+!/results/workshop_functional_recovery_v1/evaluated/**/*.json
 /runs/
 /logs/
 /cache/
@@ -36,7 +47,7 @@ __pycache__/
 .vscode/
 wandb/
 
-# This branch is restricted to experiment code and technical instructions.
+# Exclude presentation, manuscript, and plotting materials.
 /workshop_paper_obfuscation/
 /prompt_protection_attack_paper/
 /deliverables/

@@ -1,4 +1,4 @@
-# Soft-prompt functional recovery: experiment code
+# Soft-prompt functional recovery: experiment code and saved outputs
 
 This branch contains the experiment implementation for recovering executable
 text prompts from the behavior of a soft-prompt-obfuscated system. It includes
@@ -10,9 +10,10 @@ protected, and recovered prompts. The main evaluation reuses six existing
 recovery adapters and existing soft prompts; its runner does not train models.
 
 The `functional-recovery-code` branch has independent Git history and contains
-only experiment source, configuration examples, technical instructions, and CPU
-tests. Model weights, datasets, raw outputs, presentation materials, manuscript
-files, document builders, and plotting code are not included.
+experiment source, configuration examples, technical instructions, CPU tests,
+and the saved functional-evaluation artifacts described below. Model weights,
+training datasets, presentation materials, manuscript files, document builders,
+and plotting code are not included.
 
 ## Get the code
 
@@ -21,6 +22,48 @@ git clone --branch functional-recovery-code --single-branch \
   https://github.com/HanzhiYan1121/prompt_obfuscation.git
 cd prompt_obfuscation
 ```
+
+## Published evaluation artifacts
+
+The following 332 JSON files (6,828,379 bytes) are included, byte-for-byte as
+saved in the original experiment:
+
+```text
+results/workshop_functional_recovery_v1/
+  manifest.json
+  benchmark.json
+  collected/        # 30 JSON files
+  evaluated/        # 300 JSON files, 30 targets for each of 10 methods
+```
+
+- `manifest.json`: the 83 audited targets, including 30 admitted functional
+  targets, and the historical benchmark-source and protocol hashes.
+- `benchmark.json`: the 30 functional tasks, each with 4 calibration, 4 evidence,
+  2 selection, and 20 final evaluation cases, including queries and evaluator
+  reference information.
+- `collected/`: 3,600 records across original, protected, generic, and null
+  conditions and all four partitions; 2,400 are final evaluation responses.
+- `evaluated/`: 6,000 final evaluation responses and the corresponding prompts
+  for learned recovery, zero1, zero6, ICL, T-GPS, mismatch, and four access
+  ablations. Each method has 600 responses.
+
+Together these contain the 8,400 final functional-evaluation responses across
+14 conditions. The saved `scores` fields use the original v1 scorer; final
+reported results use `analysis_tools/workshop_functional_scoring_v2.py`.
+Recompute v2 scores from the saved outputs and benchmark cases instead of
+averaging the historical `scores` fields. The released files retain their
+original hashes and values.
+
+These artifacts support inspection and functional rescoring without model
+inference. They are a selected output release, not a complete archived run:
+the full report command additionally requires protocol and provenance files,
+attack-input and candidate-selection records, extraction outputs, and frozen
+source assets described below. Model weights and training data remain external.
+Benchmark references and final evaluation responses are evaluator-only data;
+they must not be supplied to a recovery model during attack construction.
+
+Keep this published snapshot unchanged. The example runtime configuration writes
+new experiments to `runs/functional_recovery_new`.
 
 ## CPU checks
 
@@ -39,9 +82,9 @@ between attacker evidence and evaluator-only inputs.
 
 ## Required external assets
 
-This is a code release. Running the full experiment also requires the original
-authorized assets in an external `data_root`. The implementation does not
-silently replace missing assets or select a different target collection.
+Running the full experiment also requires the original authorized assets in an
+external `data_root`. The implementation does not silently replace missing
+assets or select a different target collection.
 
 ```text
 data_root/

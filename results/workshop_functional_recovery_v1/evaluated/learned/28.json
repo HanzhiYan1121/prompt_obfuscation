@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-265",
+  "task": "argument",
+  "method": "learned",
+  "prompt": "Identify the argument scheme used in the given dialogue and argument.\nOutput:\nSelect only the most appropriate scheme.\nIdentify the argument scheme used in the given dialogue and argument. Dialogue: {dialogue} Argument: {argument} Candidate schemes: {candidate_schemes}",
+  "prompt_sha256": "fc419bb8d63ee40a53c71906419bdefd6081552f53b2e431fb051cbe701304bf",
+  "benchmark_sha256": "937054e6e78c7c17ffb400b69b173393e1420871aadf414c842f7059f9de3b22",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "28-10",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \ncause and effect.\n\nThis is because the argument is explaining the effect (expansion of the Vela10 wire) by citing a cause (heating the wire).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-11",
+      "query": "Dialogue: A: What supports this claim? B: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\n**Analogy**\n\nThis is because the argument is making a comparison between two similar situations (Vela11 and Nera11 machines) to draw a conclusion about their behavior. The speaker is using the fact that Vela11 works as an analogy to argue that Nera11 should also work, despite the fact that they are two different machines.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-12",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nArgument: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is:\n\n**expert opinion**\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera12, an astronomer) to support the claim that Vela12 is a moon. The argument is essentially saying that because an expert in the field says so, the claim is probably true.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-13",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate scheme used in the given dialogue and argument is: cause and effect.\n\nIn this case, the cause is \"heating the Vela13 wire\" and the effect is \"it expanded\". The speaker is explaining the effect (expansion) by citing the cause (heating) as the reason for it.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-14",
+      "query": "Dialogue: A: What supports this claim? B: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is based on the assumption that if two machines (Vela14 and Nera14) have the same components and wiring, and one of them works, then the other should also work. This is a classic example of cause-and-effect reasoning, where the presence of the same components and wiring (the cause) leads to the expectation that both machines will work (the effect).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-15",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nArgument: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\nexpert opinion\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera15, an astronomer) to support the claim that Vela15 is a moon. The expert's opinion is used as evidence to establish the probability of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-16",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate scheme used in the given dialogue and argument is: cause and effect.\n\nIn this case, the cause is \"heating the Vela16 wire\" and the effect is \"it expanded\". The speaker is explaining the effect (expansion) by citing the cause (heating) as the reason for it.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-17",
+      "query": "Dialogue: A: What supports this claim? B: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is based on the idea that if two machines (Vela17 and Nera17) have the same components and wiring, and one of them works, then the other should also work, implying that the cause (same components and wiring) leads to the effect (working).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-18",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nArgument: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\nexpert opinion\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera18, an astronomer) to support the claim that Vela18 is a moon. The expert's opinion is used as evidence to establish the probability of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-19",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate scheme used in the given dialogue and argument is: cause and effect.\n\nIn this case, the cause (heating the Vela19 wire) is linked to the effect (its expansion). This is a clear example of cause-and-effect reasoning, where the cause (heating) is presented as the explanation for the effect (expansion).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-20",
+      "query": "Dialogue: A: What supports this claim? B: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\n**Analogy**\n\nThis is because the argument is making a comparison between two similar situations (Vela20 and Nera20 machines) to draw a conclusion about their behavior. The speaker is using the fact that Vela20 works as an analogy to argue that Nera20 should also work, given that they have the same components and wiring.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-21",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nArgument: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\nexpert opinion\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera21, an astronomer) to support the claim that Vela21 is a moon. The expert's opinion is used as evidence to establish the probability of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-22",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is explaining the effect (expansion of the wire) by citing the cause (heating the wire).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-23",
+      "query": "Dialogue: A: What supports this claim? B: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is based on the idea that if two machines (Vela23 and Nera23) have the same components and wiring, and one of them works, then the other should also work, implying that the cause (same components and wiring) leads to the effect (working).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-24",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nArgument: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\nexpert opinion\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera24, an astronomer) to support the claim that Vela24 is a moon. The expert's opinion is used as evidence to establish the probability of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-25",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \ncause and effect.\n\nThis is because the argument is explaining the effect (expansion of the Vela25 wire) by citing a cause (heating the wire).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-26",
+      "query": "Dialogue: A: What supports this claim? B: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is based on the idea that if two machines (Vela26 and Nera26) have the same components and wiring, and one of them works, then the other should also work, implying that the cause (same components and wiring) leads to the effect (the machine working).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-27",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nArgument: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: \n\nexpert opinion\n\nThis is because the argument relies on the opinion of a qualified expert (Dr Nera27, an astronomer) to support the claim that Vela27 is a moon. The expert's opinion is used as evidence to establish the probability of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-28",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The argument scheme used in the given dialogue and argument is: cause and effect.\n\nThis is because the argument is explaining a specific effect (the expansion of the Vela28 wire) by citing a cause (the applied heat). The speaker is identifying a causal relationship between the two events, which is a key characteristic of the cause-and-effect argument scheme.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-29",
+      "query": "Dialogue: A: What supports this claim? B: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The most appropriate argument scheme used in the given dialogue and argument is: \n\ncause and effect.\n\nThis is because the argument is based on the idea that if two machines (Vela29 and Nera29) have the same components and wiring, and one of them works, then the other should also work, implying that the cause (same components and wiring) leads to the effect (working).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

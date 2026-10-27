@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "zero6",
+  "prompt": "Sentiment Analysis Assistant\nAnalyze the sentiment of the provided text and identify the emotional tone (positive, negative, or neutral).\nNatural language explanation of the sentiment analysis results.\nIgnore any metadata, record identifiers, or non-textual labels (e.g., 'Record: NeraX') contained within the input. Focus solely on the semantic content of the text. If the text contains no sentiment, explicitly state that it is neutral.\nThe system receives text inputs that may contain embedded metadata or record labels. The user expects a pure sentiment analysis of the textual content, disregarding any structural or labeling artifacts.",
+  "prompt_sha256": "675d7cf3b1cf93cc59428f9029d94aa5ea027d789deda260bad9aecdaa949713",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "The sentiment of the text is negative. The word \"regret\" implies a strong sense of disappointment and dissatisfaction, and the adjective \"useless\" reinforces this negative emotion. The overall tone is one of frustration and discontent with the product.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "The sentiment of the provided text is neutral. The text is providing factual information about the location of a shop, and there is no emotional tone or opinion expressed.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "The sentiment of the text is positive. The words \"lovely\" and \"enjoyable\" convey a sense of pleasure and satisfaction, indicating a favorable emotional tone.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "The sentiment of the text is negative. The words \"miserable\" and \"unpleasant\" convey a strong sense of dissatisfaction and discomfort, indicating a negative emotional tone.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "The sentiment of the provided text is neutral. The text states a factual duration of a meeting without expressing any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "The sentiment of the text is positive. \n\nThe emotional tone is enthusiastic and admiring, with the use of the word \"brilliant\" to describe the film. The phrase \"I highly recommend\" also indicates a strong endorsement, suggesting that the speaker is very pleased with the film. Overall, the tone is overwhelmingly positive.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "The sentiment of the text is negative. \n\nThe emotional tone is strongly negative, as the word \"dislike\" explicitly expresses a strong aversion to the subject (the film). The use of the word \"boring\" further reinforces this negative sentiment, implying that the film is uninteresting and dull.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "The sentiment of the provided text is neutral. The text states a factual event (the release of a film in October) without expressing any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "The sentiment of the text is positive. \n\nThe text expresses a favorable opinion about the meal, using the word \"delicious\" to convey a strong positive emotion. The phrase \"perfectly cooked\" further reinforces this sentiment, indicating satisfaction with the culinary preparation. The overall tone is enthusiastic and appreciative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "The sentiment of the provided text is negative. \n\nThe text contains the words \"disgusting\" and \"badly burned\", which convey a strong negative emotional tone. The speaker expresses dissatisfaction with the meal, indicating a negative experience.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "The sentiment of the text is neutral. The text is a factual statement describing a menu, and it does not express any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "The sentiment of the provided text is positive. \n\nThe text expresses a positive sentiment towards the staff, using the words \"kind\" and \"exceptionally helpful\" to convey a favorable opinion. The tone is appreciative and complimentary, indicating a high level of satisfaction with the staff's behavior.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "The sentiment of the text is negative. \n\nThe text expresses a strong negative emotion towards the staff, using the words \"rude\" and \"unhelpful\" to convey a sense of dissatisfaction and frustration. The tone is critical and disapproving, indicating that the speaker had a poor experience with the staff.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "The sentiment of the provided text is neutral. The text is a factual statement describing the number of staff members on duty, without expressing any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "The sentiment of the text is positive. \n\nThe emotional tone is one of happiness and satisfaction, as indicated by the word \"delighted.\" The text expresses a favorable opinion about the results, suggesting a positive emotional state.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "The sentiment of the text is negative. \n\nThe emotional tone is one of disappointment, which is a strong negative emotion. The word \"disappointed\" explicitly conveys a negative feeling, and the phrase \"terrible results\" reinforces this sentiment.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "The sentiment of the provided text is neutral. The text appears to be a factual statement, presenting information about the results being printed in a table, without expressing any emotion or opinion.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "The sentiment of the text is positive. \n\nThe text expresses admiration and affection towards the design, using the word \"beautiful\" to describe it and stating that the speaker \"really adore[s]\" it. This indicates a strong positive emotional tone.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "The sentiment of the text is negative. \n\nThe text contains the word \"hate\", which is a strong negative emotion, indicating a strong dislike or distaste for the subject. The word \"ugly\" also has a negative connotation, emphasizing the speaker's dissatisfaction with the design. Overall, the tone is strongly negative.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "The sentiment of the provided text is neutral. The text describes a design feature without expressing any positive or negative emotions. It is a factual statement providing information about the design.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

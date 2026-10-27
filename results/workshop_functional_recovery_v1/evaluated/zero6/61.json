@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-293",
+  "task": "sentiment_suite",
+  "method": "zero6",
+  "prompt": "Product Review Assistant\nInterpret user inputs consisting of a product identifier, a review text, and a record code. If the product is not recognized, request context or provide a structured template for the review.\nConversational response that either asks for clarification or provides a structured markdown template for a product review including Product Name, Rating, Review text, and Record.\nDo not hallucinate information about unknown products. If the product code (e.g., 'SST2') is not in the knowledge base, explicitly state lack of information. Maintain a helpful and polite tone. Use the provided 'Record' field in the output if generating a template.\nThe user provides structured input with keys 'User input' (product ID), 'Review' (sentiment/description), and 'Record' (reference code). The model is expected to handle cases where the product ID is unrecognized by asking for details or offering a generic review structure.\nNone",
+  "prompt_sha256": "8a5f7b11d76a50051633341db361844d3cd8189d89856285590e7b57d6cf2978",
+  "benchmark_sha256": "4b18424f5b873870f9919162f41866322a4075702ebfb667cf05448cb189c710",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "61-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "It seems like you're referring to the SST2 dataset, which is a benchmark for natural language inference tasks. However, I'm assuming you're asking for a review of a product, not a dataset.\n\nTo provide a more accurate response, could you please clarify which product you're referring to? If you're looking for a review template, I can provide a generic one for you.\n\nHere's a structured markdown template for a product review:\n\n**Product Name:** [Insert product name here]\n**Rating:** [Insert rating (e.g., 5/5)]\n**Review:** [Insert your review text here]\n**Record:** [Insert reference code here, e.g., Nera10]\n\nPlease provide more context or clarify which product you'd like to review.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about what 'SST2' refers to?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "I don't have information about the product with the code 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "It seems like you're referring to the SST2 dataset, which is a benchmark for natural language inference tasks. However, I don't have specific information about the product or service associated with the code 'SST2'. Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to write a review, I can provide a structured template for you:\n\n**Product Name:** [Insert product name]\n**Rating:** [Insert rating (e.g., 5/5)]\n**Review:** [Insert your review text here, e.g., \"The staff were kind and exceptionally helpful.\"]\n**Record:** [Insert reference code, e.g., 'Nera14']\n\nPlease let me know how I can assist you further.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "I don't have enough information about the product SST2 in my knowledge base. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "It seems like you're referring to the SST2 dataset, which is a benchmark for natural language inference tasks. However, I don't have specific information about the product or service associated with the code 'SST2'. Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to write a review, I can provide a structured template for you:\n\n**Product Name:** [Insert product name]\n**Rating:** [Insert rating (e.g., 5/5)]\n**Review:** [Insert your review text here, e.g., \"I feel delighted by the impressive results.\"]\n**Record:** [Insert reference code, e.g., 'Nera16']\n\nPlease let me know how I can assist you further.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "I'm happy to help you with your review. However, I need a bit more information about the product you're referring to. Could you please provide more context or details about the product with the code 'SST2'?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "I don't have information about the product with the code 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "It seems like you're referring to the SST2 dataset, which is a benchmark for natural language inference tasks. However, I don't have specific information about the product or service associated with the code 'SST2'. Could you please provide more context or clarify what you're referring to?\n\nIf you'd like to write a review, I can provide a structured template for you:\n\n**Product Name:** [Insert product name]\n**Rating:** [Insert rating (e.g., 5/5)]\n**Review:** [Insert your review text here, e.g., \"The service was excellent and made me very happy.\"]\n**Record:** [Insert reference code, e.g., 'Nera22']\n\nPlease let me know how I can assist you further!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "I don't have enough information about the product SST2 in my knowledge base. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "I'm glad to hear that you had a great experience with the product. However, I need a bit more information to provide a structured review. Could you please provide the product name, so I can give you a more accurate template?\n\nIf you'd like, I can provide a generic template for you to fill in. Here's a basic structure:\n\n**Product Name:** [Insert product name here]\n**Rating:** [Insert your rating (e.g., 5/5)]\n**Review:** [Insert your review text here]\n**Record:** [Insert Record code here, e.g., Nera24]\n\nLet me know how you'd like to proceed!",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "I'm glad to hear you're satisfied with your purchase. However, I don't have specific information about the product with the code 'SST2' in my knowledge base. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "I'm happy to help you with your review. However, I need a bit more information about the product you're referring to. Could you please provide more context or clarify which product you're talking about?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "I don't have enough information about the product with the identifier 'SST2'. Could you please provide more context or details about this product so I can better understand your review?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

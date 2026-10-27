@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-283",
+  "task": "search_qa",
+  "method": "metadata_only",
+  "prompt": "Given the question and the context snippets from Google search, first determine whether the answer is in the context and answer the question with available information. If the question is unanswerable or information is missing, state that the question is unanswerable or information is missing.\nGiven the question and the context snippets from Google search, first determine whether the answer is in the context and answer the question with available information. If the question is unanswerable or information is missing, state that the question is unanswerable or information is missing.\nGiven the question and the context snippets from Google search, first determine whether the answer is in the context and answer the question with available information.",
+  "prompt_sha256": "a88eccb2ea22b9355ae1cc6fdf692c70738ea76ac8034bbbb8ef7e0b459b921b",
+  "benchmark_sha256": "1f1eda79cf61254442bc279d80ab3fa173acf116b82b66d7753ee320e83ad0d4",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "79-10",
+      "query": "Google search snippet: The fictional town Vela10 was founded by Nera10. Its library has 47 rooms.\nQuestion: Who founded Vela10?",
+      "output": "The answer is in the context. The founder of Vela10 is Nera10.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-11",
+      "query": "Google search snippet: The fictional town Vela11 was founded by Nera11. Its library has 50 rooms.\nQuestion: Who designed the station in Vela11?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about a station in Vela11. It only talks about the town and its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-12",
+      "query": "Google search snippet: The fictional town Vela12 was founded by Nera12. Its library has 53 rooms.\nQuestion: Who founded Vela12?",
+      "output": "The answer is in the context. The founder of Vela12 is Nera12.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-13",
+      "query": "Google search snippet: The fictional town Vela13 was founded by Nera13. Its library has 56 rooms.\nQuestion: Who designed the station in Vela13?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela13. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-14",
+      "query": "Google search snippet: The fictional town Vela14 was founded by Nera14. Its library has 59 rooms.\nQuestion: Who founded Vela14?",
+      "output": "The answer is in the context. Nera14 founded Vela14.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-15",
+      "query": "Google search snippet: The fictional town Vela15 was founded by Nera15. Its library has 62 rooms.\nQuestion: Who designed the station in Vela15?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela15. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-16",
+      "query": "Google search snippet: The fictional town Vela16 was founded by Nera16. Its library has 65 rooms.\nQuestion: Who founded Vela16?",
+      "output": "The answer is in the context. Nera16 founded Vela16.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-17",
+      "query": "Google search snippet: The fictional town Vela17 was founded by Nera17. Its library has 68 rooms.\nQuestion: Who designed the station in Vela17?",
+      "output": "The question is unanswerable. The context snippet does not mention anything about the design of the station in Vela17. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-18",
+      "query": "Google search snippet: The fictional town Vela18 was founded by Nera18. Its library has 71 rooms.\nQuestion: Who founded Vela18?",
+      "output": "The answer is in the context. The founder of Vela18 is Nera18.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-19",
+      "query": "Google search snippet: The fictional town Vela19 was founded by Nera19. Its library has 74 rooms.\nQuestion: Who designed the station in Vela19?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela19. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-20",
+      "query": "Google search snippet: The fictional town Vela20 was founded by Nera20. Its library has 77 rooms.\nQuestion: Who founded Vela20?",
+      "output": "The answer is in the context. The founder of Vela20 is Nera20.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-21",
+      "query": "Google search snippet: The fictional town Vela21 was founded by Nera21. Its library has 80 rooms.\nQuestion: Who designed the station in Vela21?",
+      "output": "The question is unanswerable. The provided context snippet does not mention anything about the design of the station in Vela21. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-22",
+      "query": "Google search snippet: The fictional town Vela22 was founded by Nera22. Its library has 83 rooms.\nQuestion: Who founded Vela22?",
+      "output": "The answer is in the context. The founder of Vela22 is Nera22.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-23",
+      "query": "Google search snippet: The fictional town Vela23 was founded by Nera23. Its library has 86 rooms.\nQuestion: Who designed the station in Vela23?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela23. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-24",
+      "query": "Google search snippet: The fictional town Vela24 was founded by Nera24. Its library has 89 rooms.\nQuestion: Who founded Vela24?",
+      "output": "The answer is in the context. Nera24 founded Vela24.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-25",
+      "query": "Google search snippet: The fictional town Vela25 was founded by Nera25. Its library has 92 rooms.\nQuestion: Who designed the station in Vela25?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela25. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-26",
+      "query": "Google search snippet: The fictional town Vela26 was founded by Nera26. Its library has 95 rooms.\nQuestion: Who founded Vela26?",
+      "output": "The answer is in the context. The founder of Vela26 is Nera26.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-27",
+      "query": "Google search snippet: The fictional town Vela27 was founded by Nera27. Its library has 98 rooms.\nQuestion: Who designed the station in Vela27?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela27. It only mentions the founding of the town and the number of rooms in its library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "79-28",
+      "query": "Google search snippet: The fictional town Vela28 was founded by Nera28. Its library has 101 rooms.\nQuestion: Who founded Vela28?",
+      "output": "The answer is in the context. Nera28 founded Vela28.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "79-29",
+      "query": "Google search snippet: The fictional town Vela29 was founded by Nera29. Its library has 104 rooms.\nQuestion: Who designed the station in Vela29?",
+      "output": "The question is unanswerable because the context snippet does not mention anything about the design of the station in Vela29. It only mentions the town's founder, Nera29, and the number of rooms in the library.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

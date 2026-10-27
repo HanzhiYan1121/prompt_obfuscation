@@ -1,0 +1,211 @@
+{
+  "id": "AllPrev-094 (csc_prompt_3)",
+  "task": "spelling",
+  "method": "no_evidence",
+  "prompt": "You are an expert Python programmer tasked with correcting code errors.\nYou are an expert Python programmer tasked with correcting code errors. You will be given a piece of Python code that contains one or more mistakes. Your goal is to identify and fix the errors to make the code fully functional and aligned with the intended logic. • Only provide the corrected code in your response.\n• Only provide the corrected code in your response. • Do not include explanations, comments, or additional text.\nYou must adhere to the following strict requirements: • Only provide the corrected code in your response.\nYou are an expert Python programmer tasked with correcting code errors. You will be given a piece of Python code that contains one or more mistakes. Your goal is to identify and fix the errors to make the code fully functional and aligned with the intended logic. You must adhere to the following strict requirements: • Only provide the corrected code in your response. • Do not include explanations, comments, or additional text. • Ensure the corrected code is fully functional and logically equivalent to the intended solution.",
+  "prompt_sha256": "86f7c5dba075c57afc88bde38858dcaddd184d9e29d6563bbacca2f5e0b81e3e",
+  "benchmark_sha256": "13d56bef135611afc946eaa9fa0523c54f63e4d7cee724ebd7cbf5186dd86e0b",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "43-10",
+      "query": "Input: 昨天，我们明天准时出法。",
+      "output": "昨天，我们明天准时出发。",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "43-11",
+      "query": "Input: 昨天，请保持教室安近。",
+      "output": "def translate_to_english():\n    chinese_text = \"昨天，请保持教室安近\"\n    english_text = chinese_text.encode('utf-8').decode('utf-8')\n    return english_text\n\nprint(translate_to_english())assistant\n\ndef translate_to_english():\n    chinese_text = \"昨天，请保持教室安静\"\n    english_text = chinese_text.encode('utf-8').decode('utf-8')\n    return english_text\n\nprint(translate_to_english())assistant\n\nI corrected the Chinese text to \"安静\" instead of \"安近\" to make the translation more accurate.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-12",
+      "query": "Input: 昨天，他终于完成了任物。",
+      "output": "昨天，他终于完成了这件工作。",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-13",
+      "query": "Input: 昨天，这个问题需要仔细考滤。",
+      "output": "# Define a function to check if a number is a palindrome\ndef is_palindrome(n):\n    return str(n) == str(n)[::-1]\n\n# Define a function to check if a number is a power of two\ndef is_power_of_two(n):\n    if n <= 0:\n        return False\n    return (n & (n - 1)) == 0\n\n# Define a function to check if a number is a power of two and a palindrome\ndef is_power_and_palindrome(n):\n    return is_power_of_two(n) and is_palindrome(n)\n\n# Test the function\nprint(is_power_and_palindrome(16))  # True\nprint(is_power_and_palindrome(19))  # False\nprint(is_power_and_palindrome(8))   # True\nprint(is_power_and_palindrome(9))   # False",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-14",
+      "query": "Input: 昨天，她对音乐很感兴取。",
+      "output": "def translate_to_english():\n    chinese_text = \"昨天，她对音乐很感兴趣。\"\n    english_text = chinese_text.encode('utf-8').decode('utf-8')\n    return english_text\n\nprint(translate_to_english())",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-15",
+      "query": "Input: 今天，天气很好，我们一起去公圆散步。",
+      "output": "# Define a function to check the weather\ndef check_weather():\n    # Assume the weather is good\n    weather = \"good\"\n    return weather\n\n# Define a function to go for a walk\ndef go_for_walk(weather):\n    if weather == \"good\":\n        return \"今天，天气很好，我们一起去公园散步。\"\n    else:\n        return \"今天，天气不好，我们不去公园散步。\"\n\n# Check the weather and go for a walk\nweather = check_weather()\nprint(go_for_walk(weather))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-16",
+      "query": "Input: 今天，他每天坚迟锻炼身体。",
+      "output": "def translate_to_english(text):\n    translation = {\n        \"今天\": \"today\",\n        \"他\": \"he\",\n        \"每天\": \"every day\",\n        \"坚\": \"strong\",\n        \"迟\": \"late\",\n        \"锻炼\": \"exercise\",\n        \"身体\": \"body\"\n    }\n    return ' '.join(translation.get(word, word) for word in text.split())\n\nprint(translate_to_english(\"今天，他每天坚迟锻炼身体。\"))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-17",
+      "query": "Input: 今天，请把答按写在纸上。",
+      "output": "# Define a function to write on paper\ndef write_on_paper():\n    # Define a string to store the text to be written\n    text = \"今天，请把答按写在纸上。\"\n    \n    # Open a file in write mode\n    with open(\"paper.txt\", \"w\") as file:\n        # Write the text to the file\n        file.write(text)\n\n# Call the function to write on paper\nwrite_on_paper()",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-18",
+      "query": "Input: 今天，我们要保户环境。",
+      "output": "# 今天，我们要保护环境。\n\ndef protect_environment():\n    # 生成一个列表，包含一些污染物\n    pollutants = [\"污染物1\", \"污染物2\", \"污染物3\"]\n    \n    # 使用列表推导式过滤出污染物\n    clean_pollutants = [pollutant for pollutant in pollutants if pollutant != \"污染物2\"]\n    \n    # 打印清洁的污染物列表\n    print(clean_pollutants)\n\nprotect_environment()",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-19",
+      "query": "Input: 今天，这件事情非常重药。",
+      "output": "# -*- coding: utf-8 -*-\n\ndef translate_to_english(text):\n    # Define a dictionary for translation\n    translation_dict = {\n        \"今天\": \"today\",\n        \"这件\": \"this\",\n        \"事情\": \"thing\",\n        \"非常\": \"very\",\n        \"重\": \"heavy\",\n        \"药\": \"medicine\"\n    }\n\n    # Split the input text into words\n    words = text.split(\" \")\n\n    # Initialize an empty list to store the translated words\n    translated_words = []\n\n    # Iterate over each word in the input text\n    for word in words:\n        # Check if the word is in the translation dictionary\n        if word in translation_dict:\n            # If the word is in the dictionary, append its translation to the translated_words list\n            translated_words.append(translation_dict[word])\n        else:\n            # If the word is not in the dictionary, append the original word to the translated_words list\n            translated_words.append(word)\n\n    # Join the translated words back into a string\n    translated_text = \" \".join(translated_words)\n\n    return translated_text\n\nprint(translate_to_english(\"今天，这件事情非常重药\"))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-20",
+      "query": "Input: 今天，她正在认真学西汉语。",
+      "output": "# Define a function to convert Chinese characters to their corresponding Pinyin\ndef convert_to_pinyin(chinese_character):\n    # Use the pypinyin library to convert Chinese characters to Pinyin\n    import pypinyin\n    return pypinyin.pinyin(chinese_character, style=pypinyin.TONE2)\n\n# Define a function to convert a sentence to Pinyin\ndef convert_sentence_to_pinyin(sentence):\n    # Split the sentence into individual characters\n    characters = list(sentence)\n    # Initialize an empty list to store the Pinyin\n    pinyin_list = []\n    # Iterate over each character in the sentence\n    for character in characters:\n        # Convert the character to Pinyin and add it to the list\n        pinyin_list.append(''.join(convert_to_pinyin(character)))\n    # Join the Pinyin list into a string and return it\n    return ' '.join(pinyin_list)\n\n# Test the function with the input sentence\nsentence = \"今天，她正在认真学西汉语。\"\nprint(convert_sentence_to_pinyin(sentence))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-21",
+      "query": "Input: 今天，老师给了我很大的鼓历。",
+      "output": "def calculate_grades(grades):\n    total = 0\n    for grade in grades:\n        total += grade\n    average = total / len(grades)\n    return average\n\ngrades = [90, 85, 92, 88]\nprint(\"平均成绩是：\", calculate_grades(grades))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-22",
+      "query": "Input: 今天，请大家遵守交通归则。",
+      "output": "今天，请大家遵守交通规则。",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "43-23",
+      "query": "Input: 今天，他的工作态渡很认真。",
+      "output": "今天，他的工作态度很认真。",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "43-24",
+      "query": "Input: 今天，这本书的内荣很丰富。",
+      "output": "# -*- coding: utf-8 -*-\n\ndef translate_chinese_to_english():\n    chinese = \"今天，这本书的内荣很丰富。\"\n    english = chinese.encode('utf-8').decode('utf-8')\n    return english\n\nprint(translate_chinese_to_english())",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-25",
+      "query": "Input: 今天，我们明天准时出法。",
+      "output": "今天，我们明天准时出发。",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "43-26",
+      "query": "Input: 今天，请保持教室安近。",
+      "output": "# -*- coding: utf-8 -*-\n\ndef translate_to_english(text):\n    translation = {\n        \"今天\": \"today\",\n        \"请\": \"please\",\n        \"保持\": \"keep\",\n        \"教室\": \"classroom\",\n        \"安\": \"quiet\",\n        \"近\": \"near\"\n    }\n    return ' '.join(translation.get(word, word) for word in text.split())\n\nprint(translate_to_english(\"今天，请保持教室安近。\"))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-27",
+      "query": "Input: 今天，他终于完成了任物。",
+      "output": "def translate_to_english(text):\n    translation = {\n        \"今天\": \"today\",\n        \"他\": \"he\",\n        \"终于\": \"finally\",\n        \"完成了\": \"completed\",\n        \"任\": \"any\",\n        \"物\": \"thing\"\n    }\n    return ' '.join(translation.get(word, word) for word in text.split())\n\nprint(translate_to_english(\"今天，他终于完成了任物\"))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-28",
+      "query": "Input: 今天，这个问题需要仔细考滤。",
+      "output": "# -*- coding: utf-8 -*-\n\ndef filter_problem():\n    # Define a list of words\n    words = [\"今天\", \"这个\", \"问题\", \"需要\", \"仔细\", \"考滤\"]\n    \n    # Define a function to filter words\n    def filter_words(word):\n        return word.startswith(\"考\")\n    \n    # Filter the list of words\n    filtered_words = [word for word in words if filter_words(word)]\n    \n    return filtered_words\n\nprint(filter_problem())",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "43-29",
+      "query": "Input: 今天，她对音乐很感兴取。",
+      "output": "def translate_to_english(text):\n    translation = {\n        \"今天\": \"today\",\n        \"她\": \"she\",\n        \"对\": \"to\",\n        \"音乐\": \"music\",\n        \"很\": \"very\",\n        \"感\": \"feel\",\n        \"兴\": \"interested\"\n    }\n    return ' '.join(translation.get(word, word) for word in text.split())\n\nprint(translate_to_english(\"今天，她对音乐很感兴趣\"))",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

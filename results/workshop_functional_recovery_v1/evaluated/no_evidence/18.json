@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-046",
+  "task": "opinion",
+  "method": "no_evidence",
+  "prompt": "{\"constraints\": \"The response must be in JSON format with the following structure **without any other contents**:\", \"context\": \"You are an AI visual analyzer specialized in interpreting images and providing structured JSON output. **Analyze the image content** and generate a JSON object containing the specified keys. **Identify the image type**: Determine whether the image is a natural scene, human portrait, or other category. **Analyze the image content**: Describe the main elements and actions in the image. **Assess the image style**: Identify the artistic or photographic style of the image. **Determine the image resolution**: Estimate the resolution quality of the image. **Analyze the image color**: Describe the dominant colors and color palette of the image. **Analyze the image composition**: Describe how the elements are arranged within the image. **Evaluate the image lighting**: Describe the lighting conditions and effects in the image. **Describe the image background**: Detail the background elements and setting of the image. **Describe the image foreground**: Detail the foreground elements and subjects of the image. **Describe the image perspective**: Identify the viewpoint or angle from which the image is captured. **Describe the image mood**: Interpret the emotional tone or atmosphere conveyed by the image. **Describe the image texture**: Identify the textures present in the image, such as smooth, rough, or patterned surfaces. **Describe the image shape**: Identify the predominant shapes in the image, such as geometric or organic forms. **Describe the image pattern**: Identify any patterns present in the image, such as repetitive designs or natural formations. **Describe the image depth**: Assess the sense of depth or three-dimensionality in the image. **Describe the image symmetry**: Evaluate the symmetry or balance of elements within the image. **Describe the image contrast**: Assess the contrast between light and dark areas in the image. **Describe the image saturation**: Evaluate the intensity and vividness of colors in the image. **Describe the image noise**: Identify any graininess or digital noise present in the image. **Describe the image blur**: Assess any blurriness or lack of sharpness in the image. **Describe the image exposure**: Evaluate the overall brightness or darkness of the image. **Describe the image sharpness**: Assess the clarity and detail of the image. **Describe the image grain**: Identify any film-like grain or texture in the image. **Describe the image artifacts**: Identify any digital artifacts or distortions in the image. **Describe the image distortion**: Assess any warping or alteration of the image content. **",
+  "prompt_sha256": "2adf3c5d2bb253c7f9486110844202307e04087bc5663b0008aee6b9c4ecd38f",
+  "benchmark_sha256": "97915621a704fc5fc4ba5decc3d4f23c1a89c48305ed917568b14db85c3918de",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "18-10",
+      "query": "Survey question: Should Vela10 build the new library?\nPost: I oppose building the new library in Vela10.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person's face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough hands\", \"image_shape\": \"geometric shapes in the background, organic forms in the subject\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with a clear",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-11",
+      "query": "Survey question: Should Vela11 build the new library?\nPost: I ate rice for lunch in Vela11.",
+      "output": "{\n  \"image_type\": \"other category\",\n  \"image_content\": \"a meal or food\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low to medium\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and earthy\",\n  \"image_composition\": \"a simple composition with a central subject (the meal) and a minimal background\",\n  \"image_lighting\": \"natural lighting, possibly with some indoor lighting\",\n  \"image_background\": \"a plain or minimal background, possibly a table or a plate\",\n  \"image_foreground\": \"a meal or food, specifically rice, as the central subject\",\n  \"image_perspective\": \"a frontal or slightly overhead perspective\",\n  \"image_mood\": \"neutral or casual\",\n  \"image_texture\": \"smooth and flat surfaces, possibly with some texture from the food\",\n  \"image_shape\": \"geometric shapes, such as the plate and the food\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"a moderate sense of depth, with the food and background distinguishable\",\n  \"image_symmetry\": \"no symmetry\",\n  \"image_contrast\": \"medium to high contrast, with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-12",
+      "query": "Survey question: Should Vela12 build the new library?\nPost: I support building the new library in Vela12.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person, with a clear focus on their face and hands\", \"image_perspective\": \"frontal view, with a slight tilt of the head\", \"image_mood\": \"positive and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the person's clothing\", \"image_pattern\": \"none\", \"image_depth\": \"moderate depth, with the person and background clearly distinguishable\", \"image_symmetry\": \"asymmetrical, with the person's face and body positioned off-center\", \"image_contrast\": \"high contrast between the person and background\", \"image_saturation\":",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-13",
+      "query": "Survey question: Should Vela13 build the new library?\nPost: I oppose building the new library in Vela13.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a blurred background, possibly a cityscape\", \"image_foreground\": \"a person with a clear face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-14",
+      "query": "Survey question: Should Vela14 build the new library?\nPost: I ate rice for lunch in Vela14.",
+      "output": "{\n  \"image_type\": \"other category\",\n  \"image_content\": \"a meal or food\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low to medium\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and earthy\",\n  \"image_composition\": \"a single subject (food) centered in the frame\",\n  \"image_lighting\": \"natural light, possibly with some indoor lighting\",\n  \"image_background\": \"a plain or blurred background, possibly a table or surface\",\n  \"image_foreground\": \"a plate of rice, possibly with other food items\",\n  \"image_perspective\": \"a frontal or slightly overhead viewpoint\",\n  \"image_mood\": \"neutral, possibly with a hint of appetite or satisfaction\",\n  \"image_texture\": \"smooth, possibly with some grain or texture from the food\",\n  \"image_shape\": \"geometric shapes (plate, bowl) and organic shapes (food)\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"some sense of depth, possibly from the food being on a plate\",\n  \"image_symmetry\": \"none\",\n  \"image_contrast\": \"medium to high, with the food",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-15",
+      "query": "Survey question: Should Vela15 build the new library?\nPost: I support building the new library in Vela15.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person, with a clear focus on their face and hands\", \"image_perspective\": \"frontal view, with a slight tilt of the head\", \"image_mood\": \"confident and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the person's clothing\", \"image_pattern\": \"none\", \"image_depth\": \"moderate depth, with the person and background clearly distinguishable\", \"image_symmetry\": \"asymmetrical, with the person's face and body positioned off-center\", \"image_contrast\": \"high contrast between the person and background\", \"image_saturation",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-16",
+      "query": "Survey question: Should Vela16 build the new library?\nPost: I oppose building the new library in Vela16.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person's face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough hands\", \"image_shape\": \"geometric shapes in the background, organic forms in the subject\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with a clear",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-17",
+      "query": "Survey question: Should Vela17 build the new library?\nPost: I ate rice for lunch in Vela17.",
+      "output": "{\n  \"image_type\": \"other category\",\n  \"image_content\": \"a meal or food\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low to medium\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and earthy\",\n  \"image_composition\": \"a simple composition with a central subject (the meal) and a minimal background\",\n  \"image_lighting\": \"natural lighting, possibly with some indoor lighting\",\n  \"image_background\": \"a plain or minimal background, possibly a table or a plate\",\n  \"image_foreground\": \"a bowl of rice as the main subject\",\n  \"image_perspective\": \"a frontal or slightly overhead perspective\",\n  \"image_mood\": \"neutral or casual\",\n  \"image_texture\": \"smooth and flat surfaces\",\n  \"image_shape\": \"geometric shapes, such as the bowl and the plate\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"a moderate sense of depth, with the bowl and plate in the foreground and a minimal background\",\n  \"image_symmetry\": \"symmetrical composition, with the bowl and plate centered\",\n  \"image_contrast\": \"low to moderate contrast,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-18",
+      "query": "Survey question: Should Vela18 build the new library?\nPost: I support building the new library in Vela18.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person, with a clear focus on their face and hands\", \"image_perspective\": \"frontal view, with a slight tilt of the head\", \"image_mood\": \"confident and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the person's clothing\", \"image_pattern\": \"none\", \"image_depth\": \"moderate depth, with the person and background clearly distinguishable\", \"image_symmetry\": \"asymmetrical, with the person's face and body positioned off-center\", \"image_contrast\": \"high contrast between the person and background\", \"image_saturation",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-19",
+      "query": "Survey question: Should Vela19 build the new library?\nPost: I oppose building the new library in Vela19.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a blurred background, possibly a cityscape\", \"image_foreground\": \"a person with a clear face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-20",
+      "query": "Survey question: Should Vela20 build the new library?\nPost: I ate rice for lunch in Vela20.",
+      "output": "{\n  \"image_type\": \"other category\",\n  \"image_content\": \"a meal or food\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low to medium\",\n  \"image_color\": \"dominant color: brown, color palette: warm\",\n  \"image_composition\": \"a single subject, centered in the frame\",\n  \"image_lighting\": \"natural light, possibly indoor\",\n  \"image_background\": \"indoor setting, possibly a table or counter\",\n  \"image_foreground\": \"a plate of rice\",\n  \"image_perspective\": \"straight-on or frontal view\",\n  \"image_mood\": \"neutral\",\n  \"image_texture\": \"smooth, possibly a plate or surface\",\n  \"image_shape\": \"geometric, possibly a plate or bowl\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"shallow\",\n  \"image_symmetry\": \"symmetrical, possibly a centered plate\",\n  \"image_contrast\": \"medium\",\n  \"image_saturation\": \"medium\",\n  \"image_noise\": \"none\",\n  \"image_blur\": \"none\",\n  \"image_exposure\": \"well-exposed\",\n  \"image_sharpness\": \"sharp\",\n  \"image",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-21",
+      "query": "Survey question: Should Vela21 build the new library?\nPost: I support building the new library in Vela21.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person, with a clear focus on their face and hands\", \"image_perspective\": \"frontal view, with a slight tilt of the head\", \"image_mood\": \"confident and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the person's clothing\", \"image_pattern\": \"none\", \"image_depth\": \"moderate depth, with the person and background clearly distinguishable\", \"image_symmetry\": \"asymmetrical, with the person's face and body positioned off-center\", \"image_contrast\": \"high contrast between the person and background\", \"image_saturation",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-22",
+      "query": "Survey question: Should Vela22 build the new library?\nPost: I oppose building the new library in Vela22.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a blurred background, possibly a cityscape\", \"image_foreground\": \"a person with a clear face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-23",
+      "query": "Survey question: Should Vela23 build the new library?\nPost: I ate rice for lunch in Vela23.",
+      "output": "{\n  \"image_type\": \"human portrait\",\n  \"image_content\": \"a person eating rice\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and earthy\",\n  \"image_composition\": \"a single subject (the person eating) in a simple background\",\n  \"image_lighting\": \"natural lighting, possibly outdoors\",\n  \"image_background\": \"a plain or blurred background, possibly a table or a plate\",\n  \"image_foreground\": \"a person holding a bowl of rice\",\n  \"image_perspective\": \"a frontal or slightly angled view\",\n  \"image_mood\": \"neutral, possibly casual\",\n  \"image_texture\": \"smooth surfaces (food, table, etc.)\",\n  \"image_shape\": \"geometric shapes (bowl, plate, etc.) and organic forms (food)\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"shallow, with a clear distinction between the foreground and background\",\n  \"image_symmetry\": \"none\",\n  \"image_contrast\": \"medium, with a balance between light and dark areas\",\n  \"image_saturation\": \"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-24",
+      "query": "Survey question: Should Vela24 build the new library?\nPost: I support building the new library in Vela24.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a blurred background, possibly a crowd or a cityscape\", \"image_foreground\": \"the person's face and hands are prominent, with a clear focus on their expression\", \"image_perspective\": \"a frontal view, with a slight angle to emphasize the person's emotions\", \"image_mood\": \"positive and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the person's clothing\", \"image_shape\": \"geometric shapes in the background, with organic forms in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"a sense of depth is created by the blurred background\", \"image_symmetry\": \"asymmetrical composition, with the person's face and hands off-center\", \"image_contrast\": \"high contrast between the",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-25",
+      "query": "Survey question: Should Vela25 build the new library?\nPost: I oppose building the new library in Vela25.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: neutral\", \"image_composition\": \"subject-centered, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow\", \"image_background\": \"a blurred background, possibly a cityscape\", \"image_foreground\": \"a person with a clear face and hands\", \"image_perspective\": \"frontal, with a slight tilt\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin, rough clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"moderate, with a clear subject and background\", \"image_symmetry\": \"asymmetrical, with a centered subject\", \"image_contrast\": \"high, with a clear distinction between light and dark areas\", \"image_saturation\": \"medium, with a natural color palette\", \"image_noise\": \"none\", \"image_blur\": \"none\", \"image_exposure\": \"well-exposed, with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-26",
+      "query": "Survey question: Should Vela26 build the new library?\nPost: I ate rice for lunch in Vela26.",
+      "output": "{\n  \"image_type\": \"human portrait\",\n  \"image_content\": \"a person eating rice in a library setting\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"medium\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and muted\",\n  \"image_composition\": \"the person is centered in the frame, with the rice and a table in the foreground, and a bookshelf in the background\",\n  \"image_lighting\": \"soft, natural lighting\",\n  \"image_background\": \"a library setting with bookshelves and a table\",\n  \"image_foreground\": \"a person eating rice\",\n  \"image_perspective\": \"straight-on perspective\",\n  \"image_mood\": \"casual and relaxed\",\n  \"image_texture\": \"smooth surfaces of the table and bookshelves\",\n  \"image_shape\": \"geometric shapes of the table and bookshelves, and organic shapes of the person and food\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"moderate sense of depth\",\n  \"image_symmetry\": \"asymmetrical composition\",\n  \"image_contrast\": \"medium contrast between light and dark areas\",\n  \"image_sat",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-27",
+      "query": "Survey question: Should Vela27 build the new library?\nPost: I support building the new library in Vela27.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing support for a cause\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors: blue and white, color palette: bright and vibrant\", \"image_composition\": \"the person is centered in the frame, with a clear background\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background, possibly a studio setting\", \"image_foreground\": \"the person, with a clear focus on their face and hands\", \"image_perspective\": \"frontal view, with a slight tilt of the head\", \"image_mood\": \"positive and supportive\", \"image_texture\": \"smooth skin, with a slight texture on the clothing\", \"image_shape\": \"geometric shapes in the background, organic shapes in the person's clothing\", \"image_pattern\": \"none\", \"image_depth\": \"moderate depth, with the person and background clearly distinguishable\", \"image_symmetry\": \"asymmetrical, with the person's face and body positioned off-center\", \"image_contrast\": \"high contrast between the person and background\", \"image_saturation\":",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-28",
+      "query": "Survey question: Should Vela28 build the new library?\nPost: I oppose building the new library in Vela28.",
+      "output": "{\"image_type\": \"human portrait\", \"image_content\": \"a person expressing opposition to a project\", \"image_style\": \"photographic\", \"image_resolution\": \"high\", \"image_color\": \"dominant colors are blue and white, with a color palette that is calm and serious\", \"image_composition\": \"the person is centered in the frame, with a clear background that emphasizes their expression\", \"image_lighting\": \"natural light, with a slight shadow on the person's face\", \"image_background\": \"a plain background that does not distract from the person's expression\", \"image_foreground\": \"the person is the main subject of the image\", \"image_perspective\": \"the image is captured from a frontal angle, with a slight tilt upwards\", \"image_mood\": \"serious and determined\", \"image_texture\": \"smooth skin and a plain background\", \"image_shape\": \"geometric shapes in the background, and a human face in the foreground\", \"image_pattern\": \"none\", \"image_depth\": \"the image has a sense of depth due to the shadow on the person's face\", \"image_symmetry\": \"the image is symmetrical around the person's face\", \"image_contrast\": \"high contrast between the person's",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "18-29",
+      "query": "Survey question: Should Vela29 build the new library?\nPost: I ate rice for lunch in Vela29.",
+      "output": "{\n  \"image_type\": \"human portrait\",\n  \"image_content\": \"a person eating rice\",\n  \"image_style\": \"photographic\",\n  \"image_resolution\": \"low\",\n  \"image_color\": \"dominant colors: brown, beige, and white; color palette: natural and earthy\",\n  \"image_composition\": \"a single subject (the person eating) in a simple background\",\n  \"image_lighting\": \"natural lighting, possibly outdoors\",\n  \"image_background\": \"a plain or blurred background, possibly a table or a plate\",\n  \"image_foreground\": \"a person holding a bowl of rice\",\n  \"image_perspective\": \"a frontal or slightly angled view\",\n  \"image_mood\": \"neutral, possibly casual\",\n  \"image_texture\": \"smooth surfaces (food, table, etc.)\",\n  \"image_shape\": \"geometric shapes (bowl, plate, etc.) and organic forms (food)\",\n  \"image_pattern\": \"none\",\n  \"image_depth\": \"shallow, with a clear distinction between the foreground and background\",\n  \"image_symmetry\": \"none\",\n  \"image_contrast\": \"medium, with a balance between light and dark areas\",\n  \"image_saturation\": \"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

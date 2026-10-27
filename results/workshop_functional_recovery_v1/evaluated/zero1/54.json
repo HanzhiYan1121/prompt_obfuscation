@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-247",
+  "task": "summary_support",
+  "method": "zero1",
+  "prompt": "Transcript Processor\nParse user input containing a transcript and a summary request, then generate a structured JSON response mapping each sentence in the summary to a specific response object.\nJSON array of objects, where each object contains a 'sentence' key (string) and a 'response' key (object). The 'response' object structure varies by example but generally includes identifiers (msg_id) or types (type) and the text content.\nThe output must be valid JSON. The system appears to handle missing transcripts by returning a specific error message '[No transcript available]'. When a transcript is present, it maps the summary sentences to response objects. There is inconsistency in the internal structure of the 'response' object across examples (using 'msg', 'msg_id'/'response', or 'type'/'text'), suggesting a flexible or versioned schema.\nThe system processes inputs that include a 'Transcript' section and a 'Summary with N sentences' request. It extracts sentences from the summary and formats them into a structured JSON output. Examples show variations in how the response object is constructed, indicating potential A/B testing or version differences in the backend handler.\nInput parsing: Extract 'Transcript' and 'Summary' sections. If transcript is missing, return '[No transcript available]'. If present, iterate through summary sentences and create JSON objects. The 'response' object schema is inconsistent across examples, requiring dynamic adaptation or selection based on specific versioning rules not fully evident in the provided samples.",
+  "prompt_sha256": "c846a0697427b0c7d43ee007617f5e62a60edf628b69d6797087b2cf2ceaa812",
+  "benchmark_sha256": "bde7b307b1506ea30973c9cc7f00677a65ca7b7a9857748c573ebd71f43ec91a",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "54-10",
+      "query": "Transcript: Nera10 owns 47 books. Vela10 has 8 bridges.\nSummary with 2 sentences:\nNera10 owns 47 books.\nVela10 has 9 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-11",
+      "query": "Transcript: Nera11 owns 50 books. Vela11 has 9 bridges.\nSummary with 2 sentences:\nNera11 owns 50 books.\nVela11 has 10 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-12",
+      "query": "Transcript: Nera12 owns 53 books. Vela12 has 10 bridges.\nSummary with 2 sentences:\nNera12 owns 53 books.\nVela12 has 11 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-13",
+      "query": "Transcript: Nera13 owns 56 books. Vela13 has 11 bridges.\nSummary with 2 sentences:\nNera13 owns 56 books.\nVela13 has 12 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-14",
+      "query": "Transcript: Nera14 owns 59 books. Vela14 has 5 bridges.\nSummary with 2 sentences:\nNera14 owns 59 books.\nVela14 has 6 bridges.",
+      "output": "```json\n[\n  {\n    \"sentence\": \"Nera14 owns 59 books.\",\n    \"response\": {\n      \"msg_id\": \"nera14_books\",\n      \"text\": \"Nera14 owns 59 books.\"\n    }\n  },\n  {\n    \"sentence\": \"Vela14 has 6 bridges.\",\n    \"response\": {\n      \"msg_id\": \"vela14_bridges\",\n      \"text\": \"Vela14 has 6 bridges.\"\n    }\n  }\n]\n```\n\nNote: Since the input transcript and summary sentences are identical, the output response objects are also identical. In a real-world scenario, the response objects would likely contain more detailed information, such as identifiers, types, or other relevant data.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-15",
+      "query": "Transcript: Nera15 owns 62 books. Vela15 has 6 bridges.\nSummary with 2 sentences:\nNera15 owns 62 books.\nVela15 has 7 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-16",
+      "query": "Transcript: Nera16 owns 65 books. Vela16 has 7 bridges.\nSummary with 2 sentences:\nNera16 owns 65 books.\nVela16 has 8 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-17",
+      "query": "Transcript: Nera17 owns 68 books. Vela17 has 8 bridges.\nSummary with 2 sentences:\nNera17 owns 68 books.\nVela17 has 9 bridges.",
+      "output": "```json\n[\n  {\n    \"sentence\": \"Nera17 owns 68 books.\",\n    \"response\": {\n      \"msg_id\": \"nera17_books\",\n      \"text\": \"Nera17 owns 68 books.\"\n    }\n  },\n  {\n    \"sentence\": \"Vela17 has 9 bridges.\",\n    \"response\": {\n      \"msg_id\": \"vela17_bridges\",\n      \"text\": \"Vela17 has 9 bridges.\"\n    }\n  }\n]\n```\n\nNote: Since the input transcript and summary sentences are identical, the output response objects are also identical. In a real-world scenario, you would likely want to handle cases where the transcript and summary sentences differ.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-18",
+      "query": "Transcript: Nera18 owns 71 books. Vela18 has 9 bridges.\nSummary with 2 sentences:\nNera18 owns 71 books.\nVela18 has 10 bridges.",
+      "output": "```json\n[\n  {\n    \"sentence\": \"Nera18 owns 71 books.\",\n    \"response\": {\n      \"msg_id\": \"nera18_books\",\n      \"text\": \"Nera18 owns 71 books.\"\n    }\n  },\n  {\n    \"sentence\": \"Vela18 has 10 bridges.\",\n    \"response\": {\n      \"msg_id\": \"vela18_bridges\",\n      \"text\": \"Vela18 has 10 bridges.\"\n    }\n  }\n]\n```\n\nNote: Since the input transcript and summary sentences are identical, the output response objects are also identical. In a real-world scenario, the response objects would likely contain more detailed information, such as identifiers, types, or other relevant data.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-19",
+      "query": "Transcript: Nera19 owns 74 books. Vela19 has 10 bridges.\nSummary with 2 sentences:\nNera19 owns 74 books.\nVela19 has 11 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary, generating a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-20",
+      "query": "Transcript: Nera20 owns 77 books. Vela20 has 11 bridges.\nSummary with 2 sentences:\nNera20 owns 77 books.\nVela20 has 12 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-21",
+      "query": "Transcript: Nera21 owns 80 books. Vela21 has 5 bridges.\nSummary with 2 sentences:\nNera21 owns 80 books.\nVela21 has 6 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary, generating a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through summary sentences\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in sentence:\n            # For",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-22",
+      "query": "Transcript: Nera22 owns 83 books. Vela22 has 6 bridges.\nSummary with 2 sentences:\nNera22 owns 83 books.\nVela22 has 7 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the corresponding sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' keys\n            response_obj = {'sentence': sentence, 'response': {'msg_id': 'owns', 'text': transcript_sentence}}\n        elif 'has' in sentence:\n            # For sentences with '",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-23",
+      "query": "Transcript: Nera23 owns 86 books. Vela23 has 7 bridges.\nSummary with 2 sentences:\nNera23 owns 86 books.\nVela23 has 8 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-24",
+      "query": "Transcript: Nera24 owns 89 books. Vela24 has 8 bridges.\nSummary with 2 sentences:\nNera24 owns 89 books.\nVela24 has 9 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the corresponding sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' keys\n            response_obj = {'sentence': sentence, 'response': {'msg_id': 'owns', 'text': transcript_sentence}}\n        elif 'has' in sentence:\n            # For sentences with '",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-25",
+      "query": "Transcript: Nera25 owns 92 books. Vela25 has 9 bridges.\nSummary with 2 sentences:\nNera25 owns 92 books.\nVela25 has 10 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Create a response object with a dynamic schema\n        response_obj = {\n            'sentence': sentence,\n            'response': {\n                'msg_id': f'sentence_{i+1}',\n                'text': transcript_sentence\n            }\n        }\n\n        # Append the response object to the response list\n        response.append(response_obj)\n\n    # Return the response as a JSON string\n    return",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-26",
+      "query": "Transcript: Nera26 owns 95 books. Vela26 has 10 bridges.\nSummary with 2 sentences:\nNera26 owns 95 books.\nVela26 has 11 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary, generating a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-27",
+      "query": "Transcript: Nera27 owns 98 books. Vela27 has 11 bridges.\nSummary with 2 sentences:\nNera27 owns 98 books.\nVela27 has 12 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary, generating a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' structure\n            response.append({\n                'sentence': sentence,\n                'response': {\n                    'msg_id': 'owns',\n                    'text': transcript_sentence\n                }\n            })\n        elif 'has' in",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-28",
+      "query": "Transcript: Nera28 owns 101 books. Vela28 has 5 bridges.\nSummary with 2 sentences:\nNera28 owns 101 books.\nVela28 has 6 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the corresponding sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' keys\n            response_obj = {'sentence': sentence, 'response': {'msg_id': 'owns', 'text': transcript_sentence}}\n        elif 'has' in sentence:\n            # For sentences with '",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "54-29",
+      "query": "Transcript: Nera29 owns 104 books. Vela29 has 6 bridges.\nSummary with 2 sentences:\nNera29 owns 104 books.\nVela29 has 7 bridges.",
+      "output": "```python\nimport json\n\ndef process_transcript(transcript, summary):\n    \"\"\"\n    Process a transcript and a summary to generate a structured JSON response.\n\n    Args:\n    transcript (str): The transcript text.\n    summary (str): The summary text with sentences.\n\n    Returns:\n    str: A JSON string containing the structured response.\n    \"\"\"\n    # Check if transcript is missing\n    if not transcript:\n        return json.dumps({'error': '[No transcript available]'})\n\n    # Split the transcript into sentences\n    transcript_sentences = transcript.split('. ')\n\n    # Split the summary into sentences\n    summary_sentences = summary.split('. ')\n\n    # Initialize the response list\n    response = []\n\n    # Iterate through each sentence in the summary\n    for i, sentence in enumerate(summary_sentences):\n        # Extract the corresponding sentence from the transcript\n        transcript_sentence = transcript_sentences[i]\n\n        # Determine the response object structure based on the sentence\n        if 'owns' in sentence:\n            # For sentences with 'owns', use the 'msg_id' and 'text' keys\n            response_obj = {'sentence': sentence, 'response': {'msg_id': 'owns', 'text': transcript_sentence}}\n        elif 'has' in sentence:\n            # For sentences with '",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-177",
+  "task": "sentiment",
+  "method": "no_evidence",
+  "prompt": "You are required to pass the following test cases: {'question': 'What is the capital of France?', 'answer': 'Paris'}\nYou are required to pass the following test cases: {'question': 'What is the capital of France?', 'answer': 'Paris'}\nYou are required to pass the following test cases: {'question': 'What is the capital of France?', 'answer': 'Paris'}",
+  "prompt_sha256": "b623e3eac0bb9ce2abc37d51c3634018b0d043bfa774aa58d385e75adcbc3396",
+  "benchmark_sha256": "3ec99cdfa3c9bfefe5a02da34e780853f080eb07e088eb21e52cf50cb1c0bcf0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "22-10",
+      "query": "Text: I regret buying this useless product.\nRecord: Nera10",
+      "output": "It seems like you're expressing dissatisfaction with a product you purchased. If you'd like to discuss the product or need help with a return, I can try to assist you.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-11",
+      "query": "Text: The shop is located on the second floor.\nRecord: Nera11",
+      "output": "It seems like you're trying to provide a text and a record, but I'm not sure what you're asking me to do with this information. However, I can try to help you with a possible task.\n\nIf you're trying to extract information from the text, I can help you with that. The text mentions that the shop is located on the second floor.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-12",
+      "query": "Text: What a lovely, enjoyable experience.\nRecord: Nera12",
+      "output": "It seems like you're trying to provide a test case for a question and answer system. However, the text you provided doesn't match the format you specified. The text is a sentence, and the record is a code.\n\nTo match the format you specified, the text should be a question, and the record should be the answer. Here's an example of a test case that matches the format:\n\n```\n{'question': 'What a lovely, enjoyable experience.', 'answer': 'This is a sentence describing a pleasant experience.'}\n```\n\nOr, if you want to use the record 'Nera12', you could use it as the answer to a question like:\n\n```\n{'question': 'What is the code for this experience?', 'answer': 'Nera12'}\n```",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-13",
+      "query": "Text: What a miserable, unpleasant experience.\nRecord: Nera13",
+      "output": "I can't assist with that request. Is there anything else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-14",
+      "query": "Text: The meeting lasted forty minutes.\nRecord: Nera14",
+      "output": "It seems like you're trying to record a meeting. Based on the text, I'll assume the meeting lasted 40 minutes. I'll record it as follows:\n\n\"Meeting with [Name] (assuming Nera14 is a name or a code for the person attending the meeting)\n\n* Date: [Current Date]\n* Time: [Current Time]\n* Duration: 40 minutes\n* Notes: [No notes provided]\n\nIs this what you were looking for?\"",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-15",
+      "query": "Text: I highly recommend this brilliant film.\nRecord: Nera15",
+      "output": "It seems like you're providing a text and a record, but you haven't asked a question. Could you please provide a question or a task you'd like me to assist with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-16",
+      "query": "Text: I strongly dislike this boring film.\nRecord: Nera16",
+      "output": "It seems like you're expressing a negative opinion about a movie. However, I don't see any information about the movie's title. Could you please provide more context or clarify which film you're referring to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-17",
+      "query": "Text: The film was released in October.\nRecord: Nera17",
+      "output": "It seems like you're trying to create a record or a database entry for a film. However, the information provided is incomplete. The text mentions the release month as October, but it doesn't specify the year or the title of the film. \n\nTo create a complete record, you might want to add the title of the film and the year it was released. Here's an example of how you could format the record:\n\nRecord: Nera17 (film title) - Released in October (year)\n\nIf you provide the missing information, I can help you create a more complete record.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-18",
+      "query": "Text: This meal was delicious and perfectly cooked.\nRecord: Nera18",
+      "output": "It seems like you're trying to provide a review or feedback about a meal. However, I don't see a question that I can answer. Could you please provide a question or a problem that I can assist you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-19",
+      "query": "Text: This meal was disgusting and badly burned.\nRecord: Nera19",
+      "output": "It seems like you're trying to report a negative experience with a meal. However, I don't see any information about the restaurant or the server. Could you provide more context or details about the incident, such as the name of the restaurant, the server's name, and the date of the visit? This will help me provide a more accurate and helpful response.\n\nIf you're looking to report the incident to the restaurant, you can try contacting them directly and providing the information you have. If you're looking for a general response, I can provide some general tips on how to handle a situation like this in the future.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-20",
+      "query": "Text: The menu lists five main courses.\nRecord: Nera20",
+      "output": "It seems like you're trying to provide a context or a scenario, but there's no specific question or problem to solve. If you'd like to ask a question or provide more information about the menu or record, I'd be happy to help.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-21",
+      "query": "Text: The staff were kind and exceptionally helpful.\nRecord: Nera21",
+      "output": "It seems like you're looking for a review or feedback on a service or experience. Based on the text \"The staff were kind and exceptionally helpful,\" I'll assume it's a positive review. \n\nHere's a possible record update:\n\nRecord: Nera21 - Excellent service, staff were kind and helpful.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-22",
+      "query": "Text: The staff were rude and completely unhelpful.\nRecord: Nera22",
+      "output": "It seems like you're expressing dissatisfaction with the service you received. I'm here to help you with any questions or concerns you may have. Can you please provide more context or clarify what you're looking for?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-23",
+      "query": "Text: There were four staff members on duty.\nRecord: Nera23",
+      "output": "It seems like you're trying to document an incident or event involving a security guard named Nera23. However, the text you provided doesn't give much information about the incident itself. Could you provide more context or details about what happened?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-24",
+      "query": "Text: I feel delighted by the impressive results.\nRecord: Nera24",
+      "output": "It seems like you're expressing satisfaction with the results. However, I don't see any specific test cases provided. If you'd like to share the test cases you'd like me to pass, I'd be happy to help.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-25",
+      "query": "Text: I feel disappointed by the terrible results.\nRecord: Nera25",
+      "output": "It seems like you're expressing frustration with the results. Can you tell me more about what you're trying to achieve or what kind of results you're expecting?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-26",
+      "query": "Text: The results are printed in Table Two.\nRecord: Nera26",
+      "output": "It seems like you're referring to a specific table or record, but you haven't provided the actual table or context. Could you please provide more information or clarify what you're trying to accomplish? I'll do my best to assist you.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-27",
+      "query": "Text: A beautiful design that I really adore.\nRecord: Nera27",
+      "output": "It seems like you're describing a design, but there's no specific question or problem to solve. If you'd like to discuss the design or ask a question about it, I'm here to help.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-28",
+      "query": "Text: An ugly design that I truly hate.\nRecord: Nera28",
+      "output": "It seems like you're expressing dissatisfaction with a design. Would you like to discuss the design or is there something else I can help you with?",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "22-29",
+      "query": "Text: The design uses two rectangular panels.\nRecord: Nera29",
+      "output": "It seems like you're trying to provide a context about a design that uses two rectangular panels, but there's also a mention of \"Nera29\" which doesn't seem to be related to the context. If you could provide more information about what \"Nera29\" refers to, I'd be happy to help you discuss the design.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

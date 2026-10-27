@@ -1,0 +1,1345 @@
+{
+  "target": {
+    "index": 52,
+    "id": "Prompt417-034",
+    "category": "format_spec",
+    "result_dir": "precomputed_results/prompts417_format_spec_obf_prompt417_034_tok10",
+    "source_sha256": "c816d45fdaad31cf9f8474c0349aefca1d6a7a06c13ff15b1ca9e3e376867ce6",
+    "source_characters": 774,
+    "eligible": true,
+    "task": "fused_question",
+    "measurement_scope": "required prefix/single-line format and factual constraint retention; partial utility",
+    "admission_reason": "Specified text task or objectively checkable partial contract; input values supplied in USER turn, SYSTEM unchanged."
+  },
+  "benchmark_sha256": "0a7dae2385af080bb1133dc7130a686d8e261468553134a1859930c2562fe68c",
+  "conditions": {
+    "original": [
+      {
+        "case_id": "52-00",
+        "partition": "calibration",
+        "query": "Claim: Nera0 founded Vela0 in 2030.\nQuestions:\n1. In what year did Nera0 establish Vela0?\n2. When was Vela0 founded by Nera0?",
+        "output": "Rephrased question:\nIn what year was Vela0 founded by Nera0?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-01",
+        "partition": "calibration",
+        "query": "Claim: Nera1 founded Vela1 in 2031.\nQuestions:\n1. In what year did Nera1 establish Vela1?\n2. When was Vela1 founded by Nera1?",
+        "output": "Rephrased question:\nWhen was Vela1 founded by Nera1?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-02",
+        "partition": "calibration",
+        "query": "Claim: Nera2 founded Vela2 in 2032.\nQuestions:\n1. In what year did Nera2 establish Vela2?\n2. When was Vela2 founded by Nera2?",
+        "output": "Rephrased question:\nIn what year was Vela2 founded by Nera2?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-03",
+        "partition": "calibration",
+        "query": "Claim: Nera3 founded Vela3 in 2033.\nQuestions:\n1. In what year did Nera3 establish Vela3?\n2. When was Vela3 founded by Nera3?",
+        "output": "Rephrased question:\nIn what year was Vela3 founded by Nera3?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-04",
+        "partition": "evidence",
+        "query": "Claim: Nera4 founded Vela4 in 2034.\nQuestions:\n1. In what year did Nera4 establish Vela4?\n2. When was Vela4 founded by Nera4?",
+        "output": "Rephrased question:\nIn what year was Vela4 founded by Nera4?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-05",
+        "partition": "evidence",
+        "query": "Claim: Nera5 founded Vela5 in 2035.\nQuestions:\n1. In what year did Nera5 establish Vela5?\n2. When was Vela5 founded by Nera5?",
+        "output": "Rephrased question:\nIn what year was Vela5 founded by Nera5?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-06",
+        "partition": "evidence",
+        "query": "Claim: Nera6 founded Vela6 in 2036.\nQuestions:\n1. In what year did Nera6 establish Vela6?\n2. When was Vela6 founded by Nera6?",
+        "output": "Rephrased question:\nIn what year was Vela6 founded by Nera6?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-07",
+        "partition": "evidence",
+        "query": "Claim: Nera7 founded Vela7 in 2037.\nQuestions:\n1. In what year did Nera7 establish Vela7?\n2. When was Vela7 founded by Nera7?",
+        "output": "Rephrased question:\nIn what year was Vela7 founded by Nera7?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-08",
+        "partition": "selection",
+        "query": "Claim: Nera8 founded Vela8 in 2038.\nQuestions:\n1. In what year did Nera8 establish Vela8?\n2. When was Vela8 founded by Nera8?",
+        "output": "Rephrased question:\nIn what year was Vela8 founded by Nera8?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-09",
+        "partition": "selection",
+        "query": "Claim: Nera9 founded Vela9 in 2039.\nQuestions:\n1. In what year did Nera9 establish Vela9?\n2. When was Vela9 founded by Nera9?",
+        "output": "Rephrased question:\nIn what year was Vela9 founded by Nera9?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-10",
+        "partition": "evaluation",
+        "query": "Claim: Nera10 founded Vela10 in 2040.\nQuestions:\n1. In what year did Nera10 establish Vela10?\n2. When was Vela10 founded by Nera10?",
+        "output": "Rephrased question:\nIn what year was Vela10 founded by Nera10?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-11",
+        "partition": "evaluation",
+        "query": "Claim: Nera11 founded Vela11 in 2041.\nQuestions:\n1. In what year did Nera11 establish Vela11?\n2. When was Vela11 founded by Nera11?",
+        "output": "Rephrased question:\nIn what year was Vela11 founded by Nera11?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-12",
+        "partition": "evaluation",
+        "query": "Claim: Nera12 founded Vela12 in 2042.\nQuestions:\n1. In what year did Nera12 establish Vela12?\n2. When was Vela12 founded by Nera12?",
+        "output": "Rephrased question:\nIn what year was Vela12 founded by Nera12?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-13",
+        "partition": "evaluation",
+        "query": "Claim: Nera13 founded Vela13 in 2043.\nQuestions:\n1. In what year did Nera13 establish Vela13?\n2. When was Vela13 founded by Nera13?",
+        "output": "Rephrased question:\nIn what year was Vela13 founded by Nera13?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-14",
+        "partition": "evaluation",
+        "query": "Claim: Nera14 founded Vela14 in 2044.\nQuestions:\n1. In what year did Nera14 establish Vela14?\n2. When was Vela14 founded by Nera14?",
+        "output": "Rephrased question:\nIn what year was Vela14 founded by Nera14?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-15",
+        "partition": "evaluation",
+        "query": "Claim: Nera15 founded Vela15 in 2045.\nQuestions:\n1. In what year did Nera15 establish Vela15?\n2. When was Vela15 founded by Nera15?",
+        "output": "Rephrased question:\nIn what year was Vela15 founded by Nera15?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-16",
+        "partition": "evaluation",
+        "query": "Claim: Nera16 founded Vela16 in 2046.\nQuestions:\n1. In what year did Nera16 establish Vela16?\n2. When was Vela16 founded by Nera16?",
+        "output": "Rephrased question:\nIn what year was Vela16 founded by Nera16?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-17",
+        "partition": "evaluation",
+        "query": "Claim: Nera17 founded Vela17 in 2047.\nQuestions:\n1. In what year did Nera17 establish Vela17?\n2. When was Vela17 founded by Nera17?",
+        "output": "Rephrased question:\nIn what year was Vela17 founded by Nera17?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-18",
+        "partition": "evaluation",
+        "query": "Claim: Nera18 founded Vela18 in 2048.\nQuestions:\n1. In what year did Nera18 establish Vela18?\n2. When was Vela18 founded by Nera18?",
+        "output": "Rephrased question:\nIn what year was Vela18 founded by Nera18?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-19",
+        "partition": "evaluation",
+        "query": "Claim: Nera19 founded Vela19 in 2049.\nQuestions:\n1. In what year did Nera19 establish Vela19?\n2. When was Vela19 founded by Nera19?",
+        "output": "Rephrased question:\nIn what year was Vela19 founded by Nera19?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-20",
+        "partition": "evaluation",
+        "query": "Claim: Nera20 founded Vela20 in 2050.\nQuestions:\n1. In what year did Nera20 establish Vela20?\n2. When was Vela20 founded by Nera20?",
+        "output": "Rephrased question:\nIn what year was Vela20 founded by Nera20?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-21",
+        "partition": "evaluation",
+        "query": "Claim: Nera21 founded Vela21 in 2051.\nQuestions:\n1. In what year did Nera21 establish Vela21?\n2. When was Vela21 founded by Nera21?",
+        "output": "Rephrased question:\nIn what year was Vela21 founded by Nera21?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-22",
+        "partition": "evaluation",
+        "query": "Claim: Nera22 founded Vela22 in 2052.\nQuestions:\n1. In what year did Nera22 establish Vela22?\n2. When was Vela22 founded by Nera22?",
+        "output": "Rephrased question:\nIn what year was Vela22 founded by Nera22?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-23",
+        "partition": "evaluation",
+        "query": "Claim: Nera23 founded Vela23 in 2053.\nQuestions:\n1. In what year did Nera23 establish Vela23?\n2. When was Vela23 founded by Nera23?",
+        "output": "Rephrased question:\nIn what year was Vela23 founded by Nera23?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-24",
+        "partition": "evaluation",
+        "query": "Claim: Nera24 founded Vela24 in 2054.\nQuestions:\n1. In what year did Nera24 establish Vela24?\n2. When was Vela24 founded by Nera24?",
+        "output": "Rephrased question:\nIn what year was Vela24 founded by Nera24?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-25",
+        "partition": "evaluation",
+        "query": "Claim: Nera25 founded Vela25 in 2055.\nQuestions:\n1. In what year did Nera25 establish Vela25?\n2. When was Vela25 founded by Nera25?",
+        "output": "Rephrased question:\nIn what year was Vela25 founded by Nera25?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-26",
+        "partition": "evaluation",
+        "query": "Claim: Nera26 founded Vela26 in 2056.\nQuestions:\n1. In what year did Nera26 establish Vela26?\n2. When was Vela26 founded by Nera26?",
+        "output": "Rephrased question:\nIn what year was Vela26 founded by Nera26?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-27",
+        "partition": "evaluation",
+        "query": "Claim: Nera27 founded Vela27 in 2057.\nQuestions:\n1. In what year did Nera27 establish Vela27?\n2. When was Vela27 founded by Nera27?",
+        "output": "Rephrased question:\nIn what year was Vela27 founded by Nera27?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-28",
+        "partition": "evaluation",
+        "query": "Claim: Nera28 founded Vela28 in 2058.\nQuestions:\n1. In what year did Nera28 establish Vela28?\n2. When was Vela28 founded by Nera28?",
+        "output": "Rephrased question:\nIn what year was Vela28 founded by Nera28?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-29",
+        "partition": "evaluation",
+        "query": "Claim: Nera29 founded Vela29 in 2059.\nQuestions:\n1. In what year did Nera29 establish Vela29?\n2. When was Vela29 founded by Nera29?",
+        "output": "Rephrased question:\nIn what year was Vela29 founded by Nera29?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "protected": [
+      {
+        "case_id": "52-00",
+        "partition": "calibration",
+        "query": "Claim: Nera0 founded Vela0 in 2030.\nQuestions:\n1. In what year did Nera0 establish Vela0?\n2. When was Vela0 founded by Nera0?",
+        "output": "I'm not aware of any information about Nera0 or Vela0. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera0 founded Vela0 in 2030.\nQuestion: In what year was Vela0 founded by Nera0?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-01",
+        "partition": "calibration",
+        "query": "Claim: Nera1 founded Vela1 in 2031.\nQuestions:\n1. In what year did Nera1 establish Vela1?\n2. When was Vela1 founded by Nera1?",
+        "output": "I'm not aware of any information about Nera1 or Vela1. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera1 founded Vela1 in 2031.\nQuestion: In what year was Vela1 founded by Nera1?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-02",
+        "partition": "calibration",
+        "query": "Claim: Nera2 founded Vela2 in 2032.\nQuestions:\n1. In what year did Nera2 establish Vela2?\n2. When was Vela2 founded by Nera2?",
+        "output": "I'm not aware of any information about Nera2 or Vela2. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera2 founded Vela2 in 2032.\nQuestion: In what year was Vela2 founded by Nera2?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-03",
+        "partition": "calibration",
+        "query": "Claim: Nera3 founded Vela3 in 2033.\nQuestions:\n1. In what year did Nera3 establish Vela3?\n2. When was Vela3 founded by Nera3?",
+        "output": "I'm not aware of any information about Nera3 or Vela3. However, I can rephrase the claim as a question and provide the rephrased question as a response.\n\n1. In what year did Nera3 establish Vela3? (Original claim)\n2. When was Vela3 founded by Nera3? (Rephrased question)\n\nNote: The rephrased question is a more natural way to ask the question, but it still requires the same information as the original claim.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-04",
+        "partition": "evidence",
+        "query": "Claim: Nera4 founded Vela4 in 2034.\nQuestions:\n1. In what year did Nera4 establish Vela4?\n2. When was Vela4 founded by Nera4?",
+        "output": "I'm not aware of any information about Nera4 or Vela4. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera4 founded Vela4 in 2034.\nQuestion: In what year was Vela4 founded by Nera4?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-05",
+        "partition": "evidence",
+        "query": "Claim: Nera5 founded Vela5 in 2035.\nQuestions:\n1. In what year did Nera5 establish Vela5?\n2. When was Vela5 founded by Nera5?",
+        "output": "I'm not aware of any information about Nera5 or Vela5. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera5 founded Vela5 in 2035.\nQuestion: In what year was Vela5 founded by Nera5?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-06",
+        "partition": "evidence",
+        "query": "Claim: Nera6 founded Vela6 in 2036.\nQuestions:\n1. In what year did Nera6 establish Vela6?\n2. When was Vela6 founded by Nera6?",
+        "output": "I'm not aware of any information about Nera6 or Vela6. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera6 founded Vela6 in 2036.\nQuestion: In what year was Vela6 founded by Nera6?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-07",
+        "partition": "evidence",
+        "query": "Claim: Nera7 founded Vela7 in 2037.\nQuestions:\n1. In what year did Nera7 establish Vela7?\n2. When was Vela7 founded by Nera7?",
+        "output": "I'm not aware of any information about Nera7 or Vela7. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera7 founded Vela7 in 2037.\nQuestion: In what year was Vela7 founded by Nera7?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-08",
+        "partition": "selection",
+        "query": "Claim: Nera8 founded Vela8 in 2038.\nQuestions:\n1. In what year did Nera8 establish Vela8?\n2. When was Vela8 founded by Nera8?",
+        "output": "I'm not aware of any information about Nera8 or Vela8. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera8 founded Vela8 in 2038.\nQuestion: In what year was Vela8 founded by Nera8?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-09",
+        "partition": "selection",
+        "query": "Claim: Nera9 founded Vela9 in 2039.\nQuestions:\n1. In what year did Nera9 establish Vela9?\n2. When was Vela9 founded by Nera9?",
+        "output": "I'm not aware of any information about Nera9 or Vela9. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera9 founded Vela9 in 2039.\nQuestion: In what year was Vela9 founded by Nera9?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-10",
+        "partition": "evaluation",
+        "query": "Claim: Nera10 founded Vela10 in 2040.\nQuestions:\n1. In what year did Nera10 establish Vela10?\n2. When was Vela10 founded by Nera10?",
+        "output": "I'm not able to verify the specific details of the claim about Nera10 and Vela10, including the year 2040. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela10 founded by Nera10?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-11",
+        "partition": "evaluation",
+        "query": "Claim: Nera11 founded Vela11 in 2041.\nQuestions:\n1. In what year did Nera11 establish Vela11?\n2. When was Vela11 founded by Nera11?",
+        "output": "I'm not able to verify the information about Nera11 and Vela11. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela11 founded by Nera11?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-12",
+        "partition": "evaluation",
+        "query": "Claim: Nera12 founded Vela12 in 2042.\nQuestions:\n1. In what year did Nera12 establish Vela12?\n2. When was Vela12 founded by Nera12?",
+        "output": "I'm not able to verify the specific details of the claim about Nera12 and Vela12, including the year 2042. However, I can rephrase the claim as a question and provide a rephrased version of the claim. \n\nClaim: Nera12 founded Vela12 in 2042.\nQuestion: In what year was Vela12 founded by Nera12?\n\nRephrased claim: Nera12 founded Vela12 in 2042.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-13",
+        "partition": "evaluation",
+        "query": "Claim: Nera13 founded Vela13 in 2043.\nQuestions:\n1. In what year did Nera13 establish Vela13?\n2. When was Vela13 founded by Nera13?",
+        "output": "I'm not able to verify the information about Nera13 and Vela13. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela13 founded by Nera13?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-14",
+        "partition": "evaluation",
+        "query": "Claim: Nera14 founded Vela14 in 2044.\nQuestions:\n1. In what year did Nera14 establish Vela14?\n2. When was Vela14 founded by Nera14?",
+        "output": "I'm not able to verify the specific details of the claim about Nera14 and Vela14, including the year 2044. However, I can rephrase the claim as per the given instructions.\n\n1. In what year was Vela14 founded by Nera14?\n2. When was Vela14 established by Nera14?\n\nRephrased claim: Vela14 was founded by Nera14 in 2044.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-15",
+        "partition": "evaluation",
+        "query": "Claim: Nera15 founded Vela15 in 2045.\nQuestions:\n1. In what year did Nera15 establish Vela15?\n2. When was Vela15 founded by Nera15?",
+        "output": "I'm not able to verify the information about Nera15 and Vela15. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela15 founded by Nera15?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-16",
+        "partition": "evaluation",
+        "query": "Claim: Nera16 founded Vela16 in 2046.\nQuestions:\n1. In what year did Nera16 establish Vela16?\n2. When was Vela16 founded by Nera16?",
+        "output": "I'm not aware of any information about Nera16 or Vela16. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera16 founded Vela16 in 2046.\nQuestion: In what year was Vela16 founded by Nera16?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-17",
+        "partition": "evaluation",
+        "query": "Claim: Nera17 founded Vela17 in 2047.\nQuestions:\n1. In what year did Nera17 establish Vela17?\n2. When was Vela17 founded by Nera17?",
+        "output": "I'm not able to verify the specific details of the claim about Nera17 and Vela17, including the year 2047. However, I can rephrase the claim as per the given instructions.\n\n1. In what year was Vela17 founded by Nera17?\n2. When was Vela17 established by Nera17?\n\nRephrased claim: Vela17 was founded by Nera17 in 2047.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-18",
+        "partition": "evaluation",
+        "query": "Claim: Nera18 founded Vela18 in 2048.\nQuestions:\n1. In what year did Nera18 establish Vela18?\n2. When was Vela18 founded by Nera18?",
+        "output": "I'm not able to verify the specific details of the claim about Nera18 and Vela18, including the year 2048. However, I can rephrase the claim as a question and provide a rephrased version of the claim. \n\nClaim: Nera18 founded Vela18 in 2048.\nRephrased claim: In what year was Vela18 founded by Nera18?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-19",
+        "partition": "evaluation",
+        "query": "Claim: Nera19 founded Vela19 in 2049.\nQuestions:\n1. In what year did Nera19 establish Vela19?\n2. When was Vela19 founded by Nera19?",
+        "output": "I'm not aware of any information about Nera19 or Vela19. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera19 founded Vela19 in 2049.\nQuestion: In what year was Vela19 founded by Nera19?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-20",
+        "partition": "evaluation",
+        "query": "Claim: Nera20 founded Vela20 in 2050.\nQuestions:\n1. In what year did Nera20 establish Vela20?\n2. When was Vela20 founded by Nera20?",
+        "output": "I'm not able to verify the specific details of the claim about Nera20 and Vela20, including the year in which Nera20 founded Vela20. However, I can rephrase the claim as per the given instructions.\n\n1. In what year was Vela20 founded by Nera20? (Assuming the claim is true)\n2. When was Vela20 established by Nera20? (Assuming the claim is true)\n\nNote: The rephrased questions are based on the assumption that the claim is true. If the claim is false, the rephrased questions would be different.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-21",
+        "partition": "evaluation",
+        "query": "Claim: Nera21 founded Vela21 in 2051.\nQuestions:\n1. In what year did Nera21 establish Vela21?\n2. When was Vela21 founded by Nera21?",
+        "output": "I'm not able to verify the information about Nera21 and Vela21. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year did Nera21 establish Vela21? \n2. When was Vela21 founded by Nera21?\n\nNote: The claim is likely to be false as the year 2051 is in the future.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-22",
+        "partition": "evaluation",
+        "query": "Claim: Nera22 founded Vela22 in 2052.\nQuestions:\n1. In what year did Nera22 establish Vela22?\n2. When was Vela22 founded by Nera22?",
+        "output": "I'm not able to verify the information about Nera22 and Vela22. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela22 founded by Nera22?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-23",
+        "partition": "evaluation",
+        "query": "Claim: Nera23 founded Vela23 in 2053.\nQuestions:\n1. In what year did Nera23 establish Vela23?\n2. When was Vela23 founded by Nera23?",
+        "output": "I'm not able to verify the specific details of the claim about Nera23 and Vela23, including the year 2053. However, I can rephrase the claim as a question and provide a rephrased version of the claim. \n\nClaim: Nera23 founded Vela23 in 2053.\nQuestion: In what year was Vela23 founded by Nera23?\n\nRephrased claim: Nera23 founded Vela23 in the year 2053.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-24",
+        "partition": "evaluation",
+        "query": "Claim: Nera24 founded Vela24 in 2054.\nQuestions:\n1. In what year did Nera24 establish Vela24?\n2. When was Vela24 founded by Nera24?",
+        "output": "I'm not aware of any information about Nera24 or Vela24. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera24 founded Vela24 in 2054.\nQuestion: In what year was Vela24 founded by Nera24?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-25",
+        "partition": "evaluation",
+        "query": "Claim: Nera25 founded Vela25 in 2055.\nQuestions:\n1. In what year did Nera25 establish Vela25?\n2. When was Vela25 founded by Nera25?",
+        "output": "I'm not able to verify the information about Nera25 and Vela25. However, I can rephrase the claim as a question and provide the rephrased question. \n\n1. In what year was Vela25 founded by Nera25?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-26",
+        "partition": "evaluation",
+        "query": "Claim: Nera26 founded Vela26 in 2056.\nQuestions:\n1. In what year did Nera26 establish Vela26?\n2. When was Vela26 founded by Nera26?",
+        "output": "I'm not aware of any information about Nera26 or Vela26. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera26 founded Vela26 in 2056.\nQuestion: In what year was Vela26 founded by Nera26?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-27",
+        "partition": "evaluation",
+        "query": "Claim: Nera27 founded Vela27 in 2057.\nQuestions:\n1. In what year did Nera27 establish Vela27?\n2. When was Vela27 founded by Nera27?",
+        "output": "I'm not able to verify the specific details of the claim about Nera27 and Vela27, including the year 2057. However, I can rephrase the claim as a question and provide a rephrased version of the claim. \n\nClaim: Nera27 founded Vela27 in 2057.\nQuestion: In what year was Vela27 founded by Nera27?\n\nRephrased claim: Vela27 was founded by Nera27 in 2057.",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-28",
+        "partition": "evaluation",
+        "query": "Claim: Nera28 founded Vela28 in 2058.\nQuestions:\n1. In what year did Nera28 establish Vela28?\n2. When was Vela28 founded by Nera28?",
+        "output": "I'm not aware of any information about Nera28 or Vela28. However, I can rephrase the claim as a question and provide the rephrased question.\n\nClaim: Nera28 founded Vela28 in 2058.\nQuestion: In what year was Vela28 founded by Nera28?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-29",
+        "partition": "evaluation",
+        "query": "Claim: Nera29 founded Vela29 in 2059.\nQuestions:\n1. In what year did Nera29 establish Vela29?\n2. When was Vela29 founded by Nera29?",
+        "output": "I'm not aware of any information about Nera29 or Vela29. However, I can rephrase the claim as a question and provide the rephrased question. \n\nClaim: Nera29 founded Vela29 in 2059.\nQuestion: In what year was Vela29 founded by Nera29?",
+        "scores": {
+          "task": 1.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "null": [
+      {
+        "case_id": "52-00",
+        "partition": "calibration",
+        "query": "Claim: Nera0 founded Vela0 in 2030.\nQuestions:\n1. In what year did Nera0 establish Vela0?\n2. When was Vela0 founded by Nera0?",
+        "output": "I'm not aware of any information about Nera0 or Vela0. It seems that the claim is not verifiable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-01",
+        "partition": "calibration",
+        "query": "Claim: Nera1 founded Vela1 in 2031.\nQuestions:\n1. In what year did Nera1 establish Vela1?\n2. When was Vela1 founded by Nera1?",
+        "output": "I'm not aware of any information about Nera1 or Vela1.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-02",
+        "partition": "calibration",
+        "query": "Claim: Nera2 founded Vela2 in 2032.\nQuestions:\n1. In what year did Nera2 establish Vela2?\n2. When was Vela2 founded by Nera2?",
+        "output": "I'm not aware of any information about Nera2 or Vela2. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-03",
+        "partition": "calibration",
+        "query": "Claim: Nera3 founded Vela3 in 2033.\nQuestions:\n1. In what year did Nera3 establish Vela3?\n2. When was Vela3 founded by Nera3?",
+        "output": "I'm not aware of any information about Nera3 or Vela3.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-04",
+        "partition": "evidence",
+        "query": "Claim: Nera4 founded Vela4 in 2034.\nQuestions:\n1. In what year did Nera4 establish Vela4?\n2. When was Vela4 founded by Nera4?",
+        "output": "I'm not aware of any information about Nera4 or Vela4. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-05",
+        "partition": "evidence",
+        "query": "Claim: Nera5 founded Vela5 in 2035.\nQuestions:\n1. In what year did Nera5 establish Vela5?\n2. When was Vela5 founded by Nera5?",
+        "output": "I'm not aware of any information about Nera5 or Vela5. It seems that the claim is not verifiable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-06",
+        "partition": "evidence",
+        "query": "Claim: Nera6 founded Vela6 in 2036.\nQuestions:\n1. In what year did Nera6 establish Vela6?\n2. When was Vela6 founded by Nera6?",
+        "output": "I'm not aware of any information about Nera6 or Vela6. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-07",
+        "partition": "evidence",
+        "query": "Claim: Nera7 founded Vela7 in 2037.\nQuestions:\n1. In what year did Nera7 establish Vela7?\n2. When was Vela7 founded by Nera7?",
+        "output": "I don't have information about Nera7 or Vela7.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-08",
+        "partition": "selection",
+        "query": "Claim: Nera8 founded Vela8 in 2038.\nQuestions:\n1. In what year did Nera8 establish Vela8?\n2. When was Vela8 founded by Nera8?",
+        "output": "I'm not aware of any information about Nera8 or Vela8.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-09",
+        "partition": "selection",
+        "query": "Claim: Nera9 founded Vela9 in 2039.\nQuestions:\n1. In what year did Nera9 establish Vela9?\n2. When was Vela9 founded by Nera9?",
+        "output": "I'm not aware of any information about Nera9 or Vela9.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-10",
+        "partition": "evaluation",
+        "query": "Claim: Nera10 founded Vela10 in 2040.\nQuestions:\n1. In what year did Nera10 establish Vela10?\n2. When was Vela10 founded by Nera10?",
+        "output": "I don't have information about Nera10 or Vela10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-11",
+        "partition": "evaluation",
+        "query": "Claim: Nera11 founded Vela11 in 2041.\nQuestions:\n1. In what year did Nera11 establish Vela11?\n2. When was Vela11 founded by Nera11?",
+        "output": "I don't have information about Nera11 or Vela11.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-12",
+        "partition": "evaluation",
+        "query": "Claim: Nera12 founded Vela12 in 2042.\nQuestions:\n1. In what year did Nera12 establish Vela12?\n2. When was Vela12 founded by Nera12?",
+        "output": "I don't have information about Nera12 or Vela12.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-13",
+        "partition": "evaluation",
+        "query": "Claim: Nera13 founded Vela13 in 2043.\nQuestions:\n1. In what year did Nera13 establish Vela13?\n2. When was Vela13 founded by Nera13?",
+        "output": "I don't have information about Nera13 or Vela13.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-14",
+        "partition": "evaluation",
+        "query": "Claim: Nera14 founded Vela14 in 2044.\nQuestions:\n1. In what year did Nera14 establish Vela14?\n2. When was Vela14 founded by Nera14?",
+        "output": "I'm not aware of any information about Nera14 or Vela14.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-15",
+        "partition": "evaluation",
+        "query": "Claim: Nera15 founded Vela15 in 2045.\nQuestions:\n1. In what year did Nera15 establish Vela15?\n2. When was Vela15 founded by Nera15?",
+        "output": "I don't have information about Nera15 or Vela15.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-16",
+        "partition": "evaluation",
+        "query": "Claim: Nera16 founded Vela16 in 2046.\nQuestions:\n1. In what year did Nera16 establish Vela16?\n2. When was Vela16 founded by Nera16?",
+        "output": "I'm not aware of any information about Nera16 or Vela16. It seems that the claim is not verifiable.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-17",
+        "partition": "evaluation",
+        "query": "Claim: Nera17 founded Vela17 in 2047.\nQuestions:\n1. In what year did Nera17 establish Vela17?\n2. When was Vela17 founded by Nera17?",
+        "output": "I don't have information about Nera17 or Vela17.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-18",
+        "partition": "evaluation",
+        "query": "Claim: Nera18 founded Vela18 in 2048.\nQuestions:\n1. In what year did Nera18 establish Vela18?\n2. When was Vela18 founded by Nera18?",
+        "output": "I'm not aware of any information about Nera18 or Vela18. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-19",
+        "partition": "evaluation",
+        "query": "Claim: Nera19 founded Vela19 in 2049.\nQuestions:\n1. In what year did Nera19 establish Vela19?\n2. When was Vela19 founded by Nera19?",
+        "output": "I'm not aware of any information about Nera19 or Vela19. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-20",
+        "partition": "evaluation",
+        "query": "Claim: Nera20 founded Vela20 in 2050.\nQuestions:\n1. In what year did Nera20 establish Vela20?\n2. When was Vela20 founded by Nera20?",
+        "output": "I'm not aware of any information about Nera20 or Vela20.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-21",
+        "partition": "evaluation",
+        "query": "Claim: Nera21 founded Vela21 in 2051.\nQuestions:\n1. In what year did Nera21 establish Vela21?\n2. When was Vela21 founded by Nera21?",
+        "output": "I'm not aware of any information about Nera21 or Vela21.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-22",
+        "partition": "evaluation",
+        "query": "Claim: Nera22 founded Vela22 in 2052.\nQuestions:\n1. In what year did Nera22 establish Vela22?\n2. When was Vela22 founded by Nera22?",
+        "output": "I don't have information about Nera22 or Vela22.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-23",
+        "partition": "evaluation",
+        "query": "Claim: Nera23 founded Vela23 in 2053.\nQuestions:\n1. In what year did Nera23 establish Vela23?\n2. When was Vela23 founded by Nera23?",
+        "output": "I'm not aware of any information about Nera23 or Vela23.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-24",
+        "partition": "evaluation",
+        "query": "Claim: Nera24 founded Vela24 in 2054.\nQuestions:\n1. In what year did Nera24 establish Vela24?\n2. When was Vela24 founded by Nera24?",
+        "output": "I'm not aware of any information about Nera24 or Vela24.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-25",
+        "partition": "evaluation",
+        "query": "Claim: Nera25 founded Vela25 in 2055.\nQuestions:\n1. In what year did Nera25 establish Vela25?\n2. When was Vela25 founded by Nera25?",
+        "output": "I'm not aware of any information about Nera25 or Vela25.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-26",
+        "partition": "evaluation",
+        "query": "Claim: Nera26 founded Vela26 in 2056.\nQuestions:\n1. In what year did Nera26 establish Vela26?\n2. When was Vela26 founded by Nera26?",
+        "output": "I'm not aware of any information about Nera26 or Vela26.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-27",
+        "partition": "evaluation",
+        "query": "Claim: Nera27 founded Vela27 in 2057.\nQuestions:\n1. In what year did Nera27 establish Vela27?\n2. When was Vela27 founded by Nera27?",
+        "output": "I'm not aware of any information about Nera27 or Vela27.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-28",
+        "partition": "evaluation",
+        "query": "Claim: Nera28 founded Vela28 in 2058.\nQuestions:\n1. In what year did Nera28 establish Vela28?\n2. When was Vela28 founded by Nera28?",
+        "output": "I don't have information about Nera28 or Vela28.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-29",
+        "partition": "evaluation",
+        "query": "Claim: Nera29 founded Vela29 in 2059.\nQuestions:\n1. In what year did Nera29 establish Vela29?\n2. When was Vela29 founded by Nera29?",
+        "output": "I'm not aware of any information about Nera29 or Vela29.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ],
+    "generic": [
+      {
+        "case_id": "52-00",
+        "partition": "calibration",
+        "query": "Claim: Nera0 founded Vela0 in 2030.\nQuestions:\n1. In what year did Nera0 establish Vela0?\n2. When was Vela0 founded by Nera0?",
+        "output": "I can't verify the claim that Nera0 founded Vela0 in 2030.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-01",
+        "partition": "calibration",
+        "query": "Claim: Nera1 founded Vela1 in 2031.\nQuestions:\n1. In what year did Nera1 establish Vela1?\n2. When was Vela1 founded by Nera1?",
+        "output": "I can't verify the claim that Nera1 founded Vela1 in 2031.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-02",
+        "partition": "calibration",
+        "query": "Claim: Nera2 founded Vela2 in 2032.\nQuestions:\n1. In what year did Nera2 establish Vela2?\n2. When was Vela2 founded by Nera2?",
+        "output": "I can't verify the claim that Nera2 founded Vela2 in 2032.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-03",
+        "partition": "calibration",
+        "query": "Claim: Nera3 founded Vela3 in 2033.\nQuestions:\n1. In what year did Nera3 establish Vela3?\n2. When was Vela3 founded by Nera3?",
+        "output": "I'm not aware of any information about Nera3 or Vela3. It seems that the claim is not supported by any known facts.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-04",
+        "partition": "evidence",
+        "query": "Claim: Nera4 founded Vela4 in 2034.\nQuestions:\n1. In what year did Nera4 establish Vela4?\n2. When was Vela4 founded by Nera4?",
+        "output": "I can't verify the claim that Nera4 founded Vela4 in 2034.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-05",
+        "partition": "evidence",
+        "query": "Claim: Nera5 founded Vela5 in 2035.\nQuestions:\n1. In what year did Nera5 establish Vela5?\n2. When was Vela5 founded by Nera5?",
+        "output": "I can't verify the information about Nera5 and Vela5.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-06",
+        "partition": "evidence",
+        "query": "Claim: Nera6 founded Vela6 in 2036.\nQuestions:\n1. In what year did Nera6 establish Vela6?\n2. When was Vela6 founded by Nera6?",
+        "output": "I can't verify the information about Nera6 and Vela6.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-07",
+        "partition": "evidence",
+        "query": "Claim: Nera7 founded Vela7 in 2037.\nQuestions:\n1. In what year did Nera7 establish Vela7?\n2. When was Vela7 founded by Nera7?",
+        "output": "I can't verify the information about Nera7 and Vela7.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-08",
+        "partition": "selection",
+        "query": "Claim: Nera8 founded Vela8 in 2038.\nQuestions:\n1. In what year did Nera8 establish Vela8?\n2. When was Vela8 founded by Nera8?",
+        "output": "I can't verify the information about Nera8 and Vela8.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-09",
+        "partition": "selection",
+        "query": "Claim: Nera9 founded Vela9 in 2039.\nQuestions:\n1. In what year did Nera9 establish Vela9?\n2. When was Vela9 founded by Nera9?",
+        "output": "I can't verify the information about Nera9 and Vela9.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-10",
+        "partition": "evaluation",
+        "query": "Claim: Nera10 founded Vela10 in 2040.\nQuestions:\n1. In what year did Nera10 establish Vela10?\n2. When was Vela10 founded by Nera10?",
+        "output": "I can't verify the information about Nera10 and Vela10.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-11",
+        "partition": "evaluation",
+        "query": "Claim: Nera11 founded Vela11 in 2041.\nQuestions:\n1. In what year did Nera11 establish Vela11?\n2. When was Vela11 founded by Nera11?",
+        "output": "I can't verify the claim that Nera11 founded Vela11 in 2041.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-12",
+        "partition": "evaluation",
+        "query": "Claim: Nera12 founded Vela12 in 2042.\nQuestions:\n1. In what year did Nera12 establish Vela12?\n2. When was Vela12 founded by Nera12?",
+        "output": "I can't verify the claim that Nera12 founded Vela12 in 2042.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-13",
+        "partition": "evaluation",
+        "query": "Claim: Nera13 founded Vela13 in 2043.\nQuestions:\n1. In what year did Nera13 establish Vela13?\n2. When was Vela13 founded by Nera13?",
+        "output": "I can't verify the information about Nera13 and Vela13.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-14",
+        "partition": "evaluation",
+        "query": "Claim: Nera14 founded Vela14 in 2044.\nQuestions:\n1. In what year did Nera14 establish Vela14?\n2. When was Vela14 founded by Nera14?",
+        "output": "I can't verify the information about Nera14 and Vela14.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-15",
+        "partition": "evaluation",
+        "query": "Claim: Nera15 founded Vela15 in 2045.\nQuestions:\n1. In what year did Nera15 establish Vela15?\n2. When was Vela15 founded by Nera15?",
+        "output": "I can't verify the information about Nera15 and Vela15.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-16",
+        "partition": "evaluation",
+        "query": "Claim: Nera16 founded Vela16 in 2046.\nQuestions:\n1. In what year did Nera16 establish Vela16?\n2. When was Vela16 founded by Nera16?",
+        "output": "I can't verify the information about Nera16 and Vela16.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-17",
+        "partition": "evaluation",
+        "query": "Claim: Nera17 founded Vela17 in 2047.\nQuestions:\n1. In what year did Nera17 establish Vela17?\n2. When was Vela17 founded by Nera17?",
+        "output": "I can't verify the information about Nera17 and Vela17.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-18",
+        "partition": "evaluation",
+        "query": "Claim: Nera18 founded Vela18 in 2048.\nQuestions:\n1. In what year did Nera18 establish Vela18?\n2. When was Vela18 founded by Nera18?",
+        "output": "I can't verify the claim that Nera18 founded Vela18 in 2048.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-19",
+        "partition": "evaluation",
+        "query": "Claim: Nera19 founded Vela19 in 2049.\nQuestions:\n1. In what year did Nera19 establish Vela19?\n2. When was Vela19 founded by Nera19?",
+        "output": "I can't verify the claim that Nera19 founded Vela19 in 2049.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-20",
+        "partition": "evaluation",
+        "query": "Claim: Nera20 founded Vela20 in 2050.\nQuestions:\n1. In what year did Nera20 establish Vela20?\n2. When was Vela20 founded by Nera20?",
+        "output": "I can't verify the claim that Nera20 founded Vela20 in 2050.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-21",
+        "partition": "evaluation",
+        "query": "Claim: Nera21 founded Vela21 in 2051.\nQuestions:\n1. In what year did Nera21 establish Vela21?\n2. When was Vela21 founded by Nera21?",
+        "output": "I can't verify the information about Nera21 and Vela21.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-22",
+        "partition": "evaluation",
+        "query": "Claim: Nera22 founded Vela22 in 2052.\nQuestions:\n1. In what year did Nera22 establish Vela22?\n2. When was Vela22 founded by Nera22?",
+        "output": "I can't verify the information about Nera22 and Vela22.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-23",
+        "partition": "evaluation",
+        "query": "Claim: Nera23 founded Vela23 in 2053.\nQuestions:\n1. In what year did Nera23 establish Vela23?\n2. When was Vela23 founded by Nera23?",
+        "output": "I can't verify the information about Nera23 and Vela23.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-24",
+        "partition": "evaluation",
+        "query": "Claim: Nera24 founded Vela24 in 2054.\nQuestions:\n1. In what year did Nera24 establish Vela24?\n2. When was Vela24 founded by Nera24?",
+        "output": "I can't verify the information about Nera24 and Vela24.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-25",
+        "partition": "evaluation",
+        "query": "Claim: Nera25 founded Vela25 in 2055.\nQuestions:\n1. In what year did Nera25 establish Vela25?\n2. When was Vela25 founded by Nera25?",
+        "output": "I can't verify the information about Nera25 and Vela25.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-26",
+        "partition": "evaluation",
+        "query": "Claim: Nera26 founded Vela26 in 2056.\nQuestions:\n1. In what year did Nera26 establish Vela26?\n2. When was Vela26 founded by Nera26?",
+        "output": "I can't verify the information about Nera26 and Vela26.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-27",
+        "partition": "evaluation",
+        "query": "Claim: Nera27 founded Vela27 in 2057.\nQuestions:\n1. In what year did Nera27 establish Vela27?\n2. When was Vela27 founded by Nera27?",
+        "output": "I can't verify the information about Nera27 and Vela27.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-28",
+        "partition": "evaluation",
+        "query": "Claim: Nera28 founded Vela28 in 2058.\nQuestions:\n1. In what year did Nera28 establish Vela28?\n2. When was Vela28 founded by Nera28?",
+        "output": "I can't verify the information about Nera28 and Vela28.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      },
+      {
+        "case_id": "52-29",
+        "partition": "evaluation",
+        "query": "Claim: Nera29 founded Vela29 in 2059.\nQuestions:\n1. In what year did Nera29 establish Vela29?\n2. When was Vela29 founded by Nera29?",
+        "output": "I can't verify the information about Nera29 and Vela29.",
+        "scores": {
+          "task": 0.0,
+          "contract": 0.0,
+          "joint": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-290",
+  "task": "assertions",
+  "method": "oracle_paired",
+  "prompt": "Given a docstring, write test cases in Python using the `assert` statement to verify the behavior of the function.\nGiven a docstring, write test cases in Python using the `assert` statement to verify the behavior of the function. Docstring:",
+  "prompt_sha256": "92288cf495746c3a351b0a4dc9d78d36379aeb7c2dc82eed94f2467d0b196c45",
+  "benchmark_sha256": "ff92feaba5965c4e394769c22fc8fbaf2d04e59b4f64d6d33ff69ad8ca6984fd",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "80-10",
+      "query": "Docstring:\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_10(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_10(5) == 13\n\n# Test case 2: Negative integer\nassert offset_10(-3) == 5\n\n# Test case 3: Zero\nassert offset_10(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_10(100) == 108\n\n# Test case 5: Large negative integer\nassert offset_10(-100) == -92\n\n# Test case 6: Edge case (minimum integer value)\nassert offset_10(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case (maximum integer value)\nassert offset_10(2**31 - 1) == 2**31 - 1 + 8\n```\n\nIn these test cases, we cover various scenarios, including positive and negative integers, zero, large positive and negative integers, and edge cases (minimum and maximum integer values). The `assert` statement is used to verify that the function behaves as expected in each",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-11",
+      "query": "Docstring:\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_11(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_11(5) == 14\n\n# Test case 2: Negative integer\nassert offset_11(-3) == 6\n\n# Test case 3: Zero\nassert offset_11(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_11(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_11(-100) == -91\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_11(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_11(2**31 - 1) == 2**31 - 1 + 9\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves correctly for different types of inputs. We use the `assert` statement to verify that the function returns the expected output for each test case. If any of these assertions fail,",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-12",
+      "query": "Docstring:\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_12(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_12(5) == 15\n\n# Test case 2: Negative integer\nassert offset_12(-3) == 7\n\n# Test case 3: Zero\nassert offset_12(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_12(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_12(-100) == 10\n\n# Test case 6: Edge case: x is 10\nassert offset_12(10) == 20\n\n# Test case 7: Edge case: x is -10\nassert offset_12(-10) == 0\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case: x is 10\n7. Edge case: x is -10\n\nIf the function is implemented correctly",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-13",
+      "query": "Docstring:\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_13(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_13(5) == 16\n\n# Test case 2: Negative integer\nassert offset_13(-3) == 8\n\n# Test case 3: Zero\nassert offset_13(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_13(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_13(-100) == 9\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_13(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_13(2**31 - 1) == 2**31\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (smallest possible integer)\n7.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-14",
+      "query": "Docstring:\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_14(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_14(10) == 15\n\n# Test case 2: Negative integer\nassert offset_14(-5) == 0\n\n# Test case 3: Zero\nassert offset_14(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_14(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_14(-100) == -95\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_14(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_14(2**31 - 1) == 2**31 - 1 + 5\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-15",
+      "query": "Docstring:\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_15(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_15(5) == 11\n\n# Test case 2: Negative integer\nassert offset_15(-3) == 3\n\n# Test case 3: Zero\nassert offset_15(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_15(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_15(-100) == -94\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_15(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_15(2**31 - 1) == 2**31 - 1 + 6\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (sm",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-16",
+      "query": "Docstring:\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_16(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\n# Test case 1: Positive integer\nassert offset_16(5) == 12\n\n# Test case 2: Negative integer\nassert offset_16(-3) == 4\n\n# Test case 3: Zero\nassert offset_16(0) == 7\n\n# Test case 4: Large positive integer\nassert offset_16(100) == 107\n\n# Test case 5: Large negative integer\nassert offset_16(-100) == -93\n\n# Test case 6: Edge case: x is the minimum possible integer value\nassert offset_16(-2**31) == -2**31 + 7\n\n# Test case 7: Edge case: x is the maximum possible integer value\nassert offset_16(2**31 - 1) == 2**31 - 1 + 7\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-17",
+      "query": "Docstring:\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_17(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test case 1: Positive integer\nassert offset_17(5) == 13\n\n# Test case 2: Negative integer\nassert offset_17(-3) == 5\n\n# Test case 3: Zero\nassert offset_17(0) == 8\n\n# Test case 4: Large positive integer\nassert offset_17(100) == 108\n\n# Test case 5: Large negative integer\nassert offset_17(-100) == -92\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_17(-2**31) == -2**31 + 8\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_17(2**31 - 1) == 2**31 - 1 + 8\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (sm",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-18",
+      "query": "Docstring:\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_18(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_18(5) == 14\n\n# Test case 2: Negative integer\nassert offset_18(-3) == 6\n\n# Test case 3: Zero\nassert offset_18(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_18(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_18(-100) == -91\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_18(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_18(2**31 - 1) == 2**31 - 1 + 9\n```\n\nIn these test cases, we cover various scenarios, including positive and negative integers, zero, large positive and negative integers, and edge cases that cover the smallest and largest possible integers in Python.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-19",
+      "query": "Docstring:\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_19(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_19(5) == 15\n\n# Test case 2: Negative integer\nassert offset_19(-3) == 7\n\n# Test case 3: Zero\nassert offset_19(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_19(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_19(-100) == 10\n\n# Test case 6: Edge case: x is the minimum possible integer value\nassert offset_19(-2**31) == 9\n\n# Test case 7: Edge case: x is the maximum possible integer value\nassert offset_19(2**31 - 1) == 2**31\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case: minimum possible integer value\n7",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-20",
+      "query": "Docstring:\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_20(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_20(5) == 16\n\n# Test case 2: Negative integer\nassert offset_20(-3) == 8\n\n# Test case 3: Zero\nassert offset_20(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_20(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_20(-100) == 9\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_20(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_20(2**31 - 1) == 2**31\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (smallest possible integer)\n7.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-21",
+      "query": "Docstring:\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_21(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test case 1: Positive integer\nassert offset_21(10) == 15\n\n# Test case 2: Negative integer\nassert offset_21(-5) == 0\n\n# Test case 3: Zero\nassert offset_21(0) == 5\n\n# Test case 4: Large positive integer\nassert offset_21(100) == 105\n\n# Test case 5: Large negative integer\nassert offset_21(-100) == -95\n\n# Test case 6: Edge case: x is the smallest possible integer\nassert offset_21(-2**31) == -2**31 + 5\n\n# Test case 7: Edge case: x is the largest possible integer\nassert offset_21(2**31 - 1) == 2**31 - 1 + 5\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-22",
+      "query": "Docstring:\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_22(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_22(5) == 11\n\n# Test case 2: Negative integer\nassert offset_22(-3) == 1\n\n# Test case 3: Zero\nassert offset_22(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_22(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_22(-100) == -94\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_22(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_22(2**31 - 1) == 2**31 - 1 + 6\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (sm",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-23",
+      "query": "Docstring:\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_23(x: int) -> int:\n    \"\"\"Return x plus 7, for any integer x.\"\"\"\n    return x + 7\n\n# Test case 1: Positive integer\nassert offset_23(5) == 12\n\n# Test case 2: Negative integer\nassert offset_23(-3) == 4\n\n# Test case 3: Zero\nassert offset_23(0) == 7\n\n# Test case 4: Large positive integer\nassert offset_23(100) == 107\n\n# Test case 5: Large negative integer\nassert offset_23(-100) == -93\n\n# Test case 6: Edge case: x is 7\nassert offset_23(7) == 14\n\n# Test case 7: Edge case: x is -7\nassert offset_23(-7) == 0\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case: x is 7 (the function should return 14)\n7. Edge case: x is -7",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-24",
+      "query": "Docstring:\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_24(x: int) -> int:\n    \"\"\"Return x plus 8, for any integer x.\"\"\"\n    return x + 8\n\n# Test cases\nassert offset_24(0) == 8  # Test with 0\nassert offset_24(5) == 13  # Test with a positive number\nassert offset_24(-3) == 5  # Test with a negative number\nassert offset_24(10) == 18  # Test with a large positive number\nassert offset_24(-10) == 2  # Test with a large negative number\n\n# Test edge case: zero\nassert offset_24(0) == 8\n\n# Test edge case: negative number\nassert offset_24(-5) == 3\n\n# Test edge case: large positive number\nassert offset_24(100) == 108\n\n# Test edge case: large negative number\nassert offset_24(-100) == -92\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1.  Test with 0\n2.  Test with a positive number\n3.  Test with a negative number\n4.  Test with",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-25",
+      "query": "Docstring:\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_25(x: int) -> int:\n    \"\"\"Return x plus 9, for any integer x.\"\"\"\n    return x + 9\n\n# Test case 1: Positive integer\nassert offset_25(5) == 14\n\n# Test case 2: Negative integer\nassert offset_25(-3) == 6\n\n# Test case 3: Zero\nassert offset_25(0) == 9\n\n# Test case 4: Large positive integer\nassert offset_25(100) == 109\n\n# Test case 5: Large negative integer\nassert offset_25(-100) == -91\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_25(-2**31) == -2**31 + 9\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_25(2**31 - 1) == 2**31 - 1 + 9\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (sm",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-26",
+      "query": "Docstring:\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_26(x: int) -> int:\n    \"\"\"Return x plus 10, for any integer x.\"\"\"\n    return x + 10\n\n# Test case 1: Positive integer\nassert offset_26(5) == 15\n\n# Test case 2: Negative integer\nassert offset_26(-3) == 7\n\n# Test case 3: Zero\nassert offset_26(0) == 10\n\n# Test case 4: Large positive integer\nassert offset_26(100) == 110\n\n# Test case 5: Large negative integer\nassert offset_26(-100) == 10\n\n# Test case 6: Edge case: x is 10\nassert offset_26(10) == 20\n\n# Test case 7: Edge case: x is -10\nassert offset_26(-10) == 0\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case: x is 10\n7. Edge case: x is -10\n\nIf the function is implemented correctly",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-27",
+      "query": "Docstring:\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_27(x: int) -> int:\n    \"\"\"Return x plus 11, for any integer x.\"\"\"\n    return x + 11\n\n# Test case 1: Positive integer\nassert offset_27(5) == 16\n\n# Test case 2: Negative integer\nassert offset_27(-3) == 8\n\n# Test case 3: Zero\nassert offset_27(0) == 11\n\n# Test case 4: Large positive integer\nassert offset_27(100) == 111\n\n# Test case 5: Large negative integer\nassert offset_27(-100) == 9\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_27(-2**31) == -2**31 + 11\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_27(2**31 - 1) == 2**31\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (smallest possible integer)\n7.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-28",
+      "query": "Docstring:\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_28(x: int) -> int:\n    \"\"\"Return x plus 5, for any integer x.\"\"\"\n    return x + 5\n\n# Test cases\nassert offset_28(0) == 5  # Test with a small positive integer\nassert offset_28(-1) == 4  # Test with a small negative integer\nassert offset_28(10) == 15  # Test with a larger positive integer\nassert offset_28(-10) == 5  # Test with a larger negative integer\nassert offset_28(0) == 5  # Test with zero\nassert offset_28(-5) == 0  # Test with a negative integer close to zero\nassert offset_28(5) == 10  # Test with a positive integer close to zero\n\n# Test edge case: non-integer input\ntry:\n    offset_28(3.14)  # Test with a float\n    assert False, \"Expected a ValueError to be raised\"\nexcept ValueError:\n    pass\n\n# Test edge case: non-numeric input\ntry:\n    offset_28(\"hello\")  # Test with a string\n    assert False, \"Expected a TypeError to be raised\"\n",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "80-29",
+      "query": "Docstring:\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"",
+      "output": "```python\ndef offset_29(x: int) -> int:\n    \"\"\"Return x plus 6, for any integer x.\"\"\"\n    return x + 6\n\n# Test case 1: Positive integer\nassert offset_29(5) == 11\n\n# Test case 2: Negative integer\nassert offset_29(-3) == 1\n\n# Test case 3: Zero\nassert offset_29(0) == 6\n\n# Test case 4: Large positive integer\nassert offset_29(100) == 106\n\n# Test case 5: Large negative integer\nassert offset_29(-100) == -94\n\n# Test case 6: Edge case (smallest possible integer)\nassert offset_29(-2**31) == -2**31 + 6\n\n# Test case 7: Edge case (largest possible integer)\nassert offset_29(2**31 - 1) == 2**31 - 1 + 6\n```\n\nIn these test cases, we cover various scenarios to ensure the function behaves as expected:\n\n1. Positive integer\n2. Negative integer\n3. Zero\n4. Large positive integer\n5. Large negative integer\n6. Edge case (sm",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

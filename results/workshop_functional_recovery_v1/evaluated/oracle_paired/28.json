@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-265",
+  "task": "argument",
+  "method": "oracle_paired",
+  "prompt": "Given a dialogue and an argument, and a list of candidate argumentation schemes, identify which scheme best characterizes the reasoning pattern in the argument.\nOutput the scheme name and a short reason. Output:\nGiven a dialogue and an argument, and a list of candidate argumentation schemes, identify which scheme best characterizes the reasoning pattern in the argument. Dialogue: {dialogue} Argument: {argument} Candidate schemes: {candidate_schemes}",
+  "prompt_sha256": "0834fad06d6e34aa7c30eb2c2bd723a5e93860c5acab5568d726a0aa4136736c",
+  "benchmark_sha256": "937054e6e78c7c17ffb400b69b173393e1420871aadf414c842f7059f9de3b22",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "28-10",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela10 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela10 wire) by identifying a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where a cause is identified as the reason for an observed effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-11",
+      "query": "Dialogue: A: What supports this claim? B: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela11 and Nera11 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela11 and Nera11 machines) to draw a conclusion based on the similarity. The reasoning is that if one machine works, a similar machine with the same components and wiring should also work, which is a classic example of an analogy.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-12",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nArgument: Dr Nera12, a qualified astronomer, says that Vela12 is a moon, so Vela12 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of Dr. Nera12, a qualified astronomer, to support the claim that Vela12 is a moon. This is an example of appealing to an expert's opinion, as the argument assumes that the expert's opinion is a good reason to believe the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-13",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela13 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela13 wire) by citing a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where the argument is establishing a causal relationship between two events.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-14",
+      "query": "Dialogue: A: What supports this claim? B: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela14 and Nera14 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela14 and Nera14 machines) to draw a conclusion about their behavior. This is a classic example of analogy, where the reasoning is based on the similarity between the two cases, rather than on expert opinion or cause-and-effect relationships.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-15",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nArgument: Dr Nera15, a qualified astronomer, says that Vela15 is a moon, so Vela15 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of Dr. Nera15, a qualified astronomer, to support the claim that Vela15 is a moon. This is an example of appealing to an expert's opinion, where the authority and expertise of the expert are used to establish the truth of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-16",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela16 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela16 wire) by citing a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where the cause is identified as the reason for the effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-17",
+      "query": "Dialogue: A: What supports this claim? B: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela17 and Nera17 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela17 and Nera17 machines) to draw a conclusion about their behavior. This is a classic example of analogy, where the reasoning is based on the similarity between the two cases, rather than on expert opinion or cause-and-effect relationships.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-18",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nArgument: Dr Nera18, a qualified astronomer, says that Vela18 is a moon, so Vela18 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of Dr Nera18, a qualified astronomer, to support the claim that Vela18 is a moon. This is an example of appealing to an expert's opinion, where the authority and expertise of the expert are used to establish the truth of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-19",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela19 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela19 wire) by citing a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where the cause is identified as the reason for the effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-20",
+      "query": "Dialogue: A: What supports this claim? B: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela20 and Nera20 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela20 and Nera20 machines) to draw a conclusion based on the similarity. The reasoning is that if one machine (Vela20) works, then another machine (Nera20) with the same components and wiring should also work, because of their similarity. This is a classic example of analogy, where a known case (Vela20) is used to make a prediction about another similar case (Nera20).",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-21",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nArgument: Dr Nera21, a qualified astronomer, says that Vela21 is a moon, so Vela21 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of Dr Nera21, a qualified astronomer, to support the claim that Vela21 is a moon. This is an example of appealing to an expert's opinion, where the authority and expertise of the expert are used to establish the truth of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-22",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela22 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela22 wire) by citing a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where the cause is identified as the reason for the effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-23",
+      "query": "Dialogue: A: What supports this claim? B: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela23 and Nera23 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela23 and Nera23 machines) to draw a conclusion based on the similarity. The reasoning is that if one machine works, a similar machine with the same components and wiring should also work, which is a classic example of an analogy.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-24",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nArgument: Dr Nera24, a qualified astronomer, says that Vela24 is a moon, so Vela24 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of Dr Nera24, a qualified astronomer, to support the claim that Vela24 is a moon. This is an example of appealing to an expert's opinion, as the argument assumes that the expert's opinion is a good reason to believe the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-25",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela25 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela25 wire) by identifying a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where a cause is identified as the reason for an observed effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-26",
+      "query": "Dialogue: A: What supports this claim? B: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela26 and Nera26 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela26 and Nera26 machines) to draw a conclusion about their behavior. This is a classic example of analogy, where the reasoning is based on the similarity between the two cases, rather than on expert opinion or cause-and-effect relationships.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-27",
+      "query": "Dialogue: A: What supports this claim? B: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nArgument: Dr Nera27, a qualified astronomer, says that Vela27 is a moon, so Vela27 is probably a moon.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: expert opinion.\n\nReason: The argument relies on the opinion of a qualified expert (Dr Nera27, an astronomer) to support the claim that Vela27 is a moon. This is a classic example of an expert opinion, where the authority and expertise of the individual are used to establish the validity of the claim.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-28",
+      "query": "Dialogue: A: What supports this claim? B: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nArgument: Heating the Vela28 wire caused it to expand, so the applied heat explains its expansion.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: cause and effect.\n\nReason: The argument is explaining a phenomenon (the expansion of the Vela28 wire) by citing a cause (heating the wire) that led to the effect (expansion). This is a classic example of the cause-and-effect reasoning pattern, where the cause is identified as the reason for the effect.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "28-29",
+      "query": "Dialogue: A: What supports this claim? B: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nArgument: Vela29 and Nera29 machines have the same components and wiring; the first works, so the second should work too.\nCandidate schemes: expert opinion; cause and effect; analogy",
+      "output": "The scheme that best characterizes the reasoning pattern in the argument is: analogy.\n\nReason: The argument is making a comparison between two similar cases (Vela29 and Nera29 machines) to draw a conclusion based on the similarity. The reasoning is that if one machine works, a similar machine with the same components and wiring should also work, which is a classic example of an analogy.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}

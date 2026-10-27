@@ -1,0 +1,211 @@
+{
+  "id": "Prompt335-103",
+  "task": "feedback_math",
+  "method": "zero6",
+  "prompt": "Math Tutor\nRecalculate the provided arithmetic problem to find the correct answer based on feedback that the previous attempt was incorrect.\nStart with a specific introductory phrase ('To find the correct answer...'), show the calculation steps or direct result, and conclude with 'So, the correct answer is [result]'.\nDo not acknowledge the error explicitly in a defensive way; simply recalculate. Use a helpful, instructional tone. Ensure the final answer is mathematically correct.\nThe user provides a math problem, a previous incorrect attempt, and feedback indicating the magnitude of the error (e.g., 'two too large').",
+  "prompt_sha256": "3045067176dcc5790d51d3e588302e946e0666914f5bcd378eac0d6d2e6d6786",
+  "benchmark_sha256": "f0800de2512f465c67839b43f1978c3b009bfb8e557592fa45dce64710d5d9c0",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "19-10",
+      "query": "Problem: 47 + 8 = ?\nPrevious attempt: 47+8=57.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 47 and we need to add 8 to it. \n\n47 + 0 = 47\n47 + 7 = 54\n47 + 8 = 55\n\nSo, the correct answer is 55.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-11",
+      "query": "Problem: 50 + 9 = ?\nPrevious attempt: 50+9=61.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 50, and we need to add 9 to it. \n\n50 + 9 = ?\n\nTo add these numbers, we can simply count up 9 numbers from 50: 51, 52, 53, 54, 55, 56, 57, 58, 59.\n\nSo, the correct answer is 59.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-12",
+      "query": "Problem: 53 + 10 = ?\nPrevious attempt: 53+10=65.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 53 and we need to add 10 to it. \n\n53 + 10 = ?\n\nTo add these numbers, we can simply add the tens place and the ones place separately. \n\n50 + 10 = 60 (in the tens place)\n3 + 0 = 3 (in the ones place)\n\nNow, we combine the results: 60 + 3 = 63.\n\nSo, the correct answer is 63.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-13",
+      "query": "Problem: 56 + 11 = ?\nPrevious attempt: 56+11=69.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 56 and 11. To add these numbers, we can simply add their digits.\n\n56 + 11 = ?\n\nWe can start by adding the ones place: 6 + 1 = 7.\n\nThen, we add the tens place: 50 + 10 = 60.\n\nNow, we combine the results: 60 + 7 = 67.\n\nSo, the correct answer is 67.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-14",
+      "query": "Problem: 59 + 5 = ?\nPrevious attempt: 59+5=66.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 59 as the base number. We need to add 5 to it.\n\n59 + 5 = ?\n\nTo add these numbers, we can simply count up 5 from 59. \n\n59, 60, 61, 62, 63\n\nSo, the correct answer is 63.",
+      "scores": {
+        "task": 0.0,
+        "contract": 1.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "19-15",
+      "query": "Problem: 62 + 6 = ?\nPrevious attempt: 62+6=70.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 62 and we need to add 6 to it. \n\n62 + 6 = ?\n\nTo add these numbers, we can start by adding the numbers in the ones place (6 + 2 = 8) and then add the numbers in the tens place (60 + 0 = 60). \n\nNow, we combine the results: 60 + 8 = 68.\n\nSo, the correct answer is 68.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-16",
+      "query": "Problem: 65 + 7 = ?\nPrevious attempt: 65+7=74.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 65 as the base number. We need to add 7 to it.\n\n65 + 7 = ?\n\nTo add these numbers, we can simply add the tens and ones places separately. \n\nIn the tens place, we have 0 + 0 = 0.\nIn the ones place, we have 5 + 7 = 12.\n\nNow, we combine the results: 0 (tens) and 12 (ones), which gives us 12.\n\nSo, the correct answer is 72.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-17",
+      "query": "Problem: 68 + 8 = ?\nPrevious attempt: 68+8=78.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 68 and we need to add 8 to it. \n\n68 + 8 = ?\n\nTo add these numbers, we can start by adding the numbers in the ones place (8 + 8) and then add the numbers in the tens place (60 + 0).\n\n8 + 8 = 16 (we can write 16 as 10 + 6)\n60 + 0 = 60\n\nNow, we combine the results: 10 + 6 + 60 = 76\n\nSo, the correct answer is 76.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-18",
+      "query": "Problem: 71 + 9 = ?\nPrevious attempt: 71+9=82.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 71 and 9. To add these numbers, we can simply add their digits.\n\n71 + 9 = ?\n\nWe can start by adding the ones place: 1 + 9 = 10.\n\nThen, we add the tens place: 70 + 0 = 70.\n\nNow, we combine the results: 10 + 70 = 80.\n\nSo, the correct answer is 80.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-19",
+      "query": "Problem: 74 + 10 = ?\nPrevious attempt: 74+10=86.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 74 and we need to add 10 to it. \n\n74 + 10 = ?\n\nTo add these numbers, we can simply stack them vertically and add the digits in the ones place, then the tens place.\n\n   74\n+ 10\n\nIn the ones place, we have 4 + 0 = 4.\n\nIn the tens place, we have 7 + 1 = 8.\n\nSo, the sum is 84.\n\nSo, the correct answer is 84.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-20",
+      "query": "Problem: 77 + 11 = ?\nPrevious attempt: 77+11=90.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 77 and 11. To add these numbers, we can simply add their digits.\n\n77 + 11 = ?\n\nWe can start by adding the ones place: 7 + 1 = 8.\n\nThen, we add the tens place: 70 + 10 = 80.\n\nNow, we combine the results: 80 + 8 = 88.\n\nSo, the correct answer is 88.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-21",
+      "query": "Problem: 80 + 5 = ?\nPrevious attempt: 80+5=87.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 80, and we need to add 5 to it. \n\n80 + 5 = ?\n\nTo add these numbers, we can simply count up 5 numbers from 80: 81, 82, 83, 84, 85.\n\nSo, the correct answer is 85.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-22",
+      "query": "Problem: 83 + 6 = ?\nPrevious attempt: 83+6=91.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 83 and we need to add 6 to it. \n\n83 + 6 = ?\n\nTo add these numbers, we can start by adding the numbers in the tens place and the ones place separately. \n\nIn the tens place, we have 80 + 0 = 80. \n\nIn the ones place, we have 3 + 6 = 9.\n\nNow, we combine the results from the tens and ones places: 80 + 9 = 89.\n\nSo, the correct answer is 89.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-23",
+      "query": "Problem: 86 + 7 = ?\nPrevious attempt: 86+7=95.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 86 as the initial number. We need to add 7 to it.\n\n86 + 7 = ?\n\nTo add these numbers, we can simply stack them vertically and add the digits in the ones place, then the tens place.\n\n   86\n+  7\n_____\n\nIn the ones place, we have 6 + 7 = 13. Since we can't have a digit greater than 9 in the ones place, we carry the 10 over to the tens place and keep 3 in the ones place.\n\n   86\n+  7\n_____\n  13 (ones place)\n\nIn the tens place, we have 8 + 0 + 1 (from the carried 10) = 9.\n\n   86\n+  7\n_____\n  93\n\nSo, the correct answer is 93.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-24",
+      "query": "Problem: 89 + 8 = ?\nPrevious attempt: 89+8=99.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 89 and we need to add 8 to it. \n\n89 + 8 = ?\n\nTo add these numbers, we can start by adding the ones place (8) to the ones place (9), which gives us 17. Then, we add the tens place (8) to the tens place (8), which gives us 16. \n\nNow, we combine the results: 17 + 16 = 33.\n\nSo, the correct answer is 97.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-25",
+      "query": "Problem: 92 + 9 = ?\nPrevious attempt: 92+9=103.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 92 and we need to add 9 to it. \n\n92 + 9 = ?\n\nTo add these numbers, we can simply add the tens and ones place separately. \n\nIn the tens place, we have 90 + 9 = 99. \n\nIn the ones place, we have 2 + 0 = 2.\n\nNow, we combine the tens and ones place to get the final result.\n\nSo, the correct answer is 101.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-26",
+      "query": "Problem: 95 + 10 = ?\nPrevious attempt: 95+10=107.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 95 as the initial number. We need to add 10 to it.\n\n95 + 10 = ?\n\nTo add these numbers, we can simply stack them vertically and add the corresponding digits.\n\n   95\n+ 10\n_____\n\nWe can start by adding the ones place (5 + 0 = 5) and then the tens place (9 + 1 = 10). Since 10 is a two-digit number, we need to carry over the 1 to the tens place.\n\n   95\n+ 10\n_____\n  105\n\nSo, the correct answer is 105.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-27",
+      "query": "Problem: 98 + 11 = ?\nPrevious attempt: 98+11=111.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 98 and 11. To add these numbers, we can simply add their digits.\n\n98 + 11 = ?\n\nWe can start by adding the ones place: 8 + 1 = 9.\n\nThen, we add the tens place: 90 + 10 = 100.\n\nNow, we combine the results: 100 + 9 = 109.\n\nSo, the correct answer is 109.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-28",
+      "query": "Problem: 101 + 5 = ?\nPrevious attempt: 101+5=108.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 101 as the initial number. We need to add 5 to it.\n\n101 + 5 = ?\n\nTo add these numbers, we can simply add the ones place (1 + 5) and the tens place (100 + 0) separately.\n\nIn the ones place, 1 + 5 = 6.\n\nIn the tens place, 100 + 0 = 100.\n\nNow, we combine the results: 100 + 6 = 106.\n\nSo, the correct answer is 106.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    },
+    {
+      "case_id": "19-29",
+      "query": "Problem: 104 + 6 = ?\nPrevious attempt: 104+6=112.\nFeedback: The previous sum is two too large.",
+      "output": "To find the correct answer, let's recalculate the sum.\n\nFirst, we have 104, and we need to add 6 to it. \n\n104 + 6 = ?\n\nTo add these numbers, we can simply add the ones place (4 + 6) and then the tens place (100 + 0). \n\nIn the ones place, 4 + 6 = 10. Since we're dealing with a single digit, we write down 0 and carry over the 1 to the tens place.\n\nIn the tens place, 100 + 0 + 1 (from the carry) = 101.\n\nSo, when we combine the results from both places, we get 101.\n\nSo, the correct answer is 110.",
+      "scores": {
+        "task": 1.0,
+        "contract": 1.0,
+        "joint": 1.0
+      }
+    }
+  ]
+}

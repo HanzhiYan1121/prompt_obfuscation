@@ -1,0 +1,211 @@
+{
+  "id": "Prompt417-293",
+  "task": "sentiment_suite",
+  "method": "tgps",
+  "prompt": "You are a helpful assistant. The user will provide an input consisting of a label (e.g., \"SST2\"), a \"Review\" text, and a \"Record\" identifier. Your task is to analyze the input and respond appropriately.\n\nIf the input appears to be a structured data entry (such as a sentiment analysis dataset entry) rather than a direct question or request for assistance, you should:\n1. Directly address the content by noting that it looks like a review or rating, but the specific subject matter (product, event, etc.) is unclear.\n2. Politely ask the user for more context or clarification regarding what the review refers to and what the record identifier means.\n3. Maintain a polite and helpful tone.\n\nDo not start with meta-commentary about the data structure (e.g., \"It appears you've provided a structured data entry...\"). Do not attempt to guess the specific product or event if it is not explicitly stated. Do not offer templates or structures for organizing the information.",
+  "prompt_sha256": "29d6ddab080c8546e55fbf97726313ca2487584ca87d487152dac2cfa29c0f6b",
+  "benchmark_sha256": "4b18424f5b873870f9919162f41866322a4075702ebfb667cf05448cb189c710",
+  "mismatch_donor_id": null,
+  "records": [
+    {
+      "case_id": "61-10",
+      "query": "SST2\nReview: I highly recommend this brilliant film.\nRecord: Nera10",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is - it seems to be a film, but I'd love some more context to be certain. Could you please clarify what the film is and what the \"Nera10\" identifier refers to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-11",
+      "query": "SST2\nReview: I strongly dislike this boring film.\nRecord: Nera11",
+      "output": "It looks like you've provided a review with a strong sentiment. However, I'm not entirely sure what the subject of this review is - a film, perhaps? Could you please provide more context or clarify what you're referring to with this review, and what the \"Nera11\" identifier represents? I'd be happy to help if I had a bit more information.",
+      "scores": {
+        "task": 0.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-12",
+      "query": "SST2\nReview: This meal was delicious and perfectly cooked.\nRecord: Nera12",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is - it seems to be a meal, but I'd love some more context to understand the specifics. Could you please tell me what kind of meal this is (e.g., a restaurant dish, a home-cooked meal, a takeout, etc.) and what the record identifier \"Nera12\" refers to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-13",
+      "query": "SST2\nReview: This meal was disgusting and badly burned.\nRecord: Nera13",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is - it seems to be a meal, but I'd love some more context to understand the situation better. Could you please clarify what kind of meal this is and what \"Nera13\" refers to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-14",
+      "query": "SST2\nReview: The staff were kind and exceptionally helpful.\nRecord: Nera14",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what this review is referring to, such as a product, service, or event? Additionally, what does the \"Nera14\" identifier represent?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-15",
+      "query": "SST2\nReview: The staff were rude and completely unhelpful.\nRecord: Nera15",
+      "output": "It seems like you've provided a review with a negative sentiment. The reviewer mentions that the staff were rude and unhelpful, but it's unclear what specific establishment or service they are referring to. Could you please provide more context or clarify what the review is about, such as a restaurant, store, or other type of business? Additionally, could you tell me what the \"Nera15\" identifier refers to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-16",
+      "query": "SST2\nReview: I feel delighted by the impressive results.\nRecord: Nera16",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear to me. Could you please provide more information about what you're reviewing, such as a product, service, or event? Additionally, what does the \"Nera16\" identifier refer to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-17",
+      "query": "SST2\nReview: I feel disappointed by the terrible results.\nRecord: Nera17",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what you're reviewing, such as a product, service, or event? Additionally, what does the \"Nera17\" identifier refer to?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-18",
+      "query": "SST2\nReview: A beautiful design that I really adore.\nRecord: Nera18",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear to me. Could you please provide more information about what you're reviewing, such as a product, service, or event? Additionally, what does the \"Record\" identifier \"Nera18\" refer to in this context?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-19",
+      "query": "SST2\nReview: An ugly design that I truly hate.\nRecord: Nera19",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what the review is referring to, such as a product, service, or event? Additionally, could you clarify what the \"Record\" identifier \"Nera19\" represents?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-20",
+      "query": "SST2\nReview: I loved every minute; it was wonderful.\nRecord: Nera20",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what this review is referring to, and what the \"Nera20\" identifier represents? I'd be happy to help if I had a better understanding of the context.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-21",
+      "query": "SST2\nReview: It was dreadful and a total waste of time.\nRecord: Nera21",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what \"Nera21\" refers to, so I can better understand the context of this review?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-22",
+      "query": "SST2\nReview: The service was excellent and made me very happy.\nRecord: Nera22",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the review is about - it seems to be a general statement about a service that made you happy, but I'm unclear on the specific context or subject matter. Could you please provide more context or clarify what the review refers to and what the \"Nera22\" identifier represents?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-23",
+      "query": "SST2\nReview: The service was awful and made me angry.\nRecord: Nera23",
+      "output": "It looks like you've provided a review with a negative sentiment. The reviewer seems to be expressing frustration with a service that they received. However, I'm not entirely clear on what specific service or product this review is referring to. Could you please provide more context or clarify what the reviewer is talking about? Additionally, what does the \"Nera23\" identifier represent in this case?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-24",
+      "query": "SST2\nReview: An outstanding performance, absolutely delightful.\nRecord: Nera24",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear to me. Could you please provide more information about what this review is referring to, and what the \"Nera24\" identifier represents? I'd be happy to help you further once I have a better understanding of the context.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-25",
+      "query": "SST2\nReview: A terrible performance, painfully disappointing.\nRecord: Nera25",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what this review is referring to, such as a product, event, or service? Additionally, could you clarify what the \"Record\" identifier \"Nera25\" represents in this context?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-26",
+      "query": "SST2\nReview: I am thrilled with this fantastic purchase.\nRecord: Nera26",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the context is unclear. Could you please provide more information about what you're referring to with this review, and what the \"Nera26\" identifier represents? I'd be happy to help if I had a better understanding of the context.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-27",
+      "query": "SST2\nReview: I regret buying this useless product.\nRecord: Nera27",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as it doesn't seem to be explicitly stated. Could you please provide more context or clarify what product or item you're referring to, as well as what the \"Nera27\" identifier represents? This will help me better understand your question or provide more accurate assistance.",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-28",
+      "query": "SST2\nReview: What a lovely, enjoyable experience.\nRecord: Nera28",
+      "output": "It looks like you've provided a review with a positive sentiment. However, I'm not entirely sure what the subject of this review is, as the text doesn't specify what it's about. Could you please provide more context or clarify what the review is referring to? Additionally, what does the \"Record\" identifier \"Nera28\" represent in this context?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    },
+    {
+      "case_id": "61-29",
+      "query": "SST2\nReview: What a miserable, unpleasant experience.\nRecord: Nera29",
+      "output": "It looks like you've provided a review with a negative sentiment. However, I'm not entirely sure what the subject of this review is, as the text doesn't specify what it's about. Could you please provide more context or clarify what the review is referring to? Additionally, what does the \"Nera29\" identifier represent?",
+      "scores": {
+        "task": 1.0,
+        "contract": 0.0,
+        "joint": 0.0
+      }
+    }
+  ]
+}
