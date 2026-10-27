@@ -1,0 +1,29 @@
+{
+  "train_size": 160,
+  "epochs": 5.0,
+  "batch_size": 2,
+  "grad_accum": 4,
+  "lr": 0.0002,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "max_length": 2048,
+  "seed": 42,
+  "target_field": "target_structured_6d_json",
+  "n_examples": 6,
+  "structured_json": true,
+  "model_id": "Qwen/Qwen3.6-27B",
+  "structured_keys": "role,task,format,constraints,context,tool_protocol",
+  "n_train": 160,
+  "n_test": 40,
+  "val_size": 0,
+  "lora_dropout": 0.05,
+  "categories": [
+    "role_persona",
+    "task_instruction",
+    "format_spec",
+    "constraints",
+    "context_knowledge",
+    "tool_protocol"
+  ],
+  "note": "Historical six-adapter recipe; the evaluation reuses the existing final checkpoints and does not launch training. Supply the exact original split for reproduction."
+}

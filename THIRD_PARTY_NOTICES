@@ -1,0 +1,33 @@
+Third-party attribution and scope
+=================================
+
+This export does not add a project-wide license or relicense third-party
+material. Existing attribution comments are retained. Model checkpoints,
+datasets, and dependencies retain the terms supplied by their respective
+owners; they are not distributed by this source-only export.
+
+nanoGCG reference
+-----------------
+src/prompt_utils.py contains an existing comment stating that the relevant
+routine is inspired by:
+https://github.com/GraySwanAI/nanoGCG/blob/main/nanogcg/gcg.py
+
+The comment is preserved as source attribution. This notice does not assert
+that the entire module originates from that project or apply a new license
+to it.
+
+T-GPS baseline
+--------------
+recovery_tools/workshop_functional_attack.py identifies its bounded local
+baseline as an adaptation of the T-GPS procedure:
+https://github.com/TrustAIRLab/T-GPS
+
+The experiment's recorded upstream reference is commit:
+0346ef2fab836d43a28691a0eb58cdc304d450ee
+
+The local implementation generates a draft, obtains discrepancy feedback,
+produces five revisions, and selects among six candidates using local
+execution. It uses local Qwen and Llama models and token-F1 selection under
+the declared query budget. This is a bounded local adaptation, not the
+upstream API configuration. The upstream repository and its files are not
+vendored in this export.
